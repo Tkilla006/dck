@@ -1,0 +1,804 @@
+<GUIItems>
+
+
+<Item name="#Unlock" origin="0 0" hidden="true">
+	<OnOpen>
+		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
+		<Action type="PlaySound" target="gui_unlock" params="0 1.0"/>
+	</OnOpen>
+
+	<OnClose>
+		<!-- hide all, we'll open them as needed from code -->
+		<Action type="Hide" target="Nowheraki"/>
+		<Action type="Hide" target="CIA"/>
+		<Action type="Hide" target="#campaignUnlock"/>
+		<Action type="Hide" target="@single_mispack_1_name"/>
+		<Action type="Hide" target="@single_mispack_2_name"/>
+		<Action type="Hide" target="@single_mispack_5_name"/>
+		<Action type="Hide" target="@single_mispack_5x_name"/>
+		<Action type="Hide" target="@single_mispack_6_name"/>
+		<Action type="Hide" target="20 missions"/>
+		<Action type="Hide" target="30 missions"/>
+		<Action type="Hide" target="45 missions"/>
+		<Action type="StopSound" target="gui_unlock"/>
+		<Action type="StopSound" target="gui_unlock_woosh1"/>
+		<Action type="StopSound" target="gui_unlock_woosh2"/>
+		<Action type="StopSound" target="gui_unlock_visual"/>
+		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
+	</OnClose>
+
+	<!-- NO, it breaks because Escape also opens it while finishing mission
+	<OnKeyDown key0="27">
+		<Action type="Hide" target="this"/>
+	</OnKeyDown>
+	-->
+
+	<Item origin="0 0" sizeX="9999" sizeY="9999" blurBackground="true" blurColor="323232">
+	</Item>
+
+
+	<!-- title -->
+	<Item name="header" origin="0 600">
+		<StaticImage name="smoke" origin="0 0" >
+			<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" color="1f6682" scaleX="1.2" scaleY="1.4" blendMode="add_masked" />
+		</StaticImage>
+		<StaticImage name="smoke" origin="0 -1400" >
+			<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" color="78220020" scaleX="2" scaleY="2" blendMode="add_masked" />
+		</StaticImage>
+		<StaticImage origin="0 -700">
+			<RenderObject2D texture="data/textures/gui/keyart_Rangers/rangers_bg_01_scrolling_dust.dds" texRepeatX="4" sizeX="7680" sizeY="1500" flipX="true" color="f97b0310" blendMode="add_masked"/>
+			<ImageAnim type="scroll" speed="0.02" direction="1 0"/>
+			<Item name="#parallax_layer_speed" origin="30"/>
+		</StaticImage>
+		<StaticImage origin="0 -800">
+			<RenderObject2D texture="data/textures/gui/keyart_Rangers/rangers_bg_01_scrolling_dust.dds" texRepeatX="2" sizeX="7680" sizeY="3000" color="78220040" blendMode="add_masked"/>
+			<ImageAnim type="scroll" speed="0.005" direction="-1 0"/>
+			<Item name="#parallax_layer_speed" origin="30"/>
+		</StaticImage>
+		<StaticImage name="glow" origin="0 0">
+			<StaticImage origin="0 0">
+				<ImageAnim type="pulse" speed="1"/>
+				<RenderObject2D texture="data/textures/fx/light_flare_long_01.dds" color="9e5815ff" blendMode="add_masked" scaleX="12" scaleY="2"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/fx/light_flare_glow_01.dds" color="ffa20280" blendMode="add_masked" scaleX="14" scaleY="4"/>
+			</StaticImage>
+			<StaticImage origin="0 0" hidden="false">
+				<ImageAnim type="blowUp"  speed="5.0" scale="3 3" delayMsec="0"/>
+				<RenderObject2D texture="data/textures/fx/flashbang_nova.tga" color="ffa20220" blendMode="add_masked" scaleX="1" scaleY="1"/>
+			</StaticImage>
+			<StaticImage origin="0 0" hidden="false">
+				<RenderObject2D texture="data/textures/fx/sparks_radial.dds" blendMode="add_masked" color="f97b03" flipY="true" scaleX="1.0" scaleY="0.5">
+					<TextureAnimation frameWidth="256" frameHeight="256" startFrame="0" endFrame="15" animationTimeMS="400" numLoops="1"/>
+				</RenderObject2D>
+				<ImageAnim type="blowUp" speed="2.0" scale="4 4" delayMsec="0"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/fx/radialdust1.dds" blendMode="add_masked" color="f97b03" flipY="true" scaleX="2.0" scaleY="1">
+					<TextureAnimation frameWidth="256" frameHeight="256" startFrame="0" endFrame="24" animationTimeMS="400" numLoops="1"/>
+				</RenderObject2D>
+				<ImageAnim type="blowUp" speed="2.0" scale="4 4" delayMsec="0"/>
+			</StaticImage>
+		</StaticImage>
+		<StaticText name="#UnlockText"  origin="0 0" align="c" font="header_1" textColor="f0e3cc" text="@menu_unlocks_unlocked" />
+		<Item name="star_deco" origin="0 -80">
+			<StaticImage>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="400" sizeY="4" blendMode="none" color="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="-100 -28">
+				<ImageAnim type="dropIn"  speed="5.0" scale="1.5 1.5" delayMsec="0"/>
+				<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.8" scaleY="0.8" blendMode="normal" />
+			</StaticImage>
+			<StaticImage origin="-50 -28">
+				<ImageAnim type="dropIn"  speed="5.0" scale="1.5 1.5" delayMsec="100"/>
+				<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.8" scaleY="0.8" blendMode="normal" />
+			</StaticImage>
+			<StaticImage origin="0 -28">
+				<ImageAnim type="dropIn"  speed="5.0" scale="1.5 1.5" delayMsec="200"/>
+				<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.8" scaleY="0.8" blendMode="normal"/>
+			</StaticImage>
+			<StaticImage origin="50 -28">
+				<ImageAnim type="dropIn"  speed="5.0" scale="1.5 1.5" delayMsec="300"/>
+				<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.8" scaleY="0.8" blendMode="normal" />
+			</StaticImage>
+			<StaticImage origin="100 -28">
+				<ImageAnim type="dropIn"  speed="5.0" scale="1.5 1.5" delayMsec="400"/>
+				<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.8" scaleY="0.8" blendMode="normal" />
+			</StaticImage>
+		</Item>
+	</Item>
+
+<!--
+	<StaticImage name="#nowherakiUnlock" origin="0 250">
+			<StaticImage name="glow" origin="0 0">
+				<StaticImage origin="0 0">
+					<ImageAnim type="pulse" speed="0.5"/>
+					<RenderObject2D texture="data/textures/fx/light_flare_long_01.dds" color="9e581533" blendMode="add_masked" scaleX="12" scaleY="2"/>
+				</StaticImage>
+				<StaticImage origin="0 0">
+					<RenderObject2D texture="data/textures/fx/light_flare_glow_01.dds" color="ffa20280" blendMode="add_masked" scaleX="14" scaleY="4"/>
+				</StaticImage>
+			</StaticImage>
+			<StaticImage>
+				<RenderObject2D texture="data/textures/gui/squads/nowheraki_bg_01.dds" color="ffffffff" blendMode="none"/>
+			</StaticImage>
+			<StaticImage name="#squadselect_hover" hidden="false">
+				<ImageAnim type="pulse" speed="2"/>
+				<RenderObject2D texture="data/textures/gui/squads/squad_button_highlight.dds"/>
+			</StaticImage>
+			<StaticImage>
+				<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b40" sizeX="536" sizeY="98"/>
+				<StaticText text="@unit_nowheraki_name" font="header_2" textColor="f0e3cc"/>
+			</StaticImage>
+			<Movie align="b" origin="0 -700" hidden="false" sizeX="956" sizeY="538" file="data/movies/cia_dangerzone.ogv" loop="true"/>
+
+	</StaticImage>
+-->
+
+	<Item name="Nowheraki" sizeX="956" sizeY="920" origin="0 -40" hidden="true">
+		<OnOpen>
+			<Action type="PlaySound" target="gui_unlock_visual" params="0 1.0 1900"/>
+		</OnOpen>
+		<StaticImage origin="0 100">
+			<ImageAnim type="pulse" speed="1"/>
+			<RenderObject2D texture="data/textures/fx/flashbang_nova.tga" color="7b3e03" blendMode="add_masked" scaleX="3" scaleY="4"/>
+		</StaticImage>
+		<StaticImage align="c">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b40" sizeX="972" sizeY="936"/>
+		</StaticImage>
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b80" sizeX="956" sizeY="415"/>
+		</StaticImage>
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/squads/nowheraki_bg_01.dds" sizeX="956" sizeY="415" color="ffffffff" blendMode="normal"/>
+			<StaticImage origin="0 -20">
+				<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b40" sizeX="956" sizeY="140"/>
+				<StaticText text="@unit_nowheraki_name" font="header_1" textColor="f0e3cc">
+					<!-- <ImageAnim type="dropIn" speed="5.0" scale="1.5 1.5" delayMsec="400"/> -->
+				</StaticText>
+			</StaticImage>
+		</StaticImage>
+		<Item clipChildren="true" sizeX="956" sizeY="415" align="t">
+			<StaticImage name="smoke" origin="0 200" >
+				<ImageAnim type="scroll" speed="0.01" direction="1 0"/>
+				<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" scaleX="1" scaleY="1" color="f97b0333" texRepeatX="1" texRepeatY="1"/>
+			</StaticImage>
+			<StaticImage name="smoke_static" origin="0 220" flipX="true" >
+				<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" scaleX="1" scaleY="1" color="f97b0333" texRepeatX="1" texRepeatY="1"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/keyart_Rangers/rangers_bg_01_scrolling_dust.dds" texRepeatX="1" texRepeatY="1" sizeX="1200" sizeY="800" color="782200" blendMode="screen"/>
+				<ImageAnim type="scroll" speed="0.02" direction="-1 0"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/overlay_shine.dds" sizeX="956" sizeY="415" texRepeatX="0.2" texRepeatY="0.2" color="ffffff" blendMode="overlay"/>
+				<ImageAnim type="scroll" speed="1" direction="-0.2 0"/>
+			</StaticImage>
+		</Item>
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="080808cc" sizeX="956" sizeY="90"/>
+			<StaticText text="@menu_unlocks_squad" font="header_2" textColor="f97b03">
+				<!-- <ImageAnim type="dropIn" speed="5.0" scale="1.5 1.5" delayMsec="200"/> -->
+			</StaticText>
+			<StaticImage origin="0 0" align="lt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+			<StaticImage origin="0 0" align="rt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" flipX="true" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+		</StaticImage>
+		<Movie align="b" origin="0 0" hidden="false" sizeX="956" sizeY="538" file="data/movies/unlock_swat.ogv" loop="true" blendMode="normal">
+			<!-- <ImageAnim type="dropIn" speed="5.0" scale="1.5 1.5" delayMsec="600"/> -->
+		</Movie>
+	</Item>
+
+	<Item name="CIA" sizeX="956" sizeY="920" origin="0 -40" hidden="true">
+		<OnOpen>
+			<Action type="PlaySound" target="gui_unlock_visual" params="0 1.0 1900"/>
+		</OnOpen>
+		<StaticImage origin="0 100">
+			<ImageAnim type="pulse" speed="1"/>
+			<RenderObject2D texture="data/textures/fx/flashbang_nova.tga" color="7b3e03" blendMode="add_masked" scaleX="3" scaleY="4"/>
+		</StaticImage>
+		<StaticImage align="c">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b40" sizeX="972" sizeY="936"/>
+		</StaticImage>
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b80" sizeX="956" sizeY="415"/>
+		</StaticImage>
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/squads/cia_bg_01.dds" sizeX="956" sizeY="415" color="ffffffff" blendMode="normal"/>
+			<StaticImage origin="0 -20">
+				<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b40" sizeX="956" sizeY="140"/>
+				<StaticText text="@unit_cia_name" font="header_1" textColor="f0e3cc"/>
+			</StaticImage>
+
+		</StaticImage>
+		<Item clipChildren="true" sizeX="956" sizeY="415" align="t">
+			<StaticImage name="smoke" origin="0 200" >
+				<ImageAnim type="scroll" speed="0.01" direction="1 0"/>
+				<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" scaleX="1" scaleY="1" color="285079" blendMode="add_masked" texRepeatX="1" texRepeatY="1"/>
+			</StaticImage>
+			<StaticImage name="smoke_static" origin="0 220" flipX="true" >
+				<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" scaleX="1" scaleY="1" color="285079" blendMode="add_masked" texRepeatX="1" texRepeatY="1"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/keyart_Rangers/rangers_bg_01_scrolling_dust.dds" texRepeatX="1" texRepeatY="1" sizeX="1200" sizeY="800" color="285079" blendMode="screen"/>
+				<ImageAnim type="scroll" speed="0.02" direction="-1 0"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/overlay_shine.dds" sizeX="956" sizeY="415" texRepeatX="0.2" texRepeatY="0.2" color="ffffff" blendMode="overlay"/>
+				<ImageAnim type="scroll" speed="1" direction="-0.2 0"/>
+			</StaticImage>
+		</Item>
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="080808cc" sizeX="956" sizeY="90"/>
+			<StaticText text="@menu_unlocks_squad" font="header_2" textColor="f97b03"/>
+			<StaticImage origin="0 0" align="lt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+			<StaticImage origin="0 0" align="rt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" flipX="true" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+		</StaticImage>
+
+		<Movie align="b" origin="0 0" hidden="false" sizeX="956" sizeY="538" file="data/movies/unlock_cia.ogv" loop="true"/>
+		<StaticImage origin="0 240" hidden="true">
+			<ImageAnim type="blowUp"  speed="5.0" scale="3 3" delayMsec="800"/>
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b20" sizeX="956" sizeY="415"/>
+		</StaticImage>
+		<StaticImage origin="0 240" hidden="true">
+			<ImageAnim type="blowUp"  speed="5.0" scale="3 3" delayMsec="200"/>
+			<RenderObject2D texture="data/textures/gui/locked_icon.dds" scaleX="1.5" scaleY="1.5" color="91919110"/>
+		</StaticImage>
+	</Item>
+
+	<Item name="#campaignUnlock" sizeX="956" sizeY="920" origin="0 -40" hidden="true">
+		<OnOpen>
+			<Action type="PlaySound" target="gui_unlock_visual" params="0 1.0 1900"/>
+		</OnOpen>
+		<StaticImage origin="0 100">
+			<ImageAnim type="pulse" speed="1"/>
+			<RenderObject2D texture="data/textures/fx/flashbang_nova.tga" color="7b3e03" blendMode="add_masked" scaleX="3" scaleY="4"/>
+		</StaticImage>
+		<StaticImage align="c">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b40" sizeX="972" sizeY="936"/>
+		</StaticImage>
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="003c58" sizeX="956" sizeY="415"/>
+		</StaticImage>
+		<StaticImage align="t">
+			<ImageAnim type="scroll" speed="0.01" direction="-1 0"/>
+			<RenderObject2D texture="data/textures/gui/keyart_Rangers/rangers_bg_01_scrolling_dust.dds" flipY="false" sizeX="956" sizeY="415" texRepeatY="0.2" texRepeatX="0.5" color="581700e6" blendMode="normal"/>
+			<StaticImage origin="0 -20">
+				<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b80" sizeX="956" sizeY="140"/>
+				<StaticText text="@menu_campaign_campaigns" font="header_1" textColor="f0e3cc"/>
+			</StaticImage>
+
+		</StaticImage>
+		<Item clipChildren="true" sizeX="956" sizeY="415" align="t">
+			<StaticImage name="smoke" origin="0 200" >
+				<ImageAnim type="scroll" speed="0.01" direction="1 0"/>
+				<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" scaleX="1" scaleY="1" color="144355" blendMode="add_masked" texRepeatX="1" texRepeatY="1"/>
+			</StaticImage>
+			<StaticImage name="smoke_static" origin="0 220" flipX="true" >
+				<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" scaleX="1" scaleY="1" color="144355" blendMode="add_masked" texRepeatX="1" texRepeatY="1"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/keyart_Rangers/rangers_bg_01_scrolling_dust.dds" texRepeatX="1" texRepeatY="1" sizeX="1200" sizeY="800" color="a35000" blendMode="screen"/>
+				<ImageAnim type="scroll" speed="0.02" direction="-1 0"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/overlay_shine.dds" sizeX="956" sizeY="415" texRepeatX="0.2" texRepeatY="0.2" color="ffffff" blendMode="overlay"/>
+				<ImageAnim type="scroll" speed="1" direction="-0.2 0"/>
+			</StaticImage>
+		</Item>
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="080808cc" sizeX="956" sizeY="90"/>
+			<StaticText text="@menu_unlocks_gamemode" font="header_2" textColor="f97b03"/>
+			<StaticImage origin="0 0" align="lt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+			<StaticImage origin="0 0" align="rt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" flipX="true" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+		</StaticImage>
+
+		<Movie align="b" origin="0 0" hidden="false" sizeX="956" sizeY="538" file="data/movies/unlock_campaign.ogv" loop="true"/>
+		<StaticImage origin="0 240" hidden="true">
+			<ImageAnim type="blowUp"  speed="5.0" scale="3 3" delayMsec="800"/>
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b20" sizeX="956" sizeY="415"/>
+		</StaticImage>
+		<StaticImage origin="0 240" hidden="true">
+			<ImageAnim type="blowUp"  speed="5.0" scale="3 3" delayMsec="200"/>
+			<RenderObject2D texture="data/textures/gui/locked_icon.dds" scaleX="1.5" scaleY="1.5" color="91919110"/>
+		</StaticImage>
+	</Item>
+
+	<!-- name is the one pointed to by the 'unlockBy' field -->
+	<Item name="@single_mispack_1_name" sizeX="956" sizeY="920" origin="0 -100" hidden="true">
+		<OnOpen>
+			<Action type="PlaySound" target="gui_unlock_visual" params="0 1.0 1900"/>
+		</OnOpen>
+		<StaticImage origin="0 100">
+			<ImageAnim type="pulse" speed="1"/>
+			<RenderObject2D texture="data/textures/fx/flashbang_nova.tga" color="7b3e03" blendMode="add_masked" scaleX="3" scaleY="4"/>
+		</StaticImage>
+		<StaticImage align="t" origin="0 8">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b40" sizeX="972" sizeY="820"/>
+		</StaticImage>
+
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="49646e" sizeX="956" sizeY="90"/>
+		</StaticImage>
+		<StaticImage align="t" origin="0 -90" sizeX="956" sizeY="360" clipChildren="true">
+			<Movie align="c" origin="0 0" hidden="false" sizeX="956" sizeY="360" file="data/movies/mpack_lead_the_way.ogv" loop="true"/>
+			<Item origin="0 0" sizeX="940" sizeY="90" blurBackground="true" blurColor="ffffff">
+			</Item>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0bcc" sizeX="956" sizeY="90"/>
+				<StaticText text="@single_mispack_2_name" font="header_2" textColor="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/overlay_shine.dds" sizeX="956" sizeY="415" texRepeatX="0.2" texRepeatY="0.2" color="ffffff" blendMode="overlay"/>
+				<ImageAnim type="scroll" speed="1" direction="-0.2 0"/>
+			</StaticImage>
+		</StaticImage>
+		<StaticImage align="t" origin="0 -444" sizeX="956" sizeY="360" clipChildren="true">
+			<Movie align="c" origin="0 0" hidden="false" sizeX="956" sizeY="360" file="data/movies/mpack_tiny_troubles.ogv" loop="true"/>
+			<Item origin="0 0" sizeX="940" sizeY="90" blurBackground="true" blurColor="ffffff">
+			</Item>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0bcc" sizeX="956" sizeY="90"/>
+				<StaticText text="@single_mispack_5_name" font="header_2" textColor="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/overlay_shine.dds" sizeX="956" sizeY="415" texRepeatX="0.2" texRepeatY="0.2" color="ffffff" blendMode="overlay"/>
+				<ImageAnim type="scroll" speed="1" direction="-0.2 0"/>
+			</StaticImage>
+		</StaticImage>
+
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="080808cc" sizeX="956" sizeY="90"/>
+			<StaticText text="@menu_unlocks_missionpacks" font="header_2" textColor="f97b03"/>
+			<StaticImage origin="0 0" align="lt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+			<StaticImage origin="0 0" align="rt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" flipX="true" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+		</StaticImage>
+
+		<StaticImage origin="0 240" hidden="true">
+			<ImageAnim type="blowUp"  speed="5.0" scale="3 3" delayMsec="800"/>
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b20" sizeX="956" sizeY="415"/>
+		</StaticImage>
+		<StaticImage origin="0 240" hidden="true">
+			<ImageAnim type="blowUp"  speed="5.0" scale="3 3" delayMsec="200"/>
+			<RenderObject2D texture="data/textures/gui/locked_icon.dds" scaleX="1.5" scaleY="1.5" color="91919110"/>
+		</StaticImage>
+	</Item>
+
+	<!-- name is the one pointed to by the 'unlockBy' field -->
+	<Item name="20 missions" sizeX="956" sizeY="920" origin="0 -100" hidden="true">
+		<OnOpen>
+			<Action type="PlaySound" target="gui_unlock_visual" params="0 1.0 1900"/>
+		</OnOpen>
+		<StaticImage origin="0 100">
+			<ImageAnim type="pulse" speed="1"/>
+			<RenderObject2D texture="data/textures/fx/flashbang_nova.tga" color="7b3e03" blendMode="add_masked" scaleX="3" scaleY="4"/>
+		</StaticImage>
+		<StaticImage align="t" origin="0 8">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b40" sizeX="972" sizeY="820"/>
+		</StaticImage>
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="49646e" sizeX="956" sizeY="90"/>
+		</StaticImage>
+
+		<StaticImage align="t" origin="0 -90" sizeX="956" sizeY="360" clipChildren="true">
+			<Movie align="c" origin="0 0" hidden="false" sizeX="956" sizeY="360" file="data/movies/mpack_extreme_rescues.ogv" loop="true"/>
+			<Item origin="0 0" sizeX="940" sizeY="90" blurBackground="true" blurColor="ffffff">
+			</Item>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0bcc" sizeX="956" sizeY="90"/>
+				<StaticText text="@single_mispack_6_name" font="header_2" textColor="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/overlay_shine.dds" sizeX="956" sizeY="415" texRepeatX="0.2" texRepeatY="0.2" color="ffffff" blendMode="overlay"/>
+				<ImageAnim type="scroll" speed="1" direction="-0.2 0"/>
+			</StaticImage>
+		</StaticImage>
+		<StaticImage align="t" origin="0 -440" sizeX="956" sizeY="360" clipChildren="true">
+			<Movie align="c" origin="0 0" hidden="false" sizeX="956" sizeY="360" file="data/movies/mpack_deck_of_cards.ogv" loop="true"/>
+			<Item origin="0 0" sizeX="940" sizeY="90" blurBackground="true" blurColor="ffffff">
+			</Item>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0bcc" sizeX="956" sizeY="90"/>
+				<StaticText text="@single_mispack_11_name" font="header_2" textColor="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/overlay_shine.dds" sizeX="956" sizeY="415" texRepeatX="0.2" texRepeatY="0.2" color="ffffff" blendMode="overlay"/>
+				<ImageAnim type="scroll" speed="1" direction="-0.2 0"/>
+			</StaticImage>
+		</StaticImage>
+		<!--
+		<StaticImage align="t" origin="0 -646" sizeX="956" sizeY="270" clipChildren="true">
+			<Movie align="c" origin="0 0" hidden="false" sizeX="956" sizeY="360" file="data/movies/mpack_your_creations.ogv" loop="true"/>
+			<Item origin="0 0" sizeX="940" sizeY="90" blurBackground="true" blurColor="ffffff">
+			</Item>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0bcc" sizeX="956" sizeY="90"/>
+				<StaticText text="@menu_m_randommap" font="header_2" textColor="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/overlay_shine.dds" sizeX="956" sizeY="415" texRepeatX="0.2" texRepeatY="0.2" color="ffffff" blendMode="overlay"/>
+				<ImageAnim type="scroll" speed="1" direction="-0.2 0"/>
+			</StaticImage>
+		</StaticImage>
+		-->
+
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="080808cc" sizeX="956" sizeY="90"/>
+			<StaticText text="@menu_unlocks_missionpacks" font="header_2" textColor="f97b03"/>
+			<StaticImage origin="0 0" align="lt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+			<StaticImage origin="0 0" align="rt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" flipX="true" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+		</StaticImage>
+
+		<StaticImage origin="0 240" hidden="true">
+			<ImageAnim type="blowUp"  speed="5.0" scale="3 3" delayMsec="800"/>
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b20" sizeX="956" sizeY="415"/>
+		</StaticImage>
+		<StaticImage origin="0 240" hidden="true">
+			<ImageAnim type="blowUp"  speed="5.0" scale="3 3" delayMsec="200"/>
+			<RenderObject2D texture="data/textures/gui/locked_icon.dds" scaleX="1.5" scaleY="1.5" color="91919110"/>
+		</StaticImage>
+	</Item>
+
+	<!-- name is the one pointed to by the 'unlockBy' field -->
+	<Item name="30 missions" sizeX="956" sizeY="920" origin="0 -100" hidden="true">
+		<OnOpen>
+			<Action type="PlaySound" target="gui_unlock_visual" params="0 1.0 1900"/>
+		</OnOpen>
+		<StaticImage origin="0 100">
+			<ImageAnim type="pulse" speed="1"/>
+			<RenderObject2D texture="data/textures/fx/flashbang_nova.tga" color="7b3e03" blendMode="add_masked" scaleX="3" scaleY="4"/>
+		</StaticImage>
+		<StaticImage align="t" origin="0 8">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b40" sizeX="972" sizeY="820"/>
+		</StaticImage>
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="49646e" sizeX="956" sizeY="90"/>
+		</StaticImage>
+
+		<StaticImage align="t" origin="0 -90" sizeX="956" sizeY="360" clipChildren="true">
+			<Movie align="c" origin="0 0" hidden="false" sizeX="956" sizeY="360" file="data/movies/mpack_never_see_never_be.ogv" loop="true"/>
+			<Item origin="0 0" sizeX="940" sizeY="90" blurBackground="true" blurColor="ffffff">
+			</Item>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0bcc" sizeX="956" sizeY="90"/>
+				<StaticText text="@single_mispack_4_name" font="header_2" textColor="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/overlay_shine.dds" sizeX="956" sizeY="415" texRepeatX="0.2" texRepeatY="0.2" color="ffffff" blendMode="overlay"/>
+				<ImageAnim type="scroll" speed="1" direction="-0.2 0"/>
+			</StaticImage>
+		</StaticImage>
+		<StaticImage align="t" origin="0 -444" sizeX="956" sizeY="360" clipChildren="true">
+			<Movie align="c" origin="0 0" hidden="false" sizeX="956" sizeY="360" file="data/movies/mpack_indian_country.ogv" loop="true"/>
+			<Item origin="0 0" sizeX="940" sizeY="90" blurBackground="true" blurColor="ffffff">
+			</Item>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0bcc" sizeX="956" sizeY="90"/>
+				<StaticText text="@single_mispack_7_name" font="header_2" textColor="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/overlay_shine.dds" sizeX="956" sizeY="415" texRepeatX="0.2" texRepeatY="0.2" color="ffffff" blendMode="overlay"/>
+				<ImageAnim type="scroll" speed="1" direction="-0.2 0"/>
+			</StaticImage>
+		</StaticImage>
+
+
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="080808cc" sizeX="956" sizeY="90"/>
+			<StaticText text="@menu_unlocks_missionpacks" font="header_2" textColor="f97b03"/>
+			<StaticImage origin="0 0" align="lt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+			<StaticImage origin="0 0" align="rt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" flipX="true" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+		</StaticImage>
+
+		<StaticImage origin="0 240" hidden="true">
+			<ImageAnim type="blowUp"  speed="5.0" scale="3 3" delayMsec="800"/>
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b20" sizeX="956" sizeY="415"/>
+		</StaticImage>
+		<StaticImage origin="0 240" hidden="true">
+			<ImageAnim type="blowUp"  speed="5.0" scale="3 3" delayMsec="200"/>
+			<RenderObject2D texture="data/textures/gui/locked_icon.dds" scaleX="1.5" scaleY="1.5" color="91919110"/>
+		</StaticImage>
+	</Item>
+
+	<!-- name is the one pointed to by the 'unlockBy' field -->
+	<Item name="45 missions" sizeX="956" sizeY="920" origin="0 -300" hidden="true">
+		<OnOpen>
+			<Action type="PlaySound" target="gui_unlock_visual" params="0 1.0 1900"/>
+		</OnOpen>
+		<StaticImage origin="0 250">
+			<ImageAnim type="pulse" speed="1"/>
+			<RenderObject2D texture="data/textures/fx/flashbang_nova.tga" color="7b3e03" blendMode="add_masked" scaleX="3" scaleY="2"/>
+		</StaticImage>
+		<StaticImage align="t" origin="0 8">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b40" sizeX="972" sizeY="466"/>
+		</StaticImage>
+
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="49646e" sizeX="956" sizeY="90"/>
+		</StaticImage>
+		<StaticImage align="t" origin="0 -90" sizeX="956" sizeY="360" clipChildren="true">
+			<Movie align="c" origin="0 0" hidden="false" sizeX="956" sizeY="360" file="data/movies/mpack_give_no_quarter.ogv" loop="true"/>
+			<Item origin="0 0" sizeX="940" sizeY="90" blurBackground="true" blurColor="ffffff">
+			</Item>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0bcc" sizeX="956" sizeY="90"/>
+				<StaticText text="@single_mispack_13_name" font="header_2" textColor="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/overlay_shine.dds" sizeX="956" sizeY="415" texRepeatX="0.2" texRepeatY="0.2" color="ffffff" blendMode="overlay"/>
+				<ImageAnim type="scroll" speed="1" direction="-0.2 0"/>
+			</StaticImage>
+		</StaticImage>
+
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="080808cc" sizeX="956" sizeY="90"/>
+			<StaticText text="@menu_unlocks_missionpack" font="header_2" textColor="f97b03"/>
+			<StaticImage origin="0 0" align="lt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+			<StaticImage origin="0 0" align="rt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" flipX="true" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+		</StaticImage>
+
+		<StaticImage origin="0 240" hidden="true">
+			<ImageAnim type="blowUp"  speed="5.0" scale="3 3" delayMsec="800"/>
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b20" sizeX="956" sizeY="415"/>
+		</StaticImage>
+		<StaticImage origin="0 240" hidden="true">
+			<ImageAnim type="blowUp"  speed="5.0" scale="3 3" delayMsec="200"/>
+			<RenderObject2D texture="data/textures/gui/locked_icon.dds" scaleX="1.5" scaleY="1.5" color="91919110"/>
+		</StaticImage>
+	</Item>
+
+	<!-- name is the one pointed to by the 'unlockBy' field -->
+	<Item name="@single_mispack_5_name" sizeX="956" sizeY="920" origin="0 -300" hidden="true">
+		<OnOpen>
+			<Action type="PlaySound" target="gui_unlock_visual" params="0 1.0 1900"/>
+		</OnOpen>
+		<StaticImage origin="0 250">
+			<ImageAnim type="pulse" speed="1"/>
+			<RenderObject2D texture="data/textures/fx/flashbang_nova.tga" color="7b3e03" blendMode="add_masked" scaleX="3" scaleY="2"/>
+		</StaticImage>
+		<StaticImage align="t" origin="0 8">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b40" sizeX="972" sizeY="466"/>
+		</StaticImage>
+
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="49646e" sizeX="956" sizeY="90"/>
+		</StaticImage>
+		<StaticImage align="t" origin="0 -90" sizeX="956" sizeY="360" clipChildren="true">
+			<Movie align="c" origin="0 0" hidden="false" sizeX="956" sizeY="360" file="data/movies/mpack_tiny_troubles.ogv" loop="true"/>
+			<Item origin="0 0" sizeX="940" sizeY="90" blurBackground="true" blurColor="ffffff">
+			</Item>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0bcc" sizeX="956" sizeY="90"/>
+				<StaticText text="@single_mispack_5x_name" font="header_2" textColor="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/overlay_shine.dds" sizeX="956" sizeY="415" texRepeatX="0.2" texRepeatY="0.2" color="ffffff" blendMode="overlay"/>
+				<ImageAnim type="scroll" speed="1" direction="-0.2 0"/>
+			</StaticImage>
+		</StaticImage>
+
+
+
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="080808cc" sizeX="956" sizeY="90"/>
+			<StaticText text="@menu_unlocks_missionpack" font="header_2" textColor="f97b03"/>
+			<StaticImage origin="0 0" align="lt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+			<StaticImage origin="0 0" align="rt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" flipX="true" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+		</StaticImage>
+
+		<StaticImage origin="0 240" hidden="true">
+			<ImageAnim type="blowUp"  speed="5.0" scale="3 3" delayMsec="800"/>
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b20" sizeX="956" sizeY="415"/>
+		</StaticImage>
+		<StaticImage origin="0 240" hidden="true">
+			<ImageAnim type="blowUp"  speed="5.0" scale="3 3" delayMsec="200"/>
+			<RenderObject2D texture="data/textures/gui/locked_icon.dds" scaleX="1.5" scaleY="1.5" color="91919110"/>
+		</StaticImage>
+	</Item>
+
+	<!-- name is the one pointed to by the 'unlockBy' field -->
+	<Item name="@single_mispack_6_name" sizeX="956" sizeY="920" origin="0 -300" hidden="true">
+		<OnOpen>
+			<Action type="PlaySound" target="gui_unlock_visual" params="0 1.0 1900"/>
+		</OnOpen>
+		<StaticImage origin="0 250">
+			<ImageAnim type="pulse" speed="1"/>
+			<RenderObject2D texture="data/textures/fx/flashbang_nova.tga" color="7b3e03" blendMode="add_masked" scaleX="3" scaleY="2"/>
+		</StaticImage>
+		<StaticImage align="t" origin="0 8">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b40" sizeX="972" sizeY="466"/>
+		</StaticImage>
+
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="49646e" sizeX="956" sizeY="90"/>
+		</StaticImage>
+		<StaticImage align="t" origin="0 -90" sizeX="956" sizeY="360" clipChildren="true">
+			<Movie align="c" origin="0 0" hidden="false" sizeX="956" sizeY="360" file="data/movies/mpack_extreme_rescues.ogv" loop="true"/>
+			<Item origin="0 0" sizeX="940" sizeY="90" blurBackground="true" blurColor="ffffff">
+			</Item>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0bcc" sizeX="956" sizeY="90"/>
+				<StaticText text="@single_mispack_6x_name" font="header_2" textColor="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/overlay_shine.dds" sizeX="956" sizeY="415" texRepeatX="0.2" texRepeatY="0.2" color="ffffff" blendMode="overlay"/>
+				<ImageAnim type="scroll" speed="1" direction="-0.2 0"/>
+			</StaticImage>
+		</StaticImage>
+
+
+
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="080808cc" sizeX="956" sizeY="90"/>
+			<StaticText text="@menu_unlocks_missionpack" font="header_2" textColor="f97b03"/>
+			<StaticImage origin="0 0" align="lt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+			<StaticImage origin="0 0" align="rt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" flipX="true" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+		</StaticImage>
+
+		<StaticImage origin="0 240" hidden="true">
+			<ImageAnim type="blowUp"  speed="5.0" scale="3 3" delayMsec="800"/>
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b20" sizeX="956" sizeY="415"/>
+		</StaticImage>
+		<StaticImage origin="0 240" hidden="true">
+			<ImageAnim type="blowUp"  speed="5.0" scale="3 3" delayMsec="200"/>
+			<RenderObject2D texture="data/textures/gui/locked_icon.dds" scaleX="1.5" scaleY="1.5" color="91919110"/>
+		</StaticImage>
+	</Item>
+
+	<!-- name is the one pointed to by the 'unlockBy' field -->
+	<Item name="@single_mispack_2_name" sizeX="956" sizeY="920" origin="0 -300" hidden="true">
+		<OnOpen>
+			<Action type="PlaySound" target="gui_unlock_visual" params="0 1.0 1900"/>
+		</OnOpen>
+		<StaticImage origin="0 250">
+			<ImageAnim type="pulse" speed="1"/>
+			<RenderObject2D texture="data/textures/fx/flashbang_nova.tga" color="7b3e03" blendMode="add_masked" scaleX="3" scaleY="2"/>
+		</StaticImage>
+		<StaticImage align="t" origin="0 8">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b40" sizeX="972" sizeY="466"/>
+		</StaticImage>
+
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="49646e" sizeX="956" sizeY="90"/>
+		</StaticImage>
+		<StaticImage align="t" origin="0 -90" sizeX="956" sizeY="360" clipChildren="true">
+			<Movie align="c" origin="0 0" hidden="false" sizeX="956" sizeY="360" file="data/movies/mpack_all_the_way.ogv" loop="true"/>
+			<Item origin="0 0" sizeX="940" sizeY="90" blurBackground="true" blurColor="ffffff">
+			</Item>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0bcc" sizeX="956" sizeY="90"/>
+				<StaticText text="@single_mispack_12_name" font="header_2" textColor="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/overlay_shine.dds" sizeX="956" sizeY="415" texRepeatX="0.2" texRepeatY="0.2" color="ffffff" blendMode="overlay"/>
+				<ImageAnim type="scroll" speed="1" direction="-0.2 0"/>
+			</StaticImage>
+		</StaticImage>
+
+
+
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="080808cc" sizeX="956" sizeY="90"/>
+			<StaticText text="@menu_unlocks_missionpack" font="header_2" textColor="f97b03"/>
+			<StaticImage origin="0 0" align="lt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+			<StaticImage origin="0 0" align="rt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" flipX="true" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+		</StaticImage>
+
+		<StaticImage origin="0 240" hidden="true">
+			<ImageAnim type="blowUp"  speed="5.0" scale="3 3" delayMsec="800"/>
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b20" sizeX="956" sizeY="415"/>
+		</StaticImage>
+		<StaticImage origin="0 240" hidden="true">
+			<ImageAnim type="blowUp"  speed="5.0" scale="3 3" delayMsec="200"/>
+			<RenderObject2D texture="data/textures/gui/locked_icon.dds" scaleX="1.5" scaleY="1.5" color="91919110"/>
+		</StaticImage>
+	</Item>
+
+	<!-- name is the one pointed to by the 'unlockBy' field -->
+	<Item name="@single_mispack_5x_name" sizeX="956" sizeY="920" origin="0 -300" hidden="true">
+		<OnOpen>
+			<Action type="PlaySound" target="gui_unlock_visual" params="0 1.0 1900"/>
+		</OnOpen>
+		<StaticImage origin="0 250">
+			<ImageAnim type="pulse" speed="1"/>
+			<RenderObject2D texture="data/textures/fx/flashbang_nova.tga" color="7b3e03" blendMode="add_masked" scaleX="3" scaleY="2"/>
+		</StaticImage>
+		<StaticImage align="t" origin="0 8">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b40" sizeX="972" sizeY="466"/>
+		</StaticImage>
+
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="49646e" sizeX="956" sizeY="90"/>
+		</StaticImage>
+		<StaticImage align="t" origin="0 -90" sizeX="956" sizeY="360" clipChildren="true">
+			<Movie align="c" origin="0 0" hidden="false" sizeX="956" sizeY="360" file="data/movies/mpack_tiny_troubles.ogv" loop="true"/>
+			<Item origin="0 0" sizeX="940" sizeY="90" blurBackground="true" blurColor="ffffff">
+			</Item>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0bcc" sizeX="956" sizeY="90"/>
+				<StaticText text="@single_mispack_5xx_name" font="header_2" textColor="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/overlay_shine.dds" sizeX="956" sizeY="415" texRepeatX="0.2" texRepeatY="0.2" color="ffffff" blendMode="overlay"/>
+				<ImageAnim type="scroll" speed="1" direction="-0.2 0"/>
+			</StaticImage>
+		</StaticImage>
+
+		<StaticImage align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="080808cc" sizeX="956" sizeY="90"/>
+			<StaticText text="@menu_unlocks_missionpack" font="header_2" textColor="f97b03"/>
+			<StaticImage origin="0 0" align="lt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+			<StaticImage origin="0 0" align="rt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" flipX="true" sizeX="220" sizeY="92" color="0c0b0b80"/>
+			</StaticImage>
+		</StaticImage>
+
+		<StaticImage origin="0 240" hidden="true">
+			<ImageAnim type="blowUp"  speed="5.0" scale="3 3" delayMsec="800"/>
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b20" sizeX="956" sizeY="415"/>
+		</StaticImage>
+		<StaticImage origin="0 240" hidden="true">
+			<ImageAnim type="blowUp"  speed="5.0" scale="3 3" delayMsec="200"/>
+			<RenderObject2D texture="data/textures/gui/locked_icon.dds" scaleX="1.5" scaleY="1.5" color="91919110"/>
+		</StaticImage>
+	</Item>
+
+	<Button origin="0 -600" align="c">
+		<RenderObject2D texture="data/textures/gui/menu_select.dds" color="f0e3cc" flipX="true"/>
+		<ButtonText align="c" origin="0 0" text="@menu_generic_continue" font="header_2" textColor="40392b"/>
+		<OnHover>
+			<RenderObject2D texture="data/textures/gui/menu_select.dds" color="f97b03" flipX="true"/>
+			<ButtonText align="c" origin="0 0" text="@menu_generic_continue" font="header_2" textColor="211e1d"/>
+		</OnHover>
+		<OnClick>
+			<RenderObject2D texture="data/textures/gui/menu_select.dds" color="40392b" flipX="true"/>
+			<ButtonText align="c" origin="0 0" text="@menu_generic_continue" font="header_2" textColor="f0e3cc"/>
+			<Action type="Hide" target="#Unlock"/>
+			<Action type="TriggerEvent" target="GUI_GAME_UNLOCK_SCREEN_CONTINUE"/>
+		</OnClick>
+	</Button>
+
+</Item>
+
+</GUIItems>

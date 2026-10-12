@@ -1,0 +1,920 @@
+<GUIItems>
+
+<Item name="howtoplay_main" hidden="true">
+	<OnOpen>
+		<Action type="Hide" target="Menu_Main"/>
+		<Action type="Show" target="howtoplay"/>
+		<Action type="Hide" target="howtoplay_singlepage_stuff"/>
+		<Action type="Show" target="howtoplay_multipage_stuff"/>
+	</OnOpen>
+
+	<OnClose>
+		<Action type="Show" target="Menu_Main"/>
+	</OnClose>
+</Item>
+
+<Item name="howtoplay_ingame" hidden="true">
+	<OnOpen>
+		<Action type="Hide" target="Menu_Ingame"/>
+		<Action type="Show" target="howtoplay"/>
+		<Action type="Hide" target="howtoplay_singlepage_stuff"/>
+		<Action type="Show" target="howtoplay_multipage_stuff"/>
+	</OnOpen>
+
+	<OnClose>
+		<Action type="Show" target="Menu_Ingame"/>
+	</OnClose>
+</Item>
+
+<Item name="howtoplay_singlemap" hidden="true">
+	<OnOpen>
+		<Action type="Show" target="howtoplay"/>
+		<Action type="Show" target="howtoplay_singlepage_stuff"/>
+		<Action type="Hide" target="howtoplay_multipage_stuff"/>
+	</OnOpen>
+
+	<OnClose>
+	</OnClose>
+</Item>
+
+<Item name="howtoplay" hidden="true">
+	<OnOpen>
+		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
+		<Action type="TriggerEvent" target="GUI_GAME_TUTORIALS_OPENED"/>
+	</OnOpen>
+	<OnClose>
+		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
+
+		<!-- uh hack to make sure it shows up here. Otherwise, if it's currently selected and it was previously shown in Options, it won't be visible when opening HTP again -->
+		<Action type="Hide" target="howtoplay_steamdeck"/>
+		
+		<Action type="Hide" target="howtoplay_main"/>
+		<Action type="Hide" target="howtoplay_ingame"/>
+		<Action type="Hide" target="howtoplay_singlemap"/>		
+	</OnClose>
+
+	<OnKeyDown key0="27" key1="32">
+		<Action type="Hide" target="this"/>
+	</OnKeyDown>
+
+	<Item origin="0 0" sizeX="9999" sizeY="9999" blurBackground="true">
+	</Item>
+
+	<Item name="howtoplay_singlepage_stuff" hidden="true">
+		<StaticImage>
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="9999" color="211e1dB3"/>
+		</StaticImage>
+
+		<Button origin="-473 -553">
+			<ButtonText origin="10 0" text="@menu_generic_close" align="l" font="header_3" textColor="f0e3cc"/>
+			<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="40382b" />
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" flipX="false" color="f0e3cc" />
+				<ButtonText origin="10 0" text="@menu_generic_close" align="l" font="header_3" textColor="40382b"/>
+			</OnHover>
+			<OnClick>
+				<ButtonText origin="10 0" text="@menu_generic_close" align="l" font="header_3" textColor="f6e9d2"/>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="40382b" />
+				<Action type="Hide" target="howtoplay"/>
+			</OnClick>
+		</Button>
+	</Item>
+
+	<Item name="howtoplay_multipage_stuff" hidden="true">
+		<OnOpen>
+			<Action type="Show" target="howtoplay_multipage_buttons"/>
+		</OnOpen>
+		<OnClose>
+			<Action type="Hide" target="howtoplay_multipage_buttons"/>
+		</OnClose>
+		<StaticImage origin="0 0">
+			<RenderObject2D texture="data/textures/gui/bg_texture.dds" sizeX="7680" color="f0e3cc26" sizeY="1920" texRepeatX="3" texRepeatY="1"/>
+		</StaticImage>
+
+		<StaticImage name="ScreenBg" origin="0 0">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2560" sizeY="9999" color="0c0b0bbf"/>
+			<StaticImage align="l" origin="-128 0">
+				<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipX="true" />
+			</StaticImage>
+			<StaticImage align="r" origin="128 0">
+				<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipY="true" />
+			</StaticImage>
+		</StaticImage>
+	</Item>
+
+	<Item name="howtoplay_tut_list">
+
+		<!-- don't change name for this one -->
+		<Item name="howtoplay_steamdeck" hidden="true">
+			<OnOpen>
+				<Action type="AddChild" target="howtoplay_steamdeck_detailed"/>
+				<Action type="Show" target="howtoplay_steamdeck_detailed"/>
+			</OnOpen>
+			<OnClose>
+				<Action type="Hide" target="howtoplay_steamdeck_detailed"/>
+			</OnClose>
+		</Item>
+
+		<Item name="howtoplay_pathing" sizeX="1366" sizeY="1000" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="f97b03"/>
+				<StaticText text="@menu_htp_basic" align="l" origin="20 0" font="header_3" textColor="201f1b" />
+			</StaticImage>
+
+			<ItemList name="#howtoplay_pathing_list" align="t" origin="0 -72" sizeX="1366" sizeY="928" direction="y" clipChildren="true">
+				<ButtonGraphics align="r" origin="48 0">
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b0340"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+					</OnClick>
+				</ButtonGraphics>
+
+				<Item origin="0 0" sizeX="1366" sizeY="928">
+					<StaticImage align="t" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="177" color="211e1dB3"/>
+					</StaticImage>
+
+					<Item align="t" sizeX="1366" sizeY="105">
+						<StaticText text="@menu_htp_basic1" align="t" origin="0 -5" font="paragraph_2" textColor="f0e3cc" />
+
+						<StaticImage name="#keybind_pc" align="b" origin="0 10" hidden="true">
+							<RenderObject2D texture="data/textures/gui/mouse_and_key/tutorial_button_lclick.dds" scaleX="0.8" scaleY="0.8"/>
+						</StaticImage>
+
+						<StaticImage name="#keybind_sdeck" align="b" origin="-64 10">
+							<RenderObject2D texture="data/textures/gui/sd_controller/sd_r2.dds" color="f0e3cc"/>
+							<StaticImage origin="64 0">
+								<RenderObject2D texture="data/textures/gui/tutorial_button_plus.dds" scaleX="0.8" scaleY="0.8"/>
+							</StaticImage>
+							<StaticImage origin="128 0">
+								<RenderObject2D texture="data/textures/gui/sd_controller/sd_rtrackpad.dds" color="f0e3cc"/>
+							</StaticImage>
+						</StaticImage>
+					</Item>
+					<Movie align="b" origin="0 64" sizeX="1366" sizeY="759" file="data/movies/tutorial_basic_movement.ogv" loop="true"/>
+					<Button align="b" origin="0 -16">
+						<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" texRepeatX="3" sizeX="156" scaleX="1.5" scaleY="1.5" flipY="true"/>
+						<ImageAnim type="pulse" speed="10"/>
+						<OnHover>
+							<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" texRepeatX="3" sizeX="156" scaleX="1.7" scaleY="1.7" flipY="true"/>
+						</OnHover>
+						<OnClick>
+							<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" texRepeatX="3" sizeX="156" scaleX="1.5" scaleY="1.5" flipY="true"/>
+							<Action type="ScrollListForward" target="#howtoplay_pathing_list"/>
+						</OnClick>
+					</Button>
+				</Item>
+
+				<Item origin="0 -928" sizeX="1366" sizeY="928">
+					<StaticImage align="t" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="177" color="211e1dB3"/>
+					</StaticImage>
+
+					<Item align="t" sizeX="1366" sizeY="105">
+						<StaticText text="@menu_htp_basic2" align="t" origin="0 -5" font="paragraph_2" textColor="f0e3cc" />
+
+						<StaticImage name="#keybind_pc" align="b" origin="0 10" hidden="true">
+							<RenderObject2D texture="data/textures/gui/mouse_and_key/tutorial_button_lclick.dds" scaleX="0.8" scaleY="0.8" flipX="true"/>
+						</StaticImage>
+
+						<StaticImage name="#keybind_sdeck" align="b" origin="-64 10">
+							<RenderObject2D texture="data/textures/gui/sd_controller/sd_l2.dds" color="f0e3cc"/>
+							<StaticImage origin="64 0">
+								<RenderObject2D texture="data/textures/gui/tutorial_button_plus.dds" scaleX="0.8" scaleY="0.8"/>
+							</StaticImage>
+							<StaticImage origin="128 0">
+								<RenderObject2D texture="data/textures/gui/sd_controller/sd_rtrackpad.dds" color="f0e3cc"/>
+							</StaticImage>
+						</StaticImage>
+					</Item>
+					<Movie align="b" origin="0 64" sizeX="1366" sizeY="759" file="data/movies/tutorial_lookat_simple.ogv" loop="true"/>
+					<Button align="b" origin="0 -16">
+						<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" texRepeatX="2" sizeX="104" scaleX="1.5" scaleY="1.5" flipY="true"/>
+						<ImageAnim type="pulse" speed="10"/>
+						<OnHover>
+							<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" texRepeatX="2" sizeX="104" scaleX="1.7" scaleY="1.7" flipY="true"/>
+						</OnHover>
+						<OnClick>
+							<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" texRepeatX="2" sizeX="104" scaleX="1.5" scaleY="1.5" flipY="true"/>
+							<Action type="ScrollListForward" target="#howtoplay_pathing_list"/>
+						</OnClick>
+					</Button>
+				</Item>
+
+				<Item origin="0 -1856" sizeX="1366" sizeY="928">
+					<StaticImage align="t" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="177" color="211e1dB3"/>
+					</StaticImage>
+
+					<Item align="t" sizeX="1366" sizeY="105">
+						<StaticText text="@menu_htp_basic3" align="t" origin="0 -5" font="paragraph_2" textColor="f0e3cc" />
+
+						<Item name="#keybind_pc" align="i" hidden="true">
+							<StaticImage align="b" origin="-300 10">
+								<RenderObject2D texture="data/textures/gui/mouse_and_key/tutorial_button_lclick.dds" scaleX="0.8" scaleY="0.8" flipX="true"/>
+								<StaticImage align="r" origin="50 0">
+									<RenderObject2D texture="data/textures/gui/tutorial_button_plus.dds" scaleX="0.8" scaleY="0.8" flipX="true"/>
+
+									<StaticImage align="r" origin="100 0">
+										<RenderObject2D texture="data/textures/gui/mouse_and_key/tutorial_button_shift.dds" scaleX="0.8" scaleY="0.8"/>
+									</StaticImage>
+								</StaticImage>
+							</StaticImage>
+
+							<StaticText text="@menu_htp_basic5_part4" align="b" origin="0 20" font="paragraph_3" textColor="f0e3cc"/>
+
+							<StaticImage align="b" origin="160 10">
+								<RenderObject2D texture="data/textures/gui/mouse_and_key/tutorial_button_lclick.dds" scaleX="0.8" scaleY="0.8" flipX="true"/>
+								<Item origin="20 0" align="r">
+									<StaticText text="@menu_htp_basic5_part2" align="l" origin="0 0" font="paragraph_3" textColor="f0e3cc">
+										<StaticImage align="r" origin="55 0">
+											<RenderObject2D texture="data/textures/gui/mouse_and_key/tutorial_button_lclick.dds" scaleX="0.8" scaleY="0.8" flipX="false"/>
+											<StaticText align="l" text="@menu_htp_basic5_part3" origin="60 0" font="paragraph_3" textColor="f0e3cc"/>
+										</StaticImage>
+									</StaticText>
+								</Item>
+							</StaticImage>
+						</Item>
+
+						<StaticImage name="#keybind_sdeck" align="b" origin="-150 10">
+							<RenderObject2D texture="data/textures/gui/sd_controller/sd_l2.dds" color="f0e3cc"/>
+							<StaticImage origin="64 0">
+								<RenderObject2D texture="data/textures/gui/tutorial_button_plus.dds" scaleX="0.8" scaleY="0.8"/>
+							</StaticImage>
+							<StaticImage origin="128 0">
+								<RenderObject2D texture="data/textures/gui/sd_controller/sd_rtrackpad.dds" color="f0e3cc"/>
+							</StaticImage>
+
+							<StaticText text="," origin="180 0" font="paragraph_2" textColor="f0e3cc"/>
+
+							<StaticImage origin="240 0">
+								<RenderObject2D texture="data/textures/gui/sd_controller/sd_r2.dds" color="f0e3cc"/>
+
+								<StaticText align="l" text="@menu_htp_basic5_part3" origin="60 0" font="paragraph_2" textColor="f0e3cc"/>
+							</StaticImage>
+						</StaticImage>
+					</Item>
+					<Movie align="b" origin="0 64" sizeX="1366" sizeY="759" file="data/movies/tutorial_lookat_pie.ogv" loop="true"/>
+					<Button align="b" origin="0 -16">
+						<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" scaleX="1.5" scaleY="1.5" flipY="true"/>
+						<ImageAnim type="pulse" speed="10"/>
+						<OnHover>
+							<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" scaleX="1.7" scaleY="1.7" flipY="true"/>
+						</OnHover>
+						<OnClick>
+							<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" scaleX="1.5" scaleY="1.5" flipY="true"/>
+							<Action type="ScrollListForward" target="#howtoplay_pathing_list"/>
+						</OnClick>
+					</Button>
+				</Item>
+
+				<Item origin="0 -2784" sizeX="1366" sizeY="928">
+					<StaticImage align="t" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="177" color="211e1dB3"/>
+					</StaticImage>
+
+					<Item align="t" sizeX="1366" sizeY="105">
+						<StaticText text="@menu_htp_basic4" align="t" origin="0 -5" font="paragraph_2" textColor="f0e3cc" />
+
+						<Item name="#keybind_pc" align="i" hidden="true">
+							<StaticImage align="b" origin="-300 10">
+								<RenderObject2D texture="data/textures/gui/mouse_and_key/tutorial_button_lclick.dds" scaleX="0.8" scaleY="0.8" flipX="true"/>
+								<StaticImage align="r" origin="50 0">
+									<RenderObject2D texture="data/textures/gui/tutorial_button_plus.dds" scaleX="0.8" scaleY="0.8" flipX="true"/>
+									<StaticImage align="r" origin="105 0">
+										<RenderObject2D texture="data/textures/gui/mouse_and_key/tutorial_button_ctrl.dds" scaleX="0.8" scaleY="0.8"/>
+									</StaticImage>
+								</StaticImage>
+							</StaticImage>
+
+							<StaticText text="@menu_htp_basic5_part4" align="b" origin="0 20" font="paragraph_3" textColor="f0e3cc"/>
+
+							<StaticImage align="b" origin="160 10">
+								<RenderObject2D texture="data/textures/gui/mouse_and_key/tutorial_button_lclick.dds" scaleX="0.8" scaleY="0.8" flipX="true"/>
+								<Item origin="20 0" align="r">
+									<StaticText text="@menu_htp_basic5_part2" align="l" origin="0 0" font="paragraph_3" textColor="f0e3cc">
+										<StaticImage align="r" origin="55 0">
+											<RenderObject2D texture="data/textures/gui/mouse_and_key/tutorial_button_lclick.dds" scaleX="0.8" scaleY="0.8" flipX="false"/>
+											<StaticText align="l" text="@menu_htp_basic5_part3" origin="60 0" font="paragraph_3" textColor="f0e3cc"/>
+										</StaticImage>
+									</StaticText>
+								</Item>
+							</StaticImage>
+						</Item>
+
+						<StaticImage name="#keybind_sdeck" align="b" origin="-150 10">
+							<RenderObject2D texture="data/textures/gui/sd_controller/sd_l2.dds" color="f0e3cc"/>
+							<StaticImage origin="64 0">
+								<RenderObject2D texture="data/textures/gui/tutorial_button_plus.dds" scaleX="0.8" scaleY="0.8"/>
+							</StaticImage>
+							<StaticImage origin="128 0">
+								<RenderObject2D texture="data/textures/gui/sd_controller/sd_rtrackpad.dds" color="f0e3cc"/>
+							</StaticImage>
+
+							<StaticText text="," origin="180 0" font="paragraph_2" textColor="f0e3cc"/>
+
+							<StaticImage origin="240 0">
+								<RenderObject2D texture="data/textures/gui/sd_controller/sd_r2.dds" color="f0e3cc"/>
+
+								<StaticText align="l" text="@menu_htp_basic5_part3" origin="60 0" font="paragraph_2" textColor="f0e3cc"/>
+							</StaticImage>
+						</StaticImage>
+					</Item>
+					<Movie align="b" origin="0 64" sizeX="1366" sizeY="759" file="data/movies/tutorial_lookat_strafe.ogv" loop="true"/>
+				</Item>
+			</ItemList>
+		</Item>
+
+
+
+		<Item name="howtoplay_doors" sizeX="1366" sizeY="1000" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="f97b03"/>
+				<StaticText text="@menu_htp_doors" align="l" origin="20 0" font="header_3" textColor="201f1b" />
+			</StaticImage>
+
+			<ItemList name="#howtoplay_doors_list" align="t" origin="0 -72" sizeX="1366" sizeY="928" direction="y" clipChildren="true">
+				<ButtonGraphics align="r" origin="48 0">
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b0340"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+					</OnClick>
+				</ButtonGraphics>
+
+				<Item origin="0 0" sizeX="1366" sizeY="928">
+					<StaticImage align="t" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="177" color="211e1dB3"/>
+					</StaticImage>
+					<Item align="t" sizeX="1366" sizeY="105">
+						<StaticText text="@menu_htp_doors1" align="c" origin="0 0" font="paragraph_2" textColor="f0e3cc" />
+					</Item>
+					<Movie align="b" origin="0 64" sizeX="1366" sizeY="759" file="data/movies/tutorial_doors1.ogv" loop="true"/>
+					<Button align="b" origin="0 -16">
+						<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" texRepeatX="3" sizeX="156" scaleX="1.5" scaleY="1.5" flipY="true"/>
+						<ImageAnim type="pulse" speed="10"/>
+						<OnHover>
+							<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" texRepeatX="3" sizeX="156" scaleX="1.7" scaleY="1.7" flipY="true"/>
+						</OnHover>
+						<OnClick>
+							<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" texRepeatX="3" sizeX="156" scaleX="1.5" scaleY="1.5" flipY="true"/>
+							<Action type="ScrollListForward" target="#howtoplay_doors_list"/>
+						</OnClick>
+					</Button>
+				</Item>
+
+				<Item origin="0 -928" sizeX="1366" sizeY="928">
+					<StaticImage align="t" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="177" color="211e1dB3"/>
+					</StaticImage>
+					<Item align="t" sizeX="1366" sizeY="105">
+						<StaticText name="#keybind_pc" text="@menu_htp_doors2" align="c" origin="64 0" font="paragraph_2" textColor="f0e3cc">
+							<StaticImage align="l" origin="-64 0">
+								<RenderObject2D texture="data/textures/gui/mouse_and_key/tutorial_button_lclick.dds" scaleX="0.8" scaleY="0.8" flipX="true"/>
+							</StaticImage>
+						</StaticText>
+
+						<StaticText name="#keybind_sdeck" text="@menu_htp_doors2" align="c" origin="64 0" font="paragraph_2" textColor="f0e3cc">
+							<StaticImage align="l" origin="-64 0">
+								<RenderObject2D texture="data/textures/gui/sd_controller/sd_l2.dds" color="f0e3cc"/>
+							</StaticImage>
+						</StaticText>
+					</Item>
+					<Movie align="b" origin="0 64" sizeX="1366" sizeY="759" file="data/movies/tutorial_doors4.ogv" loop="true"/>
+					<Button align="b" origin="0 -16">
+						<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" texRepeatX="2" sizeX="104" scaleX="1.5" scaleY="1.5" flipY="true"/>
+						<ImageAnim type="pulse" speed="10"/>
+						<OnHover>
+							<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" texRepeatX="2" sizeX="104" scaleX="1.7" scaleY="1.7" flipY="true"/>
+						</OnHover>
+						<OnClick>
+							<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" texRepeatX="2" sizeX="104" scaleX="1.5" scaleY="1.5" flipY="true"/>
+							<Action type="ScrollListForward" target="#howtoplay_doors_list"/>
+						</OnClick>
+					</Button>
+				</Item>
+
+				<Item origin="0 -1856" sizeX="1366" sizeY="928">
+					<StaticImage align="t" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="177" color="211e1dB3"/>
+					</StaticImage>
+					<Item align="t" sizeX="1366" sizeY="105">
+						<StaticText name="#keybind_pc" text="@menu_htp_doors3" align="c" origin="64 0" font="paragraph_2" textColor="f0e3cc">
+							<StaticImage align="l" origin="-64 0">
+								<RenderObject2D texture="data/textures/gui/mouse_and_key/tutorial_button_lclick.dds" scaleX="0.8" scaleY="0.8" flipX="true"/>
+							</StaticImage>
+						</StaticText>
+
+						<StaticText name="#keybind_sdeck" text="@menu_htp_doors3" align="c" origin="64 0" font="paragraph_2" textColor="f0e3cc">
+							<StaticImage align="l" origin="-64 0">
+								<RenderObject2D texture="data/textures/gui/sd_controller/sd_l2.dds" color="f0e3cc"/>
+							</StaticImage>
+						</StaticText>
+
+					</Item>
+					<Movie align="b" origin="0 64" sizeX="1366" sizeY="759" file="data/movies/tutorial_doors3.ogv" loop="true"/>
+					<Button align="b" origin="0 -16">
+						<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" scaleX="1.5" scaleY="1.5" flipY="true"/>
+						<ImageAnim type="pulse" speed="10"/>
+						<OnHover>
+							<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" scaleX="1.7" scaleY="1.7" flipY="true"/>
+						</OnHover>
+						<OnClick>
+							<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" scaleX="1.5" scaleY="1.5" flipY="true"/>
+							<Action type="ScrollListForward" target="#howtoplay_doors_list"/>
+						</OnClick>
+					</Button>
+				</Item>
+
+				<Item origin="0 -2784" sizeX="1366" sizeY="928">
+					<StaticImage align="t" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="177" color="211e1dB3"/>
+					</StaticImage>
+					<Item align="t" sizeX="1366" sizeY="105">
+						<StaticText text="@menu_htp_doors4" align="c" origin="0 0" font="paragraph_2" textColor="f0e3cc" />
+					</Item>
+					<Movie align="b" origin="0 64" sizeX="1366" sizeY="759" file="data/movies/tutorial_doors2.ogv" loop="true"/>
+				</Item>
+			</ItemList>
+		</Item>
+
+		<Item name="howtoplay_vaulting" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="f97b03"/>
+				<StaticText text="@menu_htp_jumping" align="l" origin="20 0" font="header_3" textColor="201f1b" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/tutorial_vaulting.ogv" loop="true"/>
+		</Item>
+
+		<Item name="howtoplay_gocodes" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="f97b03"/>
+				<StaticText text="@menu_htp_gocodes" align="l" origin="20 0" font="header_3" textColor="201f1b" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/tutorial_gocodes.ogv" loop="true"/>
+		</Item>
+
+		<!--
+		<Item name="howtoplay_windows" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="f97b03"/>
+				<StaticText text="@menu_htp_windows" align="l" origin="20 0" font="header_3" textColor="201f1b" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/tutorial_windows.ogv" loop="true"/>
+		</Item>
+		-->
+
+		<Item name="howtoplay_sniper" sizeX="1366" sizeY="1000" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="f97b03"/>
+				<StaticText text="@menu_htp_snipers" align="l" origin="20 0" font="header_3" textColor="201f1b" />
+			</StaticImage>
+
+			<ItemList name="#howtoplay_sniper_list" align="t" origin="0 -72" sizeX="1366" sizeY="928" direction="y" clipChildren="true">
+				<ButtonGraphics align="r" origin="48 0">
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b0340"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+					</OnClick>
+				</ButtonGraphics>
+
+				<Item origin="0 0" sizeX="1366" sizeY="928">
+					<StaticImage align="t" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="177" color="211e1dB3"/>
+					</StaticImage>
+					<Item align="t" sizeX="1366" sizeY="105">
+						<StaticText text="@menu_htp_snipers2" align="c" origin="90 0" font="paragraph_2" textColor="f0e3cc">
+							<StaticImage align="l" origin="-90 0">
+								<RenderObject2D texture="data/textures/hud/sniper_normal.dds" scaleX="0.65" scaleY="0.65"/>
+							</StaticImage>
+						</StaticText>
+					</Item>
+					<Movie align="b" origin="0 64" sizeX="1366" sizeY="759" file="data/movies/tutorial_sniper1.ogv" loop="true"/>
+					<Button align="b" origin="0 -16">
+						<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" texRepeatX="1" sizeX="52" scaleX="1.5" scaleY="1.5" flipY="true"/>
+						<ImageAnim type="pulse" speed="10"/>
+						<OnHover>
+							<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" texRepeatX="1" sizeX="52" scaleX="1.7" scaleY="1.7" flipY="true"/>
+						</OnHover>
+						<OnClick>
+							<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" texRepeatX="1" sizeX="52" scaleX="1.5" scaleY="1.5" flipY="true"/>
+							<Action type="ScrollListForward" target="#howtoplay_sniper_list"/>
+						</OnClick>
+					</Button>
+				</Item>
+
+				<Item origin="0 -928" sizeX="1366" sizeY="928">
+					<StaticImage align="t" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="177" color="211e1dB3"/>
+					</StaticImage>
+					<Item align="t" sizeX="1366" sizeY="105">
+						<StaticText text="@menu_htp_snipers3" align="c" origin="0 0" font="paragraph_2" textColor="f0e3cc" />
+					</Item>
+					<Movie align="b" origin="0 64" sizeX="1366" sizeY="759" file="data/movies/tutorial_sniper2.ogv" loop="true"/>
+				</Item>
+			</ItemList>
+		</Item>
+
+		<Item name="howtoplay_cover" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="f97b03"/>
+				<StaticText text="@menu_htp_cover" align="l" origin="20 0" font="header_3" textColor="201f1b" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/tutorial_cover.ogv" loop="true"/>
+		</Item>
+
+		<Item name="howtoplay_rescue" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="f97b03"/>
+				<StaticText text="@menu_htp_rescue" align="l" origin="20 0" font="header_3" textColor="201f1b" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/tutorial_rescue.ogv" loop="true"/>
+		</Item>
+
+		<Item name="howtoplay_pathedit" sizeX="1366" sizeY="1000" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="f97b03"/>
+				<StaticText text="@menu_htp_path" align="l" origin="20 0" font="header_3" textColor="201f1b" />
+			</StaticImage>
+
+			<ItemList name="#howtoplay_pathedit_list" align="t" origin="0 -72" sizeX="1366" sizeY="928" direction="y" clipChildren="true">
+				<ButtonGraphics align="r" origin="48 0">
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b0340"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+					</OnClick>
+				</ButtonGraphics>
+
+				<Item origin="0 0" sizeX="1366" sizeY="928">
+					<StaticImage align="t" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="177" color="211e1dB3"/>
+					</StaticImage>
+					<Item align="t" sizeX="1366" sizeY="105">
+						<StaticText text="@menu_htp_path1" align="c" origin="0 0" font="paragraph_2" textColor="f0e3cc" />
+					</Item>
+					<Movie align="b" origin="0 64" sizeX="1366" sizeY="759" file="data/movies/tutorial_pathedit1.ogv" loop="true"/>
+					<Button align="b" origin="0 -16">
+						<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" texRepeatX="2" sizeX="104" scaleX="1.5" scaleY="1.5" flipY="true"/>
+						<ImageAnim type="pulse" speed="10"/>
+						<OnHover>
+							<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" texRepeatX="2" sizeX="104" scaleX="1.7" scaleY="1.7" flipY="true"/>
+						</OnHover>
+						<OnClick>
+							<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" texRepeatX="2" sizeX="104" scaleX="1.5" scaleY="1.5" flipY="true"/>
+							<Action type="ScrollListForward" target="#howtoplay_pathedit_list"/>
+						</OnClick>
+					</Button>
+				</Item>
+
+				<Item origin="0 -928" sizeX="1366" sizeY="928">
+					<StaticImage align="t" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="177" color="211e1dB3"/>
+					</StaticImage>
+					<Item align="t" sizeX="1366" sizeY="105">
+						<StaticText text="@menu_htp_path2" align="c" origin="0 0" font="paragraph_2" textColor="f0e3cc" />
+					</Item>
+					<Movie align="b" origin="0 64" sizeX="1366" sizeY="759" file="data/movies/tutorial_pathedit2.ogv" loop="true"/>
+					<Button align="b" origin="0 -16">
+						<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" texRepeatX="1" sizeX="52" scaleX="1.5" scaleY="1.5" flipY="true"/>
+						<ImageAnim type="pulse" speed="10"/>
+						<OnHover>
+							<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" texRepeatX="1" sizeX="52" scaleX="1.7" scaleY="1.7" flipY="true"/>
+						</OnHover>
+						<OnClick>
+							<RenderObject2D texture="data/textures/gui/menu_arrowup_normal.tga" texRepeatX="1" sizeX="52" scaleX="1.5" scaleY="1.5" flipY="true"/>
+							<Action type="ScrollListForward" target="#howtoplay_pathedit_list"/>
+						</OnClick>
+					</Button>
+				</Item>
+
+				<Item origin="0 -1856" sizeX="1366" sizeY="928">
+					<StaticImage align="t" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="177" color="211e1dB3"/>
+					</StaticImage>
+					<Item align="t" sizeX="1366" sizeY="105">
+						<StaticText name="#keybind_pc" text="@menu_htp_path3" align="c" origin="60 0" font="paragraph_2" textColor="f0e3cc">
+							<StaticImage align="l" origin="-60 0">
+								<RenderObject2D texture="data/textures/gui/mouse_and_key/tutorial_button_lclick.dds" scaleX="0.8" scaleY="0.8" flipX="true"/>
+							</StaticImage>
+						</StaticText>
+
+						<StaticText name="#keybind_sdeck" text="@menu_htp_path3" align="c" origin="60 0" font="paragraph_2" textColor="f0e3cc">
+							<StaticImage align="l" origin="-60 0">
+								<RenderObject2D texture="data/textures/gui/sd_controller/sd_l2.dds" color="f0e3cc"/>
+							</StaticImage>
+						</StaticText>
+					</Item>
+					<Movie align="b" origin="0 64" sizeX="1366" sizeY="759" file="data/movies/tutorial_pathedit3.ogv" loop="true"/>
+				</Item>
+			</ItemList>
+		</Item>
+
+		<Item name="howtoplay_crouch" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="f97b03"/>
+				<StaticText text="@menu_htp_crouch" align="l" origin="20 0" font="header_3" textColor="201f1b" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/tutorial_crouching.ogv" loop="true"/>
+		</Item>
+
+		<Item name="howtoplay_cia_concealment" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="f97b03"/>
+				<StaticText text="@menu_htp_concealment" align="l" origin="20 0" font="header_3" textColor="201f1b" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/cia_concealment.ogv" loop="true"/>
+		</Item>
+
+		<Item name="howtoplay_cia_dangerzones" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="f97b03"/>
+				<StaticText text="@menu_htp_danger_zones" align="l" origin="20 0" font="header_3" textColor="201f1b" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/cia_dangerzone.ogv" loop="true"/>
+		</Item>
+
+		<Item name="howtoplay_cia_undercover" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="f97b03"/>
+				<StaticText text="@menu_htp_undercover" align="l" origin="20 0" font="header_3" textColor="201f1b" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/cia_undercover.ogv" loop="true"/>
+		</Item>
+
+		<Item name="howtoplay_fuseboxes" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="f97b03"/>
+				<StaticText text="@menu_htp_turningofflights" align="l" origin="20 0" font="header_3" textColor="201f1b" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/tutorial_fusebox.ogv" loop="true"/>
+		</Item>
+
+		<Item name="howtoplay_blowupwalls" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="f97b03"/>
+				<StaticText text="@menu_htp_blowupwalls" align="l" origin="20 0" font="header_3" textColor="201f1b" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/tutorial_blowingupwalls.ogv" loop="true"/>
+		</Item>
+	</Item>
+
+	<!-- this needs to be last, so it comes on top -->
+	<Item name="howtoplay_multipage_buttons" hidden="true">
+		<Button origin="-1000 0">
+			<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="f0e3cc7f" flipX="true"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="f0e3cc" flipX="true"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="f0e3cc7f" flipX="true"/>
+				<Action type="TriggerEvent" target="GUI_GAME_TUTORIALS_PREV"/>
+			</OnClick>
+		</Button>
+
+		<Button origin="1000 0">
+			<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="f0e3cc7f" flipX="false"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="f0e3cc" flipX="false"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="f0e3cc7f" flipX="false"/>
+				<Action type="TriggerEvent" target="GUI_GAME_TUTORIALS_NEXT"/>
+			</OnClick>
+		</Button>
+
+		<Item align="sv" origin="0 -688">
+			<StaticImage name="ScreenFooter" align="b" origin="0 -32">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="211e1d"/>
+			</StaticImage>
+
+			<!-- back button -->
+			<Button align="lb" origin="-1200 -4">
+				<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="f0e3cc"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e3cc" flipX="false"/>
+					<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="211e1d"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="40392b" flipX="false"/>
+					<Action type="Hide" target="howtoplay"/>
+				</OnClick>
+			</Button>
+		</Item>
+	</Item>
+</Item>
+
+<Item name="howtoplay_steamdeck_detailed" origin="0 0" hidden="true">
+	<Item sizeX="2000" sizeY="1200" origin="0 90">
+		<StaticImage align="t" origin="0 0">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2352" sizeY="640" color="211e1dcc"/>
+		</StaticImage>
+
+		<StaticImage align="t" origin="0 0" clipChildren="true">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2352" sizeY="100" color="f97b03"/>
+			<StaticImage origin="0 0" align="c">
+				<RenderObject2D texture="data/textures/gui/campaign/ironman_endscreen.dds" blendMode="multiply"/>
+			</StaticImage>
+
+			<StaticImage origin="0 0" align="c">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2352" sizeY="100" color="f97b03bf"/>
+			</StaticImage>
+
+			<StaticImage origin="0 0" align="lt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" sizeX="200" sizeY="105" color="0c0b0b33"/>
+			</StaticImage>
+			<StaticImage origin="200 0" align="l">
+				<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="1.4" scaleY="1.4" color="0c0b0b33"/>
+			</StaticImage>
+			<StaticImage origin="300 0" align="l">
+				<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="1.4" scaleY="1.4" color="0c0b0b33"/>
+			</StaticImage>
+			<StaticImage origin="400 0" align="l">
+				<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="1.4" scaleY="1.4" color="0c0b0b33"/>
+			</StaticImage>
+
+			<StaticImage origin="0 0" align="rt">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" flipX="true" sizeX="200" sizeY="105" color="0c0b0b33"/>
+			</StaticImage>
+			<StaticImage origin="-200 0" align="r">
+				<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="1.4" scaleY="1.4" color="0c0b0b33"/>
+			</StaticImage>
+			<StaticImage origin="-300 0" align="r">
+				<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="1.4" scaleY="1.4" color="0c0b0b33"/>
+			</StaticImage>
+			<StaticImage origin="-400 0" align="r">
+				<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="1.4" scaleY="1.4" color="0c0b0b33"/>
+			</StaticImage>
+			<StaticText text="@menu_htp_sd_buttons" font="header_2" textColor="201f1b" align="c"/>
+		</StaticImage>
+
+		<StaticImage align="t" origin="0 -200">
+			<RenderObject2D texture="data/textures/gui/sd_controller/sd_controller.dds" color="f0e3cc" blendMode="screen"/>
+		</StaticImage>
+
+
+		<!-- left hand side buttons -->
+		<Item origin="-560 -170" align="t">
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/sd_controller/sd_l2.dds" color="f0e3cc"/>
+				<StaticText text="@menu_htp_ctrl_L2" align="r" origin="-80 0" font="header_4" textColor="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="0 -60">
+				<RenderObject2D texture="data/textures/gui/sd_controller/sd_lstick.dds" color="f0e3cc"/>
+				<StaticText text="@menu_htp_ctrl_Lstick" align="r" origin="-80 0" font="header_4" textColor="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="0 -120">
+				<RenderObject2D texture="data/textures/gui/sd_controller/sd_dpad_lr.dds" color="f0e3cc"/>
+				<StaticText text="@menu_htp_ctrl_dpadv" align="r" origin="-80 0" font="header_4" textColor="f0e3cc"/>
+			</StaticImage>
+
+			<!--<StaticText text="@menu_htp_ctrl_view" align="r" origin="0 -85" font="header_4" textColor="f0e3cc"/>
+			<StaticText text="@menu_htp_ctrl_dpadh" align="r" origin="0 -255" font="header_4" textColor="f0e3cc"/>
+			-->
+		</Item>
+
+		<!-- right hand side buttons -->
+		<Item origin="560 -170" align="t">
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/gui/sd_controller/sd_r2.dds" color="f0e3cc"/>
+				<StaticText text="@menu_htp_ctrl_R2" align="l" origin="80 0" font="header_4" textColor="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="0 -60">
+				<RenderObject2D texture="data/textures/gui/sd_controller/sd_rstick.dds" color="f0e3cc"/>
+				<StaticText text="@menu_htp_ctrl_Rstick" align="l" origin="80 0" font="header_4" textColor="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="0 -120">
+				<RenderObject2D texture="data/textures/gui/sd_controller/sd_a.dds" color="f0e3cc"/>
+				<StaticText text="@menu_htp_ctrl_A" align="l" origin="80 0" font="header_4" textColor="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="0 -180">
+				<RenderObject2D texture="data/textures/gui/sd_controller/sd_x.dds" color="f0e3cc"/>
+				<StaticText text="@menu_htp_ctrl_X" align="l" origin="80 0" font="header_4" textColor="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="0 -240">
+				<RenderObject2D texture="data/textures/gui/sd_controller/sd_y.dds" color="f0e3cc"/>
+				<StaticText text="@menu_htp_ctrl_Y" align="l" origin="80 0" font="header_4" textColor="f0e3cc"/>
+			</StaticImage>
+
+			<StaticText text="@menu_htp_ctrl_rtrackpad_name" align="l" origin="-40 -310" font="header_4" textColor="928a7c"/>
+
+			<StaticImage origin="0 -360">
+				<RenderObject2D texture="data/textures/gui/sd_controller/sd_rtrackpad.dds" color="f0e3cc"/>
+				<StaticText text="@menu_htp_ctrl_rtrackpad" align="l" origin="80 0" font="header_4" textColor="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="0 -420">
+				<RenderObject2D texture="data/textures/gui/sd_controller/sd_rtrackpad_click.dds" color="f0e3cc"/>
+				<StaticText text="@menu_htp_ctrl_rtrackpadClick" align="l" origin="80 0" font="header_4" textColor="f0e3cc"/>
+			</StaticImage>
+
+
+
+
+
+
+		</Item>
+
+
+		<!-- touchscreen -->
+		<Item origin="0 -170" align="c">
+			<StaticImage align="t" origin="0 130">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2352" sizeY="640" color="08080880"/>
+			</StaticImage>
+
+			<StaticImage align="t" origin="0 130" clipChildren="true">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2352" sizeY="100" color="f97b03"/>
+				<StaticImage origin="0 0" align="c">
+					<RenderObject2D texture="data/textures/gui/campaign/ironman_endscreen.dds" blendMode="multiply"/>
+				</StaticImage>
+
+				<StaticImage origin="0 0" align="c">
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2352" sizeY="100" color="f97b03bf"/>
+				</StaticImage>
+
+				<StaticImage origin="0 0" align="lt">
+					<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" sizeX="200" sizeY="105" color="0c0b0b33"/>
+				</StaticImage>
+				<StaticImage origin="200 0" align="l">
+					<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="1.4" scaleY="1.4" color="0c0b0b33"/>
+				</StaticImage>
+				<StaticImage origin="300 0" align="l">
+					<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="1.4" scaleY="1.4" color="0c0b0b33"/>
+				</StaticImage>
+				<StaticImage origin="400 0" align="l">
+					<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="1.4" scaleY="1.4" color="0c0b0b33"/>
+				</StaticImage>
+
+				<StaticImage origin="0 0" align="rt">
+					<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" flipX="true" sizeX="200" sizeY="105" color="0c0b0b33"/>
+				</StaticImage>
+				<StaticImage origin="-200 0" align="r">
+					<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="1.4" scaleY="1.4" color="0c0b0b33"/>
+				</StaticImage>
+				<StaticImage origin="-300 0" align="r">
+					<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="1.4" scaleY="1.4" color="0c0b0b33"/>
+				</StaticImage>
+				<StaticImage origin="-400 0" align="r">
+					<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="1.4" scaleY="1.4" color="0c0b0b33"/>
+				</StaticImage>
+
+				<StaticText text="@menu_htp_sd_touch" font="header_2" textColor="201f1b" align="c"/>
+			</StaticImage>
+
+			<StaticImage origin="-975 0" align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="352" sizeY="480" color="08080880"/>
+				<StaticImage origin="0 -8" align="t">
+					<RenderObject2D origin="0 0" align="t" texture="data/textures/gui/sd_controller/sd_touch_select.dds" scaleX="0.95" scaleY="0.95"/>
+					<StaticText text="@menu_htp_touch_tap_select" align="c" sizeX="370" wordWrap="true" origin="0 -240" font="header_4" textColor="f0e3cc"/>
+				</StaticImage>
+			</StaticImage>
+			<StaticImage origin="-585 0" align="t" >
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="352" sizeY="480" color="08080880"/>
+				<StaticImage origin="0 -8" align="t">
+					<RenderObject2D origin="0 0" align="t" texture="data/textures/gui/sd_controller/sd_touch_draw.dds" scaleX="0.95" scaleY="0.95"/>
+					<StaticText text="@menu_htp_touch_drag" align="c" sizeX="370" wordWrap="true" origin="0 -240" font="header_4" textColor="f0e3cc"/>
+				</StaticImage>
+			</StaticImage>
+			<StaticImage origin="-195 0" align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="352" sizeY="480" color="08080880"/>
+				<StaticImage origin="0 -8" align="t">
+					<RenderObject2D origin="0 0" align="t" texture="data/textures/gui/sd_controller/sd_touch_menu.dds" scaleX="0.95" scaleY="0.95"/>
+					<StaticText text="@menu_htp_touch_longpress_release" align="c" sizeX="370" wordWrap="true" origin="0 -240" font="header_4" textColor="f0e3cc"/>
+				</StaticImage>
+			</StaticImage>
+			<StaticImage origin="195 0" align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="352" sizeY="480" color="08080880"/>
+				<StaticImage origin="0 -8" align="t">
+					<RenderObject2D origin="0 0" align="t" texture="data/textures/gui/sd_controller/sd_touch_look.dds" scaleX="0.95" scaleY="0.95"/>
+					<StaticText text="@menu_htp_touch_longpress_drag" align="c" sizeX="370" wordWrap="true" origin="0 -240" font="header_4" textColor="f0e3cc"/>
+				</StaticImage>
+			</StaticImage>
+			<StaticImage origin="585 0" align="t" >
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="352" sizeY="480" color="08080880"/>
+				<StaticImage origin="0 -8" align="t">
+					<RenderObject2D origin="0 0" align="t" texture="data/textures/gui/sd_controller/sd_touch_camera.dds" scaleX="0.95" scaleY="0.95"/>
+					<StaticText text="@menu_htp_touch_two_fingers" align="c" sizeX="370" wordWrap="true" origin="0 -240" font="header_4" textColor="f0e3cc"/>
+				</StaticImage>
+			</StaticImage>
+			<StaticImage origin="975 0" align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="352" sizeY="480" color="08080880"/>
+				<StaticImage origin="0 -8" align="t">
+					<RenderObject2D origin="0 0" align="t" texture="data/textures/gui/sd_controller/sd_touch_play.dds" scaleX="0.95" scaleY="0.95"/>
+					<StaticText text="@menu_htp_touch_triple_tap" align="c" sizeX="370" wordWrap="true" origin="0 -240" font="header_4" textColor="f0e3cc"/>
+				</StaticImage>
+			</StaticImage>
+		</Item>
+
+	</Item>
+</Item>
+
+</GUIItems>

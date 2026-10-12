@@ -1,0 +1,363 @@
+<GUIItems>
+
+<Item name="Menu_Mods" origin="0 0" hidden="true">
+	<OnOpen>
+		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
+	</OnOpen>
+
+	<OnClose>
+		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
+	</OnClose>
+
+	<OnKeyDown key0="27">
+		<Action type="Click" target="Menu_Mods_Back"/>
+	</OnKeyDown>
+
+	<StaticImage origin="0 0">
+		<RenderObject2D texture="data/textures/gui/bg_texture.dds" sizeX="7680" color="f0e3cc26" sizeY="1920" texRepeatX="3" texRepeatY="1"/>
+	</StaticImage>
+
+	<StaticImage name="ScreenBg" origin="0 0">
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2560" sizeY="9999" color="0c0b0bbf"/>
+		<StaticImage align="l" origin="-128 0">
+			<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipX="true" />
+		</StaticImage>
+		<StaticImage align="r" origin="128 0">
+			<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipY="true" />
+		</StaticImage>
+	</StaticImage>
+
+	<Item origin="-1180 660" align="l" sizeX="2560" hidden="false">
+		<StaticText align="l" text="@menu_mods_uppercase" font="header_2" textColor="f97b03"/>
+		<StaticImage origin="0 -40" align="l">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="732" sizeY="4" color="f97b03"/>
+		</StaticImage>
+
+		<Item name="#Mod_Downloading" align="l" origin="450 0" hidden="false">
+			<OnOpen>
+				<Action type="SetForeground" target="this"/>
+			</OnOpen>
+			<StaticImage origin="-26 0" align="c">
+				<RenderObject2D texture="data/textures/gui_ingame/reload.dds" blendMode="add" scaleX="0.2" scaleY="0.2" color="f0e3cc">
+					<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="31" animationTimeMS="960" numLoops="-1"/>
+				</RenderObject2D>
+			</StaticImage>
+			<StaticText align="l" origin="0 0" text="@menu_mods_downloading" font="header_4" textColor="f0e3cc"/>
+		</Item>
+	</Item>
+
+	<!-- when putting these into the list, we try to fit as many on the first row, with equally spaced columns.
+			the subsequent rows will be placed right below, with sizeY in-between them.
+	 -->
+	<Item name="#Mod_ItemTemplate" hidden="true" origin="0 0" sizeX="450" sizeY="425">
+		<OnOpen>
+			<Action type="TriggerEvent" target="GUI_GAME_MODS_LISTITEM_IN_VIEW"/>
+		</OnOpen>
+		<OnClose>
+			<Action type="TriggerEvent" target="GUI_GAME_MODS_LISTITEM_OUT_OF_VIEW"/>
+		</OnClose>
+		<!-- this here for when scrolling on the empty space between the buttons -->
+		<OnScrollDown>
+			<Action type="ScrollListForward" target="#ModSelect_ItemList"/>
+		</OnScrollDown>
+		<OnScrollUp>
+			<Action type="ScrollListBackward" target="#ModSelect_ItemList"/>
+		</OnScrollUp>
+
+		<!-- wrapping everything in another item because we want to control the empty space around items when placed in the list -->
+		<Item sizeX="458" sizeY="397">
+
+			<StaticImage origin="0 0" align="c">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="458" sizeY="397" color="40392b" />
+			</StaticImage>
+
+			<!-- image size must be 16:9, to match the Workshop style -->
+			<StaticImage name="#image_disabled" origin="0 -4" align="ct" hidden="true">
+				<RenderObject2D texture="data/textures/gui/mod_defaultbg.jpg" sizeX="450" color="ffffffe6"/> <!-- sizeY is 253 -->
+			</StaticImage>
+			<StaticImage name="#image_enabled" origin="0 -4" align="ct" hidden="false">
+				<RenderObject2D texture="data/textures/gui/mod_defaultbg.jpg" sizeX="450" blendMode="none" />
+			</StaticImage>
+
+			<!-- footer1: name+author -->
+			<StaticImage origin="0 -257" align="tc" clipChildren="true">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="450" sizeY="70" color="211e1d"/>
+
+				<StaticText name="#name" origin="6 0" align="lt" text="Reaaaaly long mod name here!" fontAutoDownsize="true" font="header_4" textColor="f0e3cc"/>
+				<StaticText name="#author" origin="6 0" align="lb" text="Author Name Very Long" font="paragraph_3" textColor="f0e3cc"/>
+			</StaticImage>
+			
+			<Checkbox name="#checkbox" align="ci" stealFocus="true" hidden="false">
+				<OnScrollDown>
+					<Action type="ScrollListForward" target="#ModSelect_ItemList"/>
+				</OnScrollDown>
+				<OnScrollUp>
+					<Action type="ScrollListBackward" target="#ModSelect_ItemList"/>
+				</OnScrollUp>
+
+				<UncheckedState sizeX="458" sizeY="397">
+					<OnOpen>
+						<Action type="Show" target="#image_disabled"/>
+						<Action type="Hide" target="#image_enabled"/>
+						<Action type="Hide" target="#mod_hover"/>
+						<Action type="Hide" target="#mod_enabled"/>
+						<Action type="Hide" target="#checkbox_hover"/>
+					</OnOpen>
+					<OnHover>
+						<Action type="Show" target="#mod_hover"/>
+						<Action type="Show" target="#checkbox_hover"/>
+					</OnHover>
+					<OnHoverEnd>
+						<Action type="Hide" target="#checkbox_hover"/>
+						<Action type="Hide" target="#mod_hover"/>
+					</OnHoverEnd>
+					<OnClick>
+						<Action type="Show" target="#checkbox_enabled"/>
+						<Action type="Hide" target="#checkbox_disabled"/>
+						<Action type="TriggerEvent" target="GUI_GAME_MODS_ENABLED_MOD"/>
+					</OnClick>
+				</UncheckedState>
+
+				<CheckedState sizeX="458" sizeY="397">
+					<OnOpen>
+						<Action type="Show" target="#image_enabled"/>
+						<Action type="Hide" target="#image_disabled"/>
+						<Action type="Show" target="#mod_enabled"/>
+						<Action type="Hide" target="#mod_hover"/>
+					</OnOpen>
+					<OnHover>
+						<Action type="Show" target="#mod_hover"/>
+						<Action type="Show" target="#checkbox_hover"/>
+					</OnHover>
+					<OnHoverEnd>
+						<Action type="Hide" target="#checkbox_hover"/>
+						<Action type="Hide" target="#mod_hover"/>
+					</OnHoverEnd>
+					<OnClick>
+						<Action type="Hide" target="#checkbox_enabled"/>
+						<Action type="Show" target="#checkbox_disabled"/>
+						<Action type="TriggerEvent" target="GUI_GAME_MODS_DISABLED_MOD"/>
+					</OnClick>
+				</CheckedState>
+
+				<StaticImage name="#mod_enabled" origin="0 0" align="c" sizeX="458" sizeY="397" hidden="true">
+					<StaticImage align="t" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="458" sizeY="4" color="f0e3cc"/>
+					</StaticImage>
+					<StaticImage align="b" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="458" sizeY="4" color="f0e3cc"/>
+					</StaticImage>
+					<StaticImage align="l" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="4" sizeY="397" color="f0e3cc"/>
+					</StaticImage>
+					<StaticImage align="r" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="4" sizeY="397" color="f0e3cc"/>
+					</StaticImage>
+				</StaticImage>
+
+				<StaticImage name="#mod_hover" origin="0 0" align="c" sizeX="458" sizeY="397" hidden="true">
+					<StaticImage align="t" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="458" sizeY="4" color="f97b03"/>
+					</StaticImage>
+					<StaticImage align="b" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="458" sizeY="4" color="f97b03"/>
+					</StaticImage>
+					<StaticImage align="l" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="4" sizeY="397" color="f97b03"/>
+					</StaticImage>
+					<StaticImage align="r" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="4" sizeY="397" color="f97b03"/>
+					</StaticImage>
+				</StaticImage>
+				
+				<Item name="#checkbox_disabled" align="i">
+					<StaticImage align="lb" origin="2 4" hidden="true">
+						<RenderObject2D texture="data/textures/gui/mod_status_inactive.dds"/>
+					</StaticImage>
+					<StaticImage align="t" origin="0 -4">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="450" sizeY="323" color="7f7f7fff" blendMode="multiply"/>
+					</StaticImage>
+					<!-- <StaticText align="l" origin="66 0" text="@menu_mods_disabled" font="paragraph_3" textColor="f0e3cc"/> -->
+				</Item>
+			
+			</Checkbox>
+			
+			<!-- footer2: buttons background -->
+			<StaticImage origin="0 0" align="bc" sizeX="450" sizeY="70" hidden="false" clipChildren="true">
+				<!-- <RenderObject2D texture="data/textures/gui/square.tga" sizeX="450" sizeY="70" color="211e1d"/> -->
+
+				<StaticImage origin="0 0" align="lb">
+					<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" sizeX="260" sizeY="102" color="211e1d90"/>
+				</StaticImage>
+				<StaticImage origin="0 0" align="rb">
+					<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" flipX="true" sizeX="260" sizeY="102" color="211e1d90"/>
+				</StaticImage>
+			
+				<StaticImage name="#checkbox_enabled" align="lb" origin="2 4" hidden="true">
+					<RenderObject2D texture="data/textures/gui/mod_status_active.dds"/>
+					<!-- <StaticText align="l" origin="66 0" text="@menu_mods_enabled" font="paragraph_3" textColor="f0e3cc"/> -->
+				</StaticImage>
+				<StaticImage name="#checkbox_hover" align="lb" origin="2 4" hidden="true">
+					<RenderObject2D texture="data/textures/gui/mod_status_hover.dds" color="f97b03"/>
+				</StaticImage>					
+
+				<Button hidden="false" name="#UploadButton" align="r" origin="-4 0" tooltip="@ed_publish">
+					<RenderObject2D texture="data/textures/gui/mod_upload.dds"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/mod_upload_hover.dds"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/mod_upload.dds"/>
+						<Action type="TriggerEvent" target="GUI_GAME_MODS_UPLOAD"/>
+					</OnClick>
+				</Button>
+
+				<!-- workshop-related buttons -->
+				<Button hidden="true" name="#UnsubscribeButton" align="r" origin="-4 0" tooltip="@menu_mods_unsubscribe">
+					<RenderObject2D texture="data/textures/gui/mod_remove.dds" color="ffffffff"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/mod_remove_hover.dds"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/mod_remove.dds"/>
+						<Action type="TriggerEvent" target="GUI_GAME_MODS_UNSUBSCRIBE"/>
+					</OnClick>
+				</Button>
+
+				<Checkbox hidden="false" name="#ThumbsUpButton" align="r" origin="-134 0" tooltip="@menu_mods_thumbsup_ttip" defaultState="UncheckedState">
+					<UncheckedState>
+						<RenderObject2D texture="data/textures/gui/mod_thumbsup.dds" color="ffffff12"/>
+						<OnHover>
+							<RenderObject2D texture="data/textures/gui/mod_thumbsup_hover.dds"/>
+						</OnHover>
+						<OnClick>
+							<RenderObject2D texture="data/textures/gui/mod_thumbsup.dds"/>
+							<Action type="TriggerEvent" target="GUI_GAME_MODS_THUMBS_UP"/>
+						</OnClick>
+					</UncheckedState>
+
+					<CheckedState acceptInput="false">
+						<RenderObject2D texture="data/textures/gui/mod_thumbsup.dds" color="ffffff"/>
+						<OnHover>
+							<RenderObject2D texture="data/textures/gui/mod_thumbsup_hover.dds"/>
+						</OnHover>
+					</CheckedState>
+				</Checkbox>
+
+				<Button hidden="false" name="#OpenInWorkshopButton" align="r" origin="-70 0" tooltip="@menu_m_show_in_workshop">
+					<RenderObject2D texture="data/textures/gui/mod_info.dds" color="ffffff12" />
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/mod_info_hover.dds"  />
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/mod_info.dds" />
+						<Action type="TriggerEvent" target="GUI_GAME_MODS_OPEN_IN_BROWSER"/>
+					</OnClick>
+				</Button>
+				
+				<!--
+				<Button hidden="false" name="#OpenInFolderButton" align="rb" origin="-8 8" tooltip="@menu_m_show_in_workshop">
+					<RenderObject2D texture="data/textures/gui/mod_info.dds" color="ffffff12" />
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/mod_info_hover.dds"  />
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/mod_info.dds" />
+						<Action type="TriggerEvent" target="GUI_GAME_MODS_OPEN_IN_BROWSER"/>
+					</OnClick>
+				</Button>
+				-->
+			</StaticImage>
+		</Item>
+	</Item>
+
+	<!-- space reserved for tags/filters/details etc.
+	<StaticImage origin="990 0">
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="565" sizeY="1200" color="0bff0b0f"/>
+	</StaticImage>
+	-->
+
+	<!-- this is the actual origin this should be at, when the filter page is there: origin="-330 0" -->
+	<StaticImage name="#empty" hidden="true" origin="-60 0">
+		<RenderObject2D texture="data/textures/gui/thumbleweed_anim_mb.dds" blendMode="add" scaleX="1.8" scaleY="1.8">
+			<TextureAnimation frameWidth="256" frameHeight="256" startFrame="0" endFrame="11" animationTimeMS="1000" numLoops="-1"/>
+		</RenderObject2D>
+	</StaticImage>
+
+	<!-- when the filter page exists, the size of the list should be sizeX=1860 and origin=-260 0
+	<StaticImage origin="-260 0">
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1860" sizeY="1200" color="ff0b0b0f"/>
+	</StaticImage>
+	-->
+
+	<ItemList name="#ModSelect_ItemList" origin="0 0" sizeX="2400" sizeY="1200" direction="y" clipChildren="true">
+		<ButtonGraphics align="r" origin="32 0">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b0340"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+			</OnClick>
+		</ButtonGraphics>
+	</ItemList>
+
+	<Button align="c" origin="1148 660" tooltip="loading order custom tooltip">
+		<RenderObject2D texture="data/textures/gui/mod_info.dds" color="ffffffff"/>
+		<OnHover>
+			<RenderObject2D texture="data/textures/gui/mod_info_hover.dds"/>
+			<Action type="TriggerEvent" target="GUI_GAME_MODS_UPDATE_LOADING_ORDER_TOOLTIP"/>
+		</OnHover>
+		<OnClick>
+			<RenderObject2D texture="data/textures/gui/mod_info.dds" color="ffffffff"/>
+			<Action type="OpenURL" target="mods/"/>
+		</OnClick>		
+	</Button>
+
+	<Item align="sv" origin="0 -688">
+		<StaticImage name="ScreenFooter" align="b" origin="0 -32" stealFocus="true">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="211e1d"/>
+		</StaticImage>
+
+		<!-- back button -->
+		<Button name="Menu_Mods_Back" align="lb" origin="-1200 -4">
+			<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e3cc" flipX="false"/>
+				<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="40392b" flipX="false"/>
+				<Action type="Hide" target="Menu_Mods"/>
+				<Action type="Show" target="Menu_Main"/>
+				<Action type="TriggerEvent" target="GUI_GAME_MODS_SCREEN_CLOSED"/>
+			</OnClick>
+		</Button>
+
+		<Button name="#Menu_Mods_DisableAll" align="cb" sizeY="68" origin="0 -4">
+			<ButtonText align="c" origin="0 0" text="@menu_mods_disable_all" font="header_2" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/menu_select.dds" color="f0e3cc"/>
+				<ButtonText align="c" origin="0 0" text="@menu_mods_disable_all" font="header_2" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/menu_select.dds" color="40392b"/>
+				<Action type="TriggerEvent" target="GUI_GAME_MODS_DISABLE_ALL"/>
+			</OnClick>
+		</Button>
+
+		<Button align="rb" origin="1200 -4">
+			<ButtonText align="r" origin="-20 0" text="@menu_m_openworkshop" font="header_2" fontAutoDownsize="true" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" scaleX="1.3" color="f0e3cc" flipX="true"/>
+				<ButtonText align="r" origin="-20 0" text="@menu_m_openworkshop" font="header_2" fontAutoDownsize="true" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" scaleX="1.3" color="40392b" flipX="true"/>
+				<Action type="OpenURL" target="https://steamcommunity.com/workshop/browse/?appid=1239080"/>
+			</OnClick>
+		</Button>
+	</Item>
+</Item>
+
+</GUIItems>

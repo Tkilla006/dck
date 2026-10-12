@@ -1,0 +1,54 @@
+<Fonts>
+	<Font name="paragraph_3" type="hybrid" size="20" file="data/fonts/NotoSans-Medium.ttf"/>
+
+	<!-- NOTE: these should not be used/referenced in the UI files, they're only used by the game when downsizing fonts to fit, in the localized versions -->
+	<Font name="paragraph_2_2" type="hybrid" size="22" file="data/fonts/NotoSans-Medium.ttf"/>
+	<Font name="paragraph_2_3" type="hybrid" size="23" file="data/fonts/NotoSans-Medium.ttf"/>
+
+	<Font name="paragraph_2" type="hybrid" size="25" file="data/fonts/NotoSans-Medium.ttf"/>
+	<Font name="paragraph_1" type="hybrid" size="38" file="data/fonts/NotoSans-Medium.ttf"/>
+
+	<Font name="header_5" type="hybrid" size="30" file="data/fonts/bebasneuepro-bold.ttf"/>
+	<Font name="header_4" type="hybrid" size="36" file="data/fonts/bebasneuepro-bold.ttf"/>
+	<Font name="header_3" type="hybrid" size="64" file="data/fonts/bebasneuepro-bold.ttf"/>
+	<Font name="header_2" type="hybrid" size="80" file="data/fonts/bebasneuepro-bold.ttf"/>
+	<Font name="header_1" type="hybrid" size="160" file="data/fonts/bebasneuepro-bold.ttf"/>
+
+<!--
+	<Font name="paragraph_1_jp" type="hybrid" size="38" file="data/fonts/NotoSansJP-Medium.ttf"/>
+	<Font name="header_5_jp" type="hybrid" size="24" file="data/fonts/NotoSansJP-Bold.ttf"/>
+	<Font name="header_4_jp" type="hybrid" size="30" file="data/fonts/NotoSansJP-Bold.ttf"/>
+	<Font name="header_3_jp" type="hybrid" size="50" file="data/fonts/NotoSansJP-Bold.ttf"/>
+	<Font name="header_2_jp" type="hybrid" size="68" file="data/fonts/NotoSansJP-Bold.ttf"/>
+	<Font name="header_1_jp" type="hybrid" size="138" file="data/fonts/NotoSansJP-Bold.ttf"/>
+
+
+
+	<Font name="paragraph_1_cn" type="hybrid" size="38" file="data/fonts/NotoSansSC-Medium.ttf"/>
+	<Font name="paragraph_3_cn" type="hybrid" size="20" file="data/fonts/NotoSansSC-Medium.ttf"/>
+	<Font name="paragraph_2_cn" type="hybrid" size="25" file="data/fonts/NotoSansSC-Medium.ttf"/>
+	<Font name="paragraph_1_cn" type="hybrid" size="38" file="data/fonts/NotoSansSC-Medium.ttf"/>
+
+	<Font name="header_5_cn" type="hybrid" size="24" file="data/fonts/NotoSansSC-Bold.ttf"/>
+	<Font name="header_4_cn" type="hybrid" size="30" file="data/fonts/NotoSansSC-Bold.ttf"/>
+	<Font name="header_3_cn" type="hybrid" size="50" file="data/fonts/NotoSansSC-Bold.ttf"/>
+	<Font name="header_2_cn" type="hybrid" size="68" file="data/fonts/NotoSansSC-Bold.ttf"/>
+	<Font name="header_1_cn" type="hybrid" size="138" file="data/fonts/NotoSansSC-Bold.ttf"/>
+
+
+
+
+	<Font name="paragraph_3_kr" type="hybrid" size="20" file="data/fonts/NotoSansKR-Medium.ttf"/>
+	<Font name="paragraph_2_kr" type="hybrid" size="25" file="data/fonts/NotoSansKR-Medium.ttf"/>
+	<Font name="paragraph_1_kr" type="hybrid" size="38" file="data/fonts/NotoSansKR-Medium.ttf"/>
+
+	<Font name="header_5_kr" type="hybrid" size="24" file="data/fonts/NotoSansKR-Bold.ttf"/>
+	<Font name="header_4_kr" type="hybrid" size="30" file="data/fonts/NotoSansKR-Bold.ttf"/>
+	<Font name="header_3_kr" type="hybrid" size="50" file="data/fonts/NotoSansKR-Bold.ttf"/>
+	<Font name="header_2_kr" type="hybrid" size="68" file="data/fonts/NotoSansKR-Bold.ttf"/>
+	<Font name="header_1_kr" type="hybrid" size="138" file="data/fonts/NotoSansKR-Bold.ttf"/>
+-->
+
+	<!-- size is not relevant, it can be changed by the editor -->
+	<Font name="editor" type="hybrid" size="4" file="data/fonts/NotoSans-Medium.ttf"/>
+</Fonts>

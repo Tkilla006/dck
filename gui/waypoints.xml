@@ -1,0 +1,303 @@
+<GUIItems>
+
+<!--
+-sliderType can be "circular" or "linear"
+-integerValues can be "true" or "false", where in "false" the slider can have floating point values
+-for circular sliders, sizeX should be the same as sizeY (or the BackgroundGraphics render object should have x==y)
+-start/end values represent degrees on a circle and should be in the range of (0 - 360)
+-BackgroundGraphics is an optional static image. For circular sliders it should be a circle, the control button will be placed on the outer bounds of the circle.
+-ButtonGraphics is the same as a normal button, with 3 reprezentations: normal/on hover/on clicked
+ -->
+<Slider name="#waypoint_camera_slider" origin="0 0" hidden="true"
+			sliderType="circular" startValue="" endValue="" integerValues="true">
+	<BackgroundGraphics>
+		<RenderObject2D texture="data/textures/gui_ingame/waypoints/camera_control_slider_background.dds"/>
+	</BackgroundGraphics>
+
+	<ButtonGraphics>
+		<RenderObject2D texture="data/textures/gui_ingame/waypoints/camera_control_slider.dds"/>
+		<OnHover>
+			<RenderObject2D texture="data/textures/gui_ingame/waypoints/camera_control_slider_pushed.dds"/>
+		</OnHover>
+		<OnClick>
+			<RenderObject2D texture="data/textures/gui_ingame/waypoints/camera_control_slider_pushed.dds"/>
+		</OnClick>
+	</ButtonGraphics>
+
+	<OnCursorMove>
+		<Action type="TriggerEvent" target="GUI_GAME_WAYPOINT_SPYCAMERA_MOVED"/>
+	</OnCursorMove>
+</Slider>
+
+<Button name="#gosilent_shoot" hidden="true">
+	<RenderObject2D texture="data/textures/gui_ingame/fire.dds" scaleX="0.65" scaleY="0.65">
+		<TextureAnimation frameWidth="64" frameHeight="64" startFrame="0" endFrame="1" animationTimeMS="1500" numLoops="-1"/>
+	</RenderObject2D>
+
+	<OnHover>
+		<RenderObject2D texture="data/textures/gui_ingame/fire_hover.dds" scaleX="0.85" scaleY="0.85"/>
+	</OnHover>
+	<OnClick>
+		<RenderObject2D texture="data/textures/gui_ingame/fire_normal.dds" scaleX="0.85" scaleY="0.85"/>
+		<Action type="TriggerEvent" target="GUI_GAME_SILENT_SHOOT"/>
+	</OnClick>
+</Button>
+
+
+<Button name="#suppression_stop" hidden="true">
+	<RenderObject2D texture="data/textures/gui_ingame/waypoints/stop_action_hover.dds" scaleX="0.65" scaleY="0.65">
+	</RenderObject2D>
+
+	<OnHover>
+		<RenderObject2D texture="data/textures/gui_ingame/waypoints/stop_action_normal.dds" scaleX="0.85" scaleY="0.85"/>
+	</OnHover>
+	<OnClick>
+		<RenderObject2D texture="data/textures/gui_ingame/waypoints/stop_action_hover.dds" scaleX="0.85" scaleY="0.85"/>
+		<Action type="TriggerEvent" target="GUI_GAME_STOP_SUPPRESSION"/>
+	</OnClick>
+</Button>
+
+<Item name="#waypoint_menu" hidden="true">
+	<OnOpen>
+		<Action type="TriggerEvent" target="GUI_GAME_PAUSE"/>
+	</OnOpen>
+
+	<OnClose>
+		<Action type="TriggerEvent" target="GUI_GAME_WAYPOINT_CLOSE"/>
+	</OnClose>
+
+	<StaticImage origin="-160 0">
+		<RenderObject2D sizeX="320" sizeY="640" texture="data/textures/gui_ingame/waypoints/action_menu_shadow.dds" color="f0f0f0" blendMode="multiply_inverse"/>
+	</StaticImage>
+	<StaticImage origin="160 0">
+		<RenderObject2D sizeX="320" sizeY="640" texture="data/textures/gui_ingame/waypoints/action_menu_shadow.dds" color="f0f0f0" blendMode="multiply_inverse" flipX="true"/>
+	</StaticImage>
+
+	<StaticImage origin="-128 0" name="#menu_ring">
+		<RenderObject2D texture="data/textures/gui_ingame/waypoints/action_menu_rings.dds" color="ffffff7f"/>
+	</StaticImage>
+	<StaticImage origin="128 0">
+		<RenderObject2D texture="data/textures/gui_ingame/waypoints/action_menu_rings.dds" color="ffffff7f" flipX="true"/>
+	</StaticImage>
+
+	<!-- this Item, with stealfocus and custom size, is needed because we don't want to give focus to the game when mouse is above the menu -->
+	<Item sizeX="360" sizeY="360" stealFocus="true">
+	</Item>
+
+	<StaticImage>
+		<RenderObject2D texture="data/textures/gui_ingame/waypoints/action_menu_base.dds"/>
+	</StaticImage>
+
+	<StaticImage name="#trooper_portrait">
+		<RenderObject2D texture="data/textures/portraits/ranger1.dds"/>
+		<OnCursorDown>
+			<Action type="TriggerEvent" target="GUI_GAME_WAYPOINT_CLOSE"/>
+		</OnCursorDown>
+	</StaticImage>
+
+	<Button name="#go_silent" origin="-65 -90" tooltip="@menu_game_go_silent_toggle_ttip">
+		<RenderObject2D texture="data/textures/gui_ingame/waypoints/go_silent_off_normal.dds"/>
+		<OnHover>
+			<RenderObject2D texture="data/textures/gui_ingame/waypoints/go_silent_off_hover.dds"/>
+		</OnHover>
+		<OnClick>
+			<RenderObject2D texture="data/textures/gui_ingame/waypoints/go_silent_off_hover.dds" scaleX="0.9" scaleY="0.9"/>
+			<Action type="TriggerEvent" target="GUI_GAME_WAYPOINT_GO_SILENT_TOGGLE"/>
+			<Action type="Hide" target="#waypoint_menu"/>
+		</OnClick>
+	</Button>
+	
+	<Button name="#always_wait" origin="0 -90" tooltip="@menu_game_always_wait_toggle_ttip">
+		<RenderObject2D texture="data/textures/gui_ingame/waypoints/always_wait_off_normal.dds"/>
+		<OnHover>
+			<RenderObject2D texture="data/textures/gui_ingame/waypoints/always_wait_off_hover.dds"/>
+		</OnHover>
+		<OnClick>
+			<RenderObject2D texture="data/textures/gui_ingame/waypoints/always_wait_off_hover.dds" scaleX="0.9" scaleY="0.9"/>
+			<Action type="TriggerEvent" target="GUI_GAME_WAYPOINT_ALWAYS_WAIT_TOGGLE"/>
+			<Action type="Hide" target="#waypoint_menu"/>
+		</OnClick>
+	</Button>
+	
+	<Button name="#speed_sync" origin="65 -90" tooltip="@menu_game_speed_sync_toggle_ttip">
+		<RenderObject2D texture="data/textures/gui_ingame/waypoints/speed_sync_off_normal.dds"/>
+		<OnHover>
+			<RenderObject2D texture="data/textures/gui_ingame/waypoints/speed_sync_off_hover.dds"/>
+		</OnHover>
+		<OnClick>
+			<RenderObject2D texture="data/textures/gui_ingame/waypoints/speed_sync_off_hover.dds" scaleX="0.9" scaleY="0.9"/>
+			<Action type="TriggerEvent" target="GUI_GAME_WAYPOINT_SPEED_SYNC_TOGGLE"/>
+			<Action type="Hide" target="#waypoint_menu"/>
+		</OnClick>
+	</Button>
+	
+	<Button name="#switch_to_path_options" origin="0 256" tooltip="@menu_game_path_options" >
+		<RenderObject2D texture="data/textures/gui_ingame/waypoints/more_buttons.dds"/>
+		<OnClick>
+			<RenderObject2D texture="data/textures/gui_ingame/waypoints/more_buttons.dds" scaleX="0.9" scaleY="0.9" />
+			<Action type="Hide" target="#hover_add"/> <!-- otherwise it remains visible when closing the menu -->
+			<Action type="TriggerEvent" target="GUI_GAME_WAYPOINT_OPEN_PATH_OPTIONS"/>
+		</OnClick>
+		<StaticImage name="#hover_add" hidden="true">
+			<RenderObject2D texture="data/textures/gui_ingame/waypoints/more_buttons_hover.dds"/>
+		</StaticImage>
+		<OnHover>
+			<RenderObject2D texture="data/textures/gui_ingame/waypoints/more_buttons.dds"/>
+			<Action type="Show" target="#hover_add"/>
+		</OnHover>
+		<OnHoverEnd>
+			<Action type="Hide" target="#hover_add"/>
+		</OnHoverEnd>
+	</Button>
+	
+	<Button name="#switch_to_target_options" origin="0 256" tooltip="@menu_game_target_options" >
+		<RenderObject2D texture="data/textures/gui_ingame/waypoints/more_buttons_back.dds"/>
+		<OnClick>
+			<RenderObject2D texture="data/textures/gui_ingame/waypoints/more_buttons_back.dds" scaleX="0.9" scaleY="0.9" />
+			<Action type="Hide" target="#hover_add"/> <!-- otherwise it remains visible when closing the menu -->
+			<Action type="TriggerEvent" target="GUI_GAME_WAYPOINT_OPEN_TARGET_OPTIONS"/>
+		</OnClick>
+		<StaticImage name="#hover_add" hidden="true">
+			<RenderObject2D texture="data/textures/gui_ingame/waypoints/more_buttons_hover.dds"/>
+		</StaticImage>
+		<OnHover>
+			<RenderObject2D texture="data/textures/gui_ingame/waypoints/more_buttons_back.dds"/>
+			<Action type="Show" target="#hover_add"/>
+		</OnHover>
+		<OnHoverEnd>
+			<Action type="Hide" target="#hover_add"/>
+		</OnHoverEnd>
+	</Button>
+
+	<!-- this item is cloned from code and its resources replaced with the definitions from action_waypoints.xml -->
+	<Button name="#action_template" sizeX="105" sizeY="105" hidden="true">
+		<RenderObject2D texture="data/textures/gui_ingame/waypoints/missing_normal.dds"/>
+		<OnHoverEnd>
+			<Action type="Hide" target="#hover_add"/>
+		</OnHoverEnd>
+		<OnHover>
+			<RenderObject2D texture="data/textures/gui_ingame/waypoints/missing_normal.dds"/>
+			<Action type="Show" target="#hover_add"/>
+		</OnHover>
+		<OnClick>
+			<RenderObject2D texture="data/textures/gui_ingame/waypoints/missing_normal.dds" scaleX="0.9" scaleY="0.9" />
+			<Action type="TriggerEvent" target="GUI_GAME_WAYPOINT_CLICKED"/>
+			<Action type="Hide" target="#waypoint_menu"/> <!-- hide AFTER action -->
+		</OnClick>
+
+		<Item name="#hover_add" hidden="true">
+			<StaticImage name="#hover_general" hidden="true">
+				<RenderObject2D texture="data/textures/gui_ingame/waypoints/general_actions_hover.dds"/>
+			</StaticImage>
+			<StaticImage name="#hover_eqp" hidden="true">
+				<RenderObject2D texture="data/textures/gui_ingame/waypoints/equipment_actions_hover.dds"/>
+			</StaticImage>
+		</Item>
+
+		<StaticText name="#quantity" align="b" origin="30 -20" text="2/2" font="header_5" textColor="ffffff" hidden="true"/>
+	</Button>
+
+	<!-- items will be dynamically added from code to this parent -->
+	<Item name="#menu_parent">
+
+	</Item>
+
+	<Item name="#menu_static_buttons">
+		<!-- human-specific actions, not linked to an action waypoint -->
+		<Button name="delete_path" tooltip="@menu_game_delete_path_ttip" sizeX="105" sizeY="105" >
+			<StaticImage name="#hover_add" hidden="true">
+				<RenderObject2D texture="data/textures/gui_ingame/waypoints/general_actions_hover.dds"/>
+			</StaticImage>
+			<OnHoverEnd>
+				<Action type="Hide" target="#hover_add"/>
+			</OnHoverEnd>
+
+			<RenderObject2D texture="data/textures/gui_ingame/waypoints/delete_path_normal.dds"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui_ingame/waypoints/delete_path_normal.dds"/>
+				<Action type="Show" target="#hover_add"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui_ingame/waypoints/delete_path_normal.dds" scaleX="0.9" scaleY="0.9" />
+				<Action type="TriggerEvent" target="GUI_GAME_WAYPOINT_PATH_DELETE"/>
+				<Action type="Hide" target="#waypoint_menu"/> <!-- hide AFTER action -->
+			</OnClick>
+		</Button>
+		
+		<Button name="delete_path_disabled" tooltip="@menu_game_delete_path_ttip" sizeX="105" sizeY="105" acceptInput="false">
+			<StaticImage name="#hover_add" hidden="true">
+				<RenderObject2D texture="data/textures/gui_ingame/waypoints/general_actions_hover.dds"/>
+			</StaticImage>
+			<OnHoverEnd>
+				<Action type="Hide" target="#hover_add"/>
+			</OnHoverEnd>
+
+			<RenderObject2D texture="data/textures/gui_ingame/waypoints/delete_path_disabled.dds"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui_ingame/waypoints/delete_path_disabled.dds"/>
+				<Action type="Show" target="#hover_add"/>
+			</OnHover>
+		</Button>
+
+		<Button name="delete_waypoint" tooltip="@menu_game_delete_wp_ttip" sizeX="105" sizeY="105" >
+			<StaticImage name="#hover_add" hidden="true">
+				<RenderObject2D texture="data/textures/gui_ingame/waypoints/general_actions_hover.dds"/>
+			</StaticImage>
+			<OnHoverEnd>
+				<Action type="Hide" target="#hover_add"/>
+			</OnHoverEnd>
+
+			<RenderObject2D texture="data/textures/gui_ingame/waypoints/delete_waypoint_normal.dds"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui_ingame/waypoints/delete_waypoint_normal.dds"/>
+				<Action type="Show" target="#hover_add"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui_ingame/waypoints/delete_waypoint_normal.dds" scaleX="0.9" scaleY="0.9" />
+				<Action type="TriggerEvent" target="GUI_GAME_WAYPOINT_DELETE"/>
+				<Action type="Hide" target="#waypoint_menu"/> <!-- hide AFTER action -->
+			</OnClick>
+		</Button>
+
+		<!-- gocodes will be hardcoded at load time (using the template below) and added here -->
+		<Item name="#gocodes_parent" origin="0 80">
+			<Checkbox name="#gocode_template" origin="0 0" defaultState="UncheckedState" hidden="true">
+				<StaticImage name="#hover_add">
+					<RenderObject2D texture="data/textures/gui_ingame/waypoints/gocode_hover.dds"/>
+				</StaticImage>
+				<UncheckedState tooltip="@menu_game_waitclear_ttip">
+					<RenderObject2D texture="data/textures/gui_ingame/waypoints/gocode_clear_01.dds"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui_ingame/waypoints/gocode_clear_01.dds"/>
+						<Action type="Show" target="#hover_add"/>
+					</OnHover>
+					<OnHoverEnd>
+						<Action type="Hide" target="#hover_add"/>
+					</OnHoverEnd>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui_ingame/waypoints/gocode_clear_01.dds" scaleX="0.9" scaleY="0.9" />
+						<Action type="TriggerEvent" target="GUI_GAME_WAYPOINT_GOCODE_CHECKED"/>
+						<Action type="Hide" target="#waypoint_menu"/> <!-- hide AFTER action -->
+					</OnClick>
+				</UncheckedState>
+				<CheckedState tooltip="@menu_game_waitclear_ttip">
+					<RenderObject2D texture="data/textures/gui_ingame/waypoints/gocode_clear_02.dds"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui_ingame/waypoints/gocode_clear_02.dds"/>
+						<Action type="Show" target="#hover_add"/>
+					</OnHover>
+					<OnHoverEnd>
+						<Action type="Hide" target="#hover_add"/>
+					</OnHoverEnd>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui_ingame/waypoints/gocode_clear_02.dds" scaleX="0.9" scaleY="0.9" />
+						<Action type="TriggerEvent" target="GUI_GAME_WAYPOINT_GOCODE_UNCHECKED"/>
+						<Action type="Hide" target="#waypoint_menu"/> <!-- hide AFTER action -->
+					</OnClick>
+				</CheckedState>
+			</Checkbox>
+		</Item>
+	</Item>
+</Item>
+
+</GUIItems>

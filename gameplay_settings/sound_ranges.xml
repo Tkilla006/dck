@@ -1,0 +1,12 @@
+<SoundsRangeMeters
+	humanDie="4.0"
+	enemyArrested="3.0"
+	bulletHitSomething="3.0"
+	doorOpen="2.5"
+	doorKick="7.0"
+	windowBreak="7.0"
+	jumpLanding="5.5"
+	running="4.0"
+	defuseTimebomb="1.5"
+	sabotage="4.0"
+/>

@@ -1,0 +1,399 @@
+<TerrainSwaps>
+	<!-- <Disabled/> -->
+	<!-- <Logging/> -->
+	
+	<!-- Interior tiles -->
+	<SwapSet>
+		<Texture mainPath="data/terrain/interior/tiles_01.dds" />
+		<Texture mainPath="data/terrain/interior/tiles_02.dds" />
+		<Texture mainPath="data/terrain/interior/tiles_03.dds" />
+		<Texture mainPath="data/terrain/interior/tiles_04.dds" />
+		<!-- <Texture mainPath="data/terrain/interior/tiles_05.dds" /> CRB: Looks exterior-only to me -->
+		<Texture mainPath="data/terrain/interior/tiles_06.dds" />
+		<Texture mainPath="data/terrain/interior/tiles_07.dds" />
+		<!-- <Texture mainPath="data/terrain/interior/tiles_08.dds" /> CRB: Looks exterior-only to me --> 
+		<Texture mainPath="data/terrain/interior/tiles_09.dds" />
+		<!-- <Texture mainPath="data/terrain/interior/tiles_10.dds" /> too fancy -->
+		<Texture mainPath="data/terrain/exterior/pavement_old_02.dds" />
+		<Texture mainPath="data/terrain/exterior/tiles_exterior_01.dds" /> <!-- works for interiors too -->
+		
+		<!-- This SwapSet will only apply to tiles with these tags -->
+		
+		<!-- Tiles that are in the same tag set will use the same texture in the SwapSet 							-->
+		<!-- 	So, for example, all bedrooms and living rooms with wooden floors will have the same tile texture 	-->
+		<TagSet>
+			<Tag name="bedroom" />
+			<Tag name="living" />
+			<Tag name="hallway" />
+			<Tag name="entrance" />
+			<Tag name="storage" />
+			<Tag name="kitchen" />
+			<Tag name="bathroom" />
+		</TagSet>
+		
+		<Theme name="apartment" />
+		<Theme name="residential" />
+	</SwapSet>
+	
+	<!-- Wood floors -->
+	<SwapSet>
+		<Texture mainPath="data/terrain/interior/wood_01.dds" detailPath="data/terrain/interior/wood_03.dds" />
+		<Texture mainPath="data/terrain/interior/wood_02.dds" detailPath="data/terrain/interior/wood_03.dds" />
+		<Texture mainPath="data/terrain/interior/wood_03.dds" />
+		<Texture mainPath="data/terrain/interior/wood_04.dds" />
+		
+		<TagSet>
+			<Tag name="bedroom" />
+			<Tag name="living" />
+			<Tag name="hallway" />
+			<Tag name="entrance" />
+			<Tag name="storage" />
+			<Tag name="kitchen" />
+			<Tag name="bathroom" />
+		</TagSet>
+		
+		<Theme name="apartment" />
+		<Theme name="residential" />
+	</SwapSet>
+	
+	<!-- Apartment concrete floors -->
+	<SwapSet>
+		<Texture mainPath="data/terrain/interior/cement_01.dds" />
+		<Texture mainPath="data/terrain/exterior/pavement_old_01.dds" />
+		<Texture mainPath="data/terrain/exterior/asphalt_01.dds" detailPath="data/terrain/exterior/asphalt_02.dds"/>
+		<!-- <Texture mainPath="data/terrain/exterior/asphalt_02.dds" /> -->
+		
+		<TagSet>
+			<Tag name="bedroom" />
+			<Tag name="living" />
+			<Tag name="hallway" />
+			<Tag name="entrance" />
+			<Tag name="storage" />
+			<Tag name="kitchen" />
+			<Tag name="bathroom" />
+		</TagSet>
+		
+		<Theme name="apartment" />
+		<Theme name="residential" />
+	</SwapSet>
+	
+	<!-- Apartment carpets -->
+	<SwapSet>
+		<Texture mainPath="data/terrain/interior/carpet_01.dds" detailPath="data/terrain/interior/carpet_01x.dds"/>
+		<Texture mainPath="data/terrain/interior/carpet_01x.dds" />
+		<Texture mainPath="data/terrain/interior/carpet_02.dds" detailPath="data/terrain/interior/carpet_02x.dds"/>
+		<Texture mainPath="data/terrain/interior/carpet_02x.dds" />
+		<Texture mainPath="data/terrain/interior/carpet_05.dds" detailPath="data/terrain/interior/carpet_05x.dds"/>
+		<Texture mainPath="data/terrain/interior/carpet_05x.dds" />
+		<Texture mainPath="data/terrain/interior/carpet_06.dds" detailPath="data/terrain/interior/carpet_06x.dds"/>
+		<Texture mainPath="data/terrain/interior/carpet_06x.dds" />
+		<Texture mainPath="data/terrain/interior/carpet_01.dds" detailPath="data/terrain/interior/wood_01.dds"/>
+		
+		<TagSet>
+			<Tag name="bedroom" />
+			<Tag name="living" />
+			<Tag name="hallway" />
+			<Tag name="entrance" />
+			<Tag name="storage" />
+			<Tag name="kitchen" />
+			<Tag name="bathroom" />
+		</TagSet>
+		
+		<Theme name="apartment" />
+		<Theme name="residential" />
+	</SwapSet>
+	
+	<!-- Balcony & spawn tile floors -->
+	<SwapSet>
+		<Texture mainPath="data/terrain/interior/tiles_01.dds" />
+		<Texture mainPath="data/terrain/interior/tiles_02.dds" />
+		<Texture mainPath="data/terrain/interior/tiles_03.dds" />
+		<Texture mainPath="data/terrain/interior/tiles_04.dds" />
+		<Texture mainPath="data/terrain/interior/tiles_05.dds" />
+		<Texture mainPath="data/terrain/interior/tiles_06.dds" />
+		<Texture mainPath="data/terrain/interior/tiles_07.dds" />
+		<Texture mainPath="data/terrain/interior/tiles_08.dds" />
+		<Texture mainPath="data/terrain/interior/tiles_09.dds" />
+		<Texture mainPath="data/terrain/interior/tiles_10.dds" />
+		<Texture mainPath="data/terrain/exterior/pavement_old_02.dds" />
+		<Texture mainPath="data/terrain/exterior/tiles_exterior_01.dds" />
+		<Texture mainPath="data/terrain/exterior/tiles_exterior_02.dds" />
+		<Texture mainPath="data/terrain/exterior/tiles_exterior_03.dds" />
+		
+		<TagSet>
+			<Tag name="balcony" />
+			<Tag name="balcony_part31" />
+		</TagSet>
+		<TagSet>
+			<Tag name="spawn_entrance" />
+		</TagSet>
+		
+		<Theme name="apartment" />
+		<Theme name="residential" />
+	</SwapSet>
+	
+	
+	<!-- Factory/Industrial -->
+	<SwapSet>
+		<!-- "data/terrain/interior/rubber_01.dds" -->
+		<!-- "data/terrain/interior/cement_01.dds" -->
+		<!-- "data/terrain/exterior/asphalt_01.dds" -->
+		<Texture mainPath="data/terrain/exterior/metal_platform.dds" detailPath="data/terrain/exterior/asphalt_01.dds"/>
+		<Texture mainPath="data/terrain/interior/metal_platform_02.dds" detailPath="data/terrain/exterior/asphalt_01.dds"/>
+		<Texture mainPath="data/terrain/interior/metal_platform_03.dds" detailPath="data/terrain/exterior/asphalt_01.dds"/>
+		<Texture mainPath="data/terrain/interior/metal_floor_01.dds" detailPath="data/terrain/exterior/asphalt_01.dds"/>
+		<Texture mainPath="data/terrain/interior/metal_floor_02.dds" detailPath="data/terrain/exterior/asphalt_01.dds"/>
+		<Texture mainPath="data/terrain/interior/metal_floor_03.dds" detailPath="data/terrain/exterior/asphalt_01.dds"/>
+		
+		<TagSet>
+			<Tag name="industrial" />
+			<Tag name="entrance" />
+			<Tag name="toilet" />
+		</TagSet>
+		<TagSet>
+			<Tag name="garage" />
+		</TagSet>
+		
+		<Theme name="industrial" />
+	</SwapSet>
+	
+	<!-- <SwapSet> -->
+		<!-- <Texture mainPath="data/terrain/interior/cement_01.dds" /> -->
+		<!-- <Texture mainPath="data/terrain/exterior/pavement_old_01.dds" /> -->
+		<!-- <Texture mainPath="data/terrain/exterior/asphalt_01.dds" detailPath="data/terrain/exterior/asphalt_02.dds"/> -->
+		
+		<!-- <TagSet> -->
+			<!-- <Tag name="yard" /> -->
+			<!-- <Tag name="toilet" /> -->
+			<!-- <Tag name="garage" /> -->
+		<!-- </TagSet> -->
+		
+		<!-- <Theme name="industrial" /> -->
+	<!-- </SwapSet> -->
+	
+</TerrainSwaps>
+
+<EntitySwaps>
+	<!-- <Disabled/> -->
+	<!-- <Logging /> -->
+	
+	<Lock tags="entrance" chance="35" maxDepth="3"/><!-- NOTE: maxDepth="2" only first two tiles in the building are locked (or any exterior door)-->
+	<Lock tags="yard_entrance" chance="35" maxDepth="2"/>
+	<Lock tags="armory" chance="75" allDoors="true"/>
+	<Lock tags="jail_cell" chance="100"/>
+	<Lock tags="has_hostage" chance="20"/>
+	<Lock tags="security" chance="40"/>
+	<Lock tags="hallway" chance="20"/>
+	<Lock tags="bathroom" chance="20"/>
+	<Lock tags="control" chance="75"/>
+	<Lock tags="walled" chance="30"/>
+	<Lock tags="yard" chance="20"/>
+	<Lock tags="garage" chance="30"/>
+	
+	
+	
+	<Door from="door_wood_01" to="door_wood_01_locked" />
+	<Door from="door_wood_old" to="door_wood_old_locked" />
+	<Door from="door_flat_01" to="door_flat_01_locked" />
+	<Door from="gate_poor_01" to="gate_poor_01_locked" />
+	<Door from="door_metal_sheet" to="door_metal_sheet_locked" />
+	<Door from="door_grate_02" to="door_grate_02_locked" />
+	<Door from="gate_metal_sheet" to="gate_metal_sheet_locked" />
+	
+	<SwapSet sync="rugs" same="perShape">
+		"rug_mod_circle_small_01"
+		"rug_mod_circle_small_02"
+		"rug_mod_circle_small_03"
+		"rug_mod_circle_small_04"
+		"rug_mod_circle_small_05"
+		"rug_mod_circle_small_06"
+		"rug_mod_circle_small_07"
+		"rug_mod_circle_small_08"
+		"rug_mod_circle_small_09"
+	</SwapSet>
+	
+	<SwapSet sync="rugs" same="perShape">
+		"rug_mod_circle_large_01"
+		"rug_mod_circle_large_02"
+		"rug_mod_circle_large_03"
+		"rug_mod_circle_large_04"
+		"rug_mod_circle_large_05"
+		"rug_mod_circle_large_06"
+		"rug_mod_circle_large_07"
+		"rug_mod_circle_large_08"
+		"rug_mod_circle_large_09"
+	</SwapSet>
+	
+	<SwapSet sync="rugs" same="perShape">
+		"rug_mod_round_medium_01"
+		"rug_mod_round_medium_02"
+		"rug_mod_round_medium_03"
+		"rug_mod_round_medium_04"
+		"rug_mod_round_medium_05"
+		"rug_mod_round_medium_06"
+		"rug_mod_round_medium_07"
+		"rug_mod_round_medium_08"
+		"rug_mod_round_medium_09"
+	</SwapSet>
+	
+	<SwapSet sync="rugs" same="perShape">
+		"rug_mod_round_large_01"
+		"rug_mod_round_large_02"
+		"rug_mod_round_large_03"
+		"rug_mod_round_large_04"
+		"rug_mod_round_large_05"
+		"rug_mod_round_large_06"
+		"rug_mod_round_large_07"
+		"rug_mod_round_large_08"
+		"rug_mod_round_large_09"
+	</SwapSet>
+	
+	<SwapSet sync="rugs" same="perShape">
+		"rug_mod_rect_small_01"
+		"rug_mod_rect_small_02"
+		"rug_mod_rect_small_03"
+		"rug_mod_rect_small_04"
+		"rug_mod_rect_small_05"
+		"rug_mod_rect_small_06"
+		"rug_mod_rect_small_07"
+		"rug_mod_rect_small_08"
+		"rug_mod_rect_small_09"
+	</SwapSet>
+	
+	<SwapSet sync="rugs" same="perShape">
+		"rug_mod_rect_medium_01"
+		"rug_mod_rect_medium_02"
+		"rug_mod_rect_medium_03"
+		"rug_mod_rect_medium_04"
+		"rug_mod_rect_medium_05"
+		"rug_mod_rect_medium_06"
+		"rug_mod_rect_medium_07"
+		"rug_mod_rect_medium_08"
+		"rug_mod_rect_medium_09"
+	</SwapSet>
+	
+	<SwapSet sync="rugs" same="perShape">
+		"rug_mod_rect_large_01"
+		"rug_mod_rect_large_02"
+		"rug_mod_rect_large_03"
+		"rug_mod_rect_large_04"
+		"rug_mod_rect_large_05"
+		"rug_mod_rect_large_06"
+		"rug_mod_rect_large_07"
+		"rug_mod_rect_large_08"
+		"rug_mod_rect_large_09"
+	</SwapSet>
+	
+	<SwapSet same="perShape">
+		"rug_large_01"
+		"rug_large_02"
+		"rug_large_01_02"
+		"rug_large_02_02"
+	</SwapSet>
+	
+	<SwapSet>
+		"bed_01"
+		"bed_01_02"
+	</SwapSet>
+	<SwapSet>
+		"bed_02"
+		"bed_02_02"
+	</SwapSet>
+	<SwapSet>
+		"bed_03"
+		"bed_03_02"
+	</SwapSet>
+	<SwapSet>
+		"bed_04"
+		"bed_04_02"
+	</SwapSet>
+	
+	<SwapSet same="perTile">
+		"chair_01"
+		"chair_01_02"
+	</SwapSet>
+	<SwapSet same="perTile">
+		"chair_02"
+		"chair_02_02"
+	</SwapSet>
+	<SwapSet same="perTile">
+		"chair_03"
+		"chair_03_02"
+	</SwapSet>
+	<SwapSet same="perTile">
+		"chair_04"
+		"chair_04_02"
+	</SwapSet>
+	
+	<SwapSet sync="armchair" same="perTile">
+		"armchair_01"
+		"armchair_01_02"
+	</SwapSet>
+	<SwapSet sync="armchair" same="perTile">
+		"armchair_02"
+		"armchair_02_02"
+	</SwapSet>
+	<SwapSet sync="armchair" same="perTile">
+		"armchair_03_02"
+		"armchair_03"
+	</SwapSet>
+	
+	<SwapSet sync="sofas" same="perTile">
+		"sofa_01"
+		"sofa_01_02"
+	</SwapSet>
+	<SwapSet sync="sofas" same="perTile">
+		"sofa_02"
+		"sofa_02_02"
+	</SwapSet>
+	<SwapSet sync="sofas" same="perTile">
+		"sofa_03"
+		"sofa_03_02"
+	</SwapSet>
+	<SwapSet sync="sofas" same="perTile">
+		"sofa_04"
+		"sofa_04_02"
+	</SwapSet>
+	
+	<SwapSet sync="sunchair" same="perShape">
+		"chair_sun_01_01"
+		"chair_sun_02_01"
+	</SwapSet>
+	<SwapSet sync="sunchair" same="perShape">
+		"chair_sun_01_02"
+		"chair_sun_02_02"
+	</SwapSet>
+	
+	<SwapSet sync="large_table">
+		"table_wood_large_01"
+		"table_wood_large_01_02"
+	</SwapSet>
+	<SwapSet sync="large_table">
+		"table_wood_large_02"
+		"table_wood_large_02_02"
+	</SwapSet>
+	<SwapSet sync="large_table">
+		"table_wood_large_03"
+		"table_wood_large_03_02"
+	</SwapSet>
+	
+	<SwapSet same="perShape">
+		"table_wood_small_01"
+		"table_wood_small_01_02"
+	</SwapSet>
+	<SwapSet same="perShape">
+		"table_wood_small_02"
+		"table_wood_small_02_02"
+	</SwapSet>
+	<SwapSet same="perShape">
+		"coffee_table_01"
+		"coffee_table_02"
+	</SwapSet>
+	
+	<SwapSet same="perShape">
+		"radio_01"
+		"radio_02"
+		"radio_03"
+	</SwapSet>
+	
+</EntitySwaps>

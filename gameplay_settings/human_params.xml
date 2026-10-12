@@ -1,0 +1,82 @@
+<HumanParams
+	crouchDownTimeMsec="300"
+	crouchUpTimeMsec="400"
+	pickupTimeMsec="1000"
+	openDoorTimeMsec="1000"
+	closeDoorTimeMsec="1000"
+	surrenderTimeMsec="200"
+	arrestTimeMsec="2000"
+	jumpObstacleTimeMsec="1020"
+	jumpWindowTimeMsec="1680"
+	breakWindowTimeMsec="1600"
+
+	meleeStartDistance="1.0"
+	meleeActionTimeMsec="490"
+	meleeKnockbackTimeMsec="1000"
+	meleeKnockbackDistance="1.75"
+	meleeDamage="1"
+	meleeAttackCooldownMsec="1500"
+
+	sniperOverwatchRadiusMeters="3.0"
+	suppressiveFireRadius="0.9"
+	suppressiveFireSuppressionPerSecond="25.0"
+
+	overTheShoulderShootRangeMeters="0.7"
+	coverBlownMeters="5.0"
+
+	grenadeThrowSoundRadiusMeters="3.0"
+	enemyGrenadeThrowMinDistMeters="4.0"
+	enemyGrenadeThrowMaxDistMeters="20.0"
+
+	civilianScareDistanceMeters="3.0"
+	runAwayDistanceMeters="10.0"
+	vipActivateRange="6.0"
+	hvtRunAwayDistanceMeters="5.0"
+	hvtThreatenDistanceMeters="10.0"
+	trooperSpottedYellDistance="30.0"
+	combatStartedReactionTimeMS="1500"
+	
+	grenadeReactionTime="0.5"
+	grenadeWarningAdvanceMS = "200"
+
+	suppressionNearMiss="2"
+	suppressionHitMe="8"
+	suppressionHitFriend="3"
+	suppressionHitFriendRadiusMeters="2"
+	suppressionMax="65"
+
+	suppressedThresholdStart="20"
+	suppressedThresholdStop="10"
+	pinnedThresholdStart="50"
+	pinnedThresholdStop="35"
+
+	suppressedMovePercent="-25"
+	suppressedTurnPercent="-50"
+	suppressedAimTimePercent="100"
+	suppressedAccuracyPercent="-100"
+
+	hideDelayMsec				= "2000"
+
+	concealmentFastDetectionRadius 		= "7.0"
+	concealmentFastDetectionSpeed		= "10.0"
+	concealmentSlowDetectionRadius		= "50.0"
+	concealmentSlowDetectionSpeed		= "5.0"
+	
+	suspicionAreaExplosionRadius	= "2.0"
+	suspicionAreaDeathRadius		= "2.5"
+	suspicionAreaThrowRadius		= "1.5"
+	suspicionAreaShootRadius		= "1.0"
+	suspicionAreaPenaltyDuration	= "3000"
+	
+	shootFromDarknessExposureDuration	= "3000"
+	shootSilencedExposureDuration 		= "1300"
+	
+	flinchDamageThreshold	="18.0"
+	flinchChancePerDmgPoint	="1.0"
+	flinchStunDurationMsec	="100"
+	
+	speedSyncRadiusMeters	="300.0"
+	
+	coverBlockPercent = "50"
+	fullCoverBlockPercent = "95"
+/>

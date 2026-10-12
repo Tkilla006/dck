@@ -1,0 +1,121 @@
+<!--
+Global GUI config file.
+
+-All items have coordinates relative to the GUI width/height defined below
+-Sub-items coordinates are relative to their parent (origin="5 0" means an offset of 5 pixels added to that of their parent)
+-When alignment is defined, they are relative to the screen or their parent. If defined, the "origin" parameter represents an offset to the alignment.
+	'align' is a combination of either l/r/t/b/sh/sv (where sh/sv are exclusive and mean screen_vertical and screen_horizontal - used for variable aspect ratios)
+	e.g. align="lb" , align="br", align="sh"
+	note: center is default/implied, but can also be specified as align="c"
+-Colors are given in RGBA format, where A is optional (Photoshop-friendly, you can just c/p here).
+
+Special XML characters:
+&#xA;   - new line
+&amp;   - the & character
+-->
+<GUI width="2560" height="1440" tooltipsTimeMsec="300" tooltipsTextColor="cec3b0" tooltipsBckdColor="000000f5">
+	<Item name="#tooltip" hidden="true" sizeY="48"> <!-- sizeY is the default height -->
+		<StaticImage name="#background" align="lb">
+			<RenderObject2D texture="data/textures/gui/tooltip/hud_label_stretch.tga"/>
+
+			<!-- <Item name="#background_blur" align="i" blurBackground="true"/> -->
+
+			<StaticImage name="#side_t" origin="0 2" align="t">
+				<RenderObject2D texture="data/textures/gui/tooltip/hud_label_terminator_top.tga"/>
+			</StaticImage>
+			<StaticImage name="#side_b" origin="0 -2" align="b">
+				<RenderObject2D texture="data/textures/gui/tooltip/hud_label_terminator_top.tga" flipY="true"/>
+			</StaticImage>
+
+			<StaticImage name="#side_l" origin="-2 0" align="l">
+				<RenderObject2D texture="data/textures/gui/tooltip/hud_label_terminator.tga"/>
+			</StaticImage>
+			<StaticImage name="#side_r" origin="2 0" align="r">
+				<RenderObject2D texture="data/textures/gui/tooltip/hud_label_terminator.tga" flipX="true"/>
+			</StaticImage>
+
+			<StaticText name="#text" origin="0 0" text="Pintea Haiducul" align="c" font="paragraph_2" textColor="efe2ca"/>			
+		</StaticImage>
+	</Item>	
+</GUI>
+
+
+
+<!--
+Help on GUI .xml scripts:
+
+<Action type=""> types:
+
+Hide
+Show
+Click
+
+SetForeground
+	- makes targeted Item be the last in its parent's children list (so that it's rendered last)
+
+MoveToBackground
+	- makes targeted Item be the first in its parent's children list (so that it's rendered first)
+
+AddChild
+RemoveChild
+AddMeToParent
+    - target is Item name
+RemoveMeFromParent
+	- no target needed, removes from current parent
+
+SetOrigin
+	ex: <Action type="SetOrigin" target="ui_item_name" params="24 30"/>
+
+TriggerEvent
+    - target is event Id, like GUI_GAME_QUIT_GAME
+
+Check
+Check_WithoutActions
+Uncheck
+Uncheck_WithoutActions
+    - checkboxes only
+
+OpenURL - target is URL
+
+ScrollListForward
+ScrollListBackward
+ScrollListHere
+    - scroll lists only
+
+PlaySound
+    - target="SFX_..." from sfx library
+	- params="1 2 3" where 
+		'1' = loop 0/1
+		'2' = volume 0..1
+		'3' = delay milliseconds
+StopSound
+	- target="sfx"
+	
+PauseMovie
+PlayMovie
+
+EnableInput
+DisableInput
+	- target=element name
+	For setting acceptInput="true" or acceptInput="false" on a different item.
+	ex: <Action type="DisableInput" target="ui_item_name"/>
+	
+Replace
+	- replaces the item in target with the current item
+	ex:
+	<Item name="ItemThatReplacesAnother" hidden="true">
+		<OnOpen>
+			<Action type="Replace" target="OriginalItem"/>
+		</OnOpen>
+	</Item>
+	
+	The OnOpen can be triggered at load-time by adding this on top of the file:
+	<EventActionBatch name="GAME_GUI_LOADTIME_ACTIONS">
+		<Action type="Show" target="ItemThatReplacesAnother"/>
+	</EventActionBatch>
+	
+ToggleShowHide
+	- if 'target' is hidden, it will show
+	- if 'target' is visible, it will hide
+	
+-->

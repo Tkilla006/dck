@@ -1,0 +1,3677 @@
+<GUIItems>
+
+<!-- showing deploy in the campaign screen,
+	hide the squad selection button, since it's not supposed to be visible in campaign mode, we can't change squads there
+-->
+<EventActionBatch name="GAME_GUI_DEPLOY_SHOW_IN_CAMPAIGN_MAP">
+	<Action type="Hide" target="#deploy_squad_pick_button"/>
+	<Action type="Show" target="#deploy_button_customize"/>
+	<Action type="Show" target="#deploy_button_doctrine"/>
+</EventActionBatch>
+
+<!-- showing deploy in the campaign-adjacent screens, like NewCampaign,
+	hide the squad selection button and doctrine/customize buttons, since they don't work OK there
+-->
+<EventActionBatch name="GAME_GUI_DEPLOY_SHOW_IN_CAMPAIGN_SELECTION">
+	<Action type="Hide" target="#deploy_squad_pick_button"/>
+	<Action type="Show" target="#deploy_button_customize"/>
+	<Action type="Show" target="#deploy_button_doctrine"/>
+</EventActionBatch>
+
+<Item name="Menu_CampaignSelect" origin="0 0" hidden="true">
+	<OnOpen>
+		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
+	</OnOpen>
+
+	<OnClose>
+		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
+		<Action type="Hide" target="Menu_CampaignSelect"/>
+	</OnClose>
+
+	<OnKeyDown key0="27">
+		<Action type="Click" target="Menu_CampaignSelect_Back"/>
+	</OnKeyDown>
+
+
+
+	<StaticImage origin="0 0">
+		<RenderObject2D texture="data/textures/gui/bg_texture.dds" sizeX="7680" color="f0e3cc26" sizeY="1920" texRepeatX="3" texRepeatY="1"/>
+	</StaticImage>
+
+
+
+	<StaticImage name="ScreenBg" origin="0 0">
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2560" sizeY="9999" color="0c0b0bbf"/>
+		<StaticImage align="l" origin="-128 0">
+			<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipX="true" />
+		</StaticImage>
+		<StaticImage align="r" origin="128 0">
+			<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipY="true" />
+		</StaticImage>
+	</StaticImage>
+
+	<StaticImage origin="0 100">
+		<RenderObject2D texture="data/textures/gui/main_menu_bg_old.dds" />
+	</StaticImage>
+
+	<Item origin="0 0" sizeX="9999" sizeY="9999" blurBackground="true" blurColor="6a6a6a">
+	</Item>
+
+	<Item name="Header" origin="0 500">
+
+		<StaticImage name="smoke" origin="0 0" >
+			<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" color="2f8db2" scaleX="1.4" scaleY="1.4" blendMode="add_masked" />
+		</StaticImage>
+		<StaticImage name="smoke" origin="0 -1400" >
+			<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" color="782200" scaleX="2" scaleY="2" blendMode="add_masked" />
+		</StaticImage>
+		<StaticImage origin="0 -700">
+			<RenderObject2D texture="data/textures/gui/keyart_Rangers/rangers_bg_01_scrolling_dust.dds" texRepeatX="4" sizeX="7680" sizeY="1500" flipX="true" color="f97b0310" blendMode="add_masked"/>
+			<ImageAnim type="scroll" speed="0.02" direction="1 0"/>
+			<Item name="#parallax_layer_speed" origin="30"/>
+		</StaticImage>
+		<StaticImage origin="0 -800">
+			<RenderObject2D texture="data/textures/gui/keyart_Rangers/rangers_bg_01_scrolling_dust.dds" texRepeatX="2" sizeX="7680" sizeY="3000" color="782200" blendMode="add_masked"/>
+			<ImageAnim type="scroll" speed="0.005" direction="-1 0"/>
+			<Item name="#parallax_layer_speed" origin="30"/>
+		</StaticImage>
+
+		<StaticImage name="bgsmoke" origin="0 100">
+			<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" flipY="true" color="ffa202bf" scaleX="1" scaleY="1" />
+		</StaticImage>
+		<StaticImage origin="0 0">
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/fx/light_flare_long_01.dds" color="f97b0333" blendMode="add_masked" scaleX="16" scaleY="2"/>
+				<ImageAnim type="pulse" speed="1.0"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/fx/light_flare_long_01.dds" color="ffa20299" blendMode="add_masked" scaleX="8" scaleY="8"/>
+				<ImageAnim type="pulse" speed="1.0"/>
+			</StaticImage>
+		</StaticImage>
+		<StaticImage origin="0 -400">
+			<RenderObject2D texture="data/textures/gui/campaign/campaign_deco.dds" scaleX="1.5" scaleY="1.5" blendMode="multiply" />
+		</StaticImage>
+
+		<StaticImage origin="0 -500">
+			<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" flipY="true" color="211e1d" scaleX="2" scaleY="2" />
+		</StaticImage>
+		<StaticText name="#campaign_screen_title" align="b" origin="0 0" text="@menu_campaign_campaigns" font="header_1" textColor="211e1d"/>
+		<StaticImage>
+			<RenderObject2D texture="data/textures/gui/square.tga" blendMode="normal" color="211e1d" sizeX="800" sizeY="6"/>
+		</StaticImage>
+		<StaticImage origin="-120 -28">
+			<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" blendMode="normal" color="211e1d"/>
+		</StaticImage>
+		<StaticImage origin="-60 -28">
+			<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" blendMode="normal" color="211e1d"/>
+		</StaticImage>
+		<StaticImage origin="0 -28">
+			<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" blendMode="normal" color="211e1d"/>
+		</StaticImage>
+		<StaticImage origin="60 -28">
+			<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" blendMode="normal" color="211e1d"/>
+		</StaticImage>
+		<StaticImage origin="120 -28">
+			<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" blendMode="normal" color="211e1d"/>
+		</StaticImage>
+
+	</Item>
+
+	<Item name="#CampaignSelect_ItemTemplate" origin="0 0" sizeX="530" sizeY="808" hidden="true">
+		<OnOpen>
+			<Action type="PauseMovie" target="#campaign_pack_movie"/>
+		</OnOpen>
+		<StaticImage name="campaign_stroke" hidden="false">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="504" sizeY="808" blendMode="none" color="0c0b0b"/>
+		</StaticImage>
+
+
+
+		<!-- we can show either one of these, depending on what's defined in the map bundles xml -->
+		<StaticImage name="#campaign_pack_img" hidden="true">
+			<RenderObject2D sizeX="500" sizeY="800" blendMode="none"/>
+		</StaticImage>
+		<Movie name="#campaign_pack_movie" autoPlay="false" file="data/movies/campaign_operation_subjugator_thumb.ogv" loop="true" hidden="true"/>
+
+		<Item sizeX="504" sizeY="808" name="#campaign_locked" stealFocus="true">
+			<StaticImage>
+				<RenderObject2D texture="data/textures/gui/locked_icon.dds" color="919191cc"/>
+			</StaticImage>
+		</Item>
+
+		<StaticImage align="b" origin="0 4">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="496" sizeY="80" color="0c0b0bcc"/>
+			<Item origin="0 0" sizeX="496" sizeY="80" blurBackground="true" blurColor="ffffffbf">
+			</Item>
+		</StaticImage>
+		<StaticImage name="#campaign_hover" hidden="true">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="512" sizeY="816" color="f97b0300"/>
+			<StaticImage align="r">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="8" sizeY="816" blendMode="none" color="f97b03"/>
+			</StaticImage>
+			<StaticImage align="l">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="8" sizeY="816" blendMode="none" color="f97b03"/>
+			</StaticImage>
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="512" sizeY="8" blendMode="none" color="f97b03"/>
+			</StaticImage>
+			<StaticImage align="b">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="512" sizeY="8" blendMode="none" color="f97b03"/>
+			</StaticImage>
+		</StaticImage>
+
+		<!-- this here for when scrolling on the empty space between the buttons -->
+		<OnScrollDown>
+			<Action type="ScrollListForward" target="#CampaignSelect_List"/>
+		</OnScrollDown>
+		<OnScrollUp>
+			<Action type="ScrollListBackward" target="#CampaignSelect_List"/>
+		</OnScrollUp>
+
+		<Button name="#CampaignSelect_ButtonTemplate" defaultState="UncheckedState" sizeX="504" sizeY="808">
+			<OnScrollDown>
+				<Action type="ScrollListForward" target="#CampaignSelect_List"/>
+			</OnScrollDown>
+			<OnScrollUp>
+				<Action type="ScrollListBackward" target="#CampaignSelect_List"/>
+			</OnScrollUp>
+
+<!--			<ButtonText align="rb" origin="-14 6" text="0/12" font="header_4" textColor="f0e3cc"/>-->
+
+			<OnHover>
+				<Action type="PlayMovie" target="#campaign_pack_movie"/>
+				<Action type="Show" target="#campaign_hover"/>
+			</OnHover>
+			<OnHoverEnd>
+				<Action type="PauseMovie" target="#campaign_pack_movie"/>
+				<Action type="Hide" target="#campaign_hover"/>
+			</OnHoverEnd>
+
+			<OnClick>
+				<Action type="Hide" target="Menu_CampaignSelect"/>
+				<Action type="Show" target="Menu_CampaignProgress"/>
+				<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_SELECT"/>
+				<!-- we then show either the New campaign screen or continue the latest in-progress campaign -->
+			</OnClick>
+
+			<StaticText name="#type" align="lb" origin="10 40" text="TOUR OF DUTY" font="header_5" textColor="ffffff"/>
+			<StaticText name="#name" align="lb" origin="10 6" text="Trouble in Kielbasa" font="header_4" textColor="f97b03"/>
+
+			<Item name="#continue" align="i">
+				<StaticImage name="#unit_banner" origin="0 -4" align="t">
+					<RenderObject2D texture="data/textures/gui/squads/rangers_bg_01.dds" sizeX="496" sizeY="228" color="ffffffff"/>
+					<StaticImage align="t">
+						<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b99" sizeX="496" sizeY="80"/>
+						<StaticText name="#unit_name" align="lt" origin="10 -6" text="@unit_rangers_name" font="header_5" textColor="f0e3cc"/>
+						<StaticText name="#squad_name" align="lt" origin="10 -34" text="SQUAD NAME" font="header_4" textColor="f97b03"/>
+					</StaticImage>
+					<StaticText align="rt" origin="-20 -6" text="@menu_generic_continue" font="header_3" textColor="f0e3cc"/>
+				</StaticImage>
+			</Item>
+<!--
+			<Button name="#CampaignSelect_LoadButton" align="b" origin="0 -80">
+				<ButtonText  origin="0 2" text="@menu_campaign_newload" font="header_3" textColor="928a7c"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/square.tga" color="f97b03" sizeX="496" sizeY="64"/>
+					<ButtonText  origin="0 2" text="@menu_campaign_newload" font="header_3" textColor="211e1d"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/gui/square.tga" color="211e1d" sizeX="496" sizeY="64"/>
+					<ButtonText  origin="0 2" text="@menu_campaign_newload" font="header_3" textColor="f0e3cc"/>
+					<Action type="Hide" target="Menu_CampaignSelect"/>
+					<Action type="Show" target="Menu_CampaignProgress"/>
+					<Action type="Show" target="Squad_Screen_CampaignLoad"/>
+				</OnClick>
+			</Button>
+-->
+		</Button>
+	</Item>
+
+	<!-- sizeX is multiple of items visible plus some space on the right to see the next one = (640 * 4) + 80 -->
+	<ItemList name="#CampaignSelect_List" hidden="false" origin="0 0" sizeX="2200" sizeY="980" direction="x" clipChildren="true" >
+		<ButtonGraphics align="c" origin="18 -460">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b0340"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+			</OnClick>
+		</ButtonGraphics>
+		<!-- items cloned from #CampaignSelect_ItemTemplate are added here dynamically by the game -->
+	</ItemList>
+
+	<Button origin="-1150 0">
+		<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="f0e3cc7f" flipX="true"/>
+		<OnHover>
+			<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="f0e3cc" flipX="true"/>
+		</OnHover>
+		<OnClick>
+			<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="f0e3cc7f" flipX="true"/>
+			<Action type="ScrollListBackward" target="#CampaignSelect_List"/>
+		</OnClick>
+	</Button>
+
+	<Button origin="1150 0">
+		<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="f0e3cc7f" flipX="false"/>
+		<OnHover>
+			<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="f0e3cc" flipX="false"/>
+		</OnHover>
+		<OnClick>
+			<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="f0e3cc7f" flipX="false"/>
+			<Action type="ScrollListForward" target="#CampaignSelect_List"/>
+		</OnClick>
+	</Button>
+
+	<Item align="sv" origin="0 -688">
+		<StaticImage name="ScreenFooter" align="b" origin="0 -32">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="211e1d"/>
+		</StaticImage>
+
+		<!-- back button -->
+		<Button name="Menu_CampaignSelect_Back" align="lb" origin="-1200 -4">
+			<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e3cc" flipX="false"/>
+				<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="40392b" flipX="false"/>
+				<Action type="Hide" target="Menu_CampaignSelect"/>
+				<Action type="Show" target="Menu_Main"/>
+			</OnClick>
+		</Button>
+		<Button name="#CampaignSelect_History" align="rb" origin="1200 -4">
+			<ButtonText align="r" origin="-20 0" text="@menu_campaign_history" font="header_2" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e3cc" flipX="true"/>
+				<ButtonText align="r" origin="-20 0" text="@menu_campaign_history" font="header_2" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="40392b" flipX="true"/>
+				<Action type="Hide" target="Menu_CampaignSelect"/>
+				<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_HISTORY_LOAD"/>
+				<Action type="Show" target="Menu_CampaignHistory"/>
+			</OnClick>
+		</Button>
+	</Item>
+
+
+</Item>
+
+<!---------------------------------------
+-----------------------------------------
+Squad_Screen_Campaign
+-----------------------------------------
+---------------------------------------->
+<Item name="Squad_Screen_Campaign" sizeX="1106" sizeY="1380" hidden="true">
+	<OnOpen>
+		<!-- added here from globals.xml -->
+		<Action type="AddChild" target="#squads_list_panel"/>
+		<Action type="AddChild" target="Deploy_Screen"/>
+		<Action type="Show" target="#squads_list_panel"/>
+		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
+		<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_NEW_OPENED"/>
+	</OnOpen>
+	<OnClose>
+		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
+		<Action type="RemoveChild" target="Deploy_Screen"/>
+	</OnClose>
+	<OnKeyDown key0="27">
+		<Action type="Click" target="Squad_Screen_Campaign_Back"/>
+	</OnKeyDown>
+
+	<Item origin="0 0" sizeX="9999" sizeY="9999" blurBackground="true" blurColor="a0a0a0">
+	</Item>
+
+	<StaticImage>
+		<RenderObject2D texture="data/textures/gui/menu_darkbrown_background.tga" sizeX="1154" sizeY="1600" color="ffffffc8"/>
+	</StaticImage>
+
+	<StaticText text="@menu_campaign_choosesquad" origin="0 657" align="l" font="header_3" textColor="f97b03"/>
+
+	<!--
+	SQUADS LIST
+	-->
+	<!-- #squads_list_panel is added here at OnOpen from globals.xml -->
+
+	<!--
+	SQUAD DETAILS
+	-->
+	<Item name="#campaign_details_panel_squad_used" align="r" hidden="false" origin="0 0" sizeX="555">
+		<StaticText text="@menu_campaign_squad_locked_header" origin="0 0" align="c" sizeX="555" wordWrap="true" font="header_3" textColor="f0e3cc">
+			<StaticText text="@menu_campaign_squad_locked_paragraph" origin="0 -90" align="b" wordWrap="true" font="header_4" textColor="f0e3cc"/>
+		</StaticText>
+	</Item>
+
+	<Item name="#campaign_details_panel" align="r" hidden="false" origin="0 60" sizeX="540">
+		<Item origin="0 477" sizeX="540">
+			<!-- <StaticText text="@menu_campaign_settings" origin="0 120" align="r" font="header_3" textColor="f97b03"/> -->
+
+			<StaticImage origin="0 88" align="lt">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="536" sizeY="4" color="f97b03"/>
+			</StaticImage>
+
+			<!-- ironman -->
+			<Item name="#ironman_details" align="t" origin="0 60" sizeX="420" sizeY="1000" hidden="false">
+				<StaticText sizeX="500" align="b" origin="0 100" 	text="@menu_campaign_ironman_no_line1" font="header_4" textColor="928a7c" tooltip="@menu_campaign_ironman_no_line1_ttip"/>
+				<StaticText sizeX="500" align="b" origin="0 50" 	text="@menu_campaign_ironman_no_line2" font="header_4" textColor="928a7c" tooltip="@menu_campaign_ironman_no_line2_ttip"/>
+				<StaticText sizeX="500" align="b" origin="0 0" 		text="@menu_campaign_ironman_no_line3" font="header_4" textColor="928a7c" tooltip="@menu_campaign_ironman_no_line3_ttip"/>
+			</Item>
+			<Item name="#ironman_details_checked" align="t" origin="0 60" sizeX="420" sizeY="1000" hidden="true">
+				<StaticImage align="c" origin="0 -100" sizeX="540" sizeY="1000" clipChildren="true">
+					<StaticImage align="c" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/campaign/ironman_endscreen.dds" blendMode="multiply"/>
+					</StaticImage>
+					<StaticImage align="c" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/campaign/ironman_endscreen.dds" blendMode="multiply"/>
+					</StaticImage>
+				</StaticImage>
+				<StaticImage origin="0 10" align="lb">
+					<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.6" scaleY="0.6" blendMode="normal" />
+				</StaticImage>
+				<StaticImage origin="0 60" align="lb">
+					<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.6" scaleY="0.6" blendMode="normal" />
+				</StaticImage>
+				<StaticImage origin="0 110" align="lb">
+					<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.6" scaleY="0.6" blendMode="normal" />
+				</StaticImage>
+				<StaticImage origin="0 10" align="rb">
+					<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.6" scaleY="0.6" blendMode="normal" />
+				</StaticImage>
+				<StaticImage origin="0 60" align="rb">
+					<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.6" scaleY="0.6" blendMode="normal" />
+				</StaticImage>
+				<StaticImage origin="0 110" align="rb">
+					<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.6" scaleY="0.6" blendMode="normal" />
+				</StaticImage>
+				<StaticText sizeX="500" align="b" origin="0 100" 	text="@menu_campaign_ironman_yes_line1" font="header_4" textColor="f0e3cc" tooltip="@menu_campaign_ironman_yes_line1_ttip"/>
+				<StaticText sizeX="500" align="b" origin="0 50" 	text="@menu_campaign_ironman_yes_line2" font="header_4" textColor="f0e3cc" tooltip="@menu_campaign_ironman_yes_line2_ttip"/>
+				<StaticText sizeX="500" align="b" origin="0 0" 		text="@menu_campaign_ironman_yes_line3" font="header_4" textColor="f0e3cc" tooltip="@menu_campaign_ironman_yes_line3_ttip"/>
+			</Item>
+
+			<Item origin="0 -740" align="b" sizeX="256" sizeY="256">
+				<Checkbox name="#ironman_checkbox" origin="0 0" defaultState="UncheckedState" >
+					<UncheckedState sizeX="400" sizeY="400">
+						<RenderObject2D texture="data/textures/gui/campaign/ironman_unchecked.dds" color="ffffff"/>
+						<OnOpen>
+							<Action type="Show" target="#ironman_details"/>
+							<Action type="Show" target="#ironman_textbg_unchecked"/>
+						</OnOpen>
+						<OnHover>
+							<RenderObject2D texture="data/textures/gui/campaign/ironman_unchecked_hover.dds"/>
+							<Action type="Hide" target="#ironman_textbg_unchecked"/>
+							<Action type="Show" target="#ironman_textbg_unchecked_hover"/>
+						</OnHover>
+						<OnHoverEnd>
+							<Action type="Hide" target="#ironman_textbg_unchecked_hover"/>
+							<Action type="Show" target="#ironman_textbg_unchecked"/>
+						</OnHoverEnd>
+						<OnClick>
+							<Action type="Hide" target="#ironman_textbg_unchecked_hover"/>
+							<Action type="Hide" target="#ironman_textbg_unchecked"/>
+							<Action type="Hide" target="#ironman_details"/>
+							<RenderObject2D texture="data/textures/gui/campaign/ironman_unchecked_hover.dds" scaleX="0.9" scaleY="0.9"/>
+						</OnClick>
+					</UncheckedState>
+
+					<CheckedState acceptInput="true" sizeX="400" sizeY="400">
+						<RenderObject2D texture="data/textures/gui/campaign/ironman_checked_hover.dds" />
+						<OnOpen>
+							<Action type="Show" target="#ironman_details_checked"/>
+							<Action type="Show" target="#ironman_textbg_checked"/>
+						</OnOpen>
+						<OnHover>
+							<RenderObject2D texture="data/textures/gui/campaign/ironman_checked.dds"/>
+							<Action type="Show" target="#ironman_textbg_checked_hover"/>
+							<Action type="Hide" target="#ironman_textbg_checked"/>
+						</OnHover>
+						<OnHoverEnd>
+							<Action type="Show" target="#ironman_textbg_checked"/>
+							<Action type="Hide" target="#ironman_textbg_checked_hover"/>
+						</OnHoverEnd>
+						<OnClick>
+							<RenderObject2D texture="data/textures/gui/campaign/ironman_checked.dds" scaleX="0.9" scaleY="0.9"/>
+							<Action type="Hide" target="#ironman_textbg_checked_hover"/>
+							<Action type="Hide" target="#ironman_textbg_checked"/>
+							<Action type="Hide" target="#ironman_details_checked"/>
+						</OnClick>
+					</CheckedState>
+
+					<StaticImage name="#ironman_glow" align="c" origin="0 0" hidden="true">
+						<RenderObject2D texture="data/textures/fx/light_flare_glow_01.dds" color="f97b0380" blendMode="add_masked" scaleX="4" scaleY="4"/>
+					</StaticImage>
+					<StaticImage name="#ironman_textbg_unchecked" align="b" origin="0 25" hidden="false">
+							<RenderObject2D texture="data/textures/gui/menu_select.dds" sizeX="500" color="f0e3cc"/>
+							<StaticText align="c" origin="0 0" text="@menu_campaign_normal_mode" font="header_3" textColor="211e1d"/>
+					</StaticImage>
+					<StaticImage name="#ironman_textbg_unchecked_hover" align="b" origin="0 25" hidden="true">
+							<RenderObject2D texture="data/textures/gui/menu_select.dds" sizeX="500" color="f97b03"/>
+							<StaticText align="c" origin="0 0" text="@menu_campaign_normal_mode" font="header_3" textColor="211e1d"/>
+					</StaticImage>
+					<StaticImage name="#ironman_textbg_checked_hover" align="b" origin="0 25" hidden="true">
+							<RenderObject2D texture="data/textures/gui/menu_select.dds" sizeX="500" color="f97b03"/>
+							<StaticText align="c" origin="0 0" text="@menu_campaign_ironman_mode_on" font="header_3" textColor="211e1d"/>
+					</StaticImage>
+					<StaticImage name="#ironman_textbg_checked" align="b" origin="0 25" hidden="true">
+							<RenderObject2D texture="data/textures/gui/menu_select.dds" sizeX="500" color="f0e3cc"/>
+							<StaticText align="c" origin="0 0" text="@menu_campaign_ironman_mode_on" font="header_3" textColor="211e1d"/>
+					</StaticImage>
+				</Checkbox>
+			</Item>
+
+			<!--
+			<Item origin="0 -492" sizeX="540" sizeY="66">
+				<Item name="#ironman_on" align="i" hidden="false">
+				</Item>
+
+				<Item name="#ironman_off" align="i" hidden="true">
+				</Item>
+
+				<Button origin="0 0" sizeX="100" sizeY="100" align="l" acceptInput="true">
+					<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" scaleX="1.2" scaleY="1.7"  flipX="true" color="211e1d"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" scaleX="1.2" scaleY="1.7"flipX="true" color="f97b03"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" scaleX="1.2" scaleY="1.7" flipX="true" color="211e1d"/>
+						<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_LENGTH_DECR"/>
+					</OnClick>
+				</Button>
+				<Button origin="0 0" sizeX="100" sizeY="100" align="r" acceptInput="true">
+					<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" scaleX="1.2" scaleY="1.7" color="211e1d"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" scaleX="1.2" scaleY="1.7" color="f97b03"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" scaleX="1.2" scaleY="1.7" color="211e1d"/>
+						<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_LENGTH_INCR"/>
+					</OnClick>
+				</Button>
+			</Item>
+			-->
+
+			<!-- campaign description -->
+			<Item name="Campaign Description" align="t" origin="0 30">
+				<StaticText name="#campaign_type" origin="0 0" text="TOUR OF DUTY" font="header_4" textColor="f0e3cc"/>
+				<StaticText name="#campaign_name" origin="0 -48" text="SHRINE DISTRICT" font="header_3" textColor="f97b03"/>
+				<Item name="Header" origin="0 -75">
+
+					<StaticImage origin="-100 -28">
+						<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.8" scaleY="0.8" blendMode="normal" color="f97b03"/>
+					</StaticImage>
+					<StaticImage origin="-50 -28">
+						<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.8" scaleY="0.8" blendMode="normal" color="f97b03"/>
+					</StaticImage>
+					<StaticImage origin="0 -28">
+						<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.8" scaleY="0.8" blendMode="normal" color="f97b03"/>
+					</StaticImage>
+					<StaticImage origin="50 -28">
+						<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.8" scaleY="0.8" blendMode="normal" color="f97b03"/>
+					</StaticImage>
+					<StaticImage origin="100 -28">
+						<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.8" scaleY="0.8" blendMode="normal" color="f97b03"/>
+					</StaticImage>
+				</Item>
+				<Item origin="0 -160" sizeX="540" sizeY="400" align="t">
+					<StaticText name="#campaign_brief" align="lt" origin="0 0" wordWrap="true" text="Skibidy doopda deh dahlooma boopah dah! Dehlooba bahba daya bahlooma doomba beh!&#xA; &#xA;Noomah layah behna dag! Dahlooma deh bahlamaya thusla flak! Dahrooma! DAHROOMA!" font="paragraph_2" textColor="f0e3cc"/>
+				</Item>
+			</Item>
+
+			<!-- random seed -->
+			<Item name="#NewCampaign_rndseed_parent" origin="0 -1098" align="b" sizeX="540" sizeY="66">
+				<!--
+				<StaticImage origin="0 0">
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="540" sizeY="66" color="0c0b0b80"/>
+				</StaticImage>
+				-->
+				<StaticImage origin="0 0">
+					<RenderObject2D texture="data/textures/gui/menu_select.dds" sizeX="500" color="f0e3cc"/>
+				</StaticImage>
+
+				<StaticImage align="t" origin="0 4">
+					<StaticText align="b" origin="0 4" text="@menu_m_missiongen_seed" font="header_5" textColor="928a7c"/>
+					<!--<RenderObject2D texture="data/textures/gui/square.tga" sizeX="540" sizeY="4" color="928a7c"/>-->
+				</StaticImage>
+
+				<Editbox name="#NewCampaign_Seed" sizeX="540" sizeY="66" acceptNumbers="true" acceptLetters="false" forceUppercase="false" maxCharacters="9" focusedTextColor="211e1d">
+					<!--<StaticText align="l" origin="10 0" text="@menu_m_missiongen_seed" font="header_4" textColor="f0e3cc"/>-->
+					<TextFormat origin="0 0" align="c" text="1234567" font="header_3" textColor="211e1d"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/menu_select.dds" sizeX="500" color="f97b03"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/menu_select.dds" sizeX="500" color="f97b03"/>
+					</OnClick>
+					<Cursor>
+						<RenderObject2D texture="data/textures/gui/editbox_cursor.tga" scaleY="2.1" color="211e1d"/>
+					</Cursor>
+				</Editbox>
+			</Item>
+
+			<!-- difficulty
+					HIDDEN FOR NOW
+			-->
+			<Item origin="0 -380" sizeX="540" sizeY="66" hidden="true">
+				<StaticImage origin="0 0">
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="540" sizeY="66" color="0c0b0b80"/>
+				</StaticImage>
+
+
+				<StaticImage align="t" origin="0 4">
+					<StaticText align="b" origin="0 4" text="@menu_campaign_brief_difficulty" font="header_5" textColor="f0e3cc"/>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="540" sizeY="4" color="f0e3cc"/>
+				</StaticImage>
+
+				<StaticText name="#NewCampaign_Difficulty" text="@menu_campaign_brief_difficulty2" font="header_3" textColor="f97b03"/>
+
+				<Button origin="0 0" align="l" acceptInput="true">
+					<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" flipX="true"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true"/>
+						<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_DIFFICULTY_DECR"/>
+					</OnClick>
+				</Button>
+				<Button origin="0 0" align="r" acceptInput="true">
+					<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga"/>
+						<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_DIFFICULTY_INCR"/>
+					</OnClick>
+				</Button>
+			</Item>
+
+			<!-- region -->
+			<!--
+			<Item origin="0 -320" sizeX="540" sizeY="66">
+				<StaticImage origin="0 0">
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="540" sizeY="66" color="0c0b0b80"/>
+				</StaticImage>
+
+
+				<StaticImage align="t" origin="0 4">
+					<StaticText align="b" origin="0 4" name="Region" text="REGION" font="header_5" textColor="f0e3cc"/>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="540" sizeY="4" color="f0e3cc"/>
+				</StaticImage>
+
+				<StaticText name="Campaign_Region" text="PIPERA" font="header_3" textColor="f97b03"/>
+
+				<Button origin="0 0" align="l" acceptInput="true">
+					<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" flipX="true"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true"/>
+					</OnClick>
+				</Button>
+
+				<Button origin="0 0" align="r" acceptInput="true">
+					<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga"/>
+					</OnClick>
+				</Button>
+			</Item>
+
+			<Item origin="0 -540" sizeX="540" sizeY="300">
+				<StaticText name="#RegionDescription" align="lt" wordWrap="true" text="decription" font="paragraph_2" textColor="f0e3cc"/>
+			</Item>
+			-->
+		</Item>
+	</Item>
+
+	<Item align="sv" origin="0 -688">
+		<StaticImage name="ScreenFooter" align="b" origin="0 -32">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="211e1d"/>
+		</StaticImage>
+
+		<Button name="Squad_Screen_Campaign_Back" align="lb" origin="-1200 -4">
+			<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e3cc" flipX="false"/>
+				<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="40392b" flipX="false"/>
+				<Action type="Hide" target="Squad_Screen_Campaign"/>
+				<Action type="Hide" target="Menu_CampaignProgress"/>
+				<Action type="Show" target="Menu_CampaignSelect"/>
+			</OnClick>
+		</Button>
+
+		<Button name="Squad_Screen_Campaign_Start" align="rb" origin="1200 -4">
+			<ButtonText align="r" origin="-20 0" text="@menu_generic_start" font="header_2" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e3cc" flipX="true"/>
+				<ButtonText align="r" origin="-20 0" text="@menu_generic_start" font="header_2" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="40392b" flipX="true"/>
+				<Action type="Hide" target="Squad_Screen_Campaign"/>
+
+				<!-- hide/show progress in order to re-link the deploy screen to it, because it's currently unlinked after hiding Squad_Screen_Campaign -->
+				<Action type="Hide" target="Menu_CampaignProgress"/>
+				<Action type="Show" target="Menu_CampaignProgress"/>
+
+				<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_START"/>
+			</OnClick>
+		</Button>
+	</Item>
+</Item>
+
+
+<!---------------------------------------
+-----------------------------------------
+Squad_Screen_CampaignLoad
+-----------------------------------------
+---------------------------------------->
+<Item name="Squad_Screen_CampaignLoad" sizeX="1106" sizeY="1380" hidden="true">
+	<OnOpen>
+		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
+		<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_LOAD_SHOW"/>
+		<Action type="AddChild" target="Deploy_Screen"/> <!-- show above gray background. Note that once we close this, we must set it as CampaignProgress' child again -->
+	</OnOpen>
+	<OnClose>
+		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
+		<Action type="RemoveChild" target="Deploy_Screen"/>
+	</OnClose>
+	<OnKeyDown key0="27">
+		<Action type="Click" target="Squad_Screen_CampaignLoad_Back"/>
+	</OnKeyDown>
+
+	<Item origin="0 0" sizeX="9999" sizeY="9999" blurBackground="true" blurColor="a0a0a0">
+	</Item>
+
+	<StaticImage>
+		<RenderObject2D texture="data/textures/gui/menu_darkbrown_background.tga" sizeX="1154" sizeY="1444" color="ffffffc8"/>
+		<StaticText text="@menu_campaign_load_save" origin="24 674" align="l" font="header_2" textColor="f97b03"/>
+	</StaticImage>
+
+	<!--
+	SAVES LIST
+	-->
+	<StaticImage align="c" origin="0 74">
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1106" sizeY="1110" color="40392b33"/>
+	</StaticImage>
+
+	<StaticImage align="c" origin="0 630">
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1106" sizeY="4" color="f97b03"/>
+		<StaticImage align="t" origin="0 -8">
+			<RenderObject2D texture="data/textures/gui/customization/scroll_arrow.dds" flipY="true" color="f97b03" scaleX="0.8" scaleY="0.8"/>
+		</StaticImage>
+	</StaticImage>
+	<StaticImage align="c" origin="0 -480">
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1106" sizeY="4" color="f97b03"/>
+		<StaticImage align="b" origin="0 8">
+			<RenderObject2D texture="data/textures/gui/customization/scroll_arrow.dds"  color="f97b03" scaleX="0.8" scaleY="0.8"/>
+		</StaticImage>
+	</StaticImage>
+
+	<!-- goes down to -228 on Y -->
+	<Checkbox name="#campaign_saves_item_template" autoSiblingsUncheck="true" acceptInput="false" sizeX="1106" sizeY="320" hidden="true">
+		<OnScrollDown>
+			<Action type="ScrollListForward" target="#campaign_saves_list_parent"/>
+		</OnScrollDown>
+		<OnScrollUp>
+			<Action type="ScrollListBackward" target="#campaign_saves_list_parent"/>
+		</OnScrollUp>
+
+		<UncheckedState sizeX="1106" sizeY="320">
+			<OnOpen>
+				<Action type="Show" target="#squad_flag_normal"/>
+				<Action type="Hide" target="#squad_item_selected"/>
+			</OnOpen>
+			<OnHover>
+				<Action type="Hide" target="#squad_flag_normal"/>
+				<Action type="Show" target="#squad_flag_hover"/>
+				<Action type="Show" target="#squad_item_hover_but"/>
+			</OnHover>
+			<OnHoverEnd>
+				<Action type="Show" target="#squad_flag_normal"/>
+				<Action type="Hide" target="#squad_flag_hover"/>
+				<Action type="Hide" target="#squad_item_hover_but"/>
+			</OnHoverEnd>
+			<OnClick>
+				<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_LOAD_SELECTION_CHANGED"/>
+				<Action type="PlaySound" target="gui_customize_equip"/>
+			</OnClick>
+		</UncheckedState>
+
+		<CheckedState sizeX="1106" sizeY="320">
+			<OnOpen>
+				<Action type="Hide" target="#squad_flag_normal"/>
+				<Action type="Show" target="#squad_flag_hover"/>
+				<Action type="Show" target="#squad_item_selected"/>
+			</OnOpen>
+			<OnClose>
+				<Action type="Show" target="#squad_item_selected"/>
+				<Action type="Hide" target="#squad_item_hover_but"/>
+				<Action type="Hide" target="#squad_flag_hover"/>
+				<Action type="Show" target="#squad_flag_normal"/>
+			</OnClose>
+			<OnClick>
+				<Action type="Click" target="Squad_Screen_CampaignLoad_LoadSelection"/>
+			</OnClick>
+		</CheckedState>
+
+		<Item name="CampaignLoadInfo" sizeX="1106" sizeY="240" align="lt" origin="0 0">
+			<StaticImage>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1076" sizeY="226" color="080808b3"/>
+			</StaticImage>
+			<StaticImage>
+				<RenderObject2D texture="data/textures/gui/square.tga" align="b"  sizeX="1076" sizeY="75" color="40392b33"/>
+			</StaticImage>
+
+			<StaticImage name="#CampaignIronManParent" sizeX="1076" sizeY="226" clipChildren="true">
+				<StaticImage origin="270 0">
+					<RenderObject2D texture="data/textures/gui/campaign/ironman_endscreen.dds" scaleX="0.5" scaleY="0.5" blendMode="multiply"/>
+				</StaticImage>
+			</StaticImage>
+
+			<StaticText text="@menu_campaign_day" align="l" origin="570 75" font="header_4" textColor="f0e3cc"/>
+			<StaticText text="@menu_campaign_ironman_mode" align="l" origin="570 0" font="header_4" textColor="f0e3cc"/>
+			<StaticText text="@menu_campaign_lastplayed_time" align="l" origin="570 -75" font="header_4" textColor="f0e3cc"/>
+
+			<StaticText name="#progress_day" text="DAY 3" align="r" origin="-30 75" font="header_4" textColor="f97b03"/>
+			<StaticText name="#progress_ironman" text="12" align="r" origin="-30 0" font="header_4" textColor="f97b03"/>
+			<StaticText name="#progress_time" text="16/01/1991 23:69" align="r" origin="-30 -75" font="header_4" textColor="f97b03"/>
+		</Item>
+
+		<Item origin="-270 0" sizeX="1106" sizeY="240" align="t">
+			<StaticImage name="#squad_flag_normal" hidden="false">
+				<RenderObject2D texture="data/textures/gui/squads/rangers_bg_01.dds" blendMode="normal"/>
+			</StaticImage>
+			<StaticImage name="#squad_flag_hover" hidden="true">
+				<RenderObject2D texture="data/textures/gui/squads/rangers_bg_01.dds" blendMode="none"/>
+			</StaticImage>
+
+			<StaticImage name="Squad Identity" align="b" origin="0 6">
+				<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b40" sizeX="536" sizeY="98"/>
+				<StaticText name="#unit_name" align="l" origin="6 24" text="UNIT NAME" font="header_5" textColor="f0e3cc"/>
+				<StaticText name="#squad_name" align="l" origin="4 -16" text="BONNIE'S BOOMSTICK" font="header_3" textColor="f97b03"/>
+				<StaticText name="#squad_id" font="header_3" hidden="true"/>
+			</StaticImage>
+			<Item name="Squad Level" align="rt" origin="-299 -45">
+				<StaticText name="#squad_level" align="r" origin="0 0" text="16" font="header_3" textColor="f97b03">
+					<Item align="l">
+						<StaticText align="r" origin="-5 -10" text="@menu_squads_level" font="header_5" textColor="f0e3cc"/>
+					</Item>
+				</StaticText>					
+			</Item>
+		</Item>
+
+		<Button align="lb" name="delete" origin="19 10">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="350" sizeY="64" color="9b3f40"/>
+			<ButtonText text="@menu_generic_abandon" font="header_3" textColor="211e1d"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="350" sizeY="64" color="f33638"/>
+				<ButtonText text="@menu_generic_abandon" font="header_3" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="350" sizeY="64" color="40392b"/>
+				<ButtonText text="@menu_generic_abandon" font="header_3" textColor="f33638"/>
+				<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_LOAD_SELECTION_DELETED"/>
+			</OnClick>
+		</Button>
+
+		<Button align="rb" name="Squad_Screen_CampaignLoad_LoadSelection" origin="-19 10">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="350" sizeY="64" color="f0e3cc"/>
+			<ButtonText text="@menu_m_ingame_resume" font="header_3" textColor="211e1d"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="350" sizeY="64" color="f97b03"/>
+				<ButtonText text="@menu_m_ingame_resume" font="header_3" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="350" sizeY="64" color="40392b"/>
+				<ButtonText text="@menu_m_ingame_resume" font="header_3" textColor="f0e3cc"/>
+
+				<Action type="Hide" target="Squad_Screen_CampaignLoad"/>
+
+				 <!-- this show/hide is not redundant, it ads Deploy_Screen as a child of progress again -->
+				<Action type="Hide" target="Menu_CampaignProgress"/>
+				<Action type="Show" target="Menu_CampaignProgress"/>
+
+				<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_LOAD_SELECTION_LOAD"/>
+			</OnClick>
+		</Button>
+
+		<StaticImage name="#squad_item_hover_but" origin="0 0" align="i" hidden="false">
+			<StaticImage align="t" origin="0 -2">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1084" sizeY="4" color="f97b03"/>
+			</StaticImage>
+			<StaticImage align="b" origin="0 2">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1084" sizeY="4" color="f97b03"/>
+			</StaticImage>
+			<StaticImage align="l" origin="11 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="4" sizeY="314" color="f97b03"/>
+			</StaticImage>
+			<StaticImage align="r" origin="-11 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="4" sizeY="314" color="f97b03"/>
+			</StaticImage>
+		</StaticImage>
+		<StaticImage name="#squad_item_selected" origin="0 0" align="i" hidden="true">
+			<StaticImage align="c" origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1084" sizeY="294" blendMode="overlay" color="e5e5e5"/>
+			</StaticImage>
+			<StaticImage align="t" origin="0 -2">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1084" sizeY="4" color="f0e3cc"/>
+			</StaticImage>
+			<StaticImage align="b" origin="0 2">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1084" sizeY="4" color="f0e3cc"/>
+			</StaticImage>
+			<StaticImage align="l" origin="11 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="4" sizeY="314" color="f0e3cc"/>
+			</StaticImage>
+			<StaticImage align="r" origin="-11 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="4" sizeY="314" color="f0e3cc"/>
+			</StaticImage>
+		</StaticImage>
+	</Checkbox>
+
+	<ItemList name="#campaign_saves_list_parent" align="c" origin="4 74" direction="y" sizeX="1106" sizeY="1044" clipChildren="true">
+		<ButtonGraphics align="l" origin="-26 0">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="20" sizeY="32" color="f97b0340"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="20" sizeY="32" color="f97b03ff"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="20" sizeY="32" color="f97b03ff"/>
+			</OnClick>
+		</ButtonGraphics>
+
+		<!-- items cloned from #campaign_saves_item_template are added here dynamically by the game -->
+
+	</ItemList>
+
+	<Item origin="0 -528">
+		<Button align="r" origin="-203 0">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="350" sizeY="64" color="f0e3cc"/>
+			<ButtonText text="@menu_generic_new" font="header_3" textColor="211e1d"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="350" sizeY="64" color="f97b03"/>
+				<ButtonText text="@menu_generic_new" font="header_3" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="350" sizeY="64" color="40392b"/>
+				<ButtonText text="@menu_generic_new" font="header_3" textColor="f0e3cc"/>
+				<Action type="Hide" target="Squad_Screen_CampaignLoad"/>
+				<Action type="Show" target="Squad_Screen_Campaign"/>
+			</OnClick>
+		</Button>
+		<!--
+		<Button align="c" origin="0 0">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="350" sizeY="64" color="f0e3cc"/>
+			<ButtonText text="@menu_generic_restart" font="header_3" textColor="211e1d"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="350" sizeY="64" color="f97b03"/>
+				<ButtonText text="@menu_generic_restart" font="header_3" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="350" sizeY="64" color="40392b"/>
+				<ButtonText text="@menu_generic_restart" font="header_3" textColor="f0e3cc"/>
+
+			</OnClick>
+		</Button>
+		-->
+		<!--
+		<Button align="l" origin="203 0">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="350" sizeY="64" color="9b3f40"/>
+			<ButtonText text="@menu_generic_delete" font="header_3" textColor="211e1d"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="350" sizeY="64" color="f33638"/>
+				<ButtonText text="@menu_generic_delete" font="header_3" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="350" sizeY="64" color="40392b"/>
+				<ButtonText text="@menu_generic_delete" font="header_3" textColor="f33638"/>
+				<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_LOAD_SELECTION_DELETED"/>
+			</OnClick>
+		</Button>
+		-->
+	</Item>
+
+	<Item align="sv" origin="0 -688">
+		<StaticImage name="ScreenFooter" align="b" origin="0 -32">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="211e1d"/>
+		</StaticImage>
+
+		<Button name="Squad_Screen_CampaignLoad_Back" align="lb" origin="-1200 -4">
+			<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e3cc" flipX="false"/>
+				<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="40392b" flipX="false"/>
+				<Action type="Hide" target="Squad_Screen_CampaignLoad"/>
+				<Action type="Hide" target="Menu_CampaignProgress"/>
+				<Action type="Show" target="Menu_CampaignSelect"/>
+			</OnClick>
+		</Button>
+
+		<!--
+		<Button name="Squad_Screen_CampaignLoad_LoadSelection" align="rb" origin="1200 -4">
+			<ButtonText align="r" origin="-20 0" text="@menu_m_ingame_resume" font="header_2" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e3cc" flipX="true"/>
+				<ButtonText align="r" origin="-20 0" text="@menu_m_ingame_resume" font="header_2" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="40392b" flipX="true"/>
+				<Action type="Hide" target="Squad_Screen_CampaignLoad"/>
+
+				<!-- this show/hide is not redundant, it ads Deploy_Screen as a child of progress again
+				<Action type="Hide" target="Menu_CampaignProgress"/>
+				<Action type="Show" target="Menu_CampaignProgress"/>
+
+				<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_LOAD_SELECTION_LOAD"/>
+			</OnClick>
+		</Button>
+		-->
+	</Item>
+</Item>
+
+<!---------------------------------------
+-----------------------------------------
+Menu_CampaignProgress
+-----------------------------------------
+---------------------------------------->
+
+<Item name="Menu_CampaignProgress" origin="0 0" hidden="true">
+	<OnOpen>
+		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
+		<Action type="AddChild" target="Deploy_Screen"/> <!-- we're doing this to allow DeployScreen to receive input, since this page captures input -->
+	</OnOpen>
+
+	<OnClose>
+		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
+		<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_PROGRESS_CLOSED"/>
+		<Action type="Hide" target="Deploy_Screen"/>
+		<Action type="RemoveChild" target="Deploy_Screen"/>
+	</OnClose>
+
+	<OnKeyDown key0="27">
+		<Action type="Click" target="Menu_CampaignProgress_Back"/>
+	</OnKeyDown>
+
+	<StaticImage origin="0 0">
+		<RenderObject2D texture="data/textures/gui/bg_texture.dds" sizeX="7680" color="f0e3cc26" sizeY="1920" texRepeatX="3" texRepeatY="1"/>
+	</StaticImage>
+
+	<StaticImage name="ScreenBg" origin="0 0">
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2560" sizeY="9999" color="0c0b0bbf"/>
+		<StaticImage align="l" origin="-128 0">
+				<RenderObject2D texture="data/textures/gui/bg_edge.dds" color="4e4940" flipX="true" />
+		</StaticImage>
+		<StaticImage align="r" origin="128 0">
+				<RenderObject2D texture="data/textures/gui/bg_edge.dds" color="4e4940" flipY="true" />
+		</StaticImage>
+	</StaticImage>
+
+	<Item name="CampaignMapBg" origin="0 60" align="c" sizeX="2560" sizeY="1480">
+		<!-- campaign map -->
+		<StaticImage name="#CampaignMap" origin="0 0">
+			<RenderObject2D texture="data/campaigns/tod_shrine_district.dds" blendMode="none"/> <!--sizeX="2560" sizeY="1600"-->
+
+			<!-- custom shit gets added here, the UI defined in the campaigndef.xml will be added as a child to this item -->
+			<Item name="#CampaignMap_Script" align="i">
+
+			</Item>
+
+			<!-- these are used to debug and create the map areas used for RMG, defined in the campaign.xml file -->
+			<OnCursorDown>
+				<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_PROGRESS_CLICKED_BACKGROUND"/>
+			</OnCursorDown>
+			<OnDrag>
+				<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_PROGRESS_DRAGGED_BACKGROUND"/>
+			</OnDrag>
+			<OnCursorUp>
+				<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_PROGRESS_UNCLICKED_BACKGROUND"/>
+			</OnCursorUp>
+
+			<StaticImage name="header_smoke" align="lt" origin="0 0" sizeX="1000" sizeY="800" clipChildren="true">
+				<StaticImage name="Smoke" align="lt" origin="-1000 300">
+					<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" color="4f4744" scaleX="1" scaleY="1.2" />
+				</StaticImage>
+			</StaticImage>
+			<StaticImage name="#CampaignIronManParent" align="lt" origin="0 0" sizeX="1000" sizeY="800" clipChildren="true">
+				<StaticImage name="Smoke" align="lt" origin="-1200 400">
+					<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" color="8c2615cc"  scaleX="1" scaleY="1.4" />
+				</StaticImage>
+				<StaticImage align="lt" origin="-400 450">
+					<RenderObject2D texture="data/textures/gui/campaign/ironman_endscreen.dds" blendMode="multiply" />
+				</StaticImage>
+				<StaticImage align="lt" origin="-400 450">
+					<RenderObject2D texture="data/textures/gui/campaign/ironman_endscreen.dds" blendMode="multiply" />
+				</StaticImage>
+			</StaticImage>
+
+			<StaticImage align="r" origin="0 0">
+				<RenderObject2D texture="data/textures/gui/bg_edge.dds" color="4e4940" sizeY="1480" flipX="true" />
+			</StaticImage>
+			<StaticImage align="l" origin="0 0">
+				<RenderObject2D texture="data/textures/gui/bg_edge.dds" color="4e4940" sizeY="1480" flipY="true" />
+			</StaticImage>
+
+			<Item name="#Campaign_MapAreas_Debug" hidden="true">
+				<StaticImage name="#Campaign_MapArea_Template" origin="0 0" hidden="true">
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="694" sizeY="150" color="ff1e1dcc"/>
+					<OnCursorDown>
+						<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_PROGRESS_CLICKED_BACKGROUND"/>
+					</OnCursorDown>
+					<OnDrag>
+						<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_PROGRESS_DRAGGED_BACKGROUND"/>
+					</OnDrag>
+					<OnCursorUp>
+						<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_PROGRESS_UNCLICKED_BACKGROUND"/>
+					</OnCursorUp>
+				</StaticImage>
+
+				<StaticImage name="#Campaign_Location_Template" align="b" origin="0 0" hidden="true">
+					<RenderObject2D texture="data/textures/gui/campaign/debug_areas.dds" color="ffffffa0"/>
+				</StaticImage>
+			</Item>
+
+			<Item name="#CampaignMapIconTemplate" hidden="true">
+				<StaticImage name="#MapButtonGlow" origin="-2 -40" align="b" hidden="true">
+					<ImageAnim type="pulse" speed="4"/>
+					<RenderObject2D texture="data/textures/fx/flashbang_nova.tga" color="d77900" scaleX="0.3" scaleY="0.4"  blendMode="add_masked"/>
+				</StaticImage>
+
+				<StaticImage origin="0 75" name="#ScenarioTooltip" ignoreFocus="true">
+					<!-- replaced by the scenario texture, taken from #ScenarioImages in globals.xml  -->
+					<RenderObject2D texture="data/textures/gui/missions/mission_clear_hostiles.dds"/>
+				</StaticImage>
+
+				<StaticImage name="#mission_intel_req" origin="0 92" align="c">
+					<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_intel_req.dds" />
+				</StaticImage>
+
+				<StaticImage name="#MapButtonBackground" origin="0 0" align="b">
+					<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack.dds"/>
+				</StaticImage>
+
+				<Button name="#MapButton" origin="0 0" align="b">
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_hover.dds" />
+
+						<!-- will show the briefing as tooltip -->
+						<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_PROGRESS_HOVERED_MAP"/>
+					</OnHover>
+					<OnHoverEnd>
+						<!-- hide the briefing tooltip -->
+						<Action type="Hide" target="Menu_CampaignMissionBrief_Tooltip"/>
+						<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_PROGRESS_HOVERED_MAP_END"/>
+					</OnHoverEnd>
+					<OnClick>
+						<!-- if the map has not been played, we'll show Menu_CampaignMissionBrief. Otherwise we'll show Menu_Endscreen_Detailed_Campaign -->
+						<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_PROGRESS_CLICKED_MAP"/>
+					</OnClick>
+
+					<Item name="#stars" align="t" origin="0 10">
+						<StaticImage  origin="0 0">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_map_starsribbon.dds"/>
+						</StaticImage>
+						<Item name="#star0">
+							<StaticImage name="Finished Mission" align="t" origin="0 -10">
+								<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_failed.dds"/>
+							</StaticImage>
+						</Item>
+						<Item name="#star1" hidden="true">
+							<StaticImage origin="-32 0"> <RenderObject2D texture="data/textures/gui/campaign/campaign_map_stars.dds"/> </StaticImage>
+							<StaticImage name="Finished Mission" align="t" origin="0 -10">
+								<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_completed.dds"/>
+							</StaticImage>
+						</Item>
+						<Item name="#star2" hidden="true">
+							<StaticImage origin="-32 0"> <RenderObject2D texture="data/textures/gui/campaign/campaign_map_stars.dds"/> </StaticImage>
+							<StaticImage origin="0 0"> <RenderObject2D texture="data/textures/gui/campaign/campaign_map_stars.dds"/> </StaticImage>
+							<StaticImage name="Finished Mission" align="t" origin="0 -10">
+								<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_completed.dds"/>
+							</StaticImage>
+						</Item>
+						<Item name="#star3" hidden="true">
+							<StaticImage origin="-32 0"> <RenderObject2D texture="data/textures/gui/campaign/campaign_map_stars.dds"/> </StaticImage>
+							<StaticImage origin="0 0"> <RenderObject2D texture="data/textures/gui/campaign/campaign_map_stars.dds"/> </StaticImage>
+							<StaticImage origin="32 0"> <RenderObject2D texture="data/textures/gui/campaign/campaign_map_stars.dds"/> </StaticImage>
+							<StaticImage name="Finished Mission" align="t" origin="0 -10">
+								<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_completed.dds"/>
+							</StaticImage>
+						</Item>
+					</Item>
+
+					<StaticImage name="#mission_timer1" align="tr" origin="20 12" hidden="true">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_timer_1day.dds"/>
+					</StaticImage>
+					<StaticImage name="#mission_timer2" align="tr" origin="20 12" hidden="true">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_timer_2day.dds"/>
+					</StaticImage>
+					<StaticImage name="#mission_timer3" align="tr" origin="20 12" hidden="true">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_timer_3day.dds"/>
+					</StaticImage>
+				</Button>
+
+				<Item name="#RewardsNormal" origin="0 34" hidden="true">
+					<StaticImage name="bg" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_normal.dds"/>
+					</StaticImage>
+					<StaticImage name="#reward_stars" origin="0 0" hidden="false">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_star.dds"/>
+					</StaticImage>
+					<StaticImage name="#reward_battleHonors" origin="0 0" hidden="true">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_bh.dds"/>
+					</StaticImage>
+					<StaticImage name="#reward_xp" origin="0 0" hidden="true">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_xp.dds"/>
+					</StaticImage>
+					<StaticImage name="#reward_intel" origin="0 0" hidden="true">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_intel.dds"/>
+					</StaticImage>
+					<StaticImage name="#reward_ability" origin="0 0" hidden="true">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_ability.dds"/>
+					</StaticImage>
+				</Item>
+
+				<Item name="#RewardsCompleted" origin="0 75" hidden="true">
+					<StaticImage name="bg" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_completed.dds"/>
+					</StaticImage>
+					<StaticImage name="#reward_stars" origin="0 0" hidden="false">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_star.dds"/>
+					</StaticImage>
+					<StaticImage name="#reward_battleHonors" origin="0 0" hidden="true">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_bh.dds"/>
+					</StaticImage>
+					<StaticImage name="#reward_xp" origin="0 0" hidden="true">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_xp.dds"/>
+					</StaticImage>
+					<StaticImage name="#reward_intel" origin="0 0" hidden="true">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_intel.dds"/>
+					</StaticImage>
+					<StaticImage name="#reward_ability" origin="0 0" hidden="true">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_ability.dds"/>
+					</StaticImage>
+				</Item>
+
+				<!--
+				<Item name="#RewardsFailed" origin="0 65" hidden="true">
+					<StaticImage name="bg" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_failed.dds"/>
+					</StaticImage>
+					<StaticImage name="#reward_stars" origin="0 0" hidden="false">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_star.dds"/>
+					</StaticImage>
+					<StaticImage name="#reward_battleHonors" origin="0 0" hidden="true">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_bh.dds"/>
+					</StaticImage>
+					<StaticImage name="#reward_xp" origin="0 0" hidden="true">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_xp.dds"/>
+					</StaticImage>
+					<StaticImage name="#reward_ability" origin="0 0" hidden="true">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_ability.dds"/>
+					</StaticImage>
+				</Item>
+				-->
+			</Item>
+
+			<!-- map icons will be added here -->
+			<Item name="#CampaignMapIconsParent">
+			</Item>
+
+		</StaticImage>
+
+
+		<Item name="#CampaignInfo" origin="80 600" align="l">
+			<StaticText name="#CampaignName" align="l" origin="0 0" text="Trouble in Kielbasa" font="header_2" textColor="f97b03"/>
+			<!--
+			<Item name="size used for wrapping" sizeX="650" align="lt" origin="0 -60">
+				<StaticText name="#CampaignDescription" align="rt" wordWrap="true" text="decription" font="paragraph_2" textColor="f0e3cc"/>
+			</Item>
+			-->
+			<StaticImage origin="0 -40" align="l">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="732" sizeY="4" color="f97b03"/>
+			</StaticImage>
+			<StaticText origin="0 -80" align="l" text="@menu_campaign_day" font="header_3" textColor="f0e3cc">
+				<StaticText name="#CampaignDays" align="l" origin="140 0" text="999/999" font="header_3" textColor="f0e3cc">
+					<Button origin="90 0" align="r" tooltip="@menu_campaign_dayreport_ttip">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_report_normal.dds" />
+						<OnHover>
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_report_hover.dds" />
+						</OnHover>
+						<OnClick>
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_report_normal.dds" color="40392b"/>
+							<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_DAYREPORT"/>
+						</OnClick>
+
+						<Item name="#IntelParent" origin="90 0" align="l" sizeX="180" sizeY="60" clipChildren="true" tooltip="@menu_campaign_intel_amount">
+							<StaticImage origin="-250 0" align="l">
+								<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e3cc"/>
+							</StaticImage>
+
+							<StaticImage origin="10 0" align="l">
+								<RenderObject2D texture="data/textures/gui/campaign/intel_medium.dds"  color="000000e6" scaleX="1.2" scaleY="1.2"/>
+								<StaticImage origin="0 0" align="c">
+									<RenderObject2D texture="data/textures/gui/campaign/intel_medium.dds" />
+								</StaticImage>
+							</StaticImage>
+							<StaticText name="#IntelCount" align="l" origin="74 0" text="99" font="header_3" textColor="211e1d"/>
+						</Item>
+					</Button>
+				</StaticText>
+			</StaticText>
+
+			<!--
+			<StaticText name="#CampaignReinforcementsETA" align="l" origin="0 -140" text="REINFORCEMENTS ETA:" font="header_4" textColor="f0e3cc">
+				<StaticText name="#ReinforcementsETA" align="r" origin="20 0" text="13" font="header_4" textColor="f0e3cc"/>
+			</StaticText>
+			-->
+
+			<!-- debug buttons, only shows up in devmode -->
+			<Checkbox name="#CampaignDebugButtons" origin="-60 -1240" align="l" defaultState="UncheckedState" >
+				<UncheckedState>
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e300" scaleX="0.5" scaleY="0.5" flipX="false"/>
+					<ButtonText align="l" origin="10 0" text="DEBUG BUTTONS" font="header_5" textColor="211e1d"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="ffffff" scaleX="0.5" scaleY="0.5" flipX="false"/>
+						<ButtonText align="l" origin="10 0" text="DEBUG BUTTONS" font="header_5" textColor="211e1d"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e300" scaleX="0.5" scaleY="0.5" flipX="false"/>
+						<Action type="Show" target="#CampaignDebugButtons_Extended"/>
+					</OnClick>
+				</UncheckedState>
+
+				<CheckedState>
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e300" scaleX="0.5" scaleY="0.5" flipX="false"/>
+					<ButtonText align="l" origin="10 0" text="DEBUG BUTTONS" font="header_5" textColor="211e1d"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="ffffff" scaleX="0.5" scaleY="0.5" flipX="false"/>
+						<ButtonText align="l" origin="10 0" text="DEBUG BUTTONS" font="header_5" textColor="211e1d"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e300" scaleX="0.5" scaleY="0.5" flipX="false"/>
+						<Action type="Hide" target="#CampaignDebugButtons_Extended"/>
+					</OnClick>
+				</CheckedState>
+			</Checkbox>
+			<Item name="#CampaignDebugButtons_Extended" origin="-60 -1000" hidden="true">
+				<Button origin="0 0" align="l">
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e300" scaleX="0.6" scaleY="0.5" flipX="false"/>
+					<ButtonText align="l" origin="10 0" text="SHOW UPCOMING MAPS" font="header_5" textColor="211e1d"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="ffffff" scaleX="0.6" scaleY="0.5" flipX="false"/>
+						<ButtonText align="l" origin="10 0" text="SHOW UPCOMING MAPS" font="header_5" textColor="211e1d"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e300" scaleX="0.6" scaleY="0.5" flipX="false"/>
+						<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_DEBUG_SHOW_ALL_MAPS"/>
+					</OnClick>
+				</Button>
+				<Button origin="0 -40" align="l">
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e300" scaleX="0.6" scaleY="0.5" flipX="false"/>
+					<ButtonText align="l" origin="10 0" text="EDIT RMG AREAS" font="header_5" textColor="211e1d"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="ffffff" scaleX="0.6" scaleY="0.5" flipX="false"/>
+						<ButtonText align="l" origin="10 0" text="EDIT RMG AREAS" font="header_5" textColor="211e1d"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e300" scaleX="0.6" scaleY="0.5" flipX="false"/>
+						<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_DEBUG_MAP_AREAS"/>
+					</OnClick>
+					<StaticText name="#CampaignDebugAreasButtonText" align="r" origin="120 0" text="" font="header_5" textColor="ffffff"/>
+				</Button>
+				<Button origin="0 -80" align="l">
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e300" scaleX="0.6" scaleY="0.5" flipX="false"/>
+					<ButtonText align="l" origin="10 0" text="NEW TROOPS TEST" font="header_5" textColor="211e1d"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="ffffff" scaleX="0.6" scaleY="0.5" flipX="false"/>
+						<ButtonText align="l" origin="10 0" text="NEW TROOPS TEST" font="header_5" textColor="211e1d"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e300" scaleX="0.6" scaleY="0.5" flipX="false"/>
+						<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_DEBUG_NEW_TROOPS"/>
+					</OnClick>
+				</Button>
+				<Button origin="0 -120" align="l">
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e300" scaleX="0.2" scaleY="0.5" flipX="true"/>
+					<ButtonText align="l" origin="10 0" text="-DAY" font="header_5" textColor="211e1d"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="ffffff" scaleX="0.2" scaleY="0.5" flipX="true"/>
+						<ButtonText align="l" origin="10 0" text="-DAY" font="header_5" textColor="211e1d"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e300" scaleX="0.2" scaleY="0.5" flipX="true"/>
+						<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_PREV_DAY"/>
+					</OnClick>
+				</Button>
+				<Button origin="90 -120" align="l">
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e300" scaleX="0.2" scaleY="0.5"/>
+					<ButtonText align="r" origin="-10 0" text="DAY+" font="header_5" textColor="211e1d"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="ffffff" scaleX="0.2" scaleY="0.5"/>
+						<ButtonText align="r" origin="-10 0" text="DAY+" font="header_5" textColor="211e1d"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e300" scaleX="0.2" scaleY="0.5"/>
+						<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_NEXT_DAY"/>
+					</OnClick>
+				</Button>
+				<Button origin="0 -160" align="l">
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e300" scaleX="0.3" scaleY="0.5" flipX="false"/>
+					<ButtonText align="l" origin="10 0" text="END WEEK" font="header_5" textColor="211e1d"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="ffffff" scaleX="0.3" scaleY="0.5" flipX="false"/>
+						<ButtonText align="l" origin="10 0" text="END WEEK" font="header_5" textColor="211e1d"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e300" scaleX="0.3" scaleY="0.5" flipX="false"/>
+						<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_DEBUG_FINISH"/>
+					</OnClick>
+				</Button>
+				<Button origin="0 -200" align="l">
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e300" scaleX="0.3" scaleY="0.5" flipX="false"/>
+					<ButtonText align="l" origin="10 0" text="LOSE" font="header_5" textColor="211e1d"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="ffffff" scaleX="0.3" scaleY="0.5" flipX="false"/>
+						<ButtonText align="l" origin="10 0" text="LOSE" font="header_5" textColor="211e1d"/>
+					</OnHover>
+					<OnClick>
+						<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e300" scaleX="0.3" scaleY="0.5" flipX="false"/>
+						<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_DEBUG_FINISH_LOSE"/>
+					</OnClick>
+				</Button>
+			</Item>
+		</Item>
+
+	</Item>
+
+	<Item align="sv" origin="0 -688">
+		<StaticImage name="ScreenFooter" align="b" origin="0 -32">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="211e1d"/>
+		</StaticImage>
+
+		<!-- this is currently hidden since we don't use difficulty -->
+		<StaticImage name="#CampaignDifficultyParent" align="rb" origin="1260 230" hidden="true">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="300" sizeY="55" color="0c0b0b90"/>
+			<StaticText align="l" origin="10 0" text="@menu_campaign_brief_difficulty" font="header_4" textColor="f0e3cc"/>
+			<StaticText align="r" origin="-10 0" name="#CampaignDifficulty" text="EASY" font="header_4" textColor="f0e3cc"/>
+		</StaticImage>
+
+		<StaticImage name="#CampaignSeedParent" align="shb" origin="1060 88">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="400" sizeY="40" color="0c0b0b90"/>
+			<StaticText align="l" origin="10 0" text="@menu_m_missiongen_seed" font="header_5" textColor="f0e3cc"/>
+			<StaticText align="r" origin="-10 0" name="#CampaignSeed" text="123456" font="header_5" textColor="f0e3cc"/>
+		</StaticImage>
+
+		<!-- back button -->
+		<Button name="Menu_CampaignProgress_Back" align="lb" origin="-1200 -4">
+			<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e3cc" flipX="false"/>
+				<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="40392b" flipX="false"/>
+				<Action type="Hide" target="Menu_CampaignProgress"/>
+				<Action type="Show" target="Menu_CampaignSelect"/>
+			</OnClick>
+		</Button>
+
+		<!-- continue button: opens the endscreen. Only shows up after finishing campaign and the endscreen is not displayed -->
+		<Button name="#Menu_CampaignProgress_Continue" align="rb" origin="1200 -4">
+			<ButtonText align="r" origin="-20 0" text="@menu_generic_continue" font="header_2" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e3cc" flipX="true"/>
+				<ButtonText align="r" origin="-20 0" text="@menu_generic_continue" font="header_2" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="40392b" flipX="true"/>
+				<Action type="Show" target="Menu_CampaignEndscreen_Progress"/>
+			</OnClick>
+		</Button>
+
+		<!-- continue button: opens the end of week screen. Only shows up after finishing a week -->
+		<Button name="#Menu_CampaignProgress_EndOfWeek_Continue" align="rb" origin="1200 -4">
+			<ButtonText align="r" origin="-20 0" text="@menu_generic_continue" font="header_2" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e3cc" flipX="true"/>
+				<ButtonText align="r" origin="-20 0" text="@menu_generic_continue" font="header_2" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="40392b" flipX="true"/>
+				<Action type="Show" target="Menu_CampaignEndOfWeek"/>
+			</OnClick>
+		</Button>
+
+	</Item>
+</Item>
+
+<!---------------------------------------
+-----------------------------------------
+Menu_CampaignMissionBrief
+-----------------------------------------
+---------------------------------------->
+<Item name="Menu_CampaignMissionBrief" origin="0 0" hidden="true" sizeX="648" sizeY="904">
+	<OnOpen>
+		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
+	</OnOpen>
+
+	<OnClose>
+		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
+	</OnClose>
+
+	<OnKeyDown key0="27">
+		<Action type="Click" target="#Menu_CampaignMissionBrief_Back"/>
+	</OnKeyDown>
+
+	<Item origin="0 0" sizeX="9999" sizeY="9999" blurBackground="true" blurColor="a0a0a0">
+	</Item>
+
+	<!-- clicking on this (the background) will close the customization screen
+		 note that the the "background" item below should also 'stealFocus'
+	-->
+	<Item origin="0 0" sizeX="9999" sizeY="9999">
+		<OnCursorDown>
+			<Action type="Click" target="#Menu_CampaignMissionBrief_Back"/>
+		</OnCursorDown>
+		<OnRClickDown>
+			<Action type="Click" target="#Menu_CampaignMissionBrief_Back"/>
+		</OnRClickDown>
+	</Item>
+	<Item name="background" align="ci" stealFocus="true">
+	</Item>
+
+	<Item name="MissionInfo_Box" align="ci">
+		<Item name="MainInfo" align="ci">
+			<StaticImage origin="0 0" align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="648" sizeY="4" color="40392be6"/>
+			</StaticImage>
+			<StaticImage origin="0 0" align="b">
+				<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="648" sizeY="4" color="40392be6"/>
+			</StaticImage>
+			<StaticImage origin="0 0" align="l">
+				<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="4" sizeY="904" color="40392be6"/>
+			</StaticImage>
+			<StaticImage origin="0 0" align="r">
+				<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="4" sizeY="904" color="40392be6"/>
+			</StaticImage>
+
+			<StaticImage origin="0 -4" align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="640" sizeY="896" color="211e1de6"/>
+			</StaticImage>
+
+			<Item name="#BonusRewards" origin="0 95" align="t" sizeX="870" sizeY="70" hidden="true">
+
+				<Item name="TextBG" origin="0 36" align="c" hidden="false">
+					<Item name="Bg_Left" origin="30 0" align="r" sizeX="500" sizeY="200" clipChildren="true">
+						<StaticImage origin="810 0" align="r" >
+							<RenderObject2D texture="data/textures/gui/menu_select.dds" scaleX="1.6" scaleY="1.8" color="211e1d"/>
+						</StaticImage>
+					</Item>
+					<Item name="Bg_Right" origin="-30 0" align="l" sizeX="500" sizeY="200" clipChildren="true">
+						<StaticImage origin="-810 0" align="l" >
+							<RenderObject2D texture="data/textures/gui/menu_select.dds" scaleX="1.6" scaleY="1.8" color="211e1d"/>
+						</StaticImage>
+					</Item>
+				</Item>
+				<StaticText origin="0 70" align="c" text="@menu_campaign_bonusrewards" font="header_4" textColor="f0e3cc"/>
+
+				<Item name="RewardBG" origin="0 0" align="c" hidden="false">
+					<Item name="Bg_Left_Stroke" origin="4 0" align="r" sizeX="500" sizeY="100" clipChildren="true">
+						<StaticImage origin="420 0" align="r" >
+							<RenderObject2D texture="data/textures/gui/menu_select.dds" scaleX="1.1" scaleY="1.1" color="40392b"/>
+						</StaticImage>
+					</Item>
+					<Item name="Bg_Right_Stroke" origin="-4 0" align="l" sizeX="500" sizeY="100" clipChildren="true">
+						<StaticImage origin="-420 0" align="l" >
+							<RenderObject2D texture="data/textures/gui/menu_select.dds" scaleX="1.1" scaleY="1.1" color="40392b"/>
+
+						</StaticImage>
+					</Item>
+				</Item>
+				<Item name="#reward_stars">
+					<Item name="#reward_stars_3" origin="0 0" align="c" hidden="false">
+						<Item name="Bg_Left" origin="0 0" align="r" sizeX="500" sizeY="100" clipChildren="true">
+							<StaticImage origin="400 0" align="r" >
+								<RenderObject2D texture="data/textures/gui/menu_select.dds"  color="231f1fDA"/>
+								<StaticImage origin="20 0" align="l">
+									<ImageAnim type="pulse" speed="4"/>
+									<RenderObject2D texture="data/textures/gui/deploy/deploy_newbirth.dds" scaleX="1.5" scaleY="1.5" color="f0e3cc"/>
+								</StaticImage>
+							</StaticImage>
+						</Item>
+						<Item name="Bg_Right" origin="0 0" align="l" sizeX="500" sizeY="100" clipChildren="true">
+							<StaticImage origin="-400 0" align="l" >
+								<RenderObject2D texture="data/textures/gui/menu_select.dds"  color="231f1fDA"/>
+								<StaticImage origin="-20 0" align="r">
+									<ImageAnim type="pulse" speed="4"/>
+									<RenderObject2D texture="data/textures/gui/deploy/deploy_newbirth.dds" scaleX="1.5" scaleY="1.5" color="f0e3cc"/>
+								</StaticImage>
+							</StaticImage>
+						</Item>
+						<StaticImage origin="-100 0"> <RenderObject2D texture="data/textures/gui/endscreen_star_large_full.dds" scaleX="0.8" scaleY="0.8"/> </StaticImage>
+						<StaticImage origin="0 0"> <RenderObject2D texture="data/textures/gui/endscreen_star_large_full.dds" scaleX="0.8" scaleY="0.8"/> </StaticImage>
+						<StaticImage origin="100 0"> <RenderObject2D texture="data/textures/gui/endscreen_star_large_full.dds" scaleX="0.8" scaleY="0.8"/> </StaticImage>
+					</Item>
+
+					<Item name="#reward_stars_2" origin="0 0" align="c" hidden="true">
+						<Item name="Bg_Left" origin="0 0" align="r" sizeX="500" sizeY="100" clipChildren="true">
+							<StaticImage origin="450 0" align="r" >
+								<RenderObject2D texture="data/textures/gui/menu_select.dds"  color="231f1fDA"/>
+								<StaticImage origin="20 0" align="l">
+									<ImageAnim type="pulse" speed="4"/>
+									<RenderObject2D texture="data/textures/gui/deploy/deploy_newbirth.dds" scaleX="1.5" scaleY="1.5" color="f0e3cc"/>
+								</StaticImage>
+							</StaticImage>
+						</Item>
+						<Item name="Bg_Right" origin="0 0" align="l" sizeX="500" sizeY="100" clipChildren="true">
+							<StaticImage origin="-450 0" align="l" >
+								<RenderObject2D texture="data/textures/gui/menu_select.dds"  color="231f1fDA"/>
+								<StaticImage origin="-20 0" align="r">
+									<ImageAnim type="pulse" speed="4"/>
+									<RenderObject2D texture="data/textures/gui/deploy/deploy_newbirth.dds" scaleX="1.5" scaleY="1.5" color="f0e3cc"/>
+								</StaticImage>
+							</StaticImage>
+						</Item>
+						<StaticImage origin="-60 0"> <RenderObject2D texture="data/textures/gui/endscreen_star_large_full.dds" scaleX="0.8" scaleY="0.8"/> </StaticImage>
+						<StaticImage origin="60 0"> <RenderObject2D texture="data/textures/gui/endscreen_star_large_full.dds" scaleX="0.8" scaleY="0.8"/> </StaticImage>
+					</Item>
+					<Item name="#reward_stars_1" origin="0 0" align="c"  hidden="true">
+						<Item name="Bg_Left" origin="0 0" align="r" sizeX="500" sizeY="100" clipChildren="true">
+							<StaticImage origin="500 0" align="r" >
+								<RenderObject2D texture="data/textures/gui/menu_select.dds"  color="231f1fDA"/>
+								<StaticImage origin="20 0" align="l">
+									<ImageAnim type="pulse" speed="4"/>
+									<RenderObject2D texture="data/textures/gui/deploy/deploy_newbirth.dds" scaleX="1.5" scaleY="1.5" color="f0e3cc"/>
+								</StaticImage>
+							</StaticImage>
+						</Item>
+						<Item name="Bg_Right" origin="0 0" align="l" sizeX="500" sizeY="100" clipChildren="true">
+							<StaticImage origin="-500 0" align="l" >
+								<RenderObject2D texture="data/textures/gui/menu_select.dds"  color="231f1fDA"/>
+								<StaticImage origin="-20 0" align="r">
+									<ImageAnim type="pulse" speed="4"/>
+									<RenderObject2D texture="data/textures/gui/deploy/deploy_newbirth.dds" scaleX="1.5" scaleY="1.5" color="f0e3cc"/>
+								</StaticImage>
+							</StaticImage>
+						</Item>
+						<StaticImage origin="0 0"> <RenderObject2D texture="data/textures/gui/endscreen_star_large_full.dds" scaleX="0.8" scaleY="0.8"/> </StaticImage>
+					</Item>
+				</Item>
+
+				<Item name="#reward_battleHonors" origin="0 0" align="c"  hidden="true">
+					<Item name="Bg_Left" origin="0 0" align="r" sizeX="500" sizeY="100" clipChildren="true">
+						<StaticImage origin="500 0" align="r" >
+							<RenderObject2D texture="data/textures/gui/menu_select.dds"  color="231f1fDA"/>
+							<StaticImage origin="20 0" align="l">
+								<ImageAnim type="pulse" speed="4"/>
+								<RenderObject2D texture="data/textures/gui/deploy/deploy_newbirth.dds" scaleX="1.5" scaleY="1.5" color="f0e3cc"/>
+							</StaticImage>
+						</StaticImage>
+					</Item>
+					<Item name="Bg_Right" origin="0 0" align="l" sizeX="500" sizeY="100" clipChildren="true">
+						<StaticImage origin="-500 0" align="l" >
+							<RenderObject2D texture="data/textures/gui/menu_select.dds"  color="231f1fDA"/>
+							<StaticImage origin="-20 0" align="r">
+								<ImageAnim type="pulse" speed="4"/>
+								<RenderObject2D texture="data/textures/gui/deploy/deploy_newbirth.dds" scaleX="1.5" scaleY="1.5" color="f0e3cc"/>
+							</StaticImage>
+						</StaticImage>
+					</Item>
+					<StaticImage origin="0 0"> <RenderObject2D texture="data/textures/gui/campaign/endscreen_battlehonor_full.dds" scaleX="0.8" scaleY="0.8"/> </StaticImage>
+				</Item>
+
+				<Item name="#reward_xp" origin="0 0" align="ci" hidden="true"> <!-- note that size is necessary in order to show tooltip -->
+					<Item name="Bg_Left" origin="-435 0" align="r" sizeX="500" sizeY="100" clipChildren="true">
+						<StaticImage origin="500 0" align="r" >
+							<RenderObject2D texture="data/textures/gui/menu_select.dds"  color="231f1fDA"/>
+							<StaticImage origin="20 0" align="l">
+								<ImageAnim type="pulse" speed="4"/>
+								<RenderObject2D texture="data/textures/gui/deploy/deploy_newbirth.dds" scaleX="1.5" scaleY="1.5" color="f0e3cc"/>
+							</StaticImage>
+						</StaticImage>
+					</Item>
+					<Item name="Bg_Right" origin="435 0" align="l" sizeX="500" sizeY="100" clipChildren="true">
+						<StaticImage origin="-500 0" align="l" >
+							<RenderObject2D texture="data/textures/gui/menu_select.dds"  color="231f1fDA"/>
+							<StaticImage origin="-20 0" align="r">
+								<ImageAnim type="pulse" speed="4"/>
+								<RenderObject2D texture="data/textures/gui/deploy/deploy_newbirth.dds" scaleX="1.5" scaleY="1.5" color="f0e3cc"/>
+							</StaticImage>
+						</StaticImage>
+					</Item>
+					<StaticImage origin="0 0"> <RenderObject2D texture="data/textures/gui/campaign/reward_xp_large.dds" scaleX="1" scaleY="1"/> </StaticImage>
+				</Item>
+
+				<Item name="#reward_intel" origin="0 0" align="c"  hidden="true">
+					<Item name="Bg_Left" origin="0 0" align="r" sizeX="500" sizeY="100" clipChildren="true">
+						<StaticImage origin="500 0" align="r" >
+							<RenderObject2D texture="data/textures/gui/menu_select.dds"  color="231f1fDA"/>
+							<StaticImage origin="20 0" align="l">
+								<ImageAnim type="pulse" speed="4"/>
+								<RenderObject2D texture="data/textures/gui/deploy/deploy_newbirth.dds" scaleX="1.5" scaleY="1.5" color="f0e3cc"/>
+							</StaticImage>
+						</StaticImage>
+					</Item>
+					<Item name="Bg_Right" origin="0 0" align="l" sizeX="500" sizeY="100" clipChildren="true">
+						<StaticImage origin="-500 0" align="l" >
+							<RenderObject2D texture="data/textures/gui/menu_select.dds"  color="231f1fDA"/>
+							<StaticImage origin="-20 0" align="r">
+								<ImageAnim type="pulse" speed="4"/>
+								<RenderObject2D texture="data/textures/gui/deploy/deploy_newbirth.dds" scaleX="1.5" scaleY="1.5" color="f0e3cc"/>
+							</StaticImage>
+						</StaticImage>
+					</Item>
+					<StaticImage origin="0 0"> <RenderObject2D texture="data/textures/gui/campaign/reward_intel_large.dds" scaleX="1" scaleY="1"/> </StaticImage>
+				</Item>
+			</Item>
+
+			<StaticImage origin="-42 42" name="#ScenarioTooltip" align="lt">
+				<!-- replaced by the scenario texture, taken from #ScenarioImages in globals.xml  -->
+				<RenderObject2D texture="data/textures/gui/missions/mission_clear_hostiles.dds" scaleX="1.1" scaleY="1.1"/>
+			</StaticImage>
+
+			<StaticText name="#MapName" align="c" origin="0 370" text="TROUBLE IN KIELBASA" wordWrap="true" font="header_3" textColor="f97b03"/>
+			<StaticText name="#MissionType" align="t" origin="0 -150" text="ELIMINATE ALL HOSTILES" font="header_4" textColor="f0e3cc"/>
+			<Item name="#MissionTimerParent" align="t" origin="0 -230">
+				<StaticImage origin="0 0" >
+					<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="320" sizeY="48" color="f97b03"/>
+				</StaticImage>
+				<StaticText name="#MissionTimer" align="c" origin="0 0" text="@menu_campaign_days_remaining" font="header_4" textColor="211e1d"/>
+			</Item>
+			<Item align="t" origin="0 -230">
+				<Item name="#star0">
+					<StaticImage origin="-80 0"> <RenderObject2D texture="data/textures/gui/end_screen_star_empty.tga"/> </StaticImage>
+					<StaticImage origin="0 0"> <RenderObject2D texture="data/textures/gui/end_screen_star_empty.tga"/> </StaticImage>
+					<StaticImage origin="80 0"> <RenderObject2D texture="data/textures/gui/end_screen_star_empty.tga"/> </StaticImage>
+				</Item>
+				<Item name="#star1">
+					<StaticImage origin="-80 0"> <RenderObject2D texture="data/textures/gui/end_screen_star.tga"/> </StaticImage>
+					<StaticImage origin="0 0"> <RenderObject2D texture="data/textures/gui/end_screen_star_empty.tga"/> </StaticImage>
+					<StaticImage origin="80 0"> <RenderObject2D texture="data/textures/gui/end_screen_star_empty.tga"/> </StaticImage>
+				</Item>
+				<Item name="#star2">
+					<StaticImage origin="-80 0"> <RenderObject2D texture="data/textures/gui/end_screen_star.tga"/> </StaticImage>
+					<StaticImage origin="0 0"> <RenderObject2D texture="data/textures/gui/end_screen_star.tga"/> </StaticImage>
+					<StaticImage origin="80 0"> <RenderObject2D texture="data/textures/gui/end_screen_star_empty.tga"/> </StaticImage>
+				</Item>
+				<Item name="#star3">
+					<StaticImage origin="-80 0"> <RenderObject2D texture="data/textures/gui/end_screen_star.tga"/> </StaticImage>
+					<StaticImage origin="0 0"> <RenderObject2D texture="data/textures/gui/end_screen_star.tga"/> </StaticImage>
+					<StaticImage origin="80 0"> <RenderObject2D texture="data/textures/gui/end_screen_star.tga"/> </StaticImage>
+				</Item>
+			</Item>
+
+			<StaticImage origin="0 -275" align="ct">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="600" sizeY="4" color="f97b03"/>
+			</StaticImage>
+			<StaticImage origin="0 -285" align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="600" sizeY="328" color="0c0b0bb4"/>
+
+				<StaticImage name="#MapThumbnail">
+					<RenderObject2D texture="data/maps/bridget_thumb.dds" blendMode="add" scaleX="1.16" scaleY="1.16"/>
+
+					<StaticImage origin="-6 -4" align="rt" tooltip="@menu_m_num_deployable">
+						<RenderObject2D texture="data/textures/gui/missions/mission_troopercount.dds" color="f0e3cc"/>
+						<StaticText name="#trooper_count" text="4" align="r" textColor="f0e3cc" font="paragraph_2" tooltip="@menu_m_num_deployable" origin="-20 -2"/>
+					</StaticImage>
+				</StaticImage>
+			</StaticImage>
+
+			<StaticImage origin="0 -666" align="ct">
+				<StaticText align="lb" origin="0 0" text="@menu_m_brief_obj" font="header_4" textColor="f97b03"/>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="600" sizeY="4" color="f97b03"/>
+				<StaticText name="#MissionObjectives" align="lt" origin="0 -10" text="- Objective 01 &#xA; -Objective 02 &#xA; -Objective 03" font="paragraph_2" textColor="f0e3cc"/>
+			</StaticImage>
+
+			<Button name="#Menu_CampaignMissionBrief_Back" align="lb" origin="20 20">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="295" sizeY="64" color="f0e3cc"/>
+				<ButtonText align="c" origin="0 0" text="@menu_generic_back" font="header_3" textColor="211e1d"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="295" sizeY="64" color="f97b03"/>
+					<ButtonText align="c" origin="0 0" text="@menu_generic_back" font="header_3" textColor="211e1d"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="295" sizeY="64" scaleX="0.95" scaleY="0.95" color="f97b03"/>
+					<ButtonText align="c" origin="0 0" text="@menu_generic_back" font="header_3" textColor="211e1d"/>
+					<Action type="Hide" target="Menu_CampaignMissionBrief"/>
+				</OnClick>
+			</Button>
+
+			<Button name="#Menu_CampaignMissionBrief_Go" align="rb" origin="-20 20">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="295" sizeY="64" color="f0e3cc"/>
+				<ButtonText align="c" origin="0 0" text="@menu_m_brief_go" font="header_3" textColor="211e1d"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="295" sizeY="64" color="f97b03"/>
+					<ButtonText align="c" origin="0 0" text="@menu_m_brief_go" font="header_3" textColor="211e1d"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="295" sizeY="64" scaleX="0.95" scaleY="0.95" color="f97b03"/>
+					<ButtonText align="c" origin="0 0" text="@menu_m_brief_go" font="header_3" textColor="211e1d"/>
+					<Action type="Hide" target="Menu_CampaignMissionBrief"/>
+					<!--<Action type="Hide" target="Menu_CampaignProgress"/> DONE FROM INGAME DEPENDING ON WHETHER WE SHOW THE 'AN OPTIONAL MISSION WILL BE SKIPPED' WARNING OR NOT-->
+					<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_MISSION_GO"/>
+				</OnClick>
+			</Button>
+		</Item>
+		<Item name="#Menu_CampaignMissionBrief_IntelReq" origin="-20 20" sizeX="295" sizeY="64" align="rb">
+			<Item origin="295 0" align="l" sizeX="160" sizeY="64" clipChildren="true">
+				<StaticImage origin="-140 0"><RenderObject2D texture="data/textures/gui/button_hover_01.tga"  color="211e1d" scaleX="1" scaleY="1"/></StaticImage>
+				<StaticImage name="#Menu_CampaignMissionBrief_IntelReq" origin="80 0" align="l">
+					<RenderObject2D texture="data/textures/gui/campaign/intel_medium.dds" color="000000e6" scaleX="0.9" scaleY="0.9"/>
+					<StaticImage origin="0 0" align="c">
+						<RenderObject2D texture="data/textures/gui/campaign/intel_medium.dds" scaleX="1" scaleY="1"/>
+					</StaticImage>
+					<StaticText name="#Menu_CampaignMissionBrief_IntelCnt" align="r" origin="-50 0" text="99" font="header_3" textColor="211e1d"/>
+				</StaticImage>
+			</Item>
+			<Item name="#Menu_CampaignMissionBrief_IntelReq_Locked" origin="-156 -100" align="c" hidden="false">
+				<StaticImage origin="156 100">
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="295" sizeY="64" color="080808cc"/>
+				</StaticImage>
+				<Item name="IntelBG" origin="0 0" align="c" hidden="false">
+					<Item name="Bg_Left_Stroke" origin="4 0" align="r" sizeX="800" sizeY="100" clipChildren="true">
+						<StaticImage origin="120 0" align="r" >
+							<RenderObject2D texture="data/textures/gui/menu_select.dds" scaleX="1.1" scaleY="1.1" color="40392b"/>
+						</StaticImage>
+					</Item>
+					<Item name="Bg_Right_Stroke" origin="-4 0" align="l" sizeX="800" sizeY="100" clipChildren="true">
+						<StaticImage origin="-120 0" align="l" >
+							<RenderObject2D texture="data/textures/gui/menu_select.dds" scaleX="1.1" scaleY="1.1" color="40392b"/>
+
+						</StaticImage>
+					</Item>
+				</Item>
+				<Item origin="0 0" align="c" hidden="false">
+					<Item name="Bg_Left" origin="0 0" align="r" sizeX="600" sizeY="100" clipChildren="true">
+						<StaticImage origin="120 0" align="r" >
+							<RenderObject2D texture="data/textures/gui/menu_select.dds"  color="231f1fDA"/>
+							<StaticImage origin="40 0" align="l">
+								<ImageAnim type="pulse" speed="4"/>
+								<RenderObject2D texture="data/textures/gui/locked_icon.dds" scaleX="0.4" scaleY="0.4" color="f97b03"/>
+							</StaticImage>
+						</StaticImage>
+					</Item>
+					<Item name="Bg_Right" origin="0 0" align="l" sizeX="600" sizeY="100" clipChildren="true">
+						<StaticImage origin="-120 0" align="l" >
+							<RenderObject2D texture="data/textures/gui/menu_select.dds"  color="231f1fDA"/>
+							<StaticImage origin="-40 0" align="r">
+								<ImageAnim type="pulse" speed="4"/>
+								<RenderObject2D texture="data/textures/gui/locked_icon.dds" scaleX="0.4" scaleY="0.4" color="f97b03"/>
+							</StaticImage>
+						</StaticImage>
+					</Item>
+
+					<StaticText align="c" origin="0 0" sizeX="840" text="@menu_campaign_intel_required" fontAutoDownsize="true" font="header_3" textColor="f97b03"/>
+				</Item>
+			</Item>
+		</Item>
+
+		<Item name="#MissionBrief" origin="-648 0" align="lc" sizeX="640" sizeY="700">
+			<StaticImage origin="0 0" align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="640" sizeY="700" color="211e1de6"/>
+			</StaticImage>
+
+			<StaticImage origin="0 -50" align="ct">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="600" sizeY="4" color="f97b03"/>
+				<StaticText align="lb" origin="0 0" text="@menu_m_brief" font="header_4" textColor="f97b03"/>
+
+				<Item align="lt" origin="0 -20" sizeX="600" sizeY="620" clipChildren="true"> <!-- size of the text wrapper -->
+					<StaticText name="#MissionBriefText" align="lt" origin="-5 0" sizeX="590" sizeY="620" wordWrap="true" text="@menu_campaign_missionbriefing" font="paragraph_2" textColor="f0e3cc">
+						<ScrollButton align="r" origin="20 0">
+							<RenderObject2D texture="data/textures/gui/square.tga" sizeX="20" sizeY="32" color="f97b0340"/>
+							<OnHover>
+								<RenderObject2D texture="data/textures/gui/square.tga" sizeX="20" sizeY="32" color="f97b03ff"/>
+							</OnHover>
+							<OnClick>
+								<RenderObject2D texture="data/textures/gui/square.tga" sizeX="20" sizeY="32" color="f97b03ff"/>
+							</OnClick>
+						</ScrollButton>
+					</StaticText>
+				</Item>
+			</StaticImage>
+		</Item>
+	</Item>
+
+	<Item align="sv" origin="0 -688">
+		<StaticImage align="b" origin="0 -32">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="211e1d"/>
+		</StaticImage>
+	</Item>
+</Item>
+
+
+<!---------------------------------------
+-----------------------------------------
+Menu_CampaignMissionBrief_Tooltip
+-----------------------------------------
+---------------------------------------->
+<Item name="Menu_CampaignMissionBrief_Tooltip" origin="0 0" hidden="true" sizeX="648" sizeY="730">
+	<OnOpen>
+		<Action type="SetForeground" target="this"/>
+	</OnOpen>
+	<Item name="MainInfo" align="t" sizeX="648" sizeY="636" blurBackground="true" blurColor="7f7f7f">
+		<StaticImage origin="0 0" align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="648" sizeY="4" color="40392be6"/>
+		</StaticImage>
+
+		<Item name="#BonusRewards" origin="0 35" align="t" sizeX="870" sizeY="70" hidden="true">
+			<Item name="TextBG" origin="0 24" align="c" hidden="false">
+				<Item name="Bg_Left" origin="30 0" align="r" sizeX="500" sizeY="100" clipChildren="true">
+					<StaticImage origin="580 0" align="r" >
+						<RenderObject2D texture="data/textures/gui/menu_select.dds" scaleX="1.2" scaleY="1.4" color="211e1d"/>
+					</StaticImage>
+				</Item>
+				<Item name="Bg_Right" origin="-30 0" align="l" sizeX="500" sizeY="100" clipChildren="true">
+					<StaticImage origin="-580 0" align="l" >
+						<RenderObject2D texture="data/textures/gui/menu_select.dds" scaleX="1.2" scaleY="1.4" color="211e1d"/>
+					</StaticImage>
+				</Item>
+			</Item>
+			<StaticText origin="0 50" align="c" text="@menu_campaign_bonusrewards" font="header_4" textColor="f0e3cc"/>
+			<Item name="RewardBG" origin="0 0" align="c" hidden="false">
+				<Item name="Bg_Left_Stroke" origin="4 0" align="r" sizeX="500" sizeY="100" clipChildren="true">
+					<StaticImage origin="290 0" align="r" >
+						<RenderObject2D texture="data/textures/gui/menu_select.dds" scaleX="0.85" scaleY="0.85" color="40392b"/>
+					</StaticImage>
+				</Item>
+				<Item name="Bg_Right_Stroke" origin="-4 0" align="l" sizeX="500" sizeY="100" clipChildren="true">
+					<StaticImage origin="-290 0" align="l" >
+						<RenderObject2D texture="data/textures/gui/menu_select.dds" scaleX="0.85" scaleY="0.85" color="40392b"/>
+
+					</StaticImage>
+				</Item>
+				<Item name="Bg_Left" origin="4 0" align="r" sizeX="500" sizeY="100" clipChildren="true">
+					<StaticImage origin="260 0" align="r" >
+						<RenderObject2D texture="data/textures/gui/menu_select.dds" scaleX="0.75" scaleY="0.75" color="211e1d"/>
+						<StaticImage origin="20 0" align="l">
+							<ImageAnim type="pulse" speed="4"/>
+							<RenderObject2D texture="data/textures/gui/deploy/deploy_newbirth.dds" scaleX="1.2" scaleY="1.2" color="f0e3cc"/>
+						</StaticImage>
+					</StaticImage>
+				</Item>
+				<Item name="Bg_Right" origin="-4 0" align="l" sizeX="500" sizeY="100" clipChildren="true">
+					<StaticImage origin="-260 0" align="l" >
+						<RenderObject2D texture="data/textures/gui/menu_select.dds" scaleX="0.75" scaleY="0.75" color="211e1d"/>
+						<StaticImage origin="-20 0" align="r">
+							<ImageAnim type="pulse" speed="4"/>
+							<RenderObject2D texture="data/textures/gui/deploy/deploy_newbirth.dds" scaleX="1.2" scaleY="1.2" color="f0e3cc"/>
+						</StaticImage>
+					</StaticImage>
+				</Item>
+			</Item>
+			<Item name="#reward_stars">
+				<Item name="#reward_stars_3" origin="0 0" align="c" hidden="false">
+					<StaticImage origin="-60 0"> <RenderObject2D texture="data/textures/gui/end_screen_star.tga" scaleX="0.6" scaleY="0.6"/> </StaticImage>
+					<StaticImage origin="0 0"> <RenderObject2D texture="data/textures/gui/end_screen_star.tga" scaleX="0.6" scaleY="0.6"/> </StaticImage>
+					<StaticImage origin="60 0"> <RenderObject2D texture="data/textures/gui/end_screen_star.tga" scaleX="0.6" scaleY="0.6"/> </StaticImage>
+				</Item>
+
+				<Item name="#reward_stars_2" origin="0 0" align="c" hidden="true">
+					<StaticImage origin="-40 0"> <RenderObject2D texture="data/textures/gui/end_screen_star.tga" scaleX="0.6" scaleY="0.6"/> </StaticImage>
+					<StaticImage origin="40 0"> <RenderObject2D texture="data/textures/gui/end_screen_star.tga" scaleX="0.6" scaleY="0.6"/> </StaticImage>
+				</Item>
+
+				<Item name="#reward_stars_1" origin="0 0" align="c"  hidden="true">
+					<StaticImage origin="0 0"> <RenderObject2D texture="data/textures/gui/end_screen_star.tga" scaleX="0.6" scaleY="0.6"/> </StaticImage>
+				</Item>
+			</Item>
+			<Item name="#reward_battleHonors" origin="0 0" align="c"  hidden="true">
+				<StaticImage origin="0 0"> <RenderObject2D texture="data/textures/gui/customization/unlock_bh.dds" scaleX="0.9" scaleY="0.9"/> </StaticImage>
+			</Item>
+			<Item name="#reward_xp" origin="0 0" align="c"  hidden="true">
+				<StaticImage origin="0 0"> <RenderObject2D texture="data/textures/gui/campaign/reward_xp_small.dds" scaleX="0.9" scaleY="0.9"/> </StaticImage>
+			</Item>
+			<Item name="#reward_intel" origin="0 0" align="c"  hidden="true">
+				<StaticImage origin="0 0"> <RenderObject2D texture="data/textures/gui/campaign/intel_medium.dds" scaleX="0.9" scaleY="0.9"/> </StaticImage>
+			</Item>
+		</Item>
+
+		<StaticImage origin="0 0" align="b">
+			<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="648" sizeY="4" color="40392be6"/>
+		</StaticImage>
+		<StaticImage origin="0 0" align="l">
+			<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="4" sizeY="636" color="40392be6"/>
+		</StaticImage>
+		<StaticImage origin="0 0" align="r">
+			<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="4" sizeY="636" color="40392be6"/>
+		</StaticImage>
+
+		<!-- replaced by the scenario texture, taken from #ScenarioImages in globals.xml
+		<StaticImage origin="-42 42" name="#ScenarioTooltip" align="lt">
+			<RenderObject2D texture="data/textures/gui/missions/mission_clear_hostiles.dds" scaleX="1.1" scaleY="1.1"/>
+		</StaticImage>
+		-->
+
+		<StaticText name="#MapName" align="c" origin="0 235" text="TROUBLE IN KIELBASA" wordWrap="true" font="header_3" textColor="f97b03"/>
+		<StaticText name="#MissionType" align="t" origin="0 -150" text="ELIMINATE ALL HOSTILES" font="header_4" textColor="f0e3cc"/>
+		<Item name="#MissionTimerParent" align="t" origin="0 -230">
+			<StaticImage origin="0 0" >
+				<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="320" sizeY="48" color="f97b03"/>
+			</StaticImage>
+			<StaticText name="#MissionTimer" align="c" origin="0 0" text="@menu_campaign_days_remaining" font="header_4" textColor="211e1d"/>
+		</Item>
+		<Item align="t" origin="0 -230">
+			<Item name="#star0">
+				<StaticImage origin="-80 0"> <RenderObject2D texture="data/textures/gui/end_screen_star_empty.tga"/> </StaticImage>
+				<StaticImage origin="0 0"> <RenderObject2D texture="data/textures/gui/end_screen_star_empty.tga"/> </StaticImage>
+				<StaticImage origin="80 0"> <RenderObject2D texture="data/textures/gui/end_screen_star_empty.tga"/> </StaticImage>
+			</Item>
+			<Item name="#star1">
+				<StaticImage origin="-80 0"> <RenderObject2D texture="data/textures/gui/end_screen_star.tga"/> </StaticImage>
+				<StaticImage origin="0 0"> <RenderObject2D texture="data/textures/gui/end_screen_star_empty.tga"/> </StaticImage>
+				<StaticImage origin="80 0"> <RenderObject2D texture="data/textures/gui/end_screen_star_empty.tga"/> </StaticImage>
+			</Item>
+			<Item name="#star2">
+				<StaticImage origin="-80 0"> <RenderObject2D texture="data/textures/gui/end_screen_star.tga"/> </StaticImage>
+				<StaticImage origin="0 0"> <RenderObject2D texture="data/textures/gui/end_screen_star.tga"/> </StaticImage>
+				<StaticImage origin="80 0"> <RenderObject2D texture="data/textures/gui/end_screen_star_empty.tga"/> </StaticImage>
+			</Item>
+			<Item name="#star3">
+				<StaticImage origin="-80 0"> <RenderObject2D texture="data/textures/gui/end_screen_star.tga"/> </StaticImage>
+				<StaticImage origin="0 0"> <RenderObject2D texture="data/textures/gui/end_screen_star.tga"/> </StaticImage>
+				<StaticImage origin="80 0"> <RenderObject2D texture="data/textures/gui/end_screen_star.tga"/> </StaticImage>
+			</Item>
+		</Item>
+
+		<StaticImage origin="0 -275" align="ct">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="600" sizeY="4" color="f97b03"/>
+		</StaticImage>
+
+		<StaticImage origin="0 -285" align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="600" sizeY="328" color="0c0b0be6"/>
+
+			<StaticImage name="#MapThumbnail">
+				<RenderObject2D texture="data/maps/bridget_thumb.dds" blendMode="add" scaleX="1.16" scaleY="1.16"/>
+
+				<StaticImage origin="-6 -4" align="rt" tooltip="@menu_m_num_deployable">
+					<RenderObject2D texture="data/textures/gui/missions/mission_troopercount.dds" color="f0e3cc"/>
+					<StaticText name="#trooper_count" text="4" align="r" textColor="f0e3cc" font="paragraph_2" tooltip="@menu_m_num_deployable" origin="-20 -2"/>
+				</StaticImage>
+			</StaticImage>
+		</StaticImage>
+	</Item>
+
+	<Item name="#IntelRequired" origin="0 20" align="b" sizeX="870" sizeY="70" hidden="false">
+		<Item name="RequiredBG" origin="0 0" align="c" hidden="false">
+			<Item name="Bg_Left_Stroke" origin="4 0" align="r" sizeX="500" sizeY="100" clipChildren="true">
+				<StaticImage origin="380 0" align="r" >
+					<RenderObject2D texture="data/textures/gui/menu_select.dds" scaleX="1.2" scaleY="1.2" color="40392b"/>
+				</StaticImage>
+			</Item>
+			<Item name="Bg_Right_Stroke" origin="-4 0" align="l" sizeX="500" sizeY="100" clipChildren="true">
+				<StaticImage origin="-380 0" align="l" >
+					<RenderObject2D texture="data/textures/gui/menu_select.dds" scaleX="1.2" scaleY="1.2" color="40392b"/>
+
+				</StaticImage>
+			</Item>
+			<Item name="Bg_Left" origin="4 0" align="r" sizeX="500" sizeY="100" clipChildren="true">
+				<StaticImage origin="300 0" align="r" >
+					<RenderObject2D texture="data/textures/gui/menu_select.dds" scaleX="1" scaleY="1" color="211e1d"/>
+					<StaticImage origin="34 0" align="l">
+						<ImageAnim type="pulse" speed="4"/>
+						<RenderObject2D texture="data/textures/gui/locked_icon.dds" scaleX="0.4" scaleY="0.4" color="f97b03"/>
+					</StaticImage>
+				</StaticImage>
+			</Item>
+			<Item name="Bg_Right" origin="-4 0" align="l" sizeX="500" sizeY="100" clipChildren="true">
+				<StaticImage origin="-300 0" align="l" >
+					<RenderObject2D texture="data/textures/gui/menu_select.dds" scaleX="1" scaleY="1" color="211e1d"/>
+					<StaticImage origin="-34 0" align="r">
+						<ImageAnim type="pulse" speed="4"/>
+						<RenderObject2D texture="data/textures/gui/locked_icon.dds" scaleX="0.4" scaleY="0.4" color="f97b03"/>
+					</StaticImage>
+				</StaticImage>
+			</Item>
+		</Item>
+		<Item origin="0 0" align="c" sizeX="450" sizeY="70" hidden="false">
+			<StaticText origin="0 0" align="l" text="@menu_campaign_intel_requires" font="header_3" textColor="f97b03"/>
+			<StaticImage origin="0 0" align="r" hidden="true">
+				<RenderObject2D texture="data/textures/gui/campaign/intel_medium.dds" scaleX="1.4" scaleY="1.4" color="000000"/>
+				<StaticImage origin="0 0" align="c"> <RenderObject2D texture="data/textures/gui/campaign/intel_medium.dds" scaleX="1" scaleY="1"/> </StaticImage>
+			</StaticImage>
+			<StaticImage origin="0 0" align="r"> <RenderObject2D texture="data/textures/gui/campaign/intel_medium.dds" scaleX="1.2" scaleY="1.2" /> </StaticImage>
+			<StaticText origin="-66 0" name="#IntelNumberReq" align="r" text="99" font="header_3" textColor="f97b03"/>
+		</Item>
+	</Item>
+</Item>
+
+<!---------------------------------------
+-----------------------------------------
+Menu_CampaignNewDay
+-----------------------------------------
+---------------------------------------->
+<Item name="Menu_CampaignNewDay" origin="0 0" hidden="true">
+	<OnOpen>
+		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
+	</OnOpen>
+
+	<OnClose>
+		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
+	</OnClose>
+
+	<OnKeyDown key0="27" key1="32">
+		<Action type="Click" target="Menu_CampaignNewDay_OK"/>
+	</OnKeyDown>
+
+	<Item origin="0 0" sizeX="9999" sizeY="9999" blurBackground="true" blurColor="a0a0a0">
+	</Item>
+
+	<!-- clicking on this (the background) will close the customization screen
+		 note that the the "background" item below should also 'stealFocus'
+	-->
+	<Item origin="0 0" sizeX="9999" sizeY="9999">
+		<OnCursorDown>
+			<Action type="Click" target="Menu_CampaignNewDay_OK"/>
+		</OnCursorDown>
+		<OnRClickDown>
+			<Action type="Click" target="Menu_CampaignNewDay_OK"/>
+		</OnRClickDown>
+	</Item>
+	<Item name="background" sizeX="648" sizeY="1008" stealFocus="true">
+	</Item>
+
+	<StaticImage origin="0 60" sizeX="648" sizeY="1008">
+		<StaticImage origin="0 0" align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="648" sizeY="4" color="40392be6"/>
+		</StaticImage>
+		<StaticImage origin="0 0" align="b">
+			<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="648" sizeY="4" color="40392be6"/>
+		</StaticImage>
+		<StaticImage origin="0 0" align="l">
+			<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="4" sizeY="1008" color="40392be6"/>
+		</StaticImage>
+		<StaticImage origin="0 0" align="r">
+			<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="4" sizeY="1008" color="40392be6"/>
+		</StaticImage>
+
+		<StaticImage origin="0 -4" align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="640" sizeY="1000" color="211e1de6"/>
+		</StaticImage>
+
+		<StaticText align="b" origin="0 920" text="@#menu_campaign_newday_title" wordWrap="false" fontAutoDownsize="true" font="header_3" textColor="f97b03"/>
+
+		<Item origin="0 -140" align="t">
+			<StaticImage origin="0 0" >
+				<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="420" sizeY="64" color="f97b03"/>
+			</StaticImage>
+			<StaticText  align="r" origin="-10 0" text="@menu_campaign_day" font="header_3" textColor="211e1d"/>
+			<StaticText name="#NewDayCount" align="l" origin="10 0" text="5 of 7" font="header_3" textColor="211e1d"/>
+		</Item>
+
+		<StaticImage origin="0 -250" align="ct">
+			<StaticText align="lb" origin="0 0" text="@menu_campaign_newday_newmissions" font="header_4" textColor="f97b03"/>
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="600" sizeY="4" color="f97b03"/>
+
+			<Item name="NewMissions" align="lt" origin="0 0">
+				<Item name="#NewMission1" align="l" origin="40 -60">
+					<StaticImage origin="-60 0" align="l">
+						<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="640" sizeY="48" color="40392b"/>
+
+						<StaticImage name="#mission_intel_req" origin="-4 0" align="r">
+							<RenderObject2D texture="data/textures/gui/campaign/intel_medium.dds" scaleX="0.9" scaleY="0.9"/>
+						</StaticImage>
+					</StaticImage>
+					<StaticImage name="#ScenarioTooltip">
+						<!-- replaced by the scenario texture, taken from #ScenarioImages in globals.xml  -->
+						<RenderObject2D texture="data/textures/gui/missions/mission_clear_hostiles.dds" />
+					</StaticImage>
+					<StaticText name="#MapName" align="l" origin="50 0" text="TROUBLE IN KIELBASA" font="header_4" textColor="f0e3cc"/>
+
+					<Item origin="-60 0" align="r">
+						<StaticImage name="#mission_timer1" hidden="true">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_timer_1day.dds"/>
+						</StaticImage>
+						<StaticImage name="#mission_timer2" hidden="true">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_timer_2day.dds"/>
+						</StaticImage>
+						<StaticImage name="#mission_timer3" hidden="true">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_timer_3day.dds"/>
+						</StaticImage>
+					</Item>
+
+					<Item name="#Rewards" origin="25 -25" hidden="false">
+						<StaticImage name="bg" origin="0 0">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_normal.dds"/>
+						</StaticImage>
+						<StaticImage name="#reward_stars" origin="0 0" hidden="false">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_star.dds"/>
+						</StaticImage>
+						<StaticImage name="#reward_battleHonors" origin="0 0" hidden="true">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_bh.dds"/>
+						</StaticImage>
+						<StaticImage name="#reward_xp" origin="0 0" hidden="true">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_xp.dds"/>
+						</StaticImage>
+						<StaticImage name="#reward_intel" origin="0 0" hidden="true">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_intel.dds"/>
+						</StaticImage>
+						<StaticImage name="#reward_ability" origin="0 0" hidden="true">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_ability.dds"/>
+						</StaticImage>
+					</Item>
+				</Item>
+				<Item name="#NewMission2" align="l" origin="40 -148">
+					<StaticImage origin="-60 0" align="l">
+						<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="640" sizeY="48" color="40392b"/>
+						<StaticImage name="#mission_intel_req" origin="-4 0" align="r">
+							<RenderObject2D texture="data/textures/gui/campaign/intel_medium.dds" scaleX="0.9" scaleY="0.9"/>
+						</StaticImage>
+					</StaticImage>
+					<StaticImage name="#ScenarioTooltip">
+						<!-- replaced by the scenario texture, taken from #ScenarioImages in globals.xml  -->
+						<RenderObject2D texture="data/textures/gui/missions/mission_clear_hostiles.dds" />
+					</StaticImage>
+					<StaticText name="#MapName" align="l" origin="50 0" text="TROUBLE IN KIELBASA" font="header_4" textColor="f0e3cc"/>
+
+					<Item origin="-60 0" align="r">
+						<StaticImage name="#mission_timer1" hidden="true">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_timer_1day.dds"/>
+						</StaticImage>
+						<StaticImage name="#mission_timer2" hidden="true">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_timer_2day.dds"/>
+						</StaticImage>
+						<StaticImage name="#mission_timer3" hidden="true">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_timer_3day.dds"/>
+						</StaticImage>
+					</Item>
+
+					<Item name="#Rewards" origin="25 -25" hidden="false">
+						<StaticImage name="bg" origin="0 0">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_normal.dds"/>
+						</StaticImage>
+						<StaticImage name="#reward_stars" origin="0 0" hidden="true">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_star.dds"/>
+						</StaticImage>
+						<StaticImage name="#reward_battleHonors" origin="0 0" hidden="true">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_bh.dds"/>
+						</StaticImage>
+						<StaticImage name="#reward_xp" origin="0 0" hidden="false">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_xp.dds"/>
+						</StaticImage>
+						<StaticImage name="#reward_intel" origin="0 0" hidden="true">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_intel.dds"/>
+						</StaticImage>
+						<StaticImage name="#reward_ability" origin="0 0" hidden="true">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_ability.dds"/>
+						</StaticImage>
+					</Item>
+				</Item>
+				<Item name="#NewMission3" align="l" origin="40 -236">
+					<StaticImage origin="-60 0" align="l">
+						<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="640" sizeY="48" color="40392b"/>
+						<StaticImage name="#mission_intel_req" origin="-4 0" align="r">
+							<RenderObject2D texture="data/textures/gui/campaign/intel_medium.dds" scaleX="0.9" scaleY="0.9"/>
+						</StaticImage>
+					</StaticImage>
+					<StaticImage name="#ScenarioTooltip">
+						<!-- replaced by the scenario texture, taken from #ScenarioImages in globals.xml  -->
+						<RenderObject2D texture="data/textures/gui/missions/mission_clear_hostiles.dds" />
+					</StaticImage>
+					<StaticText name="#MapName" align="l" origin="50 0" text="TROUBLE IN KIELBASA" font="header_4" textColor="f0e3cc"/>
+
+					<Item origin="-60 0" align="r">
+						<StaticImage name="#mission_timer1" hidden="true">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_timer_1day.dds"/>
+						</StaticImage>
+						<StaticImage name="#mission_timer2" hidden="true">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_timer_2day.dds"/>
+						</StaticImage>
+						<StaticImage name="#mission_timer3" hidden="true">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_timer_3day.dds"/>
+						</StaticImage>
+					</Item>
+
+					<Item name="#Rewards" origin="25 -25" hidden="false">
+						<StaticImage name="bg" origin="0 0">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_normal.dds"/>
+						</StaticImage>
+						<StaticImage name="#reward_stars" origin="0 0" hidden="true">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_star.dds"/>
+						</StaticImage>
+						<StaticImage name="#reward_battleHonors" origin="0 0" hidden="false">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_bh.dds"/>
+						</StaticImage>
+						<StaticImage name="#reward_xp" origin="0 0" hidden="true">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_xp.dds"/>
+						</StaticImage>
+						<StaticImage name="#reward_intel" origin="0 0" hidden="true">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_intel.dds"/>
+						</StaticImage>
+						<StaticImage name="#reward_ability" origin="0 0" hidden="true">
+							<RenderObject2D texture="data/textures/gui/campaign/campaign_map_tack_reward_icon_ability.dds"/>
+						</StaticImage>
+					</Item>
+				</Item>
+			</Item>
+		</StaticImage>
+
+		<StaticImage origin="0 -580" align="ct">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="600" sizeY="4" color="f97b03"/>
+			<StaticText align="lb" origin="0 0" text="@menu_campaign_status_report" font="header_4" textColor="f97b03"/>
+			<Item align="t" sizeX="600" sizeY="320" origin="0 -12" clipChildren="true">
+				<StaticImage align="t" >
+					<RenderObject2D texture="data/textures/gui/campaign/campaign_reportpage.dds" sizeX="600" blendMode="none"/>
+				</StaticImage>
+
+				<!-- align="i" means we inherit the parent's size -->
+				<StaticText name="#NewDayStatusReport" align="lti" origin="10 0" wordWrap="true" text="- Ion e mort &#xA;- Gigel e rănit &#xA;- Pe Dorel îl doare-n pulă" font="paragraph_2" textColor="211e1d">
+					<ScrollButton align="r" origin="-10 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="24" sizeY="32" color="f97b0380"/>
+						<OnHover>
+							<RenderObject2D texture="data/textures/gui/square.tga" sizeX="24" sizeY="32" color="f97b03ff"/>
+						</OnHover>
+						<OnClick>
+							<RenderObject2D texture="data/textures/gui/square.tga" sizeX="24" sizeY="32" color="f97b03ff"/>
+						</OnClick>
+					</ScrollButton>
+				</StaticText>
+			</Item>
+		</StaticImage>
+
+		<Button name="Menu_CampaignNewDay_OK" align="b" origin="0 20">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="295" sizeY="64" color="f0e3cc"/>
+			<ButtonText align="c" origin="0 0" text="@menu_generic_ok" font="header_3" textColor="211e1d"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="295" sizeY="64" color="f97b03"/>
+				<ButtonText align="c" origin="0 0" text="@menu_generic_ok" font="header_3" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="295" sizeY="64" scaleX="0.95" scaleY="0.95" color="f97b03"/>
+				<ButtonText align="c" origin="0 0" text="@menu_generic_ok" font="header_3" textColor="211e1d"/>
+				<Action type="Hide" target="Menu_CampaignNewDay"/>
+				<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_NEW_DAY_OK"/>
+			</OnClick>
+		</Button>
+	</StaticImage>
+
+	<Item align="sv" origin="0 -688">
+		<StaticImage name="ScreenFooter" align="b" origin="0 -32">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="211e1d"/>
+		</StaticImage>
+	</Item>
+</Item>
+
+<!---------------------------------------
+-----------------------------------------
+Menu_CampaignEndscreen
+
+This can be shown in either the campaign screen or when viewing campaign history.
+The ACK button only shows on the progress screen: campaign won't end until the user acks it.
+The Back button is different among the two variants.
+-----------------------------------------
+---------------------------------------->
+<Item name="Menu_CampaignEndscreen_Progress" hidden="true">
+	<OnOpen>
+		<Action type="Show" target="Menu_CampaignEndscreen"/>
+		<Action type="Show" target="Menu_CampaignEndscreen_Progress_ACK"/>
+		<Action type="Show" target="Menu_CampaignEndscreen_Progress_Back"/>
+		<Action type="Hide" target="Menu_CampaignEndscreen_History_Back"/>
+		<!-- <Action type="Hide" target="Menu_CampaignEndscreen_PLAYAGAIN"/> -->
+	</OnOpen>
+
+	<OnClose>
+		<Action type="Hide" target="Menu_CampaignEndscreen"/>
+	</OnClose>
+</Item>
+
+<Item name="Menu_CampaignEndscreen_History" hidden="true">
+	<OnOpen>
+		<Action type="Show" target="Menu_CampaignEndscreen"/>
+		<Action type="Show" target="Menu_CampaignEndscreen_History_Back"/>
+		<Action type="Hide" target="Menu_CampaignHistory"/>
+		<Action type="Hide" target="Menu_CampaignEndscreen_Progress_ACK"/>
+		<Action type="Hide" target="Menu_CampaignEndscreen_Progress_Back"/>
+		<!-- <Action type="Show" target="Menu_CampaignEndscreen_PLAYAGAIN"/> -->
+	</OnOpen>
+
+	<OnClose>
+		<Action type="Hide" target="Menu_CampaignEndscreen"/>
+		<Action type="Show" target="Menu_CampaignHistory"/>
+	</OnClose>
+</Item>
+
+<Item name="Menu_CampaignEndscreen" origin="0 0" hidden="true">
+	<OnOpen>
+		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
+
+		<!-- we need to trigger their OnOpen event by closing/opening -->
+		<Action type="Hide" target="#campaign_endscreen_stars"/>
+		<Action type="Show" target="#campaign_endscreen_stars"/>
+		<Action type="Hide" target="#campaign_endscreen_bh"/>
+		<Action type="Show" target="#campaign_endscreen_bh"/>
+	</OnOpen>
+
+	<OnClose>
+		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
+	</OnClose>
+
+	<!-- don't close with Escape, only via pressing the OK button
+	<OnKeyDown key0="27">
+		<Action type="Hide" target="Menu_CampaignEndscreen_History"/>
+		<Action type="Hide" target="Menu_CampaignEndscreen_Progress"/>
+	</OnKeyDown>
+	-->
+
+	<!--
+	<StaticImage>
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="9999" color="080808e6"/>
+	</StaticImage>
+	-->
+
+	<Item origin="0 0" sizeX="9999" sizeY="9999" blurBackground="true" blurColor="323232">
+	</Item>
+
+	<!-- initially origin="0 0" and sizeY="1324" -->
+
+	<Item align="sv" origin="0 450">
+		<StaticImage name="#WinSmoke" origin="0 0">
+			<ImageAnim type="pulse" speed="2.0"/>
+			<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" color="a45a13" scaleX="1.2" scaleY="1.4" />
+		</StaticImage>
+		<StaticImage name="#LoseSmoke" origin="0 0" hidden="true">
+			<ImageAnim type="pulse" speed="2.0"/>
+			<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" color="a23d0080" hidden="true" scaleX="1.2" scaleY="1.4" />
+		</StaticImage>
+		<StaticImage name="#ironman" origin="0 0" >
+			<RenderObject2D texture="data/textures/gui/campaign/ironman_endscreen.dds" blendMode="multiply" scaleX="1.2" scaleY="1.2" />
+		</StaticImage>
+
+		<StaticImage name="#WinGlow" origin="0 70">
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/fx/light_flare_long_01.dds" color="9e581533" blendMode="add_masked" scaleX="16" scaleY="2"/>
+				<ImageAnim type="pulse" speed="2.0"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/fx/light_flare_long_01.dds" color="ffa202bf" blendMode="add_masked" scaleX="8" scaleY="4"/>
+				<ImageAnim type="pulse" speed="2.0"/>
+			</StaticImage>
+		</StaticImage>
+
+		<StaticImage name="#LoseGlow" origin="0 70" hidden="true">
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/fx/light_flare_long_01.dds" color="680001" blendMode="add_masked" scaleX="16" scaleY="2"/>
+			</StaticImage>
+			<StaticImage origin="0 0">
+				<RenderObject2D texture="data/textures/fx/light_flare_long_01.dds" color="680001" blendMode="add_masked" scaleX="8" scaleY="4"/>
+			</StaticImage>
+		</StaticImage>
+	</Item>
+
+	<Item name="header" origin="0 650" align="sv">
+		<StaticText name="#name" align="t" origin="0 -30" text="" font="header_1" textColor="f0e3cc"/>
+		<StaticText name="#type" align="t" origin="0 10" text="TOUR OF DUTY" font="header_3" textColor="f0e3cc80"/>
+		<StaticText name="#CampaignFailedTitle" align="t" origin="0 -260" text="@menu_campaign_failed" font="header_2" textColor="ff4900"/>
+		<StaticText name="#CampaignFinishedTitle" align="t" origin="0 -260" text="@menu_campaign_finished" font="header_2" textColor="ffa202"/>
+
+		<Item name="Header" origin="0 -200">
+			<StaticImage>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="450" sizeY="8" blendMode="none" color="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="-100 -28">
+				<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.8" scaleY="0.8" blendMode="normal" />
+			</StaticImage>
+			<StaticImage origin="-50 -28">
+				<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.8" scaleY="0.8" blendMode="normal" />
+			</StaticImage>
+			<StaticImage origin="0 -28">
+				<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.8" scaleY="0.8" blendMode="normal"/>
+			</StaticImage>
+			<StaticImage origin="50 -28">
+				<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.8" scaleY="0.8" blendMode="normal" />
+			</StaticImage>
+			<StaticImage origin="100 -28">
+				<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.8" scaleY="0.8" blendMode="normal" />
+			</StaticImage>
+		</Item>
+	</Item>
+
+	<StaticImage origin="0 280" align="sv">
+		<StaticImage name="bgsmoke" origin="0 -500">
+			<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" color="40392b80" scaleX="1" scaleY="1.4" />
+		</StaticImage>
+		<StaticImage origin="0 0" align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="716" sizeY="812" color="08080880"/>
+		</StaticImage>
+		<StaticImage origin="0 0" align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="708" sizeY="808" color="40392b"/>
+		</StaticImage>
+		<StaticImage origin="0 -4" align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="700" sizeY="800" color="211e1d"/>
+		</StaticImage>
+
+		<StaticImage origin="0 4" align="t">
+			<RenderObject2D texture="data/textures/gui/menu_select.dds" color="08080880" sizeX="800" sizeY="148"/>
+		</StaticImage>
+
+		<StaticImage origin="0 0" align="t">
+			<RenderObject2D texture="data/textures/gui/menu_select.dds" color="40392b" sizeX="792" sizeY="140"/>
+		</StaticImage>
+
+
+		<StaticImage origin="0 -70" align="c">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="800" sizeY="90" color="211e1d"/>
+		</StaticImage>
+		<StaticImage origin="0 -116" align="c">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="800" sizeY="6" color="080808"/>
+		</StaticImage>
+		<Item origin="0 0" align="t">
+			<StaticImage origin="0 -140" align="ct">
+				<StaticImage name="#unit_banner" align="t" origin="0 0" >
+					<RenderObject2D texture="data/textures/gui/squads/rangers_bg_01.dds" sizeX="700" sizeY="306" color="ffffff30"/>
+					<StaticImage origin="0 0" align="t">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="700" sizeY="6" color="080808"/>
+					</StaticImage>
+					<StaticImage align="t">
+						<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b99" sizeX="700" sizeY="80"/>
+						<StaticText name="#unit_name" align="lt" origin="10 -6" text="@unit_rangers_name" font="header_5" textColor="f0e3cc"/>
+						<StaticText name="#squad_name" align="lt" origin="10 -34" text="SQUAD NAME" font="header_4" textColor="f97b03"/>
+					</StaticImage>
+					<Item name="Squad Level" align="rt" origin="-70 -44">
+						<StaticImage align="r" origin="65 0">
+							<RenderObject2D texture="data/textures/gui/customization/trooper_rank_10.dds"/>
+						</StaticImage>
+						<StaticText name="#squad_level" align="r" origin="0 0" text="20" font="header_3" textColor="f97b03"/>
+						<StaticText align="r" origin="-60 -12" text="@menu_squads_level" font="header_5" textColor="f0e3cc"/>
+					</Item>
+				</StaticImage>
+			</StaticImage>
+
+			<Item name="Medal" origin="0 -72" align="t" hidden="false">
+				<StaticImage origin="0 0" >
+					<RenderObject2D texture="data/textures/fx/light_flare_glow_01.dds" color="f0e3cc4d" blendMode="add_masked" scaleX="4" scaleY="2"/>
+				</StaticImage>
+				<StaticImage origin="0 25" align="t" >
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="138" sizeY="42" scaleX="1.2" scaleY="1.2" color="211e1dcc"/>
+				</StaticImage>
+				<StaticImage name="medal_empty" origin="0 0" align="c" >
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="128" sizeY="32" scaleX="1.2" scaleY="1.2" color="211e1dcc"/>
+				</StaticImage>
+				<StaticImage name="#medal" origin="0 0" align="c">
+					<RenderObject2D texture="data/campaigns/tod_shrine_district.dds" sizeX="128" sizeY="32" scaleX="1.2" scaleY="1.2" color="ffffff" blendMode="none"/>
+				</StaticImage>
+			</Item>
+
+			<Item name="#campaign_endscreen_stars" origin="-200 -72" align="t" hidden="false">
+				<OnOpen>
+					<Action type="PlaySound" target="870br_reld" params="0 1.0 0"/> <!-- make sure to sync delay with image anim -->
+				</OnOpen>
+
+				<StaticImage name="#stars_ironman_tooltip" origin="-60 0" sizeX="260" sizeY="110" tooltip="@menu_campaign_stars_ironman">
+					<!-- <RenderObject2D texture="data/textures/gui/square.tga" sizeX="260" sizeY="110" color="0bff0b0f"/> -->
+				</StaticImage>
+
+				<StaticImage origin="-64 0">
+					<RenderObject2D texture="data/textures/fx/light_flare_glow_01.dds" color="9e5815bf" blendMode="add_masked" scaleX="5" scaleY="3"/>
+				</StaticImage>
+				<StaticImage origin="0 0">
+					<RenderObject2D texture="data/textures/gui/endscreen_star_large_empty.dds"  color="ffffffcc"/>
+					<ImageAnim type="dropIn" speed="5.0" scale="1.5 1.5" delayMsec="0"/> <!-- make sure to sync delay with sound -->
+				</StaticImage>
+				<StaticImage name="#stars" origin="0 0">
+					<RenderObject2D texture="data/textures/gui/endscreen_star_large_full.dds"/>
+					<ImageAnim type="dropIn" speed="5.0" scale="1.5 1.5" delayMsec="0"/> <!-- make sure to sync delay with sound -->
+				</StaticImage>
+				<StaticText name="#stars_count" align="r" origin="-80 0" text="x99" font="header_2" textColor="ffa202"/>
+			</Item>
+
+			<Item name="#campaign_endscreen_bh" origin="200 -72" align="t" hidden="false">
+				<OnOpen>
+					<Action type="PlaySound" target="870br_reld" params="0 1.0 300"/> <!-- make sure to sync delay with image anim -->
+				</OnOpen>
+
+				<StaticImage name="tooltip for everything below" origin="60 0" sizeX="260" sizeY="110" tooltip="@menu_campaign_battlehonors_ttip">
+					<!-- <RenderObject2D texture="data/textures/gui/square.tga" sizeX="260" sizeY="110" color="0bff0b0f"/> -->
+				</StaticImage>
+
+				<StaticImage origin="64 0">
+					<RenderObject2D texture="data/textures/fx/light_flare_glow_01.dds" color="389dc480" blendMode="add_masked" scaleX="5" scaleY="3"/>
+				</StaticImage>
+				<StaticImage origin="0 0">
+					<RenderObject2D texture="data/textures/gui/campaign/endscreen_battlehonor_empty.dds"  color="ffffffcc"/>
+					<ImageAnim type="dropIn" speed="5.0" scale="1.5 1.5" delayMsec="300"/> <!-- make sure to sync delay with sound -->
+				</StaticImage>
+				<StaticImage name="#battlehonors" origin="0 0">
+					<RenderObject2D texture="data/textures/gui/campaign/endscreen_battlehonor_full.dds" />
+					<ImageAnim type="dropIn" speed="5.0" scale="1.5 1.5" delayMsec="300"/> <!-- make sure to sync delay with sound -->
+				</StaticImage>
+				<StaticText name="#battlehonors_count" align="l" origin="80 0" text="x99" font="header_2" textColor="51cfff"/>
+
+			</Item>
+		</Item>
+
+		<Item name="#trooper_template" align="c" origin="6 0" sizeX="120" sizeY="100" hidden="true">
+			<StaticImage>
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperbackground_01.tga" scaleX="1.0" scaleY="1.0"/>
+				<StaticImage name="#Portrait">
+					<RenderObject2D texture="data/textures/portraits/ranger1.dds" scaleX="1.0" scaleY="1.0"/>
+				</StaticImage>
+				<StaticImage name="border">
+					<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperframe.tga" scaleX="1" scaleY="1"/>
+				</StaticImage>
+
+				<StaticImage name="#kia_status" hidden="true">
+					<!--<RenderObject2D texture="data/textures/gui/deploy/deploy_injured_heavy.dds" color="a40600b3"/>-->
+					<StaticImage name="darken" align="c" origin="0 0" >
+						<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperbackground_01.tga" scaleX="1.0" scaleY="1.0" color="ff0003e6"/>
+					</StaticImage>
+					<StaticImage>
+						<RenderObject2D texture="data/textures/gui/deploy/deploy_kia.dds" scaleX="1.0" scaleY="1.0" color="a40600b3"/>
+					</StaticImage>
+				</StaticImage>
+				<StaticImage name="#injury_light_status" hidden="true">
+					<RenderObject2D texture="data/textures/gui/deploy/deploy_injured_light.dds" scaleX="1.0" scaleY="1.0" color="ffa20299" blendMode="add_masked"/>
+				</StaticImage>
+				<StaticImage name="#injury_heavy_status" hidden="true">
+					<RenderObject2D texture="data/textures/gui/deploy/deploy_injured_heavy.dds" scaleX="1.0" scaleY="1.0" color="e4282699" blendMode="add_masked"/>
+				</StaticImage>
+
+				<StaticImage name="#ClassIcon" origin="30 -8" align="b">
+					<RenderObject2D texture="data/textures/gui/deploy/class_icon_marksman.dds" />
+				</StaticImage>
+
+				<StaticImage name="Rank" origin="-12 -10" align="lb">
+					<RenderObject2D texture="data/textures/gui/challenge_empty.dds" scaleX="0.6" scaleY="0.6"/>
+						<StaticImage name="#RankIcon" origin="0 0" align="c">
+							<RenderObject2D texture="data/textures/gui/customization/trooper_rank_10.dds" scaleX="0.5" scaleY="0.5"/>
+						</StaticImage>
+				</StaticImage>
+
+				<StaticImage name="#promoted" origin="-8 8" align="lt">
+					<RenderObject2D texture="data/textures/gui/endscreen_promoted.dds" scaleX="0.6" scaleY="0.6" blendMode="normal">
+						<TextureAnimation frameWidth="48" frameHeight="48" startFrame="0" endFrame="29" animationTimeMS="1000" numLoops="-1"/>
+					</RenderObject2D>
+					<StaticImage name="glow" origin="1 -64" align="c">
+						<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperframehover.tga" scaleX="0.5" scaleY="0.5"/>
+					</StaticImage>
+				</StaticImage>
+			</StaticImage>
+		</Item>
+
+		<!-- used to preview the itemlist size
+		<StaticImage align="c" origin="0 -320">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="694" sizeY="150" color="ff1e1dcc"/>
+		</StaticImage>
+		-->
+		<StaticImage name="scrollbar_bg" align="b" origin="0 -382">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="694" sizeY="24" color="08080880"/>
+		</StaticImage>
+		<ItemList name="#trooper_list_campaign_endscreen" align="c" origin="0 -290" sizeX="694" sizeY="164" direction="x" clipChildren="true">
+			<ButtonGraphics align="b" origin="34 -10">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="24" color="f97b0340"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="24" color="f97b03ff"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="24" color="f97b03ff"/>
+				</OnClick>
+			</ButtonGraphics>
+		</ItemList>
+
+		<Item name="ExtraInfo" origin="0 -688" align="b">
+			<StaticImage name="#seedparent" align="t" origin="0 -60">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="700" sizeY="55" color="0c0b0b90"/>
+				<StaticText align="l" origin="10 0" text="@menu_m_missiongen_seed" font="header_5" textColor="f0e3cc"/>
+				<StaticText align="r" origin="-10 0" name="#seed" text="123456" font="header_5" textColor="f0e3cc"/>
+			</StaticImage>
+		</Item>
+
+		<StaticImage origin="0 -450" align="t">
+			<StaticText align="lb" origin="0 0" text="@menu_campaign_status_report" font="header_4" textColor="f97b03"/>
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="600" sizeY="4" color="f97b03"/>
+
+			<Item align="t" origin="0 -150" sizeX="600">
+				<StaticText origin="0 120"	align="l" text="@menu_campaign_history_stats_days"	font="paragraph_2" textColor="f0e3ccb0"/>
+				<StaticText origin="0 80"	align="l" text="@menu_m_stats_casualties" 			font="paragraph_2" textColor="f0e3ccb0"/>
+				<StaticText origin="0 40"	align="l" text="@menu_campaign_history_stats_reinf"	font="paragraph_2" textColor="f0e3ccb0"/>
+				<StaticText origin="0 0" 	align="l" text="@menu_m_stats_missions_completed" 	font="paragraph_2" textColor="f0e3ccb0"/>
+				<StaticText origin="0 -40"	align="l" text="@menu_m_stats_kills" 				font="paragraph_2" textColor="f0e3ccb0"/>
+				<StaticText origin="0 -80"	align="l" text="@menu_m_stats_hostageresult" 		font="paragraph_2" textColor="f0e3ccb0"/>
+				<StaticText origin="0 -120"	align="l" text="@menu_m_stats_civcasualties" 		font="paragraph_2" textColor="f0e3ccb0"/>
+
+				<StaticText name="#Days" 				origin="0 120"	align="r" text="999"	font="paragraph_2" textColor="f0e3ccb0"/>
+				<StaticText name="#Casualties" 			origin="0 80"	align="r" text="0/5"	font="paragraph_2" textColor="f0e3ccb0"/>
+				<StaticText name="#Reinforcements"		origin="0 40"	align="r" text="0/5"	font="paragraph_2" textColor="f0e3ccb0"/>
+				<StaticText name="#MissionsCompleted" 	origin="0 0" 	align="r" text="30/32"	font="paragraph_2" textColor="f0e3ccb0"/>
+				<StaticText name="#Kills"				origin="0 -40"	align="r" text="0/5"	font="paragraph_2" textColor="f0e3ccb0"/>
+				<StaticText name="#CasualtiesHostages"	origin="0 -80"	align="r" text="0/5"	font="paragraph_2" textColor="f0e3ccb0"/>
+				<StaticText name="#CasualtiesCivs" 		origin="0 -120"	align="r" text="4242" 	font="paragraph_2" textColor="f0e3ccb0"/>
+			</Item>
+		</StaticImage>
+	</StaticImage>
+
+
+	<Item align="sv" origin="0 -688">
+		<StaticImage name="ScreenFooter" align="b" origin="0 -32">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="211e1d"/>
+		</StaticImage>
+
+		<!-- this shows up in the campaign progress screen when we finish the campaign, we send an ACK to the game to set the campaign as finished -->
+		<Button name="Menu_CampaignEndscreen_Progress_ACK" align="rb" origin="1200 -4">
+			<ButtonText align="r" origin="-20 0" text="@menu_generic_ok" font="header_2" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e3cc" flipX="true"/>
+				<ButtonText align="r" origin="-20 0" text="@menu_generic_ok" font="header_2" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="40392b" flipX="true"/>
+				<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_ENDSCREEN_ACK"/>
+				<Action type="Hide" target="Menu_CampaignEndscreen_Progress"/>
+				<Action type="Hide" target="Menu_CampaignProgress"/>
+				<Action type="Show" target="Menu_CampaignSelect"/>
+			</OnClick>
+		</Button>
+		<Button name="Menu_CampaignEndscreen_Progress_Back" align="lb" origin="-1200 -4">
+			<ButtonText align="l" origin="20 0" text="@menu_campaign_show_map" font="header_2" fontAutoDownsize="true" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" scaleX="1.2" color="f0e3cc"/>
+				<ButtonText align="l" origin="20 0" text="@menu_campaign_show_map" font="header_2" fontAutoDownsize="true" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" scaleX="1.2" color="40392b"/>
+				<Action type="Hide" target="Menu_CampaignEndscreen_Progress"/>
+			</OnClick>
+		</Button>
+
+		<!-- this shows up in the campaign history -->
+		<Button name="Menu_CampaignEndscreen_History_Back" align="lb" origin="-1200 -4">
+			<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e3cc"/>
+				<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="40392b"/>
+				<Action type="Hide" target="Menu_CampaignEndscreen_History"/>
+			</OnClick>
+		</Button>
+	</Item>
+</Item>
+
+<!---------------------------------------
+-----------------------------------------
+Menu_Ingame_Campaign
+-----------------------------------------
+---------------------------------------->
+<Item name="Menu_Ingame_Campaign" origin="0 0" hidden="true">
+	<OnOpen>
+		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
+		<Action type="Hide" target="#waypoint_menu"/>
+		<Action type="TriggerEvent" target="GUI_GAME_PAUSE"/>
+		<Action type="Show" target="#Tip"/>
+	</OnOpen>
+
+	<OnClose>
+		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
+		<Action type="Hide" target="#Tip"/>
+	</OnClose>
+
+	<!-- doesn't work when opening thise menu because the game applies ESC two times (code issue, will be fixed)
+	<OnKeyDown key0="27">
+		<Action type="Click" target="Menu_Ingame_Resume"/>
+	</OnKeyDown>
+	-->
+
+	<Item origin="0 0" sizeX="9999" sizeY="9999" blurBackground="true">
+	</Item>
+
+	<StaticImage origin="0 0">
+		<RenderObject2D texture="data/textures/gui/bg_texture.dds" sizeX="7680" color="f0e3cc26" sizeY="1920" texRepeatX="3" texRepeatY="1"/>
+	</StaticImage>
+	<StaticImage name="ScreenBg" origin="0 0">
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2560" sizeY="9999" color="0c0b0bbf"/>
+		<StaticImage align="l" origin="-128 0">
+			<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipX="true" />
+		</StaticImage>
+		<StaticImage align="r" origin="128 0">
+			<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipY="true" />
+		</StaticImage>
+	</StaticImage>
+	<StaticImage origin="0 280" sizeX="1" sizeY="1.2" >
+		<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" />
+	</StaticImage>
+	<StaticImage origin="0 340">
+		<RenderObject2D texture="data/textures/gui/dk2_logo.dds"/>
+	</StaticImage>
+
+	<!-- enclose all butons in a single parent item which is centered on the background -->
+	<Item origin="0 -80">
+		<StaticImage origin="0 60">
+				<RenderObject2D texture="data/textures/gui/menu_separator_top.dds" color="f0e3cc"/>
+		</StaticImage>
+		<StaticImage origin="0 -260">
+				<RenderObject2D texture="data/textures/gui/menu_separator_top.dds" color="f0e3cc" flipY="true"/>
+		</StaticImage>
+
+		<Button origin="0 0" sizeX="670" sizeY="90">
+			<ButtonText origin="0 0" text="@menu_m_ingame_resume" font="header_2" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/menu_select.dds" color="f0e3cc" />
+				<ButtonText origin="0 0" text="@menu_m_ingame_resume" font="header_2" textColor="40382b"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/menu_select.dds" color="f0e3cc" scaleX="0.9" scaleY="0.9"/>
+				<ButtonText origin="0 0" text="@menu_m_ingame_resume" font="header_3" textColor="40382b"/>
+				<Action type="Hide" target="Menu_Ingame_Campaign"/>
+				<Action type="TriggerEvent" target="GUI_GAME_RESUME"/>
+			</OnClick>
+		</Button>
+
+		<Button origin="0 -80" name="Menu_Ingame_Campaign_Restart" sizeX="670" sizeY="90">
+			<ButtonText origin="0 0" text="@menu_generic_restart" font="header_2" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/menu_select.dds" color="f0e3cc" />
+				<ButtonText origin="0 0" text="@menu_generic_restart" font="header_2" textColor="40382b"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/menu_select.dds" color="f0e3cc" scaleX="0.9" scaleY="0.9"/>
+				<ButtonText origin="0 0" text="@menu_generic_restart" font="header_3" textColor="40382b"/>
+				<Action type="TriggerEvent" target="GUI_GAME_RESTART_MAP"/>
+			</OnClick>
+		</Button>
+
+		<Button origin="0 -200" sizeX="670" sizeY="90">
+			<ButtonText origin="0 0" text="@menu_m_quit_mission" font="header_2" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/menu_select.dds" color="f0e3cc" />
+				<ButtonText origin="0 0" text="@menu_m_quit_mission" font="header_2" textColor="40382b"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/menu_select.dds" color="f0e3cc" scaleX="0.9" scaleY="0.9"/>
+				<ButtonText origin="0 0" text="@menu_m_quit_mission" font="header_3" textColor="40382b"/>
+				<Action type="Hide" target="Menu_Ingame_Campaign"/>
+
+				<!-- if it's IronMan, we'll show Campaign_IronMan_ConfirmationDialog. Otherwise we'll just quit -->
+				<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_TRY_QUIT_TO_MAIN_MENU"/>
+			</OnClick>
+		</Button>
+
+	</Item>
+
+	<Item name="Extra Buttons" origin="1160 -600" align="lbsv">
+		<StaticImage name="Options Background" origin="0 0">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b80" sizeX="76" sizeY="76"/>
+		</StaticImage>
+		<Button name="Options" origin="0 0" sizeX="72" sizeY="72" tooltip="@menu_m_optionsgame_ttip">
+				<RenderObject2D texture="data/textures/gui/menu_options_normal.dds" blendMode="none"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/menu_options_hover.dds" blendMode="none"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/menu_options_hover.dds" scaleX="0.95" scaleY="0.95" blendMode="none"/>
+				<Action type="Show" target="Menu_Options_Ingame_Campaign"/>
+			</OnClick>
+		</Button>
+		<Button name="HowToPlay" origin="-80 0" sizeX="72" sizeY="72" tooltip="@menu_htp_title">
+				<RenderObject2D texture="data/textures/gui/menu_howto_normal.dds" blendMode="none"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/menu_howto_hover.dds" blendMode="none"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/menu_howto_hover.dds" scaleX="0.95" scaleY="0.95" blendMode="none"/>
+				<Action type="Show" target="howtoplay"/>
+				<Action type="Hide" target="howtoplay_singlepage_stuff"/>
+				<Action type="Show" target="howtoplay_multipage_stuff"/>				
+			</OnClick>
+		</Button>
+		<Button origin="-160 0" tooltip="@menu_m_sendbugreport_ttip">
+			<RenderObject2D texture="data/textures/gui/menu_bug_normal.dds" blendMode="none"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/menu_bug_hover.dds" blendMode="none"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/menu_bug_hover.dds" blendMode="none" scaleX="0.95" scaleY="0.95"/>
+
+				<Action type="Hide" target="Menu_Ingame_Campaign"/>
+				<Action type="Check" target="#include_screenshot_replay"/>
+				<Action type="Show" target="#include_screenshot_replay"/>
+				<Action type="Show" target="Menu_Feedback"/>
+			</OnClick>
+		</Button>
+		
+		<!-- doesn't work in campaign mode
+		<Item origin="-40 -55" name="#MapSeedParent" hidden="true">
+			<StaticText origin="0 0" text="Seed" font="paragraph_2" textColor="f97b03ff" tooltip="@menu_m_missiongen_copy">
+				<OnCursorDown>
+					<Action type="TriggerEvent" target="GUI_GAME_RANDOMMAP_COPYSEED"/>
+				</OnCursorDown>
+			</StaticText>
+			<StaticText name="#MapSeed" origin="0 -30" text="0xBAADF00D" font="paragraph_2" textColor="f0e3cc" tooltip="@menu_m_missiongen_copy">
+				<OnCursorDown>
+					<Action type="TriggerEvent" target="GUI_GAME_RANDOMMAP_COPYSEED"/>
+				</OnCursorDown>
+			</StaticText>
+		</Item>
+		-->		
+	</Item>
+
+	<!-- Tips -->
+	<Item origin="0 -500" align="sv">
+		<StaticText name="TipTitle" origin="0 0" text="@tip_title" font="header_3" textColor="f97b03ff"/>
+		<StaticText name="#Tip" origin="3 -45" text="< No tips loaded >" align="t" font="paragraph_2" textColor="f0e3cc" hidden="true">
+			<OnOpen>
+				<Action type="TriggerEvent" target="GUI_GAME_TIPS_SHOW"/>
+			</OnOpen>
+		</StaticText>
+	</Item>
+</Item>
+
+<!---------------------------------------
+-----------------------------------------
+Campaign_IronMan_ConfirmationDialog
+-----------------------------------------
+---------------------------------------->
+<Item name="Campaign_IronMan_ConfirmationDialog" origin="0 0" hidden="true">
+	<OnOpen>
+		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
+	</OnOpen>
+
+	<OnClose>
+		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
+	</OnClose>
+
+	<OnKeyDown key0="27">
+		<Action type="Hide" target="Campaign_IronMan_ConfirmationDialog"/>
+		<Action type="Show" target="Menu_Ingame_Campaign"/>
+	</OnKeyDown>
+
+	<Item origin="0 0" sizeX="9999" sizeY="9999" blurBackground="true" blurColor="323232">
+	</Item>
+
+	<StaticImage origin="0 12">
+		<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b80" sizeX="1016" sizeY="490"/>
+	</StaticImage>
+
+	<Item origin="0 0" sizeX="1000" sizeY="450">
+		<StaticImage origin="0 0">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="40392b" sizeX="1000" sizeY="450"/>
+		</StaticImage>
+
+		<StaticImage align="t" origin="0 -64">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1000" sizeY="286" color="0c0b0b80"/>
+			<StaticText origin="0 4" text="@menu_campaign_ironman_quit_confirmation" font="paragraph_1" textColor="f0e3cc" wordWrap="true"/>
+		</StaticImage>
+
+		<StaticImage origin="0 24" align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" align="t" sizeX="1000" sizeY="88" color="f97b03"/>
+			<StaticText origin="0 0" text="@menu_campaign_ironman_mode" font="header_2" textColor="211e1d"/>
+		</StaticImage>
+
+		<Button origin="18 16" align="lb" >
+			<ButtonText align="l" origin="20 0" text="@menu_generic_no" font="header_2" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e3cc" flipX="false"/>
+				<ButtonText align="l" origin="20 0" text="@menu_generic_no" font="header_2" textColor="40392b"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="0c0b0b80" flipX="false"/>
+				<Action type="Hide" target="Campaign_IronMan_ConfirmationDialog"/>
+				<Action type="Show" target="Menu_Ingame_Campaign"/>
+			</OnClick>
+		</Button>
+
+		<Button origin="-18 16" align="rb">
+			<ButtonText align="r" origin="-20 0" text="@menu_generic_yes" font="header_2" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e3cc" flipX="true"/>
+				<ButtonText align="r" origin="-20 0" text="@menu_generic_yes" font="header_2" textColor="40392b"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="0c0b0b80" flipX="true"/>
+				<Action type="Hide" target="Campaign_IronMan_ConfirmationDialog"/>
+				<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_QUIT_TO_MAIN_MENU"/>
+			</OnClick>
+		</Button>
+	</Item>
+</Item>
+
+<!---------------------------------------
+-----------------------------------------
+Menu_CampaignHistory
+-----------------------------------------
+---------------------------------------->
+<Item name="Menu_CampaignHistory" hidden="true">
+	<OnOpen>
+		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
+	</OnOpen>
+	<OnClose>
+		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
+	</OnClose>
+	<OnKeyDown key0="27">
+		<Action type="Click" target="Menu_CampaignHistory_Back"/>
+	</OnKeyDown>
+
+	<StaticImage origin="0 0">
+		<RenderObject2D texture="data/textures/gui/bg_texture.dds" sizeX="7680" color="f0e3cc26" sizeY="1920" texRepeatX="3" texRepeatY="1"/>
+	</StaticImage>
+
+	<StaticImage>
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2560" sizeY="9999" color="0c0b0bbf"/>
+		<StaticImage align="l" origin="-128 0">
+			<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipX="true" />
+		</StaticImage>
+		<StaticImage align="r" origin="128 0">
+			<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipY="true" />
+		</StaticImage>
+	</StaticImage>
+
+	<Item name="Header" origin="0 500">
+		<StaticText name="#campaign_screen_title" align="b" origin="0 0" text="@menu_campaign_history_title" font="header_2" textColor="f97b03"/>
+		<StaticImage>
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="600" sizeY="8" blendMode="none" color="f97b03"/>
+		</StaticImage>
+		<StaticImage origin="-80 -28">
+			<RenderObject2D texture="data/textures/gui/campaign/campaign_map_stars.dds" blendMode="normal" />
+		</StaticImage>
+		<StaticImage origin="-40 -28">
+			<RenderObject2D texture="data/textures/gui/campaign/campaign_map_stars.dds" blendMode="normal" />
+		</StaticImage>
+		<StaticImage origin="0 -28">
+			<RenderObject2D texture="data/textures/gui/campaign/campaign_map_stars.dds" blendMode="normal" />
+		</StaticImage>
+		<StaticImage origin="40 -28">
+			<RenderObject2D texture="data/textures/gui/campaign/campaign_map_stars.dds" blendMode="normal" />
+		</StaticImage>
+		<StaticImage origin="80 -28">
+			<RenderObject2D texture="data/textures/gui/campaign/campaign_map_stars.dds" blendMode="normal" />
+		</StaticImage>
+	</Item>
+
+	<Item name="#CampaignHistory_ItemTemplate" origin="0 0" sizeX="530" sizeY="808" hidden="true">
+		<OnOpen>
+			<Action type="PauseMovie" target="#campaign_pack_movie"/>
+		</OnOpen>
+		<StaticImage name="campaign_stroke" hidden="false">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="504" sizeY="808" blendMode="none" color="0c0b0b"/>
+		</StaticImage>
+		<StaticImage name="#campaign_hover" hidden="true">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="512" sizeY="816" blendMode="none" color="f97b03"/>
+		</StaticImage>			
+
+		<!-- we can show either one of these, depending on what's defined in the map bundles xml -->
+		<StaticImage name="#campaign_pack_img" hidden="false">
+			<RenderObject2D color="505050" sizeX="500" sizeY="800" blendMode="none"/>
+		</StaticImage>
+		<Movie name="#campaign_pack_movie" autoPlay="false" file="data/movies/campaign_operation_subjugator_thumb.ogv" shader="data/shaders/ui_seppia.frag" loop="true" hidden="true"/>
+		<StaticImage align="b" origin="0 4">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="496" sizeY="80" color="0c0b0bcc"/>
+			<Item origin="0 0" align="lb" sizeX="496" sizeY="80" blurBackground="true" blurColor="ffffffbf">
+			</Item>
+		</StaticImage>
+		
+		<!-- this here for when scrolling on the empty space between the buttons -->
+		<OnScrollDown>
+			<Action type="ScrollListForward" target="#CampaignHistory_List"/>
+		</OnScrollDown>
+		<OnScrollUp>
+			<Action type="ScrollListBackward" target="#CampaignHistory_List"/>
+		</OnScrollUp>
+
+		<Button name="#CampaignHistory_ButtonTemplate" defaultState="UncheckedState" sizeX="504" sizeY="808">
+			<OnScrollDown>
+				<Action type="ScrollListForward" target="#CampaignHistory_List"/>
+			</OnScrollDown>
+			<OnScrollUp>
+				<Action type="ScrollListBackward" target="#CampaignHistory_List"/>
+			</OnScrollUp>
+
+			<OnOpen>
+				<Action type="PauseMovie" target="#campaign_pack_movie"/>
+			</OnOpen>
+
+			<OnHover>
+				<Action type="PlayMovie" target="#campaign_pack_movie"/>
+				<Action type="Show" target="#campaign_hover"/>
+			</OnHover>
+			<OnHoverEnd>
+				<Action type="PauseMovie" target="#campaign_pack_movie"/>
+				<Action type="Hide" target="#campaign_hover"/>
+			</OnHoverEnd>
+
+			<OnClick>
+				<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_HISTORY_SELECT"/>
+			</OnClick>
+
+			<Item align="t" origin="0 -84" sizeX="496" sizeY="700" clipChildren="true">
+				<StaticImage name="#WinSmoke" origin="0 240" hidden="false">
+					<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" color="cd7900" scaleX="0.8" scaleY="1" />
+				</StaticImage>
+				<StaticImage name="#LoseSmoke" origin="0 240" hidden="true">
+					<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" color="b32e00" hidden="true" scaleX="0.8" scaleY="1" />
+				</StaticImage>
+				<StaticImage name="#IronmanImage" origin="0 200" >
+					<RenderObject2D texture="data/textures/gui/campaign/ironman_endscreen.dds" blendMode="multiply" scaleX="0.5" scaleY="0.5" />
+					<StaticImage  origin="0 0" >
+						<RenderObject2D texture="data/textures/gui/campaign/ironman_endscreen.dds" blendMode="multiply" scaleX="0.5" scaleY="0.5" />
+					</StaticImage>
+				</StaticImage>
+			</Item>
+
+			<StaticText name="#type" align="lb" origin="10 40" text="TOUR OF DUTY" font="header_5" textColor="ffffff"/>
+			<StaticText name="#name" align="lb" origin="10 6" text="Trouble in Kielbasa" font="header_4" textColor="f97b03"/>
+			<Item name="#header" align="i">
+				<StaticImage name="#unit_banner" origin="0 -4" align="t">
+					<RenderObject2D texture="data/textures/gui/squads/rangers_bg_01.dds" sizeX="496" sizeY="228" color="ffffffff"/>
+					<StaticImage align="t">
+						<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b99" sizeX="496" sizeY="80"/>
+						<StaticText name="#unit_name" align="lt" origin="10 -6" text="@unit_rangers_name" font="header_5" textColor="f0e3cc"/>
+						<StaticText name="#squad_name" align="lt" origin="10 -34" text="SQUAD NAME" font="header_4" textColor="f97b03"/>
+						<StaticText name="#number" align="rt" origin="-10 -6" text="1" font="header_5" textColor="f0e3cc"/>
+					</StaticImage>
+				</StaticImage>
+			</Item>
+
+			<Item name="completion" origin="0 -100" align="t">
+
+				<StaticText name="#CampaignFailedTitle" hidden="true" align="t" origin="0 0" text="@menu_campaign_failed" font="header_2" textColor="ff4900"/>
+				<StaticText name="#CampaignFinishedTitle" hidden="false" align="t" origin="0 0" text="@menu_campaign_finished" font="header_2" textColor="ffa202"/>
+				<StaticText name="#finished_time" text="16/01/1991 23:69" align="t" origin="0 -80" font="header_4" textColor="f0e3cc"/>
+			</Item>
+
+			<Item name="Medal" origin="-90 45" align="rb" hidden="false">
+
+				<!--
+				<StaticImage  origin="0 0" align="c" >
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="138" sizeY="42" scaleX="1" scaleY="1" color="211e1dcc"/>
+				</StaticImage>
+				<StaticImage  name="#medal_empty" origin="0 0" align="c" >
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="128" sizeY="32" scaleX="1" scaleY="1" color="211e1dcc"/>
+				</StaticImage>
+				-->
+				<StaticImage name="#medal" origin="0 0" align="c">
+					<RenderObject2D texture="data/campaigns/medal_shrine.dds" sizeX="128" sizeY="32" scaleX="1" scaleY="1" color="ffffff" blendMode="none"/>
+				</StaticImage>
+			</Item>
+
+			<Item origin="0 -210" align="t">
+				<StaticImage  origin="0 -90" align="c">
+					<RenderObject2D texture="data/textures/gui/menu_select.dds" color="211e1de6" sizeX="440" sizeY="70"/>
+				</StaticImage>
+				<Item name="Stars" origin="-70 -90" align="t" hidden="false">
+					<StaticImage origin="0 0"> <RenderObject2D texture="data/textures/gui/endscreen_star_large_empty.dds" scaleX="0.9" scaleY="0.9" color="ffffffcc"/> </StaticImage>
+					<StaticImage name="#stars" origin="0 0"> <RenderObject2D texture="data/textures/gui/endscreen_star_large_full.dds" scaleX="0.9" scaleY="0.9"/> </StaticImage>
+					<StaticText name="#stars_count" align="r" origin="-60 0" text="99" font="header_3" textColor="ffa202"/>
+				</Item>
+
+				<Item name="BattleHonors" origin="70 -90" align="t" hidden="false">
+					<StaticImage origin="0 0">
+						<RenderObject2D texture="data/textures/gui/campaign/endscreen_battlehonor_empty.dds" scaleX="0.9" scaleY="0.9" color="ffffffcc"/>
+					</StaticImage>
+					<StaticImage name="#battlehonors" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/campaign/endscreen_battlehonor_full.dds" scaleX="0.9" scaleY="0.9" />
+					</StaticImage>
+					<StaticText name="#battlehonors_count" align="l" origin="60 0" text="99" font="header_3" textColor="51cfff"/>
+				</Item>
+			</Item>
+
+			<StaticImage origin="0 -380" align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="440" sizeY="336" color="211e1db3"/>
+				<Item origin="0 0" sizeX="440" sizeY="336" blurBackground="true" blurColor="c0c0c0f2">
+				</Item>
+				<StaticText align="lt" origin="10 -4" text="@menu_campaign_status_report" font="header_4" textColor="f97b03"/>
+				<StaticImage align="t" origin="0 -42">
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="420" sizeY="4" color="f97b03"/>
+				</StaticImage>
+				<Item align="t" origin="0 -190" sizeX="420">
+					<StaticText origin="0 120"	align="l" text="@menu_campaign_history_stats_days"	font="paragraph_2" textColor="f0e3ccb0"/>
+					<StaticText origin="0 80" 	align="l" text="@menu_m_stats_missions_completed" 	font="paragraph_2" textColor="f0e3ccb0"/>
+					<StaticText origin="0 40"	align="l" text="@menu_m_stats_casualties" 			font="paragraph_2" textColor="f0e3ccb0"/>
+					<StaticText origin="0 0"	align="l" text="@menu_campaign_history_stats_reinf" font="paragraph_2" textColor="f0e3ccb0"/>
+					<StaticText origin="0 -40"	align="l" text="@menu_m_stats_kills" 				font="paragraph_2" textColor="f0e3ccb0"/>
+					<StaticText origin="0 -80"	align="l" text="@menu_m_stats_hostageresult" 		font="paragraph_2" textColor="f0e3ccb0"/>
+					<StaticText origin="0 -120"	align="l" text="@menu_m_stats_civcasualties" 		font="paragraph_2" textColor="f0e3ccb0"/>
+
+					<StaticText name="#Days" 				origin="0 120"	align="r" text="999"	font="paragraph_2" textColor="f0e3ccb0"/>
+					<StaticText name="#MissionsCompleted" 	origin="0 80" 	align="r" text="30/32"	font="paragraph_2" textColor="f0e3ccb0"/>
+					<StaticText name="#Casualties" 			origin="0 40"	align="r" text="0/5"	font="paragraph_2" textColor="f0e3ccb0"/>
+					<StaticText name="#Reinforcements"		origin="0 0"	align="r" text="0/5"	font="paragraph_2" textColor="f0e3ccb0"/>
+					<StaticText name="#Kills"				origin="0 -40"	align="r" text="0/5"	font="paragraph_2" textColor="f0e3ccb0"/>
+					<StaticText name="#CasualtiesHostages"	origin="0 -80"	align="r" text="0/5"	font="paragraph_2" textColor="f0e3ccb0"/>
+					<StaticText name="#CasualtiesCivs" 		origin="0 -120"	align="r" text="4242" 	font="paragraph_2" textColor="f0e3ccb0"/>
+				</Item>
+			</StaticImage>
+
+			<!--
+			<StaticImage name="#CampaignSeedParent" align="b" origin="0 100">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="300" sizeY="55" color="0c0b0b90"/>
+				<StaticText align="l" origin="10 0" text="@menu_m_missiongen_seed" font="header_4" textColor="f0e3cc80"/>
+				<StaticText align="r" origin="-10 0" name="#CampaignSeed" text="123456" font="header_4" textColor="f0e3cc80"/>
+			</StaticImage>
+			-->
+
+			<!--
+			<StaticImage name="#CampaignDifficultyParent" align="rb" origin="0 110" hidden="true">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="300" sizeY="55" color="0c0b0b90"/>
+				<StaticText align="l" origin="10 0" text="@menu_campaign_brief_difficulty" font="header_4" textColor="f0e3cc"/>
+				<StaticText align="r" origin="-10 0" name="#CampaignDifficulty" text="EASY" font="header_4" textColor="f0e3cc"/>
+			</StaticImage>
+
+			<StaticImage name="#CampaignIronManParent" align="rb" origin="0 152">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="300" sizeY="55" color="0c0b0b90"/>
+				<StaticText align="c" origin="0 0" text="@menu_campaign_ironman" font="header_4" textColor="f0e3cc"/>
+			</StaticImage>
+			-->
+
+			<Button name="#CampaignHistory_PlayAgainButton" align="b" origin="0 -80">
+				<ButtonText  origin="0 2" text="@menu_campaign_history_playagain" font="header_3" textColor="928a7c"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/square.tga" color="f97b03" sizeX="500" sizeY="64"/>
+					<ButtonText  origin="0 2" text="@menu_campaign_history_playagain" font="header_3" textColor="211e1d"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/gui/square.tga" color="211e1d" sizeX="500" sizeY="64"/>
+					<ButtonText  origin="0 2" text="@menu_campaign_history_playagain" font="header_3" textColor="f0e3cc"/>
+					<Action type="Hide" target="Menu_CampaignHistory"/>
+					<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_HISTORY_PLAYAGAIN"/>
+				</OnClick>
+			</Button>
+		</Button>
+	</Item>
+
+	<!-- sizeX is multiple of items visible plus some space on the right to see the next one = (640 * 4) + 80 -->
+	<ItemList name="#CampaignHistory_List" hidden="false" origin="0 0" sizeX="2200" sizeY="980" direction="x" clipChildren="true" >
+		<ButtonGraphics align="c" origin="18 -520">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b0340"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+			</OnClick>
+		</ButtonGraphics>
+		<!-- items cloned from #CampaignHistory_ItemTemplate are added here dynamically by the game -->
+	</ItemList>
+
+	<Item align="sv" origin="0 -688">
+		<StaticImage name="ScreenFooter" align="b" origin="0 -32">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="211e1d"/>
+		</StaticImage>
+
+		<!-- back button -->
+		<Button name="Menu_CampaignHistory_Back" align="lb" origin="-1200 -4">
+			<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e3cc" flipX="false"/>
+				<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="40392b" flipX="false"/>
+				<Action type="Hide" target="Menu_CampaignHistory"/>
+				<Action type="Show" target="Menu_CampaignSelect"/>
+			</OnClick>
+		</Button>
+	</Item>
+</Item>
+
+<Item name="Deploy_NewTroopsBirthed" origin="0 0" hidden="true">
+	<OnOpen>
+		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
+		<Action type="SetForeground" target="this"/>
+	</OnOpen>
+
+	<OnClose>
+		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
+	</OnClose>
+
+	<OnKeyDown key0="27" key1="32">
+		<Action type="Hide" target="this"/>
+	</OnKeyDown>
+
+	<Item origin="0 0" sizeX="9999" sizeY="9999" blurBackground="true" blurColor="323232">
+	</Item>
+
+	<Item name="squad_banner" sizeX="800" sizeY="1440" clipChildren="true">
+		<StaticImage name="#unit_banner" origin="100 0" align="t" >
+				<RenderObject2D texture="data/textures/gui/squads/rangers_bg_01.dds" scaleX="5" scaleY="5" color="999999"/>
+		</StaticImage>
+		<StaticImage name="smoke_static" origin="300 -1500" align="b" >
+				<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" scaleX="2" scaleY="3" flipX="true" color="f954031a"/>
+		</StaticImage>
+		<StaticImage name="smoke" origin="0 -1100" align="b" >
+				<ImageAnim type="scroll" speed="0.01" direction="1 0"/>
+				<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" scaleX="2" scaleY="2" color="f97b0333" texRepeatX="1" texRepeatY="1"/>
+		</StaticImage>
+		<Item origin="0 0" sizeX="832" sizeY="1472" blurBackground="true" blurColor="ffffff">
+		</Item>
+	</Item>
+
+	<Item origin="0 45" align="t">
+		<!--
+		<StaticImage name="#squad_flag_normal" hidden="false">
+			<RenderObject2D texture="data/textures/gui/squads/rangers_bg_01.dds" blendMode="normal"/>
+		</StaticImage>
+		-->
+		<!--
+		<StaticImage name="#unit_banner" origin="0 172" align="t" >
+			<RenderObject2D texture="data/textures/gui/squads/rangers_bg_01.dds" scaleX="1.1" scaleY="1.1" color="ffffff99"/>
+		</StaticImage>-->
+		<StaticImage name="glow" origin="0 -100">
+			<ImageAnim type="pulse" speed="1" />
+			<RenderObject2D texture="data/textures/fx/light_flare_long_01.dds" color="f97b03b3" scaleX="6" scaleY="3"  blendMode="add_masked"/>
+		</StaticImage>
+		<StaticImage align="b" origin="0 6">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b00" sizeX="536" sizeY="98"/>
+			<StaticText name="#squad_name" align="c" origin="0 80" text="BONNIE'S BOOMSTICK" font="header_1" textColor="f97b03"/>
+		</StaticImage>
+
+	</Item>
+
+
+
+	<StaticImage origin="0 60" sizeX="1000" sizeY="600">
+		<StaticImage origin="0 100" align="t" name="header">
+			<StaticText align="t" origin="0 -30" text="@menu_campaign_new_troops_title" font="header_3" textColor="f97b03"/>
+			<StaticImage origin="0 -100" align="ct">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="660" sizeY="4" color="f97b03"/>
+			</StaticImage>
+			<StaticImage origin="-80 -130">
+				<RenderObject2D texture="data/textures/gui/campaign/campaign_map_stars.dds" blendMode="normal" />
+			</StaticImage>
+			<StaticImage origin="-40 -130">
+				<RenderObject2D texture="data/textures/gui/campaign/campaign_map_stars.dds" blendMode="normal" />
+			</StaticImage>
+			<StaticImage origin="0 -130">
+				<RenderObject2D texture="data/textures/gui/campaign/campaign_map_stars.dds" blendMode="normal" />
+			</StaticImage>
+			<StaticImage origin="40 -130">
+				<RenderObject2D texture="data/textures/gui/campaign/campaign_map_stars.dds" blendMode="normal" />
+			</StaticImage>
+			<StaticImage origin="80 -130">
+				<RenderObject2D texture="data/textures/gui/campaign/campaign_map_stars.dds" blendMode="normal" />
+			</StaticImage>
+		</StaticImage>
+
+		<Item name="#trooper_birthed_template" align="c" origin="0 0" sizeX="150" sizeY="150" hidden="true">
+			<OnScrollDown>
+				<Action type="ScrollListForward" target="#trooper_birthed_list"/>
+			</OnScrollDown>
+			<OnScrollUp>
+				<Action type="ScrollListBackward" target="#trooper_birthed_list"/>
+			</OnScrollUp>
+			<StaticImage name="border_glow">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperframehover.tga" scaleX="1.6" scaleY="1.6" color="ffd7b7"/>
+			</StaticImage>
+			<StaticImage>
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperbackground_01.tga" scaleX="1.5" scaleY="1.5"/>
+				<StaticImage name="#Portrait">
+					<RenderObject2D texture="data/textures/portraits/ranger1.dds" scaleX="1.5" scaleY="1.5"/>
+					<StaticImage name="border">
+						<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperframe.tga" scaleX="1.5" scaleY="1.5"/>
+					</StaticImage>
+					<StaticImage name="newbirth_icon" origin="36 12" align="t">
+						<ImageAnim type="pulse" speed="4"/>
+						<RenderObject2D texture="data/textures/gui/deploy/deploy_newbirth.dds" scaleX="1.4" scaleY="1.4" color="ffc600" />
+					</StaticImage>
+					<StaticImage name="#ClassIcon" origin="30 -8" align="b">
+						<RenderObject2D texture="data/textures/gui/deploy/class_icon_marksman.dds" />
+					</StaticImage>
+				</StaticImage>
+			</StaticImage>
+		</Item>
+
+		<!-- used to preview the itemlist size
+		<StaticImage align="c" origin="0 -110">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="760" sizeY="200" color="ff1e1dcc"/>
+		</StaticImage>
+		-->
+		<ItemList name="#trooper_birthed_list" align="c" origin="0 -100" sizeX="2540" sizeY="260" direction="x" clipChildren="true">
+			<ButtonGraphics align="b" origin="34 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b0340"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+				</OnClick>
+			</ButtonGraphics>
+		</ItemList>
+
+		<Button  align="b" origin="0 -30">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="360" sizeY="80" color="f0e3cc"/>
+			<ButtonText align="c" origin="0 0" text="@menu_generic_continue" font="header_2" textColor="211e1d"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="360" sizeY="80" color="f97b03"/>
+				<ButtonText align="c" origin="0 0" text="@menu_generic_continue" font="header_2" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="360" sizeY="80" scaleX="0.95" scaleY="0.95" color="f97b03"/>
+				<ButtonText align="c" origin="0 0" text="@menu_generic_continue" font="header_2" textColor="211e1d"/>
+				<Action type="Hide" target="Deploy_NewTroopsBirthed"/>
+			</OnClick>
+		</Button>
+	</StaticImage>
+</Item>
+
+<Item name="Menu_CampaignEndOfWeek" origin="0 0" hidden="true">
+	<OnOpen>
+		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
+	</OnOpen>
+
+	<OnClose>
+		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
+	</OnClose>
+
+	<OnKeyDown key0="27" key1="32">
+		<Action type="Hide" target="this"/>
+	</OnKeyDown>
+
+	<Item origin="0 0" sizeX="9999" sizeY="9999" blurBackground="true" blurColor="323232">
+	</Item>
+
+	<Item name="header" origin="0 650" align="sv">
+		<StaticText  align="t" origin="0 -30" text="@menu_campaign_eow" font="header_1" textColor="f0e3cc"/>
+
+		<Item name="Header" origin="0 -200">
+			<StaticImage>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="450" sizeY="8" blendMode="none" color="f0e3cc"/>
+			</StaticImage>
+			<StaticImage origin="-100 -28">
+				<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.8" scaleY="0.8" blendMode="normal" />
+			</StaticImage>
+			<StaticImage origin="-50 -28">
+				<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.8" scaleY="0.8" blendMode="normal" />
+			</StaticImage>
+			<StaticImage origin="0 -28">
+				<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.8" scaleY="0.8" blendMode="normal"/>
+			</StaticImage>
+			<StaticImage origin="50 -28">
+				<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.8" scaleY="0.8" blendMode="normal" />
+			</StaticImage>
+			<StaticImage origin="100 -28">
+				<RenderObject2D texture="data/textures/gui/missions/pack_stars.tga" scaleX="0.8" scaleY="0.8" blendMode="normal" />
+			</StaticImage>
+		</Item>
+	</Item>
+
+	<StaticImage origin="0 320" align="sv">
+		<StaticImage name="bgsmoke" origin="0 -500">
+			<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" color="40392b80" scaleX="1" scaleY="1.4" />
+		</StaticImage>
+		<StaticImage origin="0 0" align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="716" sizeY="972" color="08080880"/>
+		</StaticImage>
+		<StaticImage origin="0 0" align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="708" sizeY="968" color="40392b"/>
+		</StaticImage>
+		<StaticImage origin="0 -4" align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="700" sizeY="960" color="211e1d"/>
+		</StaticImage>
+
+		<!--
+		<StaticImage origin="0 4" align="t">
+			<RenderObject2D texture="data/textures/gui/menu_select.dds" color="08080880" sizeX="800" sizeY="148"/>
+		</StaticImage>
+		<StaticImage origin="0 0" align="t">
+			<RenderObject2D texture="data/textures/gui/menu_select.dds" color="40392b" sizeX="792" sizeY="140"/>
+		</StaticImage>
+		<StaticImage origin="0 -70" align="c">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="800" sizeY="90" color="211e1d"/>
+		</StaticImage>
+		<StaticImage origin="0 -116" align="c">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="800" sizeY="6" color="080808"/>
+		</StaticImage>
+		-->
+		<Item origin="0 0" align="c" hidden="false">
+			<Item name="EndOfWeekBG" origin="0 0" align="c" hidden="false">
+				<Item name="Bg_Left_Stroke" origin="4 0" align="r" sizeX="800" sizeY="100" clipChildren="true">
+					<StaticImage origin="220 0" align="r" >
+						<RenderObject2D texture="data/textures/gui/menu_select.dds" scaleX="1.1" scaleY="1.1" color="40392b"/>
+					</StaticImage>
+				</Item>
+				<Item name="Bg_Right_Stroke" origin="-4 0" align="l" sizeX="800" sizeY="100" clipChildren="true">
+					<StaticImage origin="-220 0" align="l" >
+						<RenderObject2D texture="data/textures/gui/menu_select.dds" scaleX="1.1" scaleY="1.1" color="40392b"/>
+
+					</StaticImage>
+				</Item>
+			</Item>
+			<Item origin="0 0" align="c" hidden="false">
+				<Item name="Bg_Left" origin="0 0" align="r" sizeX="600" sizeY="100" clipChildren="true">
+					<StaticImage origin="220 0" align="r" >
+						<RenderObject2D texture="data/textures/gui/menu_select.dds"  color="231f1fDA"/>
+					</StaticImage>
+				</Item>
+				<Item name="Bg_Right" origin="0 0" align="l" sizeX="600" sizeY="100" clipChildren="true">
+					<StaticImage origin="-220 0" align="l" >
+						<RenderObject2D texture="data/textures/gui/menu_select.dds"  color="231f1fDA"/>
+					</StaticImage>
+				</Item>
+				<StaticText align="c" origin="0 0" text="@menu_campaign_orders" font="header_3" textColor="f0e3cc"/>
+			</Item>
+		</Item>
+
+		<Item origin="0 102" align="t">
+			<StaticImage origin="0 -140" align="ct">
+				<StaticImage name="#unit_banner" align="t" origin="0 0" >
+					<RenderObject2D texture="data/textures/gui/squads/rangers_bg_01.dds" sizeX="700" sizeY="306" color="ffffff30"/>
+					<StaticImage origin="0 0" align="t">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="700" sizeY="6" color="080808"/>
+					</StaticImage>
+					<StaticImage align="t">
+						<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b99" sizeX="700" sizeY="80"/>
+						<StaticText name="#unit_name" align="lt" origin="10 -6" text="@unit_rangers_name" font="header_5" textColor="f0e3cc"/>
+						<StaticText name="#squad_name" align="lt" origin="10 -34" text="SQUAD NAME" font="header_4" textColor="f97b03"/>
+					</StaticImage>
+					<Item name="Squad Level" align="rt" origin="-70 -44">
+						<StaticImage align="r" origin="65 0">
+							<RenderObject2D texture="data/textures/gui/customization/trooper_rank_10.dds"/>
+						</StaticImage>
+						<StaticText name="#squad_level" align="r" origin="0 0" text="20" font="header_3" textColor="f97b03"/>
+						<StaticText align="r" origin="-60 -12" text="@menu_squads_level" font="header_5" textColor="f0e3cc"/>
+					</Item>
+				</StaticImage>
+			</StaticImage>
+		</Item>
+
+		<Item name="#trooper_template" align="c" origin="6 0" sizeX="120" sizeY="100" hidden="true">
+			<StaticImage>
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperbackground_01.tga" scaleX="1.0" scaleY="1.0"/>
+				<StaticImage name="#Portrait">
+					<RenderObject2D texture="data/textures/portraits/ranger1.dds" scaleX="1.0" scaleY="1.0"/>
+				</StaticImage>
+				<StaticImage name="border">
+					<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperframe.tga" scaleX="1" scaleY="1"/>
+				</StaticImage>
+
+				<StaticImage name="#kia_status" hidden="true">
+					<!--<RenderObject2D texture="data/textures/gui/deploy/deploy_injured_heavy.dds" color="a40600b3"/>-->
+					<StaticImage name="darken" align="c" origin="0 0" >
+						<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperbackground_01.tga" scaleX="1.0" scaleY="1.0" color="ff0003e6"/>
+					</StaticImage>
+					<StaticImage>
+						<RenderObject2D texture="data/textures/gui/deploy/deploy_kia.dds" scaleX="1.0" scaleY="1.0" color="a40600b3"/>
+					</StaticImage>
+				</StaticImage>
+				<StaticImage name="#injury_light_status" hidden="true">
+					<RenderObject2D texture="data/textures/gui/deploy/deploy_injured_light.dds" scaleX="1.0" scaleY="1.0" color="ffa20299" blendMode="add_masked"/>
+				</StaticImage>
+				<StaticImage name="#injury_heavy_status" hidden="true">
+					<RenderObject2D texture="data/textures/gui/deploy/deploy_injured_heavy.dds" scaleX="1.0" scaleY="1.0" color="e4282699" blendMode="add_masked"/>
+				</StaticImage>
+
+				<StaticImage name="#ClassIcon" origin="30 -8" align="b">
+					<RenderObject2D texture="data/textures/gui/deploy/class_icon_marksman.dds" />
+				</StaticImage>
+
+				<StaticImage name="Rank" origin="-12 -10" align="lb">
+					<RenderObject2D texture="data/textures/gui/challenge_empty.dds" scaleX="0.6" scaleY="0.6"/>
+						<StaticImage name="#RankIcon" origin="0 0" align="c">
+							<RenderObject2D texture="data/textures/gui/customization/trooper_rank_10.dds" scaleX="0.5" scaleY="0.5"/>
+						</StaticImage>
+				</StaticImage>
+
+				<StaticImage name="#promoted" origin="-8 8" align="lt" hidden="true">
+					<RenderObject2D texture="data/textures/gui/endscreen_promoted.dds" scaleX="0.6" scaleY="0.6" blendMode="normal">
+						<TextureAnimation frameWidth="48" frameHeight="48" startFrame="0" endFrame="29" animationTimeMS="1000" numLoops="-1"/>
+					</RenderObject2D>
+					<StaticImage name="glow" origin="1 -64" align="c">
+						<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperframehover.tga" scaleX="0.5" scaleY="0.5"/>
+					</StaticImage>
+				</StaticImage>
+			</StaticImage>
+		</Item>
+
+		<StaticImage name="scrollbar_bg" align="b" origin="0 -282">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="694" sizeY="24" color="08080880"/>
+		</StaticImage>
+		<ItemList name="#trooper_list_campaign_endscreen" align="c" origin="0 -186" sizeX="694" sizeY="164" direction="x" clipChildren="true">
+			<ButtonGraphics align="b" origin="34 -14">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="24" color="f97b0340"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="24" color="f97b03ff"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="24" color="f97b03ff"/>
+				</OnClick>
+			</ButtonGraphics>
+		</ItemList>
+
+		<Item name="Available_Intel" origin="0 -320" align="c" sizeX="260" sizeY="50" hidden="false">
+			<StaticText align="l" origin="0 0" name="#available_intel" text="@menu_campaign_current_intel" font="header_4" textColor="f97b03">
+				<StaticImage align="r" origin="44 0">
+					<RenderObject2D texture="data/textures/gui/campaign/intel_medium.dds" scaleX="0.8" scaleY="0.8"/>
+				</StaticImage>
+			</StaticText>
+		</Item>
+
+		<Item name="EndOfWeek_Continue" origin="0 -430" align="c" sizeX="660" sizeY="120">
+			<Item origin="-10 0" align="l" sizeX="830" sizeY="140" clipChildren="true">
+				<StaticImage align="c" origin="-35 0">
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" scaleX="2.05" scaleY="2.05" color="08080880"/>
+				</StaticImage>
+			</Item>
+
+			<Button align="c" origin="64 0">
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" scaleX="1.9" scaleY="1.9" color="f0e3cc"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" scaleX="1.9" scaleY="1.9" color="f97b03"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" scaleX="1.9" scaleY="1.9" color="40392b"/>
+					<Action type="Hide" target="Menu_CampaignEndOfWeek"/>
+					<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_END_KEEP_GOING"/>
+				</OnClick>
+			</Button>
+			<StaticImage align="r" origin="80 0">
+				<RenderObject2D texture="data/textures/gui/campaign/campaign_endofweek_continue.dds" scaleX="1.2" scaleY="1.2" color="000000fa"/>
+			</StaticImage>
+			<StaticImage align="b" origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="660" sizeY="120" color="080808fa"/>
+			</StaticImage>
+			<StaticText align="c" origin="0 25" text="@menu_campaign_eow_extend_tour" font="header_3" textColor="f97b03"/>
+			<StaticImage align="c" origin="0 -8">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="400" sizeY="4" color="f97b03"/>
+			</StaticImage>
+			<StaticText align="c" origin="0 -35" text="@menu_campaign_eow_extend_expl" font="header_4" textColor="f0e3cc"/>
+		</Item>
+
+		<Item name="EndOfWeek_Rest" origin="0 -630" align="c" sizeX="660" sizeY="120">
+			<Item origin="-10 0" align="l" sizeX="830" sizeY="140" clipChildren="true">
+				<StaticImage align="c" origin="-35 0">
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" scaleX="2.05" scaleY="2.05" color="08080880"/>
+				</StaticImage>
+			</Item>
+
+			<Button name="#EndOfWeek_Rest_Button" align="c" origin="64 0">
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" scaleX="1.9" scaleY="1.9" color="f0e3cc"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" scaleX="1.9" scaleY="1.9" color="f97b03"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" scaleX="1.9" scaleY="1.9" color="40392b"/>
+					<Action type="Hide" target="Menu_CampaignEndOfWeek"/>
+					<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_END_REST"/>
+				</OnClick>
+			</Button>
+
+			<StaticImage align="r" origin="76 0">
+				<RenderObject2D texture="data/textures/gui/campaign/campaign_endofweek_rest.dds" scaleX="1" scaleY="1" color="000000fa"/>
+			</StaticImage>
+
+
+			<StaticImage align="c" origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="660" sizeY="120" color="080808fa"/>
+			</StaticImage>
+			<StaticText align="c" origin="0 25" text="@menu_campaign_eow_rest" font="header_3" textColor="f97b03"/>
+			<StaticImage align="c" origin="0 -8">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="400" sizeY="4" color="f97b03"/>
+			</StaticImage>
+			<StaticImage name="#Campaign_EndOfWeek_NotEnoughIntel" align="r" origin="84 0" hidden="true">
+				<RenderObject2D texture="data/textures/gui/locked_icon.dds" scaleX="0.5" scaleY="0.5" color="f0e3cc"/>
+				<StaticImage align="c" origin="-318 0">
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" scaleX="1.92" scaleY="1.9" color="080808bf"/>
+				</StaticImage>
+			</StaticImage>
+			<StaticText align="c" origin="-18 -35" name="#EndOfWeek_Rest_Cost" text="@menu_campaign_eow_rest_expl" font="header_4" textColor="f0e3cc">
+				<StaticImage align="r" origin="44 0">
+					<RenderObject2D texture="data/textures/gui/campaign/intel_medium.dds" scaleX="0.8" scaleY="0.8"/>
+				</StaticImage>
+			</StaticText>
+
+
+		</Item>
+
+		<Item name="EndOfWeek_Retire" origin="0 -830" align="c" sizeX="660" sizeY="120">
+			<Item origin="10 0" align="r" sizeX="830" sizeY="140" clipChildren="true">
+				<StaticImage align="c" origin="35 0">
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" flipX="true" scaleX="2.05" scaleY="2.05" color="08080880"/>
+				</StaticImage>
+			</Item>
+
+			<Button align="c" origin="-64 0">
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" flipX="true" scaleX="1.9" scaleY="1.9" color="f0e3cc"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" flipX="true" scaleX="1.9" scaleY="1.9" color="f97b03"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" flipX="true" scaleX="1.9" scaleY="1.9" color="40392b"/>
+					<Action type="Hide" target="Menu_CampaignEndOfWeek"/>
+					<Action type="TriggerEvent" target="GUI_GAME_CAMPAIGN_END_RETIRE"/>
+				</OnClick>
+			</Button>
+
+			<StaticImage align="l" origin="-80 0">
+				<RenderObject2D texture="data/textures/gui/customization/unlock_stars.dds" scaleX="1" scaleY="1" color="000000fa"/>
+			</StaticImage>
+
+			<StaticImage align="b" origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="660" sizeY="120" color="080808fa"/>
+			</StaticImage>
+			<StaticText align="c" origin="0 25" text="@menu_campaign_eow_retire" font="header_3" textColor="f97b03"/>
+			<StaticImage align="c" origin="0 -8">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="400" sizeY="4" color="f97b03"/>
+			</StaticImage>
+			<StaticText align="c" origin="-18 -35" name="#EndOfWeek_Final_BH_Reward" text="@menu_campaign_eow_retire_expl" font="header_4" textColor="f0e3cc">
+				<StaticImage align="r" origin="44 0">
+					<RenderObject2D texture="data/textures/gui/customization/unlock_bh.dds" scaleX="0.8" scaleY="0.8"/>
+				</StaticImage>
+			</StaticText>
+
+		</Item>
+	</StaticImage>
+
+	<Button align="lb" origin="-1200 -660">
+		<ButtonText align="l" origin="10 0" text="@menu_campaign_show_map" font="header_2" textColor="f0e3cc"/>
+		<OnHover>
+			<RenderObject2D texture="data/textures/gui/button_hover_01.tga" scaleX="1.2" color="f0e3cc"/>
+			<ButtonText align="l" origin="10 0" text="@menu_campaign_show_map" font="header_2" textColor="211e1d"/>
+		</OnHover>
+		<OnClick>
+			<RenderObject2D texture="data/textures/gui/button_hover_01.tga" scaleX="1.2" color="40392b"/>
+			<Action type="Hide" target="Menu_CampaignEndOfWeek"/>
+		</OnClick>
+	</Button>
+</Item>
+
+</GUIItems>

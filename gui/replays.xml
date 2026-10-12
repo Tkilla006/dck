@@ -1,0 +1,249 @@
+<GUIItems>
+
+<Item name="Menu_Replays" origin="0 0" hidden="true">
+	<OnOpen>
+		<Action type="Hide" target="Menu_Main"/>
+		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
+		<Action type="TriggerEvent" target="GUI_GAME_REPLAYS_MENU_OPENED"/> <!-- used to do on-demand thumbnail loading and update the mission generator seed -->
+	</OnOpen>
+
+	<OnClose>
+		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
+		<Action type="Show" target="Menu_Main"/>
+	</OnClose>
+
+	<OnKeyDown key0="27">
+		<Action type="Click" target="Menu_Replays_Back"/>
+	</OnKeyDown>
+
+	<StaticImage origin="0 0">
+		<RenderObject2D texture="data/textures/gui/bg_texture.dds" sizeX="7680" color="f0e3cc26" sizeY="1920" texRepeatX="3" texRepeatY="1"/>
+	</StaticImage>
+
+	<StaticImage name="ScreenBg" origin="0 0">
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2560" sizeY="9999" color="0c0b0bbf"/>
+		<OnScrollDown>
+			<Action type="ScrollListForward" target="#Replays_ItemList"/>
+		</OnScrollDown>
+		<OnScrollUp>
+			<Action type="ScrollListBackward" target="#Replays_ItemList"/>
+		</OnScrollUp>
+		<StaticImage align="l" origin="-128 0">
+			<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipX="true" />
+		</StaticImage>
+		<StaticImage align="r" origin="128 0">
+			<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipY="true" />
+		</StaticImage>
+	</StaticImage>
+
+	<!-- for mocking up the scroll list area -->
+	<!--
+	<StaticImage origin="-960 50" hidden="true">
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="640" sizeY="1280" color="ffffff40"/>
+		<StaticImage name="ScrollBar" align="r" origin="32 0">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="1320" color="0c0b0b80"/>
+			<StaticImage name="ScrollBarButton" align="t" origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="400" color="f97b0340"/>
+			</StaticImage>
+		</StaticImage>
+	</StaticImage>
+	-->
+
+	<!-- 
+		Note/Warning1: all named elements here must also be found in the coop.xml buttontemplate 
+		Note/Warning2: all named elements here must also be found in the coop.xml #Menu_Endscreen_Detailed_ViewReplay 
+	-->
+	
+	<Button name="#Replays_ButtonTemplate" hidden="true">
+		<RenderObject2D texture="data/textures/gui/missions/mission_bg.tga" color="ffffffc8"/>
+		<OnHover>
+			<RenderObject2D texture="data/textures/gui/missions/mission_hover.tga" color="ffffff"/>
+			<!-- <Action type="ScrollListHere" target="#Replays_ItemList"/> -->
+		</OnHover>
+		<OnClick>
+			<RenderObject2D texture="data/textures/gui/missions/mission_selected.tga" color="ffffff"/>
+			<Action type="Hide" target="Menu_MissionSelect"/>
+
+			<!-- modified by the game to be send with the right parameters -->
+			<Action type="TriggerEvent" target="GUI_GAME_REPLAY_CLICKED"/>
+		</OnClick>
+		<OnScrollDown>
+			<Action type="ScrollListForward" target="#Replays_ItemList"/>
+		</OnScrollDown>
+		<OnScrollUp>
+			<Action type="ScrollListBackward" target="#Replays_ItemList"/>
+		</OnScrollUp>
+
+		<StaticImage origin="0 54" name="#MapThumbnail">
+			<RenderObject2D sizeX="421" sizeY="230" blendMode="add" color="fff2da"/>
+		</StaticImage>
+
+		<StaticImage origin="-239 146" name="#ScenarioTooltip">
+			<!-- replaced by the scenario texture, taken from #ScenarioImages in globals.xml  -->
+			<RenderObject2D texture="data/textures/gui/missions/mission_clear_hostiles.dds"/>
+		</StaticImage>
+
+		<!-- Note: if you modify here, make sure to also modify in endscreen.xml, same structure for challenges, which is expected in code -->
+		<Item name="#Challenges" origin="261 78" hidden="false">
+			<StaticText name="#FailedColor" hidden="true" textColor="40392b"/>
+			<StaticText name="#CompletedColor" hidden="true" textColor="f97b03"/>
+			<Item name="#StartOrigin" origin="0 -48" hidden="true"/>
+
+			<!-- name  matters, linked in code -->
+			<StaticImage>
+				<RenderObject2D texture="data/textures/gui/challenge_empty_small.dds"/>
+				<StaticImage name="#challenge_0" tooltip="@menu_m_challenge_singleplan_ttip">
+					<RenderObject2D texture="data/textures/gui/missions/challenge_oneplan.dds"/>
+				</StaticImage>
+			</StaticImage>
+
+			<StaticImage>
+				<RenderObject2D texture="data/textures/gui/challenge_empty_small.dds"/>
+				<StaticImage name="#challenge_1" tooltip="@menu_m_challenge_onetroop_ttip">
+					<RenderObject2D texture="data/textures/gui/missions/challenge_oneman.dds"/>
+				</StaticImage>
+			</StaticImage>
+
+			<StaticImage>
+				<RenderObject2D texture="data/textures/gui/challenge_empty_small.dds"/>
+				<StaticImage name="#challenge_2" tooltip="@menu_m_challenge_realtime_ttip">
+					<RenderObject2D texture="data/textures/gui/missions/challenge_nopause.dds"/>
+				</StaticImage>
+			</StaticImage>
+
+			<StaticImage>
+				<RenderObject2D texture="data/textures/gui/challenge_empty_small.dds"/>
+				<StaticImage name="#challenge_3" tooltip="@menu_m_challenge_stealth_ttip">
+					<RenderObject2D texture="data/textures/gui/missions/challenge_noalarm.dds"/>
+				</StaticImage>
+			</StaticImage>
+
+			<StaticImage>
+				<RenderObject2D texture="data/textures/gui/challenge_empty_small.dds"/>
+				<StaticImage name="#challenge_4">
+					<RenderObject2D texture="data/textures/gui/missions/challenge_clockrace.dds"/>
+					<Item name="#tooltip_keeper" tooltip="@menu_m_challenge_clockrace_ttip"/> <!-- custom handling of tooltip -->
+				</StaticImage>
+			</StaticImage>
+
+			<StaticImage>
+				<RenderObject2D texture="data/textures/gui/challenge_empty_small.dds"/>
+				<StaticImage name="#challenge_5" tooltip="@menu_m_challenge_cleanrun_ttip">
+					<RenderObject2D texture="data/textures/gui/missions/challenge_cleanrun.dds"/>
+				</StaticImage>
+			</StaticImage>
+		</Item>
+
+		<Item origin="0 -94" sizeX="530">
+			<StaticText name="#MapName" text="@menu_replays_last_replay" font="header_4" fontAutoDownsize="true" textColor="f0e3cc"/>
+		</Item>
+
+		<Item align="b" origin="0 53">
+			<StaticImage name="#star0" origin="-53 0">
+				<RenderObject2D texture="data/textures/gui/missions/mission_stars.tga"/>
+			</StaticImage>
+			<StaticImage name="#star1" origin="-3 0">
+				<RenderObject2D texture="data/textures/gui/missions/mission_stars.tga"/>
+			</StaticImage>
+			<StaticImage name="#star2" origin="47 0">
+				<RenderObject2D texture="data/textures/gui/missions/mission_stars.tga"/>
+			</StaticImage>
+		</Item>
+
+		<!-- delete button -->
+		<Button align="rb" origin="-32 22" tooltip="@menu_generic_delete">
+			<RenderObject2D texture="data/textures/gui/mod_remove.dds" color="ffffff80" scaleX="0.8" scaleY="0.8"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/mod_remove_hover.dds" scaleX="0.8" scaleY="0.8"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/mod_remove.dds" scaleX="0.8" scaleY="0.8"/>
+				<Action type="TriggerEvent" target="GUI_GAME_REPLAY_DELETE"/>
+			</OnClick>
+		</Button>
+
+		<Item name="#ReplayFileName" tooltip="replay file name" hidden="true"/>
+
+		<StaticImage origin="36 134" align="lb">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="256" sizeY="30" color="322c1e"/>
+			<StaticText name="#ReplayDate" origin="5 0" align="l" text="01/12/2021" font="paragraph_3" textColor="f0e3cc"/>
+		</StaticImage>
+		
+		<StaticImage origin="-42 134" align="rb">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="80" sizeY="30" color="322c1e"/>
+			<StaticText name="#ReplayTime" origin="0 0" align="c" text="HH:MM:SS" font="paragraph_3" textColor="f0e3cc"/>			
+		</StaticImage>
+
+		<StaticImage name="#ReplayIncompatible" origin="0 50" hidden="true" ignoreFocus="true">
+			<RenderObject2D texture="data/textures/gui/replay_incompatible.dds" color="ff5a5a7f"/>
+		</StaticImage>
+		<StaticImage name="#ReplayIncompatibleMods" align="tr" origin="-50 -35" hidden="true" ignoreFocus="true">
+			<RenderObject2D texture="data/textures/gui/replay_incompatible.dds" color="ff5a5a7f" scaleX="0.5" scaleY="0.5"/>
+		</StaticImage>		
+		<StaticImage name="#ReplayBackcompatible" align="tr" origin="-50 -35" hidden="true" ignoreFocus="true">
+			<RenderObject2D texture="data/textures/gui/replay_incompatible.dds" scaleX="0.5" scaleY="0.5"/>
+		</StaticImage>
+	</Button>
+
+	<Item name="MissionListBg" origin="-1180 660" align="l" sizeX="2560" hidden="false">
+		<StaticText align="l" text="@menu_replays_replays_upper" font="header_3" textColor="f97b03"/>
+		<StaticImage origin="0 -40" align="l">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="732" sizeY="4" color="f97b03"/>
+		</StaticImage>
+	</Item>
+
+	<ItemList name="#Replays_ItemList" origin="0 7" sizeX="2450" sizeY="1138" direction="y" clipChildren="true">
+		<ButtonGraphics align="r" origin="32 0">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b0340"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+			</OnClick>
+		</ButtonGraphics>
+
+		<!-- this is duplicated by the game as many times as needed -->
+		<Item name="#MissionSelect_Page" hidden="true" sizeX="2440" sizeY="380">
+			<OnOpen>
+				<Action type="TriggerEvent" target="GUI_GAME_MISSIONSELECT_PAGE_OPENED"/>
+			</OnOpen>
+			<OnClose>
+				<Action type="TriggerEvent" target="GUI_GAME_MISSIONSELECT_PAGE_CLOSED"/>
+			</OnClose>
+			<OnScrollDown>
+				<Action type="ScrollListForward" target="#Replays_ItemList"/>
+			</OnScrollDown>
+			<OnScrollUp>
+				<Action type="ScrollListBackward" target="#Replays_ItemList"/>
+			</OnScrollUp>
+		</Item>
+	</ItemList>
+
+	<StaticImage name="#ReplaysEmpty">
+		<RenderObject2D texture="data/textures/gui/thumbleweed_anim_mb.dds" blendMode="add" scaleX="1.8" scaleY="1.8">
+			<TextureAnimation frameWidth="256" frameHeight="256" startFrame="0" endFrame="11" animationTimeMS="1000" numLoops="-1"/>
+		</RenderObject2D>
+	</StaticImage>
+
+	<Item align="sv" origin="0 -688">
+		<StaticImage name="ScreenFooter" align="b" origin="0 -32" stealFocus="true">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="211e1d"/>
+		</StaticImage>
+
+		<!-- back button -->
+		<Button name="Menu_Replays_Back" align="lb" origin="-1200 -4">
+			<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e3cc" flipX="false"/>
+				<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="40392b" flipX="false"/>
+				<Action type="Hide" target="Menu_Replays"/>
+			</OnClick>
+		</Button>
+	</Item>
+</Item>
+
+</GUIItems>

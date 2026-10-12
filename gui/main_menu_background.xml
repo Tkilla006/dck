@@ -1,0 +1,198 @@
+<GUIItems>
+
+<Item name="Menu_Main_Blurred_Background" hidden="true">
+	<OnOpen>
+		<Action type="MoveToBackground" target="Menu_Main_Blurred_Background"/>
+	</OnOpen>
+
+	<!-- 
+		name is Menu_Main_Background_## , where the game tries to match the unit name as ## 
+			if not found, it will fall back to Rangers
+	-->
+	<Item name="Menu_Main_Background_Rangers">
+		<!-- global speed with which the layers move around in their default animation -->
+		<Item name="#parallax_speed" origin="2.0 0.0"/>  <!-- the layers go out of screen in 16:10, no Y movement -->
+		<!--<Item name="#parallax_speed" origin="0.0 0"/>-->
+
+		<!-- multiplier for how much the screen moves with the mouse horizontally/vertically (vertical (y) movement scales the image, while horizontal (x) movement will add on top of the default horizontal animation -->
+		<Item name="#parallax_mouse_scale" origin="0.0 0.0"/>
+		<!--<Item name="#parallax_mouse_scale" origin="-1.0 0.003"/>-->
+
+		<Item name="#parallax_elements">
+			<Item>
+				<StaticImage origin="0 0">
+					<RenderObject2D texture="data/textures/gui/keyart_Rangers/rangers_bg_01_back.dds"/>
+
+					<!-- 'origin' for these is a multiplier for the movement speed of each layer, gets multiplied by #parallax_speed -->
+					<Item name="#parallax_layer_speed" origin="0.5 0"/>
+				</StaticImage>
+			</Item>
+
+			<Item>
+				<StaticImage>
+					<RenderObject2D texture="data/textures/gui/keyart_Rangers/rangers_bg_01_mid.dds"/>
+					<Item name="#parallax_layer_speed" origin="4.0 0"/>
+				</StaticImage>
+			</Item>
+
+			<Item>
+				<StaticImage origin="0 -100" hidden="false">
+					<RenderObject2D texture="data/textures/gui/keyart_Rangers/rangers_bg_01_scrolling_dust.dds" texRepeatX="3" texRepeatY="1" sizeX="4300" sizeY="1300" color="ffe2b040" blendMode="screen"/>
+					<ImageAnim type="scroll" speed="0.08" direction="1 0"/>
+					<Item name="#parallax_layer_speed" origin="6.0 0"/>
+				</StaticImage>
+			</Item>
+
+			<Item>
+				<StaticImage>
+					<RenderObject2D texture="data/textures/gui/keyart_Rangers/rangers_bg_01_fore.dds"/>
+					<Item name="#parallax_layer_speed" origin="10 0"/>
+				</StaticImage>
+			</Item>
+
+			<Item>
+				<StaticImage>
+					<RenderObject2D texture="data/textures/gui/keyart_Rangers/rangers_bg_01_fore_dust.dds"/>
+					<Item name="#parallax_layer_speed" origin="20 0"/>
+				</StaticImage>
+			</Item>
+
+			<Item>
+				<StaticImage origin="0 200" hidden="false">
+					<RenderObject2D texture="data/textures/gui/keyart_Rangers/rangers_bg_01_scrolling_dust.dds" texRepeatX="2" sizeX="4300" sizeY="2000" color="ffe2b020" blendMode="add_masked"/>
+					<ImageAnim type="scroll" speed="0.05" direction="1 0"/>
+					<Item name="#parallax_layer_speed" origin="25 0"/>
+				</StaticImage>
+			</Item>
+
+			<Item>
+				<StaticImage origin="0 200" hidden="false">
+					<RenderObject2D texture="data/textures/gui/keyart_Rangers/rangers_bg_01_scrolling_dust.dds" texRepeatX="2" sizeX="4100" sizeY="2000" flipX="true" color="ffe2b010" blendMode="add_masked"/>
+					<ImageAnim type="scroll" speed="0.01" direction="-1 0"/>
+					<Item name="#parallax_layer_speed" origin="40 0"/>
+				</StaticImage>
+			</Item>
+		</Item>
+	</Item>
+
+
+	<Item name="Menu_Main_Background_Nowheraki" hidden="true">
+		<Item name="#parallax_speed" origin="2.0 0"/>
+		<Item name="#parallax_mouse_scale" origin="0.0 0.0"/>
+		<!-- <Item name="#parallax_mouse_scale" origin="-1.0 0.003"/> -->
+		<Item name="#parallax_elements">
+			<Item>
+				<StaticImage origin="0 0">
+					<RenderObject2D texture="data/textures/gui/keyart_Nowheraki/nowheraki_bg_01_back.dds"/>
+					<Item name="#parallax_layer_speed" origin="0.5 0"/>
+				</StaticImage>
+			</Item>
+
+			<Item>
+				<StaticImage>
+					<RenderObject2D texture="data/textures/gui/keyart_Nowheraki/nowheraki_bg_01_mid.dds"/>
+					<Item name="#parallax_layer_speed" origin="3.0 0"/>
+				</StaticImage>
+			</Item>
+
+			<Item>
+				<StaticImage origin="0 -100" hidden="false">
+					<RenderObject2D texture="data/textures/gui/keyart_Rangers/rangers_bg_01_scrolling_dust.dds" texRepeatX="3" texRepeatY="1" sizeX="4300" sizeY="1000" color="ff7b00cc" blendMode="add_masked"/>
+					<ImageAnim type="scroll" speed="-0.01" direction="1 0"/>
+					<Item name="#parallax_layer_speed" origin="6.0 0"/>
+				</StaticImage>
+			</Item>
+
+			<Item>
+				<StaticImage>
+					<RenderObject2D texture="data/textures/gui/keyart_Nowheraki/nowheraki_bg_01_fore.dds"/>
+					<Item name="#parallax_layer_speed" origin="6 0"/>
+				</StaticImage>
+			</Item>
+
+			<Item>
+				<StaticImage>
+					<RenderObject2D texture="data/textures/gui/keyart_Nowheraki/nowheraki_bg_01_trooper.dds"/>
+					<Item name="#parallax_layer_speed" origin="20 0"/>
+				</StaticImage>
+			</Item>
+
+			<Item>
+				<StaticImage origin="0 200" hidden="false">
+					<RenderObject2D texture="data/textures/gui/keyart_Rangers/rangers_bg_01_scrolling_dust.dds" texRepeatX="3" sizeX="4300" sizeY="2000" color="c48f5e20" blendMode="add_masked"/>
+					<ImageAnim type="scroll" speed="0.04" direction="-1 0"/>
+					<Item name="#parallax_layer_speed" origin="25 0"/>
+				</StaticImage>
+			</Item>
+
+			<Item>
+				<StaticImage origin="0 200" hidden="false">
+					<RenderObject2D texture="data/textures/gui/keyart_Rangers/rangers_bg_01_scrolling_dust.dds" texRepeatX="2" sizeX="4100" sizeY="2000" flipX="true" color="c48f5e10" blendMode="add_masked"/>
+					<ImageAnim type="scroll" speed="0.08" direction="1 0"/>
+					<Item name="#parallax_layer_speed" origin="40 0"/>
+				</StaticImage>
+			</Item>
+		</Item>
+	</Item>
+	
+	<Item name="Menu_Main_Background_CIA" hidden="true">
+		<Item name="#parallax_speed" origin="2.0 0"/>
+		<Item name="#parallax_mouse_scale" origin="0.0 0.0"/>
+		<!-- <Item name="#parallax_mouse_scale" origin="-1.0 0.003"/> -->
+		<Item name="#parallax_elements">
+			<Item>
+				<StaticImage origin="0 0">
+					<RenderObject2D texture="data/textures/gui/keyart_cia/cia_bg_01_back.dds"/>
+					<Item name="#parallax_layer_speed" origin="0.5 0"/>
+				</StaticImage>
+			</Item>
+
+			<Item>
+				<StaticImage>
+					<RenderObject2D texture="data/textures/gui/keyart_cia/cia_bg_01_mid.dds"/>
+					<Item name="#parallax_layer_speed" origin="3.0 0"/>
+				</StaticImage>
+			</Item>
+
+			<Item>
+				<StaticImage origin="0 -100" hidden="false">
+					<RenderObject2D texture="data/textures/gui/keyart_Rangers/rangers_bg_01_scrolling_dust.dds" texRepeatX="3" texRepeatY="1" sizeX="4300" sizeY="1000" color="cdbfafcc" blendMode="add_masked"/>
+					<ImageAnim type="scroll" speed="-0.01" direction="1 0"/>
+					<Item name="#parallax_layer_speed" origin="6.0 0"/>
+				</StaticImage>
+			</Item>
+
+			<Item>
+				<StaticImage>
+					<RenderObject2D texture="data/textures/gui/keyart_cia/cia_bg_01_fore.dds"/>
+					<Item name="#parallax_layer_speed" origin="6 0"/>
+				</StaticImage>
+			</Item>
+
+			<Item>
+				<StaticImage>
+					<RenderObject2D texture="data/textures/gui/keyart_cia/cia_bg_01_trooper.dds"/>
+					<Item name="#parallax_layer_speed" origin="20 0"/>
+				</StaticImage>
+			</Item>
+
+			<Item>
+				<StaticImage origin="0 200" hidden="false">
+					<RenderObject2D texture="data/textures/gui/keyart_Rangers/rangers_bg_01_scrolling_dust.dds" texRepeatX="3" sizeX="4300" sizeY="2000" color="cd4a3020" blendMode="add_masked"/>
+					<ImageAnim type="scroll" speed="0.04" direction="-1 0"/>
+					<Item name="#parallax_layer_speed" origin="25 0"/>
+				</StaticImage>
+			</Item>
+
+			<Item>
+				<StaticImage origin="0 200" hidden="false">
+					<RenderObject2D texture="data/textures/gui/keyart_Rangers/rangers_bg_01_scrolling_dust.dds" texRepeatX="2" sizeX="4100" sizeY="2000" flipX="true" color="cd4a3010" blendMode="add_masked"/>
+					<ImageAnim type="scroll" speed="0.08" direction="1 0"/>
+					<Item name="#parallax_layer_speed" origin="40 0"/>
+				</StaticImage>
+			</Item>
+		</Item>
+	</Item>	
+</Item>
+
+</GUIItems>

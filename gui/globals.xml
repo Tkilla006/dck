@@ -1,0 +1,232 @@
+<GUIItems>
+
+<!--
+	these are used in multiple places throughout various xml files
+-->
+
+
+<!-- used in campaign.xml and squad.xml, they both have the same list -->
+<Item name="#squads_list_panel" align="l" hidden="true">
+	<StaticImage align="l" origin="0 74">
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="548" sizeY="1044" color="605a4f33"/>
+	</StaticImage>
+
+	<StaticImage align="l" origin="0 516">
+		<RenderObject2D texture="data/textures/gui/customization/list_border.tga"/>
+		<StaticImage align="t" origin="0 -8">
+			<RenderObject2D texture="data/textures/gui/customization/scroll_arrow.dds" flipY="true" color="f97b03" scaleX="0.8" scaleY="0.8"/>
+		</StaticImage>
+	</StaticImage>
+
+	<StaticImage align="l" origin="0 -368">
+		<RenderObject2D texture="data/textures/gui/customization/list_border.tga" flipY="true"/>
+		<StaticImage align="b" origin="0 8">
+			<RenderObject2D texture="data/textures/gui/customization/scroll_arrow.dds"  color="f97b03" scaleX="0.8" scaleY="0.8"/>
+		</StaticImage>
+	</StaticImage>
+
+	<!-- goes down to -228 on Y -->
+	<Checkbox name="#squad_item_template" autoSiblingsUncheck="true" hidden="true" align="l" origin="0 0" sizeX="544" sizeY="240">
+		<OnScrollDown>
+			<Action type="ScrollListForward" target="#squads_list_parent"/>
+		</OnScrollDown>
+		<OnScrollUp>
+			<Action type="ScrollListBackward" target="#squads_list_parent"/>
+		</OnScrollUp>
+
+
+
+		<UncheckedState sizeX="544" sizeY="240">
+			<RenderObject2D texture="data/textures/gui/squads/rangers_bg_01.dds" color="ffffffb3" blendMode="normal"/>
+			<OnOpen>
+				<Action type="Hide" target="#squad_item_selected"/>
+				<Action type="Hide" target="#squad_item_hover_but"/>				
+			</OnOpen>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/squads/rangers_bg_01.dds" blendMode="none"/>
+				<Action type="Show" target="#squad_item_hover_but"/>
+			</OnHover>
+			<OnHoverEnd>
+				<Action type="Hide" target="#squad_item_hover_but"/>
+				<Action type="Hide" target="#squad_item_selected"/>
+			</OnHoverEnd>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/squads/rangers_bg_01.dds" blendMode="none"/>
+				<Action type="Show" target="#squad_item_selected"/>				
+				<Action type="ScrollListHere" target="#squads_list_parent"/>
+				<Action type="TriggerEvent" target="GUI_GAME_SQUADSCREEN_SELECTION_CHANGED"/>
+				<Action type="PlaySound" target="gui_customize_equip"/>
+			</OnClick>
+		</UncheckedState>
+
+		<CheckedState acceptInput="false" sizeX="544" sizeY="240">
+			<OnOpen>
+				<Action type="Show" target="#squad_item_selected"/>
+			</OnOpen>
+
+			<OnClose>
+				<Action type="Hide" target="#squad_item_selected"/>
+			</OnClose>
+			<RenderObject2D texture="data/textures/gui/squads/rangers_bg_01.dds" blendMode="none"/>
+		</CheckedState>
+
+		<StaticImage name="Squad Identity" align="b" origin="0 6">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b40" sizeX="536" sizeY="98"/>
+			<StaticText name="#unit_name" align="l" origin="6 24" text="UNIT NAME" font="header_5" textColor="f0e3cc"/>
+			<StaticText name="#squad_name" align="l" origin="4 -16" text="BONNIE'S BOOMSTICK" font="header_3" textColor="f97b03"/>
+			<StaticText name="#squad_id" font="header_3" hidden="true"/>
+		</StaticImage>
+		<Item name="Squad Level" align="rt" origin="-25 -45">
+			<!-- <RenderObject2D texture="data/textures/gui/customization/trooper_rank_10.dds"/> -->
+			<StaticText name="#squad_level" align="r" origin="0 0" text="20" font="header_3" textColor="f97b03">
+				<Item align="l">
+					<StaticText align="r" origin="-5 -10" text="@menu_squads_level" font="header_5" textColor="f0e3cc"/>
+				</Item>
+			</StaticText>
+		</Item>
+
+		<StaticImage name="#squad_item_hover_but" origin="0 0" hidden="true">
+			<StaticImage align="t" origin="0 118">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="544" sizeY="4" color="f97b03"/>
+			</StaticImage>
+			<StaticImage align="b" origin="0 -118">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="544" sizeY="4" color="f97b03"/>
+			</StaticImage>
+			<StaticImage align="l" origin="-272 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="4" sizeY="234" color="f97b03"/>
+			</StaticImage>
+			<StaticImage align="r" origin="272 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="4" sizeY="234" color="f97b03"/>
+			</StaticImage>
+		</StaticImage>	
+		<StaticImage name="#squad_item_selected" origin="0 0" hidden="true">
+			<StaticImage align="c" origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="544" sizeY="234" blendMode="overlay" color="e5e5e5"/>
+			</StaticImage>
+			<StaticImage align="t" origin="0 118">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="544" sizeY="4" color="f0e3cc"/>
+			</StaticImage>
+			<StaticImage align="b" origin="0 -118">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="544" sizeY="4" color="f0e3cc"/>
+			</StaticImage>
+			<StaticImage align="l" origin="-272 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="4" sizeY="234" color="f0e3cc"/>
+			</StaticImage>
+			<StaticImage align="r" origin="272 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="4" sizeY="234" color="f0e3cc"/>
+			</StaticImage>
+		</StaticImage>
+<!--
+		<Item name="#doctrines_available" align="lt" origin="4 -10" sizeX="120" sizeY="48" clipChildren="true" hidden="false">
+			<StaticImage align="r" origin="0 0">
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" scaleX="0.8" scaleY="0.8" color="0c0b0b80"/>
+			</StaticImage>						
+			<StaticImage align="l" origin="10 0">
+				<RenderObject2D texture="data/textures/gui/squads/squad_doctrine_point.dds" sizeX="40" sizeY="40" color="f97b03"/>
+				<StaticText name="#available_doctrines" origin="50 0" align="l" text="99" font="header_4" textColor="f97b03"/>
+			</StaticImage>	
+		</Item>		
+		
+		<Item name="#bh_available" align="lt" origin="4 -60" sizeX="120" sizeY="48" clipChildren="true" hidden="false">
+			<StaticImage align="r" origin="0 0">
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" scaleX="0.8" scaleY="0.8" color="0c0b0b80"/>
+			</StaticImage>						
+			<StaticImage align="l" origin="10 0">
+				<RenderObject2D texture="data/textures/gui/customization/unlock_bh.dds" sizeX="40" sizeY="40" />
+				<StaticText name="#available_doctrines" origin="50 0" align="l" text="99" font="header_4" textColor="f97b03"/>
+			</StaticImage>	
+		</Item>				
+-->	
+		<StaticImage name="#squad_locked_img" align="lt" origin="20 -22">
+			<RenderObject2D texture="data/textures/gui/locked_icon.dds" scaleX="0.6" scaleY="0.6" color="919191cc"/>
+		</StaticImage>
+	</Checkbox>
+
+
+	<!-- Use this to figure out the position/size of the scroll list
+	<StaticImage align="l" origin="0 125">
+		<RenderObject2D texture="data/textures/gui/menu_darkbrown_background.tga" sizeX="548" sizeY="940" color="ffffffe6"/>
+	</StaticImage>
+	-->
+	<ItemList name="#squads_list_parent" align="l" origin="4 74" direction="y" sizeX="548" sizeY="1044" clipChildren="true">
+		<ButtonGraphics align="l" origin="-26 0">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="20" sizeY="32" color="f97b0340"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="20" sizeY="32" color="f97b03ff"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="20" sizeY="32" color="f97b03ff"/>
+			</OnClick>
+		</ButtonGraphics>
+		<!-- items cloned from #squad_item_template are added here dynamically by the game -->
+	</ItemList>
+
+	<Item align="c" origin="275 -528">
+		<Button align="r" origin="-10 0">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="265" sizeY="64" color="f0e3cc"/>
+			<ButtonText text="@menu_generic_new" font="header_3" textColor="211e1d"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="265" sizeY="64" color="f97b03"/>
+				<ButtonText text="@menu_generic_new" font="header_3" textColor="211e1d"/>			
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="265" sizeY="64" color="40392b"/>
+				<ButtonText text="@menu_generic_new" font="header_3" textColor="f0e3cc"/>
+				<Action type="Show" target="#NewSquadDialog"/>
+			</OnClick>
+		</Button>
+		<Button align="l" origin="10 0">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="265" sizeY="64" color="9b3f40"/>
+			<ButtonText text="@menu_generic_delete" font="header_3" textColor="211e1d"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="265" sizeY="64" color="f33638"/>
+				<ButtonText text="@menu_generic_delete" font="header_3" textColor="211e1d"/>	
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="265" sizeY="64" color="40392b"/>
+				<ButtonText text="@menu_generic_delete" font="header_3" textColor="f33638"/>
+				<Action type="TriggerEvent" target="GUI_GAME_SQUADSCREEN_DELETE"/>
+			</OnClick>
+		</Button>
+	</Item>
+</Item>
+
+<!-- these are used as links to the scenario thumbnails everywhere throughout the UI -->
+<Item name="#ScenarioImages" hidden="true">
+	<StaticImage name="None">
+	</StaticImage>
+	<StaticImage name="ClearHostiles" tooltip="@scenario_type_clear">
+		<RenderObject2D texture="data/textures/gui/missions/mission_clear_hostiles.dds"/>
+	</StaticImage>
+	<StaticImage name="HostageRescue" tooltip="@scenario_type_hostage">
+		<RenderObject2D texture="data/textures/gui/missions/mission_hostage_rescue.dds"/>
+	</StaticImage>
+	<StaticImage name="BombDefusal" tooltip="@scenario_type_bomb">
+		<RenderObject2D texture="data/textures/gui/missions/mission_bomb_defusal.dds"/>
+	</StaticImage>
+	<StaticImage name="Abduction" tooltip="@scenario_type_abduction">
+		<RenderObject2D texture="data/textures/gui/missions/mission_abduction.dds"/>
+	</StaticImage>
+	<StaticImage name="StopExecution" tooltip="@scenario_type_execution">
+		<RenderObject2D texture="data/textures/gui/missions/mission_execution.dds"/>
+	</StaticImage>
+	<StaticImage name="ProtectVIP" tooltip="@scenario_type_vip_escort">
+		<RenderObject2D texture="data/textures/gui/missions/mission_vip_protection.dds"/>
+	</StaticImage>
+	<StaticImage name="ExtractVIP" tooltip="@scenario_type_vip_extract">
+		<RenderObject2D texture="data/textures/gui/missions/mission_vip_recovery.dds"/>
+	</StaticImage>
+	<StaticImage name="RaidOnStronghold" tooltip="@scenario_type_stronghold_raid">
+		<RenderObject2D texture="data/textures/gui/missions/mission_stronghold.dds"/>
+	</StaticImage>
+	<StaticImage name="QRF_Survivors" tooltip="@scenario_type_qrf_survivors">
+		<RenderObject2D texture="data/textures/gui/missions/mission_qrf.dds"/>
+	</StaticImage>
+	<StaticImage name="QRF_Sabotage" tooltip="@scenario_type_qrf_sabotage">
+		<RenderObject2D texture="data/textures/gui/missions/mission_qrf.dds"/>
+	</StaticImage>
+	<StaticImage name="QRF_Survivors_Sabotage" tooltip="@scenario_type_qrf_survivors_sabotage">
+		<RenderObject2D texture="data/textures/gui/missions/mission_qrf.dds"/>
+	</StaticImage>
+</Item>
+</GUIItems>

@@ -1,0 +1,1264 @@
+<GUIItems>
+
+<Item name="#HUD_Deploy" origin="0 -650" align="sv" hidden="true">
+	<Item name="HUD_Paused">
+		<Button origin="0 0" tooltip="@menu_deploy_go_ttip">
+			<RenderObject2D texture="data/textures/hud/play_normal.dds"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/hud/play_hover.dds"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/hud/play_normal.dds"/>
+				<Action type="TriggerEvent" target="GUI_GAME_HUD_TOGGLE_PLAY_PAUSE"/>
+			</OnClick>
+		</Button>
+	</Item>
+</Item>
+
+<Item name="HUD" origin="0 -650" align="sv" hidden="true">
+	<Button origin="-200 0" name="HUD_PlanningMode" tooltip="@menu_hud_resume">
+		<RenderObject2D texture="data/textures/hud/play_normal.dds"/>
+		<OnHover>
+			<RenderObject2D texture="data/textures/hud/play_hover.dds"/>
+		</OnHover>
+		<OnClick>
+			<RenderObject2D texture="data/textures/hud/play_hover.dds"/>
+			<Action type="TriggerEvent" target="GUI_GAME_HUD_TOGGLE_PLAY_PAUSE"/>
+		</OnClick>
+
+		<StaticImage origin="200 0">
+			<RenderObject2D texture="data/textures/hud/timer_planning.dds"/>
+		</StaticImage>
+
+		<StaticText origin="200 0" name="HUD_Timer" text="XX:XX" font="header_3" textColor="ffa203"/>
+		<StaticText origin="200 60" text="@menu_hud_planning" font="header_4" textColor="ffa203"/>
+
+		<Button name="#HUD_ResetPlans" origin="-200 0" tooltip="@menu_hud_resetplans_ttip">
+			<RenderObject2D texture="data/textures/hud/reset_plan_normal.dds"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/hud/reset_plan_hover.dds"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/hud/reset_plan_hover.dds"/>
+				<Action type="TriggerEvent" target="GUI_GAME_HUD_RESET_PLANS"/>
+			</OnClick>
+		</Button>
+	</Button>
+
+	<Button origin="-200 0" name="HUD_Paused" tooltip="@menu_hud_resume">
+		<RenderObject2D texture="data/textures/hud/play_normal.dds"/>
+		<OnHover>
+			<RenderObject2D texture="data/textures/hud/play_hover.dds"/>
+		</OnHover>
+		<OnClick>
+			<RenderObject2D texture="data/textures/hud/play_normal.dds"/>
+			<Action type="TriggerEvent" target="GUI_GAME_HUD_TOGGLE_PLAY_PAUSE"/>
+		</OnClick>
+
+		<StaticImage origin="200 0">
+			<RenderObject2D texture="data/textures/hud/timer_paused.dds"/>
+		</StaticImage>
+
+		<StaticText origin="200 0" name="HUD_Timer" text="XX:XX" font="header_3" textColor="ffa203"/>
+	</Button>
+
+	<Button name="HUD_Playing" origin="-200 0" tooltip="@menu_hud_pause">
+		<RenderObject2D texture="data/textures/hud/pause_normal.dds"/>
+		<OnHover>
+			<RenderObject2D texture="data/textures/hud/pause_hover.dds"/>
+		</OnHover>
+		<OnClick>
+			<RenderObject2D texture="data/textures/hud/pause_normal.dds"/>
+			<Action type="TriggerEvent" target="GUI_GAME_HUD_TOGGLE_PLAY_PAUSE"/>
+		</OnClick>
+
+		<StaticImage origin="200 0">
+			<RenderObject2D texture="data/textures/hud/timer_playing.dds"/>
+		</StaticImage>
+
+		<StaticText origin="200 0" name="HUD_Timer" text="XX:XX" font="header_3" textColor="bbebff"/>
+	</Button>
+
+	<Item name="HUD_NVG" origin="300 0">
+		<Button name="HUD_NVG_ON" tooltip="@menu_hud_nvg_off">
+			<RenderObject2D texture="data/textures/hud/toggle_nvg_off_normal.dds"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/hud/toggle_nvg_off_hover.dds"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/hud/toggle_nvg_off_normal.dds"/>
+				<Action type="TriggerEvent" target="GUI_GAME_HUD_TOGGLE_NVG_ON_OFF"/>
+				<Action type="Hide" target="HUD_NVG_ON"/>
+				<Action type="Show" target="HUD_NVG_OFF"/>
+			</OnClick>
+		</Button>
+		<Button name="HUD_NVG_OFF" hidden="true" tooltip="@menu_hud_nvg_on">
+			<RenderObject2D texture="data/textures/hud/toggle_nvg_on_normal.dds"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/hud/toggle_nvg_on_hover.dds"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/hud/toggle_nvg_on_normal.dds"/>
+				<Action type="TriggerEvent" target="GUI_GAME_HUD_TOGGLE_NVG_ON_OFF"/>
+				<Action type="Hide" target="HUD_NVG_OFF"/>
+				<Action type="Show" target="HUD_NVG_ON"/>
+			</OnClick>
+		</Button>
+	</Item>
+
+	<Item name="HUD_SUSSY" origin="400 0">
+		<Button name="HUD_SUSSY_ON" tooltip="@menu_hud_sussy_on">
+			<RenderObject2D texture="data/textures/hud/toggle_sussy_on_normal.dds"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/hud/toggle_sussy_on_hover.dds"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/hud/toggle_sussy_on_normal.dds"/>
+				<Action type="TriggerEvent" target="GUI_GAME_HUD_TOGGLE_SUSSYAREAS_ON_OFF"/>
+				<Action type="Hide" target="HUD_SUSSY_ON"/>
+				<Action type="Show" target="HUD_SUSSY_OFF"/>
+			</OnClick>
+		</Button>
+		<Button name="HUD_SUSSY_OFF" hidden="true" tooltip="@menu_hud_sussy_off">
+			<RenderObject2D texture="data/textures/hud/toggle_sussy_off_normal.dds"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/hud/toggle_sussy_off_hover.dds"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/hud/toggle_sussy_off_normal.dds"/>
+				<Action type="TriggerEvent" target="GUI_GAME_HUD_TOGGLE_SUSSYAREAS_ON_OFF"/>
+				<Action type="Hide" target="HUD_SUSSY_OFF"/>
+				<Action type="Show" target="HUD_SUSSY_ON"/>
+			</OnClick>
+		</Button>
+	</Item>
+
+	<Item origin="200 0">
+		<Button tooltip="@menu_deploy_mainmenu">
+			<RenderObject2D texture="data/textures/hud/menu_normal.dds"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/hud/menu_hover.dds"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/hud/menu_normal.dds"/>
+				<Action type="TriggerEvent" target="GUI_GAME_HUD_OPEN_INGAME_MENU"/>
+			</OnClick>
+		</Button>
+	</Item>
+
+	<Item name="HUD_GoCodes" origin="900 0" align="sh">
+		<StaticImage origin="80 0">
+			<RenderObject2D texture="data/textures/hud/go_a_transp.dds"/>
+		</StaticImage>
+		<Button name="HUD_GoCodeA" origin="80 0" tooltip="@menu_hud_gocodea_ttip">
+			<RenderObject2D texture="data/textures/hud/go_a_normal.dds"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/hud/go_a_hover.dds"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/hud/go_a_normal.dds"/>
+				<Action type="Hide" target="HUD_GoCodeA"/>
+				<Action type="TriggerEvent" target="GUI_GAME_HUD_GOCODE_A"/>
+			</OnClick>
+
+			<StaticImage origin="0 4" align="b"> <!-- this parent of #gocode_num needs to be here, whether its an image or not -->
+				<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga" scaleX="0.9" scaleY="0.9" color="211e1d"/>
+				<StaticText name="#gocode_num" text="2" font="header_5" textColor="f0e3cc"/>
+			</StaticImage>
+
+			<StaticImage origin="0 10" name="#auto_on" align="t" hidden="true">
+				<ImageAnim type="rotate"  speed="-0.1"/>
+				<RenderObject2D texture="data/textures/hud/go_codes_auto.dds"/>
+			</StaticImage>
+
+			<StaticImage origin="-75 0" name="#gocode_go_text" align="c">
+				<RenderObject2D texture="data/textures/hud/go_shadow.dds" scaleX="1.4" scaleY="1.05" color="ffffffcc"/>
+				<StaticText origin="-25 0" text="@menu_hud_gocode_go" align="r" font="header_3" fontAutoDownsize="true" textColor="f0e3cc"/>
+			</StaticImage>
+		</Button>
+
+		<StaticImage origin="140 0">
+			<RenderObject2D texture="data/textures/hud/go_b_transp.dds"/>
+		</StaticImage>
+		<Button name="HUD_GoCodeB" origin="140 0" tooltip="@menu_hud_gocodeb_ttip">
+			<RenderObject2D texture="data/textures/hud/go_b_normal.dds"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/hud/go_b_hover.dds"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/hud/go_b_normal.dds"/>
+				<Action type="Hide" target="HUD_GoCodeB"/>
+				<Action type="TriggerEvent" target="GUI_GAME_HUD_GOCODE_B"/>
+			</OnClick>
+
+			<StaticImage origin="0 4" align="b">
+				<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga" scaleX="0.9" scaleY="0.9" color="211e1d"/>
+				<StaticText name="#gocode_num" text="2" font="header_5" textColor="f0e3cc"/>
+			</StaticImage>
+
+			<StaticImage origin="0 10" name="#auto_on" align="t" hidden="true">
+				<ImageAnim type="rotate"  speed="-0.1"/>
+				<RenderObject2D texture="data/textures/hud/go_codes_auto.dds"/>
+			</StaticImage>
+		</Button>
+
+		<StaticImage origin="200 0">
+			<RenderObject2D texture="data/textures/hud/go_c_transp.dds"/>
+		</StaticImage>
+		<Button name="HUD_GoCodeC" origin="200 0" tooltip="@menu_hud_gocodec_ttip">
+			<RenderObject2D texture="data/textures/hud/go_c_normal.dds"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/hud/go_c_hover.dds"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/hud/go_c_normal.dds"/>
+				<Action type="Hide" target="HUD_GoCodeC"/>
+				<Action type="TriggerEvent" target="GUI_GAME_HUD_GOCODE_C"/>
+			</OnClick>
+
+			<StaticImage origin="0 4" align="b">
+				<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga" scaleX="0.9" scaleY="0.9" color="211e1d"/>
+				<StaticText name="#gocode_num" text="2" font="header_5" textColor="f0e3cc"/>
+			</StaticImage>
+
+			<StaticImage origin="0 10" name="#auto_on" align="t" hidden="true">
+				<ImageAnim type="rotate"  speed="-0.1"/>
+				<RenderObject2D texture="data/textures/hud/go_codes_auto.dds"/>
+			</StaticImage>
+		</Button>
+
+		<StaticImage origin="260 0">
+			<RenderObject2D texture="data/textures/hud/go_d_transp.dds"/>
+		</StaticImage>
+		<Button name="HUD_GoCodeD" origin="260 0" tooltip="@menu_hud_gocoded_ttip">
+			<RenderObject2D texture="data/textures/hud/go_d_normal.dds"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/hud/go_d_hover.dds"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/hud/go_d_normal.dds"/>
+				<Action type="Hide" target="HUD_GoCodeD"/>
+				<Action type="TriggerEvent" target="GUI_GAME_HUD_GOCODE_D"/>
+			</OnClick>
+
+			<StaticImage origin="0 4" align="b">
+				<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga" scaleX="0.9" scaleY="0.9" color="211e1d"/>
+				<StaticText name="#gocode_num" text="2" font="header_5" textColor="f0e3cc"/>
+			</StaticImage>
+
+			<StaticImage origin="0 10" name="#auto_on" align="t" hidden="true">
+				<ImageAnim type="rotate"  speed="-0.1"/>
+				<RenderObject2D texture="data/textures/hud/go_codes_auto.dds"/>
+			</StaticImage>
+		</Button>
+	</Item>
+
+	<Item name="HUD_Sniper" origin="-1000 0" sizeX="360" align="sh">
+		<StaticImage origin="-15 0" align="l">
+			<RenderObject2D texture="data/textures/hud/sniper_text_shadow.dds" color="ffffffcc"/>
+		</StaticImage>
+		<StaticText text="@menu_hud_sniper_support" align="l" font="header_3" fontAutoDownsize="true" textColor="f0e3cc">
+			<Button origin="120 0" align="r" tooltip="@menu_hud_sniperfire_ttip">
+				<RenderObject2D texture="data/textures/hud/sniper_normal.dds"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/hud/sniper_hover.dds"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/hud/sniper_normal.dds"/>
+					<Action type="TriggerEvent" target="GUI_GAME_HUD_SNIPER"/>
+				</OnClick>
+			</Button>			
+		</StaticText>
+	</Item>
+</Item>
+
+<Item name="HUD_Replay" origin="0 -650" align="sv" hidden="true">
+	<OnOpen>
+		<Action type="Show" target="HUD_Replay_Full"/>
+		<Action type="Hide" target="HUD_Replay_Hidden"/>
+	</OnOpen>
+
+	<Button name="HUD_Replay_Hidden" origin="1206 0" align="sh" tooltip="@menu_hud_rpl_show">
+		<RenderObject2D texture="data/textures/hud/replay/hide_hud.dds" flipY="true"/>
+		<OnHover>
+			<RenderObject2D texture="data/textures/hud/replay/hide_hud_hover.dds" flipY="true"/>
+		</OnHover>
+		<OnClick>
+			<RenderObject2D texture="data/textures/hud/replay/hide_hud_hover.dds" scaleX="0.8" scaleY="0.8" flipY="true"/>
+			<Action type="Show" target="HUD_Replay_Full"/>
+			<Action type="Hide" target="HUD_Replay_Hidden"/>
+		</OnClick>
+	</Button>
+
+	<Item name="HUD_Replay_Full">
+		<Item name="progress_bar" align="b" origin="0 62">
+			<StaticImage name="stroke">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1808" sizeY="24" color="40392b80"/>
+			</StaticImage>
+
+			<StaticImage name="HUD_Replay_ProgressBar">
+				<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="1800" sizeY="16" color="211e1dcc"/>
+				<OnCursorDown>
+					<Action type="TriggerEvent" target="GUI_GAME_REPLAY_HUD_JUMP_TO"/>
+				</OnCursorDown>
+				<OnDrag>
+					<Action type="TriggerEvent" target="GUI_GAME_REPLAY_HUD_JUMP_TO_DRAG"/>
+				</OnDrag>
+				<OnCursorMove>
+					<Action type="TriggerEvent" target="GUI_GAME_REPLAY_HUD_PROGRESS_HOVER"/>
+				</OnCursorMove>
+				<StaticImage name="#bar_element">
+					<RenderObject2D texture="data/textures/gui/square.tga"  sizeX="1" sizeY="16" color="f0e3cc"/>
+				</StaticImage>
+			</StaticImage>
+		</Item>
+
+		<Button origin="1206 0" align="sh" tooltip="@menu_hud_rpl_hide">
+			<RenderObject2D texture="data/textures/hud/replay/hide_hud.dds" flipY="false"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/hud/replay/hide_hud_hover.dds" flipY="false"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/hud/replay/hide_hud_hover.dds" scaleX="0.8" scaleY="0.8" flipY="false"/>
+				<Action type="Hide" target="HUD_Replay_Full"/>
+				<Action type="Show" target="HUD_Replay_Hidden"/>
+			</OnClick>
+		</Button>
+
+		<StaticImage origin="-290 0">
+			<RenderObject2D texture="data/textures/hud/replay/play_capsule.dds"/>
+
+			<Button origin="6 0" align="l" tooltip="@menu_hud_rpl_rewind_ttip">
+				<RenderObject2D texture="data/textures/hud/replay/skip_end.dds" flipX="true"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/hud/replay/skip_end_hover.dds" flipX="true"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/hud/replay/skip_end.dds" flipX="true"/>
+					<Action type="TriggerEvent" target="GUI_GAME_REPLAY_HUD_REWIND"/>
+				</OnClick>
+			</Button>
+
+			<Button origin="-6 0" align="r" tooltip="@menu_hud_rpl_fwd_ttip">
+				<RenderObject2D texture="data/textures/hud/replay/skip_end.dds"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/hud/replay/skip_end_hover.dds"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/hud/replay/skip_end.dds"/>
+					<Action type="TriggerEvent" target="GUI_GAME_REPLAY_HUD_JUMP_FWD"/>
+				</OnClick>
+			</Button>
+		</StaticImage>
+
+		<Button name="HUD_Paused" origin="-287 0" tooltip="@menu_hud_rpl_pause">
+			<RenderObject2D texture="data/textures/hud/play_normal.dds"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/hud/play_hover.dds"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/hud/play_normal.dds"/>
+				<Action type="TriggerEvent" target="GUI_GAME_HUD_TOGGLE_PLAY_PAUSE"/>
+			</OnClick>
+
+			<StaticImage origin="287 0">
+				<RenderObject2D texture="data/textures/hud/timer_paused.dds"/>
+			</StaticImage>
+
+			<StaticText origin="287 0" name="HUD_Timer" text="XX:XX" font="header_3" textColor="ffa203"/>
+		</Button>
+
+		<Button name="HUD_Playing" origin="-286 0" tooltip="@menu_hud_rpl_pause">
+			<RenderObject2D texture="data/textures/hud/pause_normal.dds"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/hud/pause_hover.dds"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/hud/pause_normal.dds"/>
+				<Action type="TriggerEvent" target="GUI_GAME_HUD_TOGGLE_PLAY_PAUSE"/>
+			</OnClick>
+
+			<StaticImage origin="286 0">
+				<RenderObject2D texture="data/textures/hud/timer_playing.dds"/>
+			</StaticImage>
+
+			<StaticText origin="286 0" name="HUD_Timer" text="XX:XX" font="header_3" textColor="bbebff"/>
+		</Button>
+
+		<StaticImage origin="255 0">
+			<RenderObject2D texture="data/textures/hud/replay/playspeed_capsule.dds"/>
+
+			<Button origin="8 0" align="l" tooltip="@menu_hud_rpl_slower">
+				<RenderObject2D texture="data/textures/hud/replay/playspeed_minus.dds"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/hud/replay/playspeed_minus_hover.dds"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/hud/replay/playspeed_minus.dds"/>
+					<Action type="TriggerEvent" target="GUI_GAME_REPLAY_HUD_SLOWER"/>
+				</OnClick>
+			</Button>
+
+			<Button origin="-8 0" align="r" tooltip="@menu_hud_rpl_faster">
+				<RenderObject2D texture="data/textures/hud/replay/playspeed_plus.dds"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/hud/replay/playspeed_plus_hover.dds"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/hud/replay/playspeed_plus.dds"/>
+					<Action type="TriggerEvent" target="GUI_GAME_REPLAY_HUD_FASTER"/>
+				</OnClick>
+			</Button>
+			<StaticText origin="0 0" name="HUD_Replay_Speed" text="x1" font="header_4" textColor="f0e3cc"/>
+		</StaticImage>
+
+		<Button origin="400 0" tooltip="@menu_hud_rpl_toggle_cinematic">
+			<RenderObject2D texture="data/textures/hud/replay/hide_ui.dds"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/hud/replay/hide_ui_hover.dds"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/hud/replay/hide_ui.dds"/>
+				<Action type="TriggerEvent" target="GUI_GAME_REPLAY_TOGGLE_CINEMATIC_MODE"/>
+			</OnClick>
+		</Button>
+
+		<Item name="HUD_NVG" origin="494 0" >
+			<Button name="HUD_NVG_ON" tooltip="@menu_hud_nvg_off">
+				<RenderObject2D texture="data/textures/hud/toggle_nvg_off_normal.dds"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/hud/toggle_nvg_off_hover.dds"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/hud/toggle_nvg_off_normal.dds"/>
+					<Action type="TriggerEvent" target="GUI_GAME_HUD_TOGGLE_NVG_ON_OFF"/>
+					<Action type="Hide" target="HUD_NVG_ON"/>
+					<Action type="Show" target="HUD_NVG_OFF"/>
+				</OnClick>
+			</Button>
+			<Button name="HUD_NVG_OFF" hidden="true" tooltip="@menu_hud_nvg_on">
+				<RenderObject2D texture="data/textures/hud/toggle_nvg_on_normal.dds"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/hud/toggle_nvg_on_hover.dds"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/hud/toggle_nvg_on_normal.dds"/>
+					<Action type="TriggerEvent" target="GUI_GAME_HUD_TOGGLE_NVG_ON_OFF"/>
+					<Action type="Hide" target="HUD_NVG_OFF"/>
+					<Action type="Show" target="HUD_NVG_ON"/>
+				</OnClick>
+			</Button>
+		</Item>
+
+		<Button origin="588 0" tooltip="@menu_deploy_mainmenu">
+			<RenderObject2D texture="data/textures/hud/menu_normal.dds"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/hud/menu_hover.dds"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/hud/menu_normal.dds"/>
+				<Action type="TriggerEvent" target="GUI_GAME_HUD_OPEN_INGAME_MENU"/>
+			</OnClick>
+		</Button>
+	</Item>
+</Item>
+
+<Item name="AttackInfo" hidden="true">
+	<StaticImage name="AttackInfo" origin="0 -220" sizeX="430" sizeY="400">
+		<RenderObject2D texture="data/textures/gui/menu_pause_black.tga" color="ffffffc8" sizeX="450" sizeY="400"/>
+
+		<StaticText name="weapon" text="weapon" font="paragraph_3" align="lt" origin="0 0" textColor="fffff3"/>
+		<StaticText name="ammo" text="ammo" font="paragraph_3" align="lt" origin="0 -25" textColor="fffff3"/>
+		<StaticText name="scope" text="scope" font="paragraph_3" align="lt" origin="0 -50" textColor="fffff3"/>
+
+		<StaticText text="------------------------------------------------------------------------" font="paragraph_3" align="lt" origin="0 -75" textColor="fab903"/>
+		<StaticText name="readyTime" text="readyTime" font="paragraph_3" align="lt" origin="0 -100" textColor="fab903"/>
+		<StaticText name="changeInTime" text="changeInTime" font="paragraph_3" align="lt" origin="0 -125" textColor="fab903"/>
+		<StaticText name="reloadTime" text="reloadTime" font="paragraph_3" align="lt" origin="0 -150" textColor="fab903"/>
+
+		<Item origin="0 -225" aligb="lt" sizeX="430" sizeY="400">
+			<StaticText text="------------------------------------------------------------------------" font="paragraph_3" align="lt" origin="0 50" textColor="fab903"/>
+			<StaticText name="attacktype" text="attack type" font="paragraph_3" align="lt" origin="0 25" textColor="fff903"/>
+			<StaticText name="accuracy" origin="0 0" text="txt" font="paragraph_3" align="lt" textColor="fab903"/>
+			<StaticText name="damage" origin="0 -25" text="txt" font="paragraph_3" align="lt" textColor="fab903"/>
+			<StaticText name="crit" origin="0 -50" text="txt" font="paragraph_3" align="lt" textColor="fab903"/>
+			<StaticText name="ap" origin="0 -75" text="txt" font="paragraph_3" align="lt" textColor="fab903"/>
+			<StaticText name="aimTime" origin="0 -100" text="txt" font="paragraph_3" align="lt" textColor="fab903"/>
+			<StaticText name="rps" origin="0 -125" text="txt" font="paragraph_3" align="lt" textColor="fab903"/>
+		</Item>
+	</StaticImage>
+</Item>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- executioner countdowns -->
+<Item hidden="true">
+	<OnOpen>
+		<Action type="MoveToBackground" target="this"/>
+	</OnOpen>
+
+	<!-- this gets cloned for every live executioner and placed in the parent-->
+	<Item name="#HUD_Countdown_Tooltip" origin="0 0" hidden="true">
+		<StaticImage origin="71 0">
+			<RenderObject2D texture="data/textures/gui/tooltip/hud_countdown_bg.tga"/>
+			<StaticText name="#Timer" origin="8 0" text="00:00" align="c" font="header_5" textColor="cc3314"/>
+		</StaticImage>
+	</Item>
+</Item>
+
+<!-- voicelines -->
+<!-- CRB: hid this since I just use it for debugging -->
+<Item hidden="true">
+	<Item>
+		<Item name="#HUD_Voiceline_Tooltip" origin="0 0" hidden="true">
+			<StaticImage origin="0 0" align="l">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeY="20" color="0c0b0bbf"/>
+				<StaticText name="#Text" origin="0 0" text="00:00" align="c" font="header_5" textColor="cc3314" />
+			</StaticImage>
+		</Item>
+	</Item>
+</Item>
+
+<Item name="HUD_Human_Tooltip" origin="0 0" hidden="true">
+	<OnOpen>
+		<Action type="SetForeground" target="this"/>
+	</OnOpen>
+
+	<!-- colors for #NameHeader, #TeamColorMarker and #Inv_UtilityX. Must type name of humans, otherwise the previously set color will be used. -->
+	<StaticText name="GoodGuy" hidden="true" textColor="144355" />
+	<StaticText name="BadGuy" hidden="true" textColor="55221f" />
+	<StaticText name="Hostage" hidden="true" textColor="34393f" />
+	<StaticText name="Civilian" hidden="true" textColor="34393f" />
+	<StaticText name="#QuantityDefault" hidden="true" textColor="efe2ca" />
+	<StaticText name="#QuantityBad" hidden="true" textColor="f01e00" />
+
+	<StaticImage name="#NameHeader" origin="50 0" align="l">
+		<RenderObject2D texture="data/textures/gui/tooltip/hud_tooltip_nameplate.tga" color="144355" blendMode="normal"/>
+
+		<StaticImage name="#PortraitBackground" origin="-86 0" align="lt">
+			<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperbackground_01.tga"/> <!-- troops portraits don't have this, so add it, even though it's redundant for the others -->
+
+			<StaticImage name="#Portrait">
+				<RenderObject2D texture="data/textures/portraits/ranger1.dds"/>
+
+				<StaticImage name="#InjuryCircle1">
+					<RenderObject2D texture="data/textures/gui/tooltip/hud_tooltip_injuredcircle.dds" color="f9ab03"/>
+				</StaticImage>
+				<StaticImage name="#InjuryCircle2">
+					<RenderObject2D texture="data/textures/gui/tooltip/hud_tooltip_injuredcircle.dds" color="f93703"/>
+				</StaticImage>
+
+				<StaticImage name="#TeamColorMarker">
+					<RenderObject2D texture="data/textures/gui/tooltip/tooltip_circle.dds"/>
+				</StaticImage>
+
+				<StaticImage name="#ClassIcon" origin="30 -8" align="b">
+					<RenderObject2D texture="data/textures/gui/deploy/class_icon_marksman.dds" />
+				</StaticImage>
+			</StaticImage>
+		</StaticImage>
+
+		<StaticImage name="#RankIcon" origin="6 0" align="l">
+			<RenderObject2D texture="data/textures/gui/customization/trooper_rank_01.dds" scaleX="0.4" scaleY="0.4"/>
+
+		</StaticImage>
+
+		<!--
+			NOTE: The positioning for each #Inv element is changed in code, depending if it's visible or not.
+			We go through them from top to bottom. If one is visible, it will be made as a child to the one above it. This way they will be aligned one below the other, in the order of appearance.
+		-->
+
+		<!-- shows up if we have utility items, everything below will become its children -->
+		<StaticImage name="#InvUtilityHeader" origin="0 -26" align="lb">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="320" sizeY="26" color="49443c" blendMode="normal"/>
+
+			<StaticText name="#Injury1" origin="-10 -1" text="@game_injured" align="r" font="header_5" textColor="ffa300ff"/>
+			<StaticText name="#Injury2" origin="-10 -1" text="@game_injured" align="r" font="header_5" textColor="f01e00ff"/>
+			<StaticText name="#Injury3" origin="-10 -1" text="@game_incapacitated" align="r" font="header_5" textColor="f01e00ff"/>
+			<StaticText name="#Fatigue" origin="-10 -1" text="@game_fatigued" hidden="true" align="r" font="header_5" textColor="ffa300ff"/>
+			<StaticText name="#Dead" 	origin="-10 -1" text="@game_endscreen_stats_killed" hidden="true" align="r" font="header_5" textColor="f01e00ff"/>
+
+			 <!--
+			<StaticText name="#Dead" origin="-10 0" text="DEAD" align="r" font="header_5" textColor="ff2525ff" hidden="true"/>
+			-->
+		</StaticImage>
+
+		<!-- shows up if we have a tooltip, everything below will become its children -->
+		<StaticImage name="#InvTooltip" origin="0 -120" align="lb">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="320" sizeY="120" color="211e1dfa" blendMode="normal"/>
+			<StaticText name="#Tooltip" origin="0 0" text="Tooltip" wordWrap="true" align="c" font="paragraph_3" textColor="efe2ca" hidden="false"/>
+		</StaticImage>
+
+		<StaticImage name="#InvUnarmed" origin="0 -120" align="lb">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="320" sizeY="120" color="211e1dfa" blendMode="normal"/>
+			<StaticText origin="0 0" text="@game_unarmed" wordWrap="true" align="c" font="paragraph_3" textColor="efe2ca" hidden="false"/>
+		</StaticImage>
+
+		<StaticImage name="#InvWeapon0" origin="0 -170" align="lb">
+
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="320" sizeY="170" color="211e1dfa" blendMode="normal"/>
+			<StaticText name="#Tooltip" origin="0 0" text="Tooltip" wordWrap="true" align="c" font="paragraph_3" textColor="efe2ca" hidden="true"/>
+			<Item origin="0 13" align="i">
+				<StaticImage>
+					<RenderObject2D texture="data/textures/gui/tooltip/hud_tooltip_bgcircle.tga" color="080808c8" blendMode="normal" sizeX="88" sizeY="88"/>
+					<StaticImage name="#Inv_Selection">
+						<RenderObject2D texture="data/textures/gui/tooltip/tooltip_circle.dds" color="ffffff50"/>
+					</StaticImage>
+				</StaticImage>
+				<StaticImage name="#Icon">
+					<RenderObject2D texture="data/models/weapons/mk20_ssr_ui.dds" scaleX="0.45" scaleY="0.45"/>
+				</StaticImage>
+				<StaticText name="#Quantity" origin="64 16" text="27/32" align="b" font="paragraph_3" textColor="efe2ca"/>
+			</Item>
+
+			<Item name="#scopeattach" align="rt" origin="-30 -16"> <!-- scope always shows up, so keep first -->
+				<StaticImage name="#Icon">
+					<RenderObject2D texture="data/models/weapons/attachments/acog_4x_ui_small.dds" blendMode="none" scaleX="0.6" scaleY="0.6"/>
+				</StaticImage>
+			</Item>
+			<Item name="#muzzleattach" align="rt" origin="-30 -42">
+				<StaticImage name="#Icon">
+					<RenderObject2D texture="data/models/weapons/attachments/silencer_none.dds" blendMode="none" scaleX="0.6" scaleY="0.6"/>
+				</StaticImage>
+			</Item>
+
+			<StaticImage name="footer" origin="0 0" align="lb">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="320" sizeY="26" color="080808d6" blendMode="normal"/>
+				<StaticText name="#Name" origin="0 0" text="Weapon name long dong" wordWrap="true" align="b" font="paragraph_3" textColor="efe2ca"/>
+			</StaticImage>
+		</StaticImage>
+
+		<!-- shows up if we have a weapon, everything below will become its children -->
+		<StaticImage name="#InvWeapon1" origin="0 -146" align="lb">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="320" sizeY="146" color="211e1dfa" blendMode="normal"/>
+			<Item origin="0 13" align="i">
+				<StaticImage>
+					<RenderObject2D texture="data/textures/gui/tooltip/hud_tooltip_bgcircle.tga" color="080808c8" blendMode="normal" sizeX="88" sizeY="88"/>
+					<StaticImage name="#Inv_Selection">
+						<RenderObject2D texture="data/textures/gui/tooltip/tooltip_circle.dds" color="ffffff50"/>
+					</StaticImage>
+				</StaticImage>
+				<StaticImage name="#Icon">
+					<RenderObject2D texture="data/models/weapons/tss4_ui.dds" scaleX="0.45" scaleY="0.45"/>
+				</StaticImage>
+				<StaticText name="#Quantity" origin="64 16" text="27/32" align="b" font="paragraph_3" textColor="efe2ca"/>
+			</Item>
+
+			<Item name="#scopeattach" align="rt" origin="-30 -16"> <!-- scope always shows up, so keep first -->
+				<StaticImage name="#Icon">
+					<RenderObject2D texture="data/models/weapons/attachments/acog_4x_ui_small.dds" blendMode="none" scaleX="0.6" scaleY="0.6"/>
+				</StaticImage>
+			</Item>
+			<Item name="#muzzleattach" align="rt" origin="-30 -42">
+				<StaticImage name="#Icon">
+					<RenderObject2D texture="data/models/weapons/attachments/silencer_none.dds" blendMode="none" scaleX="0.6" scaleY="0.6"/>
+				</StaticImage>
+			</Item>
+
+			<StaticImage name="footer" origin="0 0" align="lb">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="320" sizeY="26" color="080808d6" blendMode="normal"/>
+				<StaticText name="#Name" origin="0 0" text="Weapon name long dong" wordWrap="true" align="b" font="paragraph_3" textColor="efe2ca"/>
+			</StaticImage>
+		</StaticImage>
+
+		<!-- shows up if we have another weapon, everything below will become its children -->
+		<StaticImage name="#InvArmorHelmet" origin="0 -120" align="lb" hidden="true">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="320" sizeY="120" color="211e1dfa" blendMode="normal"/>
+			<Item name="Helmet" origin="-70 0">
+				<StaticImage>
+					<RenderObject2D texture="data/textures/gui/tooltip/hud_tooltip_bgcircle.tga" color="080808c8" blendMode="normal" sizeX="88" sizeY="88"/>
+				</StaticImage>
+				<StaticImage name="#Icon">
+					<RenderObject2D texture="data/models/humans/attachments/mandible_helmet_ui.dds" scaleX="0.45" scaleY="0.45"/>
+				</StaticImage>
+
+				<Item name="HelmetNVG" origin="60 26">
+					<!--
+					<StaticImage>
+						<RenderObject2D texture="data/textures/gui/customization/mod_large_normal.dds" scaleX="0.6" scaleY="0.6" blendMode="none"/>
+					</StaticImage>
+					-->
+					<StaticImage name="#Icon">
+						<RenderObject2D texture="data/models/humans/attachments/nvg_01_ui_small.dds" scaleX="0.6" scaleY="0.6" blendMode="normal"/>
+					</StaticImage>
+				</Item>
+			</Item>
+			<Item name="Armor" origin="70 0">
+				<StaticImage>
+					<RenderObject2D texture="data/textures/gui/tooltip/hud_tooltip_bgcircle.tga" color="080808c8" blendMode="normal" sizeX="88" sizeY="88"/>
+				</StaticImage>
+				<StaticImage name="#Icon">
+					<RenderObject2D texture="data/models/equipment/armor_basic_ui.dds" scaleX="0.45" scaleY="0.45"/>
+				</StaticImage>
+			</Item>
+		</StaticImage>
+
+		<!-- shows up in campaign, when injured, everything below will become its children -->
+		<StaticImage name="#InvInjuryStatus" origin="0 -120" align="lb" hidden="false">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="320" sizeY="120" color="211e1dfa" blendMode="normal"/>
+
+			<Item align="i" name="#InvInjuryStatus_Dead" hidden="true">
+				<StaticImage name="header" origin="0 0" align="lt">
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="320" sizeY="5" color="f01e00e6" blendMode="normal"/>
+				</StaticImage>
+				<StaticText origin="0 0" align="c" text="@menu_hud_KIA" wordWrap="true" font="paragraph_3" textColor="f0e3cc"/>
+			</Item>
+
+			<Item align="i" name="#InvInjuryStatus_Fatigued" hidden="true">
+				<StaticImage name="header" origin="0 0" align="lt">
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="320" sizeY="5" color="ffa300e6" blendMode="normal"/>
+				</StaticImage>
+				<StaticText origin="0 0" align="c" text="@menu_hud_fatigued" wordWrap="true" font="paragraph_3" textColor="f0e3cc"/>
+			</Item>
+
+			<Item sizeX="340" sizeY="120" name="#InvInjuryStatus3" hidden="true">
+				<StaticImage name="header" origin="10 0" align="lt">
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="320" sizeY="5" color="f01e00e6" blendMode="normal"/>
+				</StaticImage>
+				<StaticText origin="0 55" align="bc" text="@menu_hud_injury_unavailable" wordWrap="true" font="paragraph_3" textColor="f0e3cc"/>
+				<StaticText origin="0 8" align="bc" name="#InvInjuryHealCountdown" text="@menu_hud_injury_heal_in_num_days" wordWrap="true" font="paragraph_3" textColor="f0e3cc" hidden="false">
+					<StaticImage origin="-46 0" align="l">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_injury_timer_3day.dds"/>
+					</StaticImage>
+				</StaticText>
+			</Item>
+
+			<Item sizeX="340" sizeY="120" name="#InvInjuryStatus2" hidden="true">
+				<StaticImage name="header" origin="10 0" align="lt">
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="320" sizeY="5" color="ffa300e6" blendMode="normal"/>
+				</StaticImage>
+				<StaticText origin="0 55" align="bc" text="@menu_hud_injury_available" wordWrap="true" font="paragraph_3" textColor="f0e3cc"/>
+				<StaticText origin="0 8" align="bc" name="#InvInjuryHealCountdown" text="@menu_hud_injury_heal_in_num_days" wordWrap="true" font="paragraph_3" textColor="f0e3cc">
+					<StaticImage origin="-46 0" align="l">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_injury_timer_2day.dds"/>
+					</StaticImage>
+				</StaticText>
+			</Item>
+
+			<Item sizeX="340" sizeY="120" name="#InvInjuryStatus1" hidden="true">
+				<StaticImage name="header" origin="10 0" align="lt">
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="320" sizeY="5" color="ffa300e6" blendMode="normal"/>
+				</StaticImage>
+				<StaticText origin="0 55" align="bc" text="@menu_hud_injury_available" wordWrap="true" font="paragraph_3" textColor="f0e3cc"/>
+				<StaticText origin="0 8" align="bc" name="#InvInjuryHealCountdown" text="@menu_hud_injury_heal_in_num_days" wordWrap="true" font="paragraph_3" textColor="f0e3cc">
+					<StaticImage origin="-46 0" align="l">
+						<RenderObject2D texture="data/textures/gui/campaign/campaign_injury_timer_1day.dds"/>
+					</StaticImage>
+				</StaticText>
+			</Item>
+
+		</StaticImage>
+		
+		<!-- 
+			NOTE: This origin is relative to the edge of the RankIcon above.
+			It's here so that it shows up on top of the weapons if the name needs to wrap around.		
+		-->
+		<StaticText name="#Name" origin="6 -2" text="Pintea Haiducul" align="lt" wordWrap="true" font="header_5" textColor="efe2ca"/>		
+
+		<!--
+			Slots for utility pouches 1/2 and support gear. they will be filled as available, from left to right.
+			If these are visible, they will make Header to be visible as well, acting like children to it. They are here (last in the list) because they must show up on top of the other items. Their parent is not changed from code.
+		-->
+		<Item align="i" origin="0 -38">
+			<StaticImage name="#Inv_Utility3" origin="166 0" align="lt">
+				<RenderObject2D texture="data/textures/gui/tooltip/hud_tooltip_bgpouches.tga" color="49443c" blendMode="normal"/>
+				<StaticImage name="#Icon">
+					<RenderObject2D texture="data/textures/gui_ingame/waypoints/charge_breach_path.dds"/>
+					<StaticText name="#Quantity" origin="-8 0" text="3" align="rb" font="paragraph_3" textColor="efe2ca"/>
+				</StaticImage>
+			</StaticImage>
+			<StaticImage name="#Inv_Utility2" origin="110 0" align="lt">
+				<RenderObject2D texture="data/textures/gui/tooltip/hud_tooltip_bgpouches.tga" color="49443c" blendMode="normal"/>
+				<StaticImage name="#Icon">
+					<RenderObject2D texture="data/textures/gui_ingame/waypoints/charge_breach_path.dds"/>
+					<StaticText name="#Quantity" origin="-8 0" text="3" align="rb" font="paragraph_3" textColor="efe2ca"/>
+				</StaticImage>
+			</StaticImage>
+			<StaticImage name="#Inv_Utility1" origin="54 0" align="lt">
+					<RenderObject2D texture="data/textures/gui/tooltip/hud_tooltip_bgpouches.tga" color="49443c" blendMode="normal"/>
+					<StaticImage name="#Icon">
+						<RenderObject2D texture="data/textures/gui_ingame/waypoints/charge_breach_path.dds"/>
+						<StaticText name="#Quantity" origin="-8 0" text="3" align="rb" font="paragraph_3" textColor="efe2ca"/>
+					</StaticImage>
+			</StaticImage>
+			<StaticImage name="#Inv_Utility0" origin="-2 0" align="lt">
+				<RenderObject2D texture="data/textures/gui/tooltip/hud_tooltip_bgpouches.tga" color="49443c" blendMode="normal"/>
+				<StaticImage name="#Icon">
+					<RenderObject2D texture="data/textures/gui_ingame/waypoints/charge_breach_path.dds"/>
+					<StaticText name="#Quantity" origin="-8 0" text="3" align="rb" font="paragraph_3" textColor="efe2ca"/>
+				</StaticImage>
+			</StaticImage>
+		</Item>
+
+		<!-- buffs/debuff bar -->
+		<StaticImage name="#InvBuffs" origin="0 -40" align="lb" hidden="true">
+			<!-- 080808d6  211e1dfa f01e00e6 f0e3cc-->
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="320" sizeY="40" color="080808d6" blendMode="normal"/>
+			<StaticImage name="header" origin="0 -4" align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="320" sizeY="4" color="f0e3cc" blendMode="normal"/>
+			</StaticImage>
+			<StaticText name="#BuffText" origin="0 -4" align="c" text="Scared Shittless Test" wordWrap="true" font="paragraph_3" textColor="f0e3cc"/>
+		</StaticImage>
+
+	</StaticImage>
+</Item>
+
+<!-- CRB: if you want to enable trooper names, use sizeX="306" -->
+<Item name="HUD_Troop_Profile" origin="0 0" sizeX="300" sizeY="84" hidden="true">
+	<!-- Interaction -->
+	<Item name="#isHovered" hidden="true"/>
+	<OnHover>
+		<Action type="Show" target="#isHovered"/>
+
+	</OnHover>
+	<OnHoverEnd>
+		<Action type="Hide" target="#isHovered"/>
+
+	</OnHoverEnd>
+	<OnCursorDown>
+		<Action type="TriggerEvent" target="GUI_GAME_HUD_PROFILE_SELECT"/>
+	</OnCursorDown>
+	<OnRClickDown>
+		<Action type="TriggerEvent" target="GUI_GAME_HUD_PROFILE_OPEN_WAYPOINTS_MENU"/>
+	</OnRClickDown>	
+	<OnScrollDown>
+		<Action type="TriggerEvent" target="GUI_GAME_HUD_PROFILE_SCROLL" iParam="1"/>
+	</OnScrollDown>
+	<OnScrollUp>
+		<Action type="TriggerEvent" target="GUI_GAME_HUD_PROFILE_SCROLL" iParam="0"/>
+	</OnScrollUp>
+
+	<!-- Visuals -->
+	<!-- 4px border, 8px between rows -->
+	<!-- Trooper blue color="144355" -->
+	<StaticImage origin="0 0" align="r">
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="270" sizeY="80" color="0f0f0f8f"/>
+	</StaticImage>
+
+	<!--
+	<StaticImage origin="30 0" align="l">
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="30" sizeY="80" color="efe2ca1f"/>
+	</StaticImage>
+	-->
+	<Item name="#TooltipHook" origin="-46 22" align="r" />
+
+	<StaticImage name="#VoiceIcon" origin="52 0" align="r" sizeX="48" sizeY="70" clipChildren="true">
+		<StaticImage origin="0 0" align="r">
+			<RenderObject2D texture="data/textures/fx/radio_waves.tga" scaleX="1.06" scaleY="1.06">
+				<TextureAnimation frameWidth="120" frameHeight="96" startFrame="0" endFrame="9" animationTimeMS="500" numLoops="-1"/>
+			</RenderObject2D>
+		</StaticImage>
+		<!-- <StaticImage> -->
+			<!-- <RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="0c0b0bbf"/> -->
+		<!-- </StaticImage> -->
+	</StaticImage>
+
+	<StaticImage name="TeamColorBase" origin="0 0" align="rt">
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="260" sizeY="32" color="efe2ca1f" />
+	</StaticImage>
+	<StaticImage name="#TeamColorMarker2" origin="0 0" align="rt">
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="260" sizeY="32" color="efe2ca1f" blendMode="overlay"/>
+	</StaticImage>
+
+
+	<Item name="#Weapon" origin="0 0" align="r" sizeX="280" sizeY="80">
+		<StaticImage origin="0 0" align="rt" hidden="true">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="200" sizeY="32" color="080808d6" blendMode="normal"/>
+		</StaticImage>
+		<StaticImage name="#Icon" origin="20 4" align="b">
+			<RenderObject2D texture="data/models/weapons/mk20_ssr_ui.dds" scaleX="0.35" scaleY="0.35"/>
+		</StaticImage>
+		<StaticText name="#Quantity" origin="-4 0" align="rb" text="27/32"  font="paragraph_3" textColor="efe2ca"/>
+		<StaticText name="#WeaponName" origin="-4 0" align="rb" text="Weapon name long dong" font="paragraph_3" textColor="efe2ca" hidden="true"/>
+	</Item>
+
+	<StaticImage name="#NameHeader" origin="0 0" align="rt">
+		<!-- <RenderObject2D texture="data/textures/gui/tooltip/hud_tooltip_nameplate.tga" color="144355" blendMode="normal"/> -->
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="260" sizeY="32" color="080808d6" blendMode="normal"/>
+
+		<StaticImage name="#RankIcon" origin="-6 0" align="r">
+			<RenderObject2D texture="data/textures/gui/customization/trooper_rank_01.dds" scaleX="0.4" scaleY="0.4"/>
+		</StaticImage>
+	</StaticImage>
+
+
+	<StaticImage name="#HoverCircle" origin="0 0" align="r" hidden="false">
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="270" sizeY="80" color="2b2a29" blendMode="add"/>
+			<StaticImage align="l" origin="-53 0">
+				<RenderObject2D texture="data/textures/gui_ingame/selection_highlight.dds" sizeX="130" sizeY="130" color="ffffffcc" blendMode="add_masked" />
+			</StaticImage>
+	</StaticImage>
+
+
+	<StaticImage name="#PortraitBackground" origin="0 0" align="lt">
+		<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperbackground_01.tga" sizeX="84" sizeY="84" /> <!-- troops portraits don't have this, so add it, even though it's redundant for the others -->
+
+		<StaticImage name="#Portrait" >
+			<RenderObject2D texture="data/textures/portraits/ranger1.dds" sizeX="84" sizeY="84" />
+
+			<StaticImage name="#InjuryCircle1">
+				<RenderObject2D texture="data/textures/gui/tooltip/hud_tooltip_injuredcircle.dds" color="f9ab03" sizeX="84" sizeY="84" />
+			</StaticImage>
+			<StaticImage name="#InjuryCircle2">
+				<RenderObject2D texture="data/textures/gui/tooltip/hud_tooltip_injuredcircle.dds" color="f93703" sizeX="84" sizeY="84" />
+			</StaticImage>
+
+			<StaticImage name="#InjuryDead" origin="42 0" align="l" hidden="true">
+				<StaticImage name="kia_darken" align="l" origin="0 0" >
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="260" sizeY="84" color="2f0808d6" />
+				</StaticImage>
+				<StaticImage name="kia_darken" align="c" origin="0 0" >
+					<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperbackground_01.tga" sizeX="78" sizeY="78" color="ff0003e6"/>
+				</StaticImage>
+				<StaticImage name="kia_circle" align="c" origin="0 0" >
+					<RenderObject2D texture="data/textures/gui/deploy/deploy_injured_heavy.dds" sizeX="78" sizeY="78" color="a40600b3"/>
+				</StaticImage>
+				<StaticImage name="kia_icon" align="c" origin="0 2" >
+					<RenderObject2D texture="data/textures/gui/deploy/deploy_kia.dds"   color="a40600b3"/>
+				</StaticImage>
+				<StaticText align="c" origin="150 -12" text="@game_endscreen_stats_killed" font="paragraph_3" textColor="a40600b3" hidden="false"/>
+				<!-- <StaticImage > -->
+					<!-- <RenderObject2D texture="data/textures/gui_ingame/selection_highlight.dds" sizeX="48" sizeY="48" color="0f0f0fff" blendMode="normal_premultiplied_alpha"/> -->
+				<!-- </StaticImage> -->
+			</StaticImage>
+
+			<StaticImage name="#InjuryIncapacitated" origin="42 0" align="l" hidden="true">
+				<StaticImage align="l" origin="0 0" >
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="260" sizeY="84" color="211e1dd6" />
+				</StaticImage>
+				<StaticImage align="c" origin="0 0" >
+					<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperbackground_01.tga" sizeX="78" sizeY="78" color="211e1de6"/>
+				</StaticImage>
+				<StaticImage align="c" origin="0 0" >
+					<RenderObject2D texture="data/textures/gui/deploy/deploy_injured_heavy.dds" sizeX="78" sizeY="78" color="928a7cb3"/>
+				</StaticImage>
+				<StaticImage name="incapacitated_icon" align="c" origin="0 2" >
+					<RenderObject2D texture="data/textures/gui/deploy/deploy_incapacitated.dds"   color="928a7cb3"/>
+				</StaticImage>
+				<StaticText align="c" origin="150 -12" text="@game_incapacitated"  font="paragraph_3" textColor="928a7cb3" hidden="false"/>
+
+				<!-- <StaticImage > -->
+					<!-- <RenderObject2D texture="data/textures/gui_ingame/selection_highlight.dds" sizeX="48" sizeY="48" color="0f0f0fff" blendMode="normal_premultiplied_alpha"/> -->
+				<!-- </StaticImage> -->
+			</StaticImage>
+
+			<StaticImage name="base" hidden="false" >
+				<!-- <RenderObject2D texture="data/textures/gui_ingame/selection_normal_ghosted.dds" /> -->
+				<RenderObject2D texture="data/textures/gui/tooltip/tooltip_circle.dds"  sizeX="84" sizeY="84" />
+			</StaticImage>
+
+			<StaticImage name="#SelectionCircle">
+				<RenderObject2D texture="data/textures/gui_ingame/selection_normal.dds" sizeX="140" sizeY="140" color="f0e3cc" blendMode="add_masked" />
+				<StaticImage name="#SelectionCircle">
+					<RenderObject2D texture="data/textures/gui_ingame/selection_normal.dds" sizeX="130" sizeY="130" color="000000" blendMode="normal" />
+				</StaticImage>
+			</StaticImage>
+
+			<StaticImage name="#TeamColorMarker" origin="0 0" >
+				<RenderObject2D texture="data/textures/gui/tooltip/tooltip_circle.dds"  sizeX="84" sizeY="84" color="efe2ca1f" />
+			</StaticImage>
+
+			<StaticImage name="#Progress" origin="0 0" align="" hidden="true">
+				<RenderObject2D texture="data/textures/gui_ingame/reload.dds" scaleX=".73" scaleY=".73" blendMode="add">
+					<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="31" animationTimeMS="500" numLoops="0"/>
+				</RenderObject2D>
+				<!-- <StaticImage> -->
+					<!-- <RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="0c0b0bbf"/> -->
+				<!-- </StaticImage> -->
+			</StaticImage>
+			<!--
+			<StaticImage name="#HoverCircle" hidden="true" >
+
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperframehover.tga"  sizeX="90" sizeY="90" color="8e8e8e" blendMode="add_masked" />
+			</StaticImage>
+			-->
+		</StaticImage>
+
+	</StaticImage>
+	
+	<!-- NOTE: This origin is relative to the edge of the RankIcon above -->
+	<StaticText name="#Name" origin="-6 2" text="Pintea Haiducul" align="rt" font="header_5" textColor="efe2ca"/>	
+
+	<StaticImage name="#ClassIcon" origin="0 0" align="lb">
+		<RenderObject2D texture="data/textures/gui/deploy/class_icon_marksman.dds" />
+	</StaticImage>
+
+</Item>
+
+<!-- Trooper profile list -->
+<Item name="HUD_Troop_Profiles" align="lt" origin="210 0" hidden="true">
+	<Item name="#Item" origin="0 -88" ignoreFocus="true" hidden="true" >
+	</Item>
+
+	<Item name="#Container" origin="0 -45" >
+		<OnOpen>
+			<Action type="Show" target="#ToggleOff"/>
+			<Action type="Hide" target="#ToggleOn"/>
+		</OnOpen>
+		<OnClose>
+			<Action type="Hide" target="#ToggleOff"/>
+			<Action type="Show" target="#ToggleOn"/>
+		</OnClose>
+
+		<OnScrollDown>
+			<Action type="TriggerEvent" target="GUI_GAME_HUD_PROFILE_SCROLL" iParam="1"/>
+		</OnScrollDown>
+		<OnScrollUp>
+			<Action type="TriggerEvent" target="GUI_GAME_HUD_PROFILE_SCROLL" iParam="0"/>
+		</OnScrollUp>
+	</Item>
+
+	<!-- color hints -->
+	<StaticText name="#QuantityDefault" hidden="true" textColor="efe2ca" />
+	<StaticText name="#QuantityBad" hidden="true" textColor="f01e00" />
+
+	<OnScrollDown>
+		<Action type="TriggerEvent" target="GUI_GAME_HUD_PROFILE_SCROLL" iParam="1"/>
+	</OnScrollDown>
+	<OnScrollUp>
+		<Action type="TriggerEvent" target="GUI_GAME_HUD_PROFILE_SCROLL" iParam="0"/>
+	</OnScrollUp>
+
+	<!--
+	<StaticImage name="Bg" origin="0 28" align="b">
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="306" sizeY="32" color="0c0b0b"/>
+	</StaticImage>
+	-->
+	<Button name="#ToggleOn" origin="0 -35" align="t" hidden="true" sizeX="128" tooltip="@menu_hud_trooplist_show">
+		<RenderObject2D texture="data/textures/hud/hud_trooperlist.dds"  color="ffffffc8" />
+		<OnHover>
+			<RenderObject2D texture="data/textures/hud/hud_trooperlist_hover.dds"  />
+		</OnHover>
+		<OnClick>
+			<Action type="Show" target="#Container"/>
+		</OnClick>
+	</Button>
+	<Button name="#ToggleOff" origin="0 -35" align="t" sizeX="128" tooltip="@menu_hud_trooplist_hide">
+		<RenderObject2D texture="data/textures/hud/hud_trooperlist.dds" color="ffffffc8" flipY="true" />
+		<OnHover>
+			<RenderObject2D texture="data/textures/hud/hud_trooperlist_hover.dds" flipY="true"/>
+		</OnHover>
+		<OnClick>
+			<Action type="Hide" target="#Container"/>
+		</OnClick>
+	</Button>
+</Item>
+
+<!--
+<Item name="#ScenarioInfo_ObjectiveTitle" align="ct" origin="0 -300" hidden="false">
+	<OnOpen>
+		<Action type="SetForeground" target="this"/>
+	</OnOpen>
+
+	<Item blurBackground="true" blurColor="7f7f7f" sizeX="500" sizeY="100"/>
+	<StaticText name="#scenario_type" origin="0 0" text="HOSTAGE RESCUE" align="c" font="header_2" textColor="f97b03"/>
+</Item>
+-->
+
+<Item name="#ScenarioInfo" align="lt" sizeX="500" hidden="false">
+	<OnOpen>
+		<Action type="SetForeground" target="this"/>
+	</OnOpen>
+
+	<Item name="#scenario_extra_info" align="lt" origin="30 0">
+		<!--
+		<StaticImage origin="-30 0" align="lt" >
+			<RenderObject2D texture="data/textures/gui/deploy/bg_left_gradient.tga" sizeX="1300" sizeY="99999" flipX="false" color="40392bff"/>
+		</StaticImage>
+		-->
+
+		<!-- this is here to capture input and avoid closing the briefing while we hover it -->
+		<StaticImage origin="-30 0" align="lt" stealFocus="true" sizeX="450" sizeY="480">
+			<!-- <RenderObject2D texture="data/textures/gui/square.tga" color="f0e3cc" sizeX="450" sizeY="480" /> -->
+		</StaticImage>
+
+		<StaticImage origin="-2448 300" align="lt" >
+			<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" scaleX="1.6" scaleY="1.3" flipX="true" color="40392b"/>
+		</StaticImage>
+
+		<StaticText name="#map_title" origin="75 -12" text="Map name bla" align="lt" font="header_2" textColor="f0e3cc"/>
+
+		<Item origin="0 -130" align="lt" sizeY="140">
+			<StaticText name="#scenario_type" origin="0 22" text="HOSTAGE RESCUE" align="lt" font="header_4" textColor="f0e3cc"/>
+			<StaticImage origin="0 -20" align="lt">
+				<RenderObject2D texture="data/textures/gui/square.tga" color="f0e3cc" sizeX="370" sizeY="3" />
+			</StaticImage>
+
+			<Item origin="20 -55" align="lt">
+				<Checkbox name="#scenario_condition0" origin="0 0" stealFocus="true" defaultState="UncheckedState" acceptInput="false">
+					<UncheckedState sizeX="38">
+						<!-- <RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" scaleX="0.7" scaleY="0.7"/> -->
+					</UncheckedState>
+					<CheckedState>
+						<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga" scaleX="0.7" scaleY="0.7"/>
+					</CheckedState>
+
+					<StaticText origin="0 0" text="-" align="l" font="paragraph_2" textColor="f0e3cc"/>
+					<StaticText name="#condition_text" origin="10 0" text="Kill all hostiles" align="l" font="paragraph_2" textColor="f0e3cc"/>
+				</Checkbox>
+
+				<Checkbox name="#scenario_condition1" origin="0 -40" stealFocus="true" defaultState="UncheckedState" acceptInput="false">
+					<UncheckedState sizeX="38">
+						<!-- <RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" scaleX="0.7" scaleY="0.7"/> -->
+					</UncheckedState>
+					<CheckedState>
+						<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga" scaleX="0.7" scaleY="0.7"/>
+					</CheckedState>
+
+					<StaticText origin="0 0" text="-" align="l" font="paragraph_2" textColor="f0e3cc"/>
+					<StaticText name="#condition_text" origin="10 0" text="Kill all hostiles" align="l" font="paragraph_2" textColor="f0e3cc"/>
+				</Checkbox>
+			</Item>
+		</Item>
+
+		<Item name="#scenario_challenges" origin="0 -295" align="lt" sizeY="190">
+			<StaticText origin="0 22" text="@menu_m_challenge" align="lt" font="header_4" textColor="f0e3cc"/>
+			<StaticImage origin="0 -20" align="lt">
+				<RenderObject2D texture="data/textures/gui/square.tga" color="f0e3cc" sizeX="370" sizeY="3" />
+			</StaticImage>
+
+			<Item origin="20 -55" align="lt">
+
+				<!-- Note: if you modify here, make sure to also modify in endscreen.xml / hud.xml / replays.xml, same structure for challenges, which is expected in code -->
+				<Item name="#Challenges" origin="0 0" hidden="false">
+					<StaticText name="#FailedColor" hidden="true" textColor="6b5038"/>
+					<StaticText name="#CompletedColor" hidden="true" textColor="f97b03"/>
+					<Item name="#StartOrigin" origin="0 -48" hidden="true"/>
+
+					<!-- name  matters, linked in code -->
+					<StaticImage>
+						<RenderObject2D texture="data/textures/gui/challenge_empty_small.dds"/>
+						<StaticImage name="#challenge_0" tooltip="@menu_m_challenge_singleplan_ttip">
+							<RenderObject2D texture="data/textures/gui/missions/challenge_oneplan.dds"/>
+							<StaticText origin="50 0" text="@menu_m_challenge_singleplan" align="l" font="paragraph_2" textColor="f0e3cc">
+								<Item origin="10 0" align="r">
+									<StaticText origin="0 0" name="#status" text="@menu_m_challenges_active" align="l" font="paragraph_2" textColor="f0e3cc"/>
+								</Item>
+							</StaticText>
+						</StaticImage>
+					</StaticImage>
+
+					<StaticImage>
+						<RenderObject2D texture="data/textures/gui/challenge_empty_small.dds"/>
+						<StaticImage name="#challenge_1" tooltip="@menu_m_challenge_onetroop_ttip">
+							<RenderObject2D texture="data/textures/gui/missions/challenge_oneman.dds"/>
+							<StaticText origin="50 0" text="@menu_m_challenge_onetroop" align="l" font="paragraph_2" textColor="f0e3cc">
+								<Item origin="10 0" align="r">
+									<StaticText origin="0 0" name="#status" text="@menu_m_challenges_active" align="l" font="paragraph_2" textColor="f0e3cc"/>
+								</Item>
+							</StaticText>
+						</StaticImage>
+					</StaticImage>
+
+					<StaticImage>
+						<RenderObject2D texture="data/textures/gui/challenge_empty_small.dds"/>
+						<StaticImage name="#challenge_2" tooltip="@menu_m_challenge_realtime_ttip">
+							<RenderObject2D texture="data/textures/gui/missions/challenge_nopause.dds"/>
+							<StaticText origin="50 0" text="@menu_m_challenge_realtime" align="l" font="paragraph_2" textColor="f0e3cc">
+								<Item origin="10 0" align="r">
+									<StaticText origin="0 0" name="#status" text="@menu_m_challenges_active" align="l" font="paragraph_2" textColor="f0e3cc"/>
+								</Item>
+							</StaticText>
+						</StaticImage>
+					</StaticImage>
+
+					<StaticImage>
+						<RenderObject2D texture="data/textures/gui/challenge_empty_small.dds"/>
+						<StaticImage name="#challenge_3" tooltip="@menu_m_challenge_stealth_ttip">
+							<RenderObject2D texture="data/textures/gui/missions/challenge_noalarm.dds"/>
+							<StaticText origin="50 0" text="@menu_m_challenge_stealth" align="l" font="paragraph_2" textColor="f0e3cc">
+								<Item origin="10 0" align="r">
+									<StaticText origin="0 0" name="#status" text="@menu_m_challenges_active" align="l" font="paragraph_2" textColor="f0e3cc"/>
+								</Item>
+							</StaticText>
+						</StaticImage>
+					</StaticImage>
+
+					<StaticImage>
+						<RenderObject2D texture="data/textures/gui/challenge_empty_small.dds"/>
+						<StaticImage name="#challenge_4">
+							<RenderObject2D texture="data/textures/gui/missions/challenge_clockrace.dds"/>
+							<Item name="#tooltip_keeper" tooltip="@menu_m_challenge_clockrace_ttip"/> <!-- custom handling of tooltip -->
+							<StaticText origin="50 0" text="@menu_m_challenge_clockrace" align="l" font="paragraph_2" textColor="f0e3cc">
+								<Item origin="10 0" align="r">
+									<StaticText origin="0 0" name="#status" text="@menu_m_challenges_active" align="l" font="paragraph_2" textColor="f0e3cc"/>
+								</Item>
+							</StaticText>
+						</StaticImage>
+					</StaticImage>
+
+					<StaticImage>
+						<RenderObject2D texture="data/textures/gui/challenge_empty_small.dds"/>
+						<StaticImage name="#challenge_5" tooltip="@menu_m_challenge_cleanrun_ttip">
+							<RenderObject2D texture="data/textures/gui/missions/challenge_cleanrun.dds"/>
+							<StaticText origin="50 0" text="@menu_m_challenge_cleanrun" align="l" font="paragraph_2" textColor="f0e3cc">
+								<Item origin="10 0" align="r">
+									<StaticText origin="0 0" name="#status" text="@menu_m_challenges_active" align="l" font="paragraph_2" textColor="f0e3cc"/>
+								</Item>
+							</StaticText>
+						</StaticImage>
+					</StaticImage>
+				</Item>
+			</Item>
+		</Item>
+
+		<!--
+		<Item origin="320 -290" align="tr">
+			<Movie name="#campaign_pack_movie" sizeX="640" sizeY="360" autoPlay="true" file="data/movies/tutorial_gocodes.ogv" loop="true" hidden="false"/>
+		</Item>
+		-->
+
+		<Item name="#scenario_description" origin="0 -520" align="lt" sizeY="410">
+			<!-- this is here to capture input and avoid closing the briefing while we hover it -->
+			<StaticImage origin="-30 40" align="lt" stealFocus="true" sizeX="500" sizeY="480">
+				<!-- <RenderObject2D texture="data/textures/gui/square.tga" color="f0e3cc" sizeX="500" sizeY="480" />-->
+			</StaticImage>
+
+			<StaticImage origin="-30 110" align="lt" >
+				<RenderObject2D texture="data/textures/gui/deploy/briefing_bg.dds" scaleY="0.6"/>
+			</StaticImage>
+
+			<StaticText origin="0 22" text="@menu_m_brief" align="lt" font="header_4" textColor="f0e3cc"/>
+			<StaticImage origin="0 -20" align="lt">
+				<RenderObject2D texture="data/textures/gui/square.tga" color="f0e3cc" sizeX="370" sizeY="3" />
+			</StaticImage>
+			<Item origin="0 -30" align="lt" sizeX="410" sizeY="376" clipChildren="true"> <!-- a bit larger to avoid clipping the scroll bar -->
+				<StaticText name="#scenario_description_text" sizeX="390" sizeY="376" origin="-10 0" wordWrap="true" align="tl" text="Kill all hostiles" font="paragraph_3" textColor="f0e3cc">
+					<ScrollButton align="r" origin="20 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="20" sizeY="32" color="f97b0340"/>
+						<OnHover>
+							<RenderObject2D texture="data/textures/gui/square.tga" sizeX="20" sizeY="32" color="f97b03ff"/>
+						</OnHover>
+						<OnClick>
+							<RenderObject2D texture="data/textures/gui/square.tga" sizeX="20" sizeY="32" color="f97b03ff"/>
+						</OnClick>
+					</ScrollButton>
+				</StaticText>
+			</Item>
+			<StaticImage origin="0 0" align="lb">
+				<RenderObject2D texture="data/textures/gui/square.tga" color="f0e3cc" sizeX="370" sizeY="3" />
+			</StaticImage>
+		</Item>
+	</Item>
+
+	<Button name="#scenario_extra_info_button" origin="35 -34" align="lt" tooltip="@menu_m_briefing_toggle">
+		<RenderObject2D texture="data/textures/gui/customization/info_normal.tga" color="ffffffc8" scaleX="1.1" scaleY="1.1"/>
+		<OnHover>
+			<RenderObject2D texture="data/textures/gui/customization/info_hover.tga" scaleX="1.1" scaleY="1.1"/>
+			<!-- <Action type="Show" target="#scenario_extra_info"/> -->
+		</OnHover>
+
+		<!--
+		<OnHoverEnd>
+			<Action type="Hide" target="#scenario_extra_info"/>
+		</OnHoverEnd>
+		-->
+		<OnClick>
+			<Action type="TriggerEvent" target="GUI_GAME_TOOGLE_BRIEFING"/>
+		</OnClick>
+	</Button>
+</Item>
+
+</GUIItems>

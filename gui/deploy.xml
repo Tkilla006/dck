@@ -1,0 +1,481 @@
+<GUIItems>
+
+<EventActionBatch name="GAME_GUI_DEPLOY_SHOW_IN_MISSION">
+	<!-- show the 'customize' and 'remove all' buttons, only shown while customizing in game -->
+	<!-- <Action type="Show" target="#deploy_squad_buttons"/> -->
+	<Action type="Show" target="#deploy_button_customize"/>
+	<Action type="Show" target="#deploy_button_doctrine"/>
+	<Action type="Show" target="#deploy_button_remove_all"/>
+	<Action type="Hide" target="#deploy_reinforcements_status"/>
+
+	<!-- modify the squads selection screen to show the Deploy button -->
+	<Action type="Show" target="#squads_deploy_button"/>
+
+	<!-- show by default, this is only shown in campaign and will be revealed with GAME_GUI_DEPLOY_SHOW_IN_CAMPAIGN -->
+	<Action type="Show" target="#deploy_squad_pick_button"/>
+</EventActionBatch>
+
+<EventActionBatch name="GAME_GUI_DEPLOY_SHOW_IN_MENU">
+	<!-- <Action type="Hide" target="#deploy_squad_buttons"/> -->
+	<Action type="Show" target="#deploy_button_customize"/>
+	<Action type="Show" target="#deploy_button_doctrine"/>
+	<Action type="Hide" target="#deploy_button_remove_all"/>
+	<Action type="Hide" target="#deploy_reinforcements_status"/>
+
+	<Action type="Show" target="#deploy_squad_pick_button"/>
+</EventActionBatch>
+
+<Item name="#deploy_troops_info" origin="800 680" hidden="true" align="shsv">
+	<OnOpen>
+		<!-- if we don't move to foreground, slots will show up on top of this. If we do, the smoke will show above the deploy. Classic case of damned if you do, damned if you don't -->
+		<!-- <Action type="SetForeground" target="this"/> -->
+	</OnOpen>
+	<StaticImage origin="1138 250" align="rt" >
+		<RenderObject2D texture="data/textures/gui/bg_logo_smoke.dds" scaleX="0.8" scaleY="0.6" color="40392be6"/>
+	</StaticImage>
+	<StaticText origin="40 20" text="@menu_deploy_numtroops" align="rt" font="header_4" textColor="f0e3cc"/>
+
+	<Item origin="26 -40" align="lt">
+		<StaticImage name="#slot_empty" hidden="true">
+			<RenderObject2D texture="data/textures/gui/deploy/deploy_status_empty.tga"/>
+		</StaticImage>
+		<StaticImage name="#slot_half_deployed" hidden="true">
+			<RenderObject2D texture="data/textures/gui/deploy/deploy_status_half_filled.tga"/>
+		</StaticImage>
+		<StaticImage name="#slot_deployed" hidden="true">
+			<RenderObject2D texture="data/textures/gui/deploy/deploy_status_filled.tga"/>
+		</StaticImage>
+
+		<!-- this is where the slots above are added dynamically by the game -->
+		<Item name="#slots_parent">
+
+		</Item>
+	</Item>
+</Item>
+
+<Item name="Deploy_Screen" origin="1080 0" hidden="true" align="shsv">
+	<OnOpen>
+	</OnOpen>
+
+	<OnClose>
+		<Action type="Hide" target="#deploy_troops_info"/>
+	</OnClose>
+
+	<!-- this is here to avoid closing the custo/doctrine screen when clicking on their "background" items -->
+	<StaticImage stealFocus="true" align="rt" origin="260 800">
+		<RenderObject2D texture="data/textures/gui/menu_darkbrown_background.tga" sizeX="480" sizeY="900" color="ff000000"/>
+	</StaticImage>
+
+	<!-- header. this is common to all units -->
+	<StaticImage name="#unit_header" align="rt" origin="180 700" sizeX="380" sizeY="160">
+		<RenderObject2D texture="data/textures/gui/squads/rangers_bg_01.dds" sizeX="380" sizeY="160" blendMode="none"/>
+		<Item name="#squad_progress_bar" origin="0 0" sizeX="380" sizeY="8" align="t">
+			<StaticImage>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="380" sizeY="8" color="0c0b0b80"/>
+			</StaticImage>
+			<StaticImage name="#bar_element">
+				<RenderObject2D texture="data/textures/gui/square.tga" color="f97b03" sizeY="8"/>
+			</StaticImage>
+		</Item>		
+		<StaticImage origin="0 0" align="b">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="380" sizeY="80" color="0c0b0b80"/>
+		</StaticImage>
+		<StaticImage origin="0 36" align="b">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="380" sizeY="36" color="0c0b0b00"/>
+			<StaticText name="#unit_name" origin="6 0" text="UNIT NAME" align="l" font="header_5" textColor="f0e3cc"/>
+		</StaticImage>
+		<StaticImage origin="0 0" align="b">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="380" sizeY="42" color="0c0b0b00"/>
+			<StaticText name="#squad_name" origin="6 0" text="ROUGH RIDERS" align="l" font="header_4" textColor="f97b03"/>
+		</StaticImage>
+		<Item name="squad_level" origin="-10 -26" align="rt">
+			<StaticText name="level" origin="-36 0" text="@menu_squads_level" align="r" font="header_5" textColor="f0e3cc">	
+				<StaticImage name="#new_promotion_status" hidden="true" align="l" origin="-40 0">
+					<RenderObject2D texture="data/textures/gui/endscreen_promoted.dds" blendMode="normal" scaleX="0.6" scaleY="0.6">
+						<TextureAnimation frameWidth="48" frameHeight="48" startFrame="0" endFrame="29" animationTimeMS="1000" numLoops="-1"/>
+					</RenderObject2D>
+				</StaticImage>			
+			</StaticText>
+			<StaticText name="#squad_level" origin="0 0" text="16" align="r" font="header_4" textColor="f97b03"/>
+		</Item>
+
+		<Button name="#deploy_squad_pick_button" origin="0 0" align="rb" >
+			<RenderObject2D texture="data/textures/gui/deploy/change_squad_normal.dds" />
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/deploy/change_squad_hover.dds"/>
+			</OnHover>
+			<OnClick>
+				<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_ON_SQUAD_TOGGLE"/>
+			</OnClick>
+		</Button>
+
+		<StaticImage name="#ClassBackgroundLeftBar" origin="-16 0" align="lt">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="8" sizeY="160" color="f97b0380"/>
+		</StaticImage>
+
+		<!--
+		<Item name="#deploy_button_customize" origin="0 -120" align="r" sizeX="396" sizeY="64" hidden="false">
+			<StaticImage origin="8 0" >
+				<RenderObject2D texture="data/textures/gui/square.tga" color="211e1dcc" sizeX="380" sizeY="64"/>
+			</StaticImage>
+			<Button origin="8 0" align="c">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_squad.dds" color="211e1dcc" scaleX="0.8" scaleY="0.8"/>
+				<ButtonText origin="-8 0" text="@menu_deploy_customize" align="c" font="header_4" textColor="f97b03"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/deploy/deploy_squad.dds" color="f97b03" scaleX="0.8" scaleY="0.8"/>
+					<ButtonText origin="-8 0" text="@menu_deploy_customize" align="c" font="header_4" textColor="211e1d"/>
+				</OnHover>
+				<OnClick>
+					<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_ON_CUSTOMIZE_TOGGLE"/>
+				</OnClick>
+			</Button>
+			<StaticImage origin="30 0" align="l">
+				<RenderObject2D texture="data/textures/gui/customization/unlock_stars.dds" sizeX="36" sizeY="36" />
+			</StaticImage>
+			<StaticImage origin="-14 0" align="r">
+				<RenderObject2D texture="data/textures/gui/customization/unlock_stars.dds" sizeX="36" sizeY="36" />
+			</StaticImage>
+			<StaticImage origin="0 0" align="l">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="8" sizeY="64" color="f97b0380"/>
+			</StaticImage>
+		</Item>
+
+		<Item name="#deploy_button_doctrine" origin="0 -192" align="r" sizeX="396" sizeY="64" hidden="false">
+			<StaticImage origin="8 0" >
+				<RenderObject2D texture="data/textures/gui/square.tga" color="211e1dcc" sizeX="380" sizeY="64"/>
+			</StaticImage>
+
+			<Button origin="8 0" align="c">
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_squad.dds" color="211e1dcc" scaleX="0.8" scaleY="0.8"/>
+				<ButtonText origin="0 0" text="@menu_m_doctrine" align="c" font="header_4" textColor="f97b03"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/deploy/deploy_squad.dds" color="f97b03" scaleX="0.8" scaleY="0.8"/>
+					<ButtonText origin="0 0" text="@menu_m_doctrine" align="c" font="header_4" textColor="211e1d"/>
+				</OnHover>
+				<OnClick>
+					<Action type="Hide" target="Squad_Screen"/>
+					<Action type="Hide" target="Customization_Screen"/>
+					<Action type="Show" target="Doctrine_Screen"/>
+				</OnClick>
+			</Button>
+			<StaticImage origin="30 0" align="l">
+				<RenderObject2D texture="data/textures/gui/squads/squad_doctrine_point.dds" sizeX="36" sizeY="36" color="f97b03"/>
+			</StaticImage>
+			<StaticImage origin="-14 0" align="r">
+				<RenderObject2D texture="data/textures/gui/squads/squad_doctrine_point.dds" sizeX="36" sizeY="36" color="f97b03"/>
+			</StaticImage>
+			<StaticImage origin="0 0" align="l">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="8" sizeY="64" color="f97b0380"/>
+			</StaticImage>
+		</Item>
+		-->
+
+		<Item name="#deploy_button_customize" origin="0 -192" align="r" sizeX="396" sizeY="64" hidden="false">
+			<StaticImage origin="8 0" >
+				<RenderObject2D texture="data/textures/gui/square.tga" color="211e1dcc" sizeX="380" sizeY="64"/>
+			</StaticImage>
+			<Button origin="-8 0" align="r">
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" flipX="true" color="080808cc" scaleX="0.7" scaleY="0.7"/>
+				<ButtonText origin="-8 0" text="@menu_deploy_customize" align="r" font="header_4" textColor="f97b03"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" flipX="true" color="f97b03" scaleX="0.7" scaleY="0.7"/>
+					<ButtonText origin="-8 0" text="@menu_deploy_customize" align="r" font="header_4" textColor="211e1d"/>
+				</OnHover>
+				<OnClick>
+					<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_ON_CUSTOMIZE_TOGGLE"/>
+				</OnClick>
+			</Button>
+			<StaticImage origin="30 0" align="l">
+				<RenderObject2D texture="data/textures/gui/customization/unlock_stars.dds" sizeX="40" sizeY="40" />
+			</StaticImage>
+			<StaticImage name="#ClassBackgroundLeftBar" origin="0 0" align="l">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="8" sizeY="64" color="f97b0380"/>
+			</StaticImage>
+		</Item>
+
+		<Item name="#deploy_button_doctrine" origin="0 -120" align="r" sizeX="396" sizeY="64" hidden="false">
+			<StaticImage origin="8 0" >
+				<RenderObject2D texture="data/textures/gui/square.tga" color="211e1dcc" sizeX="380" sizeY="64"/>
+			</StaticImage>
+
+			<Button origin="-8 0" align="r">
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" flipX="true" color="080808cc" scaleX="0.7" scaleY="0.7"/>
+				<ButtonText origin="-8 0" text="@menu_m_doctrine" align="r" font="header_4" textColor="f97b03"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" flipX="true" color="f97b03" scaleX="0.7" scaleY="0.7"/>
+					<ButtonText origin="-8 0" text="@menu_m_doctrine" align="r" font="header_4" textColor="211e1d"/>
+				</OnHover>
+				<OnClick>
+					<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_ON_DOCTRINE_TOGGLE"/>
+				</OnClick>
+			</Button>
+			<StaticImage origin="30 0" align="l">
+				<RenderObject2D texture="data/textures/gui/squads/squad_doctrine_point.dds" sizeX="40" sizeY="40" color="f97b03"/>
+			</StaticImage>
+			<StaticImage name="#ClassBackgroundLeftBar" origin="0 0" align="l">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="8" sizeY="64" color="f97b0380"/>
+			</StaticImage>
+		</Item>
+
+		<StaticImage name="#SlotTemplate" origin="0 0" hidden="true" sizeX="90" sizeY="90">
+		  <RenderObject2D texture="data/textures/gui/deploy/deploy_trooperbackground_01.tga"/>
+		</StaticImage>
+
+		<!--
+			This will be renamed as Rangers, CIA, Nowheraki etc, filled as needed by the game, then added below.
+				You can also overwrite it and make your own custom version. If the game finds a definition that already exists, it will use that one, instead of creating it.
+
+			See: dk2/data/mods/template_new_squad_with_custom_deploy_ui.zip
+		-->
+		<Item name="#UnitTemplate" origin="0 -312" hidden="true" align="rt" sizeX="380">
+
+			<!-- will be renamed as Assault, Support, Marksman etc. -->
+			<StaticImage name="#ClassTemplate" hidden="true" origin="0 0" align="t">
+
+				<!-- background: Y size will vary
+					sizeY = SlotTemplate.y * numRows + #ClassHeader.sizeY + 12
+					eg 148 for one row, 238 for two rows
+				-->
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="380" sizeY="148" color="211e1dcc"/>
+
+				<!-- left bar: Y size will vary, will stretch for the same height as parent -->
+				<StaticImage name="#ClassBackgroundLeftBar" origin="-16 0" align="lt">
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="8" sizeY="148" color="f97b0380"/>
+				</StaticImage>
+
+				<!-- header: color will change depending on unit -->
+				<StaticImage name="#ClassHeader" origin="0 0" align="t">
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="380" sizeY="46" color="cb893e"/>
+					<StaticImage origin="0 0" align="l">
+						<RenderObject2D texture="data/textures/gui/deploy/deploy_class_diagonalbars.dds" color="0c0b0b33"/>
+					</StaticImage>
+					<StaticText name="#ClassName" origin="-6 0" text="@unit_rangers_assault" align="r" font="header_4" textColor="211e1d"/>
+					<StaticImage name="#ClassIcon" origin="8 0" align="l">
+						<RenderObject2D texture="data/textures/gui/deploy/class_name_icon_assaulter.dds"/>
+					</StaticImage>
+				</StaticImage>
+
+				<!-- slots row: each row will go below this one, decrementing Y with
+					nextRow.y = prevRow.y - SlotTemplate.y
+				-->
+				<Item name="#SlotsRow" origin="54 -98" align="lt">
+					<!-- slots will be here, starting from 0,0 and incrementing X by SlotTemplate.x
+						<StaticImage name="#slot0" origin="0 0">
+							<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperbackground_01.tga"/>
+						</StaticImage>
+					-->
+				</Item>
+			</StaticImage>
+		</Item> <!-- #UnitTemplate -->
+
+		<!-- customize / auto-deploy / previous plan
+			Note: origin will be modified by game depending on which unit is shown
+		-->
+		<Item name="#deploy_squad_buttons" origin="-8 0" sizeY="106" hidden="false">
+			<Item name="#deploy_button_remove_all" origin="0 -140" sizeX="396" align="b">
+				<Button origin="8 0">
+					<RenderObject2D texture="data/textures/gui/square.tga" color="211e1dcc" sizeX="380" sizeY="48"/>
+					<ButtonText origin="-6 0" text="@menu_deploy_reset_ttip" align="r" font="header_4" textColor="f97b03"/>
+					<OnHover>
+						<RenderObject2D texture="data/textures/gui/square.tga" color="f97b03" sizeX="380" sizeY="48"/>
+						<ButtonText origin="-6 0" text="@menu_deploy_reset_ttip" align="r" font="header_4" textColor="211e1d"/>
+					</OnHover>
+					<OnClick>
+						<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_UNDEPLOY_ALL"/>
+					</OnClick>
+				</Button>
+				<StaticImage name="#ClassBackgroundLeftBar" origin="0 0" align="l">
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="8" sizeY="48" color="f97b0380"/>
+				</StaticImage>
+			</Item>
+			
+			<!-- shown only in campaign map -->
+			<Item name="#deploy_reinforcements_status" origin="0 -134" sizeX="396" align="b" hidden="true">
+				<Item origin="0 0" align="r" sizeY="48" sizeX="420" clipChildren="true">
+					<StaticImage origin="0 0" align="r">
+						<RenderObject2D texture="data/textures/gui/button_hover_01.tga" flipX="true" color="211e1dcc" />
+					</StaticImage>	
+					<StaticImage origin="14 0" align="l">
+						<RenderObject2D texture="data/textures/gui/deploy/reinforcements_icon.dds" color="f0e3cc"/>
+					</StaticImage>
+					<StaticText name="#deploy_reinforcements_text" origin="-10 0" text="REINFORCEMENTS ETA: X DAYS" align="r" font="header_5" textColor="f0e3cc"/>
+				</Item>
+			</Item>			
+		</Item>
+	</StaticImage>
+
+	<!-- slot base used for map slots -->
+	<StaticImage name="#map_slot_template" hidden="true">
+		<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperbackground_01.tga"/>
+
+		<StaticImage name="#trooper_portrait">
+			<RenderObject2D texture="data/textures/portraits/ranger1.dds"/>
+		</StaticImage>
+
+		<Button name="#deploy_slot_button">
+			<RenderObject2D texture="data/textures/gui/deploy/deployzone_frame.dds"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/deploy/deployzone_framehover.dds"/>
+				<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_SLOT_HOVER"/>
+			</OnHover>
+			<OnHoverEnd>
+				<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_SLOT_HOVER_END"/>
+			</OnHoverEnd>
+
+			<OnCursorDown>
+				<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_CURSOR_DOWN_SLOT"/>
+			</OnCursorDown>
+			<OnCursorUp>
+				<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_DROP_SLOT"/>
+			</OnCursorUp>
+			<OnCursorMove>
+				<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_DRAG_SLOT"/>
+			</OnCursorMove>
+			<OnRClickDown>
+				<!-- opens the customization screen for this trooper -->
+				<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_ON_CUSTOMIZE_SLOT"/>
+			</OnRClickDown>
+
+			<!-- hack to be able to use the mouse scroll button (for zooming in/out) when on top of the deploy slots) -->
+			<OnScrollDown>
+				<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_ZOOM_OUT"/>
+			</OnScrollDown>
+			<OnScrollUp>
+				<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_ZOOM_IN"/>
+			</OnScrollUp>
+		</Button>
+
+		<StaticImage name="#undeployed_map_status" hidden="true">
+			<RenderObject2D texture="data/textures/gui/deploy/deployzone_empty.dds"/>
+		</StaticImage>
+
+		<Item name="#deployed_status" hidden="true"/> <!-- code needs it, but it's visually redundant -->
+		<!--
+		<StaticImage name="#deployed_status" hidden="true">
+			<RenderObject2D texture="data/textures/gui/deploy/deployzone_frame.dds"/>
+		</StaticImage>
+		-->
+
+		<StaticImage name="#moving_status" hidden="true">
+			<RenderObject2D texture="data/textures/gui/deploy/deployzone_framemover.tga"/>
+		</StaticImage>
+
+		<StaticImage name="#ClassIcon" origin="36 -36">
+			<RenderObject2D texture="data/textures/gui/deploy/class_name_icon_assaulter.dds"/>
+		</StaticImage>
+
+		<StaticImage name="#constraint_concealment" hidden="true" origin="-40 -40">
+			<RenderObject2D texture="data/textures/gui/deploy/deploy_constraint_concealment.dds" color="f97b03"/>
+		</StaticImage>
+
+		<StaticImage name="#constraint_mobility" hidden="true" origin="-40 -40">
+			<RenderObject2D texture="data/textures/gui/deploy/deploy_constraint_mobility.dds" color="f97b03"/>
+		</StaticImage>
+
+		<StaticImage name="#constraint_mandatory" hidden="true" origin="-40 -40">
+			<RenderObject2D texture="data/textures/gui/deploy/deploy_constraint_mandatory.dds" color="f97b03"/>
+		</StaticImage>
+
+		<!-- currently unused -->
+		<StaticImage name="#constraint_unit" hidden="true" origin="-40 -40">
+			<RenderObject2D texture="data/textures/gui/missions/challenge_oneman.dds"/>
+		</StaticImage>
+	</StaticImage>
+
+	<!-- deploy slot added to all slots -->
+	<Item name="#roster_slot_template" hidden="true" align="i">
+		<StaticImage name="#trooper_background">
+			<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperbackground_01.tga"/>
+		</StaticImage>
+
+		<StaticImage name="#trooper_portrait">
+			<RenderObject2D texture="data/textures/portraits/ranger1.dds"/>
+		</StaticImage>
+
+		<Button name="#deploy_slot_button">
+			<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperframe.tga"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperframehover.tga"/>
+				<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_SLOT_HOVER"/>
+			</OnHover>
+			<OnHoverEnd>
+				<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_SLOT_HOVER_END"/>
+			</OnHoverEnd>
+
+			<OnCursorDown>
+				<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_CURSOR_DOWN_SLOT"/>
+			</OnCursorDown>
+			<OnCursorUp>
+				<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_DROP_SLOT"/>
+			</OnCursorUp>
+			<OnCursorMove>
+				<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_DRAG_SLOT"/>
+			</OnCursorMove>
+			<OnRClickDown>
+				<!-- opens the customization screen for this trooper -->
+				<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_ON_CUSTOMIZE_SLOT"/>
+			</OnRClickDown>
+			<OnMClickDown>
+				<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_MCLICK_DOWN_SLOT"/>
+			</OnMClickDown>
+
+			<!-- hack to be able to use the mouse scroll button (for zooming in/out) when on top of the deploy slots) -->
+			<OnScrollDown>
+				<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_ZOOM_OUT"/>
+			</OnScrollDown>
+			<OnScrollUp>
+				<Action type="TriggerEvent" target="GUI_GAME_DEPLOY_ZOOM_IN"/>
+			</OnScrollUp>
+		</Button>
+
+		<StaticImage name="#moving_status" hidden="true">
+			<RenderObject2D texture="data/textures/gui/deploy/deployzone_framemover.tga"/>
+		</StaticImage>
+
+		<StaticImage name="#kia_status" hidden="true">
+			<!--<RenderObject2D texture="data/textures/gui/deploy/deploy_injured_heavy.dds" color="a40600b3"/>-->
+			<StaticImage name="darken" align="c" origin="0 0" >
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperbackground_01.tga" sizeX="78" sizeY="78" color="ff0003e6"/>
+			</StaticImage>
+			<StaticImage>
+				<RenderObject2D texture="data/textures/gui/deploy/deploy_kia.dds" color="a40600b3"/>
+			</StaticImage>
+		</StaticImage>
+		<StaticImage name="#injury_light_status" hidden="true">
+			<RenderObject2D texture="data/textures/gui/deploy/deploy_injured_light.dds" color="ffa20299" blendMode="add_masked"/>
+		</StaticImage>
+		<StaticImage name="#injury_heavy_status" hidden="true">
+			<RenderObject2D texture="data/textures/gui/deploy/deploy_injured_heavy.dds" color="e4282699" blendMode="add_masked"/>
+		</StaticImage>
+
+		<StaticImage name="#deployed_status" hidden="true">
+			<RenderObject2D texture="data/textures/gui/deploy/deploy_trooperframedeployed.tga"/>
+		</StaticImage>
+
+		<StaticImage name="#new_birth_status" hidden="true" align="rt" origin="0 0">
+			<ImageAnim type="pulse" speed="4"/>
+			<RenderObject2D texture="data/textures/gui/deploy/deploy_newbirth.dds" scaleX="1" scaleY="1" color="ffc600"/>
+		</StaticImage>
+		<StaticImage name="#new_promotion_status" hidden="true" align="rt" origin="0 0">
+			<RenderObject2D texture="data/textures/gui/endscreen_promoted.dds" blendMode="normal" scaleX="0.6" scaleY="0.6">
+				<TextureAnimation frameWidth="48" frameHeight="48" startFrame="0" endFrame="29" animationTimeMS="1000" numLoops="-1"/>
+			</RenderObject2D>
+		</StaticImage>		
+
+		<StaticImage name="#fatigued_status" hidden="true" align="bl" origin="-4 0">
+			<RenderObject2D texture="data/textures/gui/deploy/deploy_fatigued.dds"/>
+		</StaticImage>
+
+		<StaticImage name="#injury_recovery3" hidden="true" align="tl" origin="-10 4">
+			<RenderObject2D texture="data/textures/gui/campaign/campaign_injury_timer_3day.dds"/>
+		</StaticImage>
+		<StaticImage name="#injury_recovery2" hidden="true" align="tl" origin="-10 4">
+			<RenderObject2D texture="data/textures/gui/campaign/campaign_injury_timer_2day.dds"/>
+		</StaticImage>
+		<StaticImage name="#injury_recovery1" hidden="true" align="tl" origin="-10 4">
+			<RenderObject2D texture="data/textures/gui/campaign/campaign_injury_timer_1day.dds"/>
+		</StaticImage>
+	</Item>
+</Item>
+
+</GUIItems>

@@ -1,0 +1,29 @@
+<XPTables>
+	<XPGainTable>
+		<Stat name="missionFailed" xpPerUnit="50"/>
+		<Stat name="mission1Star" xpPerUnit="300"/>
+		<Stat name="mission2Star" xpPerUnit="500"/>
+		<Stat name="mission3Star" xpPerUnit="600"/>
+		<Stat name="bulletsFired" xpPerUnit="0"/>
+		<Stat name="bulletsHit" xpPerUnit="0"/>
+		<Stat name="kills" xpPerUnit="100"/>
+		<Stat name="killsStunnedTarget" xpPerUnit="40"/> <!-- added on top of regular kill reward -->
+		<Stat name="killsUnawareTarget" xpPerUnit="40"/> <!-- added on top of regular kill reward. true when target isn't in combat -->
+		<Stat name="hitsTaken" xpPerUnit="0"/> <!-- bullets and explosives alike -->
+		<Stat name="doorsKicked" xpPerUnit="0"/>
+		<Stat name="doorForcedBreaches" xpPerUnit="50"/> <!-- opened by crowbar, dynamic hammer, feet-of-steel -->
+		<Stat name="doorLockpicks" xpPerUnit="50"/> <!-- lockpick or lockpick machine -->
+		<Stat name="doorsBlownUp" xpPerUnit="80"/> <!-- grenades, slapcharges, breaching charges and other explosives -->
+		<Stat name="explosivesUsed" xpPerUnit="30"/> <!-- grenades, rocket launchers, explosive charges -->
+		<Stat name="distanceWalkedMeters" xpPerUnit="0"/>
+		<Stat name="arrests" xpPerUnit="250"/>
+		<Stat name="rescues" xpPerUnit="250"/>
+		<Stat name="challengesCompleted" xpPerUnit="500"/>
+		<Stat name="bombsDisarmed" xpPerUnit="80"/>
+		<Stat name="wallsBreached" xpPerUnit="100"/>
+		<Stat name="completedHealthy" xpPerUnit="100"/>
+		<Stat name="perfectAccuracy" xpPerUnit="200"/>
+		<Stat name="warcrime" xpPerUnit="-1000"/> <!-- intentionally killing a hostage -->
+		<Stat name="sabotage" xpPerUnit="50"/>
+	</XPGainTable>
+</XPTables>
