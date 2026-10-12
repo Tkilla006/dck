@@ -1,0 +1,593 @@
+<Sounds>	
+
+	<!-- Others -->
+	<!-- scan_voices.bat voice\vip_male VIP_MALE -->
+	<Pack name="vip_male" channel="voice">
+		<Sound ID="VOX_VIP_ACTIVATED" >
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_ACTIVATED_VIP_MALE_1.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_ACTIVATED_VIP_MALE_2.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_ACTIVATED_VIP_MALE_3.wav" />
+		</Sound>
+		<Sound ID="VOX_DYING" >
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_DYING_VIP_MALE_1.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_DYING_VIP_MALE_2.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_DYING_VIP_MALE_3.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_DYING_VIP_MALE_4.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_DYING_VIP_MALE_5.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_DYING_VIP_MALE_6.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_INJURED_VIP_MALE_1.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_INJURED_VIP_MALE_2.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_INJURED_VIP_MALE_3.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_INJURED_VIP_MALE_4.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_CANT" >
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_NEGATIVE_VIP_MALE_1.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_NEGATIVE_VIP_MALE_2.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_NEGATIVE_VIP_MALE_3.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_NEGATIVE_VIP_MALE_4.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_ORDERS" >
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_ORDERS_VIP_MALE_1.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_ORDERS_VIP_MALE_2.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_ORDERS_VIP_MALE_3.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_ROGER" >
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_ROGER_VIP_MALE_1.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_ROGER_VIP_MALE_2.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_ROGER_VIP_MALE_3.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_ROGER_VIP_MALE_4.wav" />
+		</Sound>
+		<Sound ID="VOX_VIP_SCARED" >
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_SCARED_VIP_MALE_1.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_SCARED_VIP_MALE_2.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_SCARED_VIP_MALE_3.wav" />
+		</Sound>
+		<Sound ID="VOX_INJURED" >
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_WOUNDED_VIP_MALE_1.wav" />
+			<Path name="data/sounds/voice/vip_male/VOX_VIP_WOUNDED_VIP_MALE_2.wav" />
+		</Sound>
+
+	</Pack>
+	
+	<!-- scan_voices.bat voice\hostage_male HOSTAGE_MALE -->
+	<Pack name="hostage_male" channel="voice">
+		<Sound ID="VOX_AI_FLEE_ESCAPE" >
+			<Path name="data/sounds/voice/hostage_male/VOX_AI_FLEE_ESCAPE_HOSTAGE_MALE_1.wav" />
+			<Path name="data/sounds/voice/hostage_male/VOX_AI_FLEE_ESCAPE_HOSTAGE_MALE_2.wav" />
+			<Path name="data/sounds/voice/hostage_male/VOX_AI_FLEE_ESCAPE_HOSTAGE_MALE_3.wav" />
+			<Path name="data/sounds/voice/hostage_male/VOX_AI_FLEE_ESCAPE_HOSTAGE_MALE_4.wav" />
+			<Path name="data/sounds/voice/hostage_male/VOX_AI_FLEE_ESCAPE_HOSTAGE_MALE_5.wav" />
+			<Path name="data/sounds/voice/hostage_male/VOX_AI_FLEE_ESCAPE_HOSTAGE_MALE_6.wav" />
+		</Sound>
+		<Sound ID="VOX_AI_FLEE_WHIMPER" >
+			<Path name="data/sounds/voice/hostage_male/VOX_AI_FLEE_WHIMPER_HOSTAGE_MALE_1.wav" />
+			<Path name="data/sounds/voice/hostage_male/VOX_AI_FLEE_WHIMPER_HOSTAGE_MALE_2.wav" />
+			<Path name="data/sounds/voice/hostage_male/VOX_AI_FLEE_WHIMPER_HOSTAGE_MALE_3.wav" />
+			<Path name="data/sounds/voice/hostage_male/VOX_AI_FLEE_WHIMPER_HOSTAGE_MALE_4.wav" />
+		</Sound>
+		<Sound ID="VOX_AI_ARRESTED_FINISHED" >
+			<Path name="data/sounds/voice/hostage_male/VOX_AI_HOSTAGE_RESCUED_HOSTAGE_MALE_1.wav" />
+			<Path name="data/sounds/voice/hostage_male/VOX_AI_HOSTAGE_RESCUED_HOSTAGE_MALE_2.wav" />
+			<Path name="data/sounds/voice/hostage_male/VOX_AI_HOSTAGE_RESCUED_HOSTAGE_MALE_3.wav" />
+			<Path name="data/sounds/voice/hostage_male/VOX_AI_HOSTAGE_RESCUED_HOSTAGE_MALE_4.wav" />
+			<Path name="data/sounds/voice/hostage_male/VOX_AI_HOSTAGE_RESCUED_HOSTAGE_MALE_5.wav" />
+			<Path name="data/sounds/voice/hostage_male/VOX_AI_HOSTAGE_RESCUED_HOSTAGE_MALE_6.wav" />
+		</Sound>
+		<Sound ID="VOX_DYING" >
+			<Path name="data/sounds/voice/hostage_male/VOX_DYING_HOSTAGE_MALE_1.wav" />
+			<Path name="data/sounds/voice/hostage_male/VOX_DYING_HOSTAGE_MALE_2.wav" />
+			<Path name="data/sounds/voice/hostage_male/VOX_DYING_HOSTAGE_MALE_3.wav" />
+			<Path name="data/sounds/voice/hostage_male/VOX_DYING_HOSTAGE_MALE_4.wav" />
+			<Path name="data/sounds/voice/hostage_male/VOX_DYING_HOSTAGE_MALE_5.wav" />
+			<Path name="data/sounds/voice/hostage_male/VOX_DYING_HOSTAGE_MALE_6.wav" />
+			<Path name="data/sounds/voice/hostage_male/VOX_DYING_HOSTAGE_MALE_7.wav" />
+			<Path name="data/sounds/voice/hostage_male/VOX_DYING_HOSTAGE_MALE_8.wav" />
+			<Path name="data/sounds/voice/hostage_male/VOX_DYING_HOSTAGE_MALE_9.wav" />
+		</Sound>
+	</Pack>
+	
+	<Pack name="allied_assaulters" channel="voice">
+	
+		<Sound ID="VOX_DYING" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_DYING_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_DYING_ALLIES_10.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_DYING_ALLIES_11.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_DYING_ALLIES_2.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_DYING_ALLIES_3.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_DYING_ALLIES_4.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_DYING_ALLIES_5.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_DYING_ALLIES_6.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_DYING_ALLIES_7.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_DYING_ALLIES_8.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_DYING_ALLIES_9.wav" />
+		</Sound>
+		<Sound ID="VOX_GEAR_FLASH" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_GEAR_FLASH_ALLIES_1.wav" />
+		</Sound>
+		<Sound ID="VOX_GEAR_FRAG" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_GEAR_FRAG_ALLIES_1.wav" />
+		</Sound>
+		<Sound ID="VOX_GEAR_LAUNCHER" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_GEAR_LAUNCHER_ALLIES_1.wav" />
+		</Sound>
+		<Sound ID="VOX_GEAR_ROCKET" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_GEAR_ROCKET_ALLIES_2.wav" />
+		</Sound>
+		<Sound ID="VOX_GEAR_SMOKE" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_GEAR_SMOKE_ALLIES_1.wav" />
+		</Sound>
+		<Sound ID="VOX_GEAR_STINGER" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_GEAR_STINGER_ALLIES_1.wav" />
+		</Sound>
+		<Sound ID="VOX_INJURED" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_INJURED_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_INJURED_ALLIES_2.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_INJURED_ALLIES_3.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_INJURED_ALLIES_4.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_INJURED_ALLIES_5.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_BOMB_DEFUSING" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_BOMB_DEFUSING_ALLIES_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_BOMB_LOCATED" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_BOMB_LOCATED_ALLIES_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_CANT" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_CANT_ALLIES_03.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_CANT_ALLIES_06.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_CANT_ALLIES_07.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_CANT_ALLIES_08.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_CAN_I_SHOOT" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_CAN_I_SHOOT_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_CAN_I_SHOOT_ALLIES_3.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_CIV_DOWN" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_CIV_DOWN_ALLIES_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_CLEAR" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_CLEAR_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_CLEAR_ALLIES_2.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_CLEAR_ALLIES_3.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_COME" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_COME_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_COME_ALLIES_3.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_DONE_HERE" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_DONE_HERE_ALLIES_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_EVAC" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_EVAC_ALLIES_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_EYESONTARGET" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_EYESONTARGET_ALLIES_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_EYESONTARGET_QUIET" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_EYESONTARGET_QUIET_ALLIES_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_EYES_HOSTAGE" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_EYES_HOSTAGE_ALLIES_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_FREEZE" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_FREEZE_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_FREEZE_ALLIES_4.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_FREEZE_ALLIES_6.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_GEAR_CHARGE_PLACE" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_GEAR_CHARGE_PLACE_ALLIES_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_GEAR_CHARGE_RDY" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_GEAR_CHARGE_RDY_ALLIES_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_GETDOWN" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_GETDOWN_ALLIES_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_GO_LOUD" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_GO_LOUD_ALLIES_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_HANDCUFF" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_HANDCUFF_ALLIES_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_HOLDING" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_HOLDING_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_HOLDING_ALLIES_3.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_HOLDING_ALLIES_5.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_HOST_DOWN" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_HOST_DOWN_ALLIES_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_HOST_SEC" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_HOST_SEC_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_HOST_SEC_ALLIES_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_HVT_RUNNING" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_HVT_RUNNING_ALLIES_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_KEEPMOVINGOFF" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_KEEPMOVINGOFF_ALLIES_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_KEEPMOVINGON" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_KEEPMOVINGON_ALLIES_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_MANDOWN" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_MANDOWN_ALLIES_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_MATCHSPEEDON" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_MATCHSPEEDON_ALLIES_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_MOVING" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_MOVING_ALLIES_3.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_MOVING_ALLIES_4.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_NOTANGOS" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_NOTANGOS_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_NOTANGOS_ALLIES_3.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_ONTARGET" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_ONTARGET_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_ONTARGET_ALLIES_3.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_ON_ALPHA" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_ON_ALPHA_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_ON_ALPHA_ALLIES_3.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_ON_BRAVO" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_ON_BRAVO_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_ON_BRAVO_ALLIES_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_ON_CHARLIE" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_ON_CHARLIE_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_ON_CHARLIE_ALLIES_4.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_ON_DELTA" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_ON_DELTA_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_ON_DELTA_ALLIES_3.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_PASS_ALPHA" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_PASS_ALPHA_ALLIES_3.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_PASS_ALPHA_ALLIES_5.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_PASS_BRAVO" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_PASS_BRAVO_ALLIES_2.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_PASS_BRAVO_ALLIES_5.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_PASS_CHARLIE" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_PASS_CHARLIE_ALLIES_2.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_PASS_CHARLIE_ALLIES_6.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_PASS_DELTA" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_PASS_DELTA_ALLIES_2.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_PASS_DELTA_ALLIES_5.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_PINNED_DOWN" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_PINNED_DOWN_ALLIES_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_PUMPUP" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_PUMPUP_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_PUMPUP_ALLIES_2.wav" />
+		</Sound>
+		<Sound ID="VOX_RELOAD" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_RELOAD_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_RELOAD_ALLIES_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_ROGER" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_ROGER_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_ROGER_ALLIES_2.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_ROGER_ALLIES_4.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_ROGER_ALLIES_7.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_ROGER_ALLIES_9.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_SILENTOFF" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_SILENTOFF_ALLIES_3.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_SILENTON" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_SILENTON_ALLIES_3.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_SUSP_SEC" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_SUSP_SEC_ALLIES_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_TANGODOWN" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_TANGODOWN_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_TANGODOWN_ALLIES_2.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_TANGODOWN_ALLIES_4.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_TANGODOWN_ALLIES_6.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_TANGOS" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_TANGOS_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_TANGOS_ALLIES_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_TARGET_SEC" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_TARGET_SEC_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_TARGET_SEC_ALLIES_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_TIME_TO_GO" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_TIME_TO_GO_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_TIME_TO_GO_ALLIES_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_VIP_DEAD" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_VIP_DEAD_ALLIES_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_WAIT" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_WAIT_ALLIES_2.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_WAIT_ALLIES_3.wav" />
+		</Sound>
+		<Sound ID="VOX_WARN_GRENADE" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_WARN_GRENADE_ALLIES_1.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_WARN_GRENADE_ALLIES_2.wav" />
+		</Sound>
+		<Sound ID="VOX_WARN_RPG" >
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_WARN_RPG_ALLIES_2.wav" />
+			<Path name="data/sounds/voice/allied assaulters/VOX_TRPR_WARN_RPG_ALLIES_3.wav" />
+		</Sound>
+
+
+	</Pack>
+	
+	<!-- scan_voices.bat "voice\allied breacher cpg" ALLIES_CPG -->
+	<Pack name="allied_cpg" channel="voice">
+		<Sound ID="VOX_DYING" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_DYING_ALLIES_CPG_4.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_DYING_ALLIES_CPG_5.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_DYING_ALLIES_CPG_6.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_DYING_ALLIES_CPG_7.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_DYING_ALLIES_CPG_8.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_DYING_ALLIES_CPG_9.wav" />
+		</Sound>
+		<Sound ID="VOX_GEAR_FLASH" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_GEAR_FLASH_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_GEAR_FLASH_ALLIES_CPG_3.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_GEAR_FLASH_ALLIES_CPG_4.wav" />
+		</Sound>
+		<Sound ID="VOX_GEAR_FRAG" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_GEAR_FRAG_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_GEAR_FRAG_ALLIES_CPG_2.wav" />
+		</Sound>
+		<Sound ID="VOX_GEAR_LAUNCHER" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_GEAR_LAUNCHER_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_GEAR_LAUNCHER_ALLIES_CPG_2.wav" />
+		</Sound>
+		<Sound ID="VOX_GEAR_MOLOTOV" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_GEAR_MOLOTOV_ALLIES_CPG_3.wav" />
+		</Sound>
+		<Sound ID="VOX_GEAR_ROCKET" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_GEAR_ROCKET_ALLIES_CPG_2.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_GEAR_ROCKET_ALLIES_CPG_3.wav" />
+		</Sound>
+		<Sound ID="VOX_GEAR_SMOKE" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_GEAR_SMOKE_ALLIES_CPG_2.wav" />
+		</Sound>
+		<Sound ID="VOX_GEAR_STINGER" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_GEAR_STINGER_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_GEAR_STINGER_ALLIES_CPG_3.wav" />
+		</Sound>
+		<Sound ID="VOX_INJURED" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_INJURED_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_INJURED_ALLIES_CPG_2.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_INJURED_ALLIES_CPG_3.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_INJURED_ALLIES_CPG_4.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_INJURED_ALLIES_CPG_5.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_BOMB_DEFUSING" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_BOMB_DEFUSING_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_BOMB_DEFUSING_ALLIES_CPG_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_BOMB_LOCATED" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_BOMB_LOCATED_ALLIES_CPG_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_BREACHING_DOOR" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_BREACHING_DOOR_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_BREACHING_DOOR_ALLIES_CPG_2.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_BREACHING_DOOR_ALLIES_CPG_3.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_BREACHING_DOOR_ALLIES_CPG_4.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_CANT" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_CANT_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_CANT_ALLIES_CPG_2.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_CANT_ALLIES_CPG_3.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_CANT_ALLIES_CPG_4.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_CAN_I_SHOOT" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_CAN_I_SHOOT_ALLIES_CPG_3.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_CAN_I_SHOOT_ALLIES_CPG_4.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_CIV_DOWN" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_CIV_DOWN_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_CIV_DOWN_ALLIES_CPG_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_CLEAR" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_CLEAR_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_CLEAR_ALLIES_CPG_2.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_CLEAR_ALLIES_CPG_3.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_CLEAR_ALLIES_CPG_4.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_COME" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_COME_ALLIES_CPG_2.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_COME_ALLIES_CPG_3.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_COME_ALLIES_CPG_4.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_DONE_HERE" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_DONE_HERE_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_DONE_HERE_ALLIES_CPG_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_EVAC" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_EVAC_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_EVAC_ALLIES_CPG_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_EYESONTARGET" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_EYESONTARGET_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_EYESONTARGET_ALLIES_CPG_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_EYESONTARGET_QUIET" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_EYESONTARGET_QUIET_ALLIES_CPG_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_EYES_HOSTAGE" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_EYES_HOSTAGE_ALLIES_CPG_3.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_EYES_HOSTAGE_ALLIES_CPG_4.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_FREEZE" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_FREEZE_ALLIES_CPG_3.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_FREEZE_ALLIES_CPG_5.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_FREEZE_ALLIES_CPG_6.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_GEAR_CHARGE_PLACE" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_GEAR_CHARGE_PLACE_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_GEAR_CHARGE_PLACE_ALLIES_CPG_2.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_GEAR_CHARGE_PLACE_ALLIES_CPG_5.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_GEAR_CHARGE_RDY" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_GEAR_CHARGE_RDY_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_GEAR_CHARGE_RDY_ALLIES_CPG_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_GETDOWN" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_GETDOWN_ALLIES_CPG_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_GO_LOUD" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_GO_LOUD_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_GO_LOUD_ALLIES_CPG_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_HANDCUFF" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_HANDCUFF_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_HANDCUFF_ALLIES_CPG_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_HOLDING" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_HOLDING_ALLIES_CPG_2.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_HOLDING_ALLIES_CPG_3.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_HOST_DOWN" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_HOST_DOWN_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_HOST_DOWN_ALLIES_CPG_3.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_HOST_DOWN_ALLIES_CPG_4.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_HOST_SEC" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_HOST_SEC_ALLIES_CPG_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_HVT_RUNNING" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_HVT_RUNNING_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_HVT_RUNNING_ALLIES_CPG_4.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_KEEPMOVINGOFF" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_KEEPMOVINGOFF_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_KEEPMOVINGOFF_ALLIES_CPG_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_KEEPMOVINGON" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_KEEPMOVINGON_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_KEEPMOVINGON_ALLIES_CPG_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_MANDOWN" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_MANDOWN_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_MANDOWN_ALLIES_CPG_2.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_MANDOWN_ALLIES_CPG_3.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_MATCHSPEEDON" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_MATCHSPEEDON_ALLIES_CPG_2.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_MATCHSPEEDON_ALLIES_CPG_3.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_MOVING" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_MOVING_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_MOVING_ALLIES_CPG_3.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_NOTANGOS" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_NOTANGOS_ALLIES_CPG_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_ONTARGET" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_ONTARGET_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_ONTARGET_ALLIES_CPG_3.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_ON_ALPHA" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_ON_ALPHA_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_ON_ALPHA_ALLIES_CPG_3.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_ON_BRAVO" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_ON_BRAVO_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_ON_BRAVO_ALLIES_CPG_3.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_ON_CHARLIE" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_ON_CHARLIE_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_ON_CHARLIE_ALLIES_CPG_2.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_ON_DELTA" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_ON_DELTA_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_ON_DELTA_ALLIES_CPG_3.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_ORDERS" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_ORDERS_ALLIES_CPG_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_PASS_ALPHA" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_PASS_ALPHA_ALLIES_CPG_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_PASS_BRAVO" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_PASS_BRAVO_ALLIES_CPG_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_PASS_CHARLIE" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_PASS_CHARLIE_ALLIES_CPG_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_PASS_DELTA" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_PASS_DELTA_ALLIES_CPG_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_PINNED_DOWN" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_PINNED_DOWN_ALLIES_CPG_3.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_PINNED_DOWN_ALLIES_CPG_4.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_PINNED_DOWN_ALLIES_CPG_5.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_PUMPUP" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_PUMPUP_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_PUMPUP_ALLIES_CPG_2.wav" />
+		</Sound>
+		<Sound ID="VOX_RELOAD" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_RELOAD_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_RELOAD_ALLIES_CPG_2.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_RELOAD_ALLIES_CPG_4.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_RELOAD_ALLIES_CPG_5.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_ROGER" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_ROGER_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_ROGER_ALLIES_CPG_2.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_ROGER_ALLIES_CPG_4.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_ROGER_ALLIES_CPG_5.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_SILENTOFF" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_SILENTOFF_ALLIES_CPG_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_SILENTON" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_SILENTON_ALLIES_CPG_3.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_SUSP_SEC" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_SUSP_SEC_ALLIES_CPG_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_TANGODOWN" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_TANGODOWN_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_TANGODOWN_ALLIES_CPG_2.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_TANGODOWN_ALLIES_CPG_3.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_TANGODOWN_ALLIES_CPG_4.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_TANGODOWN_ALLIES_CPG_5.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_TANGODOWN_ALLIES_CPG_6.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_TANGODOWN_ALLIES_CPG_7.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_TANGOS" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_TANGOS_ALLIES_CPG_3.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_TARGET_SEC" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_TARGET_SEC_ALLIES_CPG_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_TIME_TO_GO" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_TIME_TO_GO_ALLIES_CPG_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_VIP_DEAD" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_VIP_DEAD_ALLIES_CPG_1.wav" />
+		</Sound>
+		<Sound ID="VOX_TRPR_WAIT" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_WAIT_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_WAIT_ALLIES_CPG_2.wav" />
+		</Sound>
+		<Sound ID="VOX_WARN_GRENADE" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_WARN_GRENADE_ALLIES_CPG_1.wav" />
+		</Sound>
+		<Sound ID="VOX_WARN_RPG" >
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_WARN_RPG_ALLIES_CPG_1.wav" />
+			<Path name="data/sounds/voice/allied breacher cpg/VOX_TRPR_WARN_RPG_ALLIES_CPG_2.wav" />
+		</Sound>
+
+	</Pack>
+	
+</Sounds>

@@ -1,0 +1,568 @@
+<Sounds>
+	<!-- Enemies -->
+	<!-- scan_voices.bat "voice\enemy arabic" NMY_ARB -->
+	<!-- TEMP: Removed VOX_BADDD10-21 until we can find a different code for them -->
+	<Pack name="enemy arabic" channel="voice_enemy">
+		<Sound ID="VOX_AI_FLEE_ESCAPE" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_FLEE_ESCAPE_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_FLEE_ESCAPE_NMY_ARB_11.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_FLEE_ESCAPE_NMY_ARB_14.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_FLEE_ESCAPE_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_FLEE_ESCAPE_NMY_ARB_7.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_FLEE_ESCAPE_NMY_ARB_9.wav" />
+		</Sound>
+		<Sound ID="VOX_AI_HUMAN_SHIELD" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_HUMAN_SHIELD_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_HUMAN_SHIELD_NMY_ARB_4.wav" />
+		</Sound>
+		<Sound ID="VOX_AI_PINNED_DOWN" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_PINNED_DOWN_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_PINNED_DOWN_NMY_ARB_3.wav" />
+		</Sound>
+		<Sound ID="VOX_AI_START_COMBAT" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_START_COMBAT_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_START_COMBAT_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_START_COMBAT_NMY_ARB_7.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_START_COMBAT_NMY_ARB_8.wav" />
+		</Sound>
+		<Sound ID="VOX_AI_TAUNT" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_TAUNT_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_TAUNT_NMY_ARB_10.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_TAUNT_NMY_ARB_11.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_TAUNT_NMY_ARB_14.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_TAUNT_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_TAUNT_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_TAUNT_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_TAUNT_NMY_ARB_7.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_TAUNT_NMY_ARB_9.wav" />
+		</Sound>
+		<Sound ID="VOX_BADDD" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_BADDD_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_BADDD_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_BADDD_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_BADDD_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_BADDD_NMY_ARB_7.wav" />
+		</Sound>
+		<Sound ID="VOX_DYING" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_10.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_11.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_12.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_13.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_14.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_7.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_8.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_9.wav" />
+		</Sound>
+		<Sound ID="VOX_ENEMY_DISGUISE" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_DISGUISE_NMY_ARB_10.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_DISGUISE_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_DISGUISE_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_DISGUISE_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_DISGUISE_NMY_ARB_7.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_DISGUISE_NMY_ARB_8.wav" />
+		</Sound>
+		<Sound ID="VOX_ENEMY_REVEALED" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_10.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_12.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_13.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_15.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_17.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_18.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_7.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_9.wav" />
+		</Sound>
+		<Sound ID="VOX_HUH" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUH_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUH_NMY_ARB_10.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUH_NMY_ARB_13.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUH_NMY_ARB_14.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUH_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUH_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUH_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUH_NMY_ARB_8.wav" />
+		</Sound>
+		<Sound ID="VOX_HUMAN_SHIELD" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUMAN_SHIELD_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUMAN_SHIELD_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUMAN_SHIELD_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUMAN_SHIELD_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUMAN_SHIELD_NMY_ARB_9.wav" />
+		</Sound>
+		<Sound ID="VOX_INJURED" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_INJURED_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_INJURED_NMY_ARB_10.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_INJURED_NMY_ARB_11.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_INJURED_NMY_ARB_12.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_INJURED_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_INJURED_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_INJURED_NMY_ARB_7.wav" />
+		</Sound>
+		<Sound ID="VOX_LOOK_DONE_ALERT" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_ALERT_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_ALERT_NMY_ARB_10.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_ALERT_NMY_ARB_12.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_ALERT_NMY_ARB_14.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_ALERT_NMY_ARB_16.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_ALERT_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_ALERT_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_ALERT_NMY_ARB_6.wav" />
+		</Sound>
+		<Sound ID="VOX_LOOK_DONE" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_NMY_ARB_8.wav" />
+		</Sound>
+		<Sound ID="VOX_MELEE_GRUNT" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_MELEE_GRUNT_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_MELEE_GRUNT_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_MELEE_GRUNT_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_MELEE_GRUNT_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_MELEE_GRUNT_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_MELEE_GRUNT_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_MELEE_GRUNT_NMY_ARB_7.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_MELEE_GRUNT_NMY_ARB_8.wav" />
+		</Sound>
+		<Sound ID="VOX_SUICIDE_SHOUT" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_SUICIDE_SHOUT_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SUICIDE_SHOUT_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SUICIDE_SHOUT_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SUICIDE_SHOUT_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SUICIDE_SHOUT_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SUICIDE_SHOUT_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SUICIDE_SHOUT_NMY_ARB_7.wav" />
+		</Sound>
+		<Sound ID="VOX_SURRENDER" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_SURRENDER_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SURRENDER_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SURRENDER_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SURRENDER_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SURRENDER_NMY_ARB_7.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SURRENDER_NMY_ARB_8.wav" />
+		</Sound>
+		<Sound ID="VOX_THREATEN_HOSTAGE" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_HOSTAGE_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_HOSTAGE_NMY_ARB_10.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_HOSTAGE_NMY_ARB_11.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_HOSTAGE_NMY_ARB_12.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_HOSTAGE_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_HOSTAGE_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_HOSTAGE_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_HOSTAGE_NMY_ARB_7.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_HOSTAGE_NMY_ARB_9.wav" />
+		</Sound>
+		<Sound ID="VOX_THREATEN_SUSPECT" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_SUSPECT_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_SUSPECT_NMY_ARB_10.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_SUSPECT_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_SUSPECT_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_SUSPECT_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_SUSPECT_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_SUSPECT_NMY_ARB_8.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_SUSPECT_NMY_ARB_9.wav" />
+		</Sound>
+		<Sound ID="VOX_WARN_GRENADE" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_WARN_GRENADE_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_WARN_GRENADE_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_WARN_GRENADE_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_WARN_GRENADE_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_WARN_GRENADE_NMY_ARB_7.wav" />
+		</Sound>
+	</Pack>
+	
+	<Pack name="enemy arabic leader" channel="voice_enemy">
+		<Sound ID="VOX_AI_FLEE_ESCAPE" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_FLEE_ESCAPE_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_FLEE_ESCAPE_NMY_ARB_11.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_FLEE_ESCAPE_NMY_ARB_14.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_FLEE_ESCAPE_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_FLEE_ESCAPE_NMY_ARB_7.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_FLEE_ESCAPE_NMY_ARB_9.wav" />
+		</Sound>
+		<Sound ID="VOX_AI_HUMAN_SHIELD" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_HUMAN_SHIELD_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_HUMAN_SHIELD_NMY_ARB_4.wav" />
+		</Sound>
+		<Sound ID="VOX_AI_PINNED_DOWN" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_PINNED_DOWN_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_PINNED_DOWN_NMY_ARB_3.wav" />
+		</Sound>
+		<Sound ID="VOX_AI_START_COMBAT" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_START_COMBAT_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_START_COMBAT_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_START_COMBAT_NMY_ARB_7.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_START_COMBAT_NMY_ARB_8.wav" />
+		</Sound>
+		<Sound ID="VOX_AI_TAUNT" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_TAUNT_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_TAUNT_NMY_ARB_10.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_TAUNT_NMY_ARB_11.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_TAUNT_NMY_ARB_14.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_TAUNT_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_TAUNT_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_TAUNT_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_TAUNT_NMY_ARB_7.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_AI_TAUNT_NMY_ARB_9.wav" />
+		</Sound>
+		<Sound ID="VOX_BADDD" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_BADDD_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_BADDD_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_BADDD_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_BADDD_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_BADDD_NMY_ARB_7.wav" />
+		</Sound>
+		<Sound ID="VOX_DYING" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_10.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_11.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_12.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_13.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_14.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_7.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_8.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_DYING_NMY_ARB_9.wav" />
+		</Sound>
+		<Sound ID="VOX_ENEMY_DISGUISE" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_DISGUISE_NMY_ARB_10.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_DISGUISE_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_DISGUISE_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_DISGUISE_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_DISGUISE_NMY_ARB_7.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_DISGUISE_NMY_ARB_8.wav" />
+		</Sound>
+		<Sound ID="VOX_ENEMY_REVEALED" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_10.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_12.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_13.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_15.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_17.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_18.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_7.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_ENEMY_REVEALED_NMY_ARB_9.wav" />
+		</Sound>
+		<Sound ID="VOX_HUH" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUH_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUH_NMY_ARB_10.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUH_NMY_ARB_13.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUH_NMY_ARB_14.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUH_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUH_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUH_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUH_NMY_ARB_8.wav" />
+		</Sound>
+		<Sound ID="VOX_HUMAN_SHIELD" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUMAN_SHIELD_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUMAN_SHIELD_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUMAN_SHIELD_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUMAN_SHIELD_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_HUMAN_SHIELD_NMY_ARB_9.wav" />
+		</Sound>
+		<Sound ID="VOX_INJURED" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_INJURED_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_INJURED_NMY_ARB_10.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_INJURED_NMY_ARB_11.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_INJURED_NMY_ARB_12.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_INJURED_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_INJURED_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_INJURED_NMY_ARB_7.wav" />
+		</Sound>
+		<Sound ID="VOX_LOOK_DONE_ALERT" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_ALERT_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_ALERT_NMY_ARB_10.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_ALERT_NMY_ARB_12.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_ALERT_NMY_ARB_14.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_ALERT_NMY_ARB_16.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_ALERT_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_ALERT_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_ALERT_NMY_ARB_6.wav" />
+		</Sound>
+		<Sound ID="VOX_LOOK_DONE" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_DONE_NMY_ARB_8.wav" />
+		</Sound>
+		<Sound ID="VOX_LOOK_GO_ALERT" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_GO_ALERT_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_GO_ALERT_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_GO_ALERT_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_GO_ALERT_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_GO_ALERT_NMY_ARB_6.wav" />
+		</Sound>
+		<Sound ID="VOX_LOOK_GO" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_GO_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_GO_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_GO_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_GO_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_GO_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_GO_NMY_ARB_8.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_GO_NMY_ARB_9.wav" />
+		</Sound>
+		<Sound ID="VOX_LOOK_HOLD" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_HOLD_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_HOLD_NMY_ARB_10.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_HOLD_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_HOLD_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_HOLD_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_LOOK_HOLD_NMY_ARB_9.wav" />
+		</Sound>
+		<Sound ID="VOX_MELEE_GRUNT" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_MELEE_GRUNT_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_MELEE_GRUNT_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_MELEE_GRUNT_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_MELEE_GRUNT_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_MELEE_GRUNT_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_MELEE_GRUNT_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_MELEE_GRUNT_NMY_ARB_7.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_MELEE_GRUNT_NMY_ARB_8.wav" />
+		</Sound>
+		<Sound ID="VOX_SUICIDE_SHOUT" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_SUICIDE_SHOUT_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SUICIDE_SHOUT_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SUICIDE_SHOUT_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SUICIDE_SHOUT_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SUICIDE_SHOUT_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SUICIDE_SHOUT_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SUICIDE_SHOUT_NMY_ARB_7.wav" />
+		</Sound>
+		<Sound ID="VOX_SURRENDER" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_SURRENDER_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SURRENDER_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SURRENDER_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SURRENDER_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SURRENDER_NMY_ARB_7.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_SURRENDER_NMY_ARB_8.wav" />
+		</Sound>
+		<Sound ID="VOX_THREATEN_HOSTAGE" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_HOSTAGE_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_HOSTAGE_NMY_ARB_10.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_HOSTAGE_NMY_ARB_11.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_HOSTAGE_NMY_ARB_12.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_HOSTAGE_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_HOSTAGE_NMY_ARB_4.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_HOSTAGE_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_HOSTAGE_NMY_ARB_7.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_HOSTAGE_NMY_ARB_9.wav" />
+		</Sound>
+		<Sound ID="VOX_THREATEN_SUSPECT" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_SUSPECT_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_SUSPECT_NMY_ARB_10.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_SUSPECT_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_SUSPECT_NMY_ARB_3.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_SUSPECT_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_SUSPECT_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_SUSPECT_NMY_ARB_8.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_THREATEN_SUSPECT_NMY_ARB_9.wav" />
+		</Sound>
+		<Sound ID="VOX_WARN_GRENADE" >
+			<Path name="data/sounds/voice/enemy arabic/VOX_WARN_GRENADE_NMY_ARB_1.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_WARN_GRENADE_NMY_ARB_2.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_WARN_GRENADE_NMY_ARB_5.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_WARN_GRENADE_NMY_ARB_6.wav" />
+			<Path name="data/sounds/voice/enemy arabic/VOX_WARN_GRENADE_NMY_ARB_7.wav" />
+		</Sound>
+
+	</Pack>
+
+	<!-- scan_voices.bat "voice\enemy english" NMY_ENG -->
+	<Pack name="enemy english" channel="voice_enemy">
+		<Sound ID="VOX_AI_FLEE_ESCAPE" >
+			<Path name="data/sounds/voice/enemy english/VOX_AI_FLEE_ESCAPE_NMY_ENG_1.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_AI_FLEE_ESCAPE_NMY_ENG_2.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_AI_FLEE_ESCAPE_NMY_ENG_5.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_AI_FLEE_ESCAPE_NMY_ENG_6.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_AI_FLEE_ESCAPE_NMY_ENG_8.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_AI_FLEE_ESCAPE_NMY_ENG_9.wav" />
+		</Sound>
+		<Sound ID="VOX_AI_PINNED_DOWN" >
+			<Path name="data/sounds/voice/enemy english/VOX_AI_PINNED_DOWN_NMY_ENG_1.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_AI_PINNED_DOWN_NMY_ENG_2.wav" />
+		</Sound>
+		<Sound ID="VOX_AI_START_COMBAT" >
+			<Path name="data/sounds/voice/enemy english/VOX_AI_START_COMBAT_NMY_ENG_1.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_AI_START_COMBAT_NMY_ENG_2.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_AI_START_COMBAT_NMY_ENG_5.wav" />
+		</Sound>
+		<Sound ID="VOX_AI_TAUNT" >
+			<Path name="data/sounds/voice/enemy english/VOX_AI_TAUNT_NMY_ENG_2.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_AI_TAUNT_NMY_ENG_3.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_AI_TAUNT_NMY_ENG_4.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_AI_TAUNT_NMY_ENG_5.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_AI_TAUNT_NMY_ENG_6.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_AI_TAUNT_NMY_ENG_8.wav" />
+		</Sound>
+		<Sound ID="VOX_BADDD" >
+			<Path name="data/sounds/voice/enemy english/VOX_BADDD_NMY_ENG_2.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_BADDD_NMY_ENG_4.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_BADDD_NMY_ENG_5.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_BADDD_NMY_ENG_6.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_BADDD_NMY_ENG_7.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_BADDD_NMY_ENG_9.wav" />
+		</Sound>
+		<Sound ID="VOX_DYING" >
+			<Path name="data/sounds/voice/enemy english/VOX_DYING_NMY_ENG_1.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_DYING_NMY_ENG_10.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_DYING_NMY_ENG_2.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_DYING_NMY_ENG_3.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_DYING_NMY_ENG_4.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_DYING_NMY_ENG_5.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_DYING_NMY_ENG_6.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_DYING_NMY_ENG_7.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_DYING_NMY_ENG_8.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_DYING_NMY_ENG_9.wav" />
+		</Sound>
+		<Sound ID="VOX_ENEMY_DISGUISE" >
+			<Path name="data/sounds/voice/enemy english/VOX_ENEMY_DISGUISE_NMY_ENG_1.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_ENEMY_DISGUISE_NMY_ENG_3.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_ENEMY_DISGUISE_NMY_ENG_4.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_ENEMY_DISGUISE_NMY_ENG_7.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_ENEMY_DISGUISE_NMY_ENG_8.wav" />
+		</Sound>
+		<Sound ID="VOX_ENEMY_REVEALED" >
+			<Path name="data/sounds/voice/enemy english/VOX_ENEMY_REVEALED_NMY_ENG_10.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_ENEMY_REVEALED_NMY_ENG_11.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_ENEMY_REVEALED_NMY_ENG_2.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_ENEMY_REVEALED_NMY_ENG_4.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_ENEMY_REVEALED_NMY_ENG_6.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_ENEMY_REVEALED_NMY_ENG_7.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_ENEMY_REVEALED_NMY_ENG_8.wav" />
+		</Sound>
+		<Sound ID="VOX_HUH" >
+			<Path name="data/sounds/voice/enemy english/VOX_HUH_NMY_ENG_2.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_HUH_NMY_ENG_5.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_HUH_NMY_ENG_6.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_HUH_NMY_ENG_8.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_HUH_NMY_ENG_9.wav" />
+		</Sound>
+		<Sound ID="VOX_HUMAN_SHIELD" >
+			<Path name="data/sounds/voice/enemy english/VOX_HUMAN_SHIELD_NMY_ENG_1.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_HUMAN_SHIELD_NMY_ENG_2.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_HUMAN_SHIELD_NMY_ENG_4.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_HUMAN_SHIELD_NMY_ENG_7.wav" />
+		</Sound>
+		<Sound ID="VOX_INJURED" >
+			<Path name="data/sounds/voice/enemy english/VOX_INJURED_NMY_ENG_1.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_INJURED_NMY_ENG_2.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_INJURED_NMY_ENG_3.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_INJURED_NMY_ENG_4.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_INJURED_NMY_ENG_5.wav" />
+		</Sound>
+		<Sound ID="VOX_LOOK_DONE_ALERT" >
+			<Path name="data/sounds/voice/enemy english/VOX_LOOK_DONE_ALERT_NMY_ENG_1.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_LOOK_DONE_ALERT_NMY_ENG_2.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_LOOK_DONE_ALERT_NMY_ENG_3.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_LOOK_DONE_ALERT_NMY_ENG_5.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_LOOK_DONE_ALERT_NMY_ENG_6.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_LOOK_DONE_ALERT_NMY_ENG_7.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_LOOK_DONE_ALERT_NMY_ENG_9.wav" />
+		</Sound>
+		<Sound ID="VOX_LOOK_DONE" >
+			<Path name="data/sounds/voice/enemy english/VOX_LOOK_DONE_NMY_ENG_2.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_LOOK_DONE_NMY_ENG_5.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_LOOK_DONE_NMY_ENG_8.wav" />
+		</Sound>
+		<Sound ID="VOX_LOOK_GO_ALERT" >
+			<Path name="data/sounds/voice/enemy english/VOX_LOOK_GO_ALERT_NMY_ENG_2.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_LOOK_GO_ALERT_NMY_ENG_3.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_LOOK_GO_ALERT_NMY_ENG_5.wav" />
+		</Sound>
+		<Sound ID="VOX_LOOK_GO" >
+			<Path name="data/sounds/voice/enemy english/VOX_LOOK_GO_NMY_ENG_3.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_LOOK_GO_NMY_ENG_4.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_LOOK_GO_NMY_ENG_8.wav" />
+		</Sound>
+		<Sound ID="VOX_LOOK_HOLD" >
+			<Path name="data/sounds/voice/enemy english/VOX_LOOK_HOLD_NMY_ENG_2.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_LOOK_HOLD_NMY_ENG_3.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_LOOK_HOLD_NMY_ENG_5.wav" />
+		</Sound>
+		<Sound ID="VOX_MELEE_GRUNT" >
+			<Path name="data/sounds/voice/enemy english/VOX_MELEE_GRUNT_NMY_ENG_1.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_MELEE_GRUNT_NMY_ENG_2.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_MELEE_GRUNT_NMY_ENG_3.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_MELEE_GRUNT_NMY_ENG_4.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_MELEE_GRUNT_NMY_ENG_5.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_MELEE_GRUNT_NMY_ENG_6.wav" />
+		</Sound>
+		<Sound ID="VOX_SUICIDE_SHOUT" >
+			<Path name="data/sounds/voice/enemy english/VOX_SUICIDE_SHOUT_NMY_ENG_1.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_SUICIDE_SHOUT_NMY_ENG_2.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_SUICIDE_SHOUT_NMY_ENG_3.wav" />
+		</Sound>
+		<Sound ID="VOX_SURRENDER" >
+			<Path name="data/sounds/voice/enemy english/VOX_SURRENDER_NMY_ENG_2.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_SURRENDER_NMY_ENG_4.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_SURRENDER_NMY_ENG_6.wav" />
+		</Sound>
+		<Sound ID="VOX_THREATEN_HOSTAGE" >
+			<Path name="data/sounds/voice/enemy english/VOX_THREATEN_HOSTAGE_NMY_ENG_1.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_THREATEN_HOSTAGE_NMY_ENG_4.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_THREATEN_HOSTAGE_NMY_ENG_6.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_THREATEN_HOSTAGE_NMY_ENG_7.wav" />
+		</Sound>
+		<Sound ID="VOX_THREATEN_SUSPECT" >
+			<Path name="data/sounds/voice/enemy english/VOX_THREATEN_SUSPECT_NMY_ENG_1.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_THREATEN_SUSPECT_NMY_ENG_3.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_THREATEN_SUSPECT_NMY_ENG_5.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_THREATEN_SUSPECT_NMY_ENG_6.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_THREATEN_SUSPECT_NMY_ENG_8.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_THREATEN_SUSPECT_NMY_ENG_9.wav" />
+		</Sound>
+		<Sound ID="VOX_WARN_GRENADE" >
+			<Path name="data/sounds/voice/enemy english/VOX_WARN_GRENADE_NMY_ENG_2.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_WARN_GRENADE_NMY_ENG_3.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_WARN_GRENADE_NMY_ENG_4.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_WARN_GRENADE_NMY_ENG_5.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_WARN_GRENADE_NMY_ENG_7.wav" />
+			<Path name="data/sounds/voice/enemy english/VOX_WARN_GRENADE_NMY_ENG_8.wav" />
+		</Sound>
+
+	</Pack>
+
+	<!-- PLACEHOLDER -->
+	<Pack name="hostage_female" channel="voice">
+		<Sound ID="VOX_AI_ARRESTED_FINISHED">
+			<Path 									name="data/sounds/voice/others/hostage_thankyou2.ogg" />
+		</Sound>
+	</Pack>
+	
+	<Pack name="civilian_female" channel="voice">
+		<Sound ID="VOX_AI_START_COMBAT" preload="true">
+			<Path 									name="data/sounds/freesounds/220658__marionagm90__scream.ogg" />
+			<Path 									name="data/sounds/freesounds/235595__tcrocker68__girl-two-screams.ogg" />
+			<Path 									name="data/sounds/freesounds/467126__calgre__female-scream.ogg" />
+		</Sound>
+		<Sound ID="VOX_AI_FLEE_WHIMPER" preload="true">
+			<Path 									name="data/sounds/freesounds/467126__calgre__female-scream.ogg" />
+		</Sound>
+	</Pack>
+	
+	<Pack name="civilian_male" channel="voice">
+		<Sound ID="VOX_AI_START_COMBAT" preload="true">
+			<Path 									name="data/sounds/freesounds/219880__pablocandel__boy-scream.ogg" />
+		</Sound>
+		<Sound ID="VOX_AI_FLEE_ESCAPE">
+			<Path 									name="data/sounds/voice/others/FO_VOICE_BGJUNK_10.wav" />
+		</Sound>
+	</Pack>
+	
+</Sounds>

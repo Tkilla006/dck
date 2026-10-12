@@ -1,0 +1,1116 @@
+<!--
+Channels (affected by their respective volume category)
+"music"
+"game"
+"ambiental"
+
+If preload="true", the sound will be loaded the first time a map is loaded, the others are loaded only when needed.
+-->
+<Sounds>
+
+<!-- MUSIC -->
+	<Sound ID="music_main_menu" channel="music" stream="true">
+		<!-- note that this has some hardcoded time offsets for where to start in the main menu -->
+		<Path name="data/sounds/music/mainmenu1.ogg"/>
+	</Sound>
+
+	<!-- in case of streamed sounds, 'preload' means that only their headers are parsed, they won't be entirely preloaded -->
+	<Sound ID="music_ingame" channel="music" stream="true" preload="true">
+		<Path name="data/sounds/music/ingame1.ogg"/>
+		<Path name="data/sounds/music/ingame2.ogg"/>
+		<Path name="data/sounds/music/ingame3.ogg"/>
+		<Path name="data/sounds/music/ingame4.ogg"/>
+		<Path name="data/sounds/music/ingame5.ogg"/>
+		<Path name="data/sounds/music/ingame6.ogg"/>
+		<Path name="data/sounds/music/ingame7.ogg"/>
+		<Path name="data/sounds/music/ingame8.ogg"/>
+		<Path name="data/sounds/music/ingame9.ogg"/>
+	</Sound>
+
+	<Sound ID="music_win" channel="music" stream="true">
+		<Path name="data/sounds/music/win1.ogg"/>
+		<Path name="data/sounds/music/win2.ogg"/>
+	</Sound>
+
+	<Sound ID="music_fail" channel="music" stream="true">
+		<Path name="data/sounds/music/lose1.ogg"/>
+		<Path name="data/sounds/music/lose2.ogg"/>
+	</Sound>
+
+<!-- GUI -->
+    <Sound ID="gui_click" Path="data/sounds/gui/gui_click.ogg" channel="game" preload="true"/>
+    <Sound ID="gui_hover" Path="data/sounds/gui/gui_hover.ogg" channel="game" preload="true"/>
+	<Sound ID="gui_disabled" Path="data/sounds/gui/gui_disabled.ogg" channel="game" preload="true"/>
+	<Sound ID="gui_purchase" Path="data/sounds/gui/gui_purchase.ogg" channel="game" preload="true"/>
+	<Sound ID="gui_customize_equip" channel="game" preload="true">
+		<Path name="data/sounds/sfx/weapons_general/rifle_eqp.wav"/>
+		<Path name="data/sounds/sfx/weapons_general/rifle_neqp.wav"/>
+		<Path name="data/sounds/sfx/weapons_general/smg_eqp.wav"/>
+		<Path name="data/sounds/sfx/weapons_general/smg_neqp.wav"/>
+	</Sound>
+
+	<Sound ID="gui_chat_msg" Path="data/sounds/gui/gui_chat_msg.ogg" channel="game" preload="false"/>
+	<Sound ID="gui_pencil_write" channel="game" preload="false">
+		<Path name="data/sounds/gui/gui_pencil_write.ogg"/>
+		<Path name="data/sounds/gui/gui_pencil_write2.ogg"/>
+	</Sound>
+	
+	<Sound ID="gui_unlock" Path="data/sounds/gui/gui_unlock.wav" channel="game" preload="false"/>
+	<Sound ID="gui_unlock_woosh1" Path="data/sounds/gui/gui_unlock_woosh1.wav" channel="game" preload="false"/>
+	<Sound ID="gui_unlock_woosh2" Path="data/sounds/gui/gui_unlock_woosh2.wav" channel="game" preload="false"/>
+	<Sound ID="gui_unlock_visual" Path="data/sounds/gui/gui_unlock_visual.wav" channel="game" preload="false"/>
+
+<!-- EQUIPMENT -->
+
+	<Sound ID="grenade_use" Path="data/sounds/sfx/equipment/grenade_use.wav" channel="game" preload="true"/>
+	<Sound ID="grenade_hit_floor" Path="data/sounds/sfx/equipment/grenade_hit_something.wav" channel="game" preload="true"/>
+	<Sound ID="crowbar_use" Path="data/sounds/sfx/equipment/crowbar_use.ogg" channel="game" preload="true"/>
+	<Sound ID="crowbar_use_metal" Path="data/sounds/sfx/equipment/crowbar_use_metal.ogg" channel="game" preload="true"/>
+	<Sound ID="lockpick_use" Path="data/sounds/sfx/equipment/lockpick_use.ogg" channel="game" preload="true"/>
+	<Sound ID="lockpick_mach_use" Path="data/sounds/sfx/equipment/lockpick_mach_use.ogg" channel="game" preload="true"/>
+	<Sound ID="equip_charge" Path="data/sounds/sfx/equipment/equip_charge.ogg" channel="game" preload="true"/>
+	<Sound ID="molotov_use" Path="data/sounds/sfx/equipment/molotov_use.wav" channel="game" preload="true"/>
+	<Sound ID="tectorch_use" Path="data/sounds/sfx/equipment/tech_torch.ogg" channel="game" preload="false"/>
+	<Sound ID="melee_hit" channel="game" preload="true">
+		<Path name="data/sounds/sfx/equipment/melee_hit_01.wav"/>
+		<Path name="data/sounds/sfx/equipment/melee_hit_02.wav"/>
+		<Path name="data/sounds/sfx/equipment/melee_hit_03.wav"/>
+	</Sound>
+	<Sound ID="bolt_cut" channel="game" preload="false">
+		<Path name="data/sounds/sfx/equipment/bolt_cut1.wav"/>
+		<Path name="data/sounds/sfx/equipment/bolt_cut2.wav"/>
+		<Path name="data/sounds/sfx/equipment/bolt_cut3.wav"/>
+	</Sound>
+	<Sound ID="bolt_drop" Path="data/sounds/sfx/equipment/bolt_drop.wav" channel="game" preload="false"/>
+
+	<Sound ID="timebomb_beep_fast" Path="data/sounds/sfx/equipment/timebomb_beep_fast.wav" channel="game" preload="false"/>
+	<Sound ID="timebomb_beep_slow" Path="data/sounds/sfx/equipment/timebomb_beep_slow.wav" channel="game" preload="false"/>
+	<Sound ID="timebomb_disarm" Path="data/sounds/sfx/equipment/timebomb_disarm.ogg" channel="game" preload="false"/>
+	<Sound ID="timebomb_kaboom" Path="data/sounds/sfx/equipment/timebomb_kaboom.ogg" channel="game" preload="false"/>
+
+<!-- EXPLOSIONS -->
+    <Sound ID="flash_expl" Path="data/sounds/sfx/explosions/flash_expl.wav" channel="game" preload="true"/>
+	<Sound ID="stinger_expl" Path="data/sounds/sfx/explosions/stinger_expl.wav" channel="game" preload="true"/>
+	<Sound ID="smoke_throw" Path="data/sounds/sfx/explosions/smoke_throw.wav" channel="game" preload="true"/>
+	<Sound ID="smoke_loop" Path="data/sounds/sfx/explosions/smoke_loop.wav" channel="game" preload="true"/>
+	<Sound ID="expl_breach_charge" Path="data/sounds/sfx/explosions/expl_breach_charge.wav" channel="game" preload="true"/>
+	<Sound ID="expl_slap_charge" Path="data/sounds/sfx/explosions/expl_slap_charge.wav" channel="game" preload="true"/>
+	<Sound ID="frag_expl" channel="game" preload="true">
+		<Path name="data/sounds/sfx/explosions/frag_expl_01.wav"/>
+		<Path name="data/sounds/sfx/explosions/frag_expl_02.wav"/>
+		<Path name="data/sounds/sfx/explosions/frag_expl_03.wav"/>
+	</Sound>
+	<Sound ID="rpg_expl" Path="data/sounds/sfx/explosions/rpg_expl.wav" channel="game" preload="true"/>
+	<Sound ID="grenade_launcher_expl" Path="data/sounds/sfx/explosions/grenade_launcher_expl.wav" channel="game" preload="true"/>
+	<Sound ID="suicide_bomber_expl" Path="data/sounds/sfx/explosions/suic_bomber_expl.wav" channel="game" preload="true"/>
+
+<!-- TROOPER -->
+	<Sound ID="trpr_kneel" Path="data/sounds/sfx/trooper/trpr_kneel.wav" channel="game" preload="true"/>
+	<Sound ID="trpr_stand" Path="data/sounds/sfx/trooper/trpr_stand.wav" channel="game" preload="true"/>
+
+	<Sound ID="step_interior_short" channel="game" preload="true" overlap="true">
+		<Path name="data/sounds/sfx/trooper/step_int_01.ogg"/>
+		<Path name="data/sounds/sfx/trooper/step_int_02.ogg"/>
+		<Path name="data/sounds/sfx/trooper/step_int_03.ogg"/>
+		<Path name="data/sounds/sfx/trooper/step_int_04.ogg"/>
+		<Path name="data/sounds/sfx/trooper/step_int_05.ogg"/>
+	</Sound>
+	<Sound ID="step_exterior_short" channel="game" preload="true" overlap="true">
+		<Path name="data/sounds/sfx/trooper/step_ext_01.ogg"/>
+		<Path name="data/sounds/sfx/trooper/step_ext_02.ogg"/>
+		<Path name="data/sounds/sfx/trooper/step_ext_03.ogg"/>
+		<Path name="data/sounds/sfx/trooper/step_ext_04.ogg"/>
+		<Path name="data/sounds/sfx/trooper/step_ext_05.ogg"/>
+	</Sound>
+	<Sound ID="step_long" channel="game" preload="true"> <!-- running -->
+		<Path name="data/sounds/sfx/trooper/step_run_01.ogg"/>
+		<Path name="data/sounds/sfx/trooper/step_run_02.ogg"/>
+		<Path name="data/sounds/sfx/trooper/step_run_03.ogg"/>
+		<Path name="data/sounds/sfx/trooper/step_run_04.ogg"/>
+		<Path name="data/sounds/sfx/trooper/step_run_05.ogg"/>
+		<Path name="data/sounds/sfx/trooper/step_run_06.ogg"/>
+	</Sound>
+	<Sound ID="jump_landing" channel="game" preload="true">
+		<Path name="data/sounds/sfx/trooper/jump_landing.wav"/>
+	</Sound>
+
+<!-- ENVIRONMENT -->
+
+	<Sound ID="christmas_tree" channel="game" preload="false">
+		<Path name="data/sounds/sfx/environment/christmas_tree.wav"/>
+	</Sound>
+
+	<!-- these implicitly refer to wooden doors -->
+	<Sound ID="door_open" channel="game" preload="true">
+		<Path name="data/sounds/sfx/environment/door_open_01.wav"/>
+		<Path name="data/sounds/sfx/environment/door_open_02.wav"/>
+	</Sound>
+	<Sound ID="door_close" channel="game" preload="true">
+		<Path name="data/sounds/sfx/environment/door_close_01.wav"/>
+		<Path name="data/sounds/sfx/environment/door_close_02.wav"/>
+	</Sound>
+	<Sound ID="door_break" channel="game" preload="true">
+		<Path name="data/sounds/sfx/environment/door_break_01.wav"/>
+		<Path name="data/sounds/sfx/environment/door_break_02.wav"/>
+	</Sound>
+	<Sound ID="door_kick" channel="game" preload="true">
+		<Path name="data/sounds/sfx/environment/door_kick_01.wav"/>
+		<Path name="data/sounds/sfx/environment/door_kick_02.wav"/>
+		<Path name="data/sounds/sfx/environment/door_kick_03.wav"/>
+	</Sound>
+	<Sound ID="door_ram" channel="game" preload="true">
+		<Path name="data/sounds/sfx/environment/door_ram_wood.wav"/>
+	</Sound>
+	<Sound ID="doorsl_open" Path="data/sounds/sfx/environment/doorsl_open.wav" channel="game" preload="true"/>
+	<Sound ID="doorsl_close" Path="data/sounds/sfx/environment/doorsl_close.wav" channel="game" preload="true"/>
+
+	<!-- metal doors -->
+	<Sound ID="door_grate_open" channel="game" preload="true">
+		<Path name="data/sounds/sfx/environment/door_grate_open_01.wav"/>
+		<Path name="data/sounds/sfx/environment/door_grate_open_02.wav"/>
+	</Sound>
+	<Sound ID="door_grate_close" channel="game" preload="true">
+		<Path name="data/sounds/sfx/environment/door_grate_close_01.wav"/>
+		<Path name="data/sounds/sfx/environment/door_grate_close_02.wav"/>
+	</Sound>
+	<Sound ID="door_grate_break" channel="game" preload="true">
+		<Path name="data/sounds/sfx/environment/door_grate_fall_01.wav"/>
+		<Path name="data/sounds/sfx/environment/door_grate_fall_02.wav"/>
+	</Sound>
+	<Sound ID="door_metal_break" channel="game" Path="data/sounds/sfx/environment/door_metal_break_01.wav" preload="true"/>
+	<Sound ID="door_grate_kick" channel="game" preload="true">
+		<Path name="data/sounds/sfx/environment/door_grate_kick_01.wav"/>
+		<Path name="data/sounds/sfx/environment/door_grate_fall_01.wav"/>
+		<Path name="data/sounds/sfx/environment/door_grate_fall_02.wav"/>
+	</Sound>
+	<Sound ID="door_grate_ram" Path="data/sounds/sfx/environment/door_ram_metal.wav" channel="game" preload="true"/>
+
+	<Sound ID="glass_break" channel="game" preload="true" overlap="true">
+		<Path name="data/sounds/sfx/environment/glass_break_01.wav"/>
+		<Path name="data/sounds/sfx/environment/glass_break_02.wav"/>
+		<Path name="data/sounds/sfx/environment/glass_break_03.wav"/>
+	</Sound>
+
+	<Sound ID="metal_hit" channel="game" preload="false">
+		<Path name="data/sounds/sfx/environment/metal_hit_01.wav"/>
+		<Path name="data/sounds/sfx/environment/metal_hit_02.wav"/>
+	</Sound>
+
+	<Sound ID="curtain_break" channel="game" preload="true">
+		<Path name="data/sounds/sfx/environment/curtain_break_01.wav"/>
+		<Path name="data/sounds/sfx/environment/curtain_break_02.wav"/>
+	</Sound>
+
+	<Sound ID="wood_break" channel="game" preload="true">
+		<Path name="data/sounds/sfx/environment/wood_break_01.wav"/>
+		<Path name="data/sounds/sfx/environment/wood_break_02.wav"/>
+		<Path name="data/sounds/sfx/environment/wood_break_03.wav"/>
+	</Sound>
+
+	<Sound ID="wall_break" channel="game" preload="true">
+		<Path name="data/sounds/sfx/environment/wall_break_01.wav"/>
+		<Path name="data/sounds/sfx/environment/wall_break_02.wav"/>
+		<Path name="data/sounds/sfx/environment/wall_break_03.wav"/>
+	</Sound>
+
+	<Sound ID="metal_break" channel="game" preload="true">
+		<Path name="data/sounds/sfx/environment/metal_break_01.wav"/>
+		<Path name="data/sounds/sfx/environment/metal_break_02.wav"/>
+		<Path name="data/sounds/sfx/environment/metal_break_03.wav"/>
+	</Sound>
+
+	<Sound ID="helicopter_idle" channel="game" preload="false" stream="true">
+		<Path name="data/sounds/sfx/environment/helicopter_idle.ogg"/>
+	</Sound>
+
+	<Sound ID="fusebox" channel="game" preload="true">
+		<Path name="data/sounds/sfx/environment/fusebox.wav"/>
+	</Sound>
+
+	<!-- currently unused -->
+	<Sound ID="glass_impact" channel="game" preload="false">
+		<Path name="data/sounds/sfx/environment/glass_impact_01.wav"/>
+		<Path name="data/sounds/sfx/environment/glass_impact_02.wav"/>
+		<Path name="data/sounds/sfx/environment/glass_impact_03.wav"/>
+	</Sound>
+
+<!-- AMBIENTAL -->
+
+<!-- Exterior Ambient -->
+
+	<!-- make sure these don't have variants attached to them, keep 1 sound per ID -->
+	<Sound ID="battle_faraway_01_st" Path="data/sounds/sfx/ambiental/battle_faraway_01_st.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="battle_faraway_01_mn" Path="data/sounds/sfx/ambiental/battle_faraway_01_mn.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="battle_faraway_02_st" Path="data/sounds/sfx/ambiental/battle_faraway_02_st.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="battle_faraway_02_mn" Path="data/sounds/sfx/ambiental/battle_faraway_02_mn.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="battle_faraway_03_st" Path="data/sounds/sfx/ambiental/battle_faraway_03_st.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="battle_faraway_03_mn" Path="data/sounds/sfx/ambiental/battle_faraway_03_mn.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="ambiance_canyon_01_st" Path="data/sounds/sfx/ambiental/ambiance_canyon_01_st.ogg" channel="ambiental" stream="true"/>
+	<Sound ID="ambiance_canyon_01_mn" Path="data/sounds/sfx/ambiental/ambiance_canyon_01_mn.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="ambiance_city_01" Path="data/sounds/sfx/ambiental/ambiance_city_01_mn.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="far_rural_ambience_st" Path="data/sounds/sfx/ambiental/far_rural_ambience_st.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="far_rural_ambience_mn" Path="data/sounds/sfx/ambiental/far_rural_ambience_mn.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="wind" Path="data/sounds/sfx/ambiental/wind.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="wind_desert_st" Path="data/sounds/sfx/ambiental/wind_desert_st.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="wind_desert_mn" Path="data/sounds/sfx/ambiental/wind_desert_mn.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="wind_desert_02_st" Path="data/sounds/sfx/ambiental/wind_desert_02_st.ogg" channel="ambiental" stream="true"/>
+	<Sound ID="wind_desert_02_mn" Path="data/sounds/sfx/ambiental/wind_desert_02_mn.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="wind_canyon_st" Path="data/sounds/sfx/ambiental/wind_canyon_st.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="wind_canyon_mn" Path="data/sounds/sfx/ambiental/wind_canyon_mn.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="wind_open_field_veg_st" Path="data/sounds/sfx/ambiental/wind_open_field_veg_st.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="wind_open_field_veg_mn" Path="data/sounds/sfx/ambiental/wind_open_field_veg_mn.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="wind_rural_st" Path="data/sounds/sfx/ambiental/wind_rural_st.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="wind_rural_mn" Path="data/sounds/sfx/ambiental/wind_rural_mn.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="heavy_rain_thunders" Path="data/sounds/sfx/ambiental/heavy_rain_thunders.ogg" channel="ambiental" stream="true"/>
+	<Sound ID="ambiance_market_01" Path="data/sounds/sfx/ambiental/ambiance_market_01.ogg" channel="ambiental" stream="true"/>
+	<Sound ID="ambiance_market_02" Path="data/sounds/sfx/ambiental/crowd_market_unintelligible.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="ambiance_rich_area" Path="data/sounds/sfx/ambiental/ambiance_rich_area.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="cars_passing_by" Path="data/sounds/sfx/ambiental/cars_passing_by.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="city_ambiance_a" Path="data/sounds/sfx/ambiental/city_ambience_a.ogg" channel="ambiental" stream="false"/>	
+	<Sound ID="canyon_mn" Path="data/sounds/sfx/ambiental/canyon_mn.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="canyon_st" Path="data/sounds/sfx/ambiental/canyon_st.ogg" channel="ambiental" stream="true"/>	
+
+<!-- Interior Roomtones -->
+
+	<Sound ID="roomtone_fridge" Path="data/sounds/sfx/ambiental/roomtone_fridge.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="roomtone_hallway_02" Path="data/sounds/sfx/ambiental/roomtone_hallway_02.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="roomtone_hallway_03" Path="data/sounds/sfx/ambiental/roomtone_hallway_03.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="roomtone_silent" Path="data/sounds/sfx/ambiental/roomtone_silent.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="roomtone_small_empty_02" Path="data/sounds/sfx/ambiental/roomtone_small_empty_02.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="roomtone_std_01" Path="data/sounds/sfx/ambiental/roomtone_std_01.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="room_tone_empty_spaces" Path="data/sounds/sfx/ambiental/room_tone_empty_spaces.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="room_tone_household" Path="data/sounds/sfx/ambiental/room_tone_household.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="room_tone_industrial" Path="data/sounds/sfx/ambiental/room_tone_industrial.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="room_tone_market_near_noise" Path="data/sounds/sfx/ambiental/room_tone_market_near_noise.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="room_tone_office" Path="data/sounds/sfx/ambiental/room_tone_office.ogg" channel="ambiental" stream="false"/>
+
+<!-- Fauna -->
+
+	<Sound ID="dog_barking" channel="game" preload="false">
+		<Path name="data/sounds/sfx/ambiental/animal_01.ogg"/>
+		<Path name="data/sounds/sfx/ambiental/animal_02.ogg"/>
+		<Path name="data/sounds/sfx/ambiental/animal_03.ogg"/>
+		<Path name="data/sounds/sfx/ambiental/animal_04.ogg"/>
+	</Sound>
+	<Sound ID="dog_barking_far" Path="data/sounds/sfx/ambiental/dog_barking_far.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="cow" Path="data/sounds/sfx/ambiental/animal_05.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="goose" channel="game" preload="false">
+		<Path name="data/sounds/sfx/ambiental/animal_06.ogg"/>
+		<Path name="data/sounds/sfx/ambiental/animal_07.ogg"/>
+	</Sound>
+	<Sound ID="birds" channel="game" preload="false">
+		<Path name="data/sounds/sfx/ambiental/animal_08.ogg"/>
+		<Path name="data/sounds/sfx/ambiental/animal_09.ogg"/>
+	</Sound>
+	<Sound ID="chicken" channel="game" preload="false">
+		<Path name="data/sounds/sfx/ambiental/animal_10.ogg"/>
+		<Path name="data/sounds/sfx/ambiental/animal_11.ogg"/>
+	</Sound>
+	<Sound ID="owl_hooting" channel="game" preload="false">
+		<Path name="data/sounds/sfx/ambiental/owl_hooting_01.ogg"/>
+		<Path name="data/sounds/sfx/ambiental/owl_hooting_02.ogg"/>
+		<Path name="data/sounds/sfx/ambiental/owl_hooting_03.ogg"/>
+	</Sound>
+	<Sound ID="fly_swarm" Path="data/sounds/sfx/ambiental/fly_swarm.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="birds_in_the_city" Path="data/sounds/sfx/ambiental/birds_in_the_city.ogg" channel="ambiental" stream="false"/>
+
+<!-- Devices -->
+
+	<Sound ID="devices" Path="data/sounds/sfx/ambiental/devices.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="computer_fans" Path="data/sounds/sfx/ambiental/computer_fans.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="neon" Path="data/sounds/sfx/ambiental/neon.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="light_flickering" Path="data/sounds/sfx/ambiental/light_flickering.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="air_conditioner" Path="data/sounds/sfx/ambiental/air_conditioner.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="radio_noise_01" Path="data/sounds/sfx/ambiental/radio_noise_01.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="radio_noise_02" Path="data/sounds/sfx/ambiental/radio_noise_02.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="radio_noise_03" Path="data/sounds/sfx/ambiental/radio_noise_03.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="radio_noise_04" Path="data/sounds/sfx/ambiental/radio_noise_04.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="radio_noise_05" Path="data/sounds/sfx/ambiental/radio_noise_05.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="elevator_arrive" Path="data/sounds/sfx/ambiental/elevator_arrive.wav" channel="ambiental"/>
+	<Sound ID="washing_machine" Path="data/sounds/sfx/ambiental/washing_machine.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="announcer_01" Path="data/sounds/sfx/ambiental/announcer_01.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="announcer_02" Path="data/sounds/sfx/ambiental/announcer_02.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="fax" channel="game" preload="false">
+		<Path name="data/sounds/sfx/ambiental/fax_01.ogg"/>
+		<Path name="data/sounds/sfx/ambiental/fax_02.ogg"/>
+		<Path name="data/sounds/sfx/ambiental/fax_03.ogg"/>
+		<Path name="data/sounds/sfx/ambiental/fax_04.ogg"/>
+	</Sound>
+	<Sound ID="jingle_01" Path="data/sounds/sfx/ambiental/jingle_01.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="jingle_02" Path="data/sounds/sfx/ambiental/jingle_02.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="keyboard" channel="game" preload="false">
+		<Path name="data/sounds/sfx/ambiental/keyboard_typing_01.ogg"/>
+		<Path name="data/sounds/sfx/ambiental/keyboard_typing_02.ogg"/>
+		<Path name="data/sounds/sfx/ambiental/keyboard_typing_03.ogg"/>
+		<Path name="data/sounds/sfx/ambiental/keyboard_typing_04.ogg"/>
+	</Sound>
+	<Sound ID="phone_ringing" channel="game" preload="false">
+		<Path name="data/sounds/sfx/ambiental/phone_ringing_01.ogg"/>
+		<Path name="data/sounds/sfx/ambiental/phone_ringing_02.ogg"/>
+	</Sound>
+
+<!-- Vehicles -->
+
+	<Sound ID="police_siren_a" Path="data/sounds/sfx/ambiental/police_siren_a.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="police_siren_b" Path="data/sounds/sfx/ambiental/police_siren_b.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="car_alarm" Path="data/sounds/sfx/ambiental/car_alarm.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="car_alarm_chirp" Path="data/sounds/sfx/ambiental/car_alarm_chirp.wav" channel="ambiental"/>
+	<Sound ID="train_horn_far" Path="data/sounds/sfx/ambiental/train_horn_far.wav" channel="ambiental" stream="false"/>
+	<Sound ID="train" Path="data/sounds/sfx/ambiental/train.wav" channel="ambiental" stream="false"/>
+
+<!-- Industrial -->
+
+	<Sound ID="factory_broken_machine" Path="data/sounds/sfx/ambiental/factory_broken_machine.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="factory_car_engine_01" Path="data/sounds/sfx/ambiental/factory_car_engine_01.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="factory_car_engine_02" Path="data/sounds/sfx/ambiental/factory_car_engine_02.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="factory_car_engine_03" Path="data/sounds/sfx/ambiental/factory_car_engine_03.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="factory_engine_01" Path="data/sounds/sfx/ambiental/factory_engine_01.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="factory_engine_02" Path="data/sounds/sfx/ambiental/factory_engine_02.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="factory_far_metal_hit" Path="data/sounds/sfx/ambiental/factory_far_metal_hit.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="factory_hammer_hit" channel="game" preload="false">
+		<Path name="data/sounds/sfx/ambiental/factory_hammer_hit_01.ogg"/>
+		<Path name="data/sounds/sfx/ambiental/factory_hammer_hit_02.ogg"/>
+		<Path name="data/sounds/sfx/ambiental/factory_hammer_hit_03.ogg"/>
+	</Sound>
+	<Sound ID="factory_industrial_vents" Path="data/sounds/sfx/ambiental/factory_industrial_vents.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="factory_interface_beep" channel="game" preload="false">
+		<Path name="data/sounds/sfx/ambiental/factory_interface_beep_01.ogg"/>
+		<Path name="data/sounds/sfx/ambiental/factory_interface_beep_02.ogg"/>
+		<Path name="data/sounds/sfx/ambiental/factory_interface_beep_03.ogg"/>
+	</Sound>
+	<Sound ID="factory_liquid_pipes" Path="data/sounds/sfx/ambiental/factory_liquid_pipes.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="factory_short_electrical_ark" channel="game" preload="false">
+		<Path name="data/sounds/sfx/ambiental/factory_short_electrical_ark_01.ogg"/>
+		<Path name="data/sounds/sfx/ambiental/factory_short_electrical_ark_02.ogg"/>
+		<Path name="data/sounds/sfx/ambiental/factory_short_electrical_ark_03.ogg"/>
+	</Sound>
+	<Sound ID="factory_turbine_01" Path="data/sounds/sfx/ambiental/factory_turbine_01.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="factory_turbine_02" Path="data/sounds/sfx/ambiental/factory_turbine_02.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="factory_turbine_03" Path="data/sounds/sfx/ambiental/factory_turbine_03.ogg" channel="ambiental" stream="false"/>
+
+<!-- Misc -->
+
+	<Sound ID="wood_creaking_a" Path="data/sounds/sfx/ambiental/wood_creaking_a.wav" channel="ambiental" stream="false"/>
+	<Sound ID="wood_creaking_b" Path="data/sounds/sfx/ambiental/wood_creaking_b.wav" channel="ambiental" stream="false"/>
+	<Sound ID="wood_creaking_c" Path="data/sounds/sfx/ambiental/wood_creaking_c.wav" channel="ambiental" stream="false"/>
+	<Sound ID="tap_water_drip" Path="data/sounds/sfx/ambiental/tap_water_drip.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="river" Path="data/sounds/sfx/ambiental/river.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="fire" Path="data/sounds/sfx/ambiental/fire.ogg" channel="ambiental" stream="false"/>
+	<Sound ID="bush" Path="data/sounds/sfx/ambiental/bush.ogg" channel="ambiental" stream="false"/>	
+	<Sound ID="club_music" Path="data/sounds/sfx/ambiental/club_music.ogg" channel="ambiental" stream="true"/>
+	<Sound ID="club_music_indoors" Path="data/sounds/sfx/ambiental/club_music_indoors.ogg" channel="ambiental" stream="true"/>
+	<Sound ID="club_music_outdoors" Path="data/sounds/sfx/ambiental/club_music_outdoors.ogg" channel="ambiental" stream="true"/>
+
+
+<!-- WEAPONS -->
+
+<!-- General / Equip / Reload / Shells -->
+
+   	<Sound ID="gen_empty" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons_general/gen_empty_01.wav"/>
+		<Path name="data/sounds/sfx/weapons_general/gen_empty_02.wav"/>
+		<Path name="data/sounds/sfx/weapons_general/gen_empty_03.wav"/>
+	</Sound>
+
+	<!-- Rifles -->
+
+	<Sound ID="rifle_eqp" Path="data/sounds/sfx/weapons_general/rifle_eqp.wav" channel="game" preload="false"/>
+    <Sound ID="rifle_neqp" Path="data/sounds/sfx/weapons_general/rifle_neqp.wav" channel="game" preload="false"/>
+	<Sound ID="rifle_reld" Path="data/sounds/sfx/weapons_general/rifle_reld.wav" channel="game" preload="false"/>
+	<Sound ID="rifle_reldempt" Path="data/sounds/sfx/weapons_general/rifle_reldempt.wav" channel="game" preload="false"/>
+
+	<!-- turned down to 60% volume in code -->
+	<Sound ID="rifle_shell_drop" channel="game" preload="false" overlap="true">
+		<Path name="data/sounds/sfx/weapons_general/rifle_shell_drop_01.wav"/>
+		<Path name="data/sounds/sfx/weapons_general/rifle_shell_drop_02.wav"/>
+		<Path name="data/sounds/sfx/weapons_general/rifle_shell_drop_03.wav"/>
+	</Sound>
+
+	<!-- Pistols -->
+
+	<Sound ID="pistol_eqp" Path="data/sounds/sfx/weapons_general/pistol_eqp.wav" channel="game" preload="false"/>
+    <Sound ID="pistol_neqp" Path="data/sounds/sfx/weapons_general/pistol_neqp.wav" channel="game" preload="false"/>
+	<Sound ID="pistol_reld" Path="data/sounds/sfx/weapons_general/pistol_reld.ogg" channel="game" preload="false"/>
+    <Sound ID="pistol_reldempt" Path="data/sounds/sfx/weapons_general/pistol_reldempt.ogg" channel="game" preload="false"/>
+
+			<!-- turned down to 60% volume in code -->
+	<Sound ID="pistol_shell_drop" channel="game" preload="false" overlap="true">
+		<Path name="data/sounds/sfx/weapons_general/pistol_shell_drop_01.wav"/>
+		<Path name="data/sounds/sfx/weapons_general/pistol_shell_drop_02.wav"/>
+		<Path name="data/sounds/sfx/weapons_general/pistol_shell_drop_03.wav"/>
+	</Sound>
+
+	<!-- SMG's -->
+
+	<Sound ID="smg_eqp" Path="data/sounds/sfx/weapons_general/smg_eqp.wav" channel="game" preload="false"/>
+    <Sound ID="smg_neqp" Path="data/sounds/sfx/weapons_general/smg_neqp.wav" channel="game" preload="false"/>
+	<Sound ID="smg_reld" Path="data/sounds/sfx/weapons_general/smg_reld.wav" channel="game" preload="false"/>
+    <Sound ID="smg_reldempt" Path="data/sounds/sfx/weapons_general/smg_reldempt.wav" channel="game" preload="false"/>
+
+			<!-- turned down to 60% volume in code -->
+	<Sound ID="smg_shell_drop" channel="game" preload="false" overlap="true">
+		<Path name="data/sounds/sfx/weapons_general/smg_shell_drop_01.wav"/>
+		<Path name="data/sounds/sfx/weapons_general/smg_shell_drop_02.wav"/>
+		<Path name="data/sounds/sfx/weapons_general/smg_shell_drop_03.wav"/>
+	</Sound>
+
+	<!-- Shotguns -->
+
+	<Sound ID="870br_eqp" Path="data/sounds/sfx/weapons_general/smg_eqp.wav" channel="game" preload="false"/>
+    <Sound ID="870br_neqp" Path="data/sounds/sfx/weapons_general/smg_neqp.wav" channel="game" preload="false"/>
+	<Sound ID="870br_reld" Path="data/sounds/sfx/weapons_general/870br_reld.wav" channel="game" preload="false"/>
+    <!-- included in the fire sounds
+	<Sound ID="870br_charge" Path="data/sounds/sfx/weapons_general/870br_charge.wav" channel="game" preload="false"/>
+	-->
+
+			<!-- turned down to 60% volume in code -->
+	<Sound ID="shotgun_shell_drop" channel="game" preload="false" overlap="true">
+		<Path name="data/sounds/sfx/weapons_general/shotgun_shell_drop_01.wav"/>
+		<Path name="data/sounds/sfx/weapons_general/shotgun_shell_drop_02.wav"/>
+		<Path name="data/sounds/sfx/weapons_general/shotgun_shell_drop_03.wav"/>
+	</Sound>
+
+	<!-- Grenade Launchers -->
+
+	<Sound ID="m203_reld" Path="data/sounds/sfx/weapons_general/m203_reld.wav" channel="game" preload="false"/>
+	<Sound ID="mk14_reld" Path="data/sounds/sfx/weapons_general/mk14_reld.wav" channel="game" preload="false"/>
+	<Sound ID="mk14_open" Path="data/sounds/sfx/weapons_general/mk14_open.wav" channel="game" preload="false"/>
+	<Sound ID="mk14_close" Path="data/sounds/sfx/weapons_general/mk14_close.wav" channel="game" preload="false"/>
+
+	<!-- RPGs -->
+
+	<Sound ID="rpg7_reld" Path="data/sounds/sfx/weapons_general/rpg7_reld.wav" channel="game" preload="false"/>
+	<Sound ID="rpg26_drop" Path="data/sounds/sfx/weapons_general/rpg26_drop.wav" channel="game" preload="false"/>
+
+
+
+<!-- PISTOLS -->
+
+	<!-- PPK -->
+	<Sound ID="ppk_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/tt33_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/tt33_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/tt33_fire_03.wav"/>
+	</Sound>
+
+	<Sound ID="ppksup_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/hushpuppy_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/hushpuppy_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/hushpuppy_fire_03.wav"/>
+	</Sound>
+
+
+	<!-- 1911 -->
+  	<Sound ID="1911_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/1911_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/1911_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/1911_fire_03.wav"/>
+	</Sound>
+
+	<!-- HK45 -->
+	<Sound ID="hk45_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/1911_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/1911_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/1911_fire_03.wav"/>
+	</Sound>
+
+	<!-- HK45 Suppressed -->
+	<Sound ID="hk45sup_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/hushpuppy_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/hushpuppy_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/hushpuppy_fire_03.wav"/>
+	</Sound>
+
+	<!-- HS45 -->
+    <Sound ID="hs45_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/1911_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/1911_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/1911_fire_03.wav"/>
+	</Sound>
+
+	<!-- G17 -->
+    <Sound ID="g17_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/m9_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/m9_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/m9_fire_03.wav"/>
+	</Sound>
+
+	<!-- G19 -->
+    <Sound ID="g19_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/g19_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/g19_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/g19_fire_03.wav"/>
+	</Sound>
+
+	<!-- G22 -->
+    <Sound ID="g22_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/g22_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/g22_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/g22_fire_03.wav"/>
+	</Sound>
+
+	<!-- TT33 -->
+    <Sound ID="tt33_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/tt33_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/tt33_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/tt33_fire_03.wav"/>
+	</Sound>
+
+	<!-- M9 -->
+    <Sound ID="m9_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/m9_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/m9_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/m9_fire_03.wav"/>
+	</Sound>
+
+	<!-- M17 -->
+    <Sound ID="m17_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/m17_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/m17_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/m17_fire_03.wav"/>
+	</Sound>
+
+	<!-- M18 -->
+    <Sound ID="m18_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/m18_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/m18_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/m18_fire_03.wav"/>
+	</Sound>
+
+	<!-- M9 Supressed -->
+    <Sound ID="m9sup_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/m9sup_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/m9sup_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/m9sup_fire_03.wav"/>
+	</Sound>
+
+	<!-- MPS45Sup -->
+    <Sound ID="45sup_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/hushpuppy_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/hushpuppy_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/hushpuppy_fire_03.wav"/>
+	</Sound>
+
+	<!-- Hushpuppy -->
+    <Sound ID="hushpuppy_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/45sup_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/45sup_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/45sup_fire_03.wav"/>
+	</Sound>
+
+    <Sound ID="fn57_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/fn57_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/fn57_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/fn57_fire_03.wav"/>
+	</Sound>
+
+    <Sound ID="g19comp_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/g19comp_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/g19comp_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/g19comp_fire_03.wav"/>
+	</Sound>
+
+<!-- ASSAULT RIFLES -->
+
+	<!-- M4 -->
+    <Sound ID="m4_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/m4_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/m4_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/m4_fire_03.wav"/>
+	</Sound>
+
+	<!-- M4 Suppressed -->
+	<Sound ID="m4sup_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/556_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/556_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/556_fire_03.wav"/>
+	</Sound>
+
+	<!-- M14-->
+    <Sound ID="m14_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/m14_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/m14_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/m14_fire_03.wav"/>
+	</Sound>
+
+	<!-- M16-->
+    <Sound ID="m16_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/m16_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/m16_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/m16_fire_03.wav"/>
+	</Sound>
+
+	<!-- M110csass -->
+    <Sound ID="m110csass_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/m110csass_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/m110csass_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/m110csass_fire_03.wav"/>
+	</Sound>
+
+	<!-- M110csass Suppressed -->
+	<Sound ID="m110sup_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/762_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/762_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/762_fire_03.wav"/>
+	</Sound>
+
+	<!-- MK17 -->
+    <Sound ID="mk17_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/mk17_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/mk17_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/mk17_fire_03.wav"/>
+	</Sound>
+
+	<!-- MK17cqc -->
+    <Sound ID="mk17cqc_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/mk17cqc_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/mk17cqc_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/mk17cqc_fire_03.wav"/>
+	</Sound>
+
+	<!-- MK17lb -->
+    <Sound ID="mk17lb_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/mk17lb_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/mk17lb_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/mk17lb_fire_03.wav"/>
+	</Sound>
+
+	<!-- MK17 Suppressed -->
+	<Sound ID="mk17sup_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/762_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/762_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/762_fire_03.wav"/>
+	</Sound>
+
+	<!-- MK18 -->
+    <Sound ID="mk18_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/mk18_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/mk18_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/mk18_fire_03.wav"/>
+	</Sound>
+
+	<!-- MK18 Suppressed -->
+	<Sound ID="mk18sup_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/556_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/556_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/556_fire_03.wav"/>
+	</Sound>
+
+	<!-- MK20 -->
+    <Sound ID="mk20_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/mk20_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/mk20_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/mk20_fire_03.wav"/>
+	</Sound>
+
+	<!-- MK20 Suppressed -->
+	<Sound ID="mk20sup_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/762_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/762_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/762_fire_03.wav"/>
+	</Sound>
+
+	<!-- Type 56 -->
+    <Sound ID="type56_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/type56_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/type56_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/type56_fire_03.wav"/>
+	</Sound>
+
+	<!-- AKM -->
+	<Sound ID="akm_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/type56_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/type56_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/type56_fire_03.wav"/>
+	</Sound>
+
+	<!-- AK103-->
+    <Sound ID="aks103_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/ak103_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/ak103_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/ak103_fire_03.wav"/>
+	</Sound>
+
+	<!-- AK103 Suppressed -->
+	<Sound ID="aks103sup_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/556_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/556_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/556_fire_03.wav"/>
+	</Sound>
+
+	<!-- AKS74u-->
+    <Sound ID="aks74u_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/aks74u_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/aks74u_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/aks74u_fire_03.wav"/>
+	</Sound>
+
+	<!-- AKS74u Suppressed -->
+	<Sound ID="aks74usup_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/556_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/556_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/556_fire_03.wav"/>
+	</Sound>
+
+	<!-- AR M14 SF -->
+	 <Sound ID="arm14_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/aks74u_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/aks74u_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/aks74u_fire_03.wav"/>
+	</Sound>
+
+	<!-- Vulcan -->
+    <Sound ID="vulcan_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/type56_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/type56_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/type56_fire_03.wav"/>
+	</Sound>
+
+	<!-- Vulcan Suppressed -->
+	<Sound ID="vulcansup_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/762_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/762_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/762_fire_03.wav"/>
+	</Sound>
+
+	<!-- FN FAL -->
+    <Sound ID="fnfal_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/fnfal_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/fnfal_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/fnfal_fire_03.wav"/>
+	</Sound>
+
+	<!-- SVD -->
+    <Sound ID="svd_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/pkm_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/pkm_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/pkm_fire_03.wav"/>
+	</Sound>
+
+	<!-- SVU -->
+    <Sound ID="svu_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/pkm_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/pkm_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/pkm_fire_03.wav"/>
+	</Sound>
+
+	<!-- SMLE MK3 -->
+	<Sound ID="smle_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/870br_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/870br_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/870br_fire_03.wav"/>
+	</Sound>
+
+	<!-- SR3m -->
+    <Sound ID="sr3m_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/sr3m_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/sr3m_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/sr3m_fire_03.wav"/>
+	</Sound>
+
+    <Sound ID="300sup_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/300_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/300_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/300_fire_03.wav"/>
+	</Sound>
+
+    <Sound ID="556sup_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/556_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/556_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/556_fire_03.wav"/>
+	</Sound>
+
+    <Sound ID="762sup_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/762_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/762_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/762_fire_03.wav"/>
+	</Sound>
+
+    <Sound ID="mcx300_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/mcx300_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/mcx300_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/mcx300_fire_03.wav"/>
+		<Path name="data/sounds/sfx/weapons/mcx300_fire_04.wav"/>
+	</Sound>
+
+    <Sound ID="mcx300s_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/mcx300s_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/mcx300s_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/mcx300s_fire_03.wav"/>
+	</Sound>
+
+    <Sound ID="vss_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/vss_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/vss_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/vss_fire_03.wav"/>
+		<Path name="data/sounds/sfx/weapons/vss_fire_04.wav"/>
+		<Path name="data/sounds/sfx/weapons/vss_fire_05.wav"/>
+	</Sound>
+
+<!-- GRENADE LAUNCHERS -->
+
+	<!-- M79-->
+	<Sound ID="m79_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/m79_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/m79_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/m79_fire_03.wav"/>
+	</Sound>
+
+	<!-- M203-->
+	<Sound ID="m203_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/m203_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/m203_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/m203_fire_03.wav"/>
+	</Sound>
+
+	<!-- M320-->
+	<Sound ID="m320_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/m320_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/m320_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/m320_fire_03.wav"/>
+	</Sound>
+
+	<!-- MK14-->
+	<Sound ID="mk14_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/mk14_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/mk14_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/mk14_fire_03.wav"/>
+	</Sound>
+
+
+<!-- LIGHT MACHINE GUNS -->
+
+	<!-- M249SPW -->
+    <Sound ID="m249spw_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/m249spw_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/m249spw_fire_02.wav"/>
+	</Sound>
+
+	<!-- M249SPW Suppressed -->
+	<Sound ID="m249spwsup_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/556_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/556_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/556_fire_03.wav"/>
+	</Sound>
+
+	<!-- M240l -->
+    <Sound ID="m240l_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/m240l_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/m240l_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/m240l_fire_03.wav"/>
+	</Sound>
+
+    <Sound ID="M240DK_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/olddshka_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/olddshka_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/olddshka_fire_03.wav"/>
+	</Sound>
+
+
+	<!-- MK46 -->
+    <Sound ID="mk46_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/mk46_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/mk46_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/mk46_fire_03.wav"/>
+	</Sound>
+
+	<!-- MK48 -->
+    <Sound ID="mk48_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/mk48_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/mk48_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/mk48_fire_03.wav"/>
+	</Sound>
+
+	<!-- MK48 Suppressed -->
+	<Sound ID="mk48sup_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/762_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/762_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/762_fire_03.wav"/>
+	</Sound>
+
+	<!-- PKM -->
+    <Sound ID="pkm_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/pkm_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/pkm_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/pkm_fire_03.wav"/>
+	</Sound>
+
+	<!-- MG338 -->
+    <Sound ID="mg338_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/mg338_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/mg338_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/mg338_fire_03.wav"/>
+	</Sound>
+
+	<!-- MG338 Suppressed -->
+	<Sound ID="mg338sup_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/762_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/762_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/762_fire_03.wav"/>
+	</Sound>
+
+	<!-- DSHKA -->
+    <Sound ID="dshka_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/dshka_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/dshka_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/dshka_fire_03.wav"/>
+	</Sound>
+
+	<!-- RPK -->
+    <Sound ID="rpk_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/type56_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/type56_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/type56_fire_03.wav"/>
+	</Sound>
+
+	<!-- RPK74 -->
+    <Sound ID="rpk74_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/rpk74_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/rpk74_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/rpk74_fire_03.wav"/>
+	</Sound>
+
+	<!-- RP46 -->
+    <Sound ID="rp46_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/pkm_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/pkm_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/pkm_fire_03.wav"/>
+	</Sound>
+
+<!-- SUBMACHINE GUNS -->
+
+	<!-- MP5a -->
+    <Sound ID="mp5a_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/mp5a_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/mp5a_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/mp5a_fire_03.wav"/>
+	</Sound>
+
+	<!-- MP5sd -->
+    <Sound ID="mp5sd_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/mp5sd_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/mp5sd_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/mp5sd_fire_03.wav"/>
+	</Sound>
+
+	<!-- PM63 -->
+    <Sound ID="pm63_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/pm63_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/pm63_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/pm63_fire_03.wav"/>
+	</Sound>
+
+	<!-- APC9k -->
+    <Sound ID="apc9k_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/mp5a_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/mp5a_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/mp5a_fire_03.wav"/>
+	</Sound>
+
+	<!-- APC9k Suppressed -->
+    <Sound ID="apc9ksup_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/m9sup_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/m9sup_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/m9sup_fire_03.wav"/>
+	</Sound>
+
+    <Sound ID="mp7_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/mp7_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/mp7_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/mp7_fire_03.wav"/>
+		<Path name="data/sounds/sfx/weapons/mp7_fire_04.wav"/>
+	</Sound>
+
+    <Sound ID="mp7sup_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/mp7sup_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/mp7sup_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/mp7sup_fire_03.wav"/>
+		<Path name="data/sounds/sfx/weapons/mp7sup_fire_04.wav"/>
+	</Sound>
+
+    <Sound ID="uzi_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/uzi_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/uzi_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/uzi_fire_03.wav"/>
+		<Path name="data/sounds/sfx/weapons/uzi_fire_04.wav"/>
+		<Path name="data/sounds/sfx/weapons/uzi_fire_05.wav"/>
+		<!-- <Path name="data/sounds/sfx/weapons/uzi_fire_final_bulet.wav"/> -->
+	</Sound>
+
+<!-- SHOTGUNS -->
+
+	<!-- 870BR -->
+	<Sound ID="870br_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/870br_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/870br_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/870br_fire_03.wav"/>
+	</Sound>
+
+	<!-- M500PP -->
+	<Sound ID="m500_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/870br_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/870br_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/870br_fire_03.wav"/>
+	</Sound>
+
+	<Sound ID="shotgun_nopump_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/shotgun_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/shotgun_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/shotgun_fire_01.wav"/>
+	</Sound>
+
+	<!-- M1014 Semi-Auto Shotgun -->
+	<Sound ID="m1014_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/shotgun_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/shotgun_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/shotgun_fire_01.wav"/>
+	</Sound>
+
+	<!-- Hunting Shotgun -->
+	<Sound ID="db_fire" channel="game" preload="false">
+		<Path name="data/sounds/sfx/weapons/shotgun_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/shotgun_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/shotgun_fire_01.wav"/>
+	</Sound>
+
+
+<!-- SNIPER -->
+	<Sound ID="sniper_fire" channel="game" preload="true">
+		<Path name="data/sounds/sfx/weapons/sniper_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/sniper_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/sniper_fire_03.wav"/>
+	</Sound>
+
+<!-- RPG -->
+
+	<Sound ID="rpg_fly_travel" Path="data/sounds/sfx/weapons/rpg_fly_travel.ogg" channel="game" preload="true"/>
+
+	<!-- RPG7 -->
+	<Sound ID="rpg7_fire" channel="game" preload="true">
+		<Path name="data/sounds/sfx/weapons/rpg7_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/rpg7_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/rpg7_fire_03.wav"/>
+	</Sound>
+
+	<Sound ID="rpg7_expl" channel="game" preload="true">
+		<Path name="data/sounds/sfx/weapons/rpg7_expl_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/rpg7_expl_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/rpg7_expl_03.wav"/>
+	</Sound>
+
+	<!-- RPG26 -->
+	<Sound ID="rpg26_fire" channel="game" preload="true">
+		<Path name="data/sounds/sfx/weapons/rpg26_fire_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/rpg26_fire_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/rpg26_fire_03.wav"/>
+	</Sound>
+
+	<Sound ID="rpg26_expl" channel="game" preload="true">
+		<Path name="data/sounds/sfx/weapons/rpg26_expl_01.wav"/>
+		<Path name="data/sounds/sfx/weapons/rpg26_expl_02.wav"/>
+		<Path name="data/sounds/sfx/weapons/rpg26_expl_03.wav"/>
+	</Sound>
+
+
+
+</Sounds>
