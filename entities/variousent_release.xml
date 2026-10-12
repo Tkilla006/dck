@@ -1,0 +1,88 @@
+<!--
+		For help, please refer to "help_entities.txt" in this directory.
+-->
+<Entities>
+
+	<Entity name="Detonator" type="BasicEntity" editorTags="tools" fogOfWarVisibility="normal" tooltip="@entity_detonator_tooltip"> <!-- I wanted to make this Hidden / Hiddeninitially in Fog of War, but then it becomes always invisible. So Visible for now -->
+
+		<PhysicalParams blocksMovement="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/industrial/detonator.khm" diffuseTex="data/models/environment/industrial/detonator.dds"/>
+		<Specular shininess="64" intensity="1.0"/>
+		<RenderObject2D texture="data/textures/fx/police_light.tga" blendMode="add" color="ff0000" sizeX="1" sizeY="1" disableDepthTest="true" billboard="true">
+			<TextureAnimation frameWidth="128" frameHeight="128" startFrame="7" endFrame="7" animationTimeMS="700" numLoops="-1" randomizeStartTime="false"/>
+		</RenderObject2D>
+	</Entity>
+	
+<!--
+Below is stuff for Kerak Finale. I  wanted to make Kerak bombs initially inactive but disarm-able by the player, but couldn't deactivate triggers on disarm. 
+-->
+	
+	
+	<Entity name="TimebombLargeInactive" type="BasicEntity" tooltip="@entity_timebombinactive_tooltip">
+		<PhysicalParams blocksMovement="true"/>
+		<Breakable breakOnDamage="grenade" deleteOnDeath="false">
+			<Piece entityName="PS_LargeBombExplosion"/>
+			<Piece entityName="scorch_mark_large"/>
+			<Piece entityName="scorch_mark_very_large"/>
+			<Piece entityName="sfx_timebomb_kaboom"/>
+		</Breakable>
+		<RenderObject3D model="data/models/environment/interior/bomb_large.khm" diffuseTex="data/models/environment/interior/bomb_large.dds" />
+	</Entity>
+	
+
+<!--
+	Below just some unfinished experiments, will probably remove
+-->
+	<Entity name="barrel_flammable_spill" type="DamageArea" hideInEditor="true" initialHeight="0.001">
+		<DamageArea damage="2000" damageType="2" radius="20.0" triggerAtSpawn="true"/>
+		
+			<EffectRange radiusMeters="5.0">
+				<DamageEffect chancePercent="100" damage="45" damageType="0"  armorPenetration="0"/>
+				<FireEffect durationMSec="8000"/>
+				<DOTEffect durationMSec="15000" dps="10.0"/>
+			</EffectRange>
+
+
+		<PhysicalParams solid="false"/>
+	</Entity>
+
+	
+	<Entity name="barrel_03_flammable" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="50"/>
+		<RenderObject3D model="data/models/environment/exterior/barrel_wood.khm" diffuseTex="data/models/environment/exterior/barrel_wood.dds">
+			<Specular shininess="1" intensity="1.0"/>
+		</RenderObject3D>
+		<Breakable template="Breakable_Wood" breakOnDamage="grenade" deleteOnDeath="false">
+			<Piece entityName="PS_Fire_01"/>
+			<Piece entityName="barrel_flammable_spill"/>
+			<Piece entityName="Light_FireLarge"/>
+			<Piece entityName="Molotov Single"/>
+		</Breakable>
+
+	</Entity>
+
+<!--
+	For Enter the Spectres mission, the VIP made immobile civilian 
+-->
+	
+	<Entity name="Civilian Male 02 Scenario" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_civilian" editorTags="civilians">
+		<RenderObject3D model="data/models/humans/civilian_male_skinny.khm" diffuseTex="data/models/humans/civilian_male_standard_02.dds"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Civilian">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="Civilian" defaultBehavior="Civilian" combatBehavior="Civilian Combat" suppressionRecovery="80.0"/>
+			<Id name="@entity_human_civilian" portrait="data/textures/portraits/civilian_male.dds" gender="0" voicePack="civilian_male"/>
+			<Traits roamAround="true" doesntUseMountedWeapons="true" />
+			<Mobility>
+				<MoveSpeed min="0" defaultMetersPerSec="0" max="0"/>
+				<TurnSpeed min="2" defaultMetersPerSec="3" max="5"/>
+			</Mobility>
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+	
+
+</Entities>

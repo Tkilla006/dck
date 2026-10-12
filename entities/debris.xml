@@ -1,0 +1,738 @@
+<!--
+		For help, please refer to "help_entities.txt" in this directory.
+-->
+<Entities>
+
+	<!-- DEBRIS -->
+
+	<Entity name="debris_01" type="BasicEntity" editorTags="debris">
+		<RenderObject3D model="data/models/environment/debris/debris_01.khm" diffuseTex="data/models/environment/debris/debris_01.dds" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="debris_02" type="BasicEntity" editorTags="debris">
+		<RenderObject3D model="data/models/environment/debris/debris_02.khm" diffuseTex="data/models/environment/debris/debris_02.dds" skipGOSSAO="true" skipSSAO="true"/>
+	</Entity>
+
+	<Entity name="wall_remnant" type="BasicEntity" editorTags="debris" skipGOSSAO="true">
+		<RenderObject3D model="data/models/environment/debris/wall_remnant.khm" diffuseTex="data/models/environment/debris/wall_remnant.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="wall_remnant_02" type="BasicEntity" editorTags="debris" skipGOSSAO="true">
+		<RenderObject3D model="data/models/environment/debris/wall_remnant.khm" diffuseTex="data/models/environment/debris/wall_exterior_remnant_02.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="wall_exterior_remnant_01" type="BasicEntity" editorTags="debris" skipGOSSAO="true">
+		<RenderObject3D model="data/models/environment/debris/wall_exterior_remnant.khm" diffuseTex="data/models/environment/debris/wall_remnant.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="wall_exterior_remnant_02" type="BasicEntity" editorTags="debris" skipGOSSAO="true">
+		<RenderObject3D model="data/models/environment/debris/wall_exterior_remnant.khm" diffuseTex="data/models/environment/debris/wall_exterior_remnant_02.dds">
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="wall_exterior_remnant_brick" type="BasicEntity" editorTags="debris" skipGOSSAO="true">
+		<RenderObject3D model="data/models/environment/debris/wall_remnant_brick.khm" diffuseTex="data/models/environment/debris/wall_remnant_brick.dds">
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="wall_exterior_remnant_metal" type="BasicEntity" editorTags="debris" skipGOSSAO="true">
+		<RenderObject3D model="data/models/environment/debris/wall_remnant_brick.khm" diffuseTex="data/models/environment/debris/wall_remnant_metal.dds">
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="fence_green_remnant" type="BasicEntity" initialHeight="-0.710" hideInEditor="true">
+		<PhysicalParams solid="false" blocksMovement="false" blocksVision="false"/>
+		<RenderObject3D model="data/models/environment/foliage/fence_green.khm" diffuseTex="data/models/environment/foliage/fence_green.dds" alphaTest="true" skipGOSSAO="true" maxMipLevel="2" windAnimated="1" />
+	</Entity>
+	
+	<Entity name="fence_green_half_remnant" type="BasicEntity" initialHeight="-0.710" hideInEditor="true">
+		<PhysicalParams solid="false" blocksMovement="false" blocksVision="false"/>
+		<RenderObject3D model="data/models/environment/foliage/fence_green_half.khm" diffuseTex="data/models/environment/foliage/fence_green.dds" alphaTest="true" skipGOSSAO="true" maxMipLevel="2" windAnimated="1" />
+	</Entity>
+
+	<Entity name="ground_clutter_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/ground_clutter_01.khm" diffuseTex="data/models/environment/debris/ground_clutter_01.dds" skipCastShadows="true"/>
+	</Entity>
+
+	<Entity name="ground_clutter_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/ground_clutter_02.khm" diffuseTex="data/models/environment/debris/ground_clutter_01.dds" skipCastShadows="true"/>
+	</Entity>
+
+	<Entity name="ground_clutter_03" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/ground_clutter_03.khm" diffuseTex="data/models/environment/debris/ground_clutter_01.dds" skipCastShadows="true"/>
+	</Entity>
+
+	<Entity name="ground_clutter_04" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/ground_clutter_04.khm" diffuseTex="data/models/environment/debris/ground_clutter_01.dds" skipCastShadows="true"/>
+	</Entity>
+
+	<Entity name="ground_clutter_05" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/ground_clutter_05.khm" diffuseTex="data/models/environment/debris/ground_clutter_01.dds" skipCastShadows="true"/>
+	</Entity>
+
+	<Entity name="ground_clutter_06" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/ground_clutter_06.khm" diffuseTex="data/models/environment/debris/ground_clutter_01.dds" skipCastShadows="true"/>
+	</Entity>
+
+	<Entity name="ground_clutter_07" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/ground_clutter_07.khm" diffuseTex="data/models/environment/debris/ground_clutter_01.dds"/>
+	</Entity>
+
+	<Entity name="ground_clutter_08" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/ground_clutter_08.khm" diffuseTex="data/models/environment/debris/ground_clutter_01.dds"/>
+	</Entity>
+
+	<Entity name="plank_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/plank_01.khm" diffuseTex="data/models/environment/exterior/bazar_01.dds"/>
+	</Entity>
+
+	<Entity name="plank_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/plank_01.khm" diffuseTex="data/models/environment/exterior/bazar_02.dds"/>
+	</Entity>
+
+	<Entity name="plank_03" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/plank_01.khm" diffuseTex="data/models/environment/exterior/bazar_03.dds"/>
+	</Entity>
+
+	<Entity name="plank_03_fixed" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" solid="false" blocksMovement="true" />
+		<RenderObject3D model="data/models/environment/debris/plank_01.khm" diffuseTex="data/models/environment/exterior/bazar_03.dds"/>
+	</Entity>
+
+	<Entity name="plank_04" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/plank_04.khm" diffuseTex="data/models/environment/debris/ground_clutter_01.dds"/>
+	</Entity>
+
+	<Entity name="plank_05" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/plank_05.khm" diffuseTex="data/models/environment/debris/ground_clutter_01.dds"/>
+	</Entity>
+
+	<Entity name="plank_06" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/plank_06.khm" diffuseTex="data/models/environment/debris/ground_clutter_01.dds"/>
+	</Entity>
+
+	<Entity name="plank_07" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/plank_07.khm" diffuseTex="data/models/environment/debris/ground_clutter_01.dds"/>
+	</Entity>
+
+	<Entity name="plank_08" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/plank_08.khm" diffuseTex="data/models/environment/debris/ground_clutter_01.dds"/>
+	</Entity>
+
+	<Entity name="plank_09" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/plank_09.khm" diffuseTex="data/models/environment/debris/ground_clutter_01.dds"/>
+	</Entity>
+
+	<Entity name="news_paper_01_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Paper" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/debris/news_paper_01.khm" diffuseTex="data/models/environment/exterior/bazar_01.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true"/>
+	</Entity>
+
+	<Entity name="news_paper_01_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Paper" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/debris/news_paper_01.khm" diffuseTex="data/models/environment/exterior/bazar_02.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true"/>
+	</Entity>
+
+	<Entity name="news_paper_01_03" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Paper" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/debris/news_paper_01.khm" diffuseTex="data/models/environment/exterior/bazar_03.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true"/>
+	</Entity>
+
+	<Entity name="news_paper_02_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Paper" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/debris/news_paper_02.khm" diffuseTex="data/models/environment/exterior/bazar_01.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true"/>
+	</Entity>
+
+	<Entity name="news_paper_02_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Paper" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/debris/news_paper_02.khm" diffuseTex="data/models/environment/exterior/bazar_02.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true"/>
+	</Entity>
+
+	<Entity name="news_paper_02_03" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Paper" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/debris/news_paper_02.khm" diffuseTex="data/models/environment/exterior/bazar_03.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true"/>
+	</Entity>
+
+	<Entity name="news_paper_03_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Paper" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/debris/news_paper_03.khm" diffuseTex="data/models/environment/exterior/bazar_01.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true"/>
+	</Entity>
+
+	<Entity name="news_paper_03_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Paper" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/debris/news_paper_03.khm" diffuseTex="data/models/environment/exterior/bazar_02.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true"/>
+	</Entity>
+
+	<Entity name="news_paper_03_03" type="BasicEntity" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Paper" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/debris/news_paper_03.khm" diffuseTex="data/models/environment/exterior/bazar_03.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true"/>
+	</Entity>
+
+
+	<Entity name="blocks_bricks_barrel_pile_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_barrel_pile_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_barrel_pile_02" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_barrel_pile_02.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_bottle_cylinders_plate_pile_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_bottle_cylinders_plate_pile_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_bottle_cylinders_plate_pile_02" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_bottle_cylinders_plate_pile_02.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_bottle_cylinders_plate_pile_03" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_bottle_cylinders_plate_pile_03.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_cylinders_barrel_pile_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_cylinders_barrel_pile_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_cylinders_barrel_pile_02" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_cylinders_barrel_pile_02.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_cylinders_pile_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_cylinders_pile_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_cylinders_pile_02" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_cylinders_pile_02.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_cylinders_pile_03" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_cylinders_pile_03.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_cylinders_pile_04" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_cylinders_pile_04.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_cylinders_pile_05" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_cylinders_pile_05.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_cylinders_pile_06" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_cylinders_pile_06.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_cylinders_pile_07" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_cylinders_pile_07.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_metalsheet_papers_boxcrates_pile_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_metalsheet_papers_boxcrates_pile_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_metalsheet_papers_carton_pile_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_metalsheet_papers_carton_pile_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_metalsheet_papers_pile_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_metalsheet_papers_pile_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_metalsheet_pile_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_metalsheet_pile_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_metalsheet_pile_02" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_metalsheet_pile_02.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_papers_crates_pile_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_papers_crates_pile_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_papers_crates_planks_pile_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_papers_crates_planks_pile_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_papers_crates_planks_pile_02" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_papers_crates_planks_pile_02.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_papers_crates_planks_pile_03" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_papers_crates_planks_pile_03.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_papers_crates_planks_window_pile_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_papers_crates_planks_window_pile_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_papers_crates_planks_window_pile_02" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_papers_crates_planks_window_pile_02.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="blocks_bricks_papers_crates_planks_window_pile_03" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/blocks_bricks_papers_crates_planks_window_pile_03.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="bricks_cylinders_pile_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/bricks_cylinders_pile_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="bricks_cylinders_pile_02" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/bricks_cylinders_pile_02.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="cinderblocksbricks_pile_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/cinderblocksbricks_pile_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="cinderblocksbricks_pile_02" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/cinderblocksbricks_pile_02.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="cinderblocksbricks_pile_03" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/cinderblocksbricks_pile_03.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="cinderblocksbricks_pile_04" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/cinderblocksbricks_pile_04.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="cinderblocksbricks_pile_05" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/cinderblocksbricks_pile_05.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="metalsheet_planks_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/metalsheet_planks_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="metalsheet_planks_02" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/metalsheet_planks_02.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+	<Entity name="metalsheet_planks_03" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/metalsheet_planks_03.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>	
+	
+
+	<Entity name="planks_panel_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/planks_panel_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" gossaoCastHeight="1.5" />
+	</Entity>
+
+
+	<Entity name="debris_barrel" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_barrel.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_bottle_broken" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/debris_bottle_broken.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_box" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_box.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_box_opened" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_box_opened.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_brick_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_brick_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_brick_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_brick_02.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_brick_03" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_brick_03.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_cartonbox" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_cartonbox.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_cinderblock_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_cinderblock_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_cinderblock_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_cinderblock_02.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_crate_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_crate_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_crate_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_crate_02.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_crate_03" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_crate_03.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_glass_pile" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/debris_glass_pile.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" skipCastShadows="true" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="debris_gravel_pile" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/debris_gravel_pile.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" skipCastShadows="true" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="debris_mecparts_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_mecparts_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_mecparts_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_mecparts_02.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_mecparts_03" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_mecparts_03.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_mecparts_04" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_mecparts_04.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_metalsheet" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_metalsheet.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_paper_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/debris_paper_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" skipCastShadows="true" skipGOSSAO="true" />
+	</Entity>
+
+	<Entity name="debris_paper_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/debris_paper_02.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" skipCastShadows="true" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="debris_paper_03" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/debris_paper_03.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" skipCastShadows="true" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="debris_paper_04" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/debris_paper_04.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" skipCastShadows="true" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="debris_paper_05" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/debris_paper_05.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" skipCastShadows="true" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="debris_paper_06" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/debris_paper_06.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" skipCastShadows="true" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="debris_plank_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_plank_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_plank_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_plank_02.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_plank_03" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_plank_03.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_plank_04" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_plank_04.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_plank_05" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_plank_05.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_plank_06" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_plank_06.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_plank_07" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_plank_07.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_plank_08" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_plank_08.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_plate_broken" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/debris_plate_broken.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_pole_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_pole_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_pole_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_pole_02.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_stone_broken" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/debris/debris_stone_broken.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_tube_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_tube_01.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_tube_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_tube_02.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_tubes_03" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_tubes_03.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+	<Entity name="debris_window_broken" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="true"/>
+		<RenderObject3D model="data/models/environment/debris/debris_window_broken.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+	
+	<Entity name="rubble_01" type="BasicEntity" editorTags="debris" initialHeight="0.03" >
+		<PhysicalParams physicsEnabled="false" blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/debris/rubble_01.khm" diffuseTex="data/models/environment/debris/rubble_01.dds" blendMode="normal" skipGOSSAO="true" />
+	</Entity>
+	
+	<Entity name="rubble_02" type="BasicEntity" editorTags="debris" initialHeight="0.01" >
+		<PhysicalParams physicsEnabled="false" blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/debris/rubble_02.khm" diffuseTex="data/models/environment/debris/rubble_02.dds" blendMode="normal" skipGOSSAO="true" />
+	</Entity>
+	
+	<Entity name="concrete_broken_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/concrete_broken_01.khm" diffuseTex="data/models/environment/debris/concrete_broken.dds" />
+	</Entity>	
+	<Entity name="concrete_broken_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/concrete_broken_02.khm" diffuseTex="data/models/environment/debris/concrete_broken.dds" />
+	</Entity>
+	<Entity name="concrete_broken_03" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/concrete_broken_03.khm" diffuseTex="data/models/environment/debris/concrete_broken.dds" />
+	</Entity>
+	<Entity name="concrete_broken_04" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/concrete_broken_04.khm" diffuseTex="data/models/environment/debris/concrete_broken.dds" />
+	</Entity>
+	<Entity name="concrete_broken_05" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/concrete_broken_05.khm" diffuseTex="data/models/environment/debris/concrete_broken.dds" />
+	</Entity>
+	<Entity name="concrete_broken_06" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/concrete_broken_06.khm" diffuseTex="data/models/environment/debris/concrete_broken.dds" />
+	</Entity>
+	<Entity name="concrete_broken_07" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/concrete_broken_07.khm" diffuseTex="data/models/environment/debris/concrete_broken.dds" />
+	</Entity>
+	
+	<Entity name="concrete_broken_large_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/debris/concrete_broken_large_01.khm" diffuseTex="data/models/environment/debris/concrete_broken.dds" />
+	</Entity>	
+	<Entity name="concrete_broken_large_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/debris/concrete_broken_large_02.khm" diffuseTex="data/models/environment/debris/concrete_broken.dds" />
+	</Entity>
+	<Entity name="concrete_broken_large_03" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/debris/concrete_broken_large_03.khm" diffuseTex="data/models/environment/debris/concrete_broken.dds" />
+	</Entity>
+	<Entity name="concrete_broken_large_04" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/debris/concrete_broken_large_04.khm" diffuseTex="data/models/environment/debris/concrete_broken.dds" />
+	</Entity>
+	<Entity name="concrete_broken_large_05" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/debris/concrete_broken_large_05.khm" diffuseTex="data/models/environment/debris/concrete_broken.dds" />
+	</Entity>
+	<Entity name="concrete_broken_large_06" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/concrete_broken_large_06.khm" diffuseTex="data/models/environment/debris/concrete_broken.dds" />
+	</Entity>
+	<Entity name="concrete_broken_large_07" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/concrete_broken_large_07.khm" diffuseTex="data/models/environment/debris/concrete_broken.dds" />
+	</Entity>
+	<Entity name="wall_damaged_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/debris/wall_damaged_01.khm" diffuseTex="data/models/environment/debris/wall_damaged_01.dds" />
+	</Entity>
+	<Entity name="wall_damaged_01_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/debris/wall_damaged_01_02.khm" diffuseTex="data/models/environment/debris/wall_damaged_01.dds" />
+	</Entity>
+	<Entity name="wall_damaged_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/debris/wall_damaged_02.khm" diffuseTex="data/models/environment/debris/wall_damaged_02.dds" />
+	</Entity>
+	<Entity name="wall_damaged_04_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/debris/wall_damaged_04_01.khm" diffuseTex="data/models/environment/debris/wall_damaged_04.dds" />
+	</Entity>
+	<Entity name="wall_damaged_04_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/debris/wall_damaged_04_02.khm" diffuseTex="data/models/environment/debris/wall_damaged_04.dds" />
+	</Entity>
+	<Entity name="wall_damaged_04_03" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/debris/wall_damaged_04_03.khm" diffuseTex="data/models/environment/debris/wall_damaged_04.dds" />
+	</Entity>
+	<Entity name="facade_balcony_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/facade_balcony_01.khm" diffuseTex="data/models/environment/debris/facade_wood_elements.dds" />
+	</Entity>
+	<Entity name="facade_balcony_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/facade_balcony_02.khm" diffuseTex="data/models/environment/debris/facade_wood_elements.dds" />
+	</Entity>
+	<Entity name="facade_balcony_03" type="BasicEntity" hideInEditor="true" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/facade_balcony_03.khm" diffuseTex="data/models/environment/debris/facade_wood_elements.dds" />
+	</Entity>
+	<Entity name="facade_shutters_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/facade_shutters_01.khm" diffuseTex="data/models/environment/debris/facade_wood_elements.dds" />
+	</Entity>
+	<Entity name="wall_damaged_highlighted_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/debris/wall_damaged_highlighted_01.khm" diffuseTex="data/models/environment/debris/wall_damaged_01.dds" />
+		<RenderObject3D model="data/models/environment/debris/wall_damaged_highlighted_01_top.khm" diffuseTex="data/models/environment/debris/wall_damaged_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="false" disableLighting="true"/>
+	</Entity>
+	<Entity name="wall_damaged_highlighted_01_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/debris/wall_damaged_highlighted_01_02.khm" diffuseTex="data/models/environment/debris/wall_damaged_01.dds" />
+		<RenderObject3D model="data/models/environment/debris/wall_damaged_highlighted_01_02_top.khm" diffuseTex="data/models/environment/debris/wall_damaged_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="false" disableLighting="true"/>
+	</Entity>
+	<Entity name="wall_damaged_highlighted_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/debris/wall_damaged_highlighted_02.khm" diffuseTex="data/models/environment/debris/wall_damaged_02.dds" />
+		<RenderObject3D model="data/models/environment/debris/wall_damaged_highlighted_02_top.khm" diffuseTex="data/models/environment/debris/wall_damaged_02.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="false" disableLighting="true"/>
+	</Entity>
+	<Entity name="wall_damaged_highlighted_04_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/debris/wall_damaged_highlighted_04_01.khm" diffuseTex="data/models/environment/debris/wall_damaged_04.dds" />
+		<RenderObject3D model="data/models/environment/debris/wall_damaged_highlighted_04_01_top.khm" diffuseTex="data/models/environment/debris/wall_damaged_04.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="false" disableLighting="true"/>
+	</Entity>
+	<Entity name="wall_damaged_highlighted_04_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/debris/wall_damaged_highlighted_04_02.khm" diffuseTex="data/models/environment/debris/wall_damaged_04.dds" />
+		<RenderObject3D model="data/models/environment/debris/wall_damaged_highlighted_04_02_top.khm" diffuseTex="data/models/environment/debris/wall_damaged_04.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="false" disableLighting="true"/>
+	</Entity>
+	<Entity name="wall_damaged_highlighted_04_03" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/debris/wall_damaged_highlighted_04_03.khm" diffuseTex="data/models/environment/debris/wall_damaged_04.dds" />
+		<RenderObject3D model="data/models/environment/debris/wall_damaged_highlighted_04_03_top.khm" diffuseTex="data/models/environment/debris/wall_damaged_04.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="false" disableLighting="true"/>
+	</Entity>
+	
+	
+
+</Entities>

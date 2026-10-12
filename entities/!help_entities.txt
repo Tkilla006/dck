@@ -1,0 +1,278 @@
+Entity
+	name - "whatsmyname", this is what's shown in the editor
+	type - BasicEntity/Wall/Human/FX/Door/Window/Light/Projectile/ProjectileShrapnel/ActionWaypoint/POIObject
+	fogOfWarVisibility - normal (default) / hidden (only visible when in your FOV) / hiddenInitially (hidden, but once it gets in a FOV, it remains visible) / hiddenState (show, but keep state unchanged untill seen) / full
+	tooltip - text shown when hovering with mouse
+	editorAutoHeight - true(d)/false
+	editorTags - none by default. sets the category the object belongs to in the Objects tab
+	initialHeight - initial height when placed in the editor, will cause "editorAutoHeight" to be "false" by default
+	scale - defaults to 1.0
+	hideInEditor - false(d)/true - don't show the entity in the editor (for gameplay-related entities, like ActionWaypoints, which we don't want to place in the editor)
+	hideInGame - false(d)/true - don't render this in the game, only in the editor (for things like hidden collisions)
+	hideInCinematicMode - false(d)/true - don't render this during cinematic replays
+	deleteAfterMs - -1(default) - delete this entity once this much time has passed after spawning. Starts ticking while the game is running, so after the Planning phase
+	deleteAfterDeploy - false(d)/true - delete this entity once the Deploy phase is finished
+---
+
+PhysicalParams
+
+	blocksVision - true if entity blocks vision/FOV.
+		(default: false)
+
+	blocksMovement - true if entity blocks human movement.
+		(default: false)
+
+	solid - true if bullets/projectiles are blocked by this entity. False if they penetrate. Should use "false" for vegetation, vfx and small objects.
+		(default: true)
+
+	usableCover - true if entity can be used as cover
+		(default: false)
+
+	justThumbnail - true if entity doesn't want another flag, but still show up in the thumbnail
+		(default: false)
+
+	health - integer between 1 and 100 for initial health given to entity at map load.
+		(default: 100)
+		It's taken into account in the following situations:
+			- for humans damage is subtracted from the actual health (if the resulting health of the human is < 30, they will get gibbed)
+			- other entities don't subtract from it when taking damage. It only matters when:
+				- if damage is 'explosive', they will only get destroyed if health < damage
+				If you want TEC Torches to break an item, make their health < 50
+
+	physicsEnabled - true if entity is physically simulated by gravity and responds to collisions from other objects when hit.
+		(default: false)
+
+	density - float value greater than 0 for density of entity. for mass/inertia calculation.
+		(default: 20.0)
+
+	elasticity - values between 0 and 1 (zero to full restitution)
+		(default: 0.1)
+
+	friction - affects both static and dynamic friction equally
+		(default: 0.5)
+---
+
+Breakable
+
+	List of "Piece" elements referring to existing entity templates by name to
+	spawn when parent entity dies. You should also set deleteOnDeath="true",
+	otherwise the entity will keep spawning pieces every time it takes damage.
+	Example:
+		<Breakable>
+			<Piece entityName="chair_01_part1"/>
+			<Piece entityName="chair_01_part2"/>
+		</Breakable>
+
+	breakMode = strict(d) / fitVolume / strict_no_rand
+		"strict" (default) makes it break in precisely the specified "Pieces" (and randomizes their positioning inside the parent's volume).
+		"fitVolume" tries to spawn enough entities from the list to fit into the parent entity's bounding volume. It will only spawn the ones with sizes that fit into the parent's bounding volume.
+		"strict_no_rand" same as 'strict', but doesn't randomize the pieces' positions inside the parent, uses same origin/rotation of parent.
+		Note: overriden by template, if defined
+
+	deleteOnDeath = true if entity should be deleted when it's broken into pieces
+		(default: true)
+
+	template = name of target entity which will be used as a source for the "Breakable" list. This way you don't have to specify how it breaks over and over again for similar objects.
+		when this is defined, all the other options are no longer taken into account, everything will be copied from the target template.
+
+	breakOnDamage = bullet / grenade / explosive (d)
+		if an object breaks on 'bullet' damage, it will also break on grenade/explosive damage. If it breaks on 'grenade', it will break on 'explosive', but NOT on 'bullet'
+
+
+---
+
+RenderObject2D
+	sizeX				- size in meters
+	sizeY               - size in meters
+	scaleX				- amount by which the pixel size is multiplied. Final result is in meters
+	scaleY				- amount by which the pixel size is multiplied. Final result is in meters
+	flipX				- false(d)/true
+	flipY				- false(d)/true
+	texRepeatX			- tiling on x. if different from 1 we're gonna enable texture repeat
+	texRepeatY			- tiling on y. if different from 1 we're gonna enable texture repeat
+	hideInGame 			- false(d)/true - don't render this in the game, only in the editor (for things like lights or particle systems)
+	billboardX 			- false(d)/true - keep aligned to camera on X axis (the left-to-right axis in photoshop)
+	billboardY 			- false(d)/true - same as above, but only align on Y axis (top-down)
+	billboard  			- false(d)/true - align on both axes
+	disableDepthTest 	- false(d)/true - always visible, even if behind something, good for light flares
+	color				- "ffffffff" - RGBA multiply color
+	blendMode			- "none" - See RenderObject3D blendMode
+---
+
+RenderObject3D
+	model - khm model to load
+	attachSlot - the name of the object in 3ds max / khm internal hierarchy where we want our object to be "attached" - this is valid only for rigid objects
+			 can be used as a parent -> child relation or as a link-here to get transform function
+
+
+	properties="?" one of the ones defined in material_properties/
+
+	blendMode
+		"none",							// DEFAULT. blend disabled, object opaque
+		"normal",						// src alpha, one minus src alpha
+		"multiply",						// dst color, zero
+		"multiply_inverse",				// zero, 1-srccolor
+		"add",							// one, one
+		"add_masked",					// src_alpha, one
+		"overlay",						// dst color, src color (2 * dst * src)
+		"replace_masked",				// src_alpha, zero
+		"normal_premultiplied_alpha"
+
+	disableLighting [false/true]
+		- makes the object only use the diffuse texture/color, without receiving any effects. Disables lighting, receiving shadows (not casting though), receiving decals, receiving gossao (not casting though), SSAO
+
+	disableDecals [false/true]
+
+	skipSSAO [true/false]
+		- doesn't do SSAO calculations for this object. Use for rugs/carpets or large objects where SSAO can impact performance for no additional benefit.
+
+	skipGOSSAO [false/true]
+		- doesn't draw the GOSSAO floor shadows for this object
+
+	gossaoCastHeight [0..N], defaults to 0.0, which means the game will disregard it, using the default global value of 2.0
+		- use the ConfigTool gossao "Cast height" slider to see how this looks before modifying it per object material
+		As a rule, setting a larger value will make the shadow less visible, whereas a smaller value will make the shadow darker.
+		To make the shadow dissapear, set skipGOSSAO="true"
+
+	skipCastShadows [false/true]
+		- object doesn't cast shadows in shadowmap
+
+	alphaTest [false/true]
+		- if 'true' enables alpha testing, using the texture's alpha channel pixels to cut out pixels below the specified threshold
+
+	maxMipLevel [0..N]
+		- maximum (lowest detail) mip level to use from the mipmap chain. default is 1000, which means all mipmaps will be used.
+
+	diffuseTex
+		- texture file
+
+	diffuseColor
+		- color hexadecimal value, in RRGGBBAA format (same as Photoshop without AA). Defaults to ffffffff. If AA is not specified, it defaults to FF.
+
+	reflections [false/true]
+		- hardcoded to use data/textures/outdoor_reflection.dds for reflections
+
+	emissive [false/true or 0/1]
+		- use diffuse tex alpha channel to mask unlit parts
+
+	windAnimated [off/on/auto or 0/1/2, default off]
+		- fake wind animation. uses vertex color red channel as a mask, if available (paint red on vertices you want to move)
+		If windAnimated=2, it's enabled automatically when outside and off when inside (below a Roof entity).
+
+	coverFOVPreview [false/true]
+		- render over the unit FOV preview. On by default on Door, Windows, Humans and MovementBlock objects
+
+	<Specular> - if defined, specular will be enabled
+		- mask is optional. we only read from the Red channel
+		- color is RGB in hexa, Photoshop format. Defaults to ffffff
+		- colorMultiplier is multiplied by the color above. Defaults to 1.0
+		- shininess is the specular power, use power of two values (8/16/32/128/256/512). The higher the value, the tighter the hightlight. Defaults to 16
+
+	<RenderObject3D materialType="flesh" diffuseTex="data/texture.dds" diffuseColor="ffffffff" blendMode="none" alphaTest="false" skipSSAO="false" skipGOSSAO="false" gossaoCastHeight="0.0" maxMipLevel="1000">
+		<Specular mask="data/texture_s.dds" shininess="8" intensity="1.0" />
+	</RenderObject3D>
+
+---
+
+Bind - allows you to use equipment (or equipment types) on that entity. Can specify either individual equipment names or type name.
+	Can be defined in both the equipment xml, or the entity xml.
+	We chose to define it in the entity xml because we add new entities more times than we do equipment.
+	When adding a new equipment, you should define it near the equipment itself.
+
+	<Bind eqp="Flashbang" to="door_wood_01"/>
+	<Bind eqp="SmokeGrenade" to="door_wood_01"/>
+	or
+	<Bind eqp="Grenade" to="door_wood_01"/> to include all grenade types
+	<Bind eqp="ExplosiveCharge" to="window_frame_03"/> includes slaps/slap kit/breaching charge
+
+---
+
+Wall
+
+	widthMeters
+		- default 0.25
+	heightMeters
+		- default 2.0
+	breakTemplate - name of entity template to place in places where the wall breaks. leave empty to make unbreakable walls
+		- default empty
+	groundDebrisTemplate - name of entity template to place on ground along the break
+		- default empty
+	debrisDensityPerM - amount of debris to spawn per broken meter.
+		- default 0.5
+
+	List "Piece" elements referring to existing entity templates by name to spawn when parent entity breaks. Just like for Breakable
+	Each piece needs a "size" param, specifying how "big" it is.
+	Ex.
+	<Wall widthMeters="0.25" heightMeters="2.0" breakTemplate="BrokenWall" debrisDensityPerM="0.5">
+		<Piece entityName="kitchen_pot_01" size="0.3"/>
+		<Piece entityName="kitchen_teapot_01" size="0.1"/>
+		<Piece entityName="kitchen_rolling_pin_01" size="0.1"/>
+	</Wall>
+
+	If a 1m hole is made for this wall, it will spawn debris totaling 0.5 in size
+	So either 1 pot + 2 teapots, or 4 pins + 1 teapot or any other combination that adds up to 0.5
+
+---
+Human
+
+deployMode
+	0 (d) - auto deploy: if the human is defined as a class in units.xml we will use the DeploySlots flow (which is: remove all humans placed in editor and replace with those customized. Only use the ones that are placed above deploy slots).
+	1 - always deploy: if the human is NOT defined in units.xml, we will deploy the unit as defined in the editor (the behavior of DEPLOY_ALWAYS). 
+	    if it's defined as a playable unit, will force-deploy that human as an ally, as specified in the editor, without using troops from your roster
+expendable
+	false (d)
+	true - doesn't count as casualty, don't lose mission or stars if they die
+
+
+---
+POI Object Explanation & Details
+
+POIObject entities serve two possible purposes
+1. They represent interactible objects that can play custom animations on Humans
+2. They generate Point Of Interest (POI) spots around them that the AI can use when roaming
+Combining 1 & 2 creates an object that AIs walk to and interact with
+
+XML Config
+There are two tags responsible for controlling the two parts of a POIObject
+*<Interactible/>* controls things to do with how AI interact with this object
+	anim - default none - name of looping animation to play when interacting. when left empty the Human will play a random idle animation
+	animIn - default none - name of animation to play when starting to interact. for example, "sit_down" for chairs
+	animOut - default none - name of animation to play when stopping interaction. for example, "sit_up" for chairs
+	singleUser - default "false" - 
+	look - default "around" - valid options are "at", "away" or "around". look="at" makes interacting humans look straight at the object when interacting with it. "away" makes them turn their back to it and "around" has them pick a random direction, and occasionally turn around
+	durationMinMS - default 12000 - 
+	durationMaxMS - default 45000 - 
+*<POI/>* makes the object generate POI spots around it. A POIObject without a POI tag will be ignored by the AI, and is only useful as a Target that AI humans interact with when the map starts
+
+---
+Interactible objects
+
+Objects that will activate targeted Triggers when Used by player units
+To use one, place it in a level and target the Trigger that you want activated. So the target should be from Interactible to a Trigger
+TIP: If you want to activate a Trigger more than once, you have to set its Reset time to 0 (instead of the default -1)
+See "Activate Keyboard" in various.xml
+*<Interactible/>* Unrelated to the POI <Interactible> tag (for now)
+	durationMs - default 500 - duration in milliseconds until the Trigger is activated
+	animation - default *none* - name of animation to play when interacting
+	onlyStopOnCancel - default false - when set to true the trooper will not stop Using unless the player cancels the action. 
+		The trigger will be activated twice, once when duration expires and once when the action is stopped. You can use this to toggle things on only while a trooper is using the thing
+	needsUnequip - default true - if trooper should be unarmed when Using
+	playSound - default none - what sound to play when using
+	noiseRadiusMeters - default none - if set, will create a Suspicious sound event with this radius
+
+---
+DamageArea
+
+Circular area that deals damage (or other effects) when activated by a trigger. Target it with a trigger to link them
+All properties can be changed in the editor, these will just be the default
+*<DamageArea />*
+	radius				- in meters
+	damage				- same as Equipment
+	damageType			- same as Equipment
+	armorPenetration	- same as Equipment
+	pushForce			- same as Equipment
+	knockbackDistance	- same as Equipment
+	suppressionScale	- same as Equipment
+	stunTimeMs			- same as Equipment
+	burnTimeMs			- same as Equipment
+	triggerAtSpawn - auto-trigger when "true"

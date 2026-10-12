@@ -1,0 +1,634 @@
+<Particles>
+    <ParticleSystem name="FX_MUZZLE_FLASH_RIFLE_01" poolSize="24">
+        <Emitter name="" duration="0.100" emitDelay="0.020" spawnOffsetZ="0.200">
+            <Particle lifetime="0.500" lifetimeMax="0.800"/>
+            <Initial scale="0.600" scaleMax="1.000" orient="0.000" orientMax="360.000"/>
+            <Movement speedZ="1.540" speedZMax="5.080" friction="0.920" scaleStart="0.500" scaleEnd="1.000" rotationPerSec="15.000"/>
+            <Material fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smokepuff1.dds" colorize="39393920">
+                <TextureAnimation frameWidth="64" frameHeight="64"/>
+            </Material>
+        </Emitter>
+        <Emitter name="flash" emitDelay="0.500" spawnOffsetZ="0.350">
+            <Particle lifetime="0.100"/>
+            <Initial sizeZ="0.500" orient="-90.000"/>
+            <Movement direction="orient"/>
+            <Material depthTested="0" mainTex="data/textures/fx/muzzleflash_rifle.dds" colorize="FFFFFFFF">
+                <TextureAnimation frameWidth="64" frameHeight="32" startFrame="16" endFrame="20"/>
+            </Material>
+        </Emitter>
+        <Emitter name="glow close" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="1.500" orient="90.000"/>
+            <Movement/>
+            <Material blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_close.dds" colorize="AAAAAAFF"/>
+        </Emitter>
+        <Emitter name="glow far" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="4.000" scaleMax="4.500" orient="0.000" orientMax="360.000"/>
+            <Movement/>
+            <Material softThickness="0.500" fadeIn="0.300" fadeOut="0.800" blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_far.dds" colorize="898989FF"/>
+        </Emitter>
+    </ParticleSystem>
+    <ParticleSystem name="FX_MUZZLE_FLASH_RIFLE_02" poolSize="24">
+        <Emitter name="" duration="0.100" emitDelay="0.020" spawnOffsetZ="0.200">
+            <Particle lifetime="0.500" lifetimeMax="0.800"/>
+            <Initial scale="0.600" scaleMax="1.000" orient="0.000" orientMax="360.000"/>
+            <Movement speedZ="1.540" speedZMax="5.080" friction="0.920" scaleStart="0.500" scaleEnd="1.000" rotationPerSec="15.000"/>
+            <Material fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smokepuff1.dds" colorize="39393920">
+                <TextureAnimation frameWidth="64" frameHeight="64"/>
+            </Material>
+        </Emitter>
+        <Emitter name="flash" emitDelay="0.500" spawnOffsetZ="0.350">
+            <Particle lifetime="0.100"/>
+            <Initial sizeZ="0.500" orient="-90.000"/>
+            <Movement direction="orient"/>
+            <Material depthTested="0" mainTex="data/textures/fx/muzzleflash_rifle.dds" colorize="FFFFFFFF">
+                <TextureAnimation frameWidth="64" frameHeight="32" startFrame="20" endFrame="24"/>
+            </Material>
+        </Emitter>
+        <Emitter name="glow close" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="1.500" orient="90.000"/>
+            <Movement/>
+            <Material blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_close.dds" colorize="AAAAAAFF"/>
+        </Emitter>
+        <Emitter name="glow far" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="4.000" scaleMax="4.500" orient="0.000" orientMax="360.000"/>
+            <Movement/>
+            <Material softThickness="0.500" fadeIn="0.300" fadeOut="0.800" blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_far.dds" colorize="898989FF"/>
+        </Emitter>
+    </ParticleSystem>
+    <ParticleSystem name="FX_MUZZLE_FLASH_RIFLE_03" poolSize="24">
+        <Emitter name="" duration="0.100" emitDelay="0.020" spawnOffsetZ="0.200">
+            <Particle lifetime="0.500" lifetimeMax="0.800"/>
+            <Initial scale="0.600" scaleMax="1.000" orient="0.000" orientMax="360.000"/>
+            <Movement speedZ="1.540" speedZMax="5.080" friction="0.920" scaleStart="0.500" scaleEnd="1.000" rotationPerSec="15.000"/>
+            <Material fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smokepuff1.dds" colorize="39393920">
+                <TextureAnimation frameWidth="64" frameHeight="64"/>
+            </Material>
+        </Emitter>
+        <Emitter name="flash" emitDelay="0.500" spawnOffsetZ="0.350">
+            <Particle lifetime="0.100"/>
+            <Initial sizeZ="0.500" orient="-90.000"/>
+            <Movement direction="orient"/>
+            <Material depthTested="0" mainTex="data/textures/fx/muzzleflash_rifle.dds" colorize="FFFFFFFF">
+                <TextureAnimation frameWidth="64" frameHeight="32" startFrame="24" endFrame="28"/>
+            </Material>
+        </Emitter>
+        <Emitter name="glow close" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="1.500" orient="90.000"/>
+            <Movement/>
+            <Material blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_close.dds" colorize="AAAAAAFF"/>
+        </Emitter>
+        <Emitter name="glow far" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="4.000" scaleMax="4.500" orient="0.000" orientMax="360.000"/>
+            <Movement/>
+            <Material softThickness="0.500" fadeIn="0.300" fadeOut="0.800" blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_far.dds" colorize="898989FF"/>
+        </Emitter>
+    </ParticleSystem>
+    <ParticleSystem name="FX_MUZZLE_FLASH_RIFLE_04" poolSize="24">
+        <Emitter name="" duration="0.100" emitDelay="0.020" spawnOffsetZ="0.200">
+            <Particle lifetime="0.500" lifetimeMax="0.800"/>
+            <Initial scale="0.600" scaleMax="1.000" orient="0.000" orientMax="360.000"/>
+            <Movement speedZ="1.540" speedZMax="5.080" friction="0.920" scaleStart="0.500" scaleEnd="1.000" rotationPerSec="15.000"/>
+            <Material fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smokepuff1.dds" colorize="39393920">
+                <TextureAnimation frameWidth="64" frameHeight="64"/>
+            </Material>
+        </Emitter>
+        <Emitter name="flash" emitDelay="0.500" spawnOffsetZ="0.350">
+            <Particle lifetime="0.100"/>
+            <Initial sizeZ="0.500" orient="-90.000"/>
+            <Movement direction="orient"/>
+            <Material depthTested="0" mainTex="data/textures/fx/muzzleflash_rifle.dds" colorize="FFFFFFFF">
+                <TextureAnimation frameWidth="64" frameHeight="32" startFrame="28" endFrame="32"/>
+            </Material>
+        </Emitter>
+        <Emitter name="glow close" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="1.500" orient="90.000"/>
+            <Movement/>
+            <Material blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_close.dds" colorize="AAAAAAFF"/>
+        </Emitter>
+        <Emitter name="glow far" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="4.000" scaleMax="4.500" orient="0.000" orientMax="360.000"/>
+            <Movement/>
+            <Material softThickness="0.500" fadeIn="0.300" fadeOut="0.800" blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_far.dds" colorize="898989FF"/>
+        </Emitter>
+    </ParticleSystem>
+    <ParticleSystem name="FX_MUZZLE_FLASH_RIFLE_05" poolSize="24">
+        <Emitter name="" spawnOffsetZ="0.500">
+            <Particle lifetime="0.400"/>
+            <Initial sizeX="0.600" sizeZ="0.800" orient="180.000"/>
+            <Movement/>
+            <Material softThickness="0.170" fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smoke_hit.dds" colorize="39393936">
+                <TextureAnimation frameWidth="128" frameHeight="128"/>
+            </Material>
+        </Emitter>
+        <Emitter name="flash" emitDelay="0.500" spawnOffsetZ="0.150">
+            <Particle lifetime="0.100"/>
+            <Initial sizeX="0.400" sizeZ="0.150" orient="-90.000"/>
+            <Movement direction="orient"/>
+            <Material blendMode="screen" depthTested="0" mainTex="data/textures/fx/muzzleflash_rifle.dds" colorize="FF582FFF">
+                <TextureAnimation frameWidth="64" frameHeight="32" startFrame="0" endFrame="3"/>
+            </Material>
+        </Emitter>
+        <Emitter name="glow close" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.040">
+            <Particle lifetime="0.060"/>
+            <Initial scale="0.500" sizeX="0.600" sizeZ="0.600" orient="90.000"/>
+            <Movement/>
+            <Material blendMode="add_masked" depthTested="0" mainTex="data/textures/fx/glow_close.dds" colorize="EA63268E"/>
+        </Emitter>
+        <Emitter name="glow far" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.150">
+            <Particle lifetime="0.060"/>
+            <Initial scale="2.000" scaleMax="2.500" sizeX="0.500" sizeY="0.500" sizeZ="0.500" orient="0.000" orientMax="360.000"/>
+            <Movement/>
+            <Material softThickness="0.500" fadeIn="0.300" fadeOut="0.800" blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_far.dds" colorize="AAA0914E"/>
+        </Emitter>
+        <Emitter name="" duration="0.100" emitDelay="0.020" spawnOffsetZ="0.200">
+            <Particle lifetime="0.500" lifetimeMax="0.800"/>
+            <Initial scale="0.600" scaleMax="1.000" orient="0.000" orientMax="360.000"/>
+            <Movement speedZ="1.540" speedZMax="5.080" friction="0.920" scaleStart="0.500" scaleEnd="1.000" rotationPerSec="15.000"/>
+            <Material fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smokepuff1.dds" colorize="39393936">
+                <TextureAnimation frameWidth="64" frameHeight="64"/>
+            </Material>
+        </Emitter>
+    </ParticleSystem>
+    <ParticleSystem name="FX_MUZZLE_FLASH_RIFLE_06" poolSize="24">
+        <Emitter name="" spawnOffsetZ="0.500">
+            <Particle lifetime="0.400"/>
+            <Initial sizeX="0.600" sizeZ="0.800" orient="180.000"/>
+            <Movement/>
+            <Material softThickness="0.170" fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smoke_hit.dds" colorize="39393936">
+                <TextureAnimation frameWidth="128" frameHeight="128"/>
+            </Material>
+        </Emitter>
+        <Emitter name="flash" emitDelay="0.500" spawnOffsetZ="0.150">
+            <Particle lifetime="0.100"/>
+            <Initial sizeX="0.400" sizeZ="0.150" orient="-90.000"/>
+            <Movement direction="orient"/>
+            <Material blendMode="screen" depthTested="0" mainTex="data/textures/fx/muzzleflash_rifle.dds" colorize="FF572FFF">
+                <TextureAnimation frameWidth="64" frameHeight="32" startFrame="4" endFrame="7"/>
+            </Material>
+        </Emitter>
+        <Emitter name="glow close" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.040">
+            <Particle lifetime="0.060"/>
+            <Initial scale="0.500" sizeX="0.600" sizeZ="0.600" orient="90.000"/>
+            <Movement/>
+            <Material blendMode="add_masked" depthTested="0" mainTex="data/textures/fx/glow_close.dds" colorize="EA63268E"/>
+        </Emitter>
+        <Emitter name="glow far" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.150">
+            <Particle lifetime="0.060"/>
+            <Initial scale="2.000" scaleMax="2.500" sizeX="0.500" sizeY="0.500" sizeZ="0.500" orient="0.000" orientMax="360.000"/>
+            <Movement/>
+            <Material softThickness="0.500" fadeIn="0.300" fadeOut="0.800" blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_far.dds" colorize="AAA0914E"/>
+        </Emitter>
+        <Emitter name="" duration="0.100" emitDelay="0.020" spawnOffsetZ="0.200">
+            <Particle lifetime="0.500" lifetimeMax="0.800"/>
+            <Initial scale="0.600" scaleMax="1.000" orient="0.000" orientMax="360.000"/>
+            <Movement speedZ="1.540" speedZMax="5.080" friction="0.920" scaleStart="0.500" scaleEnd="1.000" rotationPerSec="15.000"/>
+            <Material fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smokepuff1.dds" colorize="39393936">
+                <TextureAnimation frameWidth="64" frameHeight="64"/>
+            </Material>
+        </Emitter>
+    </ParticleSystem>
+    <ParticleSystem name="FX_MUZZLE_FLASH_RIFLE_07" poolSize="24">
+        <Emitter name="" spawnOffsetZ="0.500">
+            <Particle lifetime="0.400"/>
+            <Initial sizeX="0.600" sizeZ="0.800" orient="180.000"/>
+            <Movement/>
+            <Material softThickness="0.170" fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smoke_hit.dds" colorize="39393936">
+                <TextureAnimation frameWidth="128" frameHeight="128"/>
+            </Material>
+        </Emitter>
+        <Emitter name="flash" emitDelay="0.500" spawnOffsetZ="0.150">
+            <Particle lifetime="0.100"/>
+            <Initial sizeX="0.400" sizeZ="0.150" orient="-90.000"/>
+            <Movement direction="orient"/>
+            <Material blendMode="screen" depthTested="0" mainTex="data/textures/fx/muzzleflash_rifle.dds" colorize="FF582FFF">
+                <TextureAnimation frameWidth="64" frameHeight="32" startFrame="8" endFrame="11"/>
+            </Material>
+        </Emitter>
+        <Emitter name="glow close" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.040">
+            <Particle lifetime="0.060"/>
+            <Initial scale="0.500" sizeX="0.600" sizeZ="0.600" orient="90.000"/>
+            <Movement/>
+            <Material blendMode="add_masked" depthTested="0" mainTex="data/textures/fx/glow_close.dds" colorize="EA63268E"/>
+        </Emitter>
+        <Emitter name="glow far" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.150">
+            <Particle lifetime="0.060"/>
+            <Initial scale="2.000" scaleMax="2.500" sizeX="0.500" sizeY="0.500" sizeZ="0.500" orient="0.000" orientMax="360.000"/>
+            <Movement/>
+            <Material softThickness="0.500" fadeIn="0.300" fadeOut="0.800" blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_far.dds" colorize="AAA0914E"/>
+        </Emitter>
+        <Emitter name="" duration="0.100" emitDelay="0.020" spawnOffsetZ="0.200">
+            <Particle lifetime="0.500" lifetimeMax="0.800"/>
+            <Initial scale="0.600" scaleMax="1.000" orient="0.000" orientMax="360.000"/>
+            <Movement speedZ="1.540" speedZMax="5.080" friction="0.920" scaleStart="0.500" scaleEnd="1.000" rotationPerSec="15.000"/>
+            <Material fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smokepuff1.dds" colorize="39393936">
+                <TextureAnimation frameWidth="64" frameHeight="64"/>
+            </Material>
+        </Emitter>
+    </ParticleSystem>
+    <ParticleSystem name="FX_MUZZLE_FLASH_RIFLE_08" poolSize="24">
+        <Emitter name="" spawnOffsetZ="0.500">
+            <Particle lifetime="0.400"/>
+            <Initial sizeX="0.600" sizeZ="0.800" orient="180.000"/>
+            <Movement/>
+            <Material softThickness="0.170" fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smoke_hit.dds" colorize="39393936">
+                <TextureAnimation frameWidth="128" frameHeight="128"/>
+            </Material>
+        </Emitter>
+        <Emitter name="flash" emitDelay="0.500" spawnOffsetZ="0.150">
+            <Particle lifetime="0.100"/>
+            <Initial sizeX="0.400" sizeZ="0.150" orient="-90.000"/>
+            <Movement direction="orient"/>
+            <Material blendMode="screen" depthTested="0" mainTex="data/textures/fx/muzzleflash_rifle.dds" colorize="FF582FFF">
+                <TextureAnimation frameWidth="64" frameHeight="32" startFrame="12" endFrame="15"/>
+            </Material>
+        </Emitter>
+        <Emitter name="glow close" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.040">
+            <Particle lifetime="0.060"/>
+            <Initial scale="0.500" sizeX="0.600" sizeZ="0.600" orient="90.000"/>
+            <Movement/>
+            <Material blendMode="add_masked" depthTested="0" mainTex="data/textures/fx/glow_close.dds" colorize="EA63268E"/>
+        </Emitter>
+        <Emitter name="glow far" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.150">
+            <Particle lifetime="0.060"/>
+            <Initial scale="2.000" scaleMax="2.500" sizeX="0.500" sizeY="0.500" sizeZ="0.500" orient="0.000" orientMax="360.000"/>
+            <Movement/>
+            <Material softThickness="0.500" fadeIn="0.300" fadeOut="0.800" blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_far.dds" colorize="AAA0914E"/>
+        </Emitter>
+        <Emitter name="" duration="0.100" emitDelay="0.020" spawnOffsetZ="0.200">
+            <Particle lifetime="0.500" lifetimeMax="0.800"/>
+            <Initial scale="0.600" scaleMax="1.000" orient="0.000" orientMax="360.000"/>
+            <Movement speedZ="1.540" speedZMax="5.080" friction="0.920" scaleStart="0.500" scaleEnd="1.000" rotationPerSec="15.000"/>
+            <Material fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smokepuff1.dds" colorize="39393936">
+                <TextureAnimation frameWidth="64" frameHeight="64"/>
+            </Material>
+        </Emitter>
+    </ParticleSystem>
+    <ParticleSystem name="FX_MUZZLE_FLASH_PISTOL_01" poolSize="24">
+        <Emitter name="" duration="0.100" emitDelay="0.020" spawnOffsetZ="0.200">
+            <Particle lifetime="0.500" lifetimeMax="0.800"/>
+            <Initial scale="0.600" scaleMax="1.000" orient="0.000" orientMax="360.000"/>
+            <Movement speedZ="1.540" speedZMax="5.080" friction="0.920" scaleStart="0.500" scaleEnd="1.000" rotationPerSec="15.000"/>
+            <Material fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smokepuff1.dds" colorize="39393920">
+                <TextureAnimation frameWidth="64" frameHeight="64"/>
+            </Material>
+        </Emitter>
+        <Emitter name="flash" emitDelay="0.500" spawnOffsetZ="0.200">
+            <Particle lifetime="0.100"/>
+            <Initial sizeX="0.500" sizeZ="0.500" orient="-90.000"/>
+            <Movement direction="orient"/>
+            <Material blendMode="add_masked" depthTested="0" mainTex="data/textures/fx/muzzleflash_pistol.dds" colorize="FFFFFFFF">
+                <TextureAnimation frameWidth="32" frameHeight="32" startFrame="0" endFrame="4"/>
+            </Material>
+        </Emitter>
+        <Emitter name="glow close" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.200">
+            <Particle lifetime="0.060"/>
+            <Initial scale="1.500" orient="90.000"/>
+            <Movement/>
+            <Material blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_close.dds" colorize="AAAAAAFF"/>
+        </Emitter>
+        <Emitter name="glow far" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.200">
+            <Particle lifetime="0.060"/>
+            <Initial scale="4.000" scaleMax="4.500" orient="0.000" orientMax="360.000"/>
+            <Movement/>
+            <Material softThickness="0.500" fadeIn="0.300" fadeOut="0.800" blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_far.dds" colorize="898989FF"/>
+        </Emitter>
+    </ParticleSystem>
+    <ParticleSystem name="FX_MUZZLE_FLASH_PISTOL_02" poolSize="24">
+        <Emitter name="" duration="0.100" emitDelay="0.020" spawnOffsetZ="0.200">
+            <Particle lifetime="0.500" lifetimeMax="0.800"/>
+            <Initial scale="0.600" scaleMax="1.000" orient="0.000" orientMax="360.000"/>
+            <Movement speedZ="1.540" speedZMax="5.080" friction="0.920" scaleStart="0.500" scaleEnd="1.000" rotationPerSec="15.000"/>
+            <Material fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smokepuff1.dds" colorize="39393920">
+                <TextureAnimation frameWidth="64" frameHeight="64"/>
+            </Material>
+        </Emitter>
+        <Emitter name="flash" emitDelay="0.500" spawnOffsetZ="0.200">
+            <Particle lifetime="0.100"/>
+            <Initial sizeX="0.500" sizeZ="0.500" orient="-90.000"/>
+            <Movement direction="orient"/>
+            <Material blendMode="add_masked" depthTested="0" mainTex="data/textures/fx/muzzleflash_pistol.dds" colorize="FFFFFFFF">
+                <TextureAnimation frameWidth="32" frameHeight="32" startFrame="4" endFrame="8"/>
+            </Material>
+        </Emitter>
+        <Emitter name="glow close" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.200">
+            <Particle lifetime="0.060"/>
+            <Initial scale="1.500" orient="90.000"/>
+            <Movement/>
+            <Material blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_close.dds" colorize="AAAAAAFF"/>
+        </Emitter>
+        <Emitter name="glow far" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.200">
+            <Particle lifetime="0.060"/>
+            <Initial scale="4.000" scaleMax="4.500" orient="0.000" orientMax="360.000"/>
+            <Movement/>
+            <Material softThickness="0.500" fadeIn="0.300" fadeOut="0.800" blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_far.dds" colorize="898989FF"/>
+        </Emitter>
+    </ParticleSystem>
+    <ParticleSystem name="FX_MUZZLE_FLASH_PISTOL_03" poolSize="24">
+        <Emitter name="" duration="0.100" emitDelay="0.020" spawnOffsetZ="0.200">
+            <Particle lifetime="0.500" lifetimeMax="0.800"/>
+            <Initial scale="0.600" scaleMax="1.000" orient="0.000" orientMax="360.000"/>
+            <Movement speedZ="1.540" speedZMax="5.080" friction="0.920" scaleStart="0.500" scaleEnd="1.000" rotationPerSec="15.000"/>
+            <Material fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smokepuff1.dds" colorize="39393920">
+                <TextureAnimation frameWidth="64" frameHeight="64"/>
+            </Material>
+        </Emitter>
+        <Emitter name="flash" emitDelay="0.500" spawnOffsetZ="0.200">
+            <Particle lifetime="0.100"/>
+            <Initial sizeX="0.500" sizeZ="0.500" orient="-90.000"/>
+            <Movement direction="orient"/>
+            <Material blendMode="add_masked" depthTested="0" mainTex="data/textures/fx/muzzleflash_pistol.dds" colorize="FFFFFFFF">
+                <TextureAnimation frameWidth="32" frameHeight="32" startFrame="8" endFrame="12"/>
+            </Material>
+        </Emitter>
+        <Emitter name="glow close" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.200">
+            <Particle lifetime="0.060"/>
+            <Initial scale="1.500" orient="90.000"/>
+            <Movement/>
+            <Material blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_close.dds" colorize="AAAAAAFF"/>
+        </Emitter>
+        <Emitter name="glow far" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.200">
+            <Particle lifetime="0.060"/>
+            <Initial scale="4.000" scaleMax="4.500" orient="0.000" orientMax="360.000"/>
+            <Movement/>
+            <Material softThickness="0.500" fadeIn="0.300" fadeOut="0.800" blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_far.dds" colorize="898989FF"/>
+        </Emitter>
+    </ParticleSystem>
+    <ParticleSystem name="FX_MUZZLE_FLASH_PISTOL_04" poolSize="24">
+        <Emitter name="" duration="0.100" emitDelay="0.020" spawnOffsetZ="0.200">
+            <Particle lifetime="0.500" lifetimeMax="0.800"/>
+            <Initial scale="0.600" scaleMax="1.000" orient="0.000" orientMax="360.000"/>
+            <Movement speedZ="1.540" speedZMax="5.080" friction="0.920" scaleStart="0.500" scaleEnd="1.000" rotationPerSec="15.000"/>
+            <Material fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smokepuff1.dds" colorize="39393920">
+                <TextureAnimation frameWidth="64" frameHeight="64"/>
+            </Material>
+        </Emitter>
+        <Emitter name="flash" emitDelay="0.500" spawnOffsetZ="0.200">
+            <Particle lifetime="0.100"/>
+            <Initial sizeX="0.500" sizeZ="0.500" orient="-90.000"/>
+            <Movement direction="orient"/>
+            <Material blendMode="add_masked" depthTested="0" mainTex="data/textures/fx/muzzleflash_pistol.dds" colorize="FFFFFFFF">
+                <TextureAnimation frameWidth="32" frameHeight="32" startFrame="12" endFrame="16"/>
+            </Material>
+        </Emitter>
+        <Emitter name="glow close" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.200">
+            <Particle lifetime="0.060"/>
+            <Initial scale="1.500" orient="90.000"/>
+            <Movement/>
+            <Material blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_close.dds" colorize="AAAAAAFF"/>
+        </Emitter>
+        <Emitter name="glow far" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.200">
+            <Particle lifetime="0.060"/>
+            <Initial scale="4.000" scaleMax="4.500" orient="0.000" orientMax="360.000"/>
+            <Movement/>
+            <Material softThickness="0.500" fadeIn="0.300" fadeOut="0.800" blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_far.dds" colorize="898989FF"/>
+        </Emitter>
+    </ParticleSystem>
+    <ParticleSystem name="FX_MUZZLE_FLASH_LMG_01" poolSize="24">
+        <Emitter name="" duration="0.100" emitDelay="0.020" spawnOffsetZ="0.200">
+            <Particle lifetime="0.500" lifetimeMax="0.800"/>
+            <Initial scale="0.600" scaleMax="1.000" orient="0.000" orientMax="360.000"/>
+            <Movement speedZ="1.540" speedZMax="5.080" friction="0.920" scaleStart="0.500" scaleEnd="1.000" rotationPerSec="15.000"/>
+            <Material fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smokepuff1.dds" colorize="39393920">
+                <TextureAnimation frameWidth="64" frameHeight="64"/>
+            </Material>
+        </Emitter>
+        <Emitter name="flash" emitDelay="0.500" spawnOffsetZ="0.350">
+            <Particle lifetime="0.100"/>
+            <Initial orient="-90.000"/>
+            <Movement direction="orient"/>
+            <Material blendMode="add_masked" depthTested="0" mainTex="data/textures/fx/muzzleflash_lmg.dds" colorize="FFFFFFFF">
+                <TextureAnimation frameWidth="64" frameHeight="64" startFrame="0" endFrame="4"/>
+            </Material>
+        </Emitter>
+        <Emitter name="glow close" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="1.500" orient="90.000"/>
+            <Movement/>
+            <Material blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_close.dds" colorize="AAAAAAFF"/>
+        </Emitter>
+        <Emitter name="glow far" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="4.000" scaleMax="4.500" orient="0.000" orientMax="360.000"/>
+            <Movement/>
+            <Material softThickness="0.500" fadeIn="0.300" fadeOut="0.800" blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_far.dds" colorize="898989FF"/>
+        </Emitter>
+    </ParticleSystem>
+    <ParticleSystem name="FX_MUZZLE_FLASH_LMG_02" poolSize="24">
+        <Emitter name="" duration="0.100" emitDelay="0.020" spawnOffsetZ="0.200">
+            <Particle lifetime="0.500" lifetimeMax="0.800"/>
+            <Initial scale="0.600" scaleMax="1.000" orient="0.000" orientMax="360.000"/>
+            <Movement speedZ="1.540" speedZMax="5.080" friction="0.920" scaleStart="0.500" scaleEnd="1.000" rotationPerSec="15.000"/>
+            <Material fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smokepuff1.dds" colorize="39393920">
+                <TextureAnimation frameWidth="64" frameHeight="64"/>
+            </Material>
+        </Emitter>
+        <Emitter name="flash" emitDelay="0.500" spawnOffsetZ="0.350">
+            <Particle lifetime="0.100"/>
+            <Initial orient="-90.000"/>
+            <Movement direction="orient"/>
+            <Material blendMode="add_masked" depthTested="0" mainTex="data/textures/fx/muzzleflash_lmg.dds" colorize="FFFFFFFF">
+                <TextureAnimation frameWidth="64" frameHeight="64" startFrame="4" endFrame="8"/>
+            </Material>
+        </Emitter>
+        <Emitter name="glow close" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="1.500" orient="90.000"/>
+            <Movement/>
+            <Material blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_close.dds" colorize="AAAAAAFF"/>
+        </Emitter>
+        <Emitter name="glow far" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="4.000" scaleMax="4.500" orient="0.000" orientMax="360.000"/>
+            <Movement/>
+            <Material softThickness="0.500" fadeIn="0.300" fadeOut="0.800" blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_far.dds" colorize="898989FF"/>
+        </Emitter>
+    </ParticleSystem>
+    <ParticleSystem name="FX_MUZZLE_FLASH_LMG_03" poolSize="24">
+        <Emitter name="" duration="0.100" emitDelay="0.020" spawnOffsetZ="0.200">
+            <Particle lifetime="0.500" lifetimeMax="0.800"/>
+            <Initial scale="0.600" scaleMax="1.000" orient="0.000" orientMax="360.000"/>
+            <Movement speedZ="1.540" speedZMax="5.080" friction="0.920" scaleStart="0.500" scaleEnd="1.000" rotationPerSec="15.000"/>
+            <Material fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smokepuff1.dds" colorize="39393920">
+                <TextureAnimation frameWidth="64" frameHeight="64"/>
+            </Material>
+        </Emitter>
+        <Emitter name="flash" emitDelay="0.500" spawnOffsetZ="0.350">
+            <Particle lifetime="0.100"/>
+            <Initial orient="-90.000"/>
+            <Movement direction="orient"/>
+            <Material blendMode="add_masked" depthTested="0" mainTex="data/textures/fx/muzzleflash_lmg.dds" colorize="FFFFFFFF">
+                <TextureAnimation frameWidth="64" frameHeight="64" startFrame="8" endFrame="12"/>
+            </Material>
+        </Emitter>
+        <Emitter name="glow close" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="1.500" orient="90.000"/>
+            <Movement/>
+            <Material blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_close.dds" colorize="AAAAAAFF"/>
+        </Emitter>
+        <Emitter name="glow far" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="4.000" scaleMax="4.500" orient="0.000" orientMax="360.000"/>
+            <Movement/>
+            <Material softThickness="0.500" fadeIn="0.300" fadeOut="0.800" blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_far.dds" colorize="898989FF"/>
+        </Emitter>
+    </ParticleSystem>
+    <ParticleSystem name="FX_MUZZLE_FLASH_LMG_04" poolSize="24">
+        <Emitter name="" duration="0.100" emitDelay="0.020" spawnOffsetZ="0.200">
+            <Particle lifetime="0.500" lifetimeMax="0.800"/>
+            <Initial scale="0.600" scaleMax="1.000" orient="0.000" orientMax="360.000"/>
+            <Movement speedZ="1.540" speedZMax="5.080" friction="0.920" scaleStart="0.500" scaleEnd="1.000" rotationPerSec="15.000"/>
+            <Material fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smokepuff1.dds" colorize="39393920">
+                <TextureAnimation frameWidth="64" frameHeight="64"/>
+            </Material>
+        </Emitter>
+        <Emitter name="flash" emitDelay="0.500" spawnOffsetZ="0.350">
+            <Particle lifetime="0.100"/>
+            <Initial orient="-90.000"/>
+            <Movement direction="orient"/>
+            <Material blendMode="add_masked" depthTested="0" mainTex="data/textures/fx/muzzleflash_lmg.dds" colorize="FFFFFFFF">
+                <TextureAnimation frameWidth="64" frameHeight="64" startFrame="12" endFrame="16"/>
+            </Material>
+        </Emitter>
+        <Emitter name="glow close" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="1.500" orient="90.000"/>
+            <Movement/>
+            <Material blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_close.dds" colorize="AAAAAAFF"/>
+        </Emitter>
+        <Emitter name="glow far" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="4.000" scaleMax="4.500" orient="0.000" orientMax="360.000"/>
+            <Movement/>
+            <Material softThickness="0.500" fadeIn="0.300" fadeOut="0.800" blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_far.dds" colorize="898989FF"/>
+        </Emitter>
+    </ParticleSystem>
+    <ParticleSystem name="FX_MUZZLE_FLASH_SHOTGUN_01" poolSize="24">
+        <Emitter name="" duration="0.100" emitDelay="0.020" spawnOffsetZ="0.200">
+            <Particle lifetime="0.500" lifetimeMax="0.800"/>
+            <Initial scale="0.600" scaleMax="1.000" orient="0.000" orientMax="360.000"/>
+            <Movement speedZ="1.540" speedZMax="5.080" friction="0.920" scaleStart="0.500" scaleEnd="1.000" rotationPerSec="15.000"/>
+            <Material fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smokepuff1.dds" colorize="39393920">
+                <TextureAnimation frameWidth="64" frameHeight="64"/>
+            </Material>
+        </Emitter>
+        <Emitter name="flash" emitDelay="0.500" spawnOffsetZ="0.350">
+            <Particle lifetime="0.100"/>
+            <Initial sizeZ="0.500" orient="-90.000"/>
+            <Movement direction="orient"/>
+            <Material depthTested="0" mainTex="data/textures/fx/muzzleflash_shotgun.dds" colorize="FFFFFFFF">
+                <TextureAnimation frameWidth="64" frameHeight="32" startFrame="0" endFrame="20"/>
+            </Material>
+        </Emitter>
+        <Emitter name="glow close" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="1.500" orient="90.000"/>
+            <Movement/>
+            <Material blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_close.dds" colorize="AAAAAAFF"/>
+        </Emitter>
+        <Emitter name="glow far" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="4.000" scaleMax="4.500" orient="0.000" orientMax="360.000"/>
+            <Movement/>
+            <Material softThickness="0.500" fadeIn="0.300" fadeOut="0.800" blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_far.dds" colorize="898989FF"/>
+        </Emitter>
+    </ParticleSystem>
+    <ParticleSystem name="FX_MUZZLE_FLASH_SHOTGUN_02" poolSize="24">
+        <Emitter name="" duration="0.100" emitDelay="0.020" spawnOffsetZ="0.200">
+            <Particle lifetime="0.500" lifetimeMax="0.800"/>
+            <Initial scale="0.600" scaleMax="1.000" orient="0.000" orientMax="360.000"/>
+            <Movement speedZ="1.540" speedZMax="5.080" friction="0.920" scaleStart="0.500" scaleEnd="1.000" rotationPerSec="15.000"/>
+            <Material fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smokepuff1.dds" colorize="39393920">
+                <TextureAnimation frameWidth="64" frameHeight="64"/>
+            </Material>
+        </Emitter>
+        <Emitter name="flash" emitDelay="0.500" spawnOffsetZ="0.350">
+            <Particle lifetime="0.100"/>
+            <Initial sizeZ="0.500" orient="-90.000"/>
+            <Movement direction="orient"/>
+            <Material depthTested="0" mainTex="data/textures/fx/muzzleflash_shotgun.dds" colorize="FFFFFFFF">
+                <TextureAnimation frameWidth="64" frameHeight="32" startFrame="4" endFrame="20"/>
+            </Material>
+        </Emitter>
+        <Emitter name="glow close" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="1.500" orient="90.000"/>
+            <Movement/>
+            <Material blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_close.dds" colorize="AAAAAAFF"/>
+        </Emitter>
+        <Emitter name="glow far" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="4.000" scaleMax="4.500" orient="0.000" orientMax="360.000"/>
+            <Movement/>
+            <Material softThickness="0.500" fadeIn="0.300" fadeOut="0.800" blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_far.dds" colorize="898989FF"/>
+        </Emitter>
+    </ParticleSystem>
+    <ParticleSystem name="FX_MUZZLE_FLASH_SHOTGUN_03" poolSize="24">
+        <Emitter name="" duration="0.100" emitDelay="0.020" spawnOffsetZ="0.200">
+            <Particle lifetime="0.500" lifetimeMax="0.800"/>
+            <Initial scale="0.600" scaleMax="1.000" orient="0.000" orientMax="360.000"/>
+            <Movement speedZ="1.540" speedZMax="5.080" friction="0.920" scaleStart="0.500" scaleEnd="1.000" rotationPerSec="15.000"/>
+            <Material fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smokepuff1.dds" colorize="39393920">
+                <TextureAnimation frameWidth="64" frameHeight="64"/>
+            </Material>
+        </Emitter>
+        <Emitter name="flash" emitDelay="0.500" spawnOffsetZ="0.350">
+            <Particle lifetime="0.100"/>
+            <Initial sizeZ="0.500" orient="-90.000"/>
+            <Movement direction="orient"/>
+            <Material depthTested="0" mainTex="data/textures/fx/muzzleflash_shotgun.dds" colorize="FFFFFFFF">
+                <TextureAnimation frameWidth="64" frameHeight="32" startFrame="8" endFrame="20"/>
+            </Material>
+        </Emitter>
+        <Emitter name="glow close" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="1.500" orient="90.000"/>
+            <Movement/>
+            <Material blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_close.dds" colorize="AAAAAAFF"/>
+        </Emitter>
+        <Emitter name="glow far" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="4.000" scaleMax="4.500" orient="0.000" orientMax="360.000"/>
+            <Movement/>
+            <Material softThickness="0.500" fadeIn="0.300" fadeOut="0.800" blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_far.dds" colorize="898989FF"/>
+        </Emitter>
+    </ParticleSystem>
+    <ParticleSystem name="FX_MUZZLE_FLASH_SHOTGUN_04" poolSize="24">
+        <Emitter name="" duration="0.100" emitDelay="0.020" spawnOffsetZ="0.200">
+            <Particle lifetime="0.500" lifetimeMax="0.800"/>
+            <Initial scale="0.600" scaleMax="1.000" orient="0.000" orientMax="360.000"/>
+            <Movement speedZ="1.540" speedZMax="5.080" friction="0.920" scaleStart="0.500" scaleEnd="1.000" rotationPerSec="15.000"/>
+            <Material fadeIn="0.100" fadeOut="0.500" mainTex="data/textures/fx/smokepuff1.dds" colorize="39393920">
+                <TextureAnimation frameWidth="64" frameHeight="64"/>
+            </Material>
+        </Emitter>
+        <Emitter name="flash" emitDelay="0.500" spawnOffsetZ="0.350">
+            <Particle lifetime="0.100"/>
+            <Initial sizeZ="0.500" orient="-90.000"/>
+            <Movement direction="orient"/>
+            <Material depthTested="0" mainTex="data/textures/fx/muzzleflash_shotgun.dds" colorize="FFFFFFFF">
+                <TextureAnimation frameWidth="64" frameHeight="32" startFrame="12" endFrame="20"/>
+            </Material>
+        </Emitter>
+        <Emitter name="glow close" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="1.500" orient="90.000"/>
+            <Movement/>
+            <Material blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_close.dds" colorize="AAAAAAFF"/>
+        </Emitter>
+        <Emitter name="glow far" duration="0.100" emitDelay="1.000" spawnOffsetZ="0.350">
+            <Particle lifetime="0.060"/>
+            <Initial scale="4.000" scaleMax="4.500" orient="0.000" orientMax="360.000"/>
+            <Movement/>
+            <Material softThickness="0.500" fadeIn="0.300" fadeOut="0.800" blendMode="screen" depthTested="0" mainTex="data/textures/fx/glow_far.dds" colorize="898989FF"/>
+        </Emitter>
+    </ParticleSystem>
+</Particles>

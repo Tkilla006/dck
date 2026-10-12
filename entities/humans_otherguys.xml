@@ -1,0 +1,594 @@
+<!--
+		For help, please refer to "help_entities.txt" in this directory.
+-->
+<Entities>
+	<Bind eqp="ExplosiveCharge" to="Hostage"/>
+	<Bind eqp="TECTorch" to="Hostage"/>
+	<Bind eqp="FeetOfSteel" to="Hostage"/>
+	<Bind eqp="DynamicHammer" to="Hostage"/>
+	<Bind eqp="BoltCutter" to="Hostage"/>
+	<Entity name="Hostage" type="Human" fogOfWarVisibility="hiddenInitially" editorAutoHeight="false" tooltip="@tooltip_hostage" editorTags="hostages">
+		<RenderObject3D model="data/models/humans/civilian_male_standard.khm" diffuseTex="data/models/humans/hostage.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>	
+		<Human type="Hostage">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.65"/>
+			<Brain startingBehavior="Hostage" defaultBehavior="Hostage" combatBehavior="Hostage" suppressionRecovery="3.0"/>
+			<Id name="@entity_human_hostage" portrait="data/textures/portraits/hostage_head.dds" gender="0" voicePack="hostage_male"/>
+
+			<Mobility>
+				<MoveSpeed min="0.9" defaultMetersPerSec="2.23" max="2.93"/>
+				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="HostageBlackHood" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Bind eqp="ExplosiveCharge" to="HostageVisible"/>
+	<Bind eqp="TECTorch" to="HostageVisible"/>
+	<Bind eqp="FeetOfSteel" to="HostageVisible"/>
+	<Bind eqp="DynamicHammer" to="HostageVisible"/>
+	<Bind eqp="BoltCutter" to="HostageVisible"/>
+	<Entity name="HostageVisible" type="Human" fogOfWarVisibility="full" editorAutoHeight="false" tooltip="@tooltip_hostage_visible_known" editorTags="hostages">
+		<RenderObject3D model="data/models/humans/civilian_male_standard.khm" diffuseTex="data/models/humans/hostage.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Hostage">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.65"/>
+			<Brain startingBehavior="Hostage" defaultBehavior="Hostage" combatBehavior="Hostage" suppressionRecovery="3.0"/>
+			<Id name="@entity_human_hostage" portrait="data/textures/portraits/hostage_head.dds" gender="0" voicePack="hostage_male"/>
+			<Mobility>
+				<MoveSpeed min="0.9" defaultMetersPerSec="2.23" max="2.93"/>
+				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="HostageBlackHood" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Bind eqp="ExplosiveCharge" to="HostageVisibleExecution"/>
+	<Bind eqp="TECTorch" to="HostageVisibleExecution"/>
+	<Bind eqp="FeetOfSteel" to="HostageVisibleExecution"/>
+	<Bind eqp="DynamicHammer" to="HostageVisibleExecution"/>
+	<Bind eqp="BoltCutter" to="HostageVisibleExecution"/>
+	<Entity name="HostageVisibleExecution" type="Human" fogOfWarVisibility="full" editorAutoHeight="false" tooltip="@tooltip_hostage_visible" editorTags="hostages">
+		<RenderObject3D model="data/models/humans/civilian_male_standard.khm" diffuseTex="data/models/humans/hostage.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Hostage">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.65"/>
+			<Brain startingBehavior="Hostage" defaultBehavior="Hostage" combatBehavior="Hostage" suppressionRecovery="3.0"/>
+			<Id name="@entity_human_hostage" portrait="data/textures/portraits/hostage_head.dds" gender="0" voicePack="hostage_male"/>
+
+			<Mobility>
+				<MoveSpeed min="0.9" defaultMetersPerSec="2.23" max="2.93"/>
+				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="HostageBlackHood" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<!--
+	<Entity name="Hostage Female" type="Human" fogOfWarVisibility="hiddenInitially" editorAutoHeight="false" >
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/hostage.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Hostage">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.65"/>
+			<Brain startingBehavior="Hostage" defaultBehavior="Hostage" combatBehavior="Hostage" suppressionRecovery="3.0"/>
+			<Id name="@entity_human_hostage" portrait="data/textures/portraits/hostage_head.dds" gender="1" voicePack="hostage_female"/>
+
+			<Mobility>
+				<MoveSpeed min="0.9" defaultMetersPerSec="2.23" max="2.93"/>
+				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="HostageBlackHood" />
+			</Equipment>
+		</Human>
+	</Entity>
+	-->
+
+	<!-- NOTE: This name is used by RMG. don't change it please -->
+	<Entity name="HVT" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_enemy_vip" editorTags="hvt" oldName="VIP">
+		<RenderObject3D model="data/models/humans/civilian_male_fat.khm" diffuseTex="data/models/humans/civilian_male_standard_03.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_scarf_beret.khm" diffuseTex="data/models/humans/attachments/cia_scarf_beret_01.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="BadGuy" isVIP="true">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="HVT" defaultBehavior="HVT" combatBehavior="HVT Combat" suppressionRecovery="80.0"/>
+			<Id name="@entity_human_vip" portrait="data/textures/portraits/enemy_vip.dds" gender="0" voicePack="enemy arabic leader"/>
+			<Traits chanceToInvestigate="0.0" chanceToAmbush="0.0"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
+			</Mobility>
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+	
+	<Entity name="HVT_Special" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_enemy_vip" editorTags="hvt">
+		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/vip_special.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/vip_scarf.khm" diffuseTex="data/models/humans/attachments/vip_scarf.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/dress_02.khm" diffuseTex="data/models/humans/attachments/vip_dress.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/vip_head.khm" diffuseTex="data/models/humans/attachments/vip_head.dds" attachSlot="Bip001 Head"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="BadGuy" isVIP="true">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="HVT" defaultBehavior="HVT" combatBehavior="HVT Combat" suppressionRecovery="80.0"/>
+			<Id name="@entity_human_vip" portrait="data/textures/portraits/enemy_vip.dds" gender="0" voicePack="enemy arabic leader"/>
+			<Traits chanceToInvestigate="0.0" chanceToAmbush="0.0"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
+			</Mobility>
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>	
+	
+	<Entity name="HVT_Warlord" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_enemy_vip" editorTags="hvt">
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/vip_warlord.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/vip_hat.khm" diffuseTex="data/models/humans/attachments/vip_hat.dds" attachSlot="Bip001 Head"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="BadGuy" isVIP="true">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="HVT" defaultBehavior="HVT" combatBehavior="HVT Combat" suppressionRecovery="80.0"/>
+			<Id name="@entity_human_vip" portrait="data/textures/portraits/enemy_vip.dds" gender="0" voicePack="enemy arabic leader"/>
+			<Traits chanceToInvestigate="0.0" chanceToAmbush="0.0"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
+			</Mobility>
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>	
+	
+	<Entity name="HVT_Suit" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_enemy_vip" editorTags="hvt">
+		<RenderObject3D model="data/models/humans/enemy_2.khm" diffuseTex="data/models/humans/vip_suit.dds"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="BadGuy" isVIP="true">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="HVT" defaultBehavior="HVT" combatBehavior="HVT Combat" suppressionRecovery="80.0"/>
+			<Id name="@entity_human_vip" portrait="data/textures/portraits/enemy_vip.dds" gender="0" voicePack="enemy arabic leader"/>
+			<Traits chanceToInvestigate="0.0" chanceToAmbush="0.0"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
+			</Mobility>
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>	
+
+	<!--
+	CIVILIANS
+	-->
+
+	<Entity name="Civilian Male 01" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_civilian" editorTags="civilians">
+		<RenderObject3D model="data/models/humans/civilian_male_standard.khm" diffuseTex="data/models/humans/civilian_male_standard_01.dds"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="100" />
+		<Human type="Civilian" gibsEntity="GenericHumanGibs">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="Civilian" defaultBehavior="Civilian" combatBehavior="Civilian Combat" suppressionRecovery="80.0"/>
+			<Id name="@entity_human_civilian" portrait="data/textures/portraits/civilian_male.dds" gender="0" voicePack="civilian_male"/>
+			<Traits roamAround="true" doesntUseMountedWeapons="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="2" defaultMetersPerSec="3" max="5"/>
+			</Mobility>
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Civilian Male 02" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_civilian" editorTags="civilians">
+		<RenderObject3D model="data/models/humans/civilian_male_skinny.khm" diffuseTex="data/models/humans/civilian_male_standard_02.dds"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Civilian">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="Civilian" defaultBehavior="Civilian" combatBehavior="Civilian Combat" suppressionRecovery="80.0"/>
+			<Id name="@entity_human_civilian" portrait="data/textures/portraits/civilian_male.dds" gender="0" voicePack="civilian_male"/>
+			<Traits roamAround="true" doesntUseMountedWeapons="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="2" defaultMetersPerSec="3" max="5"/>
+			</Mobility>
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Civilian Male 03" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_civilian" editorTags="civilians">
+		<RenderObject3D model="data/models/humans/civilian_male_fat.khm" diffuseTex="data/models/humans/civilian_male_standard_03.dds"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Civilian">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="Civilian" defaultBehavior="Civilian" combatBehavior="Civilian Combat" suppressionRecovery="80.0"/>
+			<Id name="@entity_human_civilian" portrait="data/textures/portraits/civilian_male.dds" gender="0" voicePack="civilian_male"/>
+			<Traits roamAround="true" doesntUseMountedWeapons="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="2" defaultMetersPerSec="3" max="5"/>
+			</Mobility>
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Civilian Male 04" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_civilian" editorTags="civilians">
+		<RenderObject3D model="data/models/humans/civilian_male_burly.khm" diffuseTex="data/models/humans/civilian_male_standard_04.dds"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Civilian">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="Civilian" defaultBehavior="Civilian" combatBehavior="Civilian Combat" suppressionRecovery="80.0"/>
+			<Id name="@entity_human_civilian" portrait="data/textures/portraits/civilian_male.dds" gender="0" voicePack="civilian_male"/>
+			<Traits roamAround="true" doesntUseMountedWeapons="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="2" defaultMetersPerSec="3" max="5"/>
+			</Mobility>
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Civilian Male 05" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_civilian" editorTags="civilians">
+		<RenderObject3D model="data/models/humans/civilian_male_fat.khm" diffuseTex="data/models/humans/civilian_male_standard_05.dds"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Civilian">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="Civilian" defaultBehavior="Civilian" combatBehavior="Civilian Combat" suppressionRecovery="80.0"/>
+			<Id name="@entity_human_civilian" portrait="data/textures/portraits/civilian_male.dds" gender="0" voicePack="civilian_male"/>
+			<Traits roamAround="true" doesntUseMountedWeapons="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="2" defaultMetersPerSec="3" max="5"/>
+			</Mobility>
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Civilian Male 06" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_civilian" editorTags="civilians">
+		<RenderObject3D model="data/models/humans/civilian_male_fat.khm" diffuseTex="data/models/humans/civilian_male_standard_01.dds"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Civilian">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="Civilian" defaultBehavior="Civilian" combatBehavior="Civilian Combat" suppressionRecovery="80.0"/>
+			<Id name="@entity_human_civilian" portrait="data/textures/portraits/civilian_male.dds" gender="0" voicePack="civilian_male"/>
+			<Traits roamAround="true" doesntUseMountedWeapons="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="2" defaultMetersPerSec="3" max="5"/>
+			</Mobility>
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Civilian Male 07" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_civilian" editorTags="civilians">
+		<RenderObject3D model="data/models/humans/civilian_male_standard.khm" diffuseTex="data/models/humans/civilian_male_standard_02.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/dress_02.khm" diffuseTex="data/models/humans/attachments/dress_02.dds" windAnimated="1"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Civilian">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="Civilian" defaultBehavior="Civilian" combatBehavior="Civilian Combat" suppressionRecovery="80.0"/>
+			<Id name="@entity_human_civilian" portrait="data/textures/portraits/civilian_male.dds" gender="0" voicePack="civilian_male"/>
+			<Traits roamAround="true" doesntUseMountedWeapons="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="2" defaultMetersPerSec="3" max="5"/>
+			</Mobility>
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Civilian Male 08" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_civilian" editorTags="civilians">
+		<RenderObject3D model="data/models/humans/civilian_male_skinny.khm" diffuseTex="data/models/humans/civilian_male_standard_03.dds"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Civilian">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="Civilian" defaultBehavior="Civilian" combatBehavior="Civilian Combat" suppressionRecovery="80.0"/>
+			<Id name="@entity_human_civilian" portrait="data/textures/portraits/civilian_male.dds" gender="0" voicePack="civilian_male"/>
+			<Traits roamAround="true" doesntUseMountedWeapons="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="2" defaultMetersPerSec="3" max="5"/>
+			</Mobility>
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Civilian Male 09" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_civilian" editorTags="civilians">
+		<RenderObject3D model="data/models/humans/civilian_male_fat.khm" diffuseTex="data/models/humans/civilian_male_standard_04.dds"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Civilian">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="Civilian" defaultBehavior="Civilian" combatBehavior="Civilian Combat" suppressionRecovery="80.0"/>
+			<Id name="@entity_human_civilian" portrait="data/textures/portraits/civilian_male.dds" gender="0" voicePack="civilian_male"/>
+			<Traits roamAround="true" doesntUseMountedWeapons="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="2" defaultMetersPerSec="3" max="5"/>
+			</Mobility>
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Civilian Male 10" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_civilian" editorTags="civilians">
+		<RenderObject3D model="data/models/humans/civilian_male_burly.khm" diffuseTex="data/models/humans/civilian_male_standard_05.dds"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Civilian">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="Civilian" defaultBehavior="Civilian" combatBehavior="Civilian Combat" suppressionRecovery="80.0"/>
+			<Id name="@entity_human_civilian" portrait="data/textures/portraits/civilian_male.dds" gender="0" voicePack="civilian_male"/>
+			<Traits roamAround="true" doesntUseMountedWeapons="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="2" defaultMetersPerSec="3" max="5"/>
+			</Mobility>
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+	
+	<Entity name="Civilian Male 11" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_civilian" editorTags="civilians">
+		<RenderObject3D model="data/models/humans/civilian_male_war_correspondent.khm" diffuseTex="data/models/humans/civilian_male_war_correspondent.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/civilian_war_correspondent_vest.khm" diffuseTex="data/models/humans/attachments/civilian_war_correspondent_vest.dds"/>	
+		<RenderObject3D model="data/models/humans/attachments/male_shorthair.khm" diffuseTex="data/models/humans/attachments/male_shorthair.dds"/>			
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Civilian">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="Civilian" defaultBehavior="Civilian" combatBehavior="Civilian Combat" suppressionRecovery="80.0"/>
+			<Id name="@entity_human_civilian" portrait="data/textures/portraits/civilian_male.dds" gender="0" voicePack="civilian_male"/>
+			<Traits roamAround="true" doesntUseMountedWeapons="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="2" defaultMetersPerSec="3" max="5"/>
+			</Mobility>
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>	
+
+	<!-- standard female body -->
+	<Entity name="Civilian Female 01" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_civilian" editorTags="civilians">
+		<RenderObject3D model="data/models/humans/civilian_female_standard.khm" diffuseTex="data/models/humans/civilian_female_standard_01.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/dress_01.khm" diffuseTex="data/models/humans/attachments/dress_01.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/hijab_01.khm" diffuseTex="data/models/humans/attachments/hijab_01.dds"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Civilian">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="Civilian" defaultBehavior="Civilian" combatBehavior="Civilian Combat" suppressionRecovery="80.0"/>
+			<Id name="@entity_human_civilian" portrait="data/textures/portraits/civilian_female.dds" gender="1" voicePack="civilian_female"/>
+			<Traits roamAround="true" doesntUseMountedWeapons="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="2" defaultMetersPerSec="3" max="5"/>
+			</Mobility>
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Civilian Female 02" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_civilian" editorTags="civilians">
+		<RenderObject3D model="data/models/humans/civilian_female_standard.khm" diffuseTex="data/models/humans/civilian_female_standard_01.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/hijab_01.khm" diffuseTex="data/models/humans/attachments/hijab_01.dds"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Civilian">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="Civilian" defaultBehavior="Civilian" combatBehavior="Civilian Combat" suppressionRecovery="80.0"/>
+			<Id name="@entity_human_civilian" portrait="data/textures/portraits/civilian_female.dds" gender="1" voicePack="civilian_female"/>
+			<Traits roamAround="true" doesntUseMountedWeapons="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="2" defaultMetersPerSec="3" max="5"/>
+			</Mobility>
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Civilian Female 03" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_civilian" editorTags="civilians">
+		<RenderObject3D model="data/models/humans/civilian_female_fat.khm" diffuseTex="data/models/humans/civilian_female_standard_01.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/hijab_01.khm" diffuseTex="data/models/humans/attachments/hijab_01.dds"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="100" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Civilian">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="Civilian" defaultBehavior="Civilian" combatBehavior="Civilian Combat" suppressionRecovery="80.0"/>
+			<Id name="@entity_human_civilian" portrait="data/textures/portraits/civilian_female.dds" gender="1" voicePack="civilian_female"/>
+			<Traits roamAround="true" doesntUseMountedWeapons="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="2" defaultMetersPerSec="3" max="5"/>
+			</Mobility>
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Civilian VisFemale 01" type="Human" fogOfWarVisibility="full" editorAutoHeight="false" tooltip="@tooltip_civilian_visible_1" editorTags="civilians">
+		<RenderObject3D model="data/models/humans/civilian_female_fat.khm" diffuseTex="data/models/humans/civilian_female_standard_01.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/dress_01.khm" diffuseTex="data/models/humans/attachments/dress_01.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/hijab_01.khm" diffuseTex="data/models/humans/attachments/hijab_01.dds"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="70" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Civilian">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="Hostage" defaultBehavior="Hostage" combatBehavior="Civilian Combat" suppressionRecovery="80.0"/>
+			<Id name="@entity_human_civilian_vis_1" portrait="data/textures/portraits/civilian_female.dds" gender="1" voicePack="civilian_female"/>
+			<Traits doesntUseMountedWeapons="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="2" defaultMetersPerSec="3" max="5"/>
+			</Mobility>
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Hostage CivClothes 1" type="Human" fogOfWarVisibility="hiddenInitially" editorAutoHeight="false" tooltip="@tooltip_hostage_civ" editorTags="hostages">
+		<RenderObject3D model="data/models/humans/civilian_male_burly.khm" diffuseTex="data/models/humans/civilian_male_standard_05.dds"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="50" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Hostage">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.65"/>
+			<Brain startingBehavior="Hostage" defaultBehavior="Hostage" combatBehavior="Hostage" suppressionRecovery="3.0"/>
+			<Id name="@entity_human_hostage" portrait="data/textures/portraits/hostage_head.dds" gender="0" voicePack="hostage_male"/>
+
+			<Mobility>
+				<MoveSpeed min="0.9" defaultMetersPerSec="2.23" max="2.93"/>
+				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="HostageHandTies" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Hostage CivClothes 2" type="Human" fogOfWarVisibility="hiddenInitially" editorAutoHeight="false" tooltip="@tooltip_hostage_civ" editorTags="hostages">
+		<RenderObject3D model="data/models/humans/civilian_male_standard.khm" diffuseTex="data/models/humans/civilian_male_standard_02.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/dress_02.khm" diffuseTex="data/models/humans/attachments/dress_02.dds" windAnimated="1"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="50" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Hostage">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.65"/>
+			<Brain startingBehavior="Hostage" defaultBehavior="Hostage" combatBehavior="Hostage" suppressionRecovery="3.0"/>
+			<Id name="@entity_human_hostage" portrait="data/textures/portraits/hostage_head.dds" gender="0" voicePack="hostage_male"/>
+
+			<Mobility>
+				<MoveSpeed min="0.9" defaultMetersPerSec="2.23" max="2.93"/>
+				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="HostageHandTies" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Hostage CivClothes 3" type="Human" fogOfWarVisibility="hiddenInitially" editorAutoHeight="false" tooltip="@tooltip_hostage_civ" editorTags="hostages">
+		<RenderObject3D model="data/models/humans/civilian_male_fat.khm" diffuseTex="data/models/humans/civilian_male_standard_04.dds"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="50" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Hostage">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.65"/>
+			<Brain startingBehavior="Hostage" defaultBehavior="Hostage" combatBehavior="Hostage" suppressionRecovery="3.0"/>
+			<Id name="@entity_human_hostage" portrait="data/textures/portraits/hostage_head.dds" gender="0" voicePack="hostage_male"/>
+
+			<Mobility>
+				<MoveSpeed min="0.9" defaultMetersPerSec="2.23" max="2.93"/>
+				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
+			</Mobility>
+			<Equipment>
+				<Item name="HostageHandTies" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="HostageFem CivClothes 1" type="Human" fogOfWarVisibility="hiddenInitially" editorAutoHeight="false" tooltip="@tooltip_hostage_civ" editorTags="hostages">
+		<RenderObject3D model="data/models/humans/civilian_female_fat.khm" diffuseTex="data/models/humans/civilian_female_standard_01.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/hijab_01.khm" diffuseTex="data/models/humans/attachments/hijab_01.dds"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="50" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Hostage">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.65"/>
+			<Brain startingBehavior="Hostage" defaultBehavior="Hostage" combatBehavior="Hostage" suppressionRecovery="3.0"/>
+			<Id name="@entity_human_hostage" portrait="data/textures/portraits/hostage_head.dds" gender="1" voicePack="civilian_female"/>
+
+			<Mobility>
+				<MoveSpeed min="0.9" defaultMetersPerSec="2.23" max="2.93"/>
+				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
+			</Mobility>
+			<Equipment>
+				<Item name="HostageHandTies" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="HostageFem CivClothes 2" type="Human" fogOfWarVisibility="hiddenInitially" editorAutoHeight="false" tooltip="@tooltip_hostage_civ" editorTags="hostages">
+		<RenderObject3D model="data/models/humans/civilian_female_standard.khm" diffuseTex="data/models/humans/civilian_female_standard_01.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/dress_01.khm" diffuseTex="data/models/humans/attachments/dress_01.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/hijab_01.khm" diffuseTex="data/models/humans/attachments/hijab_01.dds"/>
+		<AnimationSet name="civilian" />
+		<PhysicalParams health="50" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="Hostage">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.65"/>
+			<Brain startingBehavior="Hostage" defaultBehavior="Hostage" combatBehavior="Hostage"  suppressionRecovery="3.0"/>
+			<Id name="@entity_human_hostage" portrait="data/textures/portraits/hostage_head.dds" gender="1" voicePack="civilian_female"/>
+
+			<Mobility>
+				<MoveSpeed min="0.9" defaultMetersPerSec="2.23" max="2.93"/>
+				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
+			</Mobility>
+			<Equipment>
+				<Item name="HostageHandTies" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+
+
+</Entities>

@@ -1,0 +1,153 @@
+
+<Behaviors>
+	<!-- If you add new events here, make sure to update Concealed Guy below -->
+	<Behavior name="Normal Guy">
+		<Bind evt="IDLE_TICK" 				prio="0" activity="IDLE_RELAXED" />
+		<Bind evt="CMD_PATROL" 			prio="1" activity="IDLE_RELAXED" alwaysSwitch="true"/>
+		<Bind evt="HEAR_SUSPICIOUS" 		prio="2" activity="INVESTIGATE" />
+		<Bind evt="HEAR_COMBAT" 			prio="3" becomeAlerted="1" activity="INVESTIGATE" />
+		<Bind evt="SEE_FRIENDLY_COMBAT"	prio="4" becomeAlerted="1" activity="INVESTIGATE" />
+		<!-- NOTE: CRB this was a hack to make maps more active when trying to extract the VIP -->
+		<!-- Disabled because it doesn't make sense with stealth troops -->
+		<!-- We can use triggers to accomplish the same thing on specific maps -->
+		<!-- <Bind evt="TROOPERS_REACHED_TARGET" prio="4" becomeAlerted="1" activity="INVESTIGATE" /> -->
+		<Bind evt="HEAR_SNIPER_SHOT" 		prio="5" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SEE_DEAD_FRIENDLY" 	prio="5" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SEE_DOOR_OPEN" 			prio="5" activity="INVESTIGATE" />
+		<Bind evt="CMD_RUN_TO" 			prio="5" activity="IDLE_RELAXED" alwaysSwitch="true" />
+		<Bind evt="SELF_TOOK_DAMAGE" 		prio="6" becomeAlerted="1" activity="INVESTIGATE" />
+
+		<Bind evt="SEE_ENEMY" 				prio="10" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="CMD_SUPPRESS_FIRE" 	prio="11" activity="SWITCH_TO_COMBAT" alwaysSwitch="true" />
+		<Bind evt="IN_BLAST_RADIUS" 		prio="12" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="HEAR_ALARM" 			prio="13" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SET_ON_FIRE"			prio="14" becomeAlerted="1" activity="AVOID_FIRE" />
+	</Behavior>
+	
+	<Behavior name="Concealed Guy" >
+		<Bind evt="IDLE_TICK" 				prio="0" activity="IDLE_SNEAK" />
+		<Bind evt="CMD_PATROL" 			prio="1" activity="IDLE_SNEAK" alwaysSwitch="true" />
+		<!--  <Bind evt="HEAR_SUSPICIOUS" /> Concealed guys don't investigate suspicious events -->
+		<Bind evt="SEE_FRIENDLY_COMBAT"	prio="3" becomeAlerted="1" activity="SWITCH_TO_DEFAULT" />
+		<Bind evt="HEAR_COMBAT" 			prio="4" becomeAlerted="1" activity="SWITCH_TO_DEFAULT" />
+		<Bind evt="CMD_RUN_TO" 			prio="4" activity="IDLE_SNEAK" alwaysSwitch="true" />
+		<Bind evt="SELF_TOOK_DAMAGE"		prio="5" becomeAlerted="1" activity="SWITCH_TO_DEFAULT" />
+		<!-- <Bind evt="SEE_ENEMY" /> Ignore seen enemies, since we're trying to ambush them, in a sneaky fashion -->
+		<Bind evt="IN_BLAST_RADIUS"		prio="12" becomeAlerted="1" activity="AVOID_RADIUS" />
+		<!-- <Bind evt="HEAR_ALARM" 			prio="13" activity="SWITCH_TO_COMBAT" /> --> 
+		<Bind evt="SET_ON_FIRE"			prio="14" becomeAlerted="1" activity="AVOID_FIRE" />
+	</Behavior>
+	
+	<Behavior name="Normal Combat" inherit="Normal Guy">
+		<Bind evt="IDLE_TICK" 				prio="0" activity="IDLE_COMBAT" />
+		<Bind evt="CMD_PATROL" 			prio="1" activity="IDLE_COMBAT" alwaysSwitch="true" />
+		<Bind evt="SEE_DEAD_FRIENDLY" 	prio="4" activity="INVESTIGATE" />
+		<Bind evt="CMD_RUN_TO" 			prio="5" activity="IDLE_COMBAT" alwaysSwitch="true" />
+		<Bind evt="CMD_SUPPRESS_FIRE" 	prio="7" activity="ENGAGE_ENEMY" alwaysSwitch="true" /> <!-- keep priority low so more important reaction events cancel shooting -->
+		<Bind evt="SEE_DOOR_OPEN" 			prio="7" activity="INVESTIGATE" />
+		<Bind evt="HEAR_SNIPER_SHOT" 		prio="8" activity="AVOID_SNIPER" />
+		<Bind evt="SEE_ENEMY" 				prio="10" activity="ENGAGE_ENEMY" />
+		<Bind evt="IN_BLAST_RADIUS" 		prio="12" activity="AVOID_RADIUS" />
+	</Behavior>
+	
+	<Behavior name="Suicide Combat" inherit="Normal Guy">
+		<Bind evt="IDLE_TICK" 				prio="0" activity="IDLE_COMBAT" />
+		<Bind evt="CMD_PATROL" 			prio="1" activity="IDLE_COMBAT" alwaysSwitch="true" />
+		<Bind evt="SEE_DOOR_OPEN" 			prio="8" activity="INVESTIGATE" />
+		<Bind evt="IN_BLAST_RADIUS" 		prio="12" activity="AVOID_RADIUS" />
+		<Bind evt="SEE_ENEMY" 				prio="30" activity="ENGAGE_ENEMY" />
+	</Behavior>
+	
+	<Behavior name="Executioner"> <!-- combat behavior, name is important, causes the countdown timer to appear -->
+		<Bind evt="IDLE_TICK" 			prio="0" activity="IDLE_COMBAT" />
+		<Bind evt="CMD_PATROL" 			prio="1" activity="IDLE_COMBAT" alwaysSwitch="true" />
+		<Bind evt="HEAR_SNIPER_SHOT" 	prio="4" activity="INVESTIGATE" />
+		<Bind evt="SEE_FRIENDLY_COMBAT" prio="4" activity="INVESTIGATE" />
+		<Bind evt="HEAR_SUSPICIOUS" 	prio="5" activity="INVESTIGATE" /> <!-- react when friendly dies nearby -->
+		<Bind evt="SEE_DOOR_OPEN" 		prio="5" activity="INVESTIGATE" />
+		<Bind evt="SEE_FRIENDLY_EXECUTING"	prio="6" activity="EXECUTE_HOSTAGE" />
+		<Bind evt="SEE_ENEMY" 			prio="6" activity="EXECUTE_HOSTAGE" />
+		<Bind evt="HEAR_ALARM" 			prio="6" activity="EXECUTE_HOSTAGE" />
+		<Bind evt="SEE_DEAD_FRIENDLY" 	prio="6" activity="EXECUTE_HOSTAGE" />
+		<Bind evt="CMD_RUN_TO" 			prio="6" activity="IDLE_COMBAT" alwaysSwitch="true" />
+		<Bind evt="IN_BLAST_RADIUS" 	prio="12" activity="AVOID_RADIUS" />
+		<Bind evt="SET_ON_FIRE"			prio="14" activity="AVOID_FIRE" />
+	</Behavior>
+	
+	<!-- Enemy VIP -->
+	<Behavior name="HVT">
+		<Bind evt="IDLE_TICK" 			prio="0" activity="IDLE_RELAXED" />
+		<Bind evt="CMD_PATROL" 			prio="1" activity="IDLE_RELAXED" alwaysSwitch="true" />
+		<Bind evt="HEAR_SUSPICIOUS" 	prio="3" activity="INVESTIGATE"/>
+		<Bind evt="HEAR_COMBAT" 		prio="4" becomeAlerted="1" activity="INVESTIGATE" />
+		<Bind evt="SEE_DEAD_FRIENDLY" 	prio="5" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SEE_DOOR_OPEN" 		prio="6" activity="INVESTIGATE" />
+		<Bind evt="CMD_RUN_TO" 			prio="6" activity="IDLE_RELAXED" alwaysSwitch="true" />
+		<!-- <Bind evt="HEAR_SNIPER_SHOT" 	prio="6" becomeAlerted="1" activity="???" /> -->
+		<Bind evt="SEE_ENEMY" 			prio="10" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="CMD_EVACUATE" 		prio="11" becomeAlerted="1" activity="AICMD_EVACUATE" />
+		<Bind evt="IN_BLAST_RADIUS" 	prio="15" becomeAlerted="1" activity="AVOID_RADIUS" />
+		<Bind evt="SELF_TOOK_DAMAGE" 	prio="17" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="HEAR_THREAT" 		prio="18" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SET_ON_FIRE"			prio="20" becomeAlerted="1" activity="AVOID_FIRE" />
+	</Behavior>
+	
+	<Behavior name="HVT Combat" inherit="HVT">
+		<Bind evt="IDLE_TICK" 			prio="0" activity="FLEE_VIP" />
+		<Bind evt="SEE_DEAD_FRIENDLY" 	prio="5" activity="FLEE_VIP" />
+		<Bind evt="SEE_DOOR_OPEN" 		prio="6" activity="FLEE_VIP" />
+		<!-- <Bind evt="HEAR_SNIPER_SHOT" 	prio="6" becomeAlerted="1" activity="???" /> -->
+		<Bind evt="SEE_ENEMY" 			prio="10" activity="FLEE_VIP" />
+		<Bind evt="SELF_TOOK_DAMAGE" 	prio="17" activity="FLEE_VIP" />
+		<Bind evt="HEAR_THREAT" 		prio="18" activity="FLEE_VIP" />
+	</Behavior>
+	
+	<Behavior name="Civilian">
+		<Bind evt="IDLE_TICK" 				prio="0"  activity="IDLE_RELAXED" />
+		<Bind evt="CMD_PATROL" 			prio="1"  activity="IDLE_RELAXED" alwaysSwitch="true" />
+		<Bind evt="CMD_RUN_TO" 			prio="1"  activity="IDLE_RELAXED" alwaysSwitch="true" />
+		<Bind evt="CMD_EVACUATE" 			prio="3"  activity="SWITCH_TO_COMBAT" />
+		<Bind evt="HEAR_COMBAT" 			prio="4"  activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SEE_ENEMY" 				prio="4"  activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SEE_DEAD_BODY" 			prio="4"  activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SELF_TOOK_DAMAGE"		prio="4"  activity="SWITCH_TO_COMBAT" />
+		<Bind evt="HEAR_SNIPER_SHOT"		prio="4"  activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SEE_DEAD_FRIENDLY"		prio="5"  activity="SWITCH_TO_COMBAT" />
+		<Bind evt="IN_BLAST_RADIUS"		prio="12" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="TAKE_SCATTER_DAMAGE"	prio="13" activity="SWITCH_TO_COMBAT" />
+		<Bind evt="SET_ON_FIRE"			prio="14" activity="SWITCH_TO_COMBAT" />
+	</Behavior>
+	
+	<Behavior name="Civilian Combat">
+		<Bind evt="IDLE_TICK" 				prio="0" activity="FLEE" />
+		<Bind evt="HEAR_COMBAT" 			prio="4" activity="FLEE" />
+		<Bind evt="SEE_ENEMY" 				prio="5" activity="FLEE" />
+		<Bind evt="SEE_DEAD_BODY"			prio="5" activity="FLEE" />
+		<Bind evt="SELF_TOOK_DAMAGE"		prio="6" activity="FLEE" />
+		<Bind evt="HEAR_SNIPER_SHOT"		prio="6" activity="FLEE" />
+		<Bind evt="SEE_DEAD_FRIENDLY"		prio="7" activity="AICMD_EVACUATE" />
+		<Bind evt="CMD_EVACUATE" 			prio="7" activity="AICMD_EVACUATE" />
+		<Bind evt="IN_BLAST_RADIUS"		prio="12" activity="AVOID_RADIUS" />
+		<Bind evt="TAKE_SCATTER_DAMAGE"	prio="13" activity="AICMD_EVACUATE" />
+		<Bind evt="SET_ON_FIRE"			prio="14" activity="AVOID_FIRE" />
+	</Behavior>
+	
+	<Behavior name="Hostage">
+		<Bind evt="IDLE_TICK" 				prio="0" becomeAlerted="1" activity="IDLE_HOSTAGE" />
+	</Behavior>
+	
+	<Behavior name="Fake Hostage" inherit="Normal Combat">
+		<Bind evt="IDLE_TICK" 				prio="0" becomeAlerted="1" activity="IDLE_HOSTAGE" />
+	</Behavior>
+	
+	
+	<Behavior name="BeingControlled">
+		<Bind evt="IDLE_TICK" 				prio="0" activity="AICMD_HOLD" />
+		<Bind evt="CMD_STOP" 				prio="1" activity="AICMD_HOLD" />
+		<Bind evt="CMD_FOLLOW" 			prio="1" activity="AICMD_FOLLOW" alwaysSwitch="true" />
+		<Bind evt="CMD_EVACUATE" 			prio="1" activity="AICMD_EVACUATE" />
+		<Bind evt="BLOCKING_ALLY_LOS"		prio="3" activity="AICMD_DUCK" />
+		<Bind evt="IN_BLAST_RADIUS" 		prio="4" activity="AVOID_RADIUS" />
+		<Bind evt="SET_ON_FIRE"			prio="14" activity="AVOID_FIRE" />
+	</Behavior>
+</Behaviors>

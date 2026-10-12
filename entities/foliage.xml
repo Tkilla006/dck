@@ -1,0 +1,326 @@
+<!--
+		For help, please refer to "help_entities.txt" in this directory.
+-->
+<Entities>
+
+	<!-- GRASS -->
+
+	<Entity name="grass_01" type="BasicEntity" editorAutoHeight="false" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/grass_01.khm" blendMode="normal" skipSSAO="true" gossaoCastHeight="10.2" maxMipLevel="2" diffuseTex="data/models/environment/foliage/grass_01.dds" windAnimated="2" />
+	</Entity>
+
+	<Entity name="grass_02" type="BasicEntity" editorAutoHeight="false" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/grass_02.khm" blendMode="normal" skipSSAO="true" gossaoCastHeight="10.2" maxMipLevel="2" diffuseTex="data/models/environment/foliage/grass_01.dds" windAnimated="2" />
+	</Entity>
+
+	<Entity name="grass_01_02" type="BasicEntity" editorAutoHeight="false" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/grass_02.khm" blendMode="normal" skipSSAO="true" gossaoCastHeight="10.2" maxMipLevel="2" diffuseTex="data/models/environment/foliage/grass_01_02.dds" windAnimated="2" />
+	</Entity>
+
+	<Entity name="grass_02_02" type="BasicEntity" editorAutoHeight="false" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/grass_01.khm" blendMode="normal" skipSSAO="true" gossaoCastHeight="10.2" maxMipLevel="2" diffuseTex="data/models/environment/foliage/grass_01_02.dds" windAnimated="2" />
+	</Entity>
+
+	<Entity name="grass_tall_01" type="BasicEntity" editorAutoHeight="false" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/grass_tall_01.khm" blendMode="normal"  gossaoCastHeight="10" skipSSAO="true" maxMipLevel="2" diffuseTex="data/models/environment/foliage/grass_tall_01.dds" windAnimated="2" />
+	</Entity>
+
+
+
+	<!-- BUSHES -->
+
+	<Entity name="bush_01" type="BasicEntity" editorAutoHeight="false" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/bush_01.khm" blendMode="none" alphaTest="true" maxMipLevel="2" diffuseTex="data/models/environment/foliage/bush_01.dds" windAnimated="2" />
+	</Entity>
+
+	<Entity name="bush_02" type="BasicEntity" editorAutoHeight="false" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/bush_02.khm" blendMode="none" alphaTest="true" maxMipLevel="3" diffuseTex="data/models/environment/foliage/bush_02.dds" windAnimated="2" />
+	</Entity>
+
+	<Entity name="bush_03" type="BasicEntity" editorAutoHeight="false" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/bush_03.khm" blendMode="none" alphaTest="true" gossaoCastHeight="5" maxMipLevel="3" diffuseTex="data/models/environment/foliage/bush_03.dds" />
+	</Entity>
+
+	<Entity name="bush_04" type="BasicEntity" editorAutoHeight="false" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/bush_04.khm" blendMode="none" alphaTest="true" gossaoCastHeight="5" maxMipLevel="3" diffuseTex="data/models/environment/foliage/bush_04.dds" windAnimated="2" />
+	</Entity>
+
+	<Entity name="bush_05" type="BasicEntity" editorAutoHeight="false" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/bush_05.khm" blendMode="none" alphaTest="true" gossaoCastHeight="10" maxMipLevel="3" diffuseTex="data/models/environment/foliage/bush_04.dds" windAnimated="2" />
+	</Entity>
+
+	<Entity name="crops_bunch" type="BasicEntity" editorAutoHeight="false" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/crops_bunch.khm" blendMode="none" alphaTest="true" gossaoCastHeight="10" maxMipLevel="1" diffuseTex="data/models/environment/foliage/crops_bunch.dds" windAnimated="2"/>
+	</Entity>
+
+	<Entity name="plant_01" type="BasicEntity" editorAutoHeight="false" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/plant_01.khm" blendMode="none" alphaTest="true" maxMipLevel="2" diffuseTex="data/models/environment/foliage/plant_01.dds" windAnimated="2"/>
+	</Entity>
+
+	<Entity name="shrub_01" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/shrub_01.khm" diffuseTex="data/models/environment/foliage/shrub_01.dds" blendMode="none" alphaTest="true" gossaoCastHeight="5" maxMipLevel="2" windAnimated="2" />
+	</Entity>
+
+	<Entity name="shrub_01_02" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/shrub_01.khm" diffuseTex="data/models/environment/foliage/shrub_01_02.dds" blendMode="none" alphaTest="true" gossaoCastHeight="5" maxMipLevel="2" windAnimated="2" />
+	</Entity>
+
+	<Entity name="shrub_02" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/shrub_02.khm" diffuseTex="data/models/environment/foliage/shrub_02.dds" blendMode="none" alphaTest="true" gossaoCastHeight="5" maxMipLevel="2" windAnimated="2" />
+	</Entity>
+
+	<Entity name="shrub_02_02" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/shrub_02.khm" diffuseTex="data/models/environment/foliage/shrub_02_02.dds" blendMode="none" alphaTest="true" gossaoCastHeight="5" maxMipLevel="2" windAnimated="2" />
+	</Entity>
+
+	<Entity name="shrub_03" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/shrub_03.khm" diffuseTex="data/models/environment/foliage/shrub_03.dds" blendMode="none" alphaTest="true" gossaoCastHeight="5" maxMipLevel="2" windAnimated="2" />
+	</Entity>
+
+	<Entity name="shrub_03_02" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/shrub_03.khm" diffuseTex="data/models/environment/foliage/shrub_03_02.dds" blendMode="none" alphaTest="true" gossaoCastHeight="5" maxMipLevel="2" windAnimated="2" />
+	</Entity>
+
+	<Entity name="shrub_04" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/shrub_04.khm" diffuseTex="data/models/environment/foliage/shrub_04.dds" blendMode="none" alphaTest="true" gossaoCastHeight="5" maxMipLevel="2" windAnimated="2" />
+	</Entity>
+
+	<Entity name="shrub_04_02" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/shrub_04.khm" diffuseTex="data/models/environment/foliage/shrub_04_02.dds" blendMode="none" alphaTest="true" gossaoCastHeight="5" maxMipLevel="2" windAnimated="2" />
+	</Entity>
+	
+	<Entity name="shrub_fig" type="BasicEntity" hideInEditor="true" editorTags="foliage">
+		<PhysicalParams solid="false" blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/foliage/shrub_fig.khm" diffuseTex="data/models/environment/foliage/shrub_fig.dds" blendMode="none" alphaTest="true" gossaoCastHeight="5" maxMipLevel="2" />
+	</Entity>
+	
+	<Entity name="shrub_fig_foliage" type="BasicEntity" hideInEditor="true" editorTags="foliage">
+		<PhysicalParams solid="false" blocksMovement="true" blocksVision="false"/>
+		<RenderObject3D model="data/models/environment/foliage/shrub_fig_foliage.khm" diffuseTex="data/models/environment/foliage/shrub_fig.dds" blendMode="none" alphaTest="true" gossaoCastHeight="5" maxMipLevel="2"  windAnimated="1" />
+	</Entity>
+
+	<Entity name="plant_interior_01" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<Breakable breakOnDamage="grenade" />
+		<RenderObject3D model="data/models/environment/interior/plant_interior_01.khm" diffuseTex="data/models/environment/interior/plant_pot.dds" skipGOSSAO="true" windAnimated="2" />
+	</Entity>
+
+	<Entity name="plant_interior_02" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<Breakable breakOnDamage="grenade" />
+		<RenderObject3D model="data/models/environment/interior/plant_interior_02.khm" diffuseTex="data/models/environment/interior/plant_interior_02.dds" alphaTest="true" skipGOSSAO="true" maxMipLevel="2" windAnimated="2" />
+	</Entity>
+
+	<Entity name="plant_interior_03" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<Breakable breakOnDamage="grenade" />
+		<RenderObject3D model="data/models/environment/interior/plant_interior_03.khm" diffuseTex="data/models/environment/interior/plant_interior_03.dds" alphaTest="true" skipGOSSAO="true" maxMipLevel="2" windAnimated="2" />
+	</Entity>
+
+	<Entity name="plant_interior_04" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<Breakable breakOnDamage="grenade" />
+		<RenderObject3D model="data/models/environment/interior/plant_interior_07.khm" diffuseTex="data/models/environment/interior/plant_interior_03.dds" alphaTest="true" skipGOSSAO="true" maxMipLevel="2" windAnimated="2" />
+	</Entity>
+
+	<Entity name="plant_interior_05" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<Breakable breakOnDamage="grenade" />
+		<RenderObject3D model="data/models/environment/interior/plant_interior_04.khm" diffuseTex="data/models/environment/interior/plant_interior_04.dds"  skipGOSSAO="true" windAnimated="2" />
+	</Entity>
+
+	<Entity name="plant_interior_06" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<Breakable breakOnDamage="grenade" />
+		<RenderObject3D model="data/models/environment/interior/plant_interior_06.khm" diffuseTex="data/models/environment/interior/plant_interior_04.dds"  skipGOSSAO="true" windAnimated="2" />
+	</Entity>
+	
+	<Entity name="plant_interior_07" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<Breakable breakOnDamage="grenade" />
+		<RenderObject3D model="data/models/environment/interior/plant_interior_05.khm" diffuseTex="data/models/environment/interior/plant_interior_05.dds" alphaTest="true" skipGOSSAO="true" maxMipLevel="2" windAnimated="2" />
+	</Entity>
+
+	<Entity name="plant_interior_08" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<Breakable breakOnDamage="grenade" />
+		<RenderObject3D model="data/models/environment/foliage/plant_interior_08.khm" diffuseTex="data/models/environment/foliage/plant_interior_08.dds" alphaTest="true" skipGOSSAO="true" maxMipLevel="2" windAnimated="2" />
+	</Entity>
+
+	<Entity name="flower_01" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<Breakable breakOnDamage="grenade" />
+		<RenderObject3D model="data/models/environment/foliage/flower_01.khm" diffuseTex="data/models/environment/foliage/flower_01.dds"  skipGOSSAO="true" windAnimated="2" />
+	</Entity>
+
+	<Entity name="flower_02" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<Breakable breakOnDamage="grenade" />
+		<RenderObject3D model="data/models/environment/foliage/flower_02.khm" diffuseTex="data/models/environment/foliage/flower_01.dds"  skipGOSSAO="true" windAnimated="2" />
+	</Entity>
+	
+	<Entity name="fence_green" type="BasicEntity" editorTags="foliage" editorAutoHeight="false">
+		<PhysicalParams solid="false" blocksMovement="true" blocksVision="true"/>
+		<Breakable breakOnDamage="explosive" breakMode="strict_no_rand">
+			<Piece entityName="fence_green_remnant"/>	
+		</Breakable>
+		<RenderObject3D model="data/models/environment/foliage/fence_green.khm" diffuseTex="data/models/environment/foliage/fence_green.dds" alphaTest="true" skipGOSSAO="true" maxMipLevel="2" windAnimated="1" />
+	</Entity>
+
+	<Entity name="fence_green_wall_overlay" type="BasicEntity" editorTags="foliage" editorAutoHeight="false">
+		<PhysicalParams solid="false" blocksMovement="false" blocksVision="false"/>
+		<Breakable breakOnDamage="explosive" breakMode="strict_no_rand">
+			<Piece entityName="fence_green_remnant"/>	
+		</Breakable>
+		<RenderObject3D model="data/models/environment/foliage/fence_green.khm" diffuseTex="data/models/environment/foliage/fence_green.dds" alphaTest="true" skipGOSSAO="true" maxMipLevel="2" windAnimated="1"/>
+	</Entity>
+	
+	<Entity name="fence_green_half" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams solid="false" blocksMovement="true" blocksVision="false"/>
+		<Breakable breakOnDamage="explosive" breakMode="strict_no_rand">
+			<Piece entityName="fence_green_half_remnant"/>	
+		</Breakable>
+		<RenderObject3D model="data/models/environment/foliage/fence_green_half.khm" diffuseTex="data/models/environment/foliage/fence_green.dds" alphaTest="true" skipGOSSAO="true" maxMipLevel="2" windAnimated="1" />
+	</Entity>
+
+	<Bind eqp="ExplosiveCharge" to="christmas_tree"/>
+	<Bind eqp="TECTorch" to="christmas_tree"/>
+	<Bind eqp="BoltCutter" to="christmas_tree"/>
+	<Entity name="christmas_tree" type="BasicEntity" editorAutoHeight="false" editorTags="foliage">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<RenderObject3D model="data/models/environment/foliage/christmas_tree.khm" blendMode="none" alphaTest="true" maxMipLevel="2" diffuseTex="data/models/environment/foliage/christmas_tree.dds" gossaoCastHeight="6.5" />
+		<Breakable breakOnDamage="grenade" breakMode="strict" sfx="christmas_tree">
+			<Piece entityName="PS_ChristmasBreak"/>
+			<Piece entityName="FX_Snow"/>
+			<Piece entityName="FX_Snow"/>
+			<Piece entityName="jingle_bells"/>
+			<Piece entityName="christmas_present_01"/>
+			<Piece entityName="christmas_present_02"/>
+			<Piece entityName="christmas_present_03"/>
+			<Piece entityName="christmas_present_01"/>
+			<Piece entityName="christmas_present_02"/>
+			<Piece entityName="christmas_present_03"/>
+			<Piece entityName="christmas_present_01"/>
+			<Piece entityName="christmas_present_02"/>
+			<Piece entityName="christmas_present_03"/>
+			<Piece entityName="christmas_present_01"/>
+			<Piece entityName="christmas_present_02"/>
+			<Piece entityName="christmas_present_03"/>
+			<Piece entityName="christmas_present_01"/>
+			<Piece entityName="christmas_present_02"/>
+			<Piece entityName="christmas_present_03"/>
+			<Piece entityName="christmas_present_01"/>
+			<Piece entityName="christmas_present_02"/>
+			<Piece entityName="christmas_present_03"/>
+			<Piece entityName="christmas_present_01"/>
+			<Piece entityName="christmas_present_02"/>
+			<Piece entityName="christmas_present_03"/>
+			<Piece entityName="christmas_present_01"/>
+			<Piece entityName="christmas_present_02"/>
+			<Piece entityName="christmas_present_03"/>
+		</Breakable>
+	</Entity>
+	
+	<Entity name="tree oak foliage" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/tree_oak_foliage.khm" diffuseTex="data/models/environment/foliage/tree_oak_foliage.dds" blendMode="none" alphaTest="true" gossaoCastHeight="55" windAnimated="1" />
+	</Entity>
+	
+	<Entity name="wall_vegetation_01" type="BasicEntity" editorAutoHeight="false" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/wall_vegetation_01.khm" diffuseTex="data/models/environment/foliage/wall_vegetation_01.dds" blendMode="none" alphaTest="true" maxMipLevel="2" windAnimated="1" />
+	</Entity>
+
+	<!-- SOLID -->
+
+	<Entity name="tree_trunk_01" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/foliage/tree_trunk_01.khm" diffuseTex="data/models/environment/foliage/tree_trunk.dds"/>
+	</Entity>
+
+	<Entity name="tree_trunk_02" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/foliage/tree_trunk_02.khm" diffuseTex="data/models/environment/foliage/tree_trunk.dds"/>
+	</Entity>
+
+	<Entity name="rock_big_01" type="BasicEntity" editorTags="foliage" >
+		<PhysicalParams blocksMovement="true" usableCover="true" blocksVision="false"/>
+		<RenderObject3D model="data/models/environment/foliage/rock_big_01.khm" diffuseTex="data/models/environment/foliage/rock_big_01.dds" disableLighting="false" />
+	</Entity>
+
+	<Entity name="rock_big_02" type="BasicEntity" editorTags="foliage" >
+		<PhysicalParams blocksMovement="true" usableCover="true" blocksVision="false"/>
+		<RenderObject3D model="data/models/environment/foliage/rock_big_02.khm" diffuseTex="data/models/environment/foliage/rock_big_02.dds" disableLighting="false" />
+	</Entity>
+
+	<Entity name="rock_big_03" type="BasicEntity" editorTags="foliage" >
+		<PhysicalParams blocksMovement="true" usableCover="true" blocksVision="false"/>
+		<RenderObject3D model="data/models/environment/foliage/rock_big_03.khm" diffuseTex="data/models/environment/foliage/rock_big_03.dds" disableLighting="false" />
+	</Entity>
+	
+	<Entity name="rock_big_01_noprop" type="BasicEntity" editorTags="foliage" >
+		<PhysicalParams blocksMovement="false" usableCover="false" blocksVision="false"/>
+		<RenderObject3D model="data/models/environment/foliage/rock_big_01.khm" diffuseTex="data/models/environment/foliage/rock_big_01.dds" disableLighting="false" />
+	</Entity>
+
+	<Entity name="rock_big_02_noprop" type="BasicEntity" editorTags="foliage" >
+		<PhysicalParams blocksMovement="false" usableCover="false" blocksVision="false"/>
+		<RenderObject3D model="data/models/environment/foliage/rock_big_02.khm" diffuseTex="data/models/environment/foliage/rock_big_02.dds" disableLighting="false" />
+	</Entity>
+
+	<Entity name="rock_big_03_noprop" type="BasicEntity" editorTags="foliage" >
+		<PhysicalParams blocksMovement="false" usableCover="false" blocksVision="false"/>
+		<RenderObject3D model="data/models/environment/foliage/rock_big_03.khm" diffuseTex="data/models/environment/foliage/rock_big_03.dds" disableLighting="false" />
+	</Entity>
+	
+	<Entity name="rock_big_01_nonsolid" type="BasicEntity" editorTags="foliage" hideInEditor="true">
+		<PhysicalParams blocksMovement="false" usableCover="false" blocksVision="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/rock_big_01.khm" diffuseTex="data/models/environment/foliage/rock_big_01.dds" disableLighting="false" />
+	</Entity>
+
+	<Entity name="rock_big_02_nonsolid" type="BasicEntity" editorTags="foliage" hideInEditor="true">
+		<PhysicalParams blocksMovement="false" usableCover="false" blocksVision="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/rock_big_02.khm" diffuseTex="data/models/environment/foliage/rock_big_02.dds" disableLighting="false" />
+	</Entity>
+
+	<Entity name="rock_big_03_nonsolid" type="BasicEntity" editorTags="foliage" hideInEditor="true">
+		<PhysicalParams blocksMovement="false" usableCover="false" blocksVision="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/rock_big_03.khm" diffuseTex="data/models/environment/foliage/rock_big_03.dds" disableLighting="false" />
+	</Entity>
+	
+	<Entity name="tree_oak" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams blocksMovement="true" blocksVision="true" solid="true"/>
+		<RenderObject3D model="data/models/environment/foliage/tree_oak.khm" diffuseTex="data/models/environment/foliage/tree_oak.dds"/>
+	</Entity>
+	
+	<Entity name="palm tree foliage" type="BasicEntity" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/foliage/tree_palm_foliage.khm" diffuseTex="data/models/environment/foliage/tree_palm.dds" blendMode="none" alphaTest="true" gossaoCastHeight="55" windAnimated="1" />
+	</Entity>
+	
+	<Entity name="palm tree trunk" type="BasicEntity" editorAutoHeight="false" editorTags="foliage">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<RenderObject3D model="data/models/environment/foliage/tree_palm.khm" blendMode="none" alphaTest="true" maxMipLevel="2" diffuseTex="data/models/environment/foliage/tree_palm.dds" gossaoCastHeight="6.5" />
+	</Entity>	
+	
+</Entities>

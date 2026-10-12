@@ -1,0 +1,235 @@
+<!--
+		For help, please refer to "help_entities.txt" in this directory.
+-->
+<Entities>
+	<Entity name="Bluebandz Assaulter" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,bluebandz">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/warlord_irregular.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/male_shorthair.khm" diffuseTex="data/models/humans/attachments/male_shorthair.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="18.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true" />
+			<Id name="@entity_human_bluebandassault" portrait="data/textures/portraits/enemy_warlord_irregular_01.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="MP5 ME Edition"/>
+			</Equipment>
+		</Human>
+	</Entity>
+	
+	
+	<Entity name="PKMer" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse2.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_mg1.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_mg2.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse2.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
+			<Traits chanceToInvestigate="0.0" chanceToAmbush="1.0" stopsToShoot="true" usesSuppressionFire="true"/>
+			<Id name="@entity_human_machinegunner" portrait="data/textures/portraits/enemy_machinegun.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="PKM_MG"/>
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+
+		</Human>
+	</Entity>	
+
+	<Entity name="Warlord Militia NVG LongRange" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/warlord_irregular.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/male_shorthair.khm" diffuseTex="data/models/humans/attachments/male_shorthair.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>			
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="18.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true"/>
+			<Id name="@entity_human_warlordmilitia" portrait="data/textures/portraits/enemy_warlord_irregular_02.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="M16LR NVG WM"/>
+				<Item name="PVS17 WM"/>
+				<Item name="HelmetSkullCrusherNWS"/>
+				<Item name="NVGSkullCrusherWMHax"/>				
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Warlord Militia NVG Sergeant" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/warlord_irregular.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>		
+		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/cia_scarf_beret_01.dds"/>			
+		<RenderObject3D model="data/models/humans/attachments/civilian_war_correspondent_vest.khm" diffuseTex="data/models/humans/attachments/warlord_vest_02.dds"/>	
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true"/>
+			<Id name="@entity_human_warlordsergeant" portrait="data/textures/portraits/enemy_warlord_sargeant.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="M14 WM"/> 
+				<Item name="Frag Grenade Enemy"/>
+				<Item name="HelmetSkullCrusherNWS"/>
+				<Item name="NVGSkullCrusherNWS"/>
+			</Equipment>
+		</Human>
+	</Entity>
+	
+	<Entity name="Bodyguard Elite Bren" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security,armored">
+		<RenderObject3D model="data/models/humans/enemy_2.khm" diffuseTex="data/models/humans/enemy_base_diffuse4.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_heavy.khm" diffuseTex="data/models/humans/attachments/enemy_vest_heavy.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="30.0"/>
+			<Id name="@entity_human_securityqrf" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0.0" stopsToShoot="false" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Bren 2 Short FA Storm"/>
+				<Item name="M68CCO"/>
+				<Item name="Bodyguard HeavyArmor" />
+			</Equipment>
+		</Human>
+	</Entity>	
+		
+	<Entity name="Bodyguard Elite MP9" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security,armored">
+		<RenderObject3D model="data/models/humans/enemy_2.khm" diffuseTex="data/models/humans/enemy_shirt_jacket_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_suit.khm" diffuseTex="data/models/humans/attachments/enemy_suit_01.dds"/>			
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="30.0"/>
+			<Id name="@entity_human_privatesecurity" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0.0" stopsToShoot="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="MP9"/> 
+				<Item name="RedDot_MicroPrimary"/> 		
+				<Item name="Bodyguard SoftArmor"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Bodyguard Elite Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security,armored">
+		<RenderObject3D model="data/models/humans/enemy_2.khm" diffuseTex="data/models/humans/enemy_shirt_jacket_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_suit.khm" diffuseTex="data/models/humans/attachments/enemy_suit_01.dds"/>			
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="30.0"/>
+			<Id name="@entity_human_privatesecurity" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0.0" stopsToShoot="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Bodyguard SoftArmor"/>
+			</Equipment>
+		</Human>
+	</Entity>
+	
+	<!-- Potential Objective Zones -->
+	
+	<Entity name="potential_hostage_token" type="POIObject" editorAutoHeight="true" initialHeight="2.005" hideInEditor="true" hideInCinematicMode="true" deleteAfterDeploy="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/fx/token_diamond.khm" diffuseTex="data/textures/gui_ingame/token_hostage.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+		<RenderObject3D model="data/models/fx/collision_box_1x1x2m.khm"/>
+	</Entity>
+	
+	<Entity name="potential_abduction_token" type="POIObject" editorAutoHeight="true" initialHeight="2.005" hideInEditor="true" hideInCinematicMode="true" deleteAfterDeploy="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/fx/token_diamond.khm" diffuseTex="data/textures/gui_ingame/token_abduction.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+		<RenderObject3D model="data/models/fx/collision_box_1x1x2m.khm"/>
+	</Entity>
+	
+	<Entity name="potential_bomb_token" type="POIObject" editorAutoHeight="true" initialHeight="2.005" hideInEditor="true" hideInCinematicMode="true" deleteAfterDeploy="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/fx/token_diamond.khm" diffuseTex="data/textures/gui_ingame/token_bomb.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+		<RenderObject3D model="data/models/fx/collision_box_1x1x2m.khm"/>
+	</Entity>
+	<!--
+	<Entity name="reinforcements_enemy_token" type="POIObject" editorAutoHeight="true" initialHeight="2.005" hideInCinematicMode="true" deleteAfterDeploy="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/fx/token_diamond.khm" diffuseTex="data/textures/gui_ingame/token_reinforcements_enemy.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+		<RenderObject3D model="data/models/fx/collision_box_1x1x2m.khm"/>
+	</Entity>
+	
+	<Entity name="reinforcements_friendly_token" type="POIObject" editorAutoHeight="true" initialHeight="2.005" hideInCinematicMode="true" deleteAfterDeploy="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/fx/token_diamond.khm" diffuseTex="data/textures/gui_ingame/token_reinforcements_friendly.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+		<RenderObject3D model="data/models/fx/collision_box_1x1x2m.khm"/>
+	</Entity>
+	-->
+	<Entity name="custom_token_01" type="POIObject" editorAutoHeight="true" initialHeight="2.005" hideInEditor="true" hideInCinematicMode="true" deleteAfterDeploy="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/fx/token_diamond.khm" diffuseTex="data/textures/gui_ingame/token_exclamation.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+		<RenderObject3D model="data/models/fx/collision_box_1x1x2m.khm"/>
+	</Entity>
+	
+	<Entity name="custom_token_02" type="POIObject" editorAutoHeight="true" initialHeight="2.005" hideInEditor="true" hideInCinematicMode="true" deleteAfterDeploy="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/fx/token_diamond.khm" diffuseTex="data/textures/gui_ingame/token_question.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+		<RenderObject3D model="data/models/fx/collision_box_1x1x2m.khm"/>
+	</Entity>
+	
+	<Entity name="highlight_token" type="POIObject" editorAutoHeight="true" initialHeight="2.006" hideInEditor="true" hideInCinematicMode="true" deleteAfterDeploy="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/fx/token_diamond_outline.khm" diffuseTex="data/textures/gui_ingame/zone_objective.dds" skipSSAO="true" diffuseColor="f77900" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+		<RenderObject3D model="data/models/fx/collision_box_1x1x2m.khm"/>
+	</Entity>
+
+	<Entity name="potential_objective_zone" type="POIObject" editorAutoHeight="true" initialHeight="1.99" hideInCinematicMode="true" deleteAfterDeploy="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/question_mark.dds" blendMode="normal" color="ffa500" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<PolyShape uvSizeX="0.5f" uvSizeY="0.5f" />
+		<RenderObject3D diffuseTex="data/textures/gui_ingame/zone_objective.dds" skipCastShadows="true" skipGOSSAO="true" diffuseColor="ff6f0018" blendMode="normal" disableLighting="true" disableDecals="true" />
+	</Entity>
+
+</Entities>
+	

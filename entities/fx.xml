@@ -1,0 +1,502 @@
+<!--
+		For help, please refer to "help_entities.txt" in this directory.
+-->
+<Entities>
+	<!-- used by the particles panel -->
+	<Entity name="PS_ParticlePreview" type="EnvParticles" initialHeight="0.0" editorAutoHeight="false" hideInEditor="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles sizeX="1.0" sizeZ="1.0" />
+	</Entity>
+
+	<!-- particle systems -->
+	<Entity name="PS_MuzzleFlashRifle01" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="FX_MUZZLE_FLASH_PISTOL_01" sizeX="1.0" sizeZ="1.0" />
+	</Entity>
+	<Entity name="PS_BloodSplatter01" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="BloodSplatter01" sizeX="1.0" sizeZ="1.0" />
+	</Entity>
+	<Entity name="PS_SniperTracerTest" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="Tracer_Sniper" sizeX="3.0" sizeZ="3.0" />
+	</Entity>
+	<Entity name="PS_Slap_Charge" type="EnvParticles" editorAutoHeight="false" initialHeight="1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="Slap_Charge" sizeX="1.0" sizeZ="1.0" />
+	</Entity>
+	<Entity name="PS_WallHit_All" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="WallHit_All" sizeX="1.0" sizeZ="1.0" />
+	</Entity>
+	<Entity name="PS_Hit_Wall" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="Hit_Wall" sizeX="1.0" sizeZ="1.0" />
+	</Entity>
+	<Entity name="PS_Hit_Metal" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="Hit_Metal" sizeX="1.0" sizeZ="1.0" />
+	</Entity>
+	<Entity name="PS_Hit_Padding" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="Hit_Padding" sizeX="1.0" sizeZ="1.0" />
+	</Entity>
+	<Entity name="PS_Hit_Wood" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="Hit_Wood" sizeX="1.0" sizeZ="1.0" />
+	</Entity>
+	<Entity name="PS_Atmospheric_Dust" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="Atmospheric Dust" sizeX="3.0" sizeZ="3.0" />
+	</Entity>
+	<Entity name="PS_ExploTest" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="ExploTest" sizeX="3.0" sizeZ="3.0" />
+	</Entity>
+	<Entity name="PS_Stinger" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="Stinger" sizeX="3.0" sizeZ="3.0" />
+	</Entity>
+	<Entity name="PS_Tracer_Rifle" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="Tracer_Rifle" sizeX="3.0" sizeZ="3.0" />
+	</Entity>
+	<Entity name="PS_Tracer_Pistol" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="Tracer_Pistol" sizeX="3.0" sizeZ="3.0" />
+	</Entity>
+	<Entity name="PS_Tracer_LMG" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="Tracer_LMG" sizeX="3.0" sizeZ="3.0" />
+	</Entity>
+	<Entity name="PS_Tracer_Silenced" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="Tracer_Silenced" sizeX="3.0" sizeZ="3.0" />
+	</Entity>
+	<Entity name="PS_DustSpecs1" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="DustSpecs1" sizeX="3.0" sizeZ="3.0" />
+	</Entity>
+
+	<Entity name="PS_BreachingCharge" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="BreachingCharge" sizeX="0.6" sizeZ="0.2" sizeY="1.0" />
+	</Entity>
+
+	<Entity name="PS_RpgTrail" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="RpgTrail" sizeX="0.6" sizeZ="0.2" sizeY="1.0" />
+	</Entity>
+
+	<Entity name="PS_RpgTrail2" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="RpgTrail2" sizeX="0.6" sizeZ="0.2" sizeY="1.0" />
+	</Entity>
+
+	<Entity name="PS_RpgLaunch_01" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="RpgLaunch_01" sizeX="0.6" sizeZ="0.2" sizeY="1.0" />
+	</Entity>
+	<Entity name="PS_RpgLaunch_02" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="RpgLaunch_02" sizeX="0.6" sizeZ="0.2" sizeY="1.0" />
+	</Entity>
+
+
+	<Entity name="PS_RpgExplosion" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="RpgExplosion" sizeX="0.6" sizeZ="0.2" sizeY="1.0" />
+	</Entity>
+	<Entity name="PS_LargeBombExplosion" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx" scale="2.0">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="LargeBombExplosion" sizeX="2" sizeZ="0.4" sizeY="2" />
+	</Entity>
+
+	<Entity name="PS_PaperBreak" type="EnvParticles" editorAutoHeight="false" initialHeight="0" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="PaperBreak" sizeX="3.0" sizeZ="3.0" />
+	</Entity>
+	<Entity name="PS_FabricBreak" type="EnvParticles" editorAutoHeight="false" initialHeight="0" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="FabricBreak" sizeX="3.0" sizeZ="3.0" />
+	</Entity>
+	<Entity name="PS_CurtainBreak" type="EnvParticles" editorAutoHeight="false" initialHeight="0" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="CurtainBreak" sizeX="3.0" sizeZ="3.0" />
+	</Entity>
+	<Entity name="PS_SuicideExplosion" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="SuicideExplosion" sizeX="3.0" sizeZ="3.0" />
+	</Entity>
+	<Entity name="PS_FragGrenade" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="FragGrenade" sizeX="3.0" sizeZ="3.0" />
+	</Entity>
+	<Entity name="PS_Flashbang" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="Flashbang" sizeX="3.0" sizeZ="3.0" />
+	</Entity>
+	<Entity name="PS_Fire_01" type="EnvParticles" editorAutoHeight="true" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="Fire_01" sizeX="1" sizeZ="1" />
+	</Entity>
+
+	<Entity name="PS_LightRay_01" type="EnvParticles" editorAutoHeight="false" initialHeight="0.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="LightRay_01" sizeX="1.0" sizeZ="1.0" />
+	</Entity>
+	<Entity name="PS_ChristmasBreak" type="EnvParticles" editorAutoHeight="false" initialHeight="0" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="ChristmasBreak" sizeX="3.0" sizeZ="3.0" />
+	</Entity>
+	<Entity name="PS_TecTorch" type="EnvParticles" editorAutoHeight="false" initialHeight="0" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="TecTorch" sizeX="3.0" sizeZ="3.0" />
+	</Entity>
+	<Entity name="PS_SabotageSmall" type="EnvParticles" editorAutoHeight="true" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="SabotageSmall" sizeX="1" sizeZ="1" />
+	</Entity>
+	<Entity name="PS_HelicopterDust" type="EnvParticles" editorAutoHeight="false" editorTags="fx" initialHeight="0.2">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="Helicopter_Dust" sizeX="1" sizeZ="1" />
+	</Entity>
+
+
+	<!-- various -->
+
+	<!-- note: all explosion marks must be below 0.05, which is the height at which the human selection circle gets drawn, but also above most rugs and small things -->
+	<Entity name="explosion_mark" type="BasicEntity" editorAutoHeight="false" initialHeight="0.04" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/explosion_mark.dds" blendMode="overlay" sizeX="1" sizeY="1"/>
+	</Entity>
+
+	<Entity name="scorch_mark_breach" type="BasicEntity" editorAutoHeight="false" initialHeight="0.045" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/breach_mark.dds" blendMode="multiply" sizeX="2" sizeY="4"/>
+	</Entity>
+
+	<Entity name="scorch_mark_slapcharge" type="BasicEntity" editorAutoHeight="false" initialHeight="0.04" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/explosion_mark.dds" blendMode="overlay" sizeX="1" sizeY="1"/>
+	</Entity>
+
+	<Entity name="scorch_mark_large" type="BasicEntity" editorAutoHeight="false" initialHeight="0.09" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/explosion_mark.dds" blendMode="overlay" sizeX="3.5" sizeY="3.5"/>
+	</Entity>
+	<Entity name="scorch_mark_very_large" type="BasicEntity" editorAutoHeight="false" initialHeight="0.09" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/explosion_mark.dds" blendMode="overlay" sizeX="11.0" sizeY="11.0"/>
+	</Entity>
+	<Entity name="scorch_mark_molotov_central" type="BasicEntity" editorAutoHeight="false" initialHeight="0.04" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/molotov_central_scorchmark.dds" blendMode="multiply" sizeX="2.5" sizeY="2.5"/>
+	</Entity>
+	<Entity name="scorch_mark_molotov_secondary" type="BasicEntity" editorAutoHeight="false" initialHeight="0.04" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/molotov_secondary_scorchmark.dds" blendMode="multiply" sizeX="1" sizeY="1"/>
+	</Entity>
+
+	<!-- not black enough
+	<Entity name="FX_Smoke_black_small" type="BasicEntity" editorAutoHeight="false" initialHeight="0.1" editorTags="fx" disableDepthTest="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/smoke_small.tga" blendMode="multiply_inverse" sizeX="2.5" sizeY="2.5">
+			<TextureAnimation frameWidth="32" frameHeight="32" startFrame="0" endFrame="23" animationTimeMS="2304" numLoops="-1" randomizeStartTime="true"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_Smoke_black_large" type="BasicEntity" editorAutoHeight="false" initialHeight="0.1" editorTags="fx" disableDepthTest="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/smoke_small.tga" blendMode="multiply_inverse" sizeX="4.5" sizeY="4.5">
+			<TextureAnimation frameWidth="32" frameHeight="32" startFrame="0" endFrame="23" animationTimeMS="2304" numLoops="-1" randomizeStartTime="true"/>
+		</RenderObject2D>
+	</Entity>
+	-->
+
+	<Entity name="FX_Smoke_medium" type="BasicEntity" editorAutoHeight="false" initialHeight="1.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/smoke_small.tga" blendMode="add" sizeX="2.5" sizeY="2.5" disableDepthTest="true">
+			<TextureAnimation frameWidth="32" frameHeight="32" startFrame="0" endFrame="23" animationTimeMS="2304" numLoops="-1" randomizeStartTime="true"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_Smoke_large" type="BasicEntity" editorAutoHeight="false" initialHeight="1.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/smoke_small.tga" blendMode="add" sizeX="4.5" sizeY="4.5" disableDepthTest="true">
+			<TextureAnimation frameWidth="32" frameHeight="32" startFrame="0" endFrame="23" animationTimeMS="2304" numLoops="-1" randomizeStartTime="true"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_atmospheric_fog_8m" type="BasicEntity" editorAutoHeight="false" initialHeight="1.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/atmospheric_fog.dds" blendMode="add" sizeX="8" sizeY="8" disableDepthTest="true">
+			<TextureAnimation frameWidth="64" frameHeight="64" startFrame="0" endFrame="47" animationTimeMS="3072" numLoops="-1" randomizeStartTime="true"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_atmospheric_fog_4m" type="BasicEntity" editorAutoHeight="false" initialHeight="1.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/atmospheric_fog.dds" blendMode="add" sizeX="4" sizeY="4" disableDepthTest="true">
+			<TextureAnimation frameWidth="64" frameHeight="64" startFrame="0" endFrame="47" animationTimeMS="3072" numLoops="-1" randomizeStartTime="true"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_dust_small" type="BasicEntity" editorAutoHeight="false" initialHeight="1.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/atmospheric_fog.dds" blendMode="add" color="c8c8c8" sizeX="3" sizeY="3" disableDepthTest="true">
+			<TextureAnimation frameWidth="64" frameHeight="64" startFrame="0" endFrame="47" animationTimeMS="3072" numLoops="-1" randomizeStartTime="true"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_dust_large" type="BasicEntity" editorAutoHeight="false" initialHeight="1.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/atmospheric_fog.dds" blendMode="add" color="c8c8c8" sizeX="4.5" sizeY="4.5" disableDepthTest="true">
+			<TextureAnimation frameWidth="64" frameHeight="64" startFrame="0" endFrame="47" animationTimeMS="3072" numLoops="-1" randomizeStartTime="true"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_gas" type="BasicEntity" editorAutoHeight="false" initialHeight="1.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/gas.dds" blendMode="add" sizeX="1.5" sizeY="1.5" disableDepthTest="true">
+			<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="31" animationTimeMS="2048" numLoops="-1" randomizeStartTime="true"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_electricity" type="BasicEntity" editorAutoHeight="true" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/tazer_hit.tga" blendMode="add" sizeX="0.5" sizeY="0.5" disableDepthTest="true" billboardX="true">
+			<TextureAnimation frameWidth="32" frameHeight="32" startFrame="0" endFrame="7" animationTimeMS="200" numLoops="-1" randomizeStartTime="true"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_water_ripple" type="BasicEntity" editorAutoHeight="true" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/water_ripple.tga" blendMode="add" sizeX="1" sizeY="1">
+			<TextureAnimation frameWidth="64" frameHeight="64" startFrame="0" endFrame="31" animationTimeMS="2000" numLoops="-1" randomizeStartTime="true"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_police_light_red" type="BasicEntity" editorAutoHeight="false" initialHeight="2.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/police_light.tga" blendMode="add" color="ff0000" sizeX="6" sizeY="6">
+			<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="11" animationTimeMS="650" numLoops="-1" randomizeStartTime="false"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_police_light_blue" type="BasicEntity" editorAutoHeight="false" initialHeight="2.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/police_light.tga" blendMode="add" color="0e9cff" sizeX="6" sizeY="6">
+			<TextureAnimation frameWidth="128" frameHeight="128" startFrame="11" endFrame="0" animationTimeMS="650" numLoops="-1" randomizeStartTime="false"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_police_light_green" type="BasicEntity" editorAutoHeight="false" initialHeight="2.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/police_light.tga" blendMode="add" color="00ff08" sizeX="6" sizeY="6">
+			<TextureAnimation frameWidth="128" frameHeight="128" startFrame="11" endFrame="0" animationTimeMS="650" numLoops="-1" randomizeStartTime="false"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_police_light_yellow" type="BasicEntity" editorAutoHeight="false" initialHeight="2.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/police_light.tga" blendMode="add" color="ffeb78" sizeX="6" sizeY="6">
+			<TextureAnimation frameWidth="128" frameHeight="128" startFrame="11" endFrame="0" animationTimeMS="650" numLoops="-1" randomizeStartTime="false"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_fire_small" type="BasicEntity" editorAutoHeight="true" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/fire.tga" blendMode="add" sizeX="1.0" sizeY="1.0">
+			<TextureAnimation frameWidth="32" frameHeight="32" startFrame="0" endFrame="47" animationTimeMS="3000" numLoops="-1" randomizeStartTime="true"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_fire_large" type="BasicEntity" editorAutoHeight="true" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/fire.tga" blendMode="add" sizeX="2" sizeY="2">
+			<TextureAnimation frameWidth="32" frameHeight="32" startFrame="0" endFrame="47" animationTimeMS="3000" numLoops="-1" randomizeStartTime="true"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_cooker_fire" type="BasicEntity" editorAutoHeight="true" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/cooker_fire.tga" blendMode="normal" sizeX="0.3" sizeY="0.3">
+			<TextureAnimation frameWidth="32" frameHeight="32" startFrame="0" endFrame="11" animationTimeMS="1000" numLoops="-1" randomizeStartTime="true"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_TV_Light" type="BasicEntity" editorAutoHeight="false" initialHeight="2.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/tv_light.tga" blendMode="overlay" sizeX="2" sizeY="2">
+			<TextureAnimation frameWidth="64" frameHeight="64" startFrame="0" endFrame="11" animationTimeMS="1400" numLoops="-1" randomizeStartTime="true" randomizeFrameOrder="true"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_Rain" type="BasicEntity" editorAutoHeight="false" initialHeight="2.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/rain.dds" blendMode="add" sizeX="2" sizeY="1">
+			<TextureAnimation frameWidth="256" frameHeight="128" startFrame="0" endFrame="15" animationTimeMS="1100" numLoops="-1" randomizeStartTime="true"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_Rain_Droplets" type="BasicEntity" editorAutoHeight="false" initialHeight="0.03" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/droplets.dds" blendMode="add" sizeX="1.2" sizeY="1.2">
+			<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="31" animationTimeMS="1300" numLoops="-1" randomizeStartTime="true"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_Flies" type="BasicEntity" editorAutoHeight="false" initialHeight="2.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/flies.dds" blendMode="multiply_inverse" sizeX="1" sizeY="1" billboard="true">
+			<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="23" animationTimeMS="1100" numLoops="-1" randomizeStartTime="true"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_Snow" type="BasicEntity" editorAutoHeight="false" initialHeight="2.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/snow.dds" blendMode="add" sizeX="2" sizeY="2" billboard="true">
+			<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="63" animationTimeMS="2500" numLoops="-1" randomizeStartTime="true"/>
+		</RenderObject2D>
+	</Entity>
+
+	<Entity name="FX_Alert" type="BasicEntity" editorAutoHeight="false" initialHeight="0.1" editorTags="fx" hideInCinematicMode="true">
+		<RenderObject2D texture="data/textures/fx/alert_spot.dds" blendMode="add" color="ff0707fe" sizeX="4" sizeY="4">
+			<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="9" animationTimeMS="500" numLoops="0"/>
+		</RenderObject2D>
+	</Entity>
+
+	<!-- do not modify, used by the game 
+		NOTE: hideInCinematicMode does not currently work for particles 
+	-->
+	<Entity name="FX_reveal_objective" type="EnvParticles" editorAutoHeight="false" initialHeight="0.1" hideInEditor="false" editorTags="fx" useRealtimeDt="true" hideInCinematicMode="true">
+		<PhysicalParams solid="false"/>
+		<EnvParticles particles="Alert" sizeX="2.0" sizeZ="2.0" />
+	</Entity>
+
+
+	<!-- do not modify, used by the game
+		NOTE: hideInCinematicMode does not currently work for particles 
+	-->	
+	<Entity name="FX_reveal_possible_enemy" type="EnvParticles" editorAutoHeight="false" initialHeight="0.1" hideInEditor="false" editorTags="fx" useRealtimeDt="true" hideInCinematicMode="true">
+		<PhysicalParams solid="false"/>
+		<EnvParticles particles="Intel" sizeX="1.0" sizeZ="1.0" />
+	</Entity>
+
+	<!-- fake lights -->
+	<Entity name="ActiveWindowLight1" type="BasicEntity" editorAutoHeight="false" initialHeight="0.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/lights/active_window_light1.dds" blendMode="overlay" sizeX="2.56" sizeY="2.56" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="ActiveWindowLight2" type="BasicEntity" editorAutoHeight="false" initialHeight="0.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/lights/active_window_light2.dds" blendMode="overlay" sizeX="1.28" sizeY="1.28" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="WindowLight1" type="BasicEntity" editorAutoHeight="false" initialHeight="0.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/lights/window_light.dds" blendMode="overlay" sizeX="2.56" sizeY="2.56" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="WindowLight1b" type="BasicEntity" editorAutoHeight="false" initialHeight="0.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/lights/window_light1b.dds" blendMode="overlay" sizeX="1.28" sizeY="2.56" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="WindowLight1c" type="BasicEntity" editorAutoHeight="false" initialHeight="0.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/lights/window_light1c.dds" blendMode="overlay" sizeX="5.12" sizeY="5.12" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="WindowLight2" type="BasicEntity" editorAutoHeight="false" initialHeight="0.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/lights/window_light2.dds" blendMode="overlay" sizeX="2.56" sizeY="2.56" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="WindowLight3c" type="BasicEntity" editorAutoHeight="false" initialHeight="0.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/lights/window_light3c.dds" blendMode="overlay" sizeX="1.28" sizeY="2.56" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="WindowLight4" type="BasicEntity" editorAutoHeight="false" initialHeight="0.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/lights/window_light4.dds" blendMode="overlay" sizeX="1.28" sizeY="2.56" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="WindowLight5" type="BasicEntity" editorAutoHeight="false" initialHeight="0.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/lights/window_light5.dds" blendMode="overlay" sizeX="1.28" sizeY="1.28" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="WindowLight6" type="BasicEntity" editorAutoHeight="false" initialHeight="0.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/lights/window_light6.dds" blendMode="overlay" sizeX="2.56" sizeY="2.56" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="SpotLight" type="BasicEntity" editorAutoHeight="false" initialHeight="2.1" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/fx/lights/spotlight.tga" color="b8997f60" blendMode="add" sizeX="2.56" sizeY="10.24" billboardX="true" disableDepthTest="false"/>
+	</Entity>
+
+	<!-- 3d fakes -->
+	<Entity name="LightVolume" type="BasicEntity" editorAutoHeight="false" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/fx/window_single_volume.khm" diffuseTex="data/textures/fx/light_volume.dds" disableLighting="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal"/>
+	</Entity>
+
+	<!-- these don't work right -->
+	<Entity name="PS_ExplosionSpamTest" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx" hideInEditor="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="Test Explo Loop" sizeX="3.0" sizeZ="3.0" />
+	</Entity>
+	<Entity name="PS_Tracer1SpamTest" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx" hideInEditor="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="Test Tracer1 Loop" sizeX="3.0" sizeZ="3.0" />
+	</Entity>
+	<Entity name="PS_DustDevil1" type="EnvParticles" editorAutoHeight="false" initialHeight="1.5" editorTags="fx" hideInEditor="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/vfx_icon.dds" blendMode="normal" sizeX="0.5" sizeY="0.33" hideInGame="true" disableDepthTest="true"/>
+		<EnvParticles particles="DustDevil1" sizeX="3.0" sizeZ="3.0" />
+	</Entity>
+</Entities>

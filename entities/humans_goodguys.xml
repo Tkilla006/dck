@@ -1,0 +1,1309 @@
+<!--
+		For help, please refer to "help_entities.txt" in this directory.
+-->
+<Entities>
+
+<!--	<Entity name="Nowheraki Assaulter" type="Human" editorAutoHeight="false">
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/swat_assaulter.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_cap.khm" diffuseTex="data/models/humans/attachments/swat_cap.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/swat_assaulter_vest.dds" />
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			unit="Nowheraki"
+			class="NowherakiAssaulter">
+
+			<Id name="Nowheraki Assaulter" portrait="data/textures/portraits/ranger55.dds" gender="0" voicePack="nws_male"/>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="30.0"/>
+		<Mobility>
+				<MoveSpeed min="1" defaultMetersPerSec="2" max="9"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Concealment default="0" canHide="false"/>
+
+			<Equipment>
+				<Item name="Type 56 NWS"/>
+				<Item name="IronSights"/>
+				<Item name="G17 Pistol CIA BOps"/>
+				<Item name="IronSights_Pistol"/>
+				<Item name="Flashbang Single"/>
+
+				<Item name="CapUndercover"/>
+				<Item name="Lockpick"/>
+			</Equipment>
+		</Human>
+	</Entity> -->
+
+	<Entity name="CIA Undercover" type="Human" editorAutoHeight="false" editorTags="unit cia">
+		<RenderObject3D model="data/models/humans/cia_undercover.khm" diffuseTex="data/models/humans/civilian_male_war_correspondent.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/cia_scarf_beret_01.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_jacket.khm" diffuseTex="data/models/humans/attachments/cia_jacket.dds" windAnimated="1"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			unit="CIA"
+			class="Undercover">
+
+			<Id name="@entity_human_ciaundercover" portrait="data/textures/portraits/ranger55.dds" gender="0" voicePack="cia_male"/>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="30.0"/>
+			<!-- mobility can be changed by the current equipment, in the specified range -->
+			<Mobility>
+				<MoveSpeed min="1" defaultMetersPerSec="2" max="9"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Concealment default="10" canHide="true"/>
+
+			<Equipment>
+				<Item name="IronSights"/>
+				<Item name="G17 Pistol CIA BOps"/>
+				<Item name="IronSights_Pistol"/>
+				<Item name="Flashbang Single"/>
+				<Item name="CIA Concealable LVL2"/>
+				<Item name="CapUndercover"/>
+				<Item name="Lockpick"/>
+			</Equipment>
+		</Human>
+	</Entity>
+	
+	<Entity name="CIA Undercover Fem Temp" type="Human" editorAutoHeight="false" hideInEditor="true" editorTags="unit cia">
+		<RenderObject3D model="data/models/humans/cia_undercover.khm" diffuseTex="data/models/humans/civilian_male_war_correspondent.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/cia_scarf_beret_01.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_jacket.khm" diffuseTex="data/models/humans/attachments/cia_jacket.dds" windAnimated="1"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			unit="CIA"
+			class="Undercover">
+
+			<Id name="@entity_human_ciaundercover" portrait="data/textures/portraits/ranger55.dds" gender="1" voicePack="cia_female"/>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="30.0"/>
+			<!-- mobility can be changed by the current equipment, in the specified range -->
+			<Mobility>
+				<MoveSpeed min="1" defaultMetersPerSec="2" max="9"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Concealment default="10" canHide="true"/>
+
+			<Equipment>
+				<Item name="IronSights"/>
+				<Item name="G17 Pistol CIA BOps"/>
+				<Item name="IronSights_Pistol"/>
+				<Item name="Flashbang Single"/>
+				<Item name="CIA Concealable LVL2"/>
+				<Item name="CapUndercover"/>
+				<Item name="Lockpick"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="CIA BlackOps" type="Human" editorAutoHeight="false" editorTags="unit cia">
+		<RenderObject3D model="data/models/humans/cia_blackops.khm" diffuseTex="data/models/humans/cia_01.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_vest_01.khm" diffuseTex="data/models/humans/attachments/ranger_assaulter_vest.dds"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			unit="CIA"
+			class="BlackOps">
+
+			<Id name="@entity_human_ciablackops" portrait="data/textures/portraits/ranger56.dds" gender="0" voicePack="cia_male"/>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="40.0"/>
+			<!-- mobility can be changed by the current equipment, in the specified range -->
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="9"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Concealment default="7"/>
+
+			<Equipment>
+				<Item name="M4 CIA BOps"/>
+				<Item name="IronSights"/>
+				<Item name="G17 Pistol CIA BOps"/>
+				<Item name="IronSights_Pistol"/>
+				<Item name="Flashbang"/>
+				<Item name="Stinger"/>
+				<Item name="Lockpick"/>
+				<Item name="Poncho"/>
+				<Item name="CapBlackOps"/>
+				<Item name="CIA TacVest Level III"/>
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsDMR"/>
+
+		</Human>
+	</Entity>
+	
+	<Entity name="CIA BlackOps Fem Temp" type="Human" editorAutoHeight="false" hideInEditor="true" editorTags="unit cia">
+		<RenderObject3D model="data/models/humans/cia_blackops.khm" diffuseTex="data/models/humans/cia_01.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_vest_01.khm" diffuseTex="data/models/humans/attachments/ranger_assaulter_vest.dds"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			unit="CIA"
+			class="BlackOps">
+
+			<Id name="@entity_human_ciablackops" portrait="data/textures/portraits/ranger56.dds" gender="1" voicePack="cia_female"/>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="40.0"/>
+			<!-- mobility can be changed by the current equipment, in the specified range -->
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="9"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Concealment default="7"/>
+
+			<Equipment>
+				<Item name="M4 CIA BOps"/>
+				<Item name="IronSights"/>
+				<Item name="G17 Pistol CIA BOps"/>
+				<Item name="IronSights_Pistol"/>
+				<Item name="Flashbang"/>
+				<Item name="Stinger"/>
+				<Item name="Lockpick"/>
+				<Item name="Poncho"/>
+				<Item name="CapBlackOps"/>
+				<Item name="CIA TacVest Level III"/>
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsDMR"/>
+
+		</Human>
+	</Entity>
+
+	<Entity name="Ranger Assaulter" type="Human" editorAutoHeight="false" editorTags="unit rangers">
+		<RenderObject3D model="data/models/humans/ranger_assaulter.khm" diffuseTex="data/models/humans/ranger_assaulter.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ranger_assaulter_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_assaulter_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_assaulter_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			unit="Rangers"
+			class="Assault">
+
+			<Id name="@entity_human_rangersassaulter" portrait="data/textures/portraits/ranger2.dds" gender="0" voicePack="ranger_male"/>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="30.0"/>
+			<!-- mobility can be changed by the current equipment, in the specified range -->
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="M16A4"/>
+				<Item name="IronSights"/>
+				<Item name="M9 Pistol"/>
+				<Item name="IronSights_Pistol"/>
+				<Item name="Flashbang"/>
+				<Item name="Frag Grenade"/>
+				<Item name="Crowbar"/>
+				<Item name="HelmetACH"/>
+				<Item name="Rangers SFLCS Level III"/>
+			</Equipment>
+			
+			<!-- <Doctrine name="Handguns_TransitionDrills" /> -->
+		</Human>
+	</Entity>
+	
+	<Entity name="Ranger Assaulter Fem" type="Human" editorAutoHeight="false" hideInEditor="true" editorTags="unit rangers">
+		<RenderObject3D model="data/models/humans/ranger_assaulter.khm" diffuseTex="data/models/humans/ranger_assaulter.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ranger_assaulter_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_assaulter_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_assaulter_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			unit="Rangers"
+			class="Assault">
+
+			<Id name="@entity_human_rangersassaulter" portrait="data/textures/portraits/ranger2.dds" gender="1" voicePack="ranger_female"/>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="30.0"/>
+			<!-- mobility can be changed by the current equipment, in the specified range -->
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="M16A4"/>
+				<Item name="IronSights"/>
+				<Item name="M9 Pistol"/>
+				<Item name="IronSights_Pistol"/>
+				<Item name="Flashbang"/>
+				<Item name="Frag Grenade"/>
+				<Item name="Crowbar"/>
+				<Item name="HelmetACH"/>
+				<Item name="Rangers SFLCS Level III"/>
+			</Equipment>
+			
+			<!-- <Doctrine name="Handguns_TransitionDrills" /> -->
+		</Human>
+	</Entity>
+
+	<Entity name="Ranger Support" type="Human" editorAutoHeight="false" editorTags="unit rangers">
+		<RenderObject3D model="data/models/humans/ranger_support.khm" diffuseTex="data/models/humans/ranger_support.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_support_vest.khm" diffuseTex="data/models/humans/attachments/ranger_support_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_sidepouch_right.khm" attachSlot="vest_right" skipGOSSAO="true" diffuseTex="data/models/humans/attachments/ranger_sidepouch.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_sidepouch_left.khm" attachSlot="vest_left" skipGOSSAO="true" diffuseTex="data/models/humans/attachments/ranger_sidepouch.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_support_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_support_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			unit="Rangers"
+			class="Support">
+
+			<Id name="@entity_human_rangerssupport" portrait="data/textures/portraits/ranger3.dds" gender="0" voicePack="ranger_male"/>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="30.0"/>
+			<!-- mobility can be changed by the current equipment, in the specified range -->
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="M249SPW"/>
+				<Item name="IronSights"/>
+				<Item name="M9 Pistol"/>
+				<Item name="IronSights_Pistol"/>
+				<Item name="Smoke Grenade"/>
+				<Item name="Frag Grenade"/>
+				<Item name="Crowbar"/>
+				<Item name="HelmetACH"/>
+				<Item name="Rangers SFLCS Level III"/>
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+		</Human>
+	</Entity>
+	
+	<Entity name="Ranger Support Fem" type="Human" editorAutoHeight="false" hideInEditor="true" editorTags="unit rangers">
+		<RenderObject3D model="data/models/humans/ranger_support.khm" diffuseTex="data/models/humans/ranger_support.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_support_vest.khm" diffuseTex="data/models/humans/attachments/ranger_support_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_sidepouch_right.khm" attachSlot="vest_right" skipGOSSAO="true" diffuseTex="data/models/humans/attachments/ranger_sidepouch.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_sidepouch_left.khm" attachSlot="vest_left" skipGOSSAO="true" diffuseTex="data/models/humans/attachments/ranger_sidepouch.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_support_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_support_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			unit="Rangers"
+			class="Support">
+
+			<Id name="@entity_human_rangerssupport" portrait="data/textures/portraits/ranger3.dds" gender="1" voicePack="ranger_female"/>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="30.0"/>
+			<!-- mobility can be changed by the current equipment, in the specified range -->
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="M249SPW"/>
+				<Item name="IronSights"/>
+				<Item name="M9 Pistol"/>
+				<Item name="IronSights_Pistol"/>
+				<Item name="Smoke Grenade"/>
+				<Item name="Frag Grenade"/>
+				<Item name="Crowbar"/>
+				<Item name="HelmetACH"/>
+				<Item name="Rangers SFLCS Level III"/>
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+		</Human>
+	</Entity>
+
+	<Entity name="Ranger Medic" type="Human" editorAutoHeight="false" hideInEditor="true" editorTags="unit rangers">
+		<RenderObject3D model="data/models/humans/ranger_medic.khm" diffuseTex="data/models/humans/ranger_medic.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_medic_vest.khm" diffuseTex="data/models/humans/attachments/ranger_medic_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_arm_pocket.khm" diffuseTex="data/models/humans/attachments/ranger_arm_pocket_medic.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_medic_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_medic_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			unit="Rangers"
+			class="Medic">
+
+			<Id name="@entity_human_rangersmedic" portrait="data/textures/portraits/ranger4.dds" gender="0" voicePack="ranger_male"/>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="30.0"/>
+			<!-- mobility can be changed by the current equipment, in the specified range -->
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="M16A4"/>
+				<Item name="IronSights"/>
+				<Item name="M9 Pistol"/>
+				<Item name="IronSights_Pistol"/>
+				<Item name="Smoke Grenade"/>
+				<Item name="Smoke Grenade"/>
+				<Item name="Crowbar"/>
+				<Item name="HelmetACH"/>
+				<Item name="Rangers SFLCS Level III"/>
+			</Equipment>
+		</Human>
+	</Entity>
+	
+	
+	<Entity name="Ranger Medic Fem" type="Human" editorAutoHeight="false" hideInEditor="true" editorTags="unit rangers">
+		<RenderObject3D model="data/models/humans/ranger_medic.khm" diffuseTex="data/models/humans/ranger_medic.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_medic_vest.khm" diffuseTex="data/models/humans/attachments/ranger_medic_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_arm_pocket.khm" diffuseTex="data/models/humans/attachments/ranger_arm_pocket_medic.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_medic_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_medic_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			unit="Rangers"
+			class="Medic">
+
+			<Id name="@entity_human_rangersmedic" portrait="data/textures/portraits/ranger4.dds" gender="1" voicePack="ranger_female"/>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="30.0"/>
+			<!-- mobility can be changed by the current equipment, in the specified range -->
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="M16A4"/>
+				<Item name="IronSights"/>
+				<Item name="M9 Pistol"/>
+				<Item name="IronSights_Pistol"/>
+				<Item name="Smoke Grenade"/>
+				<Item name="Smoke Grenade"/>
+				<Item name="Crowbar"/>
+				<Item name="HelmetACH"/>
+				<Item name="Rangers SFLCS Level III"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Ranger Marksman" type="Human" editorAutoHeight="false" editorTags="unit rangers">
+		<RenderObject3D model="data/models/humans/ranger_marksman.khm" diffuseTex="data/models/humans/ranger_marksman.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_marksman_vest.khm" diffuseTex="data/models/humans/attachments/ranger_marksman_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_marksmanmesh.khm" diffuseTex="data/models/humans/attachments/ranger_marksmanmesh.dds" blendMode="none" alphaTest="true"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_marksman_wristmap.khm" diffuseTex="data/models/humans/attachments/ranger_marksman_wristmap.dds" />
+		<RenderObject3D model="data/models/humans/attachments/ranger_marksman_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_marksman_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+		<RenderObject3D model="data/models/humans/attachments/ranger_marksman_headmesh.khm" diffuseTex="data/models/humans/attachments/ranger_marksman_headmesh.dds" blendMode="none" alphaTest="true" attachSlot="Bip001 Head"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			unit="Rangers"
+			class="Marksman">
+
+			<Id name="@entity_human_rangersmarksman" portrait="data/textures/portraits/ranger5.dds" gender="0" voicePack="ranger_male"/>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="30.0"/>
+			<!-- mobility can be changed by the current equipment, in the specified range -->
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="M16A4Marksman"/>
+				<Item name="M150RCO"/>
+				<Item name="M9 Pistol"/>
+				<Item name="IronSights_Pistol"/>
+				<Item name="Smoke Grenade"/>
+				<Item name="Frag Grenade"/>
+				<Item name="Crowbar"/>
+				<Item name="HelmetACH"/>
+				<Item name="Rangers SFLCS Level III"/>
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsDMR"/>
+
+		</Human>
+	</Entity>
+	
+	<Entity name="Ranger Marksman Fem" type="Human" editorAutoHeight="false" hideInEditor="true" editorTags="unit rangers">
+		<RenderObject3D model="data/models/humans/ranger_marksman.khm" diffuseTex="data/models/humans/ranger_marksman.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_marksman_vest.khm" diffuseTex="data/models/humans/attachments/ranger_marksman_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_marksmanmesh.khm" diffuseTex="data/models/humans/attachments/ranger_marksmanmesh.dds" blendMode="none" alphaTest="true"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_marksman_wristmap.khm" diffuseTex="data/models/humans/attachments/ranger_marksman_wristmap.dds" />
+		<RenderObject3D model="data/models/humans/attachments/ranger_marksman_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_marksman_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+		<RenderObject3D model="data/models/humans/attachments/ranger_marksman_headmesh.khm" diffuseTex="data/models/humans/attachments/ranger_marksman_headmesh.dds" blendMode="none" alphaTest="true" attachSlot="Bip001 Head"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			unit="Rangers"
+			class="Marksman">
+
+			<Id name="@entity_human_rangersmarksman" portrait="data/textures/portraits/ranger5.dds" gender="1" voicePack="ranger_female"/>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="30.0"/>
+			<!-- mobility can be changed by the current equipment, in the specified range -->
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="M16A4Marksman"/>
+				<Item name="M150RCO"/>
+				<Item name="M9 Pistol"/>
+				<Item name="IronSights_Pistol"/>
+				<Item name="Smoke Grenade"/>
+				<Item name="Frag Grenade"/>
+				<Item name="Crowbar"/>
+				<Item name="HelmetACH"/>
+				<Item name="Rangers SFLCS Level III"/>
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsDMR"/>
+
+		</Human>
+	</Entity>
+
+	<Entity name="Ranger Grenadier" type="Human" editorAutoHeight="false" editorTags="unit rangers">
+		<RenderObject3D model="data/models/humans/ranger_grenadier.khm" diffuseTex="data/models/humans/ranger_grenadier.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_grenadier_vest.khm" diffuseTex="data/models/humans/attachments/ranger_grenadier_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_grenadier_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_grenadier_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			unit="Rangers"
+			class="Grenadier">
+
+			<Id name="@entity_human_rangersgrenadier" portrait="data/textures/portraits/ranger6.dds" gender="0" voicePack="ranger_male"/>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="30.0"/>
+			<!-- mobility can be changed by the current equipment, in the specified range -->
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="M16A4/M203"/>
+				<Item name="IronSights"/>
+				<Item name="Smoke Grenade"/>				
+				<Item name="Frag Grenade"/>
+				<Item name="Crowbar"/>
+				<Item name="HelmetACH"/>
+				<Item name="Rangers SFLCS Level III"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Ranger Grenadier Fem" type="Human" editorAutoHeight="false" hideInEditor="true" editorTags="unit rangers">
+		<RenderObject3D model="data/models/humans/ranger_grenadier.khm" diffuseTex="data/models/humans/ranger_grenadier.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_grenadier_vest.khm" diffuseTex="data/models/humans/attachments/ranger_grenadier_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_grenadier_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_grenadier_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			unit="Rangers"
+			class="Grenadier">
+
+			<Id name="@entity_human_rangersgrenadier" portrait="data/textures/portraits/ranger6.dds" gender="1" voicePack="ranger_female"/>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="30.0"/>
+			<!-- mobility can be changed by the current equipment, in the specified range -->
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="M16A4/M203"/>
+				<Item name="IronSights"/>
+				<Item name="Smoke Grenade"/>				
+				<Item name="Frag Grenade"/>
+				<Item name="Crowbar"/>
+				<Item name="HelmetACH"/>
+				<Item name="Rangers SFLCS Level III"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="ONUExpert" type="Human" editorAutoHeight="false" tooltip="@tooltip_friendly_vip" editorTags="vip">
+		<RenderObject3D model="data/models/humans/civilian_male_war_correspondent.khm" diffuseTex="data/models/humans/civilian_male_war_correspondent.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/civilian_war_correspondent_vest.khm" diffuseTex="data/models/humans/attachments/civilian_war_correspondent_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/male_shorthair.khm" diffuseTex="data/models/humans/attachments/male_shorthair.dds"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			isVIP="true">
+
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="12.0"/>
+			<Id name="@entity_human_ONUexpert" portrait="data/textures/portraits/warcorrespondent.dds" gender="0" voicePack="vip_male"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="ONUExpertHome" type="Human" editorAutoHeight="false" tooltip="@tooltip_friendly_vip" editorTags="vip">
+		<RenderObject3D model="data/models/humans/civilian_male_war_correspondent.khm" diffuseTex="data/models/humans/civilian_male_war_correspondent.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/civilian_war_correspondent_vest.khm" diffuseTex="data/models/humans/attachments/civilian_war_correspondent_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/male_shorthair.khm" diffuseTex="data/models/humans/attachments/male_shorthair.dds"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			isVIP="true">
+
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="12.0"/>
+			<Id name="@entity_human_ONUexpert" portrait="data/textures/portraits/warcorrespondent.dds" gender="0" voicePack="vip_male"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="HouseKeys"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+
+	<Entity name="SwatAssaulter" type="Human" editorAutoHeight="false" editorTags="unit swat">
+		<RenderObject3D model="data/models/humans/swat_assaulter.khm" diffuseTex="data/models/humans/swat_assaulter.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/swat_assaulter_vest.dds" />
+		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/swat_scarf_beret.dds"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			unit="Nowheraki"
+			class="SwatAssaulter">
+
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="20.0"/>
+			<Id name="@entity_human_nwsassaulter" portrait="data/textures/portraits/nwswat14.dds" gender="0" voicePack="nws_male"/>
+			<Mobility>
+				<MoveSpeed min="1.0" defaultMetersPerSec="2.15" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="AKM NWS"/>
+				<Item name="Frag Grenade Single"/>
+				<Item name="Frag Grenade Single"/>
+				<Item name="Crowbar"/>
+				<Item name="CapNowherakiAssaulter"/>
+			</Equipment>
+			
+			<Doctrine name="NWS_InverseScopeAdvantage"/>
+			<Doctrine name="NWS_NativeSpeaker"/>
+		</Human>
+	</Entity>
+
+	<Entity name="SwatLeader" type="Human" editorAutoHeight="false" editorTags="unit swat">
+		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/swat_leader.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_leader_vest.khm" diffuseTex="data/models/humans/attachments/swat_leader_vest.dds" />
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			unit="Nowheraki"
+			class="SwatLeader">
+
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="24.0"/>
+			<Id name="@entity_human_nwsleader" portrait="data/textures/portraits/nwswat12.dds" gender="0" voicePack="nws_male"/>
+			<Mobility>
+				<MoveSpeed min="1.0" defaultMetersPerSec="2.15" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="AKM GL NWS"/>
+				<Item name="M9 Pistol NWS"/>
+				<Item name="IronSights_Pistol"/>
+				<Item name="Frag Grenade Single"/>
+				<Item name="NWS Smoke Grenade Single"/>
+				<Item name="Crowbar"/>
+				<Item name="CapNowherakiBeret"/>
+			</Equipment>
+			
+			<Doctrine name="NWS_InspiringLeader"/>
+			<Doctrine name="NWS_InverseScopeAdvantage"/>
+			<Doctrine name="NWS_NativeSpeaker"/>
+		</Human>
+	</Entity>
+
+	<Entity name="SwatSapper" type="Human" editorAutoHeight="false" editorTags="unit swat">
+		<RenderObject3D model="data/models/humans/swat_sapper.khm" diffuseTex="data/models/humans/swat_sapper.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_sapper_vest.khm" diffuseTex="data/models/humans/attachments/swat_sapper_vest.dds" />
+		<RenderObject3D model="data/models/humans/attachments/swat_vestcollar.khm" diffuseTex="data/models/humans/attachments/swat_vestcollar.dds" />
+		<RenderObject3D model="data/models/humans/attachments/ranger_sidepouch_right.khm" attachSlot="vest_right" skipGOSSAO="true" diffuseTex="data/models/humans/attachments/ranger_sidepouch.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_sidepouch_left.khm" attachSlot="vest_left" skipGOSSAO="true" diffuseTex="data/models/humans/attachments/swat_sidepouch.dds"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			unit="Nowheraki"
+			class="SwatSapper">
+
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="15.0"/>
+			<Id name="@entity_human_nwssapper" portrait="data/textures/portraits/nwswat9.dds" gender="0" voicePack="nws_male"/>
+			<Mobility>
+				<MoveSpeed min="1.0" defaultMetersPerSec="2.15" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="AKM NWS"/>
+				<Item name="NWS Vest Extended"/>
+				<Item name="Frag Grenade Single"/>
+				<Item name="NWS Door Charge"/>
+				<Item name="Crowbar"/>
+				<Item name="HelmetACHNWS"/>
+			</Equipment>
+			
+			<Doctrine name="NWS_InverseScopeAdvantage"/>
+			<Doctrine name="NWS_NativeSpeaker"/>
+		</Human>
+	</Entity>
+
+	<Entity name="SwatMilitia" type="Human" editorAutoHeight="false" editorTags="unit swat">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			unit="Nowheraki"
+			class="SwatMilitia">
+
+			<FOV degrees="80" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="12.0"/>
+			<Id name="@entity_human_militia" portrait="data/textures/portraits/nwswat16.dds" gender="0" voicePack="nws_male"/>
+			<Concealment default="0" canHide="false"/>
+			<Mobility>
+				<MoveSpeed min="1.0" defaultMetersPerSec="2.15" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Type 56 NWS Militia"/>
+				<Item name="Frag Grenade Single"/>
+				<Item name="Frag Grenade Single"/>
+				<Item name="FeetOfSteel"/>
+				<Item name="CapNowherakiHeadband"/>
+			</Equipment>
+			
+			<Doctrine name="NWS_InverseScopeAdvantage"/>
+			<Doctrine name="NWS_NativeSpeaker"/>
+		</Human>
+	</Entity>
+
+
+
+	<Entity name="Ambassador" type="Human" editorAutoHeight="false" tooltip="@tooltip_friendly_vip" editorTags="vip">
+		<RenderObject3D model="data/models/humans/civilian_male_standard.khm" diffuseTex="data/models/humans/civilian_male_standard_02.dds"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			isVIP="true">
+
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="12.0"/>
+			<Id name="@entity_human_friendly_vip" portrait="data/textures/portraits/ambassador.dds" gender="0" voicePack="vip_male"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Ambassador On The Run" type="Human" editorAutoHeight="false" tooltip="@tooltip_friendly_vip_phone" editorTags="vip">
+		<RenderObject3D model="data/models/humans/civilian_male_standard.khm" diffuseTex="data/models/humans/civilian_male_standard_02.dds"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			isVIP="true">
+
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="12.0"/>
+			<Id name="@entity_human_friendly_vip_2" portrait="data/textures/portraits/ambassador.dds" gender="0" voicePack="vip_male"/>
+			<Mobility>
+				<MoveSpeed min="0.9" defaultMetersPerSec="1.9" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+	
+	<Entity name="Ambassador On The Run (Hidden)" type="Human" editorAutoHeight="false" fogOfWarVisibility="hiddenInitially" tooltip="@tooltip_friendly_vip" editorTags="vip">
+		<RenderObject3D model="data/models/humans/civilian_male_standard.khm" diffuseTex="data/models/humans/civilian_male_standard_02.dds"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			isVIP="true">
+
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="12.0"/>
+			<Id name="@entity_human_friendly_vip_2" portrait="data/textures/portraits/ambassador.dds" gender="0" voicePack="vip_male"/>
+			<Mobility>
+				<MoveSpeed min="0.9" defaultMetersPerSec="1.9" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+
+
+	<!-- NOTE: This guy doesn't get shot by enemies until he gets rescued -->
+	<Entity name="Ambassador (Hostage)" type="Human" editorAutoHeight="false" tooltip="@tooltip_friendly_vip" editorTags="vip">
+		<RenderObject3D model="data/models/humans/civilian_male_standard.khm" diffuseTex="data/models/humans/civilian_male_standard_02.dds"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			isVIP="true" needsRescue="true">
+
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="12.0"/>
+			<Id name="@entity_human_friendly_vip" portrait="data/textures/portraits/ambassador.dds" gender="0" voicePack="vip_male"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<!-- NOTE: Values higher than 10 mean you are always hidden -->
+			<Concealment default="11 "/>
+
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+	
+	<Entity name="Ambassador (Hidden Hostage)" type="Human" editorAutoHeight="false" tooltip="@tooltip_friendly_vip" fogOfWarVisibility="hiddenInitially" editorTags="vip">
+		<RenderObject3D model="data/models/humans/civilian_male_standard.khm" diffuseTex="data/models/humans/civilian_male_standard_02.dds"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			isVIP="true" needsRescue="true">
+
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="12.0"/>
+			<Id name="@entity_human_friendly_vip" portrait="data/textures/portraits/ambassador.dds" gender="0" voicePack="vip_male"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<!-- NOTE: Values higher than 10 mean you are always hidden -->
+			<Concealment default="11 "/>
+
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="VIP Female (Hostage)" type="Human" editorAutoHeight="false" tooltip="@tooltip_friendly_vip" fogOfWarVisibility="hiddenInitially" editorTags="vip">
+		<RenderObject3D model="data/models/humans/civilian_female_standard.khm" diffuseTex="data/models/humans/civilian_female_standard_01.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/dress_01.khm" diffuseTex="data/models/humans/attachments/dress_01.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/hijab_01.khm" diffuseTex="data/models/humans/attachments/hijab_01.dds"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			isVIP="true" needsRescue="true">
+
+			<FOV degrees="70" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Id name="@entity_human_friendly_vipfem" portrait="data/textures/portraits/civilian_female.dds" gender="0" voicePack="civilian_female"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.5" max="8"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<!-- NOTE: Values higher than 10 mean you are always hidden -->
+			<Concealment default="11 "/>
+
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="VIP Female Armed" type="Human" editorAutoHeight="false" tooltip="@tooltip_friendly_vip"  editorTags="vip">
+		<RenderObject3D model="data/models/humans/civilian_female_standard.khm" diffuseTex="data/models/humans/civilian_female_standard_01.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/dress_01.khm" diffuseTex="data/models/humans/attachments/dress_01.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/hijab_01.khm" diffuseTex="data/models/humans/attachments/hijab_01.dds"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy"
+			isVIP="true" needsRescue="true">
+
+			<FOV degrees="50" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Id name="@entity_human_friendly_vipfem" portrait="data/textures/portraits/civilian_female.dds" gender="0" voicePack="civilian_female"/>
+			<Mobility>
+				<MoveSpeed min="0.5" defaultMetersPerSec="1.5" max="7"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<!-- NOTE: Values higher than 10 mean you are always hidden -->
+
+			<Equipment>
+				<Item name="MP40 Asset"/>
+				<Item name="HouseKeys"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+
+	<Entity name="Asset Female 01" type="Human" editorAutoHeight="false" editorTags="friendly">
+		<RenderObject3D model="data/models/humans/warlord_bodyguard.khm" diffuseTex="data/models/humans/fergie.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/hijab_01.khm" diffuseTex="data/models/humans/attachments/hijab_01.dds"/>
+		<PhysicalParams health="100"/>
+		<AnimationSet name="civilian" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<!-- 
+			deploy mode is set to 'always' (= 1) as an example for how to make troops avoid going through the deployslots setup.
+			  the value defaults to 'auto' (= 0) which would also work OK in this case since we don't have a human unit/class defined for this entity, but leaving it here for future reference.
+			
+			for any human that doesn't have unit/class defined, you don't need to set it. But if you want an allied Assaulter to spawn on the map, you need to set it up in the editor or have a template here with deployMode="1"
+		-->		
+		<Human type="GoodGuy" deployMode="1">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="20.0"/>
+			<Id name="@entity_human_agent01" portrait="data/textures/portraits/fergie.dds" gender="1" voicePack="fergie"/>
+			<Mobility>
+				<MoveSpeed min="0.9" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
+			</Mobility>
+			<Equipment>
+				<Item name="MPS45Sup Pistol"/>
+				<Item name="Flashbang"/>
+				<Item name="Lockpick"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Asset Female 02" type="Human" editorAutoHeight="false" editorTags="friendly">
+		<RenderObject3D model="data/models/humans/warlord_bodyguard.khm" diffuseTex="data/models/humans/fergie.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/hijab_01.khm" diffuseTex="data/models/humans/attachments/hijab_01.dds"/>
+
+		<PhysicalParams health="100"/>
+		<AnimationSet name="civilian" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<Human type="GoodGuy" deployMode="1">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="20.0"/>
+			<Id name="@entity_human_agent01" portrait="data/textures/portraits/fergie.dds" gender="1" voicePack="fergie"/>
+			<Mobility>
+				<MoveSpeed min="0.9" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
+			</Mobility>
+			<Equipment>
+				<Item name="PM63 Fergie"/>
+				<Item name="MPS45Sup Pistol"/>
+				<Item name="Flashbang"/>
+				<Item name="Lockpick"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Asset Female 03" type="Human" editorAutoHeight="false" editorTags="friendly">
+		<RenderObject3D model="data/models/humans/warlord_bodyguard.khm" diffuseTex="data/models/humans/fergie.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/hijab_01.khm" diffuseTex="data/models/humans/attachments/hijab_01.dds"/>
+		<PhysicalParams health="100"/>
+		<AnimationSet name="civilian" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+
+		<Human type="GoodGuy" deployMode="1">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="20.0"/>
+			<Concealment default="10" canHide="true"/>
+			<Id name="@entity_human_agent01" portrait="data/textures/portraits/fergie.dds" gender="1" voicePack="fergie"/>
+			<Mobility>
+				<MoveSpeed min="0.9" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
+			</Mobility>
+			<Equipment>
+				<Item name="MPS45Sup Pistol"/>
+				<Item name="Flashbang"/>
+				<Item name="Lockpick"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Asset Female 04" type="Human" editorAutoHeight="false" editorTags="friendly">
+		<RenderObject3D model="data/models/humans/warlord_bodyguard.khm" diffuseTex="data/models/humans/fergie.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/hijab_01.khm" diffuseTex="data/models/humans/attachments/hijab_01.dds"/>
+		<PhysicalParams health="100"/>
+		<AnimationSet name="civilian" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+
+		<Human type="GoodGuy" deployMode="1">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="20.0"/>
+			<Id name="@entity_human_agent01" portrait="data/textures/portraits/fergie.dds" gender="1" voicePack="fergie"/>
+			<Mobility>
+				<MoveSpeed min="0.9" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="10" max="20"/>
+			</Mobility>
+			<Equipment>
+				<Item name="MP5K CIA BOps"/>
+				<Item name="Flashbang Single"/>
+				<Item name="Lockpick"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+
+	<Entity name="Allied Marksman" type="Human" editorAutoHeight="false" editorTags="friendly" tooltip="@tooltip_friendly_vip">
+		<RenderObject3D model="data/models/humans/ranger_marksman.khm" diffuseTex="data/models/humans/ranger_marksman.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_marksman_vest.khm" diffuseTex="data/models/humans/attachments/ranger_marksman_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_marksman_wristmap.khm" diffuseTex="data/models/humans/attachments/ranger_marksman_wristmap.dds" />
+		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/cia_scarf_beret_01.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_cap.khm" diffuseTex="data/models/humans/attachments/cia_cap_01.dds" attachSlot="Bip001 Head"/>
+
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="170"/>
+		<Human type="GoodGuy" deployMode="1">
+			<Id name="@entity_human_ogamarksman" portrait="data/textures/portraits/cia24.dds" gender="0" voicePack="allied_assaulters"/>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1"/>
+			<Brain suppressionRecovery="40.0"/>
+			<!-- mobility can be changed by the current equipment, in the specified range -->
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="MK20SSRSup"/>
+				<Item name="LPVO_8X"/>
+				<Item name="Smoke Grenade"/>
+				<Item name="Frag Grenade"/>
+				<Item name="Crowbar"/>
+				<Item name="Rangers Jumpable Swimmer"/>
+			</Equipment>
+			
+			<Doctrine name="CIA_ShortRangeDrills"/>										
+			<Doctrine name="CIA_QuickDraw"/>			
+			<Doctrine name="CIA_Transition"/>				
+			<Doctrine name="CIA_RiflesReload"/>	
+			<Doctrine name="CIA_RiflesShortRangeAimSpeed"/>		
+			<Doctrine name="CIA_FastFire"/>		
+			<Doctrine name="CIA_RiflesMediumRangeAimSpeed"/>		
+			<Doctrine name="CIA_RiflesMediumRangeAccuracy"/>			
+			<Doctrine name="CIA_RiflesLongRange"/>						
+			<Doctrine name="CIA_MRFastFire"/>		
+			<Doctrine name="CIA_Ambush"/>							
+			<Doctrine name="CIA_Hand2Hand"/>							
+			<Doctrine name="CIA_Language"/>		
+			<Doctrine name="CIA_Barricade"/>		
+			<Doctrine name="Rifles_ObscuredTargetsDMR"/>			
+			<Doctrine name="Support_AssaultMarksmen"/>					
+		</Human>
+	</Entity>
+
+	<Entity name="Allied Assaulter" type="Human" editorAutoHeight="false" editorTags="friendly" tooltip="@tooltip_friendly_vip">
+		<RenderObject3D model="data/models/humans/ranger_marksman.khm" diffuseTex="data/models/humans/ranger_marksman.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_support_vest.khm" diffuseTex="data/models/humans/attachments/ranger_support_vest.dds"/>
+
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="170"/>
+		<Human type="GoodGuy" deployMode="1">
+			<Id name="@entity_human_ogaassaulter" portrait="data/textures/portraits/cia31.dds" gender="0" voicePack="allied_assaulters"/>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1"/>
+			<Brain suppressionRecovery="40.0"/>
+			<!-- mobility can be changed by the current equipment, in the specified range -->
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="MP7Sup CIA BOps"/>
+				<Item name="Holosight"/>
+				<Item name="Flashbang"/>
+				<Item name="Frag Grenade"/>
+				<Item name="Slap Charge Kit"/>
+				<Item name="Crowbar"/>
+				<Item name="Rangers Jumpable Swimmer"/>
+				<Item name="HelmetBumpBlackOps"/>
+				<Item name="NVG_02"/>
+			</Equipment>
+			
+			<Doctrine name="CIA_ShortRangeDrills"/>				
+			<Doctrine name="CIA_ShortRangeCrit"/>							
+			<Doctrine name="CIA_DoubleTap"/>
+			<Doctrine name="CIA_QuickDraw"/>			
+			<Doctrine name="CIA_Retention"/>
+			<Doctrine name="CIA_Reload"/>		
+			<Doctrine name="CIA_Transition"/>				
+			<Doctrine name="CIA_RiflesReload"/>	
+			<Doctrine name="CIA_RiflesShortRangeAimSpeed"/>		
+			<Doctrine name="CIA_RiflesShortRangeCrit"/>		
+			<Doctrine name="CIA_FastFire"/>		
+			<Doctrine name="CIA_RiflesMediumRangeAimSpeed"/>					
+			<Doctrine name="CIA_MRFastFire"/>		
+			<Doctrine name="CIA_Ambush"/>				
+			<Doctrine name="CIA_Speedy"/>			
+			<Doctrine name="CIA_ShortStoking"/>					
+			<Doctrine name="CIA_Hand2Hand"/>						
+			<Doctrine name="CIA_Language"/>			
+			<Doctrine name="CIA_Execution"/>						
+		</Human>
+	</Entity>
+
+	<Entity name="Allied Assaulter MK18" type="Human" editorAutoHeight="false" editorTags="friendly" tooltip="@tooltip_friendly_vip">
+		<RenderObject3D model="data/models/humans/ranger_marksman.khm" diffuseTex="data/models/humans/ranger_marksman.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_support_vest.khm" diffuseTex="data/models/humans/attachments/ranger_support_vest.dds"/>
+
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="170"/>
+		<Human type="GoodGuy" deployMode="1">
+			<Id name="@entity_human_ogaassaulter" portrait="data/textures/portraits/cia2.dds" gender="0" voicePack="allied_assaulters"/>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1"/>
+			<Brain suppressionRecovery="40.0"/>
+			<!-- mobility can be changed by the current equipment, in the specified range -->
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="MK 18Sup CIA BOps"/>
+				<Item name="LPVO_6X"/>
+				<Item name="Flashbang"/>
+				<Item name="Frag Grenade"/>
+				<Item name="Crowbar"/>
+				<Item name="Rangers Jumpable Swimmer"/>
+				<Item name="HelmetBumpBlackOps"/>
+				<Item name="NVG_02"/>
+			</Equipment>
+			
+			<Doctrine name="CIA_ShortRangeDrills"/>				
+			<Doctrine name="CIA_ShortRangeCrit"/>							
+			<Doctrine name="CIA_DoubleTap"/>
+			<Doctrine name="CIA_QuickDraw"/>			
+			<Doctrine name="CIA_Retention"/>
+			<Doctrine name="CIA_Reload"/>		
+			<Doctrine name="CIA_Transition"/>				
+			<Doctrine name="CIA_RiflesReload"/>	
+			<Doctrine name="CIA_RiflesShortRangeAimSpeed"/>		
+			<Doctrine name="CIA_RiflesShortRangeCrit"/>		
+			<Doctrine name="CIA_FastFire"/>		
+			<Doctrine name="CIA_RiflesMediumRangeAimSpeed"/>		
+			<Doctrine name="CIA_RiflesMediumRangeAccuracy"/>					
+			<Doctrine name="CIA_MRFastFire"/>		
+			<Doctrine name="CIA_Ambush"/>				
+			<Doctrine name="CIA_Speedy"/>			
+			<Doctrine name="CIA_ShortStoking"/>					
+			<Doctrine name="CIA_Hand2Hand"/>							
+			<Doctrine name="CIA_Language"/>				
+		</Human>
+	</Entity>
+
+	<Entity name="Allied Grenadier" type="Human" editorAutoHeight="false" editorTags="friendly" tooltip="@tooltip_friendly_vip">
+		<RenderObject3D model="data/models/humans/ranger_marksman.khm" diffuseTex="data/models/humans/ranger_marksman.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_support_vest.khm" diffuseTex="data/models/humans/attachments/ranger_support_vest.dds"/>
+
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="170"/>
+		<Human type="GoodGuy" deployMode="1">
+			<Id name="@entity_human_ogagrenadier" portrait="data/textures/portraits/cia2.dds" gender="0" voicePack="allied_assaulters"/>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1"/>
+			<Brain suppressionRecovery="40.0"/>
+			<!-- mobility can be changed by the current equipment, in the specified range -->
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="MK 18Sup CIA BOps"/>
+				<Item name="Holosight"/>
+				<Item name="Flashbang"/>
+				<Item name="Flashbang"/>
+				<Item name="M320 CIA BOps"/>
+				<Item name="Crowbar"/>
+				<Item name="Rangers Jumpable Swimmer"/>
+				<Item name="HelmetBumpBlackOps"/>
+				<Item name="NVG_02"/>
+			</Equipment>
+			
+			
+			<Doctrine name="CIA_ShortRangeDrills"/>				
+			<Doctrine name="CIA_ShortRangeCrit"/>							
+			<Doctrine name="CIA_DoubleTap"/>
+			<Doctrine name="CIA_QuickDraw"/>			
+			<Doctrine name="CIA_Retention"/>
+			<Doctrine name="CIA_Reload"/>		
+			<Doctrine name="CIA_Transition"/>				
+			<Doctrine name="CIA_RiflesReload"/>	
+			<Doctrine name="CIA_RiflesShortRangeCrit"/>		
+			<Doctrine name="CIA_FastFire"/>		
+			<Doctrine name="CIA_RiflesMediumRangeAimSpeed"/>		
+			<Doctrine name="CIA_RiflesMediumRangeAccuracy"/>					
+			<Doctrine name="CIA_MRFastFire"/>		
+			<Doctrine name="CIA_Ambush"/>				
+			<Doctrine name="CIA_Speedy"/>			
+			<Doctrine name="CIA_ShortStoking"/>					
+			<Doctrine name="CIA_Hand2Hand"/>						
+			<Doctrine name="CIA_Language"/>							
+		</Human>
+	</Entity>
+
+	<Entity name="Allied Breacher" type="Human" editorAutoHeight="false" editorTags="friendly" tooltip="@tooltip_friendly_vip">
+		<RenderObject3D model="data/models/humans/ranger_marksman.khm" diffuseTex="data/models/humans/ranger_marksman.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_support_vest.khm" diffuseTex="data/models/humans/attachments/ranger_support_vest.dds"/>
+
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="170"/>
+		<Human type="GoodGuy" deployMode="1">
+			<Id name="@entity_human_ogabreacher" portrait="data/textures/portraits/ranger41.dds" gender="0" voicePack="allied_cpg"/>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1"/>
+			<Brain suppressionRecovery="40.0"/>
+			<!-- mobility can be changed by the current equipment, in the specified range -->
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="MK 18Sup CIA BOps"/>
+				<Item name="HoloMag3X"/>
+				<Item name="Flashbang"/>
+				<Item name="Frag Grenade"/>
+				<Item name="Breacher Shotgun"/>
+				<Item name="Rangers Jumpable Swimmer"/>
+				<Item name="HelmetBumpBlackOps"/>
+				<Item name="NVG_02"/>
+			</Equipment>
+			
+			
+			<Doctrine name="CIA_ShortRangeDrills"/>				
+			<Doctrine name="CIA_ShortRangeCrit"/>							
+			<Doctrine name="CIA_DoubleTap"/>
+			<Doctrine name="CIA_QuickDraw"/>			
+			<Doctrine name="CIA_Retention"/>
+			<Doctrine name="CIA_Reload"/>		
+			<Doctrine name="CIA_Transition"/>				
+			<Doctrine name="CIA_RiflesReload"/>	
+			<Doctrine name="CIA_RiflesShortRangeAimSpeed"/>		
+			<Doctrine name="CIA_RiflesShortRangeCrit"/>		
+			<Doctrine name="CIA_FastFire"/>		
+			<Doctrine name="CIA_RiflesMediumRangeAimSpeed"/>		
+			<Doctrine name="CIA_RiflesMediumRangeAccuracy"/>				
+			<Doctrine name="CIA_RiflesLongRange"/>							
+			<Doctrine name="CIA_MRFastFire"/>		
+			<Doctrine name="CIA_Ambush"/>				
+			<Doctrine name="CIA_Speedy"/>			
+			<Doctrine name="CIA_ShortStoking"/>					
+			<Doctrine name="CIA_Hand2Hand"/>						
+			<Doctrine name="CIA_Language"/>							
+		</Human>
+	</Entity>
+
+	<Entity name="Allied Machinegunner" type="Human" editorAutoHeight="false" editorTags="friendly" tooltip="@tooltip_friendly_vip">
+		<RenderObject3D model="data/models/humans/ranger_marksman.khm" diffuseTex="data/models/humans/ranger_marksman.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_support_vest.khm" diffuseTex="data/models/humans/attachments/ranger_support_vest.dds"/>
+
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="170"/>
+		<Human type="GoodGuy" deployMode="1">
+			<Id name="@entity_human_ogamachinegunner" portrait="data/textures/portraits/cia20.dds" gender="0" voicePack="allied_assaulters"/>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1"/>
+			<Brain suppressionRecovery="40.0"/>
+			<!-- mobility can be changed by the current equipment, in the specified range -->
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="M249SPW Sup CIA BOps"/>
+				<Item name="Holosight"/>
+				<Item name="Smoke Grenade"/>
+				<Item name="Frag Grenade"/>
+				<Item name="Crowbar"/>
+				<Item name="Rangers Jumpable Swimmer"/>
+				<Item name="HelmetBumpBlackOps"/>
+				<Item name="NVG"/>
+			</Equipment>
+				
+			<Doctrine name="CIA_ShortRangeDrills"/>										
+			<Doctrine name="CIA_QuickDraw"/>			
+			<Doctrine name="CIA_Transition"/>				
+			<Doctrine name="CIA_RiflesReload"/>	
+			<Doctrine name="CIA_RiflesShortRangeAimSpeed"/>		
+			<Doctrine name="CIA_RiflesMediumRangeAimSpeed"/>		
+			<Doctrine name="CIA_RiflesMediumRangeAccuracy"/>					
+			<Doctrine name="CIA_Ambush"/>							
+			<Doctrine name="CIA_Hand2Hand"/>							
+			<Doctrine name="CIA_Language"/>		
+			<Doctrine name="CIA_Barricade"/>		
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>			
+			<Doctrine name="Support_AssaultSAWs"/>						
+		</Human>
+	</Entity>
+
+	<Entity name="Allied Militia" type="Human" editorAutoHeight="false" editorTags="friendly" tooltip="@tooltip_friendly_militia">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_militia_hair.khm" diffuseTex="data/models/humans/attachments/swat_militia_hair.dds" attachSlot="Bip001 Head"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>
+
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="GoodGuy" deployMode="1">
+			<Id name="@entity_human_militia" portrait="data/textures/portraits/nwswat14.dds" gender="0" voicePack="nws_male"/>
+			<FOV degrees="80" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain suppressionRecovery="12.0"/>
+			<!-- mobility can be changed by the current equipment, in the specified range -->
+			<Mobility>
+				<MoveSpeed min="1.0" defaultMetersPerSec="2.15" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Type 56 NWS Militia"/>
+				<Item name="Frag Grenade Single"/>
+				<Item name="Frag Grenade Single"/>
+				<Item name="FeetOfSteel"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+
+
+</Entities>

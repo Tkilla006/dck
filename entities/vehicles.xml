@@ -1,0 +1,2640 @@
+<!--
+		For help, please refer to "help_entities.txt" in this directory.
+-->
+<Entities>
+<!-- VEHICLES -->
+
+	<Entity name="bike_01" type="BasicEntity" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/vehicles/bike_01.khm" diffuseTex="data/models/environment/vehicles/bike_01.dds" blendMode="none" alphaTest="true" />
+	</Entity>
+
+	<Entity name="cart" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/cart.khm" diffuseTex="data/models/environment/vehicles/cart.dds"/>
+	</Entity>	
+	
+		<Entity name="moped_01" type="BasicEntity" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/vehicles/moped_01.khm" diffuseTex="data/models/environment/vehicles/moped_01.dds" blendMode="none" alphaTest="true" />
+	</Entity>
+	
+<!-- Boat -->
+
+	
+	<Entity name="boat_hull" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle" >
+		<PhysicalParams blocksMovement="false" blocksVision="false" usableCover="false" justThumbnail="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/boat_hull.khm" diffuseTex="data/models/environment/vehicles/boat.dds" gossaoCastHeight="4">
+		<Specular shininess="1" intensity="1" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="boat_console" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle" >
+		<PhysicalParams blocksMovement="true" blocksVision="true" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/boat_console.khm" diffuseTex="data/models/environment/vehicles/boat.dds" gossaoCastHeight="4">
+		<Specular shininess="1" intensity="1" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="boat_cover" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle" >
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/boat_cover.khm" diffuseTex="data/models/environment/vehicles/boat.dds" gossaoCastHeight="4">
+		<Specular shininess="1" intensity="1" />
+		</RenderObject3D>
+	</Entity>
+
+<!-- Milittary Vehicle -->
+
+	<Entity name="militaryvehicle" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle" >
+		<PhysicalParams blocksMovement="true" blocksVision="true" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/militaryvehicle.khm" diffuseTex="data/models/environment/vehicles/militaryvehicle.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/militaryvehicle_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="militaryvehicle_temp" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle" >
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/militaryvehicle.khm" diffuseTex="data/models/environment/vehicles/militaryvehicle.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/militaryvehicle_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="militaryvehicle_door_frontleft" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/militaryvehicle_door_frontleft.khm" diffuseTex="data/models/environment/vehicles/militaryvehicle.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/militaryvehicle_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+		
+	<Entity name="militaryvehicle_door_frontright" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/militaryvehicle_door_frontright.khm" diffuseTex="data/models/environment/vehicles/militaryvehicle.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/militaryvehicle_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="militaryvehicle_door_backleft" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/militaryvehicle_door_backleft.khm" diffuseTex="data/models/environment/vehicles/militaryvehicle.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/militaryvehicle_spec.dds"/>
+		</RenderObject3D>
+	</Entity>	
+
+	<Entity name="militaryvehicle_door_backright" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/militaryvehicle_door_backright.khm" diffuseTex="data/models/environment/vehicles/militaryvehicle.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/militaryvehicle_spec.dds"/>
+		</RenderObject3D>
+	</Entity>	
+	
+	<Entity name="militaryvehicle_glass_front" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="explosive" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/militaryvehicle_glass_front.khm" diffuseTex="data/models/environment/vehicles/militaryvehicle_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/militaryvehicle_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="militaryvehicle_glass_door_frontleft" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="explosive" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/militaryvehicle_glass_door_frontleft.khm" diffuseTex="data/models/environment/vehicles/militaryvehicle_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/militaryvehicle_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="militaryvehicle_glass_door_frontright" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="explosive" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/militaryvehicle_glass_door_frontright.khm" diffuseTex="data/models/environment/vehicles/militaryvehicle_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/militaryvehicle_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="militaryvehicle_glass_door_backleft" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="explosive" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/militaryvehicle_glass_door_backleft.khm" diffuseTex="data/models/environment/vehicles/militaryvehicle_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/militaryvehicle_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="militaryvehicle_glass_door_backright" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="explosive" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/militaryvehicle_glass_door_backright.khm" diffuseTex="data/models/environment/vehicles/militaryvehicle_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/militaryvehicle_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+<!-- Humvee -->
+
+	<Entity name="humvee" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle" >
+		<PhysicalParams blocksMovement="true" blocksVision="true" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/humvee.khm" diffuseTex="data/models/environment/vehicles/humvee.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/humvee_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="humvee_cover" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle" >
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/humvee_cover.khm" diffuseTex="data/models/environment/vehicles/humvee.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/humvee_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="humvee_door_frontleft" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle" >
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/humvee_door_frontleft.khm" diffuseTex="data/models/environment/vehicles/humvee.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/humvee_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="humvee_door_frontright" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle" >
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/humvee_door_frontright.khm" diffuseTex="data/models/environment/vehicles/humvee.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/humvee_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="humvee_door_backleft" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle" >
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/humvee_door_backleft.khm" diffuseTex="data/models/environment/vehicles/humvee.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/humvee_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="humvee_door_backright" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle" >
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/humvee_door_backright.khm" diffuseTex="data/models/environment/vehicles/humvee.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/humvee_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="humvee_topshield" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle" >
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/humvee_topshield.khm" diffuseTex="data/models/environment/vehicles/humvee.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/humvee_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="humvee_glass_front" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="explosive" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/humvee_glass_front.khm" diffuseTex="data/models/environment/vehicles/humvee_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/humvee_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="humvee_glass_door_frontleft" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="explosive" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/humvee_glass_door_frontleft.khm" diffuseTex="data/models/environment/vehicles/humvee_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/humvee_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="humvee_glass_door_frontright" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="explosive" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/humvee_glass_door_frontright.khm" diffuseTex="data/models/environment/vehicles/humvee_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/humvee_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="humvee_glass_door_backleft" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="explosive" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/humvee_glass_door_backleft.khm" diffuseTex="data/models/environment/vehicles/humvee_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/humvee_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="humvee_glass_door_backright" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="explosive" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/humvee_glass_door_backright.khm" diffuseTex="data/models/environment/vehicles/humvee_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/humvee_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+
+<!-- Tank -->
+	
+	<Entity name="tank_t55_body_damaged" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle" >
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/tank_t55_body.khm" diffuseTex="data/models/environment/vehicles/tank_t55_damaged.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/tank_t55_damaged_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="tank_t55_turret_damaged" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle" >
+		<PhysicalParams blocksMovement="true" blocksVision="true" usableCover="false" />
+		<RenderObject3D model="data/models/environment/vehicles/tank_t55_turret.khm" diffuseTex="data/models/environment/vehicles/tank_t55_damaged.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/tank_t55_damaged_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="tank_t55_barrel_damaged" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle" >
+		<PhysicalParams blocksMovement="false" blocksVision="false" usableCover="false" />
+		<RenderObject3D model="data/models/environment/vehicles/tank_t55_barrel.khm" diffuseTex="data/models/environment/vehicles/tank_t55_damaged.dds" skipGOSSAO="true">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/tank_t55_damaged_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+		<Entity name="tank_t55_body_old" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle" >
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/tank_t55_body_old.khm" diffuseTex="data/models/environment/vehicles/tank_t55_old.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/tank_t55_old_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="tank_t55_turret_old" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle" >
+		<PhysicalParams blocksMovement="true" blocksVision="true" usableCover="false" />
+		<RenderObject3D model="data/models/environment/vehicles/tank_t55_turret_old.khm" diffuseTex="data/models/environment/vehicles/tank_t55_old.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/tank_t55_old_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="tank_t55_barrel_old" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle" >
+		<PhysicalParams blocksMovement="false" blocksVision="false" usableCover="false" />
+		<RenderObject3D model="data/models/environment/vehicles/tank_t55_barrel_old.khm" diffuseTex="data/models/environment/vehicles/tank_t55_old.dds" skipGOSSAO="true">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/tank_t55_old_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	
+	<!-- 
+	<Bind eqp="ExplosiveCharge" to="predator_wreck_head_interactable"/>
+	<Bind eqp="TECTorch" to="predator_wreck_head_interactable"/>
+	<Bind eqp="BoltCutter" to="predator_wreck_head_interactable"/>
+	<Entity name="predator_wreck_head_interactable" type="DestroyableTarget" tooltip="@tooltip_destroyableasset" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true"/>
+		<Breakable breakOnDamage="grenade" breakMode="strict_no_rand" sfx="doorsl_close">
+		</Breakable>
+		<RenderObject3D model="data/models/environment/vehicles/predator_wreck_head.khm" diffuseTex="data/models/environment/vehicles/predator_wreckage.dds" gossaoCastHeight="2.3" reflections="true">
+			<Specular mask="data/models/environment/vehicles/predator_wreckage_spec.dds" shininess="9" intensity="7.0999999"/>
+		</RenderObject3D>
+	</Entity>
+	
+	-->
+	
+	<Entity name="predator_wreck_head" type="BasicEntity" editorAutoHeight="false" hideInEditor="true">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>		
+		<RenderObject3D model="data/models/environment/vehicles/predator_wreck_head.khm" diffuseTex="data/models/environment/vehicles/predator_wreckage.dds" gossaoCastHeight="2.3" reflections="true">
+			<Specular mask="data/models/environment/vehicles/predator_wreckage_spec.dds" shininess="9" intensity="7.0999999"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="predator_wreck_head_destroyed" type="BasicEntity" editorAutoHeight="false" hideInEditor="true">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/predator_wreck_head.khm" diffuseTex="data/models/environment/vehicles/predator_wreckage_destroyed.dds" gossaoCastHeight="2.3" reflections="true">
+			<Specular mask="data/models/environment/vehicles/predator_wreckage_destroyed_spec.dds" shininess="9" intensity="7.0999999"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="predator_wreck_body" type="BasicEntity" editorAutoHeight="false" hideInEditor="true">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/predator_wreck_body.khm" diffuseTex="data/models/environment/vehicles/predator_wreckage.dds" gossaoCastHeight="2.3" reflections="true">
+			<Specular mask="data/models/environment/vehicles/predator_wreckage_spec.dds" shininess="9" intensity="7.0999999"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="predator_wreck_tail" type="BasicEntity" editorAutoHeight="false" hideInEditor="true">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/predator_wreck_tail.khm" diffuseTex="data/models/environment/vehicles/predator_wreckage.dds" gossaoCastHeight="2.3" reflections="true">
+			<Specular mask="data/models/environment/vehicles/predator_wreckage_spec.dds" shininess="9" intensity="7.0999999"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="predator_wreck_wheel" type="BasicEntity" editorAutoHeight="false" hideInEditor="true">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/predator_wreck_wheel.khm" diffuseTex="data/models/environment/vehicles/predator_wreckage.dds" gossaoCastHeight="2.3" reflections="true">
+			<Specular mask="data/models/environment/vehicles/predator_wreckage_spec.dds" shininess="9" intensity="7.0999999"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="predator_wreck_wing_left" type="BasicEntity" editorAutoHeight="false" hideInEditor="true">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/predator_wreck_wing_left.khm" diffuseTex="data/models/environment/vehicles/predator_wreckage.dds" gossaoCastHeight="2.3" reflections="true">
+			<Specular mask="data/models/environment/vehicles/predator_wreckage_spec.dds" shininess="9" intensity="7.0999999"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="predator_wreck_wing_right" type="BasicEntity" editorAutoHeight="false" hideInEditor="true">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/predator_wreck_wing_right.khm" diffuseTex="data/models/environment/vehicles/predator_wreckage.dds" gossaoCastHeight="2.3" reflections="true">
+			<Specular mask="data/models/environment/vehicles/predator_wreckage_spec.dds" shininess="9" intensity="7.0999999"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="predator_wreck_missle_left" type="BasicEntity" editorAutoHeight="false" hideInEditor="true">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/predator_wreck_missile_left.khm" diffuseTex="data/models/environment/vehicles/predator_wreckage.dds" gossaoCastHeight="2.3" reflections="true">
+			<Specular mask="data/models/environment/vehicles/predator_wreckage_spec.dds" shininess="9" intensity="7.0999999"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="predator_wreck_missile_right" type="BasicEntity" editorAutoHeight="false" hideInEditor="true">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/predator_wreck_missile_right.khm" diffuseTex="data/models/environment/vehicles/predator_wreckage.dds" gossaoCastHeight="2.3" reflections="true">
+			<Specular mask="data/models/environment/vehicles/predator_wreckage_spec.dds" shininess="9" intensity="7.0999999"/>
+		</RenderObject3D>
+	</Entity>
+
+
+	
+	
+	
+<!-- Bus -->
+
+	<Entity name="bus_01" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/bus_01.khm" diffuseTex="data/models/environment/vehicles/bus_01.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/bus_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="bus_02" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/bus_01.khm" diffuseTex="data/models/environment/vehicles/bus_02.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/bus_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="bus_03" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/bus_01.khm" diffuseTex="data/models/environment/vehicles/bus_03.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/bus_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="bus_01_window_01" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/bus_01_window_01.khm" diffuseTex="data/models/environment/vehicles/bus_01.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/bus_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="bus_01_window_02" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/bus_01_window_02.khm" diffuseTex="data/models/environment/vehicles/bus_01.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/bus_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="bus_01_window_03" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/bus_01_window_03.khm" diffuseTex="data/models/environment/vehicles/bus_01.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/bus_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="bus_01_window_04" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/bus_01_window_04.khm" diffuseTex="data/models/environment/vehicles/bus_01.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/bus_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="bus_01_lights" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="grenade" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/bus_01_lights.khm" diffuseTex="data/models/environment/vehicles/bus_01.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/bus_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+<!-- truck 01 -->
+	
+	<Entity name="truck_01" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="true" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/truck_01.khm" diffuseTex="data/models/environment/vehicles/truck_01.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/truck_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>	
+	
+	<Entity name="truck_01_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/truck_01_door_left.khm" diffuseTex="data/models/environment/vehicles/truck_01.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/truck_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="truck_01_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/truck_01_door_right.khm" diffuseTex="data/models/environment/vehicles/truck_01.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/truck_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="truck_01_glass_front" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/truck_01_glass_front.khm" diffuseTex="data/models/environment/vehicles/truck_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5" mask="data/models/environment/vehicles/truck_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="truck_01_glass_back" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/truck_01_glass_back.khm" diffuseTex="data/models/environment/vehicles/truck_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5" mask="data/models/environment/vehicles/truck_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="truck_01_glass_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/truck_01_glass_door_left.khm" diffuseTex="data/models/environment/vehicles/truck_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5" mask="data/models/environment/vehicles/truck_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="truck_01_glass_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/truck_01_glass_door_right.khm" diffuseTex="data/models/environment/vehicles/truck_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5" mask="data/models/environment/vehicles/truck_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<!-- truck 02 -->
+	
+	<Entity name="truck_02" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="true" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/truck_02.khm" diffuseTex="data/models/environment/vehicles/truck_01.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/truck_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>	
+	
+	<Entity name="truck_transport_cover" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="true" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/truck_transport_cover.khm" diffuseTex="data/models/environment/vehicles/truck_transport_cover.dds" gossaoCastHeight="4">
+		<Specular shininess="1" intensity="1" />
+		</RenderObject3D>
+	</Entity>
+
+<!-- pickup 01 -->
+		
+	<Entity name="pickup_01_green" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01.khm" diffuseTex="data/models/environment/vehicles/pickup_01_green.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_green_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01_door_left.khm" diffuseTex="data/models/environment/vehicles/pickup_01_green.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_green_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01_door_right.khm" diffuseTex="data/models/environment/vehicles/pickup_01_green.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_red" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01.khm" diffuseTex="data/models/environment/vehicles/pickup_01_red.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_red_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01_door_left.khm" diffuseTex="data/models/environment/vehicles/pickup_01_red.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_red_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01_door_right.khm" diffuseTex="data/models/environment/vehicles/pickup_01_red.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_blue" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01.khm" diffuseTex="data/models/environment/vehicles/pickup_01_blue.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_blue_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01_door_left.khm" diffuseTex="data/models/environment/vehicles/pickup_01_blue.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_blue_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01_door_right.khm" diffuseTex="data/models/environment/vehicles/pickup_01_blue.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_yellow" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01.khm" diffuseTex="data/models/environment/vehicles/pickup_01_yellow.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_yellow_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01_door_left.khm" diffuseTex="data/models/environment/vehicles/pickup_01_yellow.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_yellow_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01_door_right.khm" diffuseTex="data/models/environment/vehicles/pickup_01_yellow.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_white" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01.khm" diffuseTex="data/models/environment/vehicles/pickup_01_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_white_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01_door_left.khm" diffuseTex="data/models/environment/vehicles/pickup_01_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_white_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01_door_right.khm" diffuseTex="data/models/environment/vehicles/pickup_01_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_black" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01.khm" diffuseTex="data/models/environment/vehicles/pickup_01_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_black_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01_door_left.khm" diffuseTex="data/models/environment/vehicles/pickup_01_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_black_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01_door_right.khm" diffuseTex="data/models/environment/vehicles/pickup_01_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_glass_front" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01_glass_front.khm" diffuseTex="data/models/environment/vehicles/pickup_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/pickup_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_glass_back" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01_glass_back.khm" diffuseTex="data/models/environment/vehicles/pickup_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/pickup_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_glass_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01_glass_left.khm" diffuseTex="data/models/environment/vehicles/pickup_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/pickup_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_glass_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01_glass_right.khm" diffuseTex="data/models/environment/vehicles/pickup_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/pickup_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_glass_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01_glass_door_left.khm" diffuseTex="data/models/environment/vehicles/pickup_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/pickup_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_01_glass_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/pickup_01_glass_door_right.khm" diffuseTex="data/models/environment/vehicles/pickup_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/pickup_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+<!-- pickup 02 -->
+		
+	<Entity name="pickup_02_green" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02.khm" diffuseTex="data/models/environment/vehicles/pickup_02_green.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_green_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_door_left.khm" diffuseTex="data/models/environment/vehicles/pickup_02_green.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_green_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_door_right.khm" diffuseTex="data/models/environment/vehicles/pickup_02_green.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_red" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02.khm" diffuseTex="data/models/environment/vehicles/pickup_02_red.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_red_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_door_left.khm" diffuseTex="data/models/environment/vehicles/pickup_02_red.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_red_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_door_right.khm" diffuseTex="data/models/environment/vehicles/pickup_02_red.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_blue" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02.khm" diffuseTex="data/models/environment/vehicles/pickup_02_blue.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_blue_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_door_left.khm" diffuseTex="data/models/environment/vehicles/pickup_02_blue.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_blue_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_door_right.khm" diffuseTex="data/models/environment/vehicles/pickup_02_blue.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_yellow" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02.khm" diffuseTex="data/models/environment/vehicles/pickup_02_yellow.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_yellow_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_door_left.khm" diffuseTex="data/models/environment/vehicles/pickup_02_yellow.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_yellow_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_door_right.khm" diffuseTex="data/models/environment/vehicles/pickup_02_yellow.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_white" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02.khm" diffuseTex="data/models/environment/vehicles/pickup_02_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_white_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_door_left.khm" diffuseTex="data/models/environment/vehicles/pickup_02_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_white_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_door_right.khm" diffuseTex="data/models/environment/vehicles/pickup_02_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_pol" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_pol.khm" diffuseTex="data/models/environment/vehicles/pickup_02_pol.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_pol_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_door_left.khm" diffuseTex="data/models/environment/vehicles/pickup_02_pol.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_pol_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_door_right.khm" diffuseTex="data/models/environment/vehicles/pickup_02_pol.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_black" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02.khm" diffuseTex="data/models/environment/vehicles/pickup_02_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_black_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_door_left.khm" diffuseTex="data/models/environment/vehicles/pickup_02_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_black_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_door_right.khm" diffuseTex="data/models/environment/vehicles/pickup_02_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_glass_front" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_glass_front.khm" diffuseTex="data/models/environment/vehicles/pickup_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/pickup_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_glass_back" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_glass_back.khm" diffuseTex="data/models/environment/vehicles/pickup_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/pickup_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_glass_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_glass_left.khm" diffuseTex="data/models/environment/vehicles/pickup_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/pickup_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_glass_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_glass_right.khm" diffuseTex="data/models/environment/vehicles/pickup_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_glass_left_police" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_glass_left_pol.khm" diffuseTex="data/models/environment/vehicles/pickup_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/pickup_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_glass_right_police" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_glass_right_pol.khm" diffuseTex="data/models/environment/vehicles/pickup_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/pickup_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_glass_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_glass_door_left.khm" diffuseTex="data/models/environment/vehicles/pickup_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/pickup_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="pickup_02_glass_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/pickup_02_glass_door_right.khm" diffuseTex="data/models/environment/vehicles/pickup_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/pickup_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+<!-- sedan 01 -->
+	
+	<Entity name="sedan_01_green" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01.khm" diffuseTex="data/models/environment/vehicles/sedan_01_green.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_green_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_door_left.khm" diffuseTex="data/models/environment/vehicles/sedan_01_green.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_green_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_door_right.khm" diffuseTex="data/models/environment/vehicles/sedan_01_green.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_red" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01.khm" diffuseTex="data/models/environment/vehicles/sedan_01_red.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_red_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_door_left.khm" diffuseTex="data/models/environment/vehicles/sedan_01_red.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_red_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_door_right.khm" diffuseTex="data/models/environment/vehicles/sedan_01_red.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_blue" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01.khm" diffuseTex="data/models/environment/vehicles/sedan_01_blue.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_blue_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_door_left.khm" diffuseTex="data/models/environment/vehicles/sedan_01_blue.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_blue_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_door_right.khm" diffuseTex="data/models/environment/vehicles/sedan_01_blue.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_yellow" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01.khm" diffuseTex="data/models/environment/vehicles/sedan_01_yellow.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_yellow_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_door_left.khm" diffuseTex="data/models/environment/vehicles/sedan_01_yellow.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_yellow_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_door_right.khm" diffuseTex="data/models/environment/vehicles/sedan_01_yellow.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_white" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01.khm" diffuseTex="data/models/environment/vehicles/sedan_01_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_white_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_door_left.khm" diffuseTex="data/models/environment/vehicles/sedan_01_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_white_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_door_right.khm" diffuseTex="data/models/environment/vehicles/sedan_01_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_police" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02.khm" diffuseTex="data/models/environment/vehicles/sedan_pol.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_police_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_door_left.khm" diffuseTex="data/models/environment/vehicles/sedan_pol.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_police_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_door_right.khm" diffuseTex="data/models/environment/vehicles/sedan_pol.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_police_light" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/police_light.khm" diffuseTex="data/models/environment/vehicles/police_light.dds" gossaoCastHeight="4">
+		<Specular shininess="14" intensity="4.0"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_black" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01.khm" diffuseTex="data/models/environment/vehicles/sedan_01_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_black_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_door_left.khm" diffuseTex="data/models/environment/vehicles/sedan_01_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_black_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_door_right.khm" diffuseTex="data/models/environment/vehicles/sedan_01_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_glass_front" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_glass_front.khm" diffuseTex="data/models/environment/vehicles/sedan_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/sedan_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_glass_back" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_glass_back.khm" diffuseTex="data/models/environment/vehicles/sedan_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/sedan_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_glass_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_glass_left.khm" diffuseTex="data/models/environment/vehicles/sedan_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/sedan_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_glass_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_glass_right.khm" diffuseTex="data/models/environment/vehicles/sedan_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/sedan_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_glass_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_glass_door_left.khm" diffuseTex="data/models/environment/vehicles/sedan_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/sedan_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_glass_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_glass_door_right.khm" diffuseTex="data/models/environment/vehicles/sedan_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/sedan_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+<!-- sedan 02 -->
+	
+	<Entity name="sedan_02_green" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02.khm" diffuseTex="data/models/environment/vehicles/sedan_02_green.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_green_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_door_left.khm" diffuseTex="data/models/environment/vehicles/sedan_02_green.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_green_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_door_right.khm" diffuseTex="data/models/environment/vehicles/sedan_02_green.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_red" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02.khm" diffuseTex="data/models/environment/vehicles/sedan_02_red.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_red_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_door_left.khm" diffuseTex="data/models/environment/vehicles/sedan_02_red.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_red_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_door_right.khm" diffuseTex="data/models/environment/vehicles/sedan_02_red.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_blue" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02.khm" diffuseTex="data/models/environment/vehicles/sedan_02_blue.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_blue_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_door_left.khm" diffuseTex="data/models/environment/vehicles/sedan_02_blue.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_blue_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_door_right.khm" diffuseTex="data/models/environment/vehicles/sedan_02_blue.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_yellow" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02.khm" diffuseTex="data/models/environment/vehicles/sedan_02_yellow.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_yellow_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_door_left.khm" diffuseTex="data/models/environment/vehicles/sedan_02_yellow.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_yellow_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_door_right.khm" diffuseTex="data/models/environment/vehicles/sedan_02_yellow.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_white" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02.khm" diffuseTex="data/models/environment/vehicles/sedan_02_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_white_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_door_left.khm" diffuseTex="data/models/environment/vehicles/sedan_02_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_white_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_door_right.khm" diffuseTex="data/models/environment/vehicles/sedan_02_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_black" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02.khm" diffuseTex="data/models/environment/vehicles/sedan_02_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_black_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_door_left.khm" diffuseTex="data/models/environment/vehicles/sedan_02_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_black_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_door_right.khm" diffuseTex="data/models/environment/vehicles/sedan_02_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_glass_front" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_glass_front.khm" diffuseTex="data/models/environment/vehicles/sedan_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/sedan_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_glass_back" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_glass_back.khm" diffuseTex="data/models/environment/vehicles/sedan_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/sedan_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_glass_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_glass_left.khm" diffuseTex="data/models/environment/vehicles/sedan_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/sedan_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_glass_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_glass_right.khm" diffuseTex="data/models/environment/vehicles/sedan_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/sedan_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_glass_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_glass_door_left.khm" diffuseTex="data/models/environment/vehicles/sedan_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/sedan_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_glass_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_glass_door_right.khm" diffuseTex="data/models/environment/vehicles/sedan_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/sedan_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+<!-- hatchback 01 -->
+	
+	<Entity name="hatchback_01_green" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_green.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_green_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_door_left.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_green.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_green_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_door_right.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_green.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_red" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_red.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_red_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_door_left.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_red.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_red_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_door_right.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_red.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_blue" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_blue.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_blue_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_door_left.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_blue.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_blue_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_door_right.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_blue.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_yellow" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_yellow.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_yellow_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_door_left.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_yellow.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_yellow_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_door_right.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_yellow.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_white" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_white_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_door_left.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_white_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_door_right.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_black" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_black_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_door_left.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_black_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_door_right.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_glass_front" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_glass_front.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/hatchback_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_glass_back" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_glass_back.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/hatchback_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_glass_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_glass_left.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/hatchback_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_glass_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_glass_right.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/hatchback_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_glass_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_glass_door_left.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/hatchback_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_glass_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_glass_door_right.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/hatchback_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+<!-- hatchback 02 -->
+	
+	<Entity name="hatchback_02_green" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_green.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_green_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_door_left.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_green.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_green_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_door_right.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_green.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_red" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_red.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_red_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_door_left.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_red.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_red_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_door_right.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_red.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_blue" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_blue.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_blue_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_door_left.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_blue.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_blue_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_door_right.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_blue.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_yellow" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_yellow.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_yellow_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_door_left.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_yellow.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_yellow_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_door_right.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_yellow.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_white" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_white_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_door_left.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_white_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_door_right.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_black" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_black_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_door_left.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_black_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_door_right.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_glass_front" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_glass_front.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/hatchback_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_glass_back" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_glass_back.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/hatchback_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_glass_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_glass_left.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/hatchback_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_glass_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_glass_right.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/hatchback_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_glass_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_glass_door_left.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/hatchback_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_glass_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_glass_door_right.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/hatchback_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<!-- luxury 01 -->	
+	
+	<Entity name="luxury_01_white" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/luxury_01.khm" diffuseTex="data/models/environment/vehicles/luxury_01_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/luxury_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_01_white_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/luxury_01_door_left.khm" diffuseTex="data/models/environment/vehicles/luxury_01_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/luxury_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_01_white_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/luxury_01_door_right.khm" diffuseTex="data/models/environment/vehicles/luxury_01_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/luxury_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_01_black" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/luxury_01.khm" diffuseTex="data/models/environment/vehicles/luxury_01_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/luxury_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_01_black_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/luxury_01_door_left.khm" diffuseTex="data/models/environment/vehicles/luxury_01_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/luxury_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_01_black_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/luxury_01_door_right.khm" diffuseTex="data/models/environment/vehicles/luxury_01_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/luxury_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_01_glass_front" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/luxury_01_glass_front.khm" diffuseTex="data/models/environment/vehicles/luxury_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/luxury_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_01_glass_back" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/luxury_01_glass_back.khm" diffuseTex="data/models/environment/vehicles/luxury_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/luxury_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_01_glass_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/luxury_01_glass_left.khm" diffuseTex="data/models/environment/vehicles/luxury_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/luxury_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_01_glass_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/luxury_01_glass_right.khm" diffuseTex="data/models/environment/vehicles/luxury_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/luxury_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_01_glass_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/luxury_01_glass_door_left.khm" diffuseTex="data/models/environment/vehicles/luxury_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/luxury_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_01_glass_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/luxury_01_glass_door_right.khm" diffuseTex="data/models/environment/vehicles/luxury_01_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/luxury_01_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<!-- luxury 02 -->	
+	
+	<Entity name="luxury_02_white" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/luxury_02.khm" diffuseTex="data/models/environment/vehicles/luxury_02_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/luxury_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_02_white_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/luxury_02_door_left.khm" diffuseTex="data/models/environment/vehicles/luxury_02_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/luxury_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_02_white_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/luxury_02_door_right.khm" diffuseTex="data/models/environment/vehicles/luxury_02_white.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/luxury_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_02_black" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/luxury_02.khm" diffuseTex="data/models/environment/vehicles/luxury_02_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/luxury_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_02_black_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/luxury_02_door_left.khm" diffuseTex="data/models/environment/vehicles/luxury_02_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/luxury_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_02_black_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/luxury_02_door_right.khm" diffuseTex="data/models/environment/vehicles/luxury_02_black.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/luxury_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_02_glass_front" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/luxury_02_glass_front.khm" diffuseTex="data/models/environment/vehicles/luxury_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/luxury_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_02_glass_back" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/luxury_02_glass_back.khm" diffuseTex="data/models/environment/vehicles/luxury_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/luxury_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_02_glass_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/luxury_02_glass_left.khm" diffuseTex="data/models/environment/vehicles/luxury_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/luxury_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_02_glass_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/luxury_02_glass_right.khm" diffuseTex="data/models/environment/vehicles/luxury_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/luxury_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_02_glass_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/luxury_02_glass_door_left.khm" diffuseTex="data/models/environment/vehicles/luxury_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/luxury_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="luxury_02_glass_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet" sfx="glass_break"/>
+		<RenderObject3D model="data/models/environment/vehicles/luxury_02_glass_door_right.khm" diffuseTex="data/models/environment/vehicles/luxury_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/luxury_02_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	<!-- VBIED armor -->
+	
+	<Entity name="vbied_hatchback_01" type="BasicEntity" hideInEditor="false" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/vbied_hatchback_01.khm" diffuseTex="data/models/environment/vehicles/vbied_hatchback_01.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/vbied_hatchback_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="vbied_hatchback_01_door_left" type="BasicEntity" hideInEditor="false" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/vbied_hatchback_01_door_left.khm" diffuseTex="data/models/environment/vehicles/vbied_hatchback_01.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/vbied_hatchback_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="vbied_hatchback_01_door_right" type="BasicEntity" hideInEditor="false" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/vbied_hatchback_01_door_right.khm" diffuseTex="data/models/environment/vehicles/vbied_hatchback_01.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/vbied_hatchback_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="vbied_pickup_01" type="BasicEntity" hideInEditor="false" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/vbied_pickup_01.khm" diffuseTex="data/models/environment/vehicles/vbied_pickup_01.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/vbied_pickup_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="vbied_pickup_01_door_left" type="BasicEntity" hideInEditor="false" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/vbied_pickup_01_door_left.khm" diffuseTex="data/models/environment/vehicles/vbied_pickup_01.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/vbied_pickup_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="vbied_pickup_01_door_right" type="BasicEntity" hideInEditor="false" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/vbied_pickup_01_door_right.khm" diffuseTex="data/models/environment/vehicles/vbied_pickup_01.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/vbied_pickup_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="vbied_sedan_02" type="BasicEntity" hideInEditor="false" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/vbied_sedan_02.khm" diffuseTex="data/models/environment/vehicles/vbied_sedan_02.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/vbied_sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="vbied_sedan_02_door_left" type="BasicEntity" hideInEditor="false" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/vbied_sedan_02_door_left.khm" diffuseTex="data/models/environment/vehicles/vbied_sedan_02.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/vbied_sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="vbied_sedan_02_door_right" type="BasicEntity" hideInEditor="false" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/vbied_sedan_02_door_right.khm" diffuseTex="data/models/environment/vehicles/vbied_sedan_02.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/vbied_sedan_02_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="vbied_truck_01" type="BasicEntity" hideInEditor="false" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/vbied_truck_01.khm" diffuseTex="data/models/environment/vehicles/vbied_truck_01.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/vbied_truck_01_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	
+<!-- Old Sedan -->
+
+	<Entity name="old_sedan_01_01" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_01.khm" diffuseTex="data/models/environment/vehicles/old_sedan_01.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_01_02" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_01.khm" diffuseTex="data/models/environment/vehicles/old_sedan_02.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_01_03" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_01.khm" diffuseTex="data/models/environment/vehicles/old_sedan_03.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_01_04" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_01.khm" diffuseTex="data/models/environment/vehicles/old_sedan_04.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_01_05" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_01.khm" diffuseTex="data/models/environment/vehicles/old_sedan_05.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_02_01" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_02.khm" diffuseTex="data/models/environment/vehicles/old_sedan_01.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_02_02" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_02.khm" diffuseTex="data/models/environment/vehicles/old_sedan_02.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_02_03" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_02.khm" diffuseTex="data/models/environment/vehicles/old_sedan_03.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_02_04" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_02.khm" diffuseTex="data/models/environment/vehicles/old_sedan_04.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_02_05" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_02.khm" diffuseTex="data/models/environment/vehicles/old_sedan_05.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_03_01" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_03.khm" diffuseTex="data/models/environment/vehicles/old_sedan_01.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_03_02" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_03.khm" diffuseTex="data/models/environment/vehicles/old_sedan_02.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_03_03" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_03.khm" diffuseTex="data/models/environment/vehicles/old_sedan_03.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_03_04" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_03.khm" diffuseTex="data/models/environment/vehicles/old_sedan_04.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_03_05" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_03.khm" diffuseTex="data/models/environment/vehicles/old_sedan_05.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+		<Entity name="old_sedan_04_01" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_04.khm" diffuseTex="data/models/environment/vehicles/old_sedan_01.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_04_02" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_04.khm" diffuseTex="data/models/environment/vehicles/old_sedan_02.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_04_03" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_04.khm" diffuseTex="data/models/environment/vehicles/old_sedan_03.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_04_04" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_04.khm" diffuseTex="data/models/environment/vehicles/old_sedan_04.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_04_05" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_04.khm" diffuseTex="data/models/environment/vehicles/old_sedan_05.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_05_01" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_05.khm" diffuseTex="data/models/environment/vehicles/old_sedan_01.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_05_02" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_05.khm" diffuseTex="data/models/environment/vehicles/old_sedan_02.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_05_03" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_05.khm" diffuseTex="data/models/environment/vehicles/old_sedan_03.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_05_04" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_05.khm" diffuseTex="data/models/environment/vehicles/old_sedan_04.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_05_05" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_05.khm" diffuseTex="data/models/environment/vehicles/old_sedan_05.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_06_01" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_06.khm" diffuseTex="data/models/environment/vehicles/old_sedan_01.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_06_02" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_06.khm" diffuseTex="data/models/environment/vehicles/old_sedan_02.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_06_03" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_06.khm" diffuseTex="data/models/environment/vehicles/old_sedan_03.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_06_04" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_06.khm" diffuseTex="data/models/environment/vehicles/old_sedan_04.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="old_sedan_06_05" type="BasicEntity" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/old_sedan_06.khm" diffuseTex="data/models/environment/vehicles/old_sedan_05.dds">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/old_sedan_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	
+	<!-- Destroyed cars	-->
+	
+	<Entity name="sedan_01_destroyed" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_destroyed.khm" diffuseTex="data/models/environment/vehicles/sedan_01_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_destroyed_hood_front" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_destroyed_hood_front.khm" diffuseTex="data/models/environment/vehicles/sedan_01_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_destroyed_hood_back" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_destroyed_hood_back.khm" diffuseTex="data/models/environment/vehicles/sedan_01_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_destroyed_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_destroyed_door_left.khm" diffuseTex="data/models/environment/vehicles/sedan_01_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_destroyed_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_destroyed_door_right.khm" diffuseTex="data/models/environment/vehicles/sedan_01_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_destroyed_wheels" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_destroyed_wheels.khm" diffuseTex="data/models/environment/vehicles/sedan_01_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_01_destroyed_frontseat" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_01_destroyed_frontseat.khm" diffuseTex="data/models/environment/vehicles/sedan_01_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_01_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_destroyed" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_destroyed.khm" diffuseTex="data/models/environment/vehicles/sedan_02_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_destroyed_hood_front" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_destroyed_hood_front.khm" diffuseTex="data/models/environment/vehicles/sedan_02_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_destroyed_hood_back" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_destroyed_hood_back.khm" diffuseTex="data/models/environment/vehicles/sedan_02_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_destroyed_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_destroyed_door_left.khm" diffuseTex="data/models/environment/vehicles/sedan_02_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_destroyed_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_destroyed_door_right.khm" diffuseTex="data/models/environment/vehicles/sedan_02_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_destroyed_wheels" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_destroyed_wheels.khm" diffuseTex="data/models/environment/vehicles/sedan_02_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="sedan_02_destroyed_frontseat" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/sedan_02_destroyed_frontseat.khm" diffuseTex="data/models/environment/vehicles/sedan_02_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/sedan_02_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_destroyed" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_destroyed.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_destroyed_hood_front" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_destroyed_hood_front.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+
+<!-- Special for some King of Spades explosion -->
+	<Entity name="hatchback_01_destroyed_hood_front_phys" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams physicsEnabled="true" solid="true" density="150"/>
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_destroyed_hood_front.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_destroyed_hood_back" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_destroyed_hood_back.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_destroyed_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_destroyed_door_left.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_destroyed_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_destroyed_door_right.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_destroyed_wheels" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_destroyed_wheels.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_01_destroyed_frontseat" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_01_destroyed_frontseat.khm" diffuseTex="data/models/environment/vehicles/hatchback_01_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_01_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_destroyed" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_destroyed.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_destroyed_hood_front" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_destroyed_hood_front.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_destroyed_hood_back" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_destroyed_hood_back.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_destroyed_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_destroyed_door_left.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_destroyed_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_destroyed_door_right.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_destroyed_wheels" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_destroyed_wheels.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="hatchback_02_destroyed_frontseat" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/hatchback_02_destroyed_frontseat.khm" diffuseTex="data/models/environment/vehicles/hatchback_02_destroyed.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/hatchback_02_destroyed_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+<!-- Helicopter -->
+
+	<!-- Helicopter clean -->
+	
+	<Entity name="uh60_helicopter_body" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="true" usableCover="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_body.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter.dds" gossaoCastHeight="7">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/uh60_helicopter_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_blades" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_blades.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter.dds" skipGOSSAO="true" coverFOVPreview="true">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/uh60_helicopter_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_tailwing" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_tailwing.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter.dds" skipGOSSAO="true">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/uh60_helicopter_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_door_left.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter.dds" skipGOSSAO="true">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/uh60_helicopter_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_door_right.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter.dds" skipGOSSAO="true">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/uh60_helicopter_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_glass_front_center" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_front_center.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_glass_front_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_front_left.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_glass_front_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_front_right.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_glass_left_01" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_left_01.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_glass_left_02" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_left_02.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_glass_left_03" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_left_03.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_glass_right_01" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_right_01.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_glass_right_02" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_right_02.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_glass_right_03" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_right_03.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="uh60_helicopter_glass_door_left" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_door_left.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_glass_door_right" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_door_right.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_blades_spinning" type="BasicEntity" hideInEditor="false" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" usableCover="false" solid="false" />
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_blades_spinning.khm" blendMode="normal" diffuseTex="data/models/environment/vehicles/uh60_helicopter_blades_spinning.dds" skipGOSSAO="true">
+		</RenderObject3D>
+		<AnimationSet name="uh60_helicopter_blades_spinning" />
+	</Entity>	
+	
+	<Entity name="uh60_helicopter_body_flying" type="BasicEntity" hideInEditor="false" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="true" usableCover="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_body_flying.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter.dds" gossaoCastHeight="7">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/uh60_helicopter_spec.dds" />
+		</RenderObject3D>
+	</Entity>	
+
+<!-- Helicopter crashed -->
+	
+	<Entity name="uh60_helicopter_body_crashed" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="true" usableCover="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_body_crashed.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_crashed.dds" gossaoCastHeight="7">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/uh60_helicopter_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_blades_crashed" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="false" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_blades_crashed.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_crashed.dds" skipGOSSAO="true" coverFOVPreview="true">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/uh60_helicopter_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_tailwing_crashed" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_tailwing_crashed.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_crashed.dds" skipGOSSAO="true">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/uh60_helicopter_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_door_left_crashed" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_door_left_crashed.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_crashed.dds" skipGOSSAO="true">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/uh60_helicopter_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_door_right_crashed" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_door_right_crashed.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_crashed.dds" skipGOSSAO="true">
+			<Specular shininess="8" intensity="1.5" mask="data/models/environment/vehicles/uh60_helicopter_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_glass_front_center_crashed" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_front_center_crashed.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass_crashed.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_glass_front_left_crashed" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_front_left_crashed.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass_crashed.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_glass_front_right_crashed" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_front_right_crashed.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass_crashed.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_glass_left_01_crashed" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_left_01_crashed.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass_crashed.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_glass_left_02_crashed" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_left_02_crashed.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass_crashed.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_glass_left_03_crashed" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_left_03_crashed.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass_crashed.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_glass_right_01_crashed" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_right_01_crashed.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass_crashed.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_glass_right_02_crashed" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_right_02_crashed.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass_crashed.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds" />
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_glass_right_03_crashed" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_right_03_crashed.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass_crashed.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="uh60_helicopter_glass_door_left_crashed" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_door_left_crashed.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass_crashed.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="uh60_helicopter_glass_door_right_crashed" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/uh60_helicopter_glass_door_right_crashed.khm" diffuseTex="data/models/environment/vehicles/uh60_helicopter_glass_crashed.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/uh60_helicopter_glass_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+
+<!-- Forklift -->	
+	
+	<Entity name="forklift" type="BasicEntity" hideInEditor="false" editorAutoHeight="false" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/forklift.khm" diffuseTex="data/models/environment/vehicles/forklift.dds" gossaoCastHeight="4">
+		<!--<Specular shininess="4" intensity="3" mask="data/models/environment/vehicles/forklift_spec.dds"/>-->
+		</RenderObject3D>
+	</Entity>
+	
+	<!-- Train -->	
+	
+	<Entity name="train" type="BasicEntity" hideInEditor="false" editorAutoHeight="true" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="true" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/train_locomotive.khm" diffuseTex="data/models/environment/vehicles/train_locomotive.dds" gossaoCastHeight="4">
+		</RenderObject3D>
+	</Entity>
+
+<!-- Airplane -->	
+	
+	<Entity name="airplane_t_main" type="BasicEntity" hideInEditor="true" editorAutoHeight="true" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="true" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/airplane_t_main.khm" diffuseTex="data/models/environment/vehicles/airplane_t.dds" gossaoCastHeight="4">
+		<!--<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/airplane_t_spec.dds" />-->
+		</RenderObject3D>
+	</Entity>	
+	
+	<Entity name="airplane_t_wings" type="BasicEntity" hideInEditor="true" editorAutoHeight="true" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="false" />
+		<RenderObject3D model="data/models/environment/vehicles/airplane_t_wings.khm" diffuseTex="data/models/environment/vehicles/airplane_t.dds" gossaoCastHeight="4">
+		<!--<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/airplane_t_spec.dds" />-->
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="airplane_t_hstabilizer" type="BasicEntity" hideInEditor="true" editorAutoHeight="true" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="false" />
+		<RenderObject3D model="data/models/environment/vehicles/airplane_t_hstabilizer.khm" diffuseTex="data/models/environment/vehicles/airplane_t.dds" gossaoCastHeight="4">
+		<!--<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/airplane_t_spec.dds" />-->
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="airplane_t_glass" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="vehicle">
+	<Breakable template="Breakable_Glass" breakOnDamage="grenade"/>
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/airplane_t_glass.khm" diffuseTex="data/models/environment/vehicles/airplane_t.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		</RenderObject3D>
+	</Entity>
+	
+<!-- Airplane Debris -->
+
+	<Entity name="airplane_t_debris_main" type="BasicEntity" hideInEditor="true" editorAutoHeight="true" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="true" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/airplane_t_debris_main.khm" diffuseTex="data/models/environment/vehicles/airplane_t_debris.dds" gossaoCastHeight="4">
+		<!--<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/airplane_t_spec.dds" />-->
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="airplane_t_debris_wings" type="BasicEntity" hideInEditor="true" editorAutoHeight="true" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="false" />
+		<RenderObject3D model="data/models/environment/vehicles/airplane_t_debris_wings.khm" diffuseTex="data/models/environment/vehicles/airplane_t_debris.dds" gossaoCastHeight="4">
+		<!--<Specular shininess="64" intensity="5.0" mask="data/models/environment/vehicles/airplane_t_spec.dds" />-->
+		</RenderObject3D>
+	</Entity>
+	
+<!-- Cargo ship -->
+
+	<Entity name="Cargo Ship" type="BasicEntity" hideInEditor="true" editorAutoHeight="true" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/ship_cargo.khm" diffuseTex="data/models/environment/vehicles/ship_cargo.dds" gossaoCastHeight="4">
+		</RenderObject3D>
+	</Entity>
+	
+	<Entity name="railing main deck" type="BasicEntity" hideInEditor="true" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" />
+		<RenderObject3D model="data/models/environment/vehicles/ship_railing_main_deck.khm" diffuseTex="data/models/environment/vehicles/ship_cargo.dds"/>
+	</Entity>
+	
+	<Entity name="anchor mechanism" type="BasicEntity" hideInEditor="true" editorTags="vehicle" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<RenderObject3D model="data/models/environment/vehicles/anchor_mechanism.khm" diffuseTex="data/models/environment/vehicles/ship_cargo.dds" skipGOSSAO="true"/>
+	</Entity>
+	
+	<Entity name="foremast" type="BasicEntity" hideInEditor="true" editorTags="vehicle" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<RenderObject3D model="data/models/environment/vehicles/foremast.khm" diffuseTex="data/models/environment/vehicles/ship_cargo.dds" skipGOSSAO="true"/>
+	</Entity>
+	
+	<Entity name="railing deck" type="BasicEntity" hideInEditor="true" editorTags="vehicle" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" solid="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/railing_deck.khm" diffuseTex="data/models/environment/vehicles/ship_cargo.dds" skipGOSSAO="true"/>
+	</Entity>
+	
+	<Entity name="handrail deck" type="BasicEntity" hideInEditor="true" editorTags="vehicle" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="false" solid="false" />
+		<RenderObject3D model="data/models/environment/vehicles/handrail_ship.khm" diffuseTex="data/models/environment/vehicles/ship_cargo.dds" skipGOSSAO="true"/>
+	</Entity>
+	
+	<Entity name="vent ship" type="BasicEntity" hideInEditor="true" editorTags="vehicle" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" solid="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/vent_ship.khm" diffuseTex="data/models/environment/vehicles/ship_cargo.dds" skipGOSSAO="true"/>
+	</Entity>
+	
+	<Entity name="bollard ship" type="BasicEntity" hideInEditor="true" editorTags="vehicle" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" solid="false" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/bollard_ship.khm" diffuseTex="data/models/environment/vehicles/ship_cargo.dds" skipGOSSAO="true"/>
+	</Entity>
+	
+	<Entity name="ship_deck" type="BasicEntity" editorAutoHeight="true" initialHeight="0.01" editorTags="vehicle">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/vehicles/ship_deck.khm" diffuseTex="data/models/environment/vehicles/ship_cargo.dds" skipGOSSAO="true" />
+	</Entity>
+	
+	<Entity name="lifeboat" type="BasicEntity" hideInEditor="false" editorAutoHeight="true" editorTags="vehicle">
+		<PhysicalParams blocksMovement="true" blocksVision="true" usableCover="true" />
+		<RenderObject3D model="data/models/environment/vehicles/ship_cargo_lifeboat.khm" diffuseTex="data/models/environment/vehicles/ship_cargo_lifeboat.dds" gossaoCastHeight="4">
+		</RenderObject3D>
+	</Entity>
+
+	
+</Entities>

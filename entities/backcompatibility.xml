@@ -1,0 +1,312 @@
+<!--
+		For help, please refer to "help_entities.txt" in this directory.
+		
+		This is a file for duplicates of renamed entities that have been used in previous levels by users.
+		
+		Everything in this file is obsolete and should no longer be used
+-->
+<Entities>
+
+<!-- Basic Entities -->
+	<Bind eqp="Slap Charge" to="fence_test"/>
+	<Bind eqp="Slap Charge Kit" to="fence_test"/>
+	<Bind eqp="NWS Door Charge" to="fence_test"/>
+	<Entity name="fence_test" type="BasicEntity" hideInEditor="true" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false" health="10"/>
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_test.khm" diffuseTex="data/models/environment/exterior/fence_metal_01.dds" gossaoCastHeight="10" alphaTest="true" skipSSAO="true"/>
+	</Entity>
+	
+	<Bind eqp="Breaching Charge" to="fence_metal_90_01"/>
+	<Bind eqp="NWS Demo Charge" to="fence_metal_90_01"/>
+	<Bind eqp="TECTorch" to="fence_metal_90_01"/>
+	<Bind eqp="BoltCutter" to="fence_metal_90_01"/>
+	<Entity name="fence_metal_90_01" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="fences">
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_metal_90_01.khm" diffuseTex="data/models/environment/exterior/fence_metal_01.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_metal_90_top_01.khm" diffuseTex="data/models/environment/exterior/fence_metal_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+	
+	<Bind eqp="Slap Charge" to="fence_chainlink_02"/>
+	<Bind eqp="Slap Charge Kit" to="fence_chainlink_02"/>
+	<Bind eqp="NWS Door Charge" to="fence_chainlink_02"/>
+	<Bind eqp="TECTorch" to="fence_chainlink_02"/>
+	<Bind eqp="BoltCutter" to="fence_chainlink_02"/>
+	<Entity name="fence_chainlink_02" type="BasicEntity" hideInEditor="true" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false"  health="10"/>
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_chainlink_02.khm" diffuseTex="data/models/environment/exterior/fence_chainlink_01.dds" gossaoCastHeight="10" alphaTest="true" skipSSAO="true"/>
+	</Entity>
+	
+	<Entity name="pillar_deco_03" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="pillar">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Ceramic"/>
+		<RenderObject3D model="data/models/environment/interior/pillar_deco_03.khm" diffuseTex="data/models/environment/interior/pillar_deco_02_02.dds"/>
+	</Entity>
+	
+	<Entity name="pillar_deco_02" type="BasicEntity" hideInEditor="true" editorAutoHeight="false" editorTags="pillar">
+		<PhysicalParams blocksMovement="true" blocksVision="true"/>
+		<Breakable template="Breakable_Ceramic"/>
+		<RenderObject3D model="data/models/environment/interior/pillar_deco_02.khm" diffuseTex="data/models/environment/interior/pillar_deco_02.dds"/>
+	</Entity>
+	
+	<Bind eqp="SpyCamera" to="gate_large_double test"/>
+	<Bind eqp="Grenade" to="gate_large_double test"/>
+	<Bind eqp="ExplosiveCharge" to="gate_large_double test"/>
+	<Entity name="gate_large_double test" hideInEditor="true" type="Door" fogOfWarVisibility="hiddenInitially" tooltip="@entity_door_tooltip" editorAutoHeight="false">
+		<PhysicalParams blocksVision="false"/>
+		<Breakable template="Breakable_Door_Grate"/>
+		<RenderObject3D model="data/models/environment/various/gate_large_double.khm" diffuseTex="data/models/environment/various/gate_large.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/various/gate_large_spec.dds"/>
+		</RenderObject3D>
+		<RenderObject3D model="data/models/environment/various/gate_large_double_symbol.khm" diffuseColor="e6d4c0" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+
+		<Door
+			type="normal"
+
+			locked="false"
+			openAngle="170"
+			openCloseTimeMsec="900"
+
+			sfxOpen="door_grate_open"
+			sfxClose="door_grate_close"
+			sfxKick="door_grate_kick"
+			sfxCrowbar="crowbar_use_metal"
+			sfxBreakHammer="door_grate_ram">
+		</Door>
+	</Entity>
+	
+	
+	<Entity name="fence_stone__pole_01" type="BasicEntity" editorAutoHeight="false" hideInEditor="true" editorTags="fences">
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<Breakable template="Breakable_Concrete"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_stone_pole_01.khm" diffuseTex="data/models/environment/exterior/fence_stone_01.dds" disableLighting="false"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_stone_pole_roof_01.khm" diffuseTex="data/models/environment/exterior/fence_stone_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+	
+	<Entity name="fence_stone__pole_02" type="BasicEntity" editorAutoHeight="false" hideInEditor="true" editorTags="fences">
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<Breakable template="Breakable_Concrete"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_stone_pole_01.khm" diffuseTex="data/models/environment/exterior/fence_stone_02.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_stone_pole_roof_01.khm" diffuseTex="data/models/environment/exterior/fence_stone_02.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+	<!-- Old Industrial Machines -->
+	
+	<Entity name="machine_01" type="BasicEntity" hideInEditor="true" editorTags="machines" >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_01.khm" diffuseTex="data/models/environment/industrial/machine_01.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_01_spec.dds"/>
+	</Entity>
+	
+	<Entity name="machine_01_part_01" type="BasicEntity" hideInEditor="true" editorTags="machines" >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_01_part_01.khm" diffuseTex="data/models/environment/industrial/machine_01.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_01_spec.dds"/>
+	</Entity>
+	
+	<!--
+	<Entity name="machine_01_part_02" type="BasicEntity" hideInEditor="true" editorTags="machines" >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_01_part_02.khm" diffuseTex="data/models/environment/industrial/machine_01.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_01_spec.dds"/>
+	</Entity>
+	-->
+	
+	<Entity name="machine_01_part_03" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_01_part_03.khm" diffuseTex="data/models/environment/industrial/machine_01.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_01_spec.dds"/>
+	</Entity>
+	
+	<Entity name="machine_03" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_03.khm" diffuseTex="data/models/environment/industrial/machine_03.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_03_spec.dds"/>
+	</Entity>
+	
+	<Entity name="machine_03_part_01" type="BasicEntity" hideInEditor="true" editorTags="machines" >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_03_part_01.khm" diffuseTex="data/models/environment/industrial/machine_03.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_01_spec.dds"/>
+	</Entity>
+	
+	<!--
+	<Entity name="machine_03_part_02" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_03_part_02.khm" diffuseTex="data/models/environment/industrial/machine_03.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_01_spec.dds"/>
+	</Entity>
+	-->
+	
+		<Entity name="machine_04" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" solid="false"  blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_04.khm" diffuseTex="data/models/environment/industrial/machine_04.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_04_spec.dds"/>
+	</Entity>
+	
+	<Entity name="machine_04_part_01" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_04_part_01.khm" diffuseTex="data/models/environment/industrial/machine_04.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_01_spec.dds"/>
+	</Entity>
+	
+	<Entity name="machine_04_part_02" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_04_part_02.khm" diffuseTex="data/models/environment/industrial/machine_04.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_01_spec.dds"/>
+	</Entity>
+	
+	<!-- Obsolete humans -->
+	
+	<!-- NOTE: The *Relaxed human versions used to use the Civilian behavior so they roamed around the map -->
+	<!-- They are no longer required, as you can now set the roaming behavior individually per each human -->
+	<!-- We still need to keep the versions below. All that's different with them is the `roamAround` trait is set to true by default -->
+	<Entity name="Grunt Insurgent Weaponless Relaxed" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" hideInEditor="true">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse1.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban_and_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat"  suppressionRecovery="10.0"/>
+			<Id name="Grunt Insurgent" portrait="data/textures/portraits/enemy_grunt_ak.dds" voicePack="enemy arabic"/>
+			<Traits chanceToBlindFire="0.5" stopsToShoot="true" roamAround="true"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+	<Entity name="Veteran Weaponless Relaxed" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" hideInEditor="true">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse2.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse2.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="20.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true" roamAround="true" />
+			<Id name="Veteran Insurgent" portrait="data/textures/portraits/enemy_veteran.dds" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+			</Equipment>
+		</Human>
+	</Entity>
+	
+	<Bind eqp="SpyCamera" to="gate_large_double"/>
+	<Bind eqp="Grenade" to="gate_large_double"/>
+	<Bind eqp="ExplosiveCharge" to="gate_large_double"/>
+	<Entity name="gate_large_double" hideInEditor="true" type="Door" fogOfWarVisibility="hiddenState" tooltip="@entity_door_gate_large_tooltip" editorAutoHeight="false">
+		<PhysicalParams blocksVision="false" solid="false" />
+		<Breakable template="Breakable_Door_Grate"/>
+		<RenderObject3D model="data/models/environment/various/gate_large_double.khm" diffuseTex="data/models/environment/various/gate_large.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/various/gate_large_spec.dds"/>
+		</RenderObject3D>
+		<RenderObject3D model="data/models/environment/various/gate_large_double_symbol.khm" diffuseColor="e6d4c0" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+
+		<Door
+			type="normal"
+
+			locked="false"
+			openAngle="90"
+			openCloseTimeMsec="1400"
+
+			sfxOpen="door_grate_open"
+			sfxClose="door_grate_close"
+			sfxKick="door_grate_kick"
+			sfxCrowbar="crowbar_use_metal"
+			sfxBreakHammer="door_grate_ram">
+		</Door>
+	</Entity>
+	
+	<Entity name="predator_wreckage" type="BasicEntity" editorAutoHeight="false" hideInEditor="true">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/vehicles/predator_wreckage.khm" diffuseTex="data/models/environment/vehicles/predator_wreckage.dds" gossaoCastHeight="2.3" reflections="true">
+			<Specular mask="data/models/environment/vehicles/predator_wreckage_spec.dds" shininess="9" intensity="7.0999999"/>
+		</RenderObject3D>
+	</Entity>
+
+	<!-- <Bind eqp="Grenade" to="window_frame"/> -->
+	<!-- <Bind eqp="ExplosiveCharge" to="window_frame"/> <!-- includes slaps/slap kit/breaching charge -->
+	<!-- <Entity name="window_frame" type="Window" hideInEditor="true" tooltip="@entity_window" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" blocksVision="false" solid="true" usableCover="true"/>
+		<Breakable>
+
+			<Piece entityName="wall_debris_04"/>
+			<Piece entityName="wall_debris_04"/>
+			<Piece entityName="wall_debris_04"/>
+
+			<Piece entityName="wall_debris_05"/>
+			<Piece entityName="wall_debris_05"/>
+			<Piece entityName="wall_debris_05"/>
+
+			<Piece entityName="wall_debris_06"/>
+			<Piece entityName="wall_debris_06"/>
+			<Piece entityName="wall_debris_06"/>
+		</Breakable>
+		<RenderObject3D model="data/models/environment/various/window_single_02.khm" diffuseTex="data/models/environment/various/window_single_02.dds"/>
+		<RenderObject3D model="data/models/environment/various/window_single_02_symbol.khm" diffuseTex="data/models/environment/various/window_symbol.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity> -->
+	
+	<Bind eqp="Grenade" to="window_frame_02"/>
+	<Bind eqp="ExplosiveCharge" to="window_frame_02"/> <!-- includes slaps/slap kit/breaching charge -->
+	<Entity name="window_frame_02" type="Window" hideInEditor="true" tooltip="@entity_window" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" blocksVision="false" solid="true" usableCover="true"/>
+		<Breakable>
+
+			<Piece entityName="wall_debris_04"/>
+			<Piece entityName="wall_debris_04"/>
+			<Piece entityName="wall_debris_04"/>
+
+			<Piece entityName="wall_debris_05"/>
+			<Piece entityName="wall_debris_05"/>
+			<Piece entityName="wall_debris_05"/>
+
+			<Piece entityName="wall_debris_06"/>
+			<Piece entityName="wall_debris_06"/>
+			<Piece entityName="wall_debris_06"/>
+		</Breakable>
+		<RenderObject3D model="data/models/environment/various/window_single_02.khm" diffuseTex="data/models/environment/various/window_single_white.dds"/>
+		<RenderObject3D model="data/models/environment/various/window_single_02_symbol.khm" diffuseTex="data/models/environment/various/window_symbol.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Bind eqp="Grenade" to="window_frame_03"/>
+	<Bind eqp="ExplosiveCharge" to="window_frame_03"/> <!-- includes slaps/slap kit/breaching charge -->
+	<Entity name="window_frame_03" type="Window" hideInEditor="true" tooltip="@entity_window" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" blocksVision="false" solid="true" usableCover="true"/>
+		<Breakable>
+
+			<Piece entityName="wall_debris_04"/>
+			<Piece entityName="wall_debris_04"/>
+			<Piece entityName="wall_debris_04"/>
+
+			<Piece entityName="wall_debris_05"/>
+			<Piece entityName="wall_debris_05"/>
+			<Piece entityName="wall_debris_05"/>
+
+			<Piece entityName="wall_debris_06"/>
+			<Piece entityName="wall_debris_06"/>
+			<Piece entityName="wall_debris_06"/>
+		</Breakable>
+		<RenderObject3D model="data/models/environment/various/window_single_02.khm" diffuseTex="data/models/environment/various/window_single_brick.dds"/>
+		<RenderObject3D model="data/models/environment/various/window_single_02_symbol.khm" diffuseTex="data/models/environment/various/window_symbol.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+	
+	<Entity name="Decal MPopa" type="Decal" hideInEditor="true" editorAutoHeight="true">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="mpopa.png" hideInGame="true"/>
+		<Decal size="1.0"/>
+	</Entity>	
+</Entities>

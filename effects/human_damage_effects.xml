@@ -1,0 +1,68 @@
+<DamageDetails>
+	<!--
+		To change the FX a human entity uses, add a new "damageFX" attribute with the DamageFX name on its Human tag
+		Ex: <Human type="Hostage"> 
+			to 
+			<Human type="Hostage" damageFX="HumanDusty">
+	-->
+
+	<!-- NOTE: HumanDefault is default on all humans, don't rename and leave it first -->
+	<DamageFX name="HumanDefault"
+		takeDamageParticles="BloodSplatter01"
+		burningParticles="HumanBurning"
+		burnedTextureBody="data/textures/misc/human_scorched.dds"
+		burnedTextureEquipment="data/textures/misc/clothes_scorched.dds"
+		burningTextureBody="data/textures/misc/human_burning.dds"
+		burningTextureEquipment="data/textures/misc/clothes_burning.dds"
+		>
+		
+		<DecalSplatter name="Decal Blood Splatter 1"/>
+		<DecalSplatter name="Decal Blood Splatter 2"/>
+		<DecalSplatter name="Decal Blood Splatter 3"/>
+		<DecalSplatter name="Decal Blood Splatter 4"/>
+		<DecalSplatter name="Decal Blood Splatter 5"/>
+		<DecalSplatter name="Decal Blood Splatter 6"/>
+		<DecalSplatter name="Decal Blood Splatter 7"/>
+		<DecalSplatter name="Decal Blood Splatter 8"/>
+		
+		<DecalDirectional name="Decal Blood Directional 1"/>
+		<DecalDirectional name="Decal Blood Directional 2"/>
+		<DecalDirectional name="Decal Blood Directional 3"/>
+		<DecalDirectional name="Decal Blood Directional 4"/>
+		
+		<LightDamageTexture name="data/textures/misc/human_light_damage1.dds"/>
+		<LightDamageTexture name="data/textures/misc/human_light_damage2.dds"/>
+		<LightDamageTexture name="data/textures/misc/human_light_damage3.dds"/>
+		<HeavyDamageTexture name="data/textures/misc/human_heavy_damage1.dds"/>
+		<HeavyDamageTexture name="data/textures/misc/human_heavy_damage2.dds"/>
+		<HeavyDamageTexture name="data/textures/misc/human_heavy_damage3.dds"/>
+		
+	</DamageFX>
+	
+	<!-- UNUSED, just an example -->
+	<DamageFX name="HumanDusty"
+		takeDamageParticles="WallHit_All"
+		burningParticles="TecTorch"
+		burnedTextureBody="data/textures/misc/human_scorched.dds"
+		burnedTextureEquipment="data/textures/misc/clothes_scorched.dds"
+		burningTextureBody="data/textures/misc/human_burning.dds"
+		burningTextureEquipment="data/textures/misc/clothes_burning.dds"
+		>
+		<DecalSplatter name="Decal Dust Large 05"/>
+		<DecalSplatter name="Decal Dust Large 08"/>
+		<DecalSplatter name="Decal Dust Large 09"/>
+		
+		<DecalDirectional name="Decal Dust Large 01"/>
+		<DecalDirectional name="Decal Dust Large 02"/>
+		<DecalDirectional name="Decal Dust Large 03"/>
+		<DecalDirectional name="Decal Dust Large 04"/>
+		
+		<!-- If you don't add these they will not be used (so no texture is applied when taking damage) -->
+		<!-- <LightDamageTexture name="data/textures/misc/human_light_damage1.dds"/> -->
+		<!-- <LightDamageTexture name="data/textures/misc/human_light_damage2.dds"/> -->
+		<!-- <LightDamageTexture name="data/textures/misc/human_light_damage3.dds"/> -->
+		<!-- <HeavyDamageTexture name="data/textures/misc/human_heavy_damage1.dds"/> -->
+		<!-- <HeavyDamageTexture name="data/textures/misc/human_heavy_damage2.dds"/> -->
+		<!-- <HeavyDamageTexture name="data/textures/misc/human_heavy_damage3.dds"/> -->
+	</DamageFX>
+</DamageDetails>

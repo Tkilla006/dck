@@ -1,0 +1,1039 @@
+<!--
+		For help, please refer to "help_entities.txt" in this directory.
+-->
+<Entities>	
+
+	<Entity name="Fake Militia" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/swat_militia.dds"/>
+
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="10.0"/>
+			<Id name="@entity_human_traitormilitia" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy arabic"/>
+			<Traits chanceToBlindFire="0.3" stopsToShoot="true" />
+			<Mobility>
+				<MoveSpeed min="0.8" defaultMetersPerSec="2.1" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Type 56 Noob" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Rabble" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,rabble">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="75" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="5.0"/>
+			<Id name="@entity_human_rabblefighter" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy arabic"/>
+			<Traits chanceToBlindFire="0.0" stopsToShoot="true" />
+			<Mobility>
+				<MoveSpeed min="0.6" defaultMetersPerSec="2.2" max="9"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Type 56 UltraNoob" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Rabble Shotgun" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,rabble">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="75" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="5.0"/>
+			<Id name="@entity_human_rabblefighter" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy arabic"/>
+			<Traits chanceToBlindFire="0.0" stopsToShoot="true" />
+			<Mobility>
+				<MoveSpeed min="0.6" defaultMetersPerSec="2.2" max="9"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Hunting Shotgun" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Rabble Bolt Action" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,rabble">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse1.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_mg1.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_mg2.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban_and_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="75" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="5.0"/>
+
+			<Id name="@entity_human_rabblefighter" portrait="data/textures/portraits/enemy_grunt_ak.dds" gender="0" voicePack="enemy arabic"/>
+			<Traits chanceToInvestigate="0.0" stopsToShoot="true" usesSuppressionFire="true"/>
+			<Mobility>
+				<MoveSpeed min="0.6" defaultMetersPerSec="2.2" max="9"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="SMLEMK3"/> 
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Rabble PM" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,rabble">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="75" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="5.0"/>
+			<Id name="@entity_human_rabblefighter" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy arabic"/>
+			<Traits chanceToBlindFire="0.5" stopsToShoot="true" />
+			<Mobility>
+				<MoveSpeed min="0.6" defaultMetersPerSec="2.2" max="9"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="PM63 Noob" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Rabble Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,rabble,weaponless">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse1.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_mg1.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_mg2.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban_and_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="75" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="5.0"/>
+
+			<Id name="@entity_human_rabblefighter" portrait="data/textures/portraits/enemy_grunt_ak.dds" gender="0" voicePack="enemy arabic"/>
+			<Traits chanceToInvestigate="0.0" stopsToShoot="true" usesSuppressionFire="true"/>
+			<Mobility>
+				<MoveSpeed min="0.6" defaultMetersPerSec="2.2" max="9"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+			</Equipment>
+			
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+		</Human>
+		
+	</Entity>
+
+
+
+	<Entity name="Grunt Insurgent" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse1.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban_and_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="10.0"/>
+
+			<Id name="@entity_human_gruntbasic" portrait="data/textures/portraits/enemy_grunt_ak.dds" gender="0" voicePack="enemy arabic"/>
+			<Traits chanceToBlindFire="0.5" stopsToShoot="true"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Type 56 Noob"/> <!-- AK47 -->
+			</Equipment>
+		</Human>
+	</Entity>
+	
+	<Entity name="Pistol Insurgent" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="10.0"/>
+			<Id name="@entity_human_gruntbasic" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy arabic"/>
+			<Traits chanceToBlindFire="0.0" stopsToShoot="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="TT 33 Pistol" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Pistol Insurgent Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,weaponless">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="10.0"/>
+			<Id name="@entity_human_gruntbasic" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy arabic"/>
+			<Traits chanceToBlindFire="0.5" stopsToShoot="true" roamAround="true"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+			
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+		</Human>
+
+	</Entity>
+		
+	<Entity name="Veteran Insurgent" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse2.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse2.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="20.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true" />
+			<Id name="@entity_human_veteran" portrait="data/textures/portraits/enemy_veteran.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<!-- Item name="1911 Pistol"/-->
+				<Item name="AKS 74U"/> <!-- AK47 -->
+				<Item name="Frag Grenade Enemy"/>
+			</Equipment>
+			
+			<Doctrine name="Enemy_VeteranBuff"/>
+		</Human>
+	</Entity>
+
+
+	<Entity name="Veteran Insurgent LongRange" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse2.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse2.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="20.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true"/>
+			<Id name="@entity_human_veteran" portrait="data/textures/portraits/enemy_veteran.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="FAL Rifle"/> 
+				<Item name="Frag Grenade Enemy"/>
+			</Equipment>
+			
+			<Doctrine name="Enemy_VeteranBuff"/>
+		</Human>
+	</Entity>
+	
+	<Entity name="Rocket Insurgent" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_rpg2.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse1.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="10.0"/>
+			<Traits chanceToInvestigate="0.0" chanceToAmbush="1.0" />
+			<Id name="@entity_human_rocketinsurgent" portrait="data/textures/portraits/enemy_rocket.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+			
+			<Equipment>
+				<Item name="RPG 7"/>
+				<!-- Item name="1911 Pistol"/-->
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Blackhead Elite" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse2.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="20.0"/>
+			<Traits chanceToBlindFire="0.5" stopsToShoot="false" chanceToThrowGrenade="0.05" usesSuppressionFire="true"/>
+			<Id name="@entity_human_gruntblackhead" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy arabic leader"/>
+			<Mobility>
+				<MoveSpeed min="0.75" defaultMetersPerSec="1.86" max="11"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="AKM Blackhead"/>
+				<Item name="Kobra"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Grunt + Rocket Insurgent" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse2.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
+			<Traits chanceToBlindFire="0.5" stopsToShoot="true" chanceToThrowGrenade="0.10" />
+			<Id name="@entity_human_gruntblackhead" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Type 56"/>
+				<Item name="RPG 26"/>
+			</Equipment>
+		</Human>
+	</Entity>
+	
+	<Entity name="Sniper Insurgent" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse2.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="10.0"/>
+			<Traits chanceToBlindFire="0" stopsToShoot="true" chanceToThrowGrenade="0.0" />
+			<Id name="@entity_human_sniperinsurgent" portrait="data/textures/portraits/enemy_grunt_rocket.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="SVD63"/>
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsDMR"/>
+		</Human>
+	</Entity>
+
+	<Entity name="Machinegunner" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse2.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_mg1.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_mg2.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse2.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
+			<Traits chanceToInvestigate="0.0" chanceToAmbush="1.0" stopsToShoot="true" usesSuppressionFire="true"/>
+			<Id name="@entity_human_machinegunner" portrait="data/textures/portraits/enemy_machinegun.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="RPK 74 LMG"/>
+			</Equipment>
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+		</Human>
+	</Entity>
+
+	<Entity name="Machinegunner 762" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse2.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_mg1.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_mg2.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse2.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
+			<Traits chanceToInvestigate="0.0" chanceToAmbush="1.0" stopsToShoot="true" usesSuppressionFire="true"/>
+			<Id name="@entity_human_machinegunner" portrait="data/textures/portraits/enemy_machinegun.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="RPK LMG"/>
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+
+		</Human>
+	</Entity>
+
+	<Entity name="Machinegunner OldSchool" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse1.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_mg1.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_mg2.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban_and_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="10.0"/>
+
+			<Id name="@entity_human_gruntbasic" portrait="data/textures/portraits/enemy_grunt_ak.dds" gender="0" voicePack="enemy arabic"/>
+			<Traits chanceToInvestigate="0.0" chanceToAmbush="1.0" stopsToShoot="true" usesSuppressionFire="true"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="RP46_MG"/> 
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+
+		</Human>
+	</Entity>
+
+	<Entity name="Machinegunner Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,weaponless">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse2.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_mg1.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_mg2.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse2.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
+			<Traits chanceToInvestigate="0.0" chanceToAmbush="1.0" stopsToShoot="true" usesSuppressionFire="true"/>
+			<Id name="@entity_human_machinegunner" portrait="data/textures/portraits/enemy_machinegun.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+
+		</Human>
+	</Entity>
+
+	<Entity name="Foreign Advisor" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse3.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse3.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="110" distanceMeters="999" eyeRadiusMeters="1.5"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true" />
+			<Id name="@entity_human_foreignadvisor" portrait="data/textures/portraits/enemy_concealed.dds" gender="0" voicePack="enemy arabic leader"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="13.5"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="SR3_M"/>
+				<Item name="TT 33 Pistol"/>
+			</Equipment>
+			
+			<Doctrine name="Enemy_ForeignAdvisorBuff"/>		
+		</Human>
+	</Entity>
+
+	<Entity name="Foreign Advisor Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse3.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse3.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="110" distanceMeters="999" eyeRadiusMeters="1.5"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true" />
+			<Id name="@entity_human_foreignadvisor" portrait="data/textures/portraits/enemy_concealed.dds" gender="0" voicePack="enemy arabic leader"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="13.5"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+			
+			<Doctrine name="Enemy_ForeignAdvisorBuff"/>		
+		</Human>
+	</Entity>
+
+
+	<Entity name="Foreign Advisor Fanatic" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,s-vest">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse3.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse3.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_bomb.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="110" distanceMeters="999" eyeRadiusMeters="1.5"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Suicide Combat" suppressionRecovery="35.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true" ignoresDangerAreas="true" suicideHPThreshold="50" />
+			<Id name="@entity_human_advisorfanatical" portrait="data/textures/portraits/enemy_concealed.dds" gender="0" voicePack="enemy arabic leader"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="13.5"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Type 56 FAdvisor"/>
+				<Item name="Suicide Bomb"/>
+			</Equipment>
+			
+			<Doctrine name="Enemy_ForeignAdvisorBuff"/>		
+		</Human>
+	</Entity>
+
+	<Entity name="FAdvisor Fanatic Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,s-vest,weaponless">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse3.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse3.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_bomb.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="110" distanceMeters="999" eyeRadiusMeters="1.5"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Suicide Combat" suppressionRecovery="35.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true" ignoresDangerAreas="true" suicideHPThreshold="50" />
+			<Id name="@entity_human_advisorfanatical" portrait="data/textures/portraits/enemy_concealed.dds" gender="0" voicePack="enemy arabic leader"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="13.5"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Suicide Bomb"/>
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+
+			<Doctrine name="Enemy_ForeignAdvisorBuff"/>
+
+		</Human>
+	</Entity>
+
+	<Entity name="FAdvisor Leader" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,s-vest">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse3.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse3.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_bomb.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_scarf_beret.khm" diffuseTex="data/models/humans/attachments/cia_scarf_beret_01.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="2"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Suicide Combat" suppressionRecovery="35.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true" ignoresDangerAreas="true" suicideHPThreshold="20"/>
+			<Id name="@entity_human_emir" portrait="data/textures/portraits/enemy_concealed.dds" gender="0" voicePack="enemy arabic leader"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="13.5"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="AKS 74U Emir"/>
+				<Item name="PSO1"/>
+				<Item name="Suicide Bomb"/>
+			</Equipment>
+			
+			<Doctrine name="Enemy_ForeignAdvisorBuff"/>		
+		</Human>
+	</Entity>
+
+
+	
+	<!-- Specials -->
+
+	<Entity name="Concealed Insurgent" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" tooltip="@tooltip_civilian" hideInEditor="true" editorTags="enemy">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse1.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<Brain startingBehavior="Concealed Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" />
+			<Id name="Concealed Insurgent" portrait="data/textures/portraits/enemy_concealed.dds" gender="0" voicePack="enemy arabic"/>
+			<IdConcealed name="Civilian" portrait="data/textures/portraits/civilian_male.dds" gender="0" voicePack="civilian_male"/>
+			<Equipment>
+				<Item name="Type 56"/>
+			</Equipment>
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+			<Concealment default="1"/>
+		</Human>
+	</Entity>
+	
+	<!-- NOTE: This name is used by RMG. don't change it please -->
+	<Entity name="Executioner" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,executioner">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse2.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse2.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>			
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Executioner" suppressionRecovery="18.0"/>
+			<Id name="@entity_human_executioner" portrait="data/textures/portraits/enemy_executioner.dds" gender="0" voicePack="enemy arabic"/>
+			<Traits aggressiveness="0.7" chanceToInvestigate="0.2" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Type 56"/> <!-- AK47 -->
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Suicide Bomber" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,s-vest">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_bomb.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse1.dds" windAnimated="1"/>
+		<AnimationSet name="suicide_bomb" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Suicide Combat" suppressionRecovery="40.0"/>
+			<Id name="@entity_human_suicidebomber" portrait="data/textures/portraits/enemy_suicide.dds" gender="0" voicePack="enemy arabic"/>
+			<Traits chanceToAmbush="0.0" ignoresDangerAreas="true" doesntPickupWeapons="true" doesntUseMountedWeapons="true" suicideHPThreshold="0"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Suicide Bomb"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Suicide Bomber Strong" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,s-vest">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_bomb.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse1.dds" windAnimated="1"/>
+		<AnimationSet name="suicide_bomb" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="170" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Suicide Combat" suppressionRecovery="50.0"/>
+			<Id name="@entity_human_suicidebomber" portrait="data/textures/portraits/enemy_suicide.dds" gender="0" voicePack="enemy arabic"/>
+			<Traits chanceToAmbush="0.0" ignoresDangerAreas="true" doesntPickupWeapons="true" doesntUseMountedWeapons="true" suicideHPThreshold="0"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.45" max="11"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Suicide Bomb"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Suicide Executioner" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,s-vest,executioner">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse2.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse2.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_bomb.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<AnimationSet name="suicide_bomb" />
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Executioner" suppressionRecovery="40.0"/>
+			<Id name="@entity_human_suicideexecutioner" portrait="data/textures/portraits/enemy_executioner.dds" gender="0" voicePack="enemy arabic"/>
+			<Traits chanceToAmbush="0.0" ignoresDangerAreas="true" doesntPickupWeapons="true" doesntUseMountedWeapons="true" suicideHPThreshold="0"/>
+			<Mobility>
+				<MoveSpeed min="0.75" defaultMetersPerSec="1.95" max="12"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Suicide Bomb"/>
+			</Equipment>
+		</Human>
+	</Entity>
+	
+	<!-- Debug stuff -->
+	
+	<!-- Just for test; should do this another way later -->
+	<Entity name="Grunt Insurgent Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,weaponless">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban_and_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat"  suppressionRecovery="10.0"/>
+			<Id name="@entity_human_gruntbasic" portrait="data/textures/portraits/enemy_grunt_ak.dds" gender="0" voicePack="enemy arabic"/>
+			<Traits chanceToBlindFire="0.5" stopsToShoot="true"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+
+		</Human>
+	</Entity>
+
+	<Entity name="Veteran Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,weaponless">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse2.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse2.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="20.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true" />
+			<Id name="@entity_human_veteran" portrait="data/textures/portraits/enemy_veteran.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<!-- Item name="1911 Pistol"/-->
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>	
+			<Doctrine name="Enemy_VeteranBuff"/>
+		</Human>
+	</Entity>
+	
+	<Entity name="Rocket Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,weaponless">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_rpg2.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse1.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="10.0"/>
+			<Traits chanceToInvestigate="0.0" chanceToAmbush="1.0" chanceToThrowGrenade="0.10" />
+			<Id name="@entity_human_rocketinsurgent" portrait="data/textures/portraits/enemy_rocket.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+			
+			<Equipment>
+				<!-- Item name="1911 Pistol"/-->
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+
+		</Human>
+	</Entity>
+
+	<Entity name="Bodyguard PM" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security">
+		<RenderObject3D model="data/models/humans/enemy_2.khm" diffuseTex="data/models/humans/enemy_base_diffuse5.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_suit.khm" diffuseTex="data/models/humans/attachments/enemy_suit_01.dds"/>			
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="10.0"/>
+			<Id name="@entity_human_privatesecurity" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0.5" stopsToShoot="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="PM63" />
+				<!-- Removed for clarity Item name="Bodyguard SoftArmor" /-->
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Bodyguard SMG" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security,armored">
+		<RenderObject3D model="data/models/humans/enemy_2.khm" diffuseTex="data/models/humans/enemy_shirt_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
+			<Id name="@entity_human_privatesecurity" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0.0" stopsToShoot="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Mini Uzi" />
+				<Item name="Bodyguard SoftArmor" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+
+	<Entity name="Bodyguard SMG Noob" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security">
+		<RenderObject3D model="data/models/humans/enemy_2.khm" diffuseTex="data/models/humans/enemy_base_diffuse5.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_suit.khm" diffuseTex="data/models/humans/attachments/enemy_suit_01.dds"/>			
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="10.0"/>
+			<Id name="@entity_human_privatesecurity" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0.5" stopsToShoot="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Mini Uzi Folded" />
+				<!-- Removed for clarity Item name="Bodyguard SoftArmor" /-->
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Bodyguard AKSU" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security">
+		<RenderObject3D model="data/models/humans/enemy_2.khm" diffuseTex="data/models/humans/enemy_base_diffuse5.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_suit.khm" diffuseTex="data/models/humans/attachments/enemy_suit_01.dds"/>			
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
+			<Id name="@entity_human_privatesecurity" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0.0" stopsToShoot="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="AKS 74U Security"/> 
+				<!-- Removed for clarity Item name="Bodyguard SoftArmor" /-->
+			</Equipment>
+		</Human>
+	</Entity>
+
+
+<!-- This guy has visible Soft Armor under the suit (and the stats to go with it), but its not clear from top down so maybe don't use? " /-->
+	<Entity name="Bodyguard AKSU Armored" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security,armored">
+		<RenderObject3D model="data/models/humans/enemy_2.khm" diffuseTex="data/models/humans/enemy_shirt_jacket_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_suit.khm" diffuseTex="data/models/humans/attachments/enemy_suit_01.dds"/>			
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
+			<Id name="@entity_human_privatesecurity" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0.0" stopsToShoot="true" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="AKS 74U Security"/> 
+				<Item name="Bodyguard SoftArmor"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+
+	<Entity name="Bodyguard Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,weaponless,security,armored">
+		<RenderObject3D model="data/models/humans/enemy_2.khm" diffuseTex="data/models/humans/enemy_shirt_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat"  suppressionRecovery="10.0"/>
+			<Id name="@entity_human_privatesecurity" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0.0" stopsToShoot="true" roamAround="true"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Bodyguard SoftArmor" />
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+
+		</Human>
+	</Entity>
+
+
+	<Entity name="Bodyguard Heavy AKSU" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security,armored">
+		<RenderObject3D model="data/models/humans/enemy_2.khm" diffuseTex="data/models/humans/enemy_base_diffuse4.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_heavy.khm" diffuseTex="data/models/humans/attachments/enemy_vest_heavy.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
+			<Id name="@entity_human_securityqrf" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0.0" stopsToShoot="false" />
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="AKS 74U Security"/> 
+				<Item name="Bodyguard HeavyArmor" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Bodyguard Heavy RPK16S" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security,armored">
+		<RenderObject3D model="data/models/humans/enemy_2.khm" diffuseTex="data/models/humans/enemy_base_diffuse4.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_heavy.khm" diffuseTex="data/models/humans/attachments/enemy_vest_heavy.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
+			<Id name="@entity_human_securityqrf" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0.0" stopsToShoot="false" usesSuppressionFire="true"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="RPK16 Short LMG"/> 
+				<Item name="Bodyguard HeavyArmor" />
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+
+		</Human>
+	</Entity>
+
+
+	<Entity name="Bodyguard Heavy Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security,armored,weaponless">
+		<RenderObject3D model="data/models/humans/enemy_2.khm" diffuseTex="data/models/humans/enemy_base_diffuse4.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_heavy.khm" diffuseTex="data/models/humans/attachments/enemy_vest_heavy.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
+			<Id name="@entity_human_securityqrf" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0.0" stopsToShoot="false" roamAround="true"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Bodyguard HeavyArmor" />
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+
+		</Human>
+	</Entity>
+	
+	
+	
+	<Entity name="Bodyguard Heavy Pistol" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,security,armored">
+		<RenderObject3D model="data/models/humans/enemy_2.khm" diffuseTex="data/models/humans/enemy_base_diffuse4.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_heavy.khm" diffuseTex="data/models/humans/attachments/enemy_vest_heavy.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
+			<Id name="@entity_human_securityqrf" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy english"/>
+			<Traits chanceToBlindFire="0.0" stopsToShoot="false" roamAround="true"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2.2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Bodyguard HeavyArmor" />
+				<Item name="M18 Pistol Security"/> 
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+
+		</Human>
+	</Entity>
+
+
+
+	
+</Entities>

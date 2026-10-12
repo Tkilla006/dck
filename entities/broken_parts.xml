@@ -1,0 +1,1416 @@
+<!--
+		For help, please refer to "help_entities.txt" in this directory.
+
+		LIST OF DESTRUCTABLE TEMPLATES
+
+		GenericHumanGibs / Breakable_Door_Wood / Breakable_Door_Grate / Breakable_Concrete /
+		Breakable_Wood
+		Breakable_Wood+Fabric (temp) / Breakable_Wood+Metal (temp) / Breakable_Metal (temp) /
+		Breakable_Plastic
+		Breakable_Rubber
+		Breakable_Ceramic
+		Breakable_Fabric (temp) / Breakable_Glass / Breakable_Paper (temp) / Breakable_Fruits (temp)
+
+-->
+<Entities>
+
+<!-- LIBRARY -->
+
+	<!-- BREAKING WALLS -->
+
+	<Entity name="wall_debris_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="80"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wall_debris_01.khm" diffuseTex="data/models/environment/broken_parts/wall_debris.dds" gossaoCastHeight="1.6">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="wall_debris_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="80"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wall_debris_02.khm" diffuseTex="data/models/environment/broken_parts/wall_debris.dds" gossaoCastHeight="1.6">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="wall_debris_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="80"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wall_debris_03.khm" diffuseTex="data/models/environment/broken_parts/wall_debris.dds" gossaoCastHeight="1.4">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="wall_debris_04" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="80"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wall_debris_04.khm" diffuseTex="data/models/environment/broken_parts/wall_debris.dds" gossaoCastHeight="1">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="wall_debris_05" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="80"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wall_debris_05.khm" diffuseTex="data/models/environment/broken_parts/wall_debris.dds" gossaoCastHeight="1">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="wall_debris_06" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="80"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wall_debris_06.khm" diffuseTex="data/models/environment/broken_parts/wall_debris.dds" gossaoCastHeight="1">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="wall_debris_07" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="80"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wall_debris_01.khm" diffuseTex="data/models/environment/broken_parts/wall_debris_02.dds" gossaoCastHeight="1.6">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="wall_debris_08" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="80"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wall_debris_02.khm" diffuseTex="data/models/environment/broken_parts/wall_debris_02.dds" gossaoCastHeight="1.6">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="wall_debris_09" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="80"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wall_debris_03.khm" diffuseTex="data/models/environment/broken_parts/wall_debris_02.dds" gossaoCastHeight="1.4">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="wall_debris_10" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="80"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wall_debris_04.khm" diffuseTex="data/models/environment/broken_parts/wall_debris_02.dds" gossaoCastHeight="1">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="wall_debris_11" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="80"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wall_debris_05.khm" diffuseTex="data/models/environment/broken_parts/wall_debris_02.dds" gossaoCastHeight="1">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="wall_debris_12" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="80"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wall_debris_06.khm" diffuseTex="data/models/environment/broken_parts/wall_debris_02.dds" gossaoCastHeight="1">
+		</RenderObject3D>
+	</Entity>
+
+	<!-- BREAKING DOOR -->
+
+	<Entity name="door_01_break01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break01.khm" diffuseTex="data/models/environment/broken_parts/door_01_break.dds"/>
+	</Entity>
+	<Entity name="door_01_break02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break02.khm" diffuseTex="data/models/environment/broken_parts/door_01_break.dds"/>
+	</Entity>
+	<Entity name="door_01_break03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break03.khm" diffuseTex="data/models/environment/broken_parts/door_01_break.dds"/>
+	</Entity>
+	<Entity name="door_01_break04" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break04.khm" diffuseTex="data/models/environment/broken_parts/door_01_break.dds"/>
+	</Entity>
+	<Entity name="door_01_break05" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break05.khm" diffuseTex="data/models/environment/broken_parts/door_01_break.dds"/>
+	</Entity>
+	<Entity name="door_01_break06" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break06.khm" diffuseTex="data/models/environment/broken_parts/door_01_break.dds"/>
+	</Entity>
+	<Entity name="door_01_break07" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break07.khm" diffuseTex="data/models/environment/broken_parts/door_01_break.dds"/>
+	</Entity>
+	<Entity name="door_01_break08" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break08.khm" diffuseTex="data/models/environment/broken_parts/door_01_break.dds"/>
+	</Entity>
+	<Entity name="door_01_break09" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break09.khm" diffuseTex="data/models/environment/broken_parts/door_01_break.dds"/>
+	</Entity>
+	<Entity name="door_01_break10" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break10.khm" diffuseTex="data/models/environment/broken_parts/door_01_break.dds"/>
+	</Entity>
+	<Entity name="door_01_break11" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break11.khm" diffuseTex="data/models/environment/broken_parts/door_01_break.dds"/>
+	</Entity>
+	<Entity name="door_01_break12" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break12.khm" diffuseTex="data/models/environment/broken_parts/door_01_break.dds"/>
+	</Entity>
+	<Entity name="door_01_break13" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break13.khm" diffuseTex="data/models/environment/broken_parts/door_01_break.dds"/>
+	</Entity>
+	<Entity name="door_01_break14" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break14.khm" diffuseTex="data/models/environment/broken_parts/door_01_break.dds"/>
+	</Entity>
+	<Entity name="door_01_break15" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break15.khm" diffuseTex="data/models/environment/broken_parts/door_01_break.dds"/>
+	</Entity>
+
+	<Entity name="door_frame_grate_break_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_frame_grate_break_01.khm" diffuseTex="data/models/environment/various/door_grate_01.dds"/>
+	</Entity>
+
+	<Entity name="door_frame_grate_break_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_frame_grate_break_02.khm" diffuseTex="data/models/environment/various/door_grate_01.dds"/>
+	</Entity>
+
+	<Entity name="door_grate_break_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_grate_break_01.khm" diffuseTex="data/models/environment/various/door_grate_01.dds"/>
+	</Entity>
+
+	<Entity name="door_grate_break_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_grate_break_02.khm" diffuseTex="data/models/environment/various/door_grate_01.dds"/>
+	</Entity>
+
+
+	<Entity name="door_flat_01_break01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break01.khm" diffuseTex="data/models/environment/broken_parts/door_flat_01_withbreak.dds"/>
+	</Entity>
+	<Entity name="door_flat_01_break02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break02.khm" diffuseTex="data/models/environment/broken_parts/door_flat_01_withbreak.dds"/>
+	</Entity>
+	<Entity name="door_flat_01_break03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break03.khm" diffuseTex="data/models/environment/broken_parts/door_flat_01_withbreak.dds"/>
+	</Entity>
+	<Entity name="door_flat_01_break04" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break04.khm" diffuseTex="data/models/environment/broken_parts/door_flat_01_withbreak.dds"/>
+	</Entity>
+	<Entity name="door_flat_01_break05" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break05.khm" diffuseTex="data/models/environment/broken_parts/door_flat_01_withbreak.dds"/>
+	</Entity>
+	<Entity name="door_flat_01_break06" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break06.khm" diffuseTex="data/models/environment/broken_parts/door_flat_01_withbreak.dds"/>
+	</Entity>
+	<Entity name="door_flat_01_break07" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break07.khm" diffuseTex="data/models/environment/broken_parts/door_flat_01_withbreak.dds"/>
+	</Entity>
+	<Entity name="door_flat_01_break08" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break08.khm" diffuseTex="data/models/environment/broken_parts/door_flat_01_withbreak.dds"/>
+	</Entity>
+	<Entity name="door_flat_01_break09" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break09.khm" diffuseTex="data/models/environment/broken_parts/door_flat_01_withbreak.dds"/>
+	</Entity>
+	<Entity name="door_flat_01_break10" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break10.khm" diffuseTex="data/models/environment/broken_parts/door_flat_01_withbreak.dds"/>
+	</Entity>
+	<Entity name="door_flat_01_break11" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/door_01_break11.khm" diffuseTex="data/models/environment/broken_parts/door_flat_01_withbreak.dds"/>
+	</Entity>
+
+	<!-- BREAKING WINDOW -->
+
+	<Entity name="window_single_02_break_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_break_01.khm" diffuseTex="data/models/environment/broken_parts/window_single_02_break.dds"/>
+	</Entity>
+	<Entity name="window_single_02_break_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_break_02.khm" diffuseTex="data/models/environment/broken_parts/window_single_02_break.dds"/>
+	</Entity>
+	<Entity name="window_single_02_break_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_break_03.khm" diffuseTex="data/models/environment/broken_parts/window_single_02_break.dds"/>
+	</Entity>
+	<Entity name="window_single_02_break_04" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_break_04.khm" diffuseTex="data/models/environment/broken_parts/window_single_02_break.dds"/>
+	</Entity>
+	<Entity name="window_single_02_break_05" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_break_05.khm" diffuseTex="data/models/environment/broken_parts/window_single_02_break.dds"/>
+	</Entity>
+	<Entity name="window_single_02_break_06" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_break_06.khm" diffuseTex="data/models/environment/broken_parts/window_single_02_break.dds"/>
+	</Entity>
+	<Entity name="window_single_02_break_07" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_break_07.khm" diffuseTex="data/models/environment/broken_parts/window_single_02_break.dds"/>
+	</Entity>
+	<Entity name="window_single_02_break_08" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_break_08.khm" diffuseTex="data/models/environment/broken_parts/window_single_02_break.dds"/>
+	</Entity>
+	<Entity name="window_single_02_break_09" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_break_09.khm" diffuseTex="data/models/environment/broken_parts/window_single_02_break.dds"/>
+	</Entity>
+	<Entity name="window_single_02_break_10" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_break_10.khm" diffuseTex="data/models/environment/broken_parts/window_single_02_break.dds"/>
+	</Entity>
+	<Entity name="window_single_02_break_11" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_break_11.khm" diffuseTex="data/models/environment/broken_parts/window_single_02_break.dds"/>
+	</Entity>
+
+	<Entity name="window_single_02_glass_break_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="40"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_glass_break_01.khm" diffuseTex="data/models/environment/broken_parts/window_single_glass_break.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+	<Entity name="window_single_02_glass_break_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="40"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_glass_break_02.khm" diffuseTex="data/models/environment/broken_parts/window_single_glass_break.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+	<Entity name="window_single_02_glass_break_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="40"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_glass_break_03.khm" diffuseTex="data/models/environment/broken_parts/window_single_glass_break.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+	<Entity name="window_single_02_glass_break_04" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="40"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_glass_break_04.khm" diffuseTex="data/models/environment/broken_parts/window_single_glass_break.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+	<Entity name="window_single_02_glass_break_05" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="40"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_glass_break_05.khm" diffuseTex="data/models/environment/broken_parts/window_single_glass_break.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+	<Entity name="window_single_02_glass_break_06" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="40"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_glass_break_06.khm" diffuseTex="data/models/environment/broken_parts/window_single_glass_break.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+	<Entity name="window_single_02_glass_break_07" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="40"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_glass_break_07.khm" diffuseTex="data/models/environment/broken_parts/window_single_glass_break.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+	<Entity name="window_single_02_glass_break_08" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="40"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_glass_break_08.khm" diffuseTex="data/models/environment/broken_parts/window_single_glass_break.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+	<Entity name="window_single_02_glass_break_09" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="40"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_glass_break_09.khm" diffuseTex="data/models/environment/broken_parts/window_single_glass_break.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+	<Entity name="window_single_02_glass_break_10" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="40"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_glass_break_10.khm" diffuseTex="data/models/environment/broken_parts/window_single_glass_break.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+	<Entity name="window_single_02_glass_break_11" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="40"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_glass_break_11.khm" diffuseTex="data/models/environment/broken_parts/window_single_glass_break.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+	<Entity name="window_single_02_glass_break_12" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="40"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_glass_break_12.khm" diffuseTex="data/models/environment/broken_parts/window_single_glass_break.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+	<Entity name="window_single_02_glass_break_13" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="40"/>
+		<RenderObject3D model="data/models/environment/broken_parts/window_single_02_glass_break_13.khm" diffuseTex="data/models/environment/broken_parts/window_single_glass_break.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<!-- GLASS DEBRIS -->
+
+	<Entity name="glass_debris_large_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/glass_debris_large_01.khm" diffuseTex="data/models/environment/broken_parts/glass_debris.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="glass_debris_large_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/glass_debris_large_02.khm" diffuseTex="data/models/environment/broken_parts/glass_debris.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="glass_debris_large_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/glass_debris_large_03.khm" diffuseTex="data/models/environment/broken_parts/glass_debris.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="glass_debris_medium_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/glass_debris_medium_01.khm" diffuseTex="data/models/environment/broken_parts/glass_debris.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="glass_debris_medium_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/glass_debris_medium_02.khm" diffuseTex="data/models/environment/broken_parts/glass_debris.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="glass_debris_medium_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/glass_debris_medium_03.khm" diffuseTex="data/models/environment/broken_parts/glass_debris.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="glass_debris_medium_04" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/glass_debris_medium_04.khm" diffuseTex="data/models/environment/broken_parts/glass_debris.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="glass_debris_small_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/glass_debris_small_01.khm" diffuseTex="data/models/environment/broken_parts/glass_debris.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="glass_debris_small_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/glass_debris_small_02.khm" diffuseTex="data/models/environment/broken_parts/glass_debris.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="glass_debris_small_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/glass_debris_small_03.khm" diffuseTex="data/models/environment/broken_parts/glass_debris.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="glass_debris_small_04" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/glass_debris_small_04.khm" diffuseTex="data/models/environment/broken_parts/glass_debris.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="glass_debris_small_05" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/glass_debris_small_05.khm" diffuseTex="data/models/environment/broken_parts/glass_debris.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<!-- WOOD DESTRUCTABLE -->
+
+
+	<Entity name="wood_break_large_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_large_01.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_large_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_large_02.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_large_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_large_03.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_large_04" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_large_04.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_medium_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_medium_01.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_medium_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_medium_02.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_medium_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_medium_03.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_small_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_small_01.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_small_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_small_02.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_small_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_small_03.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_small_04" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_small_04.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_small_05" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_small_05.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_small_06" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_small_06.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_small_07" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_small_07.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_chair_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_chair_01.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_chair_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_chair_02.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_chair_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_chair_03.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_table_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_table_01.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_table_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_table_02.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_table_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_table_03.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_table_04" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_table_04.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_leg_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_leg_01.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="wood_break_leg_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/wood_break_leg_02.khm" diffuseTex="data/models/environment/broken_parts/wood_break.dds" emissive="1"/>
+	</Entity>
+
+	<!-- CERAMIC DESTRUCTABLE -->
+
+	<Entity name="ceramic_debris_large_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/ceramic_debris_large_01.khm" diffuseTex="data/models/environment/broken_parts/ceramic_debris.dds"/>
+	</Entity>
+
+	<Entity name="ceramic_debris_large_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/ceramic_debris_large_02.khm" diffuseTex="data/models/environment/broken_parts/ceramic_debris.dds"/>
+	</Entity>
+
+	<Entity name="ceramic_debris_large_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/ceramic_debris_large_03.khm" diffuseTex="data/models/environment/broken_parts/ceramic_debris.dds"/>
+	</Entity>
+
+	<Entity name="ceramic_debris_medium_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/ceramic_debris_medium_01.khm" diffuseTex="data/models/environment/broken_parts/ceramic_debris.dds"/>
+	</Entity>
+
+	<Entity name="ceramic_debris_medium_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/ceramic_debris_medium_02.khm" diffuseTex="data/models/environment/broken_parts/ceramic_debris.dds"/>
+	</Entity>
+
+	<Entity name="ceramic_debris_medium_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/ceramic_debris_medium_03.khm" diffuseTex="data/models/environment/broken_parts/ceramic_debris.dds"/>
+	</Entity>
+
+	<Entity name="ceramic_debris_medium_04" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/ceramic_debris_medium_04.khm" diffuseTex="data/models/environment/broken_parts/ceramic_debris.dds"/>
+	</Entity>
+
+	<Entity name="ceramic_debris_medium_05" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/ceramic_debris_medium_05.khm" diffuseTex="data/models/environment/broken_parts/ceramic_debris.dds"/>
+	</Entity>
+
+	<Entity name="ceramic_debris_medium_06" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/ceramic_debris_medium_06.khm" diffuseTex="data/models/environment/broken_parts/ceramic_debris.dds"/>
+	</Entity>
+
+	<Entity name="ceramic_debris_small_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/ceramic_debris_small_01.khm" diffuseTex="data/models/environment/broken_parts/ceramic_debris.dds"/>
+	</Entity>
+
+	<Entity name="ceramic_debris_small_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/ceramic_debris_small_02.khm" diffuseTex="data/models/environment/broken_parts/ceramic_debris.dds"/>
+	</Entity>
+
+	<Entity name="ceramic_debris_small_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/ceramic_debris_small_03.khm" diffuseTex="data/models/environment/broken_parts/ceramic_debris.dds"/>
+	</Entity>
+
+	<Entity name="ceramic_debris_small_04" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/ceramic_debris_small_04.khm" diffuseTex="data/models/environment/broken_parts/ceramic_debris.dds"/>
+	</Entity>
+
+	<Entity name="ceramic_debris_small_05" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/ceramic_debris_small_05.khm" diffuseTex="data/models/environment/broken_parts/ceramic_debris.dds"/>
+	</Entity>
+
+	<Entity name="ceramic_debris_small_06" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/ceramic_debris_small_06.khm" diffuseTex="data/models/environment/broken_parts/ceramic_debris.dds"/>
+	</Entity>
+
+	<!-- RUBBER DESTRUCTABLE -->
+
+	<Entity name="rubber_debris_large_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/rubber_debris_large_01.khm" diffuseTex="data/models/environment/broken_parts/rubber_debris.dds"/>
+	</Entity>
+
+	<Entity name="rubber_debris_large_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/rubber_debris_large_02.khm" diffuseTex="data/models/environment/broken_parts/rubber_debris.dds"/>
+	</Entity>
+
+	<Entity name="rubber_debris_medium_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/rubber_debris_medium_01.khm" diffuseTex="data/models/environment/broken_parts/rubber_debris.dds"/>
+	</Entity>
+
+	<Entity name="rubber_debris_medium_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/rubber_debris_medium_02.khm" diffuseTex="data/models/environment/broken_parts/rubber_debris.dds"/>
+	</Entity>
+
+	<Entity name="rubber_debris_medium_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/rubber_debris_medium_03.khm" diffuseTex="data/models/environment/broken_parts/rubber_debris.dds"/>
+	</Entity>
+
+	<Entity name="rubber_debris_small_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/rubber_debris_small_01.khm" diffuseTex="data/models/environment/broken_parts/rubber_debris.dds"/>
+	</Entity>
+
+	<Entity name="rubber_debris_small_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/rubber_debris_small_02.khm" diffuseTex="data/models/environment/broken_parts/rubber_debris.dds"/>
+	</Entity>
+
+	<Entity name="rubber_debris_small_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/rubber_debris_small_03.khm" diffuseTex="data/models/environment/broken_parts/rubber_debris.dds"/>
+	</Entity>
+
+	<Entity name="rubber_debris_small_04" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/rubber_debris_small_04.khm" diffuseTex="data/models/environment/broken_parts/rubber_debris.dds"/>
+	</Entity>
+
+	<Entity name="rubber_debris_small_05" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/rubber_debris_small_05.khm" diffuseTex="data/models/environment/broken_parts/rubber_debris.dds"/>
+	</Entity>
+
+	<!-- PLASTIC DESTRUCTABLE BLUE -->
+
+	<Entity name="plastic_debris_blue_large_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/plastic_debris_large_01.khm" diffuseTex="data/models/environment/broken_parts/plastic_debris_blue.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="plastic_debris_blue_large_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/plastic_debris_large_02.khm" diffuseTex="data/models/environment/broken_parts/plastic_debris_blue.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="plastic_debris_blue_large_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/plastic_debris_large_03.khm" diffuseTex="data/models/environment/broken_parts/plastic_debris_blue.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="plastic_debris_blue_large_04" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/plastic_debris_large_04.khm" diffuseTex="data/models/environment/broken_parts/plastic_debris_blue.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="plastic_debris_blue_medium_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/plastic_debris_medium_01.khm" diffuseTex="data/models/environment/broken_parts/plastic_debris_blue.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="plastic_debris_blue_medium_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/plastic_debris_medium_02.khm" diffuseTex="data/models/environment/broken_parts/plastic_debris_blue.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="plastic_debris_blue_medium_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/plastic_debris_medium_03.khm" diffuseTex="data/models/environment/broken_parts/plastic_debris_blue.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="plastic_debris_blue_medium_04" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/plastic_debris_medium_04.khm" diffuseTex="data/models/environment/broken_parts/plastic_debris_blue.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="plastic_debris_blue_medium_05" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/plastic_debris_medium_05.khm" diffuseTex="data/models/environment/broken_parts/plastic_debris_blue.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="plastic_debris_blue_small_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/plastic_debris_small_01.khm" diffuseTex="data/models/environment/broken_parts/plastic_debris_blue.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="plastic_debris_blue_small_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/plastic_debris_small_02.khm" diffuseTex="data/models/environment/broken_parts/plastic_debris_blue.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="plastic_debris_blue_small_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/plastic_debris_small_03.khm" diffuseTex="data/models/environment/broken_parts/plastic_debris_blue.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="plastic_debris_blue_small_04" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/plastic_debris_small_04.khm" diffuseTex="data/models/environment/broken_parts/plastic_debris_blue.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="plastic_debris_blue_small_05" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/plastic_debris_small_05.khm" diffuseTex="data/models/environment/broken_parts/plastic_debris_blue.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+
+	<!-- METAL DESTRUCTABLE BLUE -->
+
+	<Entity name="metal_debris_large_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/metal_debris_large_01.khm" diffuseTex="data/models/environment/broken_parts/metal_debris.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="metal_debris_large_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/metal_debris_large_02.khm" diffuseTex="data/models/environment/broken_parts/metal_debris.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="metal_debris_large_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/metal_debris_large_03.khm" diffuseTex="data/models/environment/broken_parts/metal_debris.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="metal_debris_large_04" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/metal_debris_large_04.khm" diffuseTex="data/models/environment/broken_parts/metal_debris.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="metal_debris_medium_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/metal_debris_medium_01.khm" diffuseTex="data/models/environment/broken_parts/metal_debris.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="metal_debris_medium_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/metal_debris_medium_02.khm" diffuseTex="data/models/environment/broken_parts/metal_debris.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="metal_debris_medium_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/metal_debris_medium_03.khm" diffuseTex="data/models/environment/broken_parts/metal_debris.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="metal_debris_medium_04" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/metal_debris_medium_04.khm" diffuseTex="data/models/environment/broken_parts/metal_debris.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="metal_debris_small_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/metal_debris_small_01.khm" diffuseTex="data/models/environment/broken_parts/metal_debris.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="metal_debris_small_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/metal_debris_small_02.khm" diffuseTex="data/models/environment/broken_parts/metal_debris.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="metal_debris_small_03" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/metal_debris_small_03.khm" diffuseTex="data/models/environment/broken_parts/metal_debris.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="metal_debris_small_04" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/metal_debris_small_04.khm" diffuseTex="data/models/environment/broken_parts/metal_debris.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="metal_debris_small_05" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/metal_debris_small_05.khm" diffuseTex="data/models/environment/broken_parts/metal_debris.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="metal_debris_small_06" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/metal_debris_small_06.khm" diffuseTex="data/models/environment/broken_parts/metal_debris.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<!-- FABRIC DEBRIS -->
+
+	<Entity name="padding_break_large_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/padding_break_large_01.khm" diffuseTex="data/models/environment/broken_parts/padding_break.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="padding_break_large_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/padding_break_large_02.khm" diffuseTex="data/models/environment/broken_parts/padding_break.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="padding_break_medium_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/padding_break_medium_01.khm" diffuseTex="data/models/environment/broken_parts/padding_break.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="padding_break_medium_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/padding_break_medium_02.khm" diffuseTex="data/models/environment/broken_parts/padding_break.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="padding_break_small_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/padding_break_small_01.khm" diffuseTex="data/models/environment/broken_parts/padding_break.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="padding_break_small_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/broken_parts/padding_break_small_02.khm" diffuseTex="data/models/environment/broken_parts/padding_break.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<!-- WATERMELON DESTRUCTABLE -->
+	<Entity name="watermelon_piece_01" type="BasicEntity" editorTags="broken parts" >
+		<PhysicalParams physicsEnabled="true" solid="false" />
+		<RenderObject3D model="data/models/environment/interior/watermelon_piece_01.khm" diffuseTex="data/models/environment/interior/watermelon.dds"/>
+	</Entity>
+
+	<Entity name="watermelon_piece_02" type="BasicEntity" editorTags="broken parts" >
+		<PhysicalParams physicsEnabled="true" solid="false" />
+		<RenderObject3D model="data/models/environment/interior/watermelon_piece_02.khm" diffuseTex="data/models/environment/interior/watermelon.dds"/>
+	</Entity>
+
+<Entity name="watermelon_piece_03" type="BasicEntity" editorTags="broken parts" >
+		<PhysicalParams physicsEnabled="true" solid="false" />
+		<RenderObject3D model="data/models/environment/interior/watermelon_piece_03.khm" diffuseTex="data/models/environment/interior/watermelon.dds"/>
+	</Entity>
+
+	<Entity name="watermelon_piece_04" type="BasicEntity" editorTags="broken parts" >
+		<PhysicalParams physicsEnabled="true" solid="false" />
+		<RenderObject3D model="data/models/environment/interior/watermelon_piece_04.khm" diffuseTex="data/models/environment/interior/watermelon.dds"/>
+	</Entity>
+
+<Entity name="watermelon_piece_05" type="BasicEntity" editorTags="broken parts" >
+		<PhysicalParams physicsEnabled="true" solid="false" />
+		<RenderObject3D model="data/models/environment/interior/watermelon_piece_05.khm" diffuseTex="data/models/environment/interior/watermelon.dds"/>
+	</Entity>
+
+	<!-- GIBS -->
+
+	<Entity name="gib_break_large_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="30"/>
+		<RenderObject3D model="data/models/environment/broken_parts/padding_break_large_01.khm" diffuseTex="data/models/environment/broken_parts/gibs.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="gib_break_large_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="30"/>
+		<RenderObject3D model="data/models/environment/broken_parts/padding_break_large_02.khm" diffuseTex="data/models/environment/broken_parts/gibs.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="gib_break_medium_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="50"/>
+		<RenderObject3D model="data/models/environment/broken_parts/padding_break_medium_01.khm" diffuseTex="data/models/environment/broken_parts/gibs.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="gib_break_medium_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="50"/>
+		<RenderObject3D model="data/models/environment/broken_parts/padding_break_medium_02.khm" diffuseTex="data/models/environment/broken_parts/gibs.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="gib_break_small_01" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="70"/>
+		<RenderObject3D model="data/models/environment/broken_parts/padding_break_small_01.khm" diffuseTex="data/models/environment/broken_parts/gibs.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="gib_break_small_02" type="BasicEntity" editorTags="broken parts">
+		<PhysicalParams physicsEnabled="true" solid="false" density="70"/>
+		<RenderObject3D model="data/models/environment/broken_parts/padding_break_small_02.khm" diffuseTex="data/models/environment/broken_parts/gibs.dds">
+			<Specular shininess="16" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="bloody_turban" type="BasicEntity">
+		<PhysicalParams physicsEnabled="true" solid="false" />
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban_bloody.khm" diffuseTex="data/models/humans/attachments/enemy_head_bloody.dds"/>
+	</Entity>
+
+	<Entity name="bloody_helmet" type="BasicEntity">
+		<PhysicalParams physicsEnabled="true" solid="false" />
+		<RenderObject3D model="data/models/humans/attachments/ranger_1_helmet_bloody.khm" diffuseTex="data/models/humans/attachments/ranger_1_helmet_bloody.dds"/>
+	</Entity>
+
+	<Entity name="christmas_present_01" type="BasicEntity">
+		<PhysicalParams physicsEnabled="true" solid="false" />
+		<RenderObject3D model="data/models/environment/interior/christmas_present_01.khm" diffuseTex="data/models/environment/interior/christmas_presents.dds"/>
+	</Entity>
+
+	<Entity name="christmas_present_02" type="BasicEntity">
+		<PhysicalParams physicsEnabled="true" solid="false" />
+		<RenderObject3D model="data/models/environment/interior/christmas_present_02.khm" diffuseTex="data/models/environment/interior/christmas_presents.dds"/>
+	</Entity>
+
+	<Entity name="christmas_present_03" type="BasicEntity">
+		<PhysicalParams physicsEnabled="true" solid="false" />
+		<RenderObject3D model="data/models/environment/interior/christmas_present_03.khm" diffuseTex="data/models/environment/interior/christmas_presents.dds"/>
+	</Entity>
+
+
+<!-- TEMPLATES -->
+
+	<Entity name="GenericHumanGibs" type="BasicEntity" hideInEditor="true">
+		<Breakable>
+			<Piece entityName="gib_break_medium_01"/>
+			<Piece entityName="gib_break_medium_02"/>
+			<Piece entityName="gib_break_small_01"/>
+			<Piece entityName="gib_break_small_02"/>			
+			<Piece entityName="gib_break_large_01"/>
+			<Piece entityName="gib_break_large_02"/>
+
+			<Piece entityName="gib_break_small_01"/>
+			<Piece entityName="gib_break_medium_01"/>
+			<Piece entityName="gib_break_medium_02"/>
+			<Piece entityName="gib_break_large_01"/>
+			<Piece entityName="gib_break_large_02"/>
+			<Piece entityName="boot_02"/>
+			<Piece entityName="bloody_turban"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="GenericTrooperGibs" type="BasicEntity" hideInEditor="true">
+		<Breakable>
+			<Piece entityName="gib_break_small_01"/>
+			<Piece entityName="gib_break_small_02"/>
+			<Piece entityName="gib_break_medium_01"/>
+			<Piece entityName="gib_break_medium_02"/>
+			<Piece entityName="gib_break_large_01"/>
+			<Piece entityName="gib_break_large_02"/>
+
+			<Piece entityName="gib_break_small_01"/>
+			<Piece entityName="gib_break_medium_01"/>
+			<Piece entityName="gib_break_medium_02"/>
+			<Piece entityName="gib_break_large_01"/>
+			<Piece entityName="gib_break_large_02"/>
+			<Piece entityName="boot_02"/>
+			<Piece entityName="bloody_helmet"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="Breakable_Door_Wood" type="BasicEntity" hideInEditor="true">
+		<Breakable breakMode="strict" sfx="door_break">
+			<!-- moved these ones in the front because they are the only ones that spawn when breaching doors but not destroying them -->
+			<Piece entityName="PS_Hit_Wall"/>
+			<Piece entityName="wood_break_small_01"/>
+			<Piece entityName="wood_break_small_04"/>
+			<Piece entityName="door_01_break12"/>
+
+			<Piece entityName="door_01_break01"/>
+			<Piece entityName="door_01_break02"/>
+			<Piece entityName="door_01_break03"/>
+			<Piece entityName="door_01_break04"/>
+			<Piece entityName="door_01_break05"/>
+			<Piece entityName="door_01_break06"/>
+			<Piece entityName="door_01_break07"/>
+			<Piece entityName="door_01_break08"/>
+			<Piece entityName="door_01_break09"/>
+			<Piece entityName="door_01_break10"/>
+			<Piece entityName="door_01_break11"/>
+			<Piece entityName="door_01_break13"/>
+			<Piece entityName="door_01_break14"/>
+			<Piece entityName="door_01_break15"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="Breakable_Door_Flat_Wood" type="BasicEntity" hideInEditor="true">
+		<Breakable breakMode="strict" sfx="door_break">
+			<!-- moved these ones in the front because they are the only ones that spawn when breaching doors but not destroying them -->
+			<Piece entityName="PS_Hit_Wall"/>
+			<Piece entityName="door_flat_01_break03"/>
+			<Piece entityName="door_flat_01_break05"/>
+			<Piece entityName="door_flat_01_break10"/>
+
+			<Piece entityName="door_flat_01_break01"/>
+			<Piece entityName="door_flat_01_break02"/>
+			<Piece entityName="door_flat_01_break04"/>
+			<Piece entityName="door_flat_01_break06"/>
+			<Piece entityName="door_flat_01_break07"/>
+			<Piece entityName="door_flat_01_break08"/>
+			<Piece entityName="door_flat_01_break09"/>
+			<Piece entityName="door_flat_01_break11"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="Breakable_Door_Grate" type="BasicEntity" hideInEditor="true">
+		<Breakable breakMode="strict" sfx="door_grate_break">
+			<Piece entityName="metal_debris_small_01"/>
+			<Piece entityName="metal_debris_medium_01"/>
+			
+			<Piece entityName="door_grate_break_01"/>
+			<Piece entityName="door_grate_break_02"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="Breakable_Concrete" type="BasicEntity" hideInEditor="true">
+		<Breakable breakMode="fitVolume" sfx="wall_break">
+			<Piece entityName="wall_debris_04"/>
+			<Piece entityName="wall_debris_04"/>
+
+			<Piece entityName="wall_debris_05"/>
+			<Piece entityName="wall_debris_05"/>
+			<Piece entityName="wall_debris_05"/>
+
+			<Piece entityName="wall_debris_06"/>
+			<Piece entityName="wall_debris_06"/>
+			<Piece entityName="wall_debris_06"/>
+			<Piece entityName="wall_debris_06"/>
+
+			<!-- large -->
+			<Piece entityName="wall_debris_01"/>
+			<Piece entityName="wall_debris_02"/>
+			<Piece entityName="wall_debris_03"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="Breakable_Wood" type="BasicEntity" hideInEditor="true">
+		<Breakable breakMode="fitVolume" sfx="wood_break">
+			<!-- small -->
+			<Piece entityName="wood_break_small_01"/>
+			<Piece entityName="wood_break_small_02"/>
+			<Piece entityName="wood_break_small_03"/>
+			<Piece entityName="wood_break_small_04"/>
+			<Piece entityName="wood_break_small_05"/>
+			<Piece entityName="wood_break_small_06"/>
+			<Piece entityName="wood_break_small_07"/>
+
+			<!-- specific -->
+			<Piece entityName="wood_break_chair_01"/>
+			<Piece entityName="wood_break_chair_02"/>
+			<Piece entityName="wood_break_chair_03"/>
+			<Piece entityName="wood_break_leg_01"/>
+			<Piece entityName="wood_break_leg_02"/>
+			<Piece entityName="wood_break_table_01"/>
+			<Piece entityName="wood_break_table_02"/>
+			<Piece entityName="wood_break_table_03"/>
+			<Piece entityName="wood_break_table_04"/>
+
+			<!-- medium -->
+			<Piece entityName="wood_break_medium_01"/>
+			<Piece entityName="wood_break_medium_02"/>
+			<Piece entityName="wood_break_medium_03"/>
+
+			<!-- large -->
+			<Piece entityName="wood_break_large_01"/>
+			<Piece entityName="wood_break_large_02"/>
+			<Piece entityName="wood_break_large_03"/>
+		</Breakable>
+	</Entity>
+
+
+	<Entity name="Breakable_Wood+Fabric" type="BasicEntity" hideInEditor="true">
+		<Breakable breakMode="fitVolume" sfx="wood_break">
+			<!-- small -->
+			<Piece entityName="PS_FabricBreak"/>
+			<Piece entityName="wood_break_small_01"/>
+			<Piece entityName="wood_break_small_02"/>
+			<Piece entityName="wood_break_small_03"/>
+			<Piece entityName="wood_break_small_04"/>
+			<Piece entityName="wood_break_small_05"/>
+			<Piece entityName="wood_break_small_06"/>
+			<Piece entityName="wood_break_small_07"/>
+
+			<!-- medium -->
+			<Piece entityName="wood_break_medium_01"/>
+			<Piece entityName="wood_break_medium_02"/>
+			<Piece entityName="wood_break_medium_03"/>
+
+			<!-- large -->
+			<Piece entityName="wood_break_large_01"/>
+			<Piece entityName="wood_break_large_02"/>
+			<Piece entityName="wood_break_large_03"/>
+		</Breakable>
+	</Entity>
+
+
+	<Entity name="Breakable_Wood+Metal" type="BasicEntity" hideInEditor="true">
+		<Breakable breakMode="fitVolume" sfx="wood_break">
+			<!-- small -->
+			<Piece entityName="metal_debris_medium_01"/>
+			<Piece entityName="metal_debris_medium_02"/>
+			<Piece entityName="metal_debris_medium_03"/>
+			<Piece entityName="metal_debris_medium_04"/>
+			<Piece entityName="wood_break_small_01"/>
+			<Piece entityName="wood_break_small_02"/>
+			<Piece entityName="wood_break_small_03"/>
+			<Piece entityName="wood_break_small_04"/>
+			<Piece entityName="wood_break_small_05"/>
+			<Piece entityName="wood_break_small_06"/>
+			<Piece entityName="wood_break_small_07"/>
+
+			<!-- medium -->
+			<Piece entityName="wood_break_medium_01"/>
+			<Piece entityName="wood_break_medium_02"/>
+			<Piece entityName="wood_break_medium_03"/>
+			<Piece entityName="metal_debris_medium_02"/>
+			<Piece entityName="metal_debris_medium_03"/>
+			<Piece entityName="metal_debris_medium_04"/>
+
+			<!-- large -->
+			<Piece entityName="wood_break_large_01"/>
+			<Piece entityName="wood_break_large_02"/>
+			<Piece entityName="wood_break_large_03"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="Breakable_Plastic" type="BasicEntity" hideInEditor="true">
+		<Breakable breakMode="fitVolume">
+			<!-- small -->
+			<Piece entityName="plastic_debris_blue_small_01"/>
+			<Piece entityName="plastic_debris_blue_small_02"/>
+			<Piece entityName="plastic_debris_blue_small_03"/>
+			<Piece entityName="plastic_debris_blue_small_04"/>
+			<Piece entityName="plastic_debris_blue_small_05"/>
+
+			<!-- medium -->
+			<Piece entityName="plastic_debris_blue_medium_01"/>
+			<Piece entityName="plastic_debris_blue_medium_02"/>
+			<Piece entityName="plastic_debris_blue_medium_03"/>
+			<Piece entityName="plastic_debris_blue_medium_04"/>
+			<Piece entityName="plastic_debris_blue_medium_05"/>
+
+			<!-- large -->
+			<Piece entityName="plastic_debris_blue_large_01"/>
+			<Piece entityName="plastic_debris_blue_large_02"/>
+			<Piece entityName="plastic_debris_blue_large_03"/>
+			<Piece entityName="plastic_debris_blue_large_04"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="Breakable_Rubber" type="BasicEntity" hideInEditor="true">
+		<Breakable breakMode="fitVolume">
+			<!-- small -->
+			<Piece entityName="rubber_debris_small_01"/>
+			<Piece entityName="rubber_debris_small_02"/>
+			<Piece entityName="rubber_debris_small_03"/>
+			<Piece entityName="rubber_debris_small_04"/>
+			<Piece entityName="rubber_debris_small_05"/>
+
+
+			<!-- medium -->
+			<Piece entityName="rubber_debris_medium_01"/>
+			<Piece entityName="rubber_debris_medium_02"/>
+			<Piece entityName="rubber_debris_medium_03"/>
+
+			<!-- large -->
+			<Piece entityName="rubber_debris_large_01"/>
+			<Piece entityName="rubber_debris_large_02"/>
+
+		</Breakable>
+	</Entity>
+
+	<Entity name="Breakable_Ceramic" type="BasicEntity" hideInEditor="true">
+		<Breakable breakMode="fitVolume" sfx="glass_break">
+			<!-- small -->
+			<Piece entityName="ceramic_debris_small_01"/>
+			<Piece entityName="ceramic_debris_small_02"/>
+			<Piece entityName="ceramic_debris_small_03"/>
+			<Piece entityName="ceramic_debris_small_04"/>
+			<Piece entityName="ceramic_debris_small_05"/>
+			<Piece entityName="ceramic_debris_small_06"/>
+
+			<!-- medium -->
+			<Piece entityName="ceramic_debris_medium_01"/>
+			<Piece entityName="ceramic_debris_medium_02"/>
+			<Piece entityName="ceramic_debris_medium_03"/>
+			<Piece entityName="ceramic_debris_medium_04"/>
+			<Piece entityName="ceramic_debris_medium_05"/>
+			<Piece entityName="ceramic_debris_medium_06"/>
+
+			<!-- large -->
+			<Piece entityName="ceramic_debris_large_01"/>
+			<Piece entityName="ceramic_debris_large_02"/>
+			<Piece entityName="ceramic_debris_large_03"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="Breakable_Metal" type="BasicEntity" hideInEditor="true">
+		<Breakable breakMode="fitVolume" sfx="metal_break">
+			<!-- small -->
+			<Piece entityName="metal_debris_small_01"/>
+			<Piece entityName="metal_debris_small_02"/>
+			<Piece entityName="metal_debris_small_03"/>
+			<Piece entityName="metal_debris_small_04"/>
+			<Piece entityName="metal_debris_small_05"/>
+			<Piece entityName="metal_debris_small_06"/>
+
+			<!-- medium -->
+			<Piece entityName="metal_debris_medium_01"/>
+			<Piece entityName="metal_debris_medium_02"/>
+			<Piece entityName="metal_debris_medium_03"/>
+			<Piece entityName="metal_debris_medium_04"/>
+
+
+			<!-- large -->
+			<Piece entityName="metal_debris_large_01"/>
+			<Piece entityName="metal_debris_large_02"/>
+			<Piece entityName="metal_debris_large_03"/>
+			<Piece entityName="metal_debris_large_04"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="Breakable_Fabric" type="BasicEntity" hideInEditor="true">
+		<Breakable breakMode="fitVolume" sfx="curtain_break">
+			<Piece entityName="PS_FabricBreak"/>
+			<Piece entityName="padding_break_large_01"/>
+			<Piece entityName="padding_break_large_02"/>
+			<Piece entityName="padding_break_medium_01"/>
+			<Piece entityName="padding_break_medium_02"/>
+			<Piece entityName="padding_break_small_01"/>
+			<Piece entityName="padding_break_small_02"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="Breakable_Curtain" type="BasicEntity" hideInEditor="true">
+		<Breakable breakMode="strict" sfx="curtain_break">
+			<Piece entityName="PS_CurtainBreak"/>
+		</Breakable>
+	</Entity>
+
+
+	<Entity name="Breakable_Glass" type="BasicEntity" hideInEditor="true">
+		<Breakable breakMode="strict" sfx="glass_break">
+			<Piece entityName="glass_debris_small_01"/>
+			<Piece entityName="glass_debris_small_02"/>
+			<Piece entityName="glass_debris_small_03"/>
+			<Piece entityName="glass_debris_small_04"/>
+			<Piece entityName="glass_debris_small_05"/>
+			<Piece entityName="glass_debris_medium_01"/>
+			<Piece entityName="glass_debris_medium_02"/>
+			<Piece entityName="glass_debris_medium_03"/>
+			<Piece entityName="glass_debris_medium_04"/>
+			<Piece entityName="glass_debris_large_01"/>
+			<Piece entityName="glass_debris_large_02"/>
+			<Piece entityName="glass_debris_large_03"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="Breakable_Glass_Small" type="BasicEntity" hideInEditor="true">
+		<Breakable breakMode="strict" sfx="glass_break">
+			<Piece entityName="glass_debris_small_01"/>
+			<Piece entityName="glass_debris_small_02"/>
+			<Piece entityName="glass_debris_small_03"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="Breakable_Paper" type="BasicEntity" hideInEditor="true">
+		<Breakable breakMode="strict">
+			<Piece entityName="PS_PaperBreak"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="Breakable_Fruits" type="BasicEntity" hideInEditor="true">
+		<Breakable breakMode="strict">
+			<Piece entityName="fruit_apple"/>
+			<Piece entityName="fruit_apple"/>
+			<Piece entityName="fruit_pear"/>
+			<Piece entityName="fruit_pear"/>
+			<Piece entityName="fruit_orange"/>
+			<Piece entityName="fruit_orange"/>
+			<Piece entityName="fruit_orange"/>
+			<Piece entityName="wood_break_medium_01"/>
+			<Piece entityName="wood_break_medium_02"/>
+			<Piece entityName="wood_break_medium_03"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="Breakable_Watermelon" type="BasicEntity" hideInEditor="true">
+		<Breakable breakMode="strict">
+			<Piece entityName="watermelon_piece_01"/>
+			<Piece entityName="watermelon_piece_02"/>
+			<Piece entityName="watermelon_piece_03"/>
+			<Piece entityName="watermelon_piece_04"/>
+			<Piece entityName="watermelon_piece_05"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="Breakable_Curtain_02" type="BasicEntity" hideInEditor="true">
+		<Breakable breakMode="strict" sfx="curtain_move">
+			<Piece entityName="PS_PaperBreak"/>
+			<Piece entityName="padding_break_small_01"/>
+			<Piece entityName="padding_break_small_02"/>
+			<Piece entityName="curtain_bar_02"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="Breakable_Window_Blocker" type="BasicEntity" hideInEditor="true">
+		<Breakable breakMode="strict" sfx="wood_break">
+			<Piece entityName="door_01_break09"/>
+			<Piece entityName="door_01_break12"/>
+			<Piece entityName="door_01_break12"/>
+			<Piece entityName="door_01_break13"/>
+		</Breakable>
+	</Entity>
+
+</Entities>

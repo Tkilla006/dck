@@ -1,0 +1,31 @@
+<!--
+Each trooper is "born" with a random percent of each ability (a percent of rangeEnd-rangeStart).
+In addition to that, each rank promotion also adds to the ability. The range is equally split among the available ranks, with the first rank = rangeStart and the final rank = rangeEnd.
+
+Final formula:
+innatePercent = innateSkillPercent / 100
+rankPercent  = (currentRank / numRanks)
+modifierPercent = min(innateModifier + rankModifier, 1.0)
+totalModifier = rangeStart + (rangeEnd - rangeStart) * modifierPercent
+-->
+<InnateAbilities>
+	<!--
+	"name" is linked with the GUI in customization.xml. If you need to change the name, make sure you also change it there.
+	
+	"target" is any parameter in a <ModifiableParams> of the current equipment, or any parameter in the current AttackType
+	-->
+	<InnateAbility name="Marksmanship">
+		<!-- modifies the current attack type. We can also modify the base weapon accuracy, but it's more text to write to modify both 'start' and 'end' range -->
+		<Modifier target="accuracyAdd" rangeStart="-8" rangeEnd="8"/>
+		<Modifier target="critChanceAdd" rangeStart="-1" rangeEnd="1"/>
+	</InnateAbility>
+
+	<InnateAbility name="AssaultShooting">
+		<Modifier target="minAimTime" rangeStart="15" rangeEnd="-15"/>
+		<Modifier target="maxAimTime" rangeStart="15" rangeEnd="-15"/>
+	</InnateAbility>
+
+	<InnateAbility name="FieldSkills">
+		<Modifier target="efficiencyPercent" rangeStart="-25" rangeEnd="25"/>
+	</InnateAbility>
+</InnateAbilities>

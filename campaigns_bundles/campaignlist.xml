@@ -1,0 +1,14 @@
+<campaignlist>
+	<!--
+		This specifies the order in which the campaigns will show up in the game.
+		Multiple campaignlist xmls will be loaded in the order of their filenames, then everything inside them as specified below.
+		Modded campaigns will be shown last, but in no particular order in-between them.
+	-->
+
+	<campaign file="data/campaigns/tod_northern_belt.xml"/>
+	<campaign file="data/campaigns/tod_shrine_district.xml"/>
+	<campaign file="data/campaigns/operation_subjugator.xml"/>
+	<campaign file="data/campaigns/operation_kerak.xml"/>
+	<campaign file="data/campaigns/operation_rajul.xml"/>
+	<campaign file="data/campaigns/operation_chess.xml"/>	
+</campaignlist>

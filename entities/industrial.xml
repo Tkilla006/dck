@@ -1,0 +1,1574 @@
+<!--
+		For help, please refer to "help_entities.txt" in this directory.
+-->
+<Entities>
+
+<!-- MACHINES -->
+
+	<!-- tools -->
+
+	<Entity name="engine" type="BasicEntity" editorTags="tools" >
+		<PhysicalParams solid="false"  blocksMovement="true" />
+		<RenderObject3D model="data/models/environment/industrial/engine.khm" diffuseTex="data/models/environment/industrial/engine.dds"/>
+	</Entity>
+
+	<Entity name="grindingmachine" type="BasicEntity" editorTags="tools" >
+		<PhysicalParams solid="false"  blocksMovement="false" />
+		<RenderObject3D model="data/models/environment/industrial/grindingmachine.khm" diffuseTex="data/models/environment/industrial/grindingmachine.dds"/>
+	</Entity>
+
+	<Entity name="paintbrush" type="BasicEntity" editorTags="tools" >
+		<PhysicalParams solid="false"  blocksMovement="false" />
+		<RenderObject3D model="data/models/environment/industrial/paintbrush.khm" diffuseTex="data/models/environment/industrial/paintbrush.dds"/>
+	</Entity>
+
+
+	<Entity name="table_industrial" type="BasicEntity" editorTags="tools" >
+		<PhysicalParams solid="true"  blocksMovement="true" />
+		<RenderObject3D model="data/models/environment/industrial/table_industrial.khm" diffuseTex="data/models/environment/industrial/table_industrial.dds"/>
+	</Entity>
+
+	<Entity name="welder" type="BasicEntity" editorTags="tools" >
+		<PhysicalParams solid="false"  blocksMovement="true" />
+		<RenderObject3D model="data/models/environment/industrial/welder.khm" diffuseTex="data/models/environment/industrial/welder.dds"/>
+	</Entity>
+
+	<Entity name="weldermask" type="BasicEntity" editorTags="tools" >
+		<PhysicalParams physicsEnabled="true" solid="false" />
+		<RenderObject3D model="data/models/environment/industrial/weldermask.khm" diffuseTex="data/models/environment/industrial/weldermask.dds"/>
+	</Entity>
+
+	<Entity name="benchvise" type="BasicEntity" editorTags="tools" >
+		<PhysicalParams solid="false" blocksMovement="false" />
+		<RenderObject3D model="data/models/environment/industrial/benchvise.khm" diffuseTex="data/models/environment/industrial/benchvise.dds"/>
+	</Entity>
+
+	<Entity name="sewing_machine" type="BasicEntity" editorTags="tools" >
+		<PhysicalParams solid="false" blocksMovement="false" />
+		<RenderObject3D model="data/models/environment/industrial/sewing_machine.khm" diffuseTex="data/models/environment/industrial/sewing_machine.dds"/>
+	</Entity>
+
+	<Entity name="carcrane" type="BasicEntity" editorTags="tools" >
+		<PhysicalParams solid="false" blocksMovement="true" />
+		<RenderObject3D model="data/models/environment/industrial/carcrane.khm" diffuseTex="data/models/environment/industrial/carcrane.dds"/>
+	</Entity>
+
+	<Entity name="gloves" type="BasicEntity" editorTags="tools" >
+		<PhysicalParams solid="false" />
+		<RenderObject3D model="data/models/environment/industrial/gloves.khm" diffuseTex="data/models/environment/industrial/gloves.dds"/>
+	</Entity>
+
+	<Entity name="millingmachine" type="BasicEntity" editorTags="tools" >
+		<PhysicalParams solid="false" blocksMovement="false" />
+		<RenderObject3D model="data/models/environment/industrial/millingmachine.khm" diffuseTex="data/models/environment/industrial/millingmachine.dds"/>
+	</Entity>
+
+	<Entity name="slottingmachine" type="BasicEntity" editorTags="tools" >
+		<PhysicalParams solid="false" blocksMovement="true" />
+		<RenderObject3D model="data/models/environment/industrial/slottingmachine.khm" diffuseTex="data/models/environment/industrial/slottingmachine.dds"/>
+	</Entity>
+
+	<Entity name="toolshelves" type="BasicEntity" editorTags="tools" >
+		<PhysicalParams solid="false" blocksMovement="true" />
+		<Breakable breakOnDamage="explosive"/>
+		<RenderObject3D model="data/models/environment/industrial/toolshelves.khm" diffuseTex="data/models/environment/industrial/toolshelves.dds"/>
+	</Entity>
+
+	<Entity name="walltoolholder" type="BasicEntity" editorTags="tools" initialHeight="1.53" editorAutoHeight="false">
+		<PhysicalParams physicsEnabled="false" solid="false" />
+		<Breakable breakOnDamage="explosive"/>
+		<RenderObject3D model="data/models/environment/industrial/walltoolholder.khm" diffuseTex="data/models/environment/industrial/walltoolholder.dds"/>
+	</Entity>
+
+	<Entity name="train_tracks_1m" type="BasicEntity" editorTags="industrial" >
+		<PhysicalParams solid="true"  blocksMovement="false" />
+		<RenderObject3D model="data/models/environment/industrial/train_tracks_1m.khm" diffuseTex="data/models/environment/industrial/train_tracks.dds"/>
+	</Entity>
+
+	<Entity name="train_tracks_4m" type="BasicEntity" editorTags="industrial" >
+		<PhysicalParams solid="true"  blocksMovement="false" />
+		<RenderObject3D model="data/models/environment/industrial/train_tracks_4m.khm" diffuseTex="data/models/environment/industrial/train_tracks.dds"/>
+	</Entity>
+
+	<Entity name="train_tracks_curve" type="BasicEntity" editorTags="industrial" >
+		<PhysicalParams solid="true"  blocksMovement="false" />
+		<RenderObject3D model="data/models/environment/industrial/train_tracks_curve.khm" diffuseTex="data/models/environment/industrial/train_tracks.dds"/>
+	</Entity>
+
+	<Entity name="train_tracks_split" type="BasicEntity" editorTags="industrial" >
+		<PhysicalParams solid="true"  blocksMovement="false" />
+		<RenderObject3D model="data/models/environment/industrial/train_tracks_split.khm" diffuseTex="data/models/environment/industrial/train_tracks.dds"/>
+	</Entity>
+
+	<!-- crates -->
+
+	<Entity name="industrialbin_empty" type="BasicEntity" hideInEditor="false" editorTags="industrial" >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/industrialbin_empty.khm" diffuseTex="data/models/environment/industrial/industrialbin.dds"/>
+		<Specular shininess="64" intensity="2.0"/>
+	</Entity>
+
+	<Entity name="industrialbin_full" type="BasicEntity" hideInEditor="false" editorTags="industrial" >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/industrialbin_full.khm" diffuseTex="data/models/environment/industrial/industrialbin.dds"/>
+		<Specular shininess="64" intensity="2.0"/>
+	</Entity>
+
+	<Entity name="metalcrate_a1" type="BasicEntity" hideInEditor="false" editorTags="industrial" >
+		<PhysicalParams blocksMovement="false" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/metalcrate_a1.khm" diffuseTex="data/models/environment/industrial/metalcrate_a1.dds"/>
+		<Specular shininess="64" intensity="2.0"/>
+	</Entity>
+
+	<Entity name="metalcrate_a2" type="BasicEntity" hideInEditor="false" editorTags="industrial" >
+		<PhysicalParams blocksMovement="false" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/metalcrate_a2.khm" diffuseTex="data/models/environment/industrial/metalcrate_a2.dds"/>
+		<Specular shininess="64" intensity="2.0"/>
+	</Entity>
+
+	<Entity name="metalcrate_b1" type="BasicEntity" hideInEditor="false" editorTags="industrial" >
+		<PhysicalParams blocksMovement="false" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/metalcrate_b1.khm" diffuseTex="data/models/environment/industrial/metalcrate_b1.dds"/>
+		<Specular shininess="64" intensity="2.0"/>
+	</Entity>
+
+	<Entity name="metalcrate_b2" type="BasicEntity" hideInEditor="false" editorTags="industrial" >
+		<PhysicalParams blocksMovement="false" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/metalcrate_b2.khm" diffuseTex="data/models/environment/industrial/metalcrate_b2.dds"/>
+		<Specular shininess="64" intensity="2.0"/>
+	</Entity>
+
+	<Entity name="metalcrate_b2_open" type="BasicEntity" hideInEditor="false" editorTags="industrial" >
+		<PhysicalParams blocksMovement="false" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/metalcrate_b2_open.khm" diffuseTex="data/models/environment/industrial/metalcrate_b2.dds"/>
+		<Specular shininess="64" intensity="2.0"/>
+	</Entity>
+
+	<Entity name="metalcrate_b3" type="BasicEntity" hideInEditor="false" editorTags="industrial" >
+		<PhysicalParams blocksMovement="false" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/metalcrate_b3.khm" diffuseTex="data/models/environment/industrial/metalcrate_b3.dds"/>
+		<Specular shininess="64" intensity="2.0"/>
+	</Entity>
+
+	<Entity name="metalcrate_b3_open" type="BasicEntity" hideInEditor="false" editorTags="industrial" >
+		<PhysicalParams blocksMovement="false" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/metalcrate_b3_open.khm" diffuseTex="data/models/environment/industrial/metalcrate_b3.dds"/>
+		<Specular shininess="64" intensity="2.0"/>
+	</Entity>
+
+	<Entity name="metalcrate_c1" type="BasicEntity" hideInEditor="false" editorTags="industrial" >
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" piercingProtectionLevel="30"/>
+		<RenderObject3D model="data/models/environment/industrial/metalcrate_c1.khm" diffuseTex="data/models/environment/industrial/metalcrate_c1.dds"/>
+		<Specular shininess="64" intensity="2.0"/>
+	</Entity>
+
+	<Entity name="metalcrate_c2" type="BasicEntity" hideInEditor="false" editorTags="industrial" >
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" piercingProtectionLevel="30"/>
+		<RenderObject3D model="data/models/environment/industrial/metalcrate_c2.khm" diffuseTex="data/models/environment/industrial/metalcrate_c2.dds"/>
+		<Specular shininess="64" intensity="2.0"/>
+	</Entity>
+
+	<Entity name="rollingdumbbin_empty" type="BasicEntity" hideInEditor="false" editorTags="industrial" >
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" piercingProtectionLevel="30"/>
+		<RenderObject3D model="data/models/environment/industrial/rollingdumbbin_empty.khm" diffuseTex="data/models/environment/industrial/rollingdumbbin.dds"/>
+		<Specular shininess="64" intensity="2.0"/>
+	</Entity>
+
+	<Entity name="rollingdumbbin_full" type="BasicEntity" hideInEditor="false" editorTags="industrial" >
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" piercingProtectionLevel="40"/>
+		<RenderObject3D model="data/models/environment/industrial/rollingdumbbin_full.khm" diffuseTex="data/models/environment/industrial/rollingdumbbin.dds"/>
+		<Specular shininess="64" intensity="2.0"/>
+	</Entity>
+
+
+	<!-- machines -->
+
+	<!--
+	<Entity name="machine_01" type="BasicEntity" hideInEditor="true" editorTags="machines" >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_01.khm" diffuseTex="data/models/environment/industrial/machine_01.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_01_spec.dds"/>
+	</Entity>
+	-->
+
+	<Entity name="machine_01_part_01_rev" type="BasicEntity" hideInEditor="true" editorTags="machines" >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_01_part_01.khm" diffuseTex="data/models/environment/industrial/machine_01.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_01_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_01_part_02" type="BasicEntity" hideInEditor="true" editorTags="machines" >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_01_part_02.khm" diffuseTex="data/models/environment/industrial/machine_01.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_01_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_01_part_03_rev" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/machine_01_part_03.khm" diffuseTex="data/models/environment/industrial/machine_01.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_01_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_02" type="BasicEntity" hideInEditor="false" editorTags="machines" >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_02.khm" diffuseTex="data/models/environment/industrial/machine_02.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_02_spec.dds"/>
+	</Entity>
+
+	<!--
+	<Entity name="machine_03" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_03.khm" diffuseTex="data/models/environment/industrial/machine_03.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_03_spec.dds"/>
+	</Entity>
+	-->
+
+	<Entity name="machine_03_part_01_rev" type="BasicEntity" hideInEditor="true" editorTags="machines" >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_03_part_01_rev.khm" diffuseTex="data/models/environment/industrial/machine_03.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_01_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_03_part_02" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/machine_03_part_02.khm" diffuseTex="data/models/environment/industrial/machine_03.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_01_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_03_part_03" type="BasicEntity" hideInEditor="true" editorTags="machines" >
+		<PhysicalParams blocksMovement="true" blocksVision="false" solid="false" />
+		<RenderObject3D model="data/models/environment/industrial/machine_03_part_03_rev.khm" diffuseTex="data/models/environment/industrial/machine_03.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_01_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_03_part_04" type="BasicEntity" hideInEditor="true" editorTags="machines" >
+		<PhysicalParams blocksMovement="true" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/machine_03_part_04_rev.khm" diffuseTex="data/models/environment/industrial/machine_03.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_01_spec.dds"/>
+	</Entity>
+
+	<!--
+	<Entity name="machine_04" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" solid="false"  blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_04.khm" diffuseTex="data/models/environment/industrial/machine_04.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_04_spec.dds"/>
+	</Entity>
+	-->
+
+	<Entity name="machine_04_part_01_rev" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_04_part_01_rev.khm" diffuseTex="data/models/environment/industrial/machine_04.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_01_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_04_part_02_rev" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_04_part_02_rev.khm" diffuseTex="data/models/environment/industrial/machine_04.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_01_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_04_part_03_rev" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/machine_04_part_03_rev.khm" diffuseTex="data/models/environment/industrial/machine_04.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_01_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_04_part_04_rev" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/machine_04_part_04_rev.khm" diffuseTex="data/models/environment/industrial/machine_04.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_01_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_04_part_05_rev" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/machine_04_part_05_rev.khm" diffuseTex="data/models/environment/industrial/machine_04.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_01_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_05" type="BasicEntity" hideInEditor="false" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/machine_05.khm" diffuseTex="data/models/environment/industrial/machine_05.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_05_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_06_part_01" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/machine_06_part_01.khm" diffuseTex="data/models/environment/industrial/machine_06.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_06_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_06_part_02" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_06_part_02.khm" diffuseTex="data/models/environment/industrial/machine_06.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_06_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_07_part_01" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/machine_07_part_01.khm" diffuseTex="data/models/environment/industrial/machine_07.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_07_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_07_part_02" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_07_part_02.khm" diffuseTex="data/models/environment/industrial/machine_07.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_07_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_07_part_03" type="BasicEntity"  editorAutoHeight="false" initialHeight="0.78" hideInEditor="false" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_07_part_03.khm" diffuseTex="data/models/environment/industrial/machine_07.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_07_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_07_part_04" type="BasicEntity" editorAutoHeight="false" initialHeight="0.78" hideInEditor="false" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_07_part_04.khm" diffuseTex="data/models/environment/industrial/machine_07.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_07_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_07_part_05" type="BasicEntity" editorAutoHeight="false" initialHeight="0.78" hideInEditor="false" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_07_part_05.khm" diffuseTex="data/models/environment/industrial/machine_07.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_07_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_07_part_06" type="BasicEntity" editorAutoHeight="false" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="false" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/machine_07_part_06.khm" diffuseTex="data/models/environment/industrial/machine_07.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_07_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_08_part_01" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/machine_08_part_01.khm" diffuseTex="data/models/environment/industrial/machine_08.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_08_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_08_part_02" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_08_part_02.khm" diffuseTex="data/models/environment/industrial/machine_08.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_08_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_09_part_01" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/machine_09_part_01.khm" diffuseTex="data/models/environment/industrial/machine_09.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_09_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_09_part_02" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_09_part_02.khm" diffuseTex="data/models/environment/industrial/machine_09.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_09_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_10" type="BasicEntity" hideInEditor="false" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_10.khm" diffuseTex="data/models/environment/industrial/machine_10.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_10_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_11_part_01" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/machine_11_part_01.khm" diffuseTex="data/models/environment/industrial/machine_11.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_11_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_11_part_02" type="BasicEntity" hideInEditor="true" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/machine_11_part_02.khm" diffuseTex="data/models/environment/industrial/machine_11.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_11_spec.dds"/>
+	</Entity>
+
+	<Entity name="machine_12" type="BasicEntity" hideInEditor="false" editorTags="machines"  >
+		<PhysicalParams blocksMovement="true" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/machine_12.khm" diffuseTex="data/models/environment/industrial/machine_12.dds"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/machine_12_spec.dds"/>
+	</Entity>
+
+	<Entity name="metal_railing" type="BasicEntity" hideInEditor="false" editorTags="industrial"  >
+		<PhysicalParams blocksMovement="true" blocksVision="false" />
+		<RenderObject3D model="data/models/environment/industrial/metal_railing.khm" diffuseTex="data/models/environment/industrial/metal_railing.dds"/>
+		<Specular shininess="64" intensity="5.0"/>
+	</Entity>
+
+	<Entity name="wallpanel" type="BasicEntity" hideInEditor="false" editorTags="industrial"  >
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/industrial/wallpanel.khm" diffuseTex="data/models/environment/industrial/wallpanel.dds">
+			<Specular shininess="64" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<!-- 0.25 m Clean -->
+
+	<Entity name="pipes_025_turn90small_smooth_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_turn90small_smooth.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_1m_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_1m.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_2m_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_2m.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_05m_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_05m.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_5m_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_5m.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_45deg_1m_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_45deg_1m.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_45deg_2m_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_45deg_2m.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_45deg_4m_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_45deg_4m.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_45deg_joint45deg_and_horizontal_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_45deg_joint45deg_and_horizontal.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_45deg_jointhorizontal_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_45deg_jointhorizontal.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_cap_closed_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_cap_closed.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_cap_hole_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_cap_hole.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_joint_vertical_and_45deg_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_joint_vertical_and_45deg.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_jointvertical_45degclean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_jointvertical_45deg.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_pressure_meter_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_pressure_meter.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_t_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_t.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_turn90large_smooth_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_turn90large_smooth.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_turn90long_straightsmooth_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_turn90long_straightsmooth.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_turn90small_straightsmooth_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_turn90small_straightsmooth.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_turn180_sharp_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_turn180_sharp.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_valve_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_valve.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_x_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_x.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+<!-- 0.5 Clean -->
+
+	<Entity name="pipes_05_1m_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_1m.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_2m_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_2m.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_05m_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_05m.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_5m_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_5m.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_45deg_2m_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_45deg_2m.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_45deg_3m_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_45deg_3m.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_45deg_joint45deg_and_horizontal_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_45deg_joint45deg_and_horizontal.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_45deg_jointhorizontal_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_45deg_jointhorizontal.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_cap_closed_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_cap_closed.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_cap_hole_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_cap_hole.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_joint_vertical_and_45deg_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_joint_vertical_and_45deg.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_jointvertical_45deg_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_jointvertical_45deg.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_t_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_t.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_t_joint_025_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_t_joint_025.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_turn90_large_smooth_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_turn90_large_smooth.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_turn90_long_sharp_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_turn90_long_sharp.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_turn90_small_sharp_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_turn90_small_sharp.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_turn90_small_smooth_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_turn90_small_smooth.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_turn90long_straightsmooth_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_turn90long_straightsmooth.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_valve_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_valve.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_x_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_x.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<!-- 1m Clean -->
+
+	<Entity name="pipes_10_1m_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_1m.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_2m_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_2m.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_05m_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_05m.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_5m_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_5m.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_45deg_3m_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_45deg_3m.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_45deg_joint45deg_and_horizontal_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_45deg_joint45deg_and_horizontal.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_45deg_jointhorizontal_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_45deg_jointhorizontal.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_cap_closed_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_cap_closed.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_cap_hole_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_cap_hole.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_joint_vertical_and_45deg_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_joint_vertical_and_45deg.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_jointvertical_45deg_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_jointvertical_45deg.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_t_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_t.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_t_joint_05_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_t_joint_05.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_t_joint_025_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_t_joint_025.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_turbine_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_turbine.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_turn90_large_smooth_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_turn90_large_smooth.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_turn90_largel_sharp_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_turn90_largel_sharp.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_turn90_small_sharp_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_turn90_small_sharp.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_turn90_small_smooth_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_turn90_small_smooth.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_x_clean" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_x.khm" diffuseTex="data/models/environment/industrial/pipes_clean.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<!-- DIRTY PIPES -->
+
+	<!-- 0.25 m Dirty -->
+
+	<Entity name="pipes_025_turn90small_smooth_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_turn90small_smooth.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_1m_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_1m.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_2m_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_2m.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_05m_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_05m.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_5m_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_5m.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_45deg_1m_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_45deg_1m.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_45deg_2m_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_45deg_2m.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_45deg_4m_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_45deg_4m.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_45deg_joint45deg_and_horizontal_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_45deg_joint45deg_and_horizontal.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_45deg_jointhorizontal_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_45deg_jointhorizontal.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_cap_closed_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_cap_closed.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_cap_hole_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_cap_hole.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_joint_vertical_and_45deg_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_joint_vertical_and_45deg.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_jointvertical_45degdirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_jointvertical_45deg.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_pressure_meter_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_pressure_meter.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_t_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_t.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_turn90large_smooth_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_turn90large_smooth.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_turn90long_straightsmooth_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_turn90long_straightsmooth.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_turn90small_straightsmooth_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_turn90small_straightsmooth.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_turn180_sharp_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_turn180_sharp.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_valve_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_valve.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_x_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_x.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+<!-- 0.5 Dirty -->
+
+	<Entity name="pipes_05_1m_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_1m.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_2m_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_2m.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_05m_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_05m.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_5m_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_5m.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_45deg_2m_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_45deg_2m.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_45deg_3m_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_45deg_3m.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_45deg_joint45deg_and_horizontal_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_45deg_joint45deg_and_horizontal.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_45deg_jointhorizontal_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_45deg_jointhorizontal.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_cap_closed_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_cap_closed.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_cap_hole_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_cap_hole.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_joint_vertical_and_45deg_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_joint_vertical_and_45deg.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_jointvertical_45deg_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_jointvertical_45deg.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_t_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_t.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_t_joint_025_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_t_joint_025.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_turn90_large_smooth_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_turn90_large_smooth.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_turn90_long_sharp_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_turn90_long_sharp.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_turn90_small_sharp_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_turn90_small_sharp.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_turn90_small_smooth_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_turn90_small_smooth.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_turn90long_straightsmooth_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_turn90long_straightsmooth.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_valve_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_valve.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_x_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_x.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<!-- 1m Dirty -->
+
+	<Entity name="pipes_10_1m_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_1m.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_2m_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_2m.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_05m_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_05m.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_5m_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_5m.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_45deg_3m_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_45deg_3m.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_45deg_joint45deg_and_horizontal_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_45deg_joint45deg_and_horizontal.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_45deg_jointhorizontal_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_45deg_jointhorizontal.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_cap_closed_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_cap_closed.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_cap_hole_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_cap_hole.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_joint_vertical_and_45deg_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_joint_vertical_and_45deg.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_jointvertical_45deg_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_jointvertical_45deg.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_t_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_t.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_t_joint_05_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_t_joint_05.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_t_joint_025_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_t_joint_025.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_turbine_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_turbine.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_turn90_large_smooth_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_turn90_large_smooth.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_turn90_largel_sharp_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_turn90_largel_sharp.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_turn90_small_sharp_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_turn90_small_sharp.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_turn90_small_smooth_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_turn90_small_smooth.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_x_dirty" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_x.khm" diffuseTex="data/models/environment/industrial/pipes_dirty.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+<!-- RUST PIPES -->
+
+	<!-- 0.25 m Rust -->
+
+	<Entity name="pipes_025_turn90small_smooth_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_turn90small_smooth.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_1m_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_1m.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_2m_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_2m.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_05m_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_05m.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_5m_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_5m.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_45deg_1m_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_45deg_1m.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_45deg_2m_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_45deg_2m.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_45deg_4m_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_45deg_4m.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_45deg_joint45deg_and_horizontal_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_45deg_joint45deg_and_horizontal.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_45deg_jointhorizontal_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_45deg_jointhorizontal.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_cap_closed_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_cap_closed.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_cap_hole_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_cap_hole.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_joint_vertical_and_45deg_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_joint_vertical_and_45deg.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_jointvertical_45degrust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_jointvertical_45deg.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_pressure_meter_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_pressure_meter.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_t_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_t.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_turn90large_smooth_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_turn90large_smooth.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_turn90long_straightsmooth_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_turn90long_straightsmooth.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_turn90small_straightsmooth_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_turn90small_straightsmooth.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_turn180_sharp_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_turn180_sharp.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_valve_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_valve.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_025_x_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_025_x.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+<!-- 0.5 Rust -->
+
+	<Entity name="pipes_05_1m_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_1m.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_2m_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_2m.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_05m_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_05m.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_5m_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_5m.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_45deg_2m_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_45deg_2m.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_45deg_3m_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_45deg_3m.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_45deg_joint45deg_and_horizontal_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_45deg_joint45deg_and_horizontal.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_45deg_jointhorizontal_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_45deg_jointhorizontal.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_cap_closed_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_cap_closed.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_cap_hole_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_cap_hole.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_joint_vertical_and_45deg_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_joint_vertical_and_45deg.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_jointvertical_45deg_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_jointvertical_45deg.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_t_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_t.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_t_joint_025_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_t_joint_025.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_turn90_large_smooth_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_turn90_large_smooth.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_turn90_long_sharp_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_turn90_long_sharp.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_turn90_small_sharp_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_turn90_small_sharp.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_turn90_small_smooth_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_turn90_small_smooth.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_turn90long_straightsmooth_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_turn90long_straightsmooth.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_valve_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_valve.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_05_x_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_05_x.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<!-- 1m Rust -->
+
+	<Entity name="pipes_10_1m_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_1m.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_2m_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_2m.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_05m_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_05m.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_5m_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_5m.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_45deg_3m_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_45deg_3m.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_45deg_joint45deg_and_horizontal_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_45deg_joint45deg_and_horizontal.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_45deg_jointhorizontal_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_45deg_jointhorizontal.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_cap_closed_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_cap_closed.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_cap_hole_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_cap_hole.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_joint_vertical_and_45deg_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_joint_vertical_and_45deg.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_jointvertical_45deg_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_jointvertical_45deg.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_t_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_t.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_t_joint_05_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_t_joint_05.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_t_joint_025_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_t_joint_025.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_turbine_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_turbine.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_turn90_large_smooth_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_turn90_large_smooth.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_turn90_largel_sharp_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_turn90_largel_sharp.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_turn90_small_sharp_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_turn90_small_sharp.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_turn90_small_smooth_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_turn90_small_smooth.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="pipes_10_x_rust" type="BasicEntity" editorTags="pipes">
+		<PhysicalParams blocksMovement="true"/>
+		<RenderObject3D model="data/models/environment/industrial/pipes_10_x.khm" diffuseTex="data/models/environment/industrial/pipes_rust.dds" gossaoCastHeight="7"/>
+		<Specular shininess="64" intensity="5.0" mask="data/models/environment/industrial/pipes_spec.dds"/>
+	</Entity>
+
+	<Entity name="Wire Black" type="Wall" editorAutoHeight="false" editorTags="industrial" initialHeight="0.005">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+
+		<!-- this will not be used, because heightMeters=0, therefore no sidewalls will be created -->
+		<RenderObject3D diffuseTex="data/models/environment/exterior/container_roof_03.dds" skipGOSSAO="true" skipCastShadows="true"/>
+
+		<!-- this represents the top side, which has a faded/blended texture, to avoid aliasing -->
+		<RenderObject3D diffuseTex="data/textures/gui_ingame/path_drawing.dds" blendMode="normal" diffuseColor="323232ff" skipGOSSAO="true" skipCastShadows="true"/>
+
+		<RenderObject2D texture="data/textures/gui_ingame/path_drawing.dds" sizeX="0.2" sizeY="0.2" hideInGame="true" disableDepthTest="true" blendMode="normal" color="0000008c"/>
+
+		<!-- heightMeters=0 will avoid creating sidewalls, while collisionHeight=0 will avoid creating collisions -->
+		<Wall widthMeters="0.06" heightMeters="0.0" collisionHeight="0" canBeCutByDoors="false"/>
+	</Entity>
+
+</Entities>

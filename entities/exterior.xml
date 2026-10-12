@@ -1,0 +1,2822 @@
+<!--
+		For help, please refer to "help_entities.txt" in this directory.
+-->
+<Entities>
+
+
+	<!-- BENCHES -->
+
+	<Entity name="bench_01" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Wood"/>
+		<RenderObject3D model="data/models/environment/exterior/bench_01.khm" diffuseTex="data/models/environment/exterior/bench_01.dds"/>
+	</Entity>
+
+	<Entity name="bench_02" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Wood"/>
+		<RenderObject3D model="data/models/environment/exterior/bench_02.khm" diffuseTex="data/models/environment/exterior/bench_02.dds"/>
+	</Entity>
+	
+	<Entity name="swing_set_01" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" blocksVision="true"/>
+		<RenderObject3D model="data/models/environment/exterior/swing_set.khm" diffuseTex="data/models/environment/exterior/swing_set_01.dds"/>
+	</Entity>
+	
+	<Entity name="swing_set_02" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" blocksVision="true"/>
+		<RenderObject3D model="data/models/environment/exterior/swing_set.khm" diffuseTex="data/models/environment/exterior/swing_set_02.dds"/>
+	</Entity>
+	
+	<Entity name="slide" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" blocksVision="true"/>
+		<RenderObject3D model="data/models/environment/exterior/slide.khm" diffuseTex="data/models/environment/exterior/slide.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<!-- CRATES BOXES BARRELS -->
+
+	<Entity name="barrel_01_dshk" type="BasicEntity" hideInGame="true" hideInEditor="true" editorTags="deco ext" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="50"/>
+		<Breakable breakOnDamage="explosive"/>
+		<RenderObject3D model="data/models/environment/exterior/barrel_01.khm" diffuseTex="data/models/environment/exterior/barrel_01.dds">
+			<Specular shininess="8" intensity="1.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="barrel_01" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="50"/>
+		<Breakable template="Breakable_Plastic"/>
+		<RenderObject3D model="data/models/environment/exterior/barrel_01.khm" diffuseTex="data/models/environment/exterior/barrel_01.dds">
+			<Specular shininess="8" intensity="1.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="barrel_01_02" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="50"/>
+		<Breakable template="Breakable_Plastic"/>
+		<RenderObject3D model="data/models/environment/exterior/barrel_01.khm" diffuseTex="data/models/environment/exterior/barrel_01_02.dds">
+			<Specular shininess="8" intensity="1.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="barrel_02" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="50"/>
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/barrel_02.khm" diffuseTex="data/models/environment/exterior/barrel_02.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="barrel_02_02" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="50"/>
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/barrel_02.khm" diffuseTex="data/models/environment/exterior/barrel_02_02.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+
+	<Entity name="barrel_03" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="50"/>
+		<Breakable template="Breakable_Wood"/>
+		<RenderObject3D model="data/models/environment/exterior/barrel_wood.khm" diffuseTex="data/models/environment/exterior/barrel_wood.dds">
+			<Specular shininess="1" intensity="1.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="cannonball" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="false" solid="false" />
+		<RenderObject3D model="data/models/environment/exterior/cannonball.khm" diffuseTex="data/models/environment/exterior/cannonball.dds" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="crate_01" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Wood" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/crate_01.khm" diffuseTex="data/models/environment/exterior/crate_01.dds"/>
+	</Entity>
+
+	<Entity name="crate_01_02" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Wood" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/crate_01.khm" diffuseTex="data/models/environment/exterior/crate_01_02.dds"/>
+	</Entity>
+
+	<Entity name="crate_02" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Wood" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/crate_02.khm" diffuseTex="data/models/environment/exterior/crate_02.dds"/>
+	</Entity>
+
+	<Entity name="crate_02_02" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Wood" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/crate_02.khm" diffuseTex="data/models/environment/exterior/crate_02_02.dds"/>
+	</Entity>
+
+	<Entity name="crate_03" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Wood" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/crate_03.khm" diffuseTex="data/models/environment/exterior/crates_02.dds"/>
+	</Entity>
+
+	<Entity name="crate_04" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Wood" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/crate_04.khm" diffuseTex="data/models/environment/exterior/crates_02.dds"/>
+	</Entity>
+
+	<Entity name="crate_05" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Wood" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/crate_05.khm" diffuseTex="data/models/environment/exterior/crates_02.dds"/>
+	</Entity>
+
+	<Entity name="crate_06" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Wood" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/crate_06.khm" diffuseTex="data/models/environment/exterior/crates_02.dds"/>
+	</Entity>
+
+	<Entity name="crate_plastic_01" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" blocksMovement="true"/>
+		<Breakable template="Breakable_Plastic" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/crate_plastic_01.khm" diffuseTex="data/models/environment/exterior/crate_plastic_01.dds"/>
+	</Entity>
+
+	<Entity name="crate_plastic_02" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" blocksMovement="true"/>
+		<Breakable template="Breakable_Plastic" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/crate_plastic_02.khm" diffuseTex="data/models/environment/exterior/crate_plastic_02.dds"/>
+	</Entity>
+
+	<Entity name="sack_01" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Fabric" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/sack_01.khm" diffuseTex="data/models/environment/exterior/sacks_01.dds"/>
+	</Entity>
+
+	<Entity name="sack_02" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Fabric" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/sack_02.khm" diffuseTex="data/models/environment/exterior/sacks_01.dds"/>
+	</Entity>
+
+	<Entity name="sack_03" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Fabric" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/sack_03.khm" diffuseTex="data/models/environment/exterior/sacks_01.dds"/>
+	</Entity>
+
+	<Entity name="cage_hen_01" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="true" density="7"/>
+		<!-- <Breakable template="Breakable_Wood" breakOnDamage="grenade"/> -->
+		<RenderObject3D model="data/models/environment/exterior/cage_hen_01.khm" diffuseTex="data/models/environment/exterior/crates_02.dds"/>
+	</Entity>
+
+	<Entity name="pallet_01" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Wood" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/pallet_01.khm" diffuseTex="data/models/environment/exterior/crates_02.dds"/>
+	</Entity>
+
+	<Entity name="pallet_02" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Wood" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/pallet_02.khm" diffuseTex="data/models/environment/exterior/crates_02.dds"/>
+	</Entity>
+
+	<Entity name="propane_tank_01_damage" type="DamageArea" hideInEditor="true" initialHeight="0.001">
+		<DamageArea damage="100" damageType="2" armorPenetration="50" radius="3.0" pushForce="15.0" triggerAtSpawn="true"/>
+		<PhysicalParams solid="false"/>
+	</Entity>
+
+	<Entity name="propane_tank_01" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<RenderObject3D model="data/models/environment/exterior/propane_tank_01.khm" diffuseTex="data/models/environment/exterior/propane_tank_01.dds"/>
+		<Breakable breakOnDamage="grenade" sfx="frag_expl">
+			<Piece entityName="metal_debris_large_04"/>
+			<Piece entityName="metal_debris_large_03"/>
+			<Piece entityName="metal_debris_large_01"/>
+			<Piece entityName="metal_debris_medium_04"/>
+			<Piece entityName="metal_debris_medium_03"/>
+			<Piece entityName="metal_debris_medium_01"/>
+			<Piece entityName="PS_RpgExplosion"/>
+			<Piece entityName="propane_tank_01_damage"/>
+			<Piece entityName="scorch_mark_large"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="brick_stack_01" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="40"/>
+		<RenderObject3D model="data/models/environment/exterior/brick_stack_01.khm" diffuseTex="data/models/environment/exterior/brick_stack_01.dds"/>
+	</Entity>
+
+	<Entity name="gallon_metal_01" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="true" solid="false" density="12"/>
+		<RenderObject3D model="data/models/environment/exterior/gallon_metal_01.khm" diffuseTex="data/models/environment/exterior/gallon_metal_01.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="gallon_metal_02" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="true" solid="false" density="12"/>
+		<RenderObject3D model="data/models/environment/exterior/gallon_metal_01.khm" diffuseTex="data/models/environment/exterior/gallon_metal_02.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="gallon_metal_03" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="true" solid="false" density="12"/>
+		<RenderObject3D model="data/models/environment/exterior/gallon_metal_01.khm" diffuseTex="data/models/environment/exterior/gallon_metal_03.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="gas_cylinder_damage" type="DamageArea" hideInEditor="true" initialHeight="0.001">
+		<DamageArea damage="50" damageType="2" armorPenetration="50" radius="1.5" pushForce="15.0" triggerAtSpawn="true"/>
+		<PhysicalParams solid="false"/>
+	</Entity>
+
+	<Entity name="gas_cylinder" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" physicsEnabled="false" />
+		<RenderObject3D model="data/models/environment/exterior/gas_cylinder.khm" diffuseTex="data/models/environment/exterior/gas_cylinder.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+		<Breakable breakOnDamage="grenade" sfx="frag_expl">
+			<Piece entityName="metal_debris_large_04"/>
+			<Piece entityName="metal_debris_large_03"/>
+			<Piece entityName="metal_debris_large_01"/>
+			<Piece entityName="metal_debris_medium_04"/>
+			<Piece entityName="metal_debris_medium_03"/>
+			<Piece entityName="metal_debris_medium_01"/>
+			<Piece entityName="PS_RpgExplosion"/>
+			<Piece entityName="explosion_mark"/>
+			<Piece entityName="gas_cylinder_damage"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="mortar_rounds" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="false" physicsEnabled="false" />
+		<Breakable breakOnDamage="explosive"/>
+		<RenderObject3D model="data/models/environment/exterior/mortar_rounds.khm" diffuseTex="data/models/environment/exterior/mortar_rounds.dds">
+			<Specular shininess="4" intensity="2.0"/>
+		</RenderObject3D>
+
+	</Entity>
+
+	<Entity name="plastic_gallon_blue" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="true" solid="false" density="10"/>
+		<RenderObject3D model="data/models/environment/exterior/plastic_gallon.khm" diffuseTex="data/models/environment/exterior/plastic_gallon_blue.dds" />
+
+	</Entity>
+
+	<Entity name="plastic_gallon_red" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="true" solid="false" density="10"/>
+		<RenderObject3D model="data/models/environment/exterior/plastic_gallon.khm" diffuseTex="data/models/environment/exterior/plastic_gallon_red.dds" />
+
+	</Entity>
+
+	<Entity name="plastic_gallon_white" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="true" solid="false" density="10"/>
+		<RenderObject3D model="data/models/environment/exterior/plastic_gallon.khm" diffuseTex="data/models/environment/exterior/plastic_gallon_white.dds"/>
+	</Entity>
+
+	<Entity name="plastic_gallon_yellow" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="true" solid="false" density="10"/>
+		<RenderObject3D model="data/models/environment/exterior/plastic_gallon.khm" diffuseTex="data/models/environment/exterior/plastic_gallon_yellow.dds"/>
+	</Entity>
+
+	<Entity name="door_mat" type="BasicEntity" editorTags="deco ext" >
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/door_mat.khm" diffuseTex="data/models/environment/exterior/door_mat.dds" skipSSAO="true" />
+	</Entity>
+
+	<!-- TIRES -->
+
+	<Entity name="car_tire_01" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Rubber" breakOnDamage="grenade" />
+		<RenderObject3D model="data/models/environment/exterior/car_tire_01.khm" diffuseTex="data/models/environment/exterior/car_tire.dds"/>
+	</Entity>
+
+	<Entity name="car_tire_02" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Rubber" breakOnDamage="grenade" />
+		<RenderObject3D model="data/models/environment/exterior/car_tire_02.khm" diffuseTex="data/models/environment/exterior/car_tire.dds"/>
+	</Entity>
+
+	<Entity name="tire_tractor" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Rubber" breakOnDamage="grenade" />
+		<RenderObject3D model="data/models/environment/exterior/tire_tractor.khm" diffuseTex="data/models/environment/exterior/tire_tractor.dds"/>
+	</Entity>
+
+	<Entity name="tire_tractor_cover" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="40"/>
+		<Breakable template="Breakable_Rubber" breakOnDamage="grenade" />
+		<RenderObject3D model="data/models/environment/exterior/tire_tractor.khm" diffuseTex="data/models/environment/exterior/tire_tractor.dds"/>
+	</Entity>
+
+	<Entity name="tire_01" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Rubber" breakOnDamage="grenade" />
+		<RenderObject3D model="data/models/environment/exterior/tire_01.khm" diffuseTex="data/models/environment/exterior/tire_01.dds"/>
+	</Entity>
+
+	<Entity name="tire_02" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Rubber" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/tire_02.khm" diffuseTex="data/models/environment/exterior/tire_02.dds"/>
+	</Entity>
+
+	<Entity name="football" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="true" solid="true" density="4" friction="0.85" elasticity="0.999"/>
+		<RenderObject3D model="data/models/environment/exterior/football.khm" diffuseTex="data/models/environment/exterior/football.dds">
+			<Specular shininess="4" intensity="1.5"/>
+		</RenderObject3D>
+	</Entity>
+
+	<!-- WALLS and FENCES -->
+
+	<Entity name="low_stone_wall_01" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="60"/>
+		<RenderObject3D model="data/models/environment/exterior/low_stone_wall_01.khm" diffuseTex="data/models/environment/exterior/low_stone_wall.dds"/>
+	</Entity>
+
+	<Entity name="low_stone_wall_02" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="60"/>
+		<RenderObject3D model="data/models/environment/exterior/low_stone_wall_02.khm" diffuseTex="data/models/environment/exterior/low_stone_wall.dds"/>
+	</Entity>
+
+	<Entity name="low_stone_wall_03" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="60"/>
+		<RenderObject3D model="data/models/environment/exterior/low_stone_wall_03.khm" diffuseTex="data/models/environment/exterior/low_stone_wall.dds"/>
+	</Entity>
+
+	<Entity name="low_stone_wall_04" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="60"/>
+		<RenderObject3D model="data/models/environment/exterior/low_stone_wall_04.khm" diffuseTex="data/models/environment/exterior/low_stone_wall.dds"/>
+	</Entity>
+
+
+	<Entity name="low_stone_wall_01_nofog" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="60"/>
+		<RenderObject3D model="data/models/environment/exterior/low_stone_wall_01.khm" diffuseTex="data/models/environment/exterior/low_stone_wall.dds" disableLighting="false"/>
+	</Entity>
+
+	<Entity name="low_stone_wall_02_nofog" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="60"/>
+		<RenderObject3D model="data/models/environment/exterior/low_stone_wall_02.khm" diffuseTex="data/models/environment/exterior/low_stone_wall.dds" disableLighting="false"/>
+	</Entity>
+
+	<Entity name="low_stone_wall_03_nofog" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="60"/>
+		<RenderObject3D model="data/models/environment/exterior/low_stone_wall_03.khm" diffuseTex="data/models/environment/exterior/low_stone_wall.dds" disableLighting="false"/>
+	</Entity>
+
+	<Entity name="low_stone_wall_04_nofog" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="60"/>
+		<RenderObject3D model="data/models/environment/exterior/low_stone_wall_04.khm" diffuseTex="data/models/environment/exterior/low_stone_wall.dds" disableLighting="false"/>
+	</Entity>
+
+	<Entity name="crumbling_wall_01" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="50"/>
+		<RenderObject3D model="data/models/environment/exterior/crumbling_wall_01.khm" diffuseTex="data/models/environment/exterior/crumbling_wall_01.dds"/>
+	</Entity>
+
+	<Entity name="crumbling_wall_02" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="50"/>
+		<RenderObject3D model="data/models/environment/exterior/crumbling_wall_02.khm" diffuseTex="data/models/environment/exterior/crumbling_wall_02.dds"/>
+	</Entity>
+
+	<Entity name="wooden_fence_01" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" solid="false"/>
+		<Breakable template="Breakable_Wood" breakOnDamage="explosive"/>
+		<RenderObject3D model="data/models/environment/exterior/wooden_fence_01.khm" diffuseTex="data/models/environment/exterior/wooden_fence.dds"/>
+	</Entity>
+
+	<Entity name="wooden_fence_02" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" solid="false"/>
+		<Breakable template="Breakable_Wood" breakOnDamage="explosive"/>
+		<RenderObject3D model="data/models/environment/exterior/wooden_fence_02.khm" diffuseTex="data/models/environment/exterior/wooden_fence.dds"/>
+	</Entity>
+
+	<Entity name="wooden_fence_03" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" solid="false"/>
+		<Breakable template="Breakable_Wood" breakOnDamage="explosive"/>
+		<RenderObject3D model="data/models/environment/exterior/wooden_fence_03.khm" diffuseTex="data/models/environment/exterior/wooden_fence.dds"/>
+	</Entity>
+
+	<Entity name="wooden_fence_04" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" solid="false"/>
+		<Breakable template="Breakable_Wood" breakOnDamage="explosive"/>
+		<RenderObject3D model="data/models/environment/exterior/wooden_fence_04.khm" diffuseTex="data/models/environment/exterior/wooden_fence.dds"/>
+	</Entity>
+
+	<Entity name="barricade_sack_01" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="60"/>
+		<RenderObject3D model="data/models/environment/exterior/barricade_sack_01.khm" diffuseTex="data/models/environment/exterior/barricade_sack.dds"/>
+	</Entity>
+
+	<Entity name="barricade_sack_02" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="60"/>
+		<RenderObject3D model="data/models/environment/exterior/barricade_sack_02.khm" diffuseTex="data/models/environment/exterior/barricade_sack.dds"/>
+	</Entity>
+
+	<Entity name="barricade_sack_03" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="60"/>
+		<RenderObject3D model="data/models/environment/exterior/barricade_sack_03.khm" diffuseTex="data/models/environment/exterior/barricade_sack.dds"/>
+	</Entity>
+
+	<Entity name="barricade_sack_04" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="60"/>
+		<RenderObject3D model="data/models/environment/exterior/barricade_sack_04.khm" diffuseTex="data/models/environment/exterior/barricade_sack.dds"/>
+	</Entity>
+
+	<Entity name="barricade_sack_05" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="60"/>
+		<RenderObject3D model="data/models/environment/exterior/barricade_sack_05.khm" diffuseTex="data/models/environment/exterior/barricade_sack.dds"/>
+	</Entity>
+
+	<Entity name="barricade_sack_06" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="60"/>
+		<RenderObject3D model="data/models/environment/exterior/barricade_sack_06.khm" diffuseTex="data/models/environment/exterior/barricade_sack.dds"/>
+	</Entity>
+
+	<Entity name="barricade_sack_07" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="60"/>
+		<RenderObject3D model="data/models/environment/exterior/barricade_sack_07.khm" diffuseTex="data/models/environment/exterior/barricade_sack.dds"/>
+	</Entity>
+
+	<Entity name="barrier_hesco_01" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="70"/>
+		<RenderObject3D model="data/models/environment/exterior/barrier_hesco_01.khm" diffuseTex="data/models/environment/exterior/barrier_hesco.dds" skipGOSSAO="false" skipSSAO="true"/>
+		<RenderObject3D model="data/models/environment/exterior/mesh_metal.khm" diffuseTex="data/models/environment/exterior/barrier_hesco.dds" blendMode="normal" reflections="false" skipGOSSAO="true" skipSSAO="true"/>
+	</Entity>
+
+	<Entity name="barrier_hesco_02" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="70"/>
+		<RenderObject3D model="data/models/environment/exterior/barrier_hesco_02.khm" diffuseTex="data/models/environment/exterior/barrier_hesco.dds" skipGOSSAO="false" skipSSAO="true"/>
+		<RenderObject3D model="data/models/environment/exterior/mesh_metal.khm" diffuseTex="data/models/environment/exterior/barrier_hesco.dds" blendMode="normal" reflections="false" skipGOSSAO="true" skipSSAO="true"/>
+	</Entity>
+
+	<Entity name="barrier_hesco_03" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="70"/>
+		<RenderObject3D model="data/models/environment/exterior/barrier_hesco_03.khm" diffuseTex="data/models/environment/exterior/barrier_hesco.dds" skipGOSSAO="false" skipSSAO="true"/>
+		<RenderObject3D model="data/models/environment/exterior/mesh_metal.khm" diffuseTex="data/models/environment/exterior/barrier_hesco.dds" blendMode="normal" reflections="false" skipGOSSAO="true" skipSSAO="true"/>
+	</Entity>
+
+	<Entity name="barrier_hesco_top_01" type="BasicEntity" editorTags="fences" oldName="barrier_hesco_04">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="70"/>
+		<RenderObject3D model="data/models/environment/exterior/barrier_hesco_a.khm" diffuseTex="data/models/environment/exterior/barrier_hesco.dds" skipGOSSAO="true" skipSSAO="true"/>
+		<RenderObject3D model="data/models/environment/exterior/mesh_metal_a.khm" diffuseTex="data/models/environment/exterior/barrier_hesco.dds" blendMode="normal" reflections="false" skipGOSSAO="true" skipSSAO="true"/>
+		<RenderObject3D model="data/models/environment/exterior/barrier_hesco_top_a.khm" diffuseTex="data/models/environment/exterior/barrier_hesco.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="barrier_hesco_top_02" type="BasicEntity" editorTags="fences" oldName="barrier_hesco_05">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="70"/>
+		<RenderObject3D model="data/models/environment/exterior/barrier_hesco_b.khm" diffuseTex="data/models/environment/exterior/barrier_hesco.dds" skipGOSSAO="true" skipSSAO="true"/>
+		<RenderObject3D model="data/models/environment/exterior/mesh_metal_b.khm" diffuseTex="data/models/environment/exterior/barrier_hesco.dds" blendMode="normal" reflections="false" skipGOSSAO="true" skipSSAO="true"/>
+		<RenderObject3D model="data/models/environment/exterior/barrier_hesco_top_b.khm" diffuseTex="data/models/environment/exterior/barrier_hesco.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="barrier_hesco_top_03" type="BasicEntity" editorTags="fences" oldName="barrier_hesco_06">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="70"/>
+		<RenderObject3D model="data/models/environment/exterior/barrier_hesco_c.khm" diffuseTex="data/models/environment/exterior/barrier_hesco.dds" skipGOSSAO="true" skipSSAO="true"/>
+		<RenderObject3D model="data/models/environment/exterior/mesh_metal_c.khm" diffuseTex="data/models/environment/exterior/barrier_hesco.dds" blendMode="normal" reflections="false" skipGOSSAO="true" skipSSAO="true"/>
+		<RenderObject3D model="data/models/environment/exterior/barrier_hesco_top_c.khm" diffuseTex="data/models/environment/exterior/barrier_hesco.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Bind eqp="Breaching Charge" to="gate_metal_large"/>
+	<Bind eqp="NWS Demo Charge" to="gate_metal_large"/>
+	<Bind eqp="Demo Charge Ric" to="gate_metal_large"/>
+	<Entity name="gate_metal_large" type="BasicEntity" editorAutoHeight="false" editorTags="fences" initialHeight="1.0">
+		<PhysicalParams blocksMovement="true" blocksVision="true" health="50"/>
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/gate_metal_large.khm" diffuseTex="data/models/environment/exterior/gate_metal_large.dds" gossaoCastHeight="4">
+			<Specular shininess="8" intensity="1.5"/>
+		</RenderObject3D>
+		<RenderObject3D model="data/models/environment/exterior/gate_metal_large_top.khm" diffuseTex="data/models/environment/exterior/gate_metal_large.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="false" disableLighting="true"/>
+	</Entity>
+
+	<Bind eqp="Breaching Charge" to="garage_door"/>
+	<Bind eqp="NWS Demo Charge" to="garage_door"/>
+	<Bind eqp="Demo Charge Ric" to="garage_door"/>
+	<Entity name="garage_door" type="BasicEntity" editorAutoHeight="false" editorTags="fences" initialHeight="1.0">
+		<PhysicalParams blocksMovement="true" blocksVision="true" health="50"/>
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/garage_door.khm" diffuseTex="data/models/environment/exterior/gate_metal_large.dds" gossaoCastHeight="4">
+			<Specular shininess="8" intensity="1.5"/>
+		</RenderObject3D>
+		<RenderObject3D model="data/models/environment/exterior/gate_metal_large_top.khm" diffuseTex="data/models/environment/exterior/gate_metal_large.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="false" disableLighting="true"/>
+	</Entity>
+
+	<Bind eqp="Breaching Charge" to="garage_door_small"/>
+	<Bind eqp="NWS Demo Charge" to="garage_door_small"/>
+	<Bind eqp="Demo Charge Ric" to="garage_door_small"/>
+	<Entity name="garage_door_small" type="BasicEntity" editorAutoHeight="false" editorTags="fences" initialHeight="1.0">
+		<PhysicalParams blocksMovement="true" blocksVision="true" health="50"/>
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/gate_metal_large_02.khm" diffuseTex="data/models/environment/exterior/gate_metal_large.dds" gossaoCastHeight="4">
+			<Specular shininess="8" intensity="1.5"/>
+		</RenderObject3D>
+		<RenderObject3D model="data/models/environment/exterior/gate_metal_large_top_02.khm" diffuseTex="data/models/environment/exterior/gate_metal_large.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="false" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="gate_large_double_imobile" type="BasicEntity" editorAutoHeight="false" editorTags="imobile">
+		<PhysicalParams blocksMovement="true" blocksVision="false" solid="false" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/various/gate_large_double.khm" diffuseTex="data/models/environment/various/gate_large.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/various/gate_large_spec.dds"/>
+		</RenderObject3D>
+		<RenderObject3D model="data/models/environment/various/gate_large_double_symbol.khm" diffuseColor="e6d4c0" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="gate_large_mechanism" type="BasicEntity" editorAutoHeight="false" editorTags="fences">
+		<PhysicalParams blocksMovement="flase" blocksVision="false" solid="false" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/various/gate_large_mechanism.khm" diffuseTex="data/models/environment/various/gate_large_mechanism.dds" gossaoCastHeight="4"/>
+	</Entity>
+
+	<Entity name="fence_stone_pole_01" type="BasicEntity" editorAutoHeight="false" editorTags="fences">
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<Breakable template="Breakable_Concrete"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_stone_pole_01.khm" diffuseTex="data/models/environment/exterior/fence_stone_01.dds" disableLighting="false"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_stone_pole_roof_01.khm" diffuseTex="data/models/environment/exterior/fence_stone_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="fence_stone_pole_01_large" type="BasicEntity" editorAutoHeight="false" editorTags="fences">
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<Breakable template="Breakable_Concrete"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_stone_pole_01_large.khm" diffuseTex="data/models/environment/exterior/fence_stone_01.dds" disableLighting="false"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_stone_pole_roof_01_large.khm" diffuseTex="data/models/environment/exterior/fence_stone_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="fence_stone_pole_02" type="BasicEntity" editorAutoHeight="false" editorTags="fences">
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<Breakable template="Breakable_Concrete"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_stone_pole_01.khm" diffuseTex="data/models/environment/exterior/fence_stone_02.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_stone_pole_roof_01.khm" diffuseTex="data/models/environment/exterior/fence_stone_02.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+
+	<Entity name="fence_stone_pole_02_large" type="BasicEntity" editorAutoHeight="false" editorTags="fences">
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<Breakable template="Breakable_Concrete"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_stone_pole_01_large.khm" diffuseTex="data/models/environment/exterior/fence_stone_02.dds" disableLighting="false"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_stone_pole_roof_01_large.khm" diffuseTex="data/models/environment/exterior/fence_stone_02.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+	
+	<Entity name="fence_stone_pole_01_entrance" type="BasicEntity" editorAutoHeight="false" editorTags="fences">
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<Breakable template="Breakable_Concrete"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_stone_pole_03.khm" diffuseTex="data/models/environment/exterior/fence_stone_01.dds" disableLighting="false"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_stone_pole_roof_01.khm" diffuseTex="data/models/environment/exterior/fence_stone_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+	
+	<Entity name="fence_stone_pole_02_entrance" type="BasicEntity" editorAutoHeight="false" editorTags="fences">
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<Breakable template="Breakable_Concrete"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_stone_pole_03.khm" diffuseTex="data/models/environment/exterior/fence_stone_02.dds" disableLighting="false"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_stone_pole_roof_01.khm" diffuseTex="data/models/environment/exterior/fence_stone_02.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Bind eqp="Breaching Charge" to="fence_metal_01"/>
+	<Bind eqp="NWS Demo Charge" to="fence_metal_01"/>
+	<Bind eqp="Demo Charge Ric" to="fence_metal_01"/>
+	<Bind eqp="TECTorch" to="fence_metal_01"/>
+	<Entity name="fence_metal_01" type="BasicEntity" editorAutoHeight="false" editorTags="fences" tooltip="@entity_fence">
+		<PhysicalParams blocksMovement="true" blocksVision="true" health="10"/>
+		<Breakable sfx="door_metal_break" breakMode="strict_no_rand">
+			<Piece entityName="fence_metal_01_broken"/>
+			<Piece entityName="metal_debris_small_01"/>
+			<Piece entityName="metal_debris_small_02"/>
+			<Piece entityName="metal_debris_medium_01"/>
+			<Piece entityName="metal_debris_medium_02"/>
+			<Piece entityName="metal_debris_large_01"/>
+			<Piece entityName="metal_debris_large_02"/>
+		</Breakable>
+		<RenderObject3D model="data/models/environment/exterior/fence_metal_01.khm" diffuseTex="data/models/environment/exterior/fence_metal_01.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_metal_top_01.khm" diffuseTex="data/models/environment/exterior/fence_metal_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="fence_garden" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" blocksVision="true" usableCover="true"  />
+		<RenderObject3D model="data/models/environment/exterior/fence_garden.khm" diffuseTex="data/models/environment/exterior/fence_garden.dds"/>
+	</Entity>
+
+	<Entity name="fence_garden_corner" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" blocksVision="true" usableCover="true" />
+		<RenderObject3D model="data/models/environment/exterior/fence_garden_corner.khm" diffuseTex="data/models/environment/exterior/fence_garden_corner.dds"/>
+	</Entity>
+
+	<Entity name="fence_metal_01_broken" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="false" physicsEnabled="true" solid="false" health="10" density="3" friction="2.0" elasticity="0.9999"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_metal_01_broken.khm" diffuseTex="data/models/environment/exterior/fence_metal_01_broken.dds" gossaoCastHeight="10" skipSSAO="true"/>
+	</Entity>
+
+	<Bind eqp="Breaching Charge" to="fence_metal_02"/>
+	<Bind eqp="NWS Demo Charge" to="fence_metal_02"/>
+	<Bind eqp="Demo Charge Ric" to="fence_metal_02"/>
+	<Entity name="fence_metal_02" type="BasicEntity" editorAutoHeight="false" editorTags="fences">
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_metal_02.khm" diffuseTex="data/models/environment/exterior/fence_metal_01.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_metal_top_02.khm" diffuseTex="data/models/environment/exterior/fence_metal_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Bind eqp="Breaching Charge" to="fence_metal_02_02"/>
+	<Bind eqp="NWS Demo Charge" to="fence_metal_02_02"/>
+	<Bind eqp="Demo Charge Ric" to="fence_metal_02_02"/>
+	<Entity name="fence_metal_02_02" type="BasicEntity" editorAutoHeight="false" editorTags="fences">
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_metal_02_02.khm" diffuseTex="data/models/environment/exterior/fence_metal_01.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_metal_top_02_02.khm" diffuseTex="data/models/environment/exterior/fence_metal_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Bind eqp="Breaching Charge" to="fence_metal_02_03"/>
+	<Bind eqp="NWS Demo Charge" to="fence_metal_02_03"/>
+	<Bind eqp="Demo Charge Ric" to="fence_metal_02_03"/>
+	<Entity name="fence_metal_02_03" type="BasicEntity" editorAutoHeight="false" editorTags="fences">
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_metal_02_03.khm" diffuseTex="data/models/environment/exterior/fence_metal_01.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_metal_top_02_03.khm" diffuseTex="data/models/environment/exterior/fence_metal_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="fence_metal_short" type="BasicEntity" editorAutoHeight="false" editorTags="fences">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_metal_short.khm" diffuseTex="data/models/environment/exterior/fence_metal_short.dds"/>
+	</Entity>
+
+	<Entity name="fence_metal_short_0.5" type="BasicEntity" editorAutoHeight="false" editorTags="fences">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_metal_short_05.khm" diffuseTex="data/models/environment/exterior/fence_metal_short.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_metal_short_05_top.khm" diffuseTex="data/models/environment/exterior/fence_metal_short.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="false" disableLighting="true" alphaTest="true"/>
+	</Entity>
+
+	<Entity name="fence_metal_short_0.5_02" type="BasicEntity" editorAutoHeight="false" editorTags="fences">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_metal_short_05_02.khm" diffuseTex="data/models/environment/exterior/fence_metal_short_02.dds"/>
+	</Entity>
+
+	<Entity name="pole_fence_metal_short" type="BasicEntity" editorAutoHeight="false" editorTags="fences">
+		<PhysicalParams blocksMovement="false" solid="false" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/pole_fence_metal_short.khm" diffuseTex="data/models/environment/exterior/fence_metal_short.dds"/>
+	</Entity>
+
+	<Bind eqp="Breaching Charge" to="fence_metal_corner_01"/>
+	<Bind eqp="NWS Demo Charge" to="fence_metal_corner_01"/>
+	<Bind eqp="Demo Charge Ric" to="fence_metal_corner_01"/>
+	<Bind eqp="TECTorch" to="fence_metal_corner_01"/>
+	<Entity name="fence_metal_corner_01" type="BasicEntity" editorAutoHeight="false" editorTags="fences" tooltip="@entity_fence">
+		<PhysicalParams blocksMovement="true" blocksVision="true" health="10"/>
+		<Breakable sfx="door_metal_break" breakMode="strict_no_rand">
+			<Piece entityName="fence_metal_01_broken"/>
+			<Piece entityName="metal_debris_small_01"/>
+			<Piece entityName="metal_debris_small_02"/>
+			<Piece entityName="metal_debris_medium_01"/>
+			<Piece entityName="metal_debris_medium_02"/>
+			<Piece entityName="metal_debris_large_01"/>
+			<Piece entityName="metal_debris_large_02"/>
+		</Breakable>
+		<RenderObject3D model="data/models/environment/exterior/fence_metal_corner_01.khm" diffuseTex="data/models/environment/exterior/fence_metal_01.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_metal_corner_top_01.khm" diffuseTex="data/models/environment/exterior/fence_metal_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Bind eqp="TECTorch" to="fence_chainlink_01"/>
+	<Bind eqp="BoltCutter" to="fence_chainlink_01"/>
+	<Entity name="fence_chainlink_01" type="BasicEntity" editorTags="fences" tooltip="@entity_chainlink_fence">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false" health="10"/>
+		<Breakable sfx="door_metal_break" breakMode="strict_no_rand">
+			<Piece entityName="metal_debris_small_01"/>
+			<Piece entityName="metal_debris_small_02"/>
+			<Piece entityName="metal_debris_medium_01"/>
+			<Piece entityName="metal_debris_medium_02"/>
+			<Piece entityName="metal_debris_large_01"/>
+			<Piece entityName="metal_debris_large_02"/>
+			<Piece entityName="fence_chainlink_edges"/>
+			<Piece entityName="fence_chainlink_piece"/>
+		</Breakable>
+		<RenderObject3D model="data/models/environment/exterior/fence_chainlink_01.khm" diffuseTex="data/models/environment/exterior/fence_chainlink_01.dds" gossaoCastHeight="10" alphaTest="true" skipSSAO="true"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_chainlink_top_01.khm" diffuseTex="data/models/environment/exterior/fence_chainlink_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="false" disableLighting="true" alphaTest="true"/>
+	</Entity>
+
+	<Entity name="fence_chainlink_edges" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false" health="10"/>
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_chainlink_edges.khm" diffuseTex="data/models/environment/exterior/fence_chainlink_broken.dds" gossaoCastHeight="10" alphaTest="true" skipSSAO="true"/>
+	</Entity>
+
+	<Entity name="fence_chainlink_piece" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="false" physicsEnabled="true" solid="false" health="10" density="3" friction="2.0" elasticity="0.9999"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_chainlink_piece.khm" diffuseTex="data/models/environment/exterior/fence_chainlink_broken.dds" gossaoCastHeight="10" alphaTest="true" skipSSAO="true"/>
+	</Entity>
+
+	<Bind eqp="TECTorch" to="fence_chainlink_03"/>
+	<Bind eqp="BoltCutter" to="fence_chainlink_03"/>
+	<Entity name="fence_chainlink_03" type="BasicEntity" editorTags="fences" tooltip="@entity_chainlink_fence">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false" health="10"/>
+		<Breakable sfx="door_metal_break" breakMode="strict_no_rand">
+			<Piece entityName="metal_debris_small_01"/>
+			<Piece entityName="metal_debris_small_02"/>
+			<Piece entityName="metal_debris_medium_01"/>
+			<Piece entityName="metal_debris_medium_02"/>
+			<Piece entityName="metal_debris_large_01"/>
+			<Piece entityName="metal_debris_large_02"/>
+			<Piece entityName="fence_chainlink_edges_03"/>
+			<Piece entityName="fence_chainlink_piece_03"/>
+		</Breakable>
+		<RenderObject3D model="data/models/environment/exterior/fence_chainlink_03.khm" diffuseTex="data/models/environment/exterior/fence_chainlink_01.dds" gossaoCastHeight="10" alphaTest="true" skipSSAO="true"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_chainlink_top_03.khm" diffuseTex="data/models/environment/exterior/fence_chainlink_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="false" disableLighting="true" alphaTest="true"/>
+	</Entity>
+
+	<Entity name="fence_chainlink_edges_03" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false" health="10"/>
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_chainlink_edges_03.khm" diffuseTex="data/models/environment/exterior/fence_chainlink_broken.dds" gossaoCastHeight="10" alphaTest="true" skipSSAO="true"/>
+	</Entity>
+
+	<Entity name="fence_chainlink_piece_03" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="false" physicsEnabled="true" solid="false" health="10" density="3" friction="2.0" elasticity="0.9999"/>
+		<RenderObject3D model="data/models/environment/exterior/fence_chainlink_piece_03.khm" diffuseTex="data/models/environment/exterior/fence_chainlink_broken.dds" gossaoCastHeight="10" alphaTest="true" skipSSAO="true"/>
+	</Entity>
+
+	<Entity name="pillar_01" type="BasicEntity" editorAutoHeight="false" editorTags="pillar">
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/exterior/pillar_01.khm" diffuseTex="data/models/environment/exterior/pillars.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/pillar_top_01.khm" diffuseTex="data/models/environment/exterior/pillars.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="pillar_02" type="BasicEntity" editorAutoHeight="false" editorTags="pillar">
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/exterior/pillar_02.khm" diffuseTex="data/models/environment/exterior/pillars.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/pillar_top_02.khm" diffuseTex="data/models/environment/exterior/pillars.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="pillar_03" type="BasicEntity" editorAutoHeight="false" editorTags="pillar">
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/exterior/pillar_03.khm" diffuseTex="data/models/environment/exterior/pillars.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/pillar_top_03.khm" diffuseTex="data/models/environment/exterior/pillars.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="pillar_04" type="BasicEntity" editorAutoHeight="false" editorTags="pillar">
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<RenderObject3D model="data/models/environment/exterior/pillar_04.khm" diffuseTex="data/models/environment/exterior/pillar_04.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/pillar_top_04.khm" diffuseTex="data/models/environment/exterior/pillar_04.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="barrier" type="BasicEntity" editorAutoHeight="false" editorTags="fences">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/barrier.khm" diffuseTex="data/models/environment/exterior/barrier.dds"/>
+	</Entity>
+
+	<Entity name="barrier_wood" type="BasicEntity" editorTags="fences">
+		<PhysicalParams blocksMovement="true" usableCover="false"/>
+		<RenderObject3D model="data/models/environment/exterior/barrier_wood.khm" diffuseTex="data/models/environment/exterior/barrier_wood.dds"/>
+	</Entity>
+
+	<Entity name="container_full_red" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true" piercingProtectionLevel="50"/>
+		<RenderObject3D model="data/models/environment/exterior/container_full.khm" diffuseTex="data/models/environment/exterior/container_main_01.dds"/>
+	</Entity>
+
+	<Entity name="container_door_left_red" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true" piercingProtectionLevel="50"/>
+		<RenderObject3D model="data/models/environment/exterior/container_door_left.khm" diffuseTex="data/models/environment/exterior/container_main_01.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/container_door_left_top.khm" diffuseTex="data/models/environment/exterior/container_main_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="container_door_right_red" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true" piercingProtectionLevel="50"/>
+		<RenderObject3D model="data/models/environment/exterior/container_door_right.khm" diffuseTex="data/models/environment/exterior/container_main_01.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/container_door_right_top.khm" diffuseTex="data/models/environment/exterior/container_main_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="container_walls_red" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true" piercingProtectionLevel="50"/>
+		<RenderObject3D model="data/models/environment/exterior/container_walls.khm" diffuseTex="data/models/environment/exterior/container_main_01.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/container_walls_top.khm" diffuseTex="data/models/environment/exterior/container_main_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="container_floor_red" type="BasicEntity" editorAutoHeight="false" initialHeight="1.070" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/container_floor.khm" diffuseTex="data/models/environment/exterior/container_main_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true"  />
+	</Entity>
+
+	<Entity name="container_full_blue" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/container_full.khm" diffuseTex="data/models/environment/exterior/container_main_02.dds"/>
+	</Entity>
+
+	<Entity name="container_door_left_blue" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/container_door_left.khm" diffuseTex="data/models/environment/exterior/container_main_02.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/container_door_left_top.khm" diffuseTex="data/models/environment/exterior/container_main_02.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="container_door_right_blue" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/container_door_right.khm" diffuseTex="data/models/environment/exterior/container_main_02.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/container_door_right_top.khm" diffuseTex="data/models/environment/exterior/container_main_02.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="container_walls_blue" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/container_walls.khm" diffuseTex="data/models/environment/exterior/container_main_02.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/container_walls_top.khm" diffuseTex="data/models/environment/exterior/container_main_02.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="container_floor_blue" type="BasicEntity" editorAutoHeight="false" initialHeight="1.070" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/container_floor.khm" diffuseTex="data/models/environment/exterior/container_main_02.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true"  />
+	</Entity>
+
+	<Entity name="container_full_ocre" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/container_full.khm" diffuseTex="data/models/environment/exterior/container_main_03.dds"/>
+	</Entity>
+
+	<Entity name="container_door_left_ocre" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/container_door_left.khm" diffuseTex="data/models/environment/exterior/container_main_03.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/container_door_left_top.khm" diffuseTex="data/models/environment/exterior/container_main_03.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="container_door_right_ocre" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/container_door_right.khm" diffuseTex="data/models/environment/exterior/container_main_03.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/container_door_right_top.khm" diffuseTex="data/models/environment/exterior/container_main_03.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="container_walls_ocre" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/container_walls.khm" diffuseTex="data/models/environment/exterior/container_main_03.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/container_walls_top.khm" diffuseTex="data/models/environment/exterior/container_main_03.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="container_floor_ocre" type="BasicEntity" editorAutoHeight="false" initialHeight="1.070" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/container_floor.khm" diffuseTex="data/models/environment/exterior/container_main_03.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true"  />
+	</Entity>
+
+	<Entity name="container_full_green" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/container_full.khm" diffuseTex="data/models/environment/exterior/container_main_04.dds"/>
+	</Entity>
+
+	<Entity name="container_door_left_green" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/container_door_left.khm" diffuseTex="data/models/environment/exterior/container_main_04.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/container_door_left_top.khm" diffuseTex="data/models/environment/exterior/container_main_04.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="container_door_right_green" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/container_door_right.khm" diffuseTex="data/models/environment/exterior/container_main_04.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/container_door_right_top.khm" diffuseTex="data/models/environment/exterior/container_main_04.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="container_walls_green" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/container_walls.khm" diffuseTex="data/models/environment/exterior/container_main_04.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/container_walls_top.khm" diffuseTex="data/models/environment/exterior/container_main_04.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="container_floor_green" type="BasicEntity" editorAutoHeight="false" initialHeight="1.070" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/container_floor.khm" diffuseTex="data/models/environment/exterior/container_main_04.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true"  />
+	</Entity>
+
+	<Entity name="container_full_grey" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/container_full.khm" diffuseTex="data/models/environment/exterior/container_main_05.dds"/>
+	</Entity>
+
+	<Entity name="container_door_left_grey" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/container_door_left.khm" diffuseTex="data/models/environment/exterior/container_main_05.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/container_door_left_top.khm" diffuseTex="data/models/environment/exterior/container_main_05.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="container_door_right_grey" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/container_door_right.khm" diffuseTex="data/models/environment/exterior/container_main_05.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/container_door_right_top.khm" diffuseTex="data/models/environment/exterior/container_main_05.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="container_walls_grey" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/container_walls.khm" diffuseTex="data/models/environment/exterior/container_main_05.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/container_walls_top.khm" diffuseTex="data/models/environment/exterior/container_main_05.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="container_floor_grey" type="BasicEntity" editorAutoHeight="false" initialHeight="1.070" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/container_floor.khm" diffuseTex="data/models/environment/exterior/container_main_05.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true"  />
+	</Entity>
+
+	<Entity name="container_wall_side4m_red" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/container_wall_side4m.khm" diffuseTex="data/models/environment/exterior/container_main_01.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/container_wall_side4m_top.khm" diffuseTex="data/models/environment/exterior/container_main_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="container_wall_side4m_blue" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/container_wall_side4m.khm" diffuseTex="data/models/environment/exterior/container_main_02.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/container_wall_side4m_top.khm" diffuseTex="data/models/environment/exterior/container_main_02.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="container_wall_side4m_ocre" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/container_wall_side4m.khm" diffuseTex="data/models/environment/exterior/container_main_03.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/container_wall_side4m_top.khm" diffuseTex="data/models/environment/exterior/container_main_03.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="container_wall_side4m_green" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/container_wall_side4m.khm" diffuseTex="data/models/environment/exterior/container_main_04.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/container_wall_side4m_top.khm" diffuseTex="data/models/environment/exterior/container_main_04.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Entity name="container_wall_side4m_grey" type="BasicEntity" hideInEditor="false" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true" blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/container_wall_side4m.khm" diffuseTex="data/models/environment/exterior/container_main_05.dds"/>
+		<RenderObject3D model="data/models/environment/exterior/container_wall_side4m_top.khm" diffuseTex="data/models/environment/exterior/container_main_05.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+
+	<!-- STREET OBJECTS	-->
+
+	<Entity name="manhole_01_01" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/manhole_01.khm" diffuseTex="data/models/environment/exterior/manhole_01_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" skipAutoBlendOut="true"/>
+	</Entity>
+
+	<Entity name="manhole_01_02" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/manhole_01.khm" diffuseTex="data/models/environment/exterior/manhole_01_02.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" skipAutoBlendOut="true"/>
+	</Entity>
+
+	<Entity name="manhole_01_03" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/manhole_01.khm" diffuseTex="data/models/environment/exterior/manhole_01_03.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" skipAutoBlendOut="true"/>
+	</Entity>
+
+	<Entity name="manhole_01_04" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/manhole_01.khm" diffuseTex="data/models/environment/exterior/manhole_01_04.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" skipAutoBlendOut="true"/>
+	</Entity>
+
+	<Entity name="pole_wood_01" type="BasicEntity" editorTags="street objects" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<RenderObject3D model="data/models/environment/exterior/pole_wood_01.khm" diffuseTex="data/models/environment/exterior/pole_wood_01.dds" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="pole_wood_02" type="BasicEntity" editorTags="street objects" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<RenderObject3D model="data/models/environment/exterior/pole_wood_02.khm" diffuseTex="data/models/environment/exterior/pole_wood_01.dds" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="searchlight_pole" type="BasicEntity" editorTags="street objects" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<RenderObject3D model="data/models/environment/exterior/searchlight_pole.khm" diffuseTex="data/models/environment/exterior/searchlight_pole.dds" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="pole_wood_lightobj_01" type="BasicEntity" editorTags="street objects" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<RenderObject3D model="data/models/environment/exterior/pole_wood_lightobj_01.khm" diffuseTex="data/models/environment/exterior/pole_wood_lightobj_01.dds" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="pole_metal_light_01" type="BasicEntity" editorTags="street objects" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<RenderObject3D model="data/models/environment/exterior/pole_metal_light_01.khm" diffuseTex="data/models/environment/exterior/pole_metal_light_01.dds" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="street_lamp_small" type="BasicEntity" editorTags="street objects" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="false" solid="false" />
+		<RenderObject3D model="data/models/environment/exterior/street_lamp_small.khm" diffuseTex="data/models/environment/exterior/street_lamp_small.dds" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="street_lamp_small_02" type="BasicEntity" editorTags="street objects" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="false" solid="false" />
+		<RenderObject3D model="data/models/environment/exterior/street_lamp_small.khm" diffuseTex="data/models/environment/exterior/street_lamp_small_02.dds" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="traffic_light" type="BasicEntity" editorTags="street objects" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="false" solid="false" />
+		<RenderObject3D model="data/models/environment/exterior/traffic_light.khm" diffuseTex="data/models/environment/exterior/traffic_light.dds" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="yield_sign" type="BasicEntity" editorTags="street objects" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="false" solid="false" />
+		<RenderObject3D model="data/models/environment/exterior/yield_sign.khm" diffuseTex="data/models/environment/exterior/traffic_sign.dds" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="stop_sign" type="BasicEntity" editorTags="street objects" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="false" solid="false" />
+		<RenderObject3D model="data/models/environment/exterior/stop_sign.khm" diffuseTex="data/models/environment/exterior/traffic_sign.dds" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="no_entry_sign" type="BasicEntity" editorTags="street objects" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="false" solid="false" />
+		<RenderObject3D model="data/models/environment/exterior/no_entry_sign.khm" diffuseTex="data/models/environment/exterior/traffic_sign.dds" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="priority_sign" type="BasicEntity" editorTags="street objects" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="false" solid="false" />
+		<RenderObject3D model="data/models/environment/exterior/priority_sign.khm" diffuseTex="data/models/environment/exterior/traffic_sign.dds" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="pole_fusebox" type="BasicEntity" editorTags="street objects">
+		<PhysicalParams blocksMovement="false" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/pole_fusebox.khm" diffuseTex="data/models/environment/exterior/pole_fusebox.dds" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="ac_unit" type="BasicEntity" editorTags="street objects">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/ac_unit.khm" diffuseTex="data/models/environment/exterior/ac_unit.dds" gossaoCastHeight="10" alphaTest="true" skipSSAO="true"/>
+	</Entity>
+
+	<Entity name="street_railing_01" type="BasicEntity" editorTags="street objects,fences">
+		<PhysicalParams blocksMovement="true" />
+		<RenderObject3D model="data/models/environment/exterior/street_railing_01.khm" diffuseTex="data/models/environment/exterior/street_railing_01.dds"/>
+	</Entity>
+
+	<Entity name="street_railing_02" type="BasicEntity" editorTags="street objects,fences">
+		<PhysicalParams blocksMovement="true" />
+		<RenderObject3D model="data/models/environment/exterior/street_railing_02.khm" diffuseTex="data/models/environment/exterior/street_railing_01.dds"/>
+	</Entity>
+
+	<Entity name="barricade_concrete_01" type="BasicEntity" editorTags="street objects,fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="60"/>
+		<Breakable template="Breakable_Concrete"/>
+		<RenderObject3D model="data/models/environment/exterior/barricade_concrete.khm" diffuseTex="data/models/environment/exterior/barricade_concrete_01.dds"/>
+	</Entity>
+
+	<Entity name="barricade_concrete_02" type="BasicEntity" editorTags="street objects,fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="60"/>
+		<Breakable template="Breakable_Concrete"/>
+		<RenderObject3D model="data/models/environment/exterior/barricade_concrete.khm" diffuseTex="data/models/environment/exterior/barricade_concrete_02.dds"/>
+	</Entity>
+
+	<Entity name="target_cardboard" type="BasicEntity" editorTags="street objects" editorAutoHeight="false">
+		<Breakable template="Breakable_Wood" breakOnDamage="grenade"/>
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<RenderObject3D model="data/models/environment/exterior/target_cardboard.khm" diffuseTex="data/models/environment/exterior/target_cardboard.dds" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="platform_square" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/platform_square.khm" diffuseTex="data/models/environment/exterior/platform.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true"  />
+	</Entity>
+
+	<Entity name="platform_round" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/platform_round.khm" diffuseTex="data/models/environment/exterior/platform.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true"  />
+	</Entity>
+
+	<Entity name="platform_02" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/sidewalk.khm" diffuseTex="data/models/environment/exterior/platform_02.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true"  />
+	</Entity>
+
+	<Entity name="sidewalk" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/sidewalk.khm" diffuseTex="data/models/environment/exterior/sidewalk.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true"  />
+	</Entity>
+
+	<Entity name="sidewalk_01" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/sidewalk_02.khm" diffuseTex="data/models/environment/exterior/sidewalk_mid_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true"  />
+	</Entity>
+
+	<Entity name="sidewalk_01_half" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/sidewalk_02_half.khm" diffuseTex="data/models/environment/exterior/sidewalk_mid_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true"  />
+	</Entity>
+
+	<Entity name="sidewalk_01_end" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/sidewalk_02_end.khm" diffuseTex="data/models/environment/exterior/sidewalk_corner_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true"  />
+	</Entity>
+
+	<Entity name="sidewalk_01_corner" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/sidewalk_02_corner.khm" diffuseTex="data/models/environment/exterior/sidewalk_corner_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true"  />
+	</Entity>
+
+	<Entity name="sidewalk_02" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/sidewalk_02.khm" diffuseTex="data/models/environment/exterior/sidewalk_mid_02.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true"  />
+	</Entity>
+
+	<Entity name="sidewalk_02_half" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/sidewalk_02_half.khm" diffuseTex="data/models/environment/exterior/sidewalk_mid_02.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true"  />
+	</Entity>
+
+	<Entity name="sidewalk_02_end" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/sidewalk_02_end.khm" diffuseTex="data/models/environment/exterior/sidewalk_corner_02.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true"  />
+	</Entity>
+
+	<Entity name="sidewalk_02_corner" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/sidewalk_02_corner.khm" diffuseTex="data/models/environment/exterior/sidewalk_corner_02.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true"  />
+	</Entity>
+
+	<Entity name="sidewalk_corner" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/sidewalk_corner.khm" diffuseTex="data/models/environment/exterior/sidewalk_corner.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true"  />
+	</Entity>
+
+	<Entity name="barricade_metal" type="BasicEntity" editorTags="street objects,fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" solid="false" piercingProtectionLevel="50"/>
+		<RenderObject3D model="data/models/environment/exterior/barricade_metal.khm" diffuseTex="data/models/environment/exterior/barricade_metal.dds" />
+	</Entity>
+
+	<Entity name="barricade_metal_wire" type="BasicEntity" editorTags="street objects,fences">
+		<PhysicalParams blocksMovement="true" usableCover="true" solid="false"  piercingProtectionLevel="50"/>
+		<RenderObject3D model="data/models/environment/exterior/barricade_metal.khm" diffuseTex="data/models/environment/exterior/barricade_metal.dds" />
+		<RenderObject3D model="data/models/environment/exterior/barb_wire_barricade.khm" diffuseTex="data/models/environment/exterior/barricade_metal.dds" blendMode="normal" />
+	</Entity>
+
+	<Entity name="barb_wire" type="BasicEntity" editorTags="street objects,fences">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false" />
+		<Breakable/>
+		<RenderObject3D model="data/models/environment/exterior/barb_wire.khm" diffuseTex="data/models/environment/exterior/barb_wire.dds" blendMode="normal" />
+	</Entity>
+
+	<Entity name="barb_wire_02" type="BasicEntity" editorTags="street objects,fences">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false" />
+		<Breakable/>
+		<RenderObject3D model="data/models/environment/exterior/barb_wire.khm" diffuseTex="data/models/environment/exterior/barb_wire_02.dds" blendMode="normal" />
+	</Entity>
+
+	<Entity name="barb_wire_wall_02" type="BasicEntity" editorTags="street objects,fences" fogOfWarVisibility="full">
+		<PhysicalParams blocksMovement="true" usableCover="false" solid="false" />
+		<Breakable/>
+		<RenderObject3D model="data/models/environment/exterior/barb_wire.khm" diffuseTex="data/models/environment/exterior/barb_wire_02.dds" blendMode="normal" />
+	</Entity>
+
+	<Bind eqp="ExplosiveCharge" to="window_blocker"/>
+	<Bind eqp="DynamicHammer" to="window_blocker"/>
+	<Entity name="window_blocker" type="Drapes" tooltip="@entity_window_blocker" editorAutoHeight="false" editorTags="street objects">
+		<PhysicalParams solid="true" blocksMovement="false" blocksVision="true"/>
+		<Breakable template="Breakable_Window_Blocker" breakOnDamage="bullet"/>
+		<RenderObject3D model="data/models/environment/exterior/window_blocker.khm" diffuseTex="data/models/environment/exterior/window_blocker.dds" />
+		<RenderObject3D model="data/models/environment/exterior/window_blocker_symbol.khm" diffuseColor="e6d4c0" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/>
+	</Entity>
+
+	<Bind eqp="Breaching Charge" to="window_single_metal_bars"/>
+	<Bind eqp="NWS Door Charge" to="window_single_metal_bars"/>
+	<Bind eqp="NWS Door Charge Kit" to="window_single_metal_bars"/>
+	<Bind eqp="NWS Demo Charge" to="window_single_metal_bars"/>
+	<Bind eqp="Demo Charge Ric" to="window_single_metal_bars"/>
+	<Bind eqp="TECTorch" to="window_single_metal_bars"/>
+	<Bind eqp="BoltCutter" to="window_single_metal_bars"/>
+	<Entity name="window_single_metal_bars" type="BasicEntity" tooltip="@entity_window_grating" editorAutoHeight="false" editorTags="street objects" initialHeight="0.126">
+		<PhysicalParams solid="false" blocksMovement="true" blocksVision="false"/>
+		<Breakable sfx="door_metal_break" breakOnDamage="explosive">
+			<Piece entityName="metal_debris_small_01"/>
+			<Piece entityName="metal_debris_small_02"/>
+			<Piece entityName="metal_debris_medium_01"/>
+			<Piece entityName="metal_debris_medium_02"/>
+			<Piece entityName="metal_debris_large_01"/>
+			<Piece entityName="metal_debris_large_01"/>
+			<Piece entityName="metal_debris_large_02"/>
+			<Piece entityName="metal_debris_large_02"/>
+			<Piece entityName="metal_debris_large_04"/>
+		</Breakable>
+		<RenderObject3D model="data/models/environment/exterior/window_single_metal_bars.khm" diffuseTex="data/models/environment/exterior/window_single_metal_bars.dds" />
+		<RenderObject3D model="data/models/environment/exterior/window_single_metal_bars_top.khm" diffuseTex="data/models/environment/exterior/window_single_metal_bars.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="false" disableLighting="true" alphaTest="true"/>
+	</Entity>
+
+
+	<!-- MODULAR STREETS -->
+
+	<Entity name="8m_straight" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="streets" >
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/8m_straight.khm" diffuseTex="data/models/environment/exterior/gray_color.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true" />
+	</Entity>
+
+	<Entity name="8m_curve" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="streets" >
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/8m_curve.khm" diffuseTex="data/models/environment/exterior/gray_color.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true" />
+	</Entity>
+
+	<Entity name="8m_t" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="streets" >
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/8m_t.khm" diffuseTex="data/models/environment/exterior/gray_color.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true" />
+	</Entity>
+
+	<Entity name="8m_cross" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="streets" >
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/8m_cross.khm" diffuseTex="data/models/environment/exterior/gray_color.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true" />
+	</Entity>
+
+	<Entity name="4m_straight" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="streets" >
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/4m_straight.khm" diffuseTex="data/models/environment/exterior/gray_color.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true" />
+	</Entity>
+
+	<Entity name="4m_curve" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="streets" >
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/4m_curve.khm" diffuseTex="data/models/environment/exterior/gray_color.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true" />
+	</Entity>
+
+	<Entity name="4m_t" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="streets" >
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/4m_t.khm" diffuseTex="data/models/environment/exterior/gray_color.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true" />
+	</Entity>
+
+	<Entity name="4m_cross" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="streets" >
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/4m_cross.khm" diffuseTex="data/models/environment/exterior/gray_color.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true" />
+	</Entity>
+
+	<Entity name="4m_8m_cross" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="streets" >
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/4m_8m_cross.khm" diffuseTex="data/models/environment/exterior/gray_color.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true" />
+	</Entity>
+
+	<Entity name="4m_8m_t" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="streets" >
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/4m_8m_t.khm" diffuseTex="data/models/environment/exterior/gray_color.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true" />
+	</Entity>
+
+	<Entity name="sidewalk_12m" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="streets" >
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/sidewalk_12m.khm" diffuseTex="data/models/environment/exterior/gray_color_02.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true" />
+	</Entity>
+
+	<Entity name="sidewalk_8m" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="streets" >
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/sidewalk_8m.khm" diffuseTex="data/models/environment/exterior/gray_color_02.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true" />
+	</Entity>
+
+	<Entity name="sidewalk_4m" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="streets" >
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/sidewalk_4m.khm" diffuseTex="data/models/environment/exterior/gray_color_02.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true" />
+	</Entity>
+
+	<Entity name="sidewalk_curve_inner" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="streets" >
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/sidewalk_curve_inner.khm" diffuseTex="data/models/environment/exterior/gray_color_02.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true" />
+	</Entity>
+
+	<Entity name="sidewalk_curve_outer" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="streets" >
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/sidewalk_curve_outer.khm" diffuseTex="data/models/environment/exterior/gray_color_02.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true" />
+	</Entity>
+
+
+	<!-- MISC -->
+
+	<Entity name="generator_small_01_destroyed" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext" hideInEditor="true">
+		<PhysicalParams blocksMovement="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/generator_small_01.khm" diffuseTex="data/models/environment/exterior/generator_small_01.dds"/>
+	</Entity>
+
+	<Bind eqp="ExplosiveCharge" to="generator_small_01"/>
+	<Bind eqp="TECTorch" to="generator_small_01"/>
+	<Bind eqp="BoltCutter" to="generator_small_01"/>
+	<Entity name="generator_small_01" type="DestroyableTarget" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable breakOnDamage="grenade" breakMode="strict_no_rand" sfx="fusebox">
+			<Piece entityName="metal_debris_small_01"/>
+			<Piece entityName="metal_debris_small_02"/>
+			<Piece entityName="metal_debris_small_03"/>
+
+			<Piece entityName="metal_debris_medium_01"/>
+			<Piece entityName="metal_debris_medium_02"/>
+
+			<Piece entityName="metal_debris_large_01"/>
+			
+			<Piece entityName="generator_small_01_destroyed"/>
+			<Piece entityName="PS_SabotageSmall"/>			
+		</Breakable>
+		<RenderObject3D model="data/models/environment/exterior/generator_small_01.khm" diffuseTex="data/models/environment/exterior/generator_small_01.dds"/>
+		<DestroyableTarget sabotageTimeMsec="2000" isObjective="false"/>
+	</Entity>
+
+	<Entity name="water_pump" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/water_pump.khm" diffuseTex="data/models/environment/exterior/water_pump.dds"/>
+	</Entity>
+
+	<Entity name="ladder" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="true" solid="false" />
+		<RenderObject3D model="data/models/environment/exterior/ladder.khm" diffuseTex="data/models/environment/exterior/ladder.dds"/>
+	</Entity>
+
+	<Entity name="ladder_solid" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="solid" />
+		<Breakable template="Breakable_Wood" breakOnDamage="explosive"/>
+		<RenderObject3D model="data/models/environment/exterior/ladder.khm" diffuseTex="data/models/environment/exterior/ladder.dds"/>
+	</Entity>
+
+	<Entity name="rake" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/rake.khm" diffuseTex="data/models/environment/exterior/rake.dds"/>
+	</Entity>
+
+	<Entity name="shovel" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/shovel.khm" diffuseTex="data/models/environment/exterior/shovel.dds">
+			<Specular shininess="4" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="camera_surveillance" type="FOVCamera" editorTags="deco ext" tooltip="@tooltip_survcamera" initialHeight="1.8">
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/camera_surveillance.khm" diffuseTex="data/models/environment/exterior/camera_surveillance.dds">
+			<Specular shininess="4" intensity="5.0"/>
+		</RenderObject3D>
+		<FOVCamera>
+			<FOV degrees="45" distanceMeters="15" eyeRadiusMeters="0"/>
+		</FOVCamera>
+	</Entity>
+
+	<Entity name="camera_surveillance_disabled" type="BasicEntity" editorTags="deco ext" tooltip="@tooltip_survcamera_disabled" initialHeight="1.8">
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/camera_surveillance.khm" diffuseTex="data/models/environment/exterior/camera_surveillance.dds">
+			<Specular shininess="4" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="camera_surveillance_02" type="FOVCamera" editorTags="deco ext" tooltip="@tooltip_survcamera" initialHeight="1.8">
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/camera_surveillance_02.khm" diffuseTex="data/models/environment/exterior/camera_surveillance.dds">
+			<Specular shininess="4" intensity="5.0"/>
+		</RenderObject3D>
+		<FOVCamera>
+			<FOV degrees="45" distanceMeters="15" eyeRadiusMeters="0"/>
+		</FOVCamera>
+	</Entity>
+
+	<Entity name="camera_surveillance_02_disabled" type="BasicEntity" editorTags="deco ext" tooltip="@tooltip_survcamera_disabled" initialHeight="1.8">
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/camera_surveillance_02.khm" diffuseTex="data/models/environment/exterior/camera_surveillance.dds">
+			<Specular shininess="4" intensity="5.0"/>
+		</RenderObject3D>
+	</Entity>
+
+
+	<Entity name="water_well" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/water_well.khm" diffuseTex="data/models/environment/exterior/water_well.dds"/>
+	</Entity>
+
+	<Entity name="wheelbarrow" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true"/>
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/wheelbarrow.khm" diffuseTex="data/models/environment/exterior/wheelbarrow.dds">
+			<Specular shininess="4" intensity="3.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="metal_sheet_01" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" blocksVision="false" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/metal_sheet_01.khm" diffuseTex="data/models/environment/exterior/metal_sheets.dds">
+			<Specular shininess="4" intensity="1.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="metal_sheet_02" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" blocksVision="true" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/metal_sheet_02.khm" diffuseTex="data/models/environment/exterior/metal_sheets.dds">
+			<Specular shininess="4" intensity="1.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="metal_sheet_03" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" blocksVision="false" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/metal_sheet_03.khm" diffuseTex="data/models/environment/exterior/metal_sheets.dds">
+			<Specular shininess="4" intensity="1.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="bucket_metal_01" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="true" solid="false" density="10"/>
+		<RenderObject3D model="data/models/environment/exterior/bucket_metal.khm" diffuseTex="data/models/environment/exterior/bucket_metal_01.dds">
+			<Specular shininess="4" intensity="1.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="bucket_metal_02" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="true" solid="false" density="10"/>
+		<RenderObject3D model="data/models/environment/exterior/bucket_metal.khm" diffuseTex="data/models/environment/exterior/bucket_metal_02.dds"/>
+	</Entity>
+
+	<Entity name="water_tank_plastic_01" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="70"/>
+		<RenderObject3D model="data/models/environment/exterior/water_tank_plastic.khm" diffuseTex="data/models/environment/exterior/water_tank_plastic_01.dds" skipSSAO="true"/>
+	</Entity>
+
+	<Entity name="water_tank_plastic_02" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="70"/>
+		<RenderObject3D model="data/models/environment/exterior/water_tank_plastic.khm" diffuseTex="data/models/environment/exterior/water_tank_plastic_02.dds" skipSSAO="true"/>
+	</Entity>
+
+	<Entity name="trashbox_01" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/trashbox_01.khm" diffuseTex="data/models/environment/exterior/trashbox_01.dds"/>
+	</Entity>
+
+	<Entity name="trash_can" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/trash_can.khm" diffuseTex="data/models/environment/exterior/trash_can.dds"/>
+	</Entity>
+
+	<Entity name="fountain_octa" type="POIObject" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/fountain_octa.khm" diffuseTex="data/models/environment/exterior/fountain_octa.dds"/>
+		<Interactible look="at" needsUnequip="false" />
+		<POI forCivs="true" />
+	</Entity>
+
+	<Entity name="pool_wall" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/exterior/pool_wall.khm" diffuseTex="data/models/environment/exterior/pool.dds"/>
+	</Entity>
+
+	<Entity name="pool_wall_corner" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/exterior/pool_wall_corner.khm" diffuseTex="data/models/environment/exterior/pool.dds"/>
+	</Entity>
+
+	<Entity name="pool_floor" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams blocksMovement="false" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/pool_floor.khm" diffuseTex="data/models/environment/exterior/pool.dds" skipSSAO="true" skipCastShadows="true" skipGOSSAO="true"/>
+	</Entity>
+	
+	<Entity name="pool_floor_shape" type="BasicEntity" editorAutoHeight="false" initialHeight="0.1" editorTags="deco ext water">
+		<PhysicalParams solid="false"/>
+		<PolyShape uvSizeX="3.f" uvSizeY="3.f" />
+		<RenderObject3D diffuseTex="data/terrain/exterior/tiles_pool.dds" blendMode="normal_premultiplied_alpha" diffuseColor="ffffffff" skipGOSSAO="true" skipSSAO="true" />
+		<RenderObject2D texture="data/textures/editor/waypoints.dds" blendMode="normal" color="7d3d25" sizeX="0.75" sizeY="0.375" hideInGame="true" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="pool_floor_02" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams blocksMovement="false" usableCover="true"/>
+		<RenderObject3D model="data/models/environment/exterior/pool_floor.khm" diffuseTex="data/models/environment/exterior/pool_02.dds" skipSSAO="true" skipCastShadows="true" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="pool_edge" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/exterior/pool_edge.khm" diffuseTex="data/models/environment/exterior/pool.dds"/>
+	</Entity>
+
+	<Entity name="pool_edge_corner" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/exterior/pool_edge_corner.khm" diffuseTex="data/models/environment/exterior/pool.dds"/>
+	</Entity>
+
+	<Entity name="pool_ladder"  editorAutoHeight="false" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams physicsEnabled="false" solid="true"/>
+		<RenderObject3D model="data/models/environment/exterior/pool_ladder.khm" diffuseTex="data/models/environment/exterior/pool_ladder.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/exterior/pool_ladder_spec.dds"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="flower_stand_01" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" usableCover="true" piercingProtectionLevel="40"/>
+		<RenderObject3D model="data/models/environment/exterior/flower_stand_01.khm" diffuseTex="data/models/environment/exterior/flower_stand_01.dds"/>
+	</Entity>
+
+	<Entity name="goalpost" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<RenderObject3D model="data/models/environment/exterior/goalpost.khm" diffuseTex="data/models/environment/exterior/goalpost.dds" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="bus_stop" type="BasicEntity" hideInEditor="true" editorTags="deco ext">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<RenderObject3D model="data/models/environment/exterior/bus_stop.khm" diffuseTex="data/models/environment/exterior/bus_stop.dds" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="bus_stop_glass_01" type="BasicEntity" hideInEditor="true" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" blocksVision="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/bus_stop_glass_01.khm" diffuseTex="data/models/environment/exterior/bus_stop_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" />
+	</RenderObject3D>
+		<Breakable breakOnDamage="bullet" sfx="glass_break">
+			<Piece entityName="glass_debris_large_01"/>
+			<Piece entityName="glass_debris_large_02"/>
+			<Piece entityName="glass_debris_large_03"/>
+			<Piece entityName="glass_debris_small_01"/>
+			<Piece entityName="glass_debris_small_02"/>
+			<Piece entityName="glass_debris_small_03"/>
+			<Piece entityName="glass_debris_small_04"/>
+			<Piece entityName="glass_debris_small_05"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="bus_stop_glass_02" type="BasicEntity" hideInEditor="true" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" blocksVision="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/bus_stop_glass_02.khm" diffuseTex="data/models/environment/exterior/bus_stop_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" />
+	</RenderObject3D>
+		<Breakable breakOnDamage="bullet" sfx="glass_break">
+			<Piece entityName="glass_debris_large_01"/>
+			<Piece entityName="glass_debris_large_02"/>
+			<Piece entityName="glass_debris_large_03"/>
+			<Piece entityName="glass_debris_small_01"/>
+			<Piece entityName="glass_debris_small_02"/>
+			<Piece entityName="glass_debris_small_03"/>
+			<Piece entityName="glass_debris_small_04"/>
+			<Piece entityName="glass_debris_small_05"/>
+		</Breakable>
+
+	</Entity>
+
+	<Entity name="bus_stop_glass_03" type="BasicEntity" hideInEditor="true" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" blocksVision="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/bus_stop_glass_03.khm" diffuseTex="data/models/environment/exterior/bus_stop_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" />
+	</RenderObject3D>
+		<Breakable breakOnDamage="bullet" sfx="glass_break">
+			<Piece entityName="glass_debris_large_01"/>
+			<Piece entityName="glass_debris_large_02"/>
+			<Piece entityName="glass_debris_large_03"/>
+			<Piece entityName="glass_debris_small_01"/>
+			<Piece entityName="glass_debris_small_02"/>
+			<Piece entityName="glass_debris_small_03"/>
+			<Piece entityName="glass_debris_small_04"/>
+			<Piece entityName="glass_debris_small_05"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="bus_stop_glass_04" type="BasicEntity" hideInEditor="true" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" blocksVision="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/bus_stop_glass_04.khm" diffuseTex="data/models/environment/exterior/bus_stop_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" />
+	</RenderObject3D>
+		<Breakable breakOnDamage="bullet" sfx="glass_break">
+			<Piece entityName="glass_debris_large_01"/>
+			<Piece entityName="glass_debris_large_02"/>
+			<Piece entityName="glass_debris_large_03"/>
+			<Piece entityName="glass_debris_small_01"/>
+			<Piece entityName="glass_debris_small_02"/>
+			<Piece entityName="glass_debris_small_03"/>
+			<Piece entityName="glass_debris_small_04"/>
+			<Piece entityName="glass_debris_small_05"/>
+		</Breakable>
+
+	</Entity>
+
+	<Entity name="bus_stop_glass_05" type="BasicEntity" hideInEditor="true" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" blocksVision="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/bus_stop_glass_05.khm" diffuseTex="data/models/environment/exterior/bus_stop_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" />
+	</RenderObject3D>
+		<Breakable breakOnDamage="bullet" sfx="glass_break">
+			<Piece entityName="glass_debris_large_01"/>
+			<Piece entityName="glass_debris_large_02"/>
+			<Piece entityName="glass_debris_large_03"/>
+			<Piece entityName="glass_debris_small_01"/>
+			<Piece entityName="glass_debris_small_02"/>
+			<Piece entityName="glass_debris_small_03"/>
+			<Piece entityName="glass_debris_small_04"/>
+			<Piece entityName="glass_debris_small_05"/>
+		</Breakable>
+
+	</Entity>
+
+	<Entity name="bus_stop_glass_06" type="BasicEntity" hideInEditor="true" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" blocksVision="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/bus_stop_glass_06.khm" diffuseTex="data/models/environment/exterior/bus_stop_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+		<Specular shininess="64" intensity="5.0" />
+		</RenderObject3D>
+		<Breakable breakOnDamage="bullet" sfx="glass_break">
+			<Piece entityName="glass_debris_large_01"/>
+			<Piece entityName="glass_debris_large_02"/>
+			<Piece entityName="glass_debris_large_03"/>
+			<Piece entityName="glass_debris_small_01"/>
+			<Piece entityName="glass_debris_small_02"/>
+			<Piece entityName="glass_debris_small_03"/>
+			<Piece entityName="glass_debris_small_04"/>
+			<Piece entityName="glass_debris_small_05"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="bollard" type="BasicEntity" editorTags="deco ext">
+		<PhysicalParams blocksMovement="false" solid="false" />
+		<RenderObject3D model="data/models/environment/exterior/bollard.khm" diffuseTex="data/models/environment/exterior/bollard.dds" skipGOSSAO="true"/>
+	</Entity>
+
+	<Entity name="US_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_us.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="France_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_fr.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="UK_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_uk.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="NATO_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_nato.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="Romania_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_ro.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="Texas_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_tx.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="Germany_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_de.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="Canada_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_ca.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="Russia_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_ru.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="Sweden_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_se.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="Poland_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_pl.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="Australia_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_au.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="Denmark_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_dk.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="Italy_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_it.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="Norway_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_no.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="China_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_cn.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="Japan_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_jap.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="South Korea_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_skor.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="UN_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_un.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="Ukraine_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_ua.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="Netherlands_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_nl.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="Finland_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_fi.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="Iraq_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_iq.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="Egypt_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_eg.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="Jordan_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_jo.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="UAE_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_uae.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="Saudi_Arabia_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_sa.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="Nowheraki_flag" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/flag.khm" diffuseTex="data/models/environment/exterior/flag_nowheraki.dds" skipSSAO="true" windAnimated="1"/>
+	</Entity>
+
+	<Entity name="Orange_signal_panel_01" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/signal_panel_01.khm" diffuseTex="data/models/environment/exterior/signal_panel_orange.dds" skipSSAO="true"/>
+	</Entity>
+
+	<Entity name="Orange_signal_panel_02" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/signal_panel_02.khm" diffuseTex="data/models/environment/exterior/signal_panel_orange.dds" skipSSAO="true"/>
+	</Entity>
+
+	<Entity name="USA_signal_panel_01" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/signal_panel_01.khm" diffuseTex="data/models/environment/exterior/signal_panel_usa.dds" skipSSAO="true"/>
+	</Entity>
+
+	<Entity name="USA_signal_panel_02" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/signal_panel_02.khm" diffuseTex="data/models/environment/exterior/signal_panel_usa.dds" skipSSAO="true"/>
+	</Entity>
+
+	<Entity name="NATO_signal_panel_01" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/signal_panel_01.khm" diffuseTex="data/models/environment/exterior/signal_panel_nato.dds" skipSSAO="true"/>
+	</Entity>
+
+	<Entity name="Nato_signal_panel_02" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/signal_panel_02.khm" diffuseTex="data/models/environment/exterior/signal_panel_nato.dds" skipSSAO="true"/>
+	</Entity>
+	<Entity name="Nowheraki_signal_panel_01" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/signal_panel_01.khm" diffuseTex="data/models/environment/exterior/signal_panel_nowheraki.dds" skipSSAO="true"/>
+	</Entity>
+
+	<Entity name="Nowheraki_signal_panel_02" type="BasicEntity" editorAutoHeight="false" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="grenade"/>
+		<RenderObject3D model="data/models/environment/exterior/signal_panel_02.khm" diffuseTex="data/models/environment/exterior/signal_panel_nowheraki.dds" skipSSAO="true"/>
+	</Entity>
+
+
+
+
+	<!-- MISC / MARKET -->
+
+	<Entity name="fruit_apple" type="BasicEntity" editorTags="market">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/fruit_01.khm" diffuseTex="data/models/environment/exterior/fruits.dds"/>
+	</Entity>
+
+	<Entity name="fruit_pear" type="BasicEntity" editorTags="market">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/fruit_02.khm" diffuseTex="data/models/environment/exterior/fruits.dds"/>
+	</Entity>
+
+	<Entity name="fruit_orange" type="BasicEntity" editorTags="market">
+		<PhysicalParams physicsEnabled="true" solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/fruit_03.khm" diffuseTex="data/models/environment/exterior/fruits.dds"/>
+	</Entity>
+
+	<Entity name="fruit_box_apple" type="POIObject" editorTags="market">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Fruits" breakOnDamage="bullet"/>
+		<RenderObject3D model="data/models/environment/exterior/fruit_box_01.khm" diffuseTex="data/models/environment/exterior/fruits.dds"/>
+		<Interactible look="at" needsUnequip="false"/>
+		<POI forCivs="true" />
+	</Entity>
+
+	<Entity name="fruit_box_pear" type="POIObject" editorTags="market">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Fruits" breakOnDamage="bullet"/>
+		<RenderObject3D model="data/models/environment/exterior/fruit_box_02.khm" diffuseTex="data/models/environment/exterior/fruits.dds"/>
+		<Interactible look="at" needsUnequip="false"/>
+		<POI forCivs="true" />
+	</Entity>
+
+	<Entity name="fruit_box_orange" type="POIObject" editorTags="market">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Fruits" breakOnDamage="bullet"/>
+		<RenderObject3D model="data/models/environment/exterior/fruit_box_03.khm" diffuseTex="data/models/environment/exterior/fruits.dds"/>
+		<Interactible look="at" needsUnequip="false"/>
+		<POI forCivs="true" />
+	</Entity>
+
+	<Entity name="fruit_box_empty" type="BasicEntity" editorTags="market">
+		<PhysicalParams solid="false"/>
+		<Breakable template="Breakable_Fruits" breakOnDamage="bullet"/>
+		<RenderObject3D model="data/models/environment/exterior/fruit_box_04.khm" diffuseTex="data/models/environment/exterior/fruits.dds"/>
+	</Entity>
+
+	<Entity name="booth_bazar_01_01" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/booth_bazar_01.khm" diffuseTex="data/models/environment/exterior/bazar_01.dds"/>
+	</Entity>
+
+	<Entity name="booth_bazar_01_02" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/booth_bazar_01.khm" diffuseTex="data/models/environment/exterior/bazar_02.dds"/>
+	</Entity>
+
+	<Entity name="booth_bazar_01_03" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/booth_bazar_01.khm" diffuseTex="data/models/environment/exterior/bazar_03.dds"/>
+	</Entity>
+
+	<Entity name="booth_bazar_02_01" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/booth_bazar_02.khm" diffuseTex="data/models/environment/exterior/bazar_01.dds">
+			<Specular shininess="4" intensity="0.7"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="booth_bazar_02_02" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/booth_bazar_02.khm" diffuseTex="data/models/environment/exterior/bazar_02.dds">
+			<Specular shininess="4" intensity="0.7"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="booth_bazar_02_03" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/booth_bazar_02.khm" diffuseTex="data/models/environment/exterior/bazar_03.dds">
+			<Specular shininess="4" intensity="0.7"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="booth_bazar_03_01" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/booth_bazar_03.khm" diffuseTex="data/models/environment/exterior/bazar_01.dds"/>
+	</Entity>
+
+	<Entity name="booth_bazar_03_02" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/booth_bazar_03.khm" diffuseTex="data/models/environment/exterior/bazar_02.dds"/>
+	</Entity>
+
+	<Entity name="booth_bazar_03_03" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/booth_bazar_03.khm" diffuseTex="data/models/environment/exterior/bazar_03.dds"/>
+	</Entity>
+
+	<Entity name="booth_bazar_04_01" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/booth_bazar_04.khm" diffuseTex="data/models/environment/exterior/bazar_01.dds"/>
+	</Entity>
+
+	<Entity name="booth_bazar_04_02" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/booth_bazar_04.khm" diffuseTex="data/models/environment/exterior/bazar_02.dds"/>
+	</Entity>
+
+	<Entity name="booth_bazar_04_03" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/booth_bazar_04.khm" diffuseTex="data/models/environment/exterior/bazar_03.dds"/>
+	</Entity>
+
+	<Entity name="booth_bazar_05_01" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/booth_bazar_05.khm" diffuseTex="data/models/environment/exterior/bazar_01.dds"/>
+	</Entity>
+
+	<Entity name="booth_bazar_05_02" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/booth_bazar_05.khm" diffuseTex="data/models/environment/exterior/bazar_02.dds"/>
+	</Entity>
+
+	<Entity name="booth_bazar_05_03" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/booth_bazar_05.khm" diffuseTex="data/models/environment/exterior/bazar_03.dds"/>
+	</Entity>
+
+	<Entity name="booth_bazar_06_01" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/booth_bazar_06.khm" diffuseTex="data/models/environment/exterior/bazar_01.dds"/>
+	</Entity>
+
+	<Entity name="booth_bazar_06_02" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/booth_bazar_06.khm" diffuseTex="data/models/environment/exterior/bazar_02.dds"/>
+	</Entity>
+
+	<Entity name="booth_bazar_06_03" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/booth_bazar_06.khm" diffuseTex="data/models/environment/exterior/bazar_03.dds"/>
+	</Entity>
+
+	<Entity name="booth_bazar_07_01" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/booth_bazar_07.khm" diffuseTex="data/models/environment/exterior/bazar_01.dds"/>
+	</Entity>
+
+	<Entity name="booth_bazar_07_02" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/booth_bazar_07.khm" diffuseTex="data/models/environment/exterior/bazar_02.dds"/>
+	</Entity>
+
+	<Entity name="booth_bazar_07_03" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/booth_bazar_07.khm" diffuseTex="data/models/environment/exterior/bazar_03.dds"/>
+	</Entity>
+	
+	<Entity name="tent_rough" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Wood+Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/tent_rough.khm" diffuseTex="data/models/environment/exterior/bazar_03.dds"/>
+	</Entity>
+
+	<Entity name="rug_bent_01_01" type="BasicEntity" editorTags="market" >
+		<Breakable  breakOnDamage="grenade" />
+		<RenderObject3D model="data/models/environment/exterior/rug_bent_01.khm" diffuseTex="data/models/environment/exterior/bazar_01.dds" skipSSAO="true" windAnimated="1" />
+	</Entity>
+
+	<Entity name="rug_bent_01_02" type="BasicEntity" editorTags="market" >
+		<Breakable  breakOnDamage="grenade" />
+		<RenderObject3D model="data/models/environment/exterior/rug_bent_01.khm" diffuseTex="data/models/environment/exterior/bazar_02.dds" skipSSAO="true" windAnimated="1" />
+	</Entity>
+
+	<Entity name="rug_bent_01_03" type="BasicEntity" editorTags="market" >
+		<Breakable  breakOnDamage="grenade" />
+		<RenderObject3D model="data/models/environment/exterior/rug_bent_01.khm" diffuseTex="data/models/environment/exterior/bazar_03.dds" skipSSAO="true" windAnimated="1" />
+	</Entity>
+
+	<Entity name="rug_bent_02_01" type="BasicEntity" editorTags="market" >
+		<Breakable  breakOnDamage="grenade" />
+		<RenderObject3D model="data/models/environment/exterior/rug_bent_02.khm" diffuseTex="data/models/environment/exterior/bazar_01.dds" skipSSAO="true" windAnimated="1" />
+	</Entity>
+
+	<Entity name="rug_bent_02_02" type="BasicEntity" editorTags="market" >
+		<Breakable  breakOnDamage="grenade" />
+		<RenderObject3D model="data/models/environment/exterior/rug_bent_02.khm" diffuseTex="data/models/environment/exterior/bazar_02.dds" skipSSAO="true" windAnimated="1" />
+	</Entity>
+
+	<Entity name="rug_bent_02_03" type="BasicEntity" editorTags="market" >
+		<Breakable  breakOnDamage="grenade" />
+		<RenderObject3D model="data/models/environment/exterior/rug_bent_02.khm" diffuseTex="data/models/environment/exterior/bazar_03.dds" skipSSAO="true" windAnimated="1" />
+	</Entity>
+
+	<Entity name="table_wood_rough_01_01" type="BasicEntity" editorAutoHeight="false" editorTags="market">
+		<PhysicalParams blocksMovement="true"/>
+		<Breakable template="Breakable_Wood"/>
+		<RenderObject3D model="data/models/environment/exterior/table_wood_rough_01.khm" diffuseTex="data/models/environment/exterior/bazar_01.dds"/>
+	</Entity>
+
+	<Entity name="table_wood_rough_01_02" type="BasicEntity" editorAutoHeight="false" editorTags="market">
+		<PhysicalParams blocksMovement="true"/>
+		<Breakable template="Breakable_Wood"/>
+		<RenderObject3D model="data/models/environment/exterior/table_wood_rough_01.khm" diffuseTex="data/models/environment/exterior/bazar_02.dds"/>
+	</Entity>
+
+	<Entity name="table_wood_rough_01_03" type="BasicEntity" editorAutoHeight="false" editorTags="market">
+		<PhysicalParams blocksMovement="true"/>
+		<Breakable template="Breakable_Wood"/>
+		<RenderObject3D model="data/models/environment/exterior/table_wood_rough_01.khm" diffuseTex="data/models/environment/exterior/bazar_03.dds"/>
+	</Entity>
+
+	<Entity name="table_wood_rough_02_01" type="BasicEntity" editorAutoHeight="false" editorTags="market">
+		<PhysicalParams blocksMovement="true"/>
+		<Breakable template="Breakable_Wood"/>
+		<RenderObject3D model="data/models/environment/exterior/table_wood_rough_02.khm" diffuseTex="data/models/environment/exterior/bazar_01.dds"/>
+	</Entity>
+
+	<Entity name="table_wood_rough_02_02" type="BasicEntity" editorAutoHeight="false" editorTags="market">
+		<PhysicalParams blocksMovement="true"/>
+		<Breakable template="Breakable_Wood"/>
+		<RenderObject3D model="data/models/environment/exterior/table_wood_rough_02.khm" diffuseTex="data/models/environment/exterior/bazar_02.dds"/>
+	</Entity>
+
+	<Entity name="table_wood_rough_02_03" type="BasicEntity" editorAutoHeight="false" editorTags="market">
+		<PhysicalParams blocksMovement="true"/>
+		<Breakable template="Breakable_Wood"/>
+		<RenderObject3D model="data/models/environment/exterior/table_wood_rough_02.khm" diffuseTex="data/models/environment/exterior/bazar_03.dds"/>
+	</Entity>
+
+	<Entity name="table_wood_rough_03_01" type="BasicEntity" editorAutoHeight="false" editorTags="market">
+		<PhysicalParams blocksMovement="true"/>
+		<Breakable template="Breakable_Wood"/>
+		<RenderObject3D model="data/models/environment/exterior/table_wood_rough_03.khm" diffuseTex="data/models/environment/exterior/bazar_01.dds"/>
+	</Entity>
+
+	<Entity name="table_wood_rough_03_02" type="BasicEntity" editorAutoHeight="false" editorTags="market">
+		<PhysicalParams blocksMovement="true"/>
+		<Breakable template="Breakable_Wood"/>
+		<RenderObject3D model="data/models/environment/exterior/table_wood_rough_03.khm" diffuseTex="data/models/environment/exterior/bazar_02.dds"/>
+	</Entity>
+
+	<Entity name="table_wood_rough_03_03" type="BasicEntity" editorAutoHeight="false" editorTags="market">
+		<PhysicalParams blocksMovement="true"/>
+		<Breakable template="Breakable_Wood"/>
+		<RenderObject3D model="data/models/environment/exterior/table_wood_rough_03.khm" diffuseTex="data/models/environment/exterior/bazar_03.dds"/>
+	</Entity>
+
+	<Entity name="pipes_small_01" type="BasicEntity" editorTags="market">
+		<PhysicalParams blocksMovement="false" solid="false" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/pipes_small_01.khm" diffuseTex="data/models/environment/exterior/pipes_small_01.dds">
+			<Specular shininess="4" intensity="0.7"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="gas_pump" type="BasicEntity" hideInEditor="true" editorTags="market">
+		<PhysicalParams blocksMovement="true" solid="false" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/gas_pump.khm" diffuseTex="data/models/environment/exterior/gas_pump.dds">
+			<Specular shininess="4" intensity="0.7"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="gas_hose" type="BasicEntity" hideInEditor="true" editorTags="market">
+		<PhysicalParams blocksMovement="false" solid="false" />
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/exterior/gas_hose.khm" diffuseTex="data/models/environment/exterior/gas_pump.dds">
+			<Specular shininess="4" intensity="0.7"/>
+		</RenderObject3D>
+	</Entity>
+
+
+	<!-- Decal -->
+
+	<Entity name="decal_scratch_01" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/decal_scratch_01.khm" diffuseTex="data/models/environment/exterior/decal_scratch_02.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_scratch_02" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/decal_scratch_04.khm" diffuseTex="data/models/environment/exterior/decal_scratch_02.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_scratch_03" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/decal_scratch_03.khm" diffuseTex="data/models/environment/exterior/decal_scratch_02.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_scratch_04" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/decal_scratch_04.khm" diffuseTex="data/models/environment/exterior/decal_scratch_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_debris_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/decal_debris_01.khm" diffuseTex="data/models/environment/exterior/decal_debris_01.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal"/>
+	</Entity>
+
+	<Entity name="decal_debris_02" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/decal_debris_01.khm" diffuseTex="data/models/environment/exterior/decal_debris_02.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal"/>
+	</Entity>
+
+	<Entity name="decal_debris_03" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/decal_debris_01.khm" diffuseTex="data/models/environment/exterior/decal_debris_03.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal"/>
+	</Entity>
+
+	<Entity name="decal_debris_04" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/decal_debris_01.khm" diffuseTex="data/models/environment/exterior/decal_debris_04.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal"/>
+	</Entity>
+
+	<Entity name="decal_debris_corner_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/decal_debris_corner_01.khm" diffuseTex="data/models/environment/exterior/decal_debris_corner_01.dds"  skipAutoBlendOut="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal"/>
+	</Entity>
+
+	<Entity name="decal_debris_side_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/decal_debris_side_01.khm" diffuseTex="data/models/environment/exterior/decal_debris_side_01.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal"/>
+	</Entity>
+
+	<Entity name="decal_debris_side_02" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/decal_debris_side_01.khm" diffuseTex="data/models/environment/exterior/decal_debris_side_02.dds"  skipAutoBlendOut="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal"/>
+	</Entity>
+
+	<Entity name="decal_stain_large_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_topleft.khm" diffuseTex="data/models/environment/exterior/stains_large_01.dds"  skipAutoBlendOut="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" diffuseColor="40392b80"/>
+	</Entity>
+
+	<Entity name="decal_stain_large_02" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_topright.khm" diffuseTex="data/models/environment/exterior/stains_large_01.dds"  skipAutoBlendOut="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" diffuseColor="40392b80"/>
+	</Entity>
+
+	<Entity name="decal_stain_large_03" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_botleft.khm" diffuseTex="data/models/environment/exterior/stains_large_01.dds"  skipAutoBlendOut="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" diffuseColor="40392b80"/>
+	</Entity>
+
+	<Entity name="decal_stain_large_04" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_botright.khm" diffuseTex="data/models/environment/exterior/stains_large_01.dds"  skipAutoBlendOut="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" diffuseColor="40392b80"/>
+	</Entity>
+
+	<Entity name="decal_stain_small_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_topleft.khm" diffuseTex="data/models/environment/exterior/stains_small_01.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" diffuseColor="40392b80"/>
+	</Entity>
+
+	<Entity name="decal_stain_small_02" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_topright.khm" diffuseTex="data/models/environment/exterior/stains_small_01.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" diffuseColor="40392b80"/>
+	</Entity>
+
+	<Entity name="decal_stain_small_03" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_botleft.khm" diffuseTex="data/models/environment/exterior/stains_small_01.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" diffuseColor="40392b80"/>
+	</Entity>
+
+	<Entity name="decal_stain_small_04" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_botright.khm" diffuseTex="data/models/environment/exterior/stains_small_01.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" diffuseColor="40392b80"/>
+	</Entity>
+
+	<Entity name="decal_scratches_large_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_topleft.khm" diffuseTex="data/models/environment/exterior/scratches_large_01.dds" disableLighting="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="overlay" />
+	</Entity>
+
+	<Entity name="decal_scratches_large_02" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_topright.khm" diffuseTex="data/models/environment/exterior/scratches_large_01.dds" disableLighting="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="overlay" />
+	</Entity>
+
+	<Entity name="decal_scratches_large_03" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_botleft.khm" diffuseTex="data/models/environment/exterior/scratches_large_01.dds" disableLighting="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="overlay" />
+	</Entity>
+
+	<Entity name="decal_scratches_large_04" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_botright.khm" diffuseTex="data/models/environment/exterior/scratches_large_01.dds" disableLighting="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="overlay" />
+	</Entity>
+
+	<Entity name="decal_scratches_small_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_topleft.khm" diffuseTex="data/models/environment/exterior/scratches_small_01.dds" disableLighting="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="overlay" />
+	</Entity>
+
+	<Entity name="decal_scratches_small_02" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_topright.khm" diffuseTex="data/models/environment/exterior/scratches_small_01.dds" disableLighting="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="overlay" />
+	</Entity>
+
+	<Entity name="decal_scratches_small_03" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_botleft.khm" diffuseTex="data/models/environment/exterior/scratches_small_01.dds" disableLighting="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="overlay" />
+	</Entity>
+
+	<Entity name="decal_scratches_small_04" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_botright.khm" diffuseTex="data/models/environment/exterior/scratches_small_01.dds" disableLighting="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="overlay" />
+	</Entity>
+
+	<Entity name="decal_cosminmirza" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/models/environment/exterior/decal_cosminmirza.dds" sizeX="1" sizeY="1" blendMode="normal" color="3b3936"/>
+	</Entity>
+
+	<Entity name="decal_nowheraki_swat" type="BasicEntity" editorAutoHeight="true" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		 <Breakable breakOnDamage="explosive"/>
+		 <Breakable breakOnDamage="bullet"/>
+		<RenderObject3D model="data/models/environment/exterior/manhole_01.khm" diffuseTex="data/models/environment/exterior/decal_swat.dds" disableLighting="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="overlay" />
+	</Entity>
+
+	<Entity name="decal_bullet_holes" type="BasicEntity" editorAutoHeight="true" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		 <Breakable breakOnDamage="explosive"/>
+		 <Breakable breakOnDamage="bullet"/>
+		<RenderObject3D model="data/models/environment/exterior/manhole_01.khm" diffuseTex="data/models/environment/exterior/bullet_holes.dds" disableLighting="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="overlay" />
+	</Entity>
+
+	<Entity name="decal_bullet_holes_02" type="BasicEntity" editorAutoHeight="true" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		 <Breakable breakOnDamage="explosive"/>
+		 <Breakable breakOnDamage="bullet"/>
+		<RenderObject3D model="data/models/environment/exterior/manhole_01.khm" diffuseTex="data/models/environment/exterior/bullet_holes_02.dds" disableLighting="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="overlay" />
+	</Entity>
+
+	<Entity name="shells_spent_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="true" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/manhole_01.khm" diffuseTex="data/models/environment/exterior/shells_spent_01.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="shells_spent_02" type="BasicEntity" initialHeight="0.01" editorAutoHeight="true" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/manhole_01.khm" diffuseTex="data/models/environment/exterior/shells_spent_02.dds" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="outline_victim_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/outline_victim.khm" diffuseTex="data/models/environment/exterior/outline_victim_01.dds" disableLighting="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="outline_victim_02" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/outline_victim.khm" diffuseTex="data/models/environment/exterior/outline_victim_02.dds" disableLighting="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_grime_large_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_topleft.khm" diffuseTex="data/models/environment/exterior/grime_large_01.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_grime_large_02" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_topright.khm" diffuseTex="data/models/environment/exterior/grime_large_01.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_grime_large_03" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_botleft.khm" diffuseTex="data/models/environment/exterior/grime_large_01.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_grime_large_04" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_botright.khm" diffuseTex="data/models/environment/exterior/grime_large_01.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_grime_large_05" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_topleft.khm" diffuseTex="data/models/environment/exterior/grime_large_02.dds"  skipAutoBlendOut="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_grime_large_06" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_topright.khm" diffuseTex="data/models/environment/exterior/grime_large_02.dds"  skipAutoBlendOut="true"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_grime_large_07" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_botleft.khm" diffuseTex="data/models/environment/exterior/grime_large_02.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_grime_large_08" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_botright.khm" diffuseTex="data/models/environment/exterior/grime_large_02.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_dust_large_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_topleft.khm" diffuseTex="data/models/environment/exterior/dust_large_01.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_dust_large_02" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_topright.khm" diffuseTex="data/models/environment/exterior/dust_large_01.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_dust_large_03" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_botleft.khm" diffuseTex="data/models/environment/exterior/dust_large_01.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_dust_large_04" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_botright.khm" diffuseTex="data/models/environment/exterior/dust_large_01.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_dust_large_05" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_topleft.khm" diffuseTex="data/models/environment/exterior/dust_large_02.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_dust_large_06" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_topright.khm" diffuseTex="data/models/environment/exterior/dust_large_02.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_dust_large_07" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_botleft.khm" diffuseTex="data/models/environment/exterior/dust_large_02.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_dust_large_08" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_botright.khm" diffuseTex="data/models/environment/exterior/dust_large_02.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_rust_large_01" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_topleft.khm" diffuseTex="data/models/environment/exterior/rust_large_01.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_rust_large_02" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_topright.khm" diffuseTex="data/models/environment/exterior/rust_large_01.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_rust_large_03" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_botleft.khm" diffuseTex="data/models/environment/exterior/rust_large_01.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<Entity name="decal_rust_large_04" type="BasicEntity" initialHeight="0.01" editorAutoHeight="false" editorTags="debris">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/plane_2x2_botright.khm" diffuseTex="data/models/environment/exterior/rust_large_01.dds"  skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" blendMode="normal" />
+	</Entity>
+
+	<!-- Water -->
+
+	<Entity name="puddle" type="BasicEntity" editorAutoHeight="false" editorTags="water" initialHeight="0.01">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/puddle.khm" diffuseTex="data/models/environment/exterior/puddle.dds" blendMode="normal" skipAutoBlendOut="true" diffuseColor="ffffff7f" skipGOSSAO="true" skipSSAO="true" windAnimated="1">
+			<Specular shininess="64" intensity="3.0"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="Puddle New" type="BasicEntity" editorAutoHeight="false" initialHeight="0.1" editorTags="water">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/puddle.khm" diffuseTex="data/textures/fx/water_normal_small.tga" blendMode="normal_premultiplied_alpha" diffuseColor="ffffffff" skipGOSSAO="true" skipSSAO="true" windAnimated="1" >
+			<Specular shininess="750" intensity="6.0"/>
+			<Water />
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="water_shape" type="BasicEntity" editorAutoHeight="false" initialHeight="0.1" editorTags="water">
+		<PhysicalParams solid="false"/>
+		<PolyShape />
+		<RenderObject3D diffuseTex="data/textures/fx/water_normal_small.tga" blendMode="normal_premultiplied_alpha" diffuseColor="ffffffff" skipGOSSAO="true" skipSSAO="true" windAnimated="1" >
+			<Specular shininess="750" intensity="6.0"/>
+			<Water />
+		</RenderObject3D>
+		<RenderObject2D texture="data/textures/editor/waypoints.dds" blendMode="normal" color="7d3d25" sizeX="0.75" sizeY="0.375" hideInGame="true" disableDepthTest="true"/>
+	</Entity>
+	
+	<Entity name="water_shape_still" type="BasicEntity" editorAutoHeight="false" initialHeight="0.1" editorTags="water" oldName="water_shape_fountain">
+		<PhysicalParams solid="false"/>
+		<PolyShape />
+		<RenderObject3D diffuseTex="data/textures/fx/water_normal_small.tga" blendMode="normal_premultiplied_alpha" diffuseColor="ffffffff" skipGOSSAO="true" skipSSAO="true" >
+			<Specular shininess="750" intensity="6.0"/>
+			<Water />
+		</RenderObject3D>
+		<RenderObject2D texture="data/textures/editor/waypoints.dds" blendMode="normal" color="7d3d25" sizeX="0.75" sizeY="0.375" hideInGame="true" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="puddle_large" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="water">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/puddle_large.khm" diffuseTex="data/models/environment/exterior/puddle_large.dds" diffuseColor="ffffffbf" blendMode="normal" reflections="true" skipAutoBlendOut="true">
+			<Specular mask="data/models/environment/exterior/puddle_large_spec.dds" shininess="70" intensity="5"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="puddle_medium" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="water">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/puddle_medium.khm" diffuseTex="data/models/environment/exterior/puddle_medium.dds" diffuseColor="ffffffbf" blendMode="normal" reflections="true" skipAutoBlendOut="true">
+			<Specular mask="data/models/environment/exterior/puddle_medium_spec.dds" shininess="70" intensity="5"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="puddle_small" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="water">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/puddle_small.khm" diffuseTex="data/models/environment/exterior/puddle_small.dds" diffuseColor="ffffffbf" blendMode="normal" reflections="true">
+			<Specular mask="data/models/environment/exterior/puddle_small_spec.dds" shininess="70" intensity="5"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="puddle_long" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="water">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/puddle_long.khm" diffuseTex="data/models/environment/exterior/puddle_long.dds" diffuseColor="ffffffbf" blendMode="normal" reflections="true" skipAutoBlendOut="true">
+			<Specular mask="data/models/environment/exterior/puddle_long_spec.dds" shininess="70" intensity="5"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="puddle_short" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="water">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/puddle_short.khm" diffuseTex="data/models/environment/exterior/puddle_short.dds" diffuseColor="ffffffbf" blendMode="normal" reflections="true">
+			<Specular mask="data/models/environment/exterior/puddle_short_spec.dds" shininess="70" intensity="5"/>
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_bed" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="water">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/river_bed.khm" diffuseTex="data/models/environment/exterior/river_bed.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_bed_shape" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="water">
+		<PhysicalParams solid="false"/>
+		<PolyShape uvSizeX="3.f" uvSizeY="3.f" />
+		<RenderObject3D diffuseTex="data/models/environment/exterior/river_bed.dds" skipCastShadows="true" skipGOSSAO="true" />
+		<RenderObject2D texture="data/textures/editor/waypoints.dds" blendMode="normal" color="7d3d25" sizeX="0.75" sizeY="0.375" hideInGame="true" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="wood_02_shape" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="deco int">
+		<PhysicalParams solid="false"/>
+		<PolyShape uvSizeX="3.f" uvSizeY="3.f" />
+		<RenderObject3D diffuseTex="data/terrain/interior/wood_02.dds" skipCastShadows="true" skipGOSSAO="true" />
+		<RenderObject2D texture="data/textures/editor/waypoints.dds" blendMode="normal" color="7d3d25" sizeX="0.75" sizeY="0.375" hideInGame="true" disableDepthTest="true"/>
+	</Entity>
+
+
+	<Entity name="wood_03_shape" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="deco int">
+		<PhysicalParams solid="false"/>
+		<PolyShape uvSizeX="3.f" uvSizeY="3.f" />
+		<RenderObject3D diffuseTex="data/terrain/interior/wood_03.dds" skipCastShadows="true" skipGOSSAO="true" />
+		<RenderObject2D texture="data/textures/editor/waypoints.dds" blendMode="normal" color="7d3d25" sizeX="0.75" sizeY="0.375" hideInGame="true" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="tiles_exterior_02_shape" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<PolyShape uvSizeX="3.f" uvSizeY="3.f" />
+		<RenderObject3D diffuseTex="data/terrain/exterior/tiles_exterior_02.dds" skipCastShadows="true" skipGOSSAO="true" />
+		<RenderObject2D texture="data/textures/editor/waypoints.dds" blendMode="normal" color="7d3d25" sizeX="0.75" sizeY="0.375" hideInGame="true" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="asphalt_shape" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<PolyShape uvSizeX="3.f" uvSizeY="3.f" />
+		<RenderObject3D diffuseTex="data/terrain/exterior/asphalt_01.dds" skipCastShadows="true" skipGOSSAO="true" />
+		<RenderObject2D texture="data/textures/editor/waypoints.dds" blendMode="normal" color="7d3d25" sizeX="0.75" sizeY="0.375" hideInGame="true" disableDepthTest="true"/>
+	</Entity>
+	
+	<Entity name="gravel_shape" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<PolyShape uvSizeX="3.f" uvSizeY="3.f" />
+		<RenderObject3D diffuseTex="data/terrain/exterior/gravel_02.dds" skipCastShadows="true" skipGOSSAO="true" />
+		<RenderObject2D texture="data/textures/editor/waypoints.dds" blendMode="normal" color="7d3d25" sizeX="0.75" sizeY="0.375" hideInGame="true" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="grass_shape" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<PolyShape uvSizeX="3.f" uvSizeY="3.f" />
+		<RenderObject3D diffuseTex="data/terrain/exterior/grass_02.dds" skipCastShadows="true" skipGOSSAO="true" />
+		<RenderObject2D texture="data/textures/editor/waypoints.dds" blendMode="normal" color="7d3d25" sizeX="0.75" sizeY="0.375" hideInGame="true" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="grass_02_shape" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="foliage">
+		<PhysicalParams solid="false"/>
+		<PolyShape uvSizeX="3.f" uvSizeY="3.f" />
+		<RenderObject3D diffuseTex="data/terrain/exterior/grass_01.dds" skipCastShadows="true" skipGOSSAO="true" />
+		<RenderObject2D texture="data/textures/editor/waypoints.dds" blendMode="normal" color="7d3d25" sizeX="0.75" sizeY="0.375" hideInGame="true" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="pavement_old_02_shape" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<PolyShape uvSizeX="3.f" uvSizeY="3.f" />
+		<RenderObject3D diffuseTex="data/terrain/exterior/pavement_old_02.dds" skipCastShadows="true" skipGOSSAO="true" />
+		<RenderObject2D texture="data/textures/editor/waypoints.dds" blendMode="normal" color="7d3d25" sizeX="0.75" sizeY="0.375" hideInGame="true" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="pavement_old_04_shape" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="deco ext">
+		<PhysicalParams solid="false"/>
+		<PolyShape uvSizeX="3.f" uvSizeY="3.f" />
+		<RenderObject3D diffuseTex="data/terrain/exterior/pavement_old_04.dds" skipCastShadows="true" skipGOSSAO="true" />
+		<RenderObject2D texture="data/textures/editor/waypoints.dds" blendMode="normal" color="7d3d25" sizeX="0.75" sizeY="0.375" hideInGame="true" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="carpet_01_shape" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="deco int">
+		<PhysicalParams solid="false"/>
+		<PolyShape uvSizeX="3.f" uvSizeY="3.f" />
+		<RenderObject3D diffuseTex="data/terrain/interior/carpet_01.dds" skipCastShadows="true" skipGOSSAO="true" />
+		<RenderObject2D texture="data/textures/editor/waypoints.dds" blendMode="normal" color="7d3d25" sizeX="0.75" sizeY="0.375" hideInGame="true" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="carpet_01x_shape" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="deco int">
+		<PhysicalParams solid="false"/>
+		<PolyShape uvSizeX="3.f" uvSizeY="3.f" />
+		<RenderObject3D diffuseTex="data/terrain/interior/carpet_01x.dds" skipCastShadows="true" skipGOSSAO="true" />
+		<RenderObject2D texture="data/textures/editor/waypoints.dds" blendMode="normal" color="7d3d25" sizeX="0.75" sizeY="0.375" hideInGame="true" disableDepthTest="true"/>
+	</Entity>
+
+	<Entity name="river_left_curve_left" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="water">
+		<PhysicalParams solid="false" justThumbnail="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_left_curve_left.khm" diffuseTex="data/models/environment/exterior/river_cliff.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_left_curve_right" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="water">
+		<PhysicalParams solid="false" justThumbnail="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_left_curve_right.khm" diffuseTex="data/models/environment/exterior/river_cliff.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_left_straight" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="water">
+		<PhysicalParams solid="false" justThumbnail="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_left_straight.khm" diffuseTex="data/models/environment/exterior/river_cliff.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_right_curve_left" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="water">
+		<PhysicalParams solid="false" justThumbnail="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_right_curve_left.khm" diffuseTex="data/models/environment/exterior/river_cliff.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_right_curve_right" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="water">
+		<PhysicalParams solid="false" justThumbnail="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_right_curve_right.khm" diffuseTex="data/models/environment/exterior/river_cliff.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_right_straight" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="water">
+		<PhysicalParams solid="false" justThumbnail="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_right_straight.khm" diffuseTex="data/models/environment/exterior/river_cliff.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="rocky_edge" type="BasicEntity" editorAutoHeight="false" editorTags="water">
+		<PhysicalParams solid="false" justThumbnail="true"/>
+		<RenderObject3D model="data/models/environment/exterior/rocky_edge_01.khm" diffuseTex="data/models/environment/exterior/rocky_edge.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="rocky_edge_corner" type="BasicEntity" editorAutoHeight="false" editorTags="water">
+		<PhysicalParams solid="false" justThumbnail="true"/>
+		<RenderObject3D model="data/models/environment/exterior/rocky_edge_corner.khm" diffuseTex="data/models/environment/exterior/rocky_edge.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_rocks_01" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="water">
+		<PhysicalParams solid="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_rocks_01.khm" diffuseTex="data/models/environment/exterior/river_rocks.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_rocks_02" type="BasicEntity" editorAutoHeight="false" initialHeight="0.02" editorTags="water">
+		<PhysicalParams solid="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_rocks_02.khm" diffuseTex="data/models/environment/exterior/river_rocks.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_rocks_03" type="BasicEntity" editorAutoHeight="false" initialHeight="0.03" editorTags="water">
+		<PhysicalParams solid="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_rocks_03.khm" diffuseTex="data/models/environment/exterior/river_rocks.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_rocks_04" type="BasicEntity" editorAutoHeight="false" initialHeight="0.04" editorTags="water">
+		<PhysicalParams solid="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_rocks_04.khm" diffuseTex="data/models/environment/exterior/river_rocks.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_rocks_05" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="water">
+		<PhysicalParams solid="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_rocks_05.khm" diffuseTex="data/models/environment/exterior/river_rocks.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_rocks_06" type="BasicEntity" editorAutoHeight="false" initialHeight="0.02" editorTags="water">
+		<PhysicalParams solid="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_rocks_06.khm" diffuseTex="data/models/environment/exterior/river_rocks.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_rocks_07" type="BasicEntity" editorAutoHeight="false" initialHeight="0.03" editorTags="water">
+		<PhysicalParams solid="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_rocks_03.khm" diffuseTex="data/models/environment/exterior/river_rocks.dds">
+		</RenderObject3D>
+	</Entity>
+
+
+	<Entity name="river_rocks_08" type="BasicEntity" editorAutoHeight="false" initialHeight="0.02" editorTags="water">
+		<PhysicalParams solid="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_rocks_02.khm" diffuseTex="data/models/environment/exterior/river_rocks.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_rocks_09" type="BasicEntity" editorAutoHeight="false" initialHeight="0.03" editorTags="water">
+		<PhysicalParams solid="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_rocks_09.khm" diffuseTex="data/models/environment/exterior/river_rocks.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_rocks_10" type="BasicEntity" editorAutoHeight="false" initialHeight="0.04" editorTags="water">
+		<PhysicalParams solid="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_rocks_10.khm" diffuseTex="data/models/environment/exterior/river_rocks.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_rocks_11" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="water">
+		<PhysicalParams solid="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_rocks_11.khm" diffuseTex="data/models/environment/exterior/river_rocks.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_rocks_12" type="BasicEntity" editorAutoHeight="false" initialHeight="0.02" editorTags="water">
+		<PhysicalParams solid="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_rocks_12.khm" diffuseTex="data/models/environment/exterior/river_rocks.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_rocks_13" type="BasicEntity" editorAutoHeight="false" initialHeight="0.03" editorTags="water">
+		<PhysicalParams solid="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_rocks_13.khm" diffuseTex="data/models/environment/exterior/river_rocks.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_rocks_14" type="BasicEntity" editorAutoHeight="false" initialHeight="0.04" editorTags="water">
+		<PhysicalParams solid="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_rocks_14.khm" diffuseTex="data/models/environment/exterior/river_rocks.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_rocks_15" type="BasicEntity" editorAutoHeight="false" initialHeight="0.03" editorTags="water">
+		<PhysicalParams solid="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_rocks_15.khm" diffuseTex="data/models/environment/exterior/river_rocks.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="river_rocks_16" type="BasicEntity" editorAutoHeight="false" initialHeight="0.04" editorTags="water">
+		<PhysicalParams solid="true"/>
+		<RenderObject3D model="data/models/environment/exterior/river_rocks_16.khm" diffuseTex="data/models/environment/exterior/river_rocks.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="bridge_ground_middle" type="BasicEntity" editorAutoHeight="false" initialHeight="0.04" editorTags="water">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/bridge_ground_middle.khm" diffuseTex="data/models/environment/exterior/bridge_ground_middle.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="bridge_ground_side_left" type="BasicEntity" editorAutoHeight="false" initialHeight="0.04" editorTags="water">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/bridge_ground_side_left.khm" diffuseTex="data/models/environment/exterior/bridge_ground_side.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="bridge_ground_side_right" type="BasicEntity" editorAutoHeight="false" initialHeight="0.04" editorTags="water">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/bridge_ground_side_right.khm" diffuseTex="data/models/environment/exterior/bridge_ground_side.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="bridge_pillar" type="BasicEntity" editorAutoHeight="false" initialHeight="0.04" editorTags="water">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/bridge_pillar.khm" diffuseTex="data/models/environment/exterior/bridge_wall_pillar.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="bridge_wall" type="BasicEntity" editorAutoHeight="false" initialHeight="0.04" editorTags="water">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/bridge_wall.khm" diffuseTex="data/models/environment/exterior/bridge_wall_pillar.dds">
+		</RenderObject3D>
+	</Entity>
+
+	<Entity name="bridge_wall_end" type="BasicEntity" editorAutoHeight="false" initialHeight="0.04" editorTags="water">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/bridge_wall_end.khm" diffuseTex="data/models/environment/exterior/bridge_wall_pillar.dds">
+		</RenderObject3D>
+	</Entity>
+
+		<Entity name="plank_bridge_01" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" solid="false" blocksMovement="false" />
+		<RenderObject3D model="data/models/environment/debris/plank_01.khm" diffuseTex="data/models/environment/exterior/bazar_03.dds"/>
+	</Entity>
+
+	<Entity name="plank_bridge_02" type="BasicEntity" editorTags="debris">
+		<PhysicalParams physicsEnabled="false" blocksMovement="false"/>
+		<RenderObject3D model="data/models/environment/debris/debris_plank_03.khm" diffuseTex="data/models/environment/debris/debris_pile_01.dds" />
+	</Entity>
+
+
+
+	<!-- Buildings -->
+
+	<Entity name="test_largebuilding" type="BasicEntity" editorAutoHeight="false" editorTags="building">
+		<PhysicalParams blocksMovement="true" blocksVision="true"/>
+		<RenderObject3D model="data/models/environment/exterior/test_largebuilding.khm" diffuseColor="fff3d8" disableLighting="false" skipGOSSAO="true" skipSSAO="true"/>
+	</Entity>
+
+	<Entity name="test_roof" type="BasicEntity" editorAutoHeight="false" editorTags="building">
+		<PhysicalParams blocksMovement="true" blocksVision="true"/>
+		<RenderObject3D model="data/models/environment/exterior/test_roof.khm" diffuseColor="9e5747" disableLighting="false" skipGOSSAO="true" skipSSAO="true"/>
+	</Entity>
+
+	<Entity name="test_smallbuilding" type="BasicEntity" editorAutoHeight="false" editorTags="building">
+		<PhysicalParams blocksMovement="true" blocksVision="true"/>
+		<RenderObject3D model="data/models/environment/exterior/test_smallbuilding.khm" diffuseColor="fff3d8" disableLighting="false" skipGOSSAO="true" skipSSAO="true"/>
+	</Entity>
+
+	<Entity name="black_ceiling" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/platform_square.khm" diffuseColor="000000" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true"  />
+	</Entity>
+
+	<Entity name="black_ceiling_line_1" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/interior/mf_line_01.khm" diffuseColor="000000" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true"  />
+	</Entity>
+
+	<Entity name="black_ceiling_line_2" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/interior/mf_line_02.khm" diffuseColor="000000" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true"  />
+	</Entity>
+
+	<Entity name="arrow_sign_forward" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/sidewalk.khm" diffuseTex="data/models/environment/exterior/arrow_sign_forward.dds" blendMode="normal" skipAutoBlendOut="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" />
+	</Entity>
+
+	<Entity name="arrow_sign_right" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/sidewalk.khm" diffuseTex="data/models/environment/exterior/arrow_sign_right.dds" blendMode="normal" skipAutoBlendOut="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" />
+	</Entity>
+
+	<Entity name="arrow_sign_left" type="BasicEntity" editorAutoHeight="false" initialHeight="0.01" editorTags="street objects">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/environment/exterior/sidewalk.khm" diffuseTex="data/models/environment/exterior/arrow_sign_left.dds" blendMode="normal" skipAutoBlendOut="true" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" />
+	</Entity>
+
+</Entities>

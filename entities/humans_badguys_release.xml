@@ -1,0 +1,592 @@
+<!--
+		For help, please refer to "help_entities.txt" in this directory.
+-->
+<Entities>	
+
+<!-- Warlord Militia /-->
+
+
+	<Entity name="Warlord Militia" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/warlord_irregular.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/male_shorthair.khm" diffuseTex="data/models/humans/attachments/male_shorthair.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="18.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true" />
+			<Id name="@entity_human_warlordmilitia" portrait="data/textures/portraits/enemy_warlord_irregular_01.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="M16 WM"/>
+				<Item name="Frag Grenade Enemy"/>
+			</Equipment>
+		</Human>
+	</Entity>
+	
+	<Entity name="Warlord Militia Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord,weaponless">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/warlord_irregular.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/male_shorthair.khm" diffuseTex="data/models/humans/attachments/male_shorthair.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="18.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true" />
+			<Id name="@entity_human_warlordmilitia" portrait="data/textures/portraits/enemy_warlord_irregular_01.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+		</Human>
+	</Entity>
+
+
+	<Entity name="Warlord Militia LongRange" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/warlord_irregular.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/male_shorthair.khm" diffuseTex="data/models/humans/attachments/male_shorthair.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>			
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="18.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true"/>
+			<Id name="@entity_human_warlordmilitia" portrait="data/textures/portraits/enemy_warlord_irregular_02.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="M16LR WM"/>
+				<Item name="M150RCO"/>
+				<Item name="Frag Grenade Enemy"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Warlord Militia Sergeant" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/warlord_irregular.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>		
+		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/cia_scarf_beret_01.dds"/>			
+		<RenderObject3D model="data/models/humans/attachments/civilian_war_correspondent_vest.khm" diffuseTex="data/models/humans/attachments/warlord_vest_02.dds"/>	
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_cap.khm" diffuseTex="data/models/humans/attachments/cia_cap_01.dds" attachSlot="Bip001 Head"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true"/>
+			<Id name="@entity_human_warlordsergeant" portrait="data/textures/portraits/enemy_warlord_sargeant.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="M14 WM"/> 
+				<Item name="Frag Grenade Enemy"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Warlord Militia Sergeant Rifleless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/warlord_irregular.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>		
+		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/cia_scarf_beret_01.dds"/>			
+		<RenderObject3D model="data/models/humans/attachments/civilian_war_correspondent_vest.khm" diffuseTex="data/models/humans/attachments/warlord_vest_02.dds"/>	
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_cap.khm" diffuseTex="data/models/humans/attachments/cia_cap_01.dds" attachSlot="Bip001 Head"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true"/>
+			<Id name="@entity_human_warlordsergeant" portrait="data/textures/portraits/enemy_warlord_sargeant.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="1911 Pistol Enemy"/>
+				<Item name="Frag Grenade Enemy"/>
+			</Equipment>
+		</Human>
+	</Entity>
+	
+	<Entity name="Warlord Militia Sergeant Weaponless" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/warlord_irregular.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_armband.khm" diffuseTex="data/models/humans/attachments/swat_armband.dds" attachSlot="Bip001 R UpperArm"/>		
+		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/cia_scarf_beret_01.dds"/>			
+		<RenderObject3D model="data/models/humans/attachments/civilian_war_correspondent_vest.khm" diffuseTex="data/models/humans/attachments/warlord_vest_02.dds"/>	
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_cap.khm" diffuseTex="data/models/humans/attachments/cia_cap_01.dds" attachSlot="Bip001 Head"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true"/>
+			<Id name="@entity_human_warlordsergeant" portrait="data/textures/portraits/enemy_warlord_sargeant.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Frag Grenade Enemy"/>
+			</Equipment>
+		</Human>
+	</Entity>
+	
+
+	<Entity name="Warlord Militia Machinegunner" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/warlord_irregular.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_mg2.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="18.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true"/>
+			<Id name="@entity_human_warlordmachinegunner" portrait="data/textures/portraits/enemy_warlord_irregular_03.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="M249 WM"/> 
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsDMR"/>
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+
+		</Human>
+	</Entity>
+
+	<Entity name="Warlord Militia Grenadier" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+		<RenderObject3D model="data/models/humans/swat_militia.khm" diffuseTex="data/models/humans/warlord_irregular.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/swat_scarf_beret.dds"/>			
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>			
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="18.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true"/>
+			<Id name="@entity_human_warlordgrenadier" portrait="data/textures/portraits/enemy_warlord_irregular_04.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="MK14 GL WM"/> 
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Warlord Elite" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+		<RenderObject3D model="data/models/humans/warlord_elite.khm" diffuseTex="data/models/humans/warlord_elite.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/cia_scarf_beret_01.dds"/>	
+
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="24.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true"/>
+			<Id name="@entity_human_warlordelite" portrait="data/textures/portraits/enemy_warlord_elite_01.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="MK17 WM"/> 
+				<Item name="SpecterDR"/> 
+				<Item name="Frag Grenade Enemy"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Warlord Elite Heavy" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+		<RenderObject3D model="data/models/humans/warlord_elite.khm" diffuseTex="data/models/humans/warlord_elite.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/cia_scarf_beret_01.dds"/>	
+		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/warlord_beret.dds" attachSlot="Bip001 Head"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="24.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true"/>
+			<Id name="@entity_human_warlordelite" portrait="data/textures/portraits/enemy_warlord_elite_02.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="MK17/GL WM"/> 
+				<Item name="M68CCO"/> 
+				<Item name="Frag Grenade Enemy"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Warlord Elite Heavy Gunner" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+		<RenderObject3D model="data/models/humans/warlord_elite.khm" diffuseTex="data/models/humans/warlord_elite.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_mg1.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_scarf.khm" diffuseTex="data/models/humans/attachments/cia_scarf_beret_01.dds"/>	
+		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/warlord_beret.dds" attachSlot="Bip001 Head"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="24.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true"/>
+			<Id name="@entity_human_warlordelite" portrait="data/textures/portraits/enemy_warlord_elite_03.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="2" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="M240 WM"/> 
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsDMR"/>
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+		</Human>
+	</Entity>
+
+<!-- Warlord Female Bodyguards. Experimenting with crazy - non suppressible /-->
+
+	<Entity name="Warlord BodyGuard" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,warlord">
+		<RenderObject3D model="data/models/humans/warlord_bodyguard.khm" diffuseTex="data/models/humans/warlord_bodyguard.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ponytail.khm" diffuseTex="data/models/humans/attachments/ponytail.dds"/>
+
+		<RenderObject3D model="data/models/humans/attachments/swat_beret.khm" diffuseTex="data/models/humans/attachments/swat_beret.dds" attachSlot="Bip001 Head"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="80" distanceMeters="999" eyeRadiusMeters="0.7"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="80.0"/>
+			<Traits chanceToAmbush="0.2" usesSuppressionFire="true"/>
+			<Id name="@entity_human_warlordguard" portrait="data/textures/portraits/enemy_warlord_bodyguard.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="1" defaultMetersPerSec="2.1" max="11"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="MP5K WM"/> 
+				<Item name="Frag Grenade Enemy"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+
+<!-- SSI Special Ops /-->
+
+
+	<Entity name="SSI Assaulter" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,ssi,armored,nvg">
+		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/enemy_ssi.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_ballistic_helmet.khm" diffuseTex="data/models/humans/attachments/ssi_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.5"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
+			<Traits chanceToAmbush="0.2" usesSuppressionFire="false" startsAlerted="true"/>
+			<Id name="@entity_human_ssiasssaulter" portrait="data/textures/portraits/enemy_ssi.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.9" max="9"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="AUG SSI Sup"/>
+				<Item name="AUG 1.5X"/>
+				<Item name="FS57 SSI"/>
+				<Item name="RedDot_Pistol"/>
+				<Item name="Frag Grenade"/>
+				<Item name="Flashbang"/>
+				<Item name="SSI HelmetFAST"/>
+				<Item name="SSI Raid Vest"/>
+				<Item name="SSI NVG"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="SSI Leader" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,ssi,armored,nvg">
+		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/enemy_ssi.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_leader_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_ballistic_helmet.khm" diffuseTex="data/models/humans/attachments/ssi_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="140" distanceMeters="999" eyeRadiusMeters="1.5"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="35.0"/>
+			<Traits chanceToAmbush="0.2" usesSuppressionFire="false" startsAlerted="true"/>
+			<Id name="@entity_human_ssileader" portrait="data/textures/portraits/enemy_ssi.dds" gender="0" voicePack="enemy arabic leader"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.9" max="9"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="AUG LR SSI Sup"/>
+				<Item name="AUG 3X"/>
+				<Item name="FS57 SSI"/>
+				<Item name="RedDot_Pistol"/>
+				<Item name="Frag Grenade"/>
+				<Item name="Flashbang"/>
+				<Item name="SSI HelmetFAST"/>
+				<Item name="SSI Raid Vest"/>
+				<Item name="SSI NVG"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="SSI CQB Assaulter" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,ssi,armored,nvg">
+		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/enemy_ssi.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_sapper_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_ballistic_helmet.khm" diffuseTex="data/models/humans/attachments/ssi_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.5"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
+			<Traits chanceToAmbush="0.2" usesSuppressionFire="false" startsAlerted="true"/>
+			<Id name="@entity_human_ssiasssaulter" portrait="data/textures/portraits/enemy_ssi.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.9" max="9"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="P90 SSI Sup"/>
+				<Item name="Holosight"/>
+				<Item name="FS57 SSI"/>
+				<Item name="RedDot_Pistol"/>
+				<Item name="Frag Grenade"/>
+				<Item name="Flashbang"/>
+				<Item name="SSI HelmetFAST"/>
+				<Item name="SSI Raid Vest"/>
+				<Item name="SSI NVG"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="SSI Marksman" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,ssi,armored,nvg">
+		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/enemy_ssi.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_marksman_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_ballistic_helmet.khm" diffuseTex="data/models/humans/attachments/ssi_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.5"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
+			<Traits chanceToAmbush="0.2" usesSuppressionFire="false" startsAlerted="true"/>
+			<Id name="@entity_human_ssimarksman" portrait="data/textures/portraits/enemy_ssi.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.9" max="9"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="SVU SSI"/>
+				<Item name="PSO1"/>
+				<Item name="FS57 SSI"/>
+				<Item name="RedDot_Pistol"/>
+				<Item name="Frag Grenade"/>
+				<Item name="SSI HelmetFAST"/>
+				<Item name="SSI Raid Vest"/>
+				<Item name="SSI NVG"/>
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsDMR"/>
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+		</Human>
+	</Entity>
+
+
+	<Entity name="SSI Pointman" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,ssi,armored,nvg">
+		<RenderObject3D model="data/models/humans/swat_leader.khm" diffuseTex="data/models/humans/enemy_ssi.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/swat_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ssi_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/cia_ballistic_helmet.khm" diffuseTex="data/models/humans/attachments/ssi_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="120" distanceMeters="999" eyeRadiusMeters="1.5"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="25.0"/>
+			<Traits chanceToAmbush="0.2" usesSuppressionFire="false" startsAlerted="true"/>
+			<Id name="@entity_human_ssipointman" portrait="data/textures/portraits/enemy_ssi.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.9" max="9"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="FS57 SSI Sup"/>
+				<Item name="RedDot_Pistol"/>
+				<Item name="Frag Grenade"/>
+				<Item name="Flashbang"/>
+				<Item name="SSI HelmetFAST"/>
+				<Item name="SSI Raid Vest"/>
+				<Item name="SSI NVG"/>
+			</Equipment>
+		</Human>
+	</Entity>
+
+
+	<Entity name="Rabble MP40" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,rabble">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="75" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="5.0"/>
+			<Id name="@entity_human_rabblefighter" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemy arabic"/>
+			<Traits chanceToBlindFire="0.2" stopsToShoot="false" />
+			<Mobility>
+				<MoveSpeed min="0.6" defaultMetersPerSec="2.2" max="9"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="MP40" />
+			</Equipment>
+		</Human>
+	</Entity>
+
+
+	<Entity name="Foreign Advisor Prisoner" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,weaponless">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse3.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse3.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_ammo.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="110" distanceMeters="999" eyeRadiusMeters="1.5"/>
+			<Brain startingBehavior="Hostage" defaultBehavior="Hostage" combatBehavior="Normal Combat" suppressionRecovery="20.0"/> 
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="true" doesntPickupWeapons="true" doesntUseMountedWeapons ="true"/>
+			<Id name="@entity_human_foreignadvisor" portrait="data/textures/portraits/enemy_concealed.dds" gender="0" voicePack="enemy arabic leader"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="13.5"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+			</Equipment>
+
+			<Doctrine name="Rifles_ObscuredTargetsLMG"/>
+		</Human>
+	</Entity>
+	
+	<Entity name="Fake Hostage" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy">
+		<RenderObject3D model="data/models/humans/civilian_male_standard.khm" diffuseTex="data/models/humans/hostage.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="2.0"/>
+			<Brain startingBehavior="Fake Hostage" defaultBehavior="Normal Combat" combatBehavior="Normal Combat" suppressionRecovery="15.0"/>
+			<Traits chanceToAmbush="0.7" usesSuppressionFire="false" />
+			<Id name="@entity_human_fakehostage" portrait="data/textures/portraits/enemy_warlord_irregular_01.dds" gender="0" voicePack="enemy arabic"/>
+			<Mobility>
+				<MoveSpeed min="0.7" defaultMetersPerSec="1.83" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="M9 Pistol"/>
+			</Equipment>
+		</Human>
+	</Entity>
+	
+	<Entity name="FA Fanatic Stormtroop" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,s-vest">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse3.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse3.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_bomb.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="100" distanceMeters="999" eyeRadiusMeters="1.5"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Suicide Combat" suppressionRecovery="35.0"/>
+			<Traits chanceToAmbush="0.2" usesSuppressionFire="true" ignoresDangerAreas="true"  stopsToShoot="false" chanceToThrowGrenade="0.10" suicideHPThreshold="10" />
+			<Id name="@entity_human_advisorstormtroop" portrait="data/textures/portraits/enemy_concealed.dds" gender="0" voicePack="enemy arabic leader"/>
+			<Mobility>
+				<MoveSpeed min="0.9" defaultMetersPerSec="2.1" max="14"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Bren 2 Short FA Storm"/>
+				<Item name="M68CCO"/>
+				<Item name="AT4 PICKED"/>
+				<Item name="Suicide Bomb"/>
+			</Equipment>
+			
+			<Doctrine name="Enemy_ForeignAdvisorBuff"/>
+		</Human>
+	</Entity>
+	
+	<Entity name="FA Fanatic Stormtroop G" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy,s-vest">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse3.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_skirt.khm" diffuseTex="data/models/humans/attachments/enemy_skirt_diffuse3.dds" windAnimated="1"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_vest_bomb.khm" diffuseTex="data/models/humans/attachments/enemy_vest_diffuse.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_turban.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="100" distanceMeters="999" eyeRadiusMeters="1.5"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Suicide Combat" suppressionRecovery="35.0"/>
+			<Traits chanceToAmbush="0.2" usesSuppressionFire="true" ignoresDangerAreas="true"  stopsToShoot="false" chanceToThrowGrenade="0.30" suicideHPThreshold="10" />
+			<Id name="@entity_human_advisorstormtroop" portrait="data/textures/portraits/enemy_concealed.dds" gender="0" voicePack="enemy arabic leader"/>
+			<Mobility>
+				<MoveSpeed min="0.9" defaultMetersPerSec="2.1" max="14"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Bren 2 Short FA Storm"/>
+				<Item name="M68CCO"/>
+				<Item name="Frag Grenade Enemy"/>
+				<Item name="Suicide Bomb"/>
+			</Equipment>
+			
+			<Doctrine name="Enemy_ForeignAdvisorBuff"/>
+		</Human>
+	</Entity>
+
+	
+</Entities>

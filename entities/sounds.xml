@@ -1,0 +1,689 @@
+<Entities>
+	<!-- no sound, used in editor for creating custom sound entities, can associate any sound to it -->
+	<Entity name="sfx_custom" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter maxAttenuationDistance="4" minAttenuationDistance="2" playCount="1"/>
+	</Entity>
+
+	<!--
+		Environmental effects
+	-->
+	<Entity name="Effect Zone" type="SoundShader" editorAutoHeight="false">
+		<RenderObject2D texture="data/textures/editor/sound_shader.dds" sizeX="0.80" sizeY="0.80" hideInGame="true" disableDepthTest="true"/>
+		<PolyShape/>
+		<SoundShader effectID="EFX_REVERB_INDOOR"/>
+	</Entity>
+	<Entity name="Default Effect (Indoors)" type="SoundShader" editorAutoHeight="false">
+		<RenderObject2D texture="data/textures/editor/sound_shader.dds" sizeX="0.80" sizeY="0.80" hideInGame="true" disableDepthTest="true"/>
+		<SoundShader effectID="EFX_REVERB_INDOOR" defaultIndoors="true"/>
+	</Entity>
+	<Entity name="Default Effect (Outdoors)" type="SoundShader" editorAutoHeight="false">
+		<RenderObject2D texture="data/textures/editor/sound_shader.dds" sizeX="0.80" sizeY="0.80" hideInGame="true" disableDepthTest="true"/>
+		<SoundShader effectID="EFX_REVERB_OUTDOOR" defaultOutdoors="true" />
+	</Entity>
+
+	<!--
+	Ambiental sounds
+
+		volume = [0..1]
+			default: 1.0
+
+		playCount = 0 (inf) or >0
+			default: 0 (inf)
+
+		startChance = [0..1]
+			default: 1.0
+
+		secondsBetweenTries >= 0 (seconds)
+			default: 5
+
+		minAttenuationDistance >= 0 (meters)
+			default: 0
+
+		maxAttenuationDistance >= 0 (meters)
+			default: (always heard)
+
+		disableEffects = true | false
+			default: false
+
+		trigger = Always (0) | Before combat starts (1) | After combat starts (2) | only when triggered by a Trigger entity (3)
+			Causes sound to only play in that circumstance
+	-->
+
+	<!-- Ambiental sounds that play continuously // GLOBAL // -->
+
+<!-- Exterior Ambient -->
+
+	<Entity name="battle_faraway_01_st" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon_global.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="battle_faraway_01_st" volume="0.7" maxAttenuationDistance="1000" minAttenuationDistance="1000" disableEffects="true" />
+	</Entity>
+
+	<Entity name="battle_faraway_01_mn" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon_global.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="battle_faraway_01_mn" volume="1" maxAttenuationDistance="1000" minAttenuationDistance="1000" disableEffects="true" />
+	</Entity>
+
+	<Entity name="battle_faraway_02_st" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon_global.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="battle_faraway_02_st" volume="0.7" maxAttenuationDistance="1000" minAttenuationDistance="1000" disableEffects="true" />
+	</Entity>
+
+	<Entity name="battle_faraway_02_mn" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon_global.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="battle_faraway_02_mn" volume="1" maxAttenuationDistance="1000" minAttenuationDistance="1000" disableEffects="true" />
+	</Entity>
+
+	<Entity name="battle_faraway_03_st" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon_global.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="battle_faraway_03_st" volume="0.7" maxAttenuationDistance="1000" minAttenuationDistance="1000" disableEffects="true" />
+	</Entity>
+
+	<Entity name="battle_faraway_03_mn" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon_global.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="battle_faraway_03_mn" volume="1" maxAttenuationDistance="1000" minAttenuationDistance="1000" disableEffects="true" />
+	</Entity>
+
+	<Entity name="ambiance_canyon_01_st" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon_global.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="ambiance_canyon_01_st" volume="0.5" maxAttenuationDistance="1000" minAttenuationDistance="1000" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="ambiance_canyon_01_mn" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="ambiance_canyon_01_mn" volume="0.7" maxAttenuationDistance="5" minAttenuationDistance="4" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="ambiance_city_01" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="ambiance_city_01" volume="1" maxAttenuationDistance="5" minAttenuationDistance="4" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="far_rural_ambience_st" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon_global.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="far_rural_ambience_st" volume="0.5" maxAttenuationDistance="1000" minAttenuationDistance="1000" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="far_rural_ambience_mn" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="far_rural_ambience_mn" volume="0.7" maxAttenuationDistance="5" minAttenuationDistance="4" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="wind" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="wind" volume="1.0" maxAttenuationDistance="7.8" minAttenuationDistance="3.1"/>
+	</Entity>
+
+	<Entity name="wind_desert_mn" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="wind_desert_mn" volume="0.7" maxAttenuationDistance="5" minAttenuationDistance="4" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="wind_desert_st" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon_global.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="wind_desert_st" volume="0.5" maxAttenuationDistance="1000" minAttenuationDistance="1000" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="wind_desert_02_st" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon_global.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="wind_desert_02_st" volume="0.5" maxAttenuationDistance="1000" minAttenuationDistance="1000" disableEffects="true"/>
+	</Entity>
+
+
+	<Entity name="wind_desert_02_mn" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="wind_desert_02_mn" volume="0.7" maxAttenuationDistance="5" minAttenuationDistance="4" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="wind_canyon_st" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="wind_canyon_st" volume="0.5" maxAttenuationDistance="5" minAttenuationDistance="4" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="wind_canyon_mn" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="wind_canyon_mn" volume="0.7" maxAttenuationDistance="5" minAttenuationDistance="4" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="wind_open_field_veg_st" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="wind_open_field_veg_st" volume="1" maxAttenuationDistance="5" minAttenuationDistance="4" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="wind_open_field_veg_mn" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="wind_open_field_veg_mn" volume="0.7" maxAttenuationDistance="5" minAttenuationDistance="4" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="wind_rural_st" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="wind_rural_st" volume="0.5" maxAttenuationDistance="5" minAttenuationDistance="4" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="wind_rural_mn" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="wind_rural_mn" volume="1" maxAttenuationDistance="5" minAttenuationDistance="4" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="heavy_rain_thunders" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="heavy_rain_thunders" volume="1" maxAttenuationDistance="11.25" minAttenuationDistance="5.5"/>
+	</Entity>
+
+	<Entity name="ambiance_market_01" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="ambiance_market_01" volume="0.6" maxAttenuationDistance="15" minAttenuationDistance="9" disableEffects="false" trigger="1" /> <!-- before combat -->
+	</Entity>
+
+	<Entity name="ambiance_market_02" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="ambiance_market_02" volume="1" maxAttenuationDistance="15" minAttenuationDistance="9" disableEffects="false" trigger="1" /> <!-- before combat -->
+	</Entity>
+
+<Entity name="ambiance_rich_area" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="ambiance_rich_area" volume="1" maxAttenuationDistance="15" minAttenuationDistance="9" disableEffects="false" trigger="1" /> <!-- before combat -->
+	</Entity>
+
+	<Entity name="cars_passing_by" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="cars_passing_by" volume="1.0" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+	<Entity name="city_ambience_a" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="city_ambiance_a" volume="1.0" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+
+
+<!-- Interior Roomtones -->
+
+	<Entity name="roomtone_fridge" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="roomtone_fridge" volume="1" maxAttenuationDistance="2.5" minAttenuationDistance="1.5" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="roomtone_hallway_02" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="roomtone_hallway_02" volume="1" maxAttenuationDistance="2.5" minAttenuationDistance="1.5" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="roomtone_hallway_03" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="roomtone_hallway_03" volume="1" maxAttenuationDistance="2.5" minAttenuationDistance="1.5" disableEffects="true"/>
+	</Entity>
+
+		<Entity name="roomtone_silent" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="roomtone_silent" volume="1" maxAttenuationDistance="2..5" minAttenuationDistance="1.5" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="roomtone_small_empty_02" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="roomtone_small_empty_02" volume="1" maxAttenuationDistance="2.5" minAttenuationDistance="1.5" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="roomtone_std_01" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="roomtone_std_01" volume="1" maxAttenuationDistance="2.5" minAttenuationDistance="1.5" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="room_tone_empty_spaces" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="room_tone_empty_spaces" volume="1" maxAttenuationDistance="2.5" minAttenuationDistance="1.5" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="room_tone_household" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="room_tone_household" volume="1" maxAttenuationDistance="2.5" minAttenuationDistance="1.5" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="room_tone_industrial" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="room_tone_industrial" volume="1" maxAttenuationDistance="2.5" minAttenuationDistance="1.5" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="room_tone_market_near_noise" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="room_tone_market_near_noise" volume="1" maxAttenuationDistance="2.5" minAttenuationDistance="1.5" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="room_tone_office" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="room_tone_office" volume="1" maxAttenuationDistance="2.5" minAttenuationDistance="1.5" disableEffects="true"/>
+	</Entity>
+
+	<!-- Ambiental sounds that play continuously // LOCAL // -->
+
+<!-- Fauna -->
+
+	<Entity name="dog_barking" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="dog_barking" volume="0.6" startChance="0.6" secondsBetweenTries="14" maxAttenuationDistance="4.7" minAttenuationDistance="1.6"/>
+	</Entity>
+
+	<Entity name="dog_barking_far" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="dog_barking_far" volume="0.6" startChance="1.0" secondsBetweenTries="8" maxAttenuationDistance="4.7" minAttenuationDistance="1.6"/>
+	</Entity>
+
+	<Entity name="cow" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="cow" volume="1" startChance="0.6" secondsBetweenTries="14" maxAttenuationDistance="4.7" minAttenuationDistance="1.6"/>
+	</Entity>
+
+	<Entity name="goose" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="goose" volume="1" startChance="0.6" secondsBetweenTries="12" maxAttenuationDistance="4.7" minAttenuationDistance="1.6"/>
+	</Entity>
+
+	<Entity name="birds" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="birds" volume="1" startChance="1.0" secondsBetweenTries="14" maxAttenuationDistance="4.7" minAttenuationDistance="1.6"/>
+	</Entity>
+
+	<Entity name="chicken" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="chicken" volume="1" startChance="0.6" secondsBetweenTries="14" maxAttenuationDistance="4.7" minAttenuationDistance="1.6"/>
+	</Entity>
+
+	<Entity name="owl_hooting" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="owl_hooting" volume="0.6" startChance="0.5" secondsBetweenTries="14" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+	<Entity name="fly_swarm" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="fly_swarm" volume="1" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+	<Entity name="birds_in_the_city" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="birds_in_the_city" volume="1.0" maxAttenuationDistance="2.2" minAttenuationDistance="1.25" trigger="1"/> <!-- before combat -->
+	</Entity>
+
+<!-- Devices -->
+
+	<Entity name="devices" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="devices" volume="1.0" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+	<Entity name="computer_fans" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="computer_fans" volume="0.6" maxAttenuationDistance="3.0" minAttenuationDistance="1.0"/>
+	</Entity>
+
+	<Entity name="light_flickering" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="light_flickering" volume="0.5" startChance="1"  maxAttenuationDistance="1.4" minAttenuationDistance="1.3"/>
+	</Entity>
+
+	<Entity name="neon" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="neon" volume="1" startChance="1"  maxAttenuationDistance="1.4" minAttenuationDistance="1.3"/>
+	</Entity>
+
+	<Entity name="air_conditioner" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="air_conditioner" volume="0.7" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+	<Entity name="radio_noise_01" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="radio_noise_01" volume="0.45" startChance="0.6" secondsBetweenTries="8" maxAttenuationDistance="8" minAttenuationDistance="3" disableEffects="false"/>
+	</Entity>
+
+	<Entity name="radio_noise_02" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="radio_noise_02" volume="0.45" startChance="0.6" secondsBetweenTries="7" maxAttenuationDistance="8" minAttenuationDistance="3" disableEffects="false"/>
+	</Entity>
+
+	<Entity name="radio_noise_03" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="radio_noise_03" volume="0.45" startChance="0.6" secondsBetweenTries="5" maxAttenuationDistance="8" minAttenuationDistance="3" disableEffects="false"/>
+	</Entity>
+
+	<Entity name="radio_noise_04" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="radio_noise_04" volume="0.45" startChance="0.6" secondsBetweenTries="5" maxAttenuationDistance="8" minAttenuationDistance="3" disableEffects="false"/>
+	</Entity>
+
+	<Entity name="radio_noise_05" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="radio_noise_05" volume="0.45" startChance="0.8" secondsBetweenTries="35" maxAttenuationDistance="8" minAttenuationDistance="3" disableEffects="false"/>
+	</Entity>
+
+	<Entity name="elevator_arrive" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="elevator_arrive" volume="1.0" playCount="5" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+	<Entity name="washing_machine" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="washing_machine" volume="1" maxAttenuationDistance="8" minAttenuationDistance="3" disableEffects="false"/>
+	</Entity>
+
+	<Entity name="announcer_01" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="announcer_01" volume="1" startChance="1.0" secondsBetweenTries="8" maxAttenuationDistance="4.7" minAttenuationDistance="1.6"/>
+	</Entity>
+
+	<Entity name="announcer_02" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="announcer_02" volume="1" startChance="1.0" secondsBetweenTries="8" maxAttenuationDistance="4.7" minAttenuationDistance="1.6"/>
+	</Entity>
+
+	<Entity name="fax" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="fax" volume="1" startChance="0.5" secondsBetweenTries="8" maxAttenuationDistance="4.7" minAttenuationDistance="1.6"/>
+	</Entity>
+
+	<Entity name="jingle_01" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="jingle_01" volume="1" startChance="0.4" secondsBetweenTries="14" maxAttenuationDistance="4.7" minAttenuationDistance="1.6"/>
+	</Entity>
+
+	<Entity name="jingle_02" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="jingle_02" volume="1" startChance="1.0" secondsBetweenTries="8" maxAttenuationDistance="4.7" minAttenuationDistance="1.6"/>
+	</Entity>
+
+	<Entity name="keyboard_sfx" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="keyboard" volume="1" startChance="1.0" secondsBetweenTries="8" maxAttenuationDistance="4.7" minAttenuationDistance="1.6" trigger="1"/> <!-- before combat -->
+	</Entity>
+
+	<Entity name="phone_ringing" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="phone_ringing" volume="0.6" startChance="0.4" secondsBetweenTries="30" maxAttenuationDistance="4.7" minAttenuationDistance="1.6"/>
+	</Entity>
+
+	<Entity name="combat_alarm" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="police_siren_b" volume="1.0" startChance="1.0" secondsBetweenTries="14" maxAttenuationDistance="25" minAttenuationDistance="5" trigger="2"/>  <!-- after combat starts -->
+	</Entity>
+
+<!-- Vehicles -->
+
+	<Entity name="police_siren_a" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="police_siren_a" volume="0.7" startChance="0.7" secondsBetweenTries="14" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+	<Entity name="police_siren_b" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="police_siren_b" volume="0.7" startChance="0.7" secondsBetweenTries="14" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+	<Entity name="car_alarm" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="car_alarm" volume="0.7" startChance="0.5" secondsBetweenTries="14" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+	<Entity name="car_alarm_chirp" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="car_alarm_chirp" volume="1.0" startChance="0.5" secondsBetweenTries="14" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+	<Entity name="helicopter_idle" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="helicopter_idle" volume="1.0" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+<!-- Industrial -->
+
+	<Entity name="factory_broken_machine" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="factory_broken_machine" volume="1.0" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+	<Entity name="factory_car_engine_01" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="factory_car_engine_01" volume="1.0" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+	<Entity name="factory_car_engine_02" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="factory_car_engine_02" volume="1.0" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+	<Entity name="factory_car_engine_03" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="factory_car_engine_03" volume="1.0" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+	<Entity name="factory_engine_01" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="factory_engine_01" volume="1.0" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+	<Entity name="factory_engine_02" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="factory_engine_02" volume="1.0" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+	<Entity name="factory_far_metal_hit" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="factory_far_metal_hit" volume="1" startChance="0.7" secondsBetweenTries="10"/>
+	</Entity>
+
+	<Entity name="factory_hammer_hit" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="factory_hammer_hit" volume="1" startChance="0.7" secondsBetweenTries="10"/>
+	</Entity>
+
+	<Entity name="factory_industrial_vents" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="factory_industrial_vents" volume="1.0" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+	<Entity name="factory_interface_beep" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="factory_interface_beep" volume="1" startChance="0.7" secondsBetweenTries="10"/>
+	</Entity>
+
+	<Entity name="factory_liquid_pipes" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="factory_liquid_pipes" volume="1.0" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+	<Entity name="factory_short_electrical_ark" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="factory_short_electrical_ark" volume="1" startChance="0.7" secondsBetweenTries="10"/>
+	</Entity>
+
+	<Entity name="factory_turbine_01" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="factory_turbine_01" volume="1.0" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+	<Entity name="factory_turbine_02" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="factory_turbine_02" volume="1.0" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+	<Entity name="factory_turbine_03" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="factory_turbine_03" volume="1.0" maxAttenuationDistance="2.2" minAttenuationDistance="1.25"/>
+	</Entity>
+
+<!-- Misc -->
+
+	<Entity name="wood_creaking_a" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="wood_creaking_a" volume="1" startChance="0.4" secondsBetweenTries="15"/>
+	</Entity>
+
+	<Entity name="wood_creaking_b" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="wood_creaking_b" volume="1" startChance="0.4" secondsBetweenTries="15"/>
+	</Entity>
+
+	<Entity name="wood_creaking_c" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="wood_creaking_c" volume="1" startChance="0.4" secondsBetweenTries="25"/>
+	</Entity>
+
+	<Entity name="tap_water_drip" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="tap_water_drip" volume="1.0" maxAttenuationDistance="1.9" minAttenuationDistance="0.8"/>
+	</Entity>
+
+
+	<Entity name="river" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="river" volume="1" maxAttenuationDistance="2.5" minAttenuationDistance="1.5" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="jingle_bells" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="christmas_tree" volume="1" maxAttenuationDistance="2.5" minAttenuationDistance="0.75"/>
+	</Entity>
+
+	<Entity name="fire" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="fire" volume="1" maxAttenuationDistance="5.5" minAttenuationDistance="1.5" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="fire_molotov" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="fire" volume="1" maxAttenuationDistance="35.5" minAttenuationDistance="4.5" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="bush" type="SoundEmitter" initialHeight="1.6" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="bush" volume="1" maxAttenuationDistance="2.5" minAttenuationDistance="1.5" disableEffects="true"/>
+	</Entity>
+
+	<Entity name="sfx_timebomb_kaboom" type="SoundEmitter" initialHeight="1.0" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="timebomb_kaboom" volume="1" playCount="1" disableEffects="false"/>
+	</Entity>
+
+	<Entity name="sfx_timebomb_beep_paused" type="SoundEmitter" initialHeight="1.0" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="timebomb_beep_fast" volume="1" playCount="0" disableEffects="false" trigger="3"/> <!-- trigger: via Triggers -->
+	</Entity>
+
+	<Entity name="sfx_camera_1" type="SoundEmitter" initialHeight="1.0" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="timebomb_beep_fast" volume="1" maxAttenuationDistance="1000" minAttenuationDistance="1000" playCount="1" disableEffects="false" trigger="3"/> <!-- trigger: via Triggers -->
+	</Entity>
+
+	<Entity name="sfx_camera_2" type="SoundEmitter" initialHeight="1.0" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="timebomb_beep_slow" volume="1" maxAttenuationDistance="1000" minAttenuationDistance="1000" playCount="1" disableEffects="false" trigger="3"/> <!-- trigger: via Triggers -->
+	</Entity>
+	
+	<Entity name="club_music" type="SoundEmitter" initialHeight="1.0" editorAutoHeight="false">
+		<PhysicalParams solid="false"/>
+		<RenderObject2D texture="data/textures/editor/sound_icon.dds" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+		<SoundEmitter soundID="club_music" volume="1" maxAttenuationDistance="30" minAttenuationDistance="20" playCount="0"/>
+	</Entity>
+	
+
+</Entities>

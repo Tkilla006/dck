@@ -1,0 +1,51 @@
+<Animations>
+	<!-- FX - some of these may have variable animation times in-game since they depend on context -->
+	<RenderObject2D name="ANIM_FX_RELOAD_TIMER" texture="data/textures/gui_ingame/reload.dds" sizeX="0.81" sizeY="0.81">
+		<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="31" animationTimeMS="500" numLoops="0"/>
+	</RenderObject2D>
+
+	<RenderObject2D name="ANIM_FX_RADIO_WAVES" texture="data/textures/fx/radio_waves.tga" color="f0e3ccfe" sizeX="1.0" sizeY="1.0">
+		<TextureAnimation frameWidth="120" frameHeight="96" startFrame="0" endFrame="9" animationTimeMS="1500" numLoops="0"/>
+	</RenderObject2D>
+
+	<RenderObject2D name="ANIM_FX_HUMAN_STUNNED" texture="data/textures/fx/human_stunned.tga" sizeX="1.0" sizeY="1.0" disableDepthTest="true">
+		<TextureAnimation frameWidth="96" frameHeight="96" startFrame="0" endFrame="5" animationTimeMS="288" numLoops="-1"/>
+	</RenderObject2D>
+
+	<RenderObject2D name="ANIM_FX_HUMAN_PINNED" 	texture="data/textures/gui_ingame/circle_pinned.dds" blendMode="normal" sizeX="1.0" sizeY="1.0">
+	</RenderObject2D>
+
+	<RenderObject2D name="ANIM_FX_HUMAN_SUPPRESSED"	texture="data/textures/gui_ingame/circle_suppressed.dds" blendMode="normal" sizeX="1.0" sizeY="1.0">
+	</RenderObject2D>
+	
+	<RenderObject2D name="ANIM_FX_OBJECTIVE_TARGET" texture="data/textures/fx/objective_single.dds" blendMode="normal" sizeX="1.5" sizeY="1.5" color="d122227f">
+	</RenderObject2D>
+
+	<RenderObject2D name="ANIM_FX_QUESTION_MARKS" texture="data/textures/fx/state_suspicious.tga" sizeX="0.75" sizeY="0.75" blendMode="add">
+		<TextureAnimation frameWidth="96" frameHeight="96" startFrame="0" endFrame="2" animationTimeMS="1100" numLoops="0"/>
+	</RenderObject2D>
+
+	<RenderObject2D name="ANIM_FX_HUMAN_CONTROLLABLE" texture="data/textures/fx/objective_single.dds" color="f0e3ccfe" blendMode="normal" sizeX="1.0" sizeY="1.0">
+	</RenderObject2D>	
+
+	<!-- unused
+	<RenderObject2D name="ANIM_FX_ALERT_SPOT" texture="data/textures/fx/alert_spot.dds" blendMode="add" color="f0e3ccfe" sizeX="2" sizeY="2">
+		<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="9" animationTimeMS="500" numLoops="0"/>
+	</RenderObject2D>
+	<RenderObject2D name="ANIM_FX_BLOOD_POOL" texture="data/textures/fx/blood_pool.dds" sizeX="1" sizeY="1">
+		<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="23" animationTimeMS="3000" numLoops="0"/>
+	</RenderObject2D>
+	<RenderObject2D name="ANIM_FX_DESTROYING_DOPE" texture="data/textures/fx/alert_spot.dds" blendMode="add" color="ff0707fe" scaleX="1.8" scaleY="1.8">
+		<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="9" animationTimeMS="500" numLoops="0"/>
+	</RenderObject2D>
+	<RenderObject2D name="ANIM_FX_EVIDENCE_RETRIEVED" texture="data/textures/fx/vip_friendly_control.tga" blendMode="add" scaleX="1.8" scaleY="1.8">
+		<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="9" animationTimeMS="500" numLoops="0"/>
+	</RenderObject2D>
+	<RenderObject2D name="ANIM_FX_VIP_FRIENDLY_CONTROL" texture="data/textures/fx/vip_friendly_control.tga" blendMode="add">
+		<TextureAnimation frameWidth="128" frameHeight="128" startFrame="0" endFrame="9" animationTimeMS="500" numLoops="0"/>
+	</RenderObject2D>
+	<RenderObject2D name="ANIM_FX_EXCLAMATION_MARKS" texture="data/textures/fx/state_alerted.tga" blendMode="normal">
+		<TextureAnimation frameWidth="32" frameHeight="32" startFrame="0" endFrame="2" animationTimeMS="440" numLoops="-1"/>
+	</RenderObject2D>
+	-->
+</Animations>
