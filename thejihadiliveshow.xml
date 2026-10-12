@@ -1,0 +1,424 @@
+<Map name="@map_thejihadiliveshow" tutorialMovie="howtoplay_sniper">
+    <Scenario type="StopExecution" numDeployableTroops="4" referenceWinTimeSeconds="18.999001" challenges="21" nightMission="false"/>
+    <Graphics fogColor="E8C47C" fogDensity="0" windSpeed="0.050000001" windDirection="45" cloudDensity="0" waterClarity="0.94999999" rainAmount="0" terrainNormalsStrength="1" terrainSharpness="0.5" gossaoStrength="3" gossaoStrengthTerrain="5" gossaoDirectionalOcclusion="0" gossaoLevelsMin="0.050000001"/>
+    <Terrain widthMeters="18" heightMeters="12">
+        <Materials num="6" mat0="dirt_to_grass" mat1="asphalt" mat2="carpets" mat3="floor_wood" mat4="tiles" mat5="dirt_to_carpet_darkred"/>
+    </Terrain>
+    <MusicTracks/>
+    <Description text="@briefing_jihadiliveshow"/>
+    <Entities>
+        <Entity template="Floor" id="1" pos="0 0 -0.5" rot="1 0 0 0 1 0 0 0 1"/>
+        <Entity template="Light Ambiental" id="6" pos="-7.50000048 2.0999999 -7.00000048" rot="1 0 0 0 1 0 0 0 1">
+            <Light color0="F6CCB9" color1="847E77" colorMultiplier="1.11" isIndoorLight="true" startDisabled="false"/>
+        </Entity>
+        <Entity template="door_threshold_wood_01" id="13" pos="-1.00002515 0 -2.87506485" rot="-2.16066837e-07 0 1.00000083 0 1 0 -1.00000083 0 -2.16066837e-07" group="2"/>
+        <Entity template="door_wood_01" id="14" pos="-1.00002515 0 -2.87506485" rot="-2.16066837e-07 0 1.00000083 0 1 0 -1.00000083 0 -2.16066837e-07" group="2"/>
+        <Entity template="door_frame_wood_01" id="15" pos="-1.0000248 0 -2.87506509" rot="-2.16066837e-07 0 1.00000083 0 1 0 -1.00000083 0 -2.16066837e-07" group="2"/>
+        <Entity template="door_threshold_wood_01" id="16" pos="5.4999609 0 -2.00001574" rot="-1.00000024 0 0 0 1 0 0 0 -1.00000024" group="3"/>
+        <Entity template="door_wood_01" id="17" pos="5.4999609 0 -2.00001574" rot="-1.00000024 0 0 0 1 0 0 0 -1.00000024" group="3"/>
+        <Entity template="door_frame_wood_01" id="18" pos="5.4999609 0 -2.00001621" rot="-1.00000024 0 0 0 1 0 0 0 -1.00000024" group="3"/>
+        <Entity template="door_threshold_wood_01" id="19" pos="5.4999609 0 -1.54972076e-05" rot="-1.00000024 0 0 0 1 0 0 0 -1.00000024" group="4"/>
+        <Entity template="door_wood_01" id="20" pos="5.4999609 0 -1.54972076e-05" rot="-1.00000024 0 0 0 1 0 0 0 -1.00000024" group="4"/>
+        <Entity template="door_frame_wood_01" id="21" pos="5.4999609 0 -1.60932541e-05" rot="-1.00000024 0 0 0 1 0 0 0 -1.00000024" group="4"/>
+        <Entity template="door_threshold_wood_01" id="71" pos="5.49997234 0 3.25002265" rot="-1.0000006 0 0 0 1 0 0 0 -1.0000006" group="7"/>
+        <Entity template="door_wood_01" id="72" pos="5.49997234 0 3.25002265" rot="-1.0000006 0 0 0 1 0 0 0 -1.0000006" group="7"/>
+        <Entity template="door_frame_wood_01" id="73" pos="5.49997234 0 3.25002217" rot="-1.0000006 0 0 0 1 0 0 0 -1.0000006" group="7"/>
+        <Entity template="window_glass" id="31" pos="-8 0 -2.5" rot="0 0 1.00000036 0 1 0 -1.00000036 0 0" group="10"/>
+        <Entity template="window_frame" id="32" pos="-8 0 -2.5" rot="0 0 1.00000036 0 1 0 -1.00000036 0 0" group="10"/>
+        <Entity template="window_glass" id="35" pos="-7.00000048 0 -4.5" rot="0.707107067 0 0.707107067 0 1 0 -0.707107067 0 0.707107067" group="12"/>
+        <Entity template="window_frame" id="36" pos="-7.00000048 0 -4.5" rot="0.707107067 0 0.707107067 0 1 0 -0.707107067 0 0.707107067" group="12"/>
+        <Entity template="window_glass" id="37" pos="-4.875 0 -5.5" rot="1.00000048 0 0 0 1 0 0 0 1.00000048" group="13"/>
+        <Entity template="window_frame" id="38" pos="-4.875 0 -5.5" rot="1.00000048 0 0 0 1 0 0 0 1.00000048" group="13"/>
+        <Entity template="window_glass" id="39" pos="-2.5 0 -5.5" rot="1.00000048 0 0 0 1 0 0 0 1.00000048" group="14"/>
+        <Entity template="window_frame" id="40" pos="-2.5 0 -5.5" rot="1.00000048 0 0 0 1 0 0 0 1.00000048" group="14"/>
+        <Entity template="window_glass" id="41" pos="5.00000048 0 -5.5" rot="1.00000048 0 0 0 1 0 0 0 1.00000048" group="15"/>
+        <Entity template="window_frame" id="42" pos="5.00000048 0 -5.5" rot="1.00000048 0 0 0 1 0 0 0 1.00000048" group="15"/>
+        <Entity template="window_glass" id="45" pos="8 0 1.625" rot="0 0 1.00000012 0 1 0 -1.00000012 0 0" group="16"/>
+        <Entity template="window_frame" id="46" pos="8 0 1.625" rot="0 0 1.00000012 0 1 0 -1.00000012 0 0" group="16"/>
+        <Entity template="bath_01" id="7" pos="4 0.35007444 4.87500048" rot="-1.00000024 0 1.63912773e-07 0 1 0 -1.63912773e-07 0 -1.00000024"/>
+        <Entity template="sink_03" id="44" pos="5.75000048 1.10000002 5.00000048" rot="-8.74227766e-08 0 1 0 1 0 -1 0 -8.74227766e-08"/>
+        <Entity template="toilet_01" id="48" pos="7.50000048 0.48225975 4.5" rot="-1.00000024 0 0 0 1 0 0 0 -1.00000024"/>
+        <Entity template="wardrobe_02" id="50" pos="2.5 0.998794019 1.24999988" rot="1 0 0 0 1 0 0 0 1"/>
+        <Entity template="kitchen_counter_03" id="54" pos="7.50000048 0.507202148 1.625" rot="-1.00000024 0 0 0 1 0 0 0 -1.00000024"/>
+        <Entity template="table_wood_small_01_02" id="56" pos="3.87500024 0.359491378 1.50000012" rot="1 0 0 0 1 0 0 0 1"/>
+        <Entity template="table_wood_small_02_02" id="49" pos="-7.37500048 0.372283846 -0.375" rot="1 0 0 0 1 0 0 0 1"/>
+        <Entity template="commode_01" id="52" pos="-4.7367754 0.531444609 2" rot="-2.98023224e-08 0 1.00000024 0 1 0 -1.00000024 0 -2.98023224e-08"/>
+        <Entity template="chair_02" id="62" pos="-6.91730547 0.650472105 -2.08440399" rot="1.00000489 0 1.78813934e-07 0 1 0 -1.78813934e-07 0 1.00000489"/>
+        <Entity template="wardrobe_02" id="66" pos="-3.79096317 0.998794019 -2.07058525" rot="0 0 1.00000012 0 1 0 -1.00000012 0 0"/>
+        <Entity template="laptop_03" id="59" pos="-4.88252401 1.06350005 1.85200739" rot="-0.707107067 0 0.707107067 0 1 0 -0.707107067 0 -0.707107067"/>
+        <Entity template="sofa_02" id="65" pos="-2.62004685 0.35134995 1.85720396" rot="-0.0261769518 -2.28846186e-09 0.999657333 -1.74815597e-07 1 -2.28846186e-09 -0.999657333 -1.74815597e-07 -0.0261769518"/>
+        <Entity template="bed_single_02" id="79" pos="2.5372355 0.46609062 -4.36916256" rot="-8.94069672e-08 0 -1 0 1 0 1 0 -8.94069672e-08"/>
+        <Entity template="bed_single_02" id="80" pos="7.2962923 0.46609062 -4.14957333" rot="-8.94069672e-08 0 -1 0 1 0 1 0 -8.94069672e-08"/>
+        <Entity template="commode_01_02" id="84" pos="1.59419692 0.531444609 1.56986594" rot="-1.00000024 0 0 0 1 0 0 0 -1.00000024"/>
+        <Entity template="table_wood_large_02_02" id="86" pos="5.01316166 0.45954594 -4.74234581" rot="1 0 0 0 1 0 0 0 1"/>
+        <Entity template="rug_small_01" id="89" pos="5.04772949 0.00866321661 -4.43869686" rot="0 0 1.00000012 0 1 0 -1.00000012 0 0"/>
+        <Entity template="chair_02" id="93" pos="6.32151175 0.650472105 -4.87840748" rot="-1.00000131 0 2.75671482e-07 0 1 0 -2.75671482e-07 0 -1.00000131"/>
+        <Entity template="wardrobe_01" id="102" pos="7.5101862 0.860000014 -1.00549662" rot="-1 8.74227766e-08 0 8.74227766e-08 1 8.74227766e-08 7.64274186e-15 8.74227766e-08 -1"/>
+        <Entity template="Light Point" id="51" pos="-5 2.0999999 5.00000048" rot="1 0 0 0 1 0 0 0 1">
+            <Light color="FFFFFF" radiusMeters="2.45" limitType="Box" limitX="2.6482215" limitXNeg="2.0749996" limitY="1.6999996" limitYNeg="40" colorMultiplier="1.4400001" isIndoorLight="false" startDisabled="false"/>
+        </Entity>
+        <Entity template="Light Point" id="57" pos="2.98023224e-07 2.0999999 3.75" rot="1 0 0 0 1 0 0 0 1">
+            <Light color="BBD6FF" radiusMeters="4" limitType="Box" limitX="3.1710274" limitXNeg="3.0750003" limitY="1.4210331" limitYNeg="1.6999996" colorMultiplier="1.5700001" isIndoorLight="false" startDisabled="false"/>
+        </Entity>
+        <Entity template="Light Point" id="67" pos="5.125 2.0999999 1.75" rot="1 0 0 0 1 0 0 0 1">
+            <Light color="FFFFFF" radiusMeters="4" limitType="Box" limitX="2.4271209" limitXNeg="2.95" limitY="1.9210156" limitYNeg="1.6710228" colorMultiplier="1.4400001" isIndoorLight="false" startDisabled="false"/>
+        </Entity>
+        <Entity template="Light Point" id="75" pos="-6.50000143 2.0999999 -4.125" rot="1 0 0 0 1 0 0 0 1">
+            <Light color="FFD5AF" radiusMeters="6.1999998" limitType="None" colorMultiplier="2.5699999" isIndoorLight="false" startDisabled="false"/>
+        </Entity>
+        <Entity template="Light Point" id="78" pos="5.24999952 2.0999999 -5.12500048" rot="1 0 0 0 1 0 0 0 1">
+            <Light color="EECBAB" radiusMeters="4.0999999" limitType="None" colorMultiplier="3.1600001" isIndoorLight="false" startDisabled="false"/>
+        </Entity>
+        <Entity template="Light Point" id="85" pos="1.87499869 2.0999999 -1.00000048" rot="1 0 0 0 1 0 0 0 1">
+            <Light color="FFE7D9" radiusMeters="5.3000002" limitType="None" colorMultiplier="1.6900001" isIndoorLight="false" startDisabled="false"/>
+        </Entity>
+        <Entity template="Grunt Insurgent" id="94" pos="5.00000048 0 2.25000048" rot="-3.7997961e-07 0 1.00000083 0 1 0 -1.00000083 0 -3.7997961e-07">
+            <Targets num="4" id0="2" id1="99" id2="109" id3="173"/>
+            <Human needsRescue="false">
+                <Traits chanceToInvestigate="0.88" chanceToBlindFire="0.11"/>
+            </Human>
+        </Entity>
+        <Entity template="Grunt Insurgent" id="96" pos="4.16253614 0 0.690315545" rot="0.965926826 0 -0.258819282 0 1 0 0.258819282 0 0.965926826">
+            <Targets num="3" id0="82" id1="98" id2="24"/>
+            <Human needsRescue="false">
+                <Traits chanceToInvestigate="0.80000001" chanceToBlindFire="0.14"/>
+            </Human>
+        </Entity>
+        <Entity template="Grunt Insurgent" id="100" pos="-6.25000048 0 -2.75000024" rot="0.0871558487 0 0.996196389 0 1 0 -0.996196389 0 0.0871558487">
+            <Targets num="2" id0="166" id1="167"/>
+            <Human needsRescue="false">
+                <Traits investigateMaxDistanceMeters="2" chanceToInvestigate="0" chanceToAmbush="1"/>
+            </Human>
+        </Entity>
+        <Entity template="HostageVisibleExecution" id="106" pos="-6.37500048 0 0.374999881" rot="-0.573576987 0 0.819152832 0 1 0 -0.819152832 0 -0.573576987">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Hostage" id="107" pos="-2.25 0 -2.24999976" rot="0.642787814 0 -0.766045511 0 1 0 0.766045511 0 0.642787814">
+            <Targets num="2" id0="165" id1="22"/>
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Hostage" id="108" pos="-5.75000048 0 -3.37500024" rot="0.984808266 0 -0.173648298 0 1 0 0.173648298 0 0.984808266">
+            <Targets num="1" id0="186"/>
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="kitchen_plate_01" id="5" pos="-3.35451579 2.03517151 -2.25619173" rot="1 0 0 0 1 0 0 0 1"/>
+        <Entity template="news_paper_03_03" id="116" pos="-2.35360813 0.613304675 -4.93751144" rot="-0.965926349 0 0.258819014 0 1 0 -0.258819014 0 -0.965926349"/>
+        <Entity template="news_paper_02_02" id="118" pos="-3.25424743 1.9970938 -2.28712511" rot="-1.00000072 0 -5.21540642e-08 0 1 0 5.21540642e-08 0 -1.00000072"/>
+        <Entity template="notebook_01" id="120" pos="-2.69144273 0.613304675 -4.3921628" rot="0.984807789 0 0.173648164 0 1 0 -0.173648164 0 0.984807789"/>
+        <Entity template="radio_03" id="127" pos="-7.23310423 0.894102037 -0.435448229" rot="-0.342020154 0 0.939692855 0 1 0 -0.939692855 0 -0.342020154"/>
+        <Entity template="notebook_02" id="130" pos="-4.29178619 1.06350005 1.94305182" rot="0.866025507 0 0.5 0 1 0 -0.5 0 0.866025507"/>
+        <Entity template="pottery_04" id="144" pos="1.73597455 1.23266816 1.04780638" rot="1 0 0 0 1 0 0 0 1"/>
+        <Entity template="notebook_03" id="146" pos="1.46503329 1.06350005 1.62502837" rot="0.939692676 0 0.342020154 0 1 0 -0.342020154 0 0.939692676"/>
+        <Entity template="book_01_02" id="148" pos="4.99056721 0.940753281 -5.0935297" rot="0 -0.0871559232 0.996195257 -1.00000036 0 0 0 -0.996195555 -0.087155953"/>
+        <Entity template="book_01_02" id="149" pos="4.87734699 0.940753281 -5.09614849" rot="0 0.258819312 -0.965926468 -1.00000036 0 0 0 0.965926945 0.258819103"/>
+        <Entity template="notebook_03" id="151" pos="5.54409361 0.920921862 -4.75020123" rot="0.984808147 0 -0.173648283 0 1 0 0.173648283 0 0.984808147"/>
+        <Entity template="painting_01_02" id="154" pos="3.37499976 1.39999998 -2.125" rot="0 0 1.00000012 0 1 0 -1.00000012 0 0"/>
+        <Entity template="painting_01_02" id="155" pos="3.37499976 1.39999998 -0.12499997" rot="0 0 1.00000012 0 1 0 -1.00000012 0 0"/>
+        <Entity template="painting_02" id="158" pos="-0.87500006 1.5 1.5" rot="1 0 0 0 1 0 0 0 1"/>
+        <Entity template="painting_02_02" id="160" pos="-3.00000024 1.5 -1.375" rot="0 0 -1.00000012 0 1 0 1.00000012 0 0"/>
+        <Entity template="book_01_02" id="162" pos="-7.50000048 0.774737656 -0.62500006" rot="0 -0.866025925 0.500000298 1.00000012 0 0 0 0.500000238 0.866025805"/>
+        <Entity template="book_01" id="164" pos="-3.00000024 0.401690751 1.625" rot="0 0.819152474 0.573576927 1.00000012 0 0 0 0.573577046 -0.819152296"/>
+        <Entity template="kitchen_plate_01" id="169" pos="3.87500024 0.757827878 1.75000036" rot="0.766044617 0 -0.642787635 0 1 0 0.642787635 0 0.766044617"/>
+        <Entity template="kitchen_spoon_01" id="171" pos="3.62500024 0.744400263 1.74999988" rot="-0.087155588 0 -0.996195316 0 1 0 0.996195316 0 -0.087155588"/>
+        <Entity template="chair_market_02" id="173" pos="3.75000048 0.26442644 2.5" rot="0.984808683 0 0.173648342 0 1 0 -0.173648342 0 0.984808683"/>
+        <Entity template="kitchen_pot_01" id="175" pos="7.62500048 0.999637842 0.5" rot="0.866025448 0 0.5 0 1 0 -0.5 0 0.866025448"/>
+        <Entity template="kitchen_pan_01" id="177" pos="7.50000048 0.903762877 2.50000024" rot="0.642787814 0 -0.766044497 0 1 0 0.766044497 0 0.642787814"/>
+        <Entity template="kitchen_spatula_01" id="179" pos="7.43255138 0.894402087 0.791409969" rot="-0.819152296 0 0.57357645 0 1 0 -0.57357645 0 -0.819152296"/>
+        <Entity template="clothes_pile_01" id="189" pos="3.42263365 0 3.75334644" rot="1 0 0 0 1 0 0 0 1"/>
+        <Entity template="clothes_pile_02" id="191" pos="3.82605934 0.200000003 3.58607244" rot="0.866025388 0 0.5 -0 1 0 -0.5 -0 0.866025388"/>
+        <Entity template="clothes_pile_04" id="193" pos="3.7965405 0 4.0780549" rot="0.707106948 0 0.707106829 0 1 0 -0.707106829 0 0.707106948"/>
+        <Entity template="notebook_02" id="204" pos="-2.99695921 0.381859362 1.69547892" rot="0.819152355 0 -0.57357657 0 1 0 0.57357657 0 0.819152355"/>
+        <Entity template="radio_02" id="206" pos="4.32157135 1.0816021 -5.21741199" rot="0.965926647 0 0.258819163 0 1 0 -0.258819163 0 0.965926647"/>
+        <Entity template="Effect Zone" id="103" pos="-3.75000024 0 2.62500024" rot="1 0 0 0 1 0 0 0 1">
+            <PolyShape num="5" p0="0 0 0" p1="-2.38418579e-07 0 2.87500024" p2="6.62500095 0 2.87500024" p3="6.62500095 0 0" p4="0 0 0"/>
+            <SoundShader effectID="EFX_REVERB_HALLWAY_SMALL" defaultIndoors="false" defaultOutdoors="false"/>
+        </Entity>
+        <Entity template="Effect Zone" id="111" pos="-0.87500006 0 2.37500024" rot="1 0 0 0 1 0 0 0 1">
+            <PolyShape num="9" p0="0 0 0" p1="0 0 -7.75" p2="2.75000024 0 -7.75" p3="8.75000191 0 -7.75000095" p4="8.75000095 0 -4.25000048" p5="8.75000095 0 -2.50000024" p6="2.75000024 0 -2.50000024" p7="2.75000024 0 0" p8="0 0 0"/>
+            <SoundShader effectID="EFX_REVERB_HALLWAY_SMALL" defaultIndoors="false" defaultOutdoors="false"/>
+        </Entity>
+        <Entity template="Effect Zone" id="113" pos="3.12500024 0 5.25000048" rot="1 0 0 0 1 0 0 0 1">
+            <PolyShape num="7" p0="0 0 0" p1="0 0 -2.87500024" p2="-1.00000024 0 -2.87500024" p3="-1.00000024 0 -5.12500048" p4="4.75 0 -5.12500048" p5="4.75 0 0" p6="0 0 0"/>
+            <SoundShader effectID="EFX_REVERB_BATH" defaultIndoors="false" defaultOutdoors="false"/>
+        </Entity>
+        <Entity template="Default Effect (Indoors)" id="117" pos="-10.125001 0.0500000007 -4.75" rot="1 0 0 0 1 0 0 0 1">
+            <SoundShader effectID="EFX_REVERB_INDOOR" defaultIndoors="true" defaultOutdoors="false"/>
+        </Entity>
+        <Entity template="city_ambience_a" id="119" pos="-7.87500048 1.60000002 2.62500024" rot="1 0 0 0 1 0 0 0 1">
+            <SoundEmitter minAttenuationDistance="2" maxAttenuationDistance="4.1999998"/>
+        </Entity>
+        <Entity template="city_ambience_a" id="121" pos="-6.87500048 1.60000002 -7.87500048" rot="1 0 0 0 1 0 0 0 1">
+            <SoundEmitter minAttenuationDistance="2.5" maxAttenuationDistance="6.6999998"/>
+        </Entity>
+        <Entity template="city_ambience_a" id="123" pos="5 1.60000002 -5.5" rot="1 0 0 0 1 0 0 0 1">
+            <SoundEmitter minAttenuationDistance="0.89999998" maxAttenuationDistance="3.9000001"/>
+        </Entity>
+        <Entity template="city_ambience_a" id="125" pos="8 1.60000002 1.625" rot="1 0 0 0 1 0 0 0 1">
+            <SoundEmitter minAttenuationDistance="2.0999999" maxAttenuationDistance="3.4000001"/>
+        </Entity>
+        <Entity template="RescueZone" id="126" pos="-2.25 0.0299999993 4" rot="1 -0 0 0 1 -0 0 0 1"/>
+        <Entity template="door_threshold_wood_01" id="115" pos="-5.50000048 0 -1.5" rot="1 0 0 0 1 0 0 0 1" group="17"/>
+        <Entity template="door_wood_01_locked" id="128" pos="-5.50000048 0 -1.5" rot="1 0 0 0 1 0 0 0 1" group="17"/>
+        <Entity template="door_frame_wood_01" id="129" pos="-5.50000048 0 -1.49999952" rot="1 0 0 0 1 0 0 0 1" group="17"/>
+        <Entity template="Light Ambiental" id="11" pos="-6.62500048 2.0999999 -7.12500048" rot="1 0 0 0 1 0 0 0 1">
+            <Light color0="FFFFFF" color1="FFFFFF" colorMultiplier="1" isIndoorLight="false" startDisabled="false"/>
+        </Entity>
+        <Entity template="news_paper_01_01" id="12" pos="4.5 0.937367201 -4.875" rot="1 0 0 0 1 0 0 0 1"/>
+        <Entity template="news_paper_01_01" id="25" pos="4.375 0.930531263 -4.875" rot="0.997564912 0 0.0697565153 0 1 0 -0.0697565153 0 0.997564912"/>
+        <Entity template="notebook_02" id="27" pos="5.50000048 0.920921862 -4.375" rot="1 0 0 0 1 0 0 0 1"/>
+        <Entity template="notebook_02" id="28" pos="5.62500048 0.920921862 -5" rot="-0.866025865 0 -0.500000536 0 1 0 0.500000536 0 -0.866025865"/>
+        <Entity template="laptop_02" id="74" pos="5.25000048 0.920921862 -5.12500048" rot="0.0871559307 0 0.996195138 0 1 0 -0.996195138 0 0.0871559307"/>
+        <Entity template="laptop_03" id="95" pos="4.5 0.920921862 -4.375" rot="0.642787814 0 -0.766044497 0 1 0 0.766044497 0 0.642787814"/>
+        <Entity template="toolbox_01" id="131" pos="3.25000024 0.108146802 -4.75" rot="0.0871559829 0 -0.996195078 0 1 0 0.996195078 0 0.0871559829"/>
+        <Entity template="news_paper_02_03" id="136" pos="4.5 1.01918066 -4.75" rot="-0.96592623 0 0.258819342 0 1 0 -0.258819342 0 -0.96592623"/>
+        <Entity template="Alt. Spawn Point" id="165" pos="2.62500024 0 -2.75000024" rot="0.0871556848 0 0.996198595 0 1 0 -0.996198595 0 0.0871556848"/>
+        <Entity template="Alt. Spawn Point" id="166" pos="-4.75 0 -4.5" rot="-0.642789841 0 -0.766046882 0 1 0 0.766046882 0 -0.642789841"/>
+        <Entity template="Alt. Spawn Point" id="167" pos="-1.75000012 0 -2.87500024" rot="-0.422618866 0 -0.906310558 0 1 0 0.906310558 0 -0.422618866"/>
+        <Entity template="Pistol Insurgent" id="4" pos="3.75000024 0 -4.62499952" rot="0.42261833 0 0.906307876 0 1 0 -0.906307876 0 0.42261833">
+            <Targets num="1" id0="137"/>
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Veteran Insurgent" id="26" pos="-3.00000024 0 -0.87500006" rot="0.500000238 0 -0.866025507 0 1 0 0.866025507 0 0.500000238">
+            <Targets num="2" id0="70" id1="77"/>
+            <Human needsRescue="false">
+                <Traits chanceToInvestigate="0.49000001" chanceToAmbush="1"/>
+            </Human>
+        </Entity>
+        <Entity template="Alt. Spawn Point" id="70" pos="-5.62500143 0 -2.12499976" rot="-0.996195197 0 0.0871561021 0 1 0 -0.0871561021 0 -0.996195197"/>
+        <Entity template="Alt. Spawn Point" id="77" pos="5.25000095 0 -3.75" rot="-0.819152832 0 -0.573576808 0 1 0 0.573576808 0 -0.819152832"/>
+        <Entity template="Ranger Assaulter" id="97" pos="1.50000012 0 3.25000024" rot="-0.70710659 0 -0.707107008 0 1 0 0.707107008 0 -0.70710659">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="bike_01" id="76" pos="2 0.501265705 4.62500048" rot="0.173646882 0 -0.984807968 -0.296137452 0.953716934 -0.052216623 0.939228058 0.300705791 0.165609971"/>
+        <Entity template="Alt. Spawn Point" id="2" pos="5.62500048 0 2.125" rot="-3.7997961e-07 0 1.00000083 0 1 0 -1.00000083 0 -3.7997961e-07"/>
+        <Entity template="Alt. Spawn Point" id="82" pos="6.62500048 0 2.50000024" rot="-0.0871560946 0 0.996196151 0 1 0 -0.996196151 0 -0.0871560946"/>
+        <Entity template="Alt. Spawn Point" id="98" pos="6.6634779 0 0.753749311" rot="0.087156035 0 0.996196687 0 1 0 -0.996196687 0 0.087156035"/>
+        <Entity template="Alt. Spawn Point" id="99" pos="6.62500048 0 0.749999762" rot="0.0871551633 0 0.996197402 0 1 0 -0.996197402 0 0.0871551633"/>
+        <Entity template="Alt. Spawn Point" id="109" pos="3.54354405 0 0.565503299" rot="0.642788768 0 0.766046822 0 1 0 -0.766046822 0 0.642788768"/>
+        <Entity template="Wall" id="135" pos="-7.75000048 0 -1.5" rot="1 0 0 0 1 0 0 0 1">
+            <Wall numTrees="1" numNodes="4">
+                <Branch parent="0" p0="0 0" p1="6.75000048 0" p2="6.75000048 -3.62499952"/>
+                <Branch parent="1" p3="6.75000048 1.125"/>
+            </Wall>
+        </Entity>
+        <Entity template="Wall" id="141" pos="8 0 -2" rot="1 0 0 0 1 0 0 0 1">
+            <Wall numTrees="1" numNodes="3">
+                <Branch parent="0" p0="-3.125 0" p1="-6 0" p2="-6 -2.875"/>
+            </Wall>
+        </Entity>
+        <Entity template="Wall" id="3" pos="-3.62500024 0 2.50000024" rot="1 0 0 0 1 0 0 0 1">
+            <Wall numTrees="1" numNodes="10">
+                <Branch parent="0" p0="0.374999881 0" p1="2.62500024 0" p2="2.62500024 -2.75"/>
+                <Branch parent="1" p3="5.625 0" p4="5.625 -2.50000024" p5="11.125 -2.50000024"/>
+                <Branch parent="3" p6="6.62500048 0" p7="6.62500048 0.75" p8="11.375 0.75"/>
+                <Branch parent="7" p9="6.62500048 1.99999976"/>
+            </Wall>
+        </Entity>
+        <Entity template="Sniper Position" id="161" pos="-4.79786491 0.0500000007 -6.03417063" rot="0.984809339 0 0.173648119 0 1 0 -0.173648119 0 0.984809339">
+            <SniperPosition firearm="SniperRifle" aimDistance="63.400002" aimFOV="5"/>
+        </Entity>
+        <Entity template="curtain_03_01" id="170" pos="-4.87360144 9.5288172e-08 -5.37230635" rot="1.0000006 0 -2.23517418e-08 0 1 0 2.23517418e-08 0 1.0000006">
+            <Targets num="1" id0="33"/>
+        </Entity>
+        <Entity template="curtain_03_01" id="174" pos="-7.87036896 9.5288172e-08 -2.50389028" rot="6.70552254e-08 0 1.00000083 0 1 0 -1.00000083 0 6.70552254e-08"/>
+        <Entity template="window_glass" id="176" pos="6.87500095 0 5.37500048" rot="1 0 0 -0 1 0 0 -0 1" group="20"/>
+        <Entity template="window_frame" id="178" pos="6.87500095 8.8817842e-16 5.37500048" rot="1 0 0 0 1 0 0 0 1" group="20"/>
+        <Entity template="curtain_01_01" id="181" pos="6.87500048 8.3223398e-08 5.25000048" rot="-1.00000024 0 0 0 1 0 0 0 -1.00000024"/>
+        <Entity template="Alt. Spawn Point" id="33" pos="-2.49860144 9.5288172e-08 -5.37230587" rot="1.0000006 0 -2.23517418e-08 0 1 0 2.23517418e-08 0 1.0000006"/>
+        <Entity template="Deploy Slot" id="68" pos="-0.37500003 0.100000001 3.25000024" rot="-0.766044796 0 0.642787814 0 1 0 -0.642787814 0 -0.766044796"/>
+        <Entity template="Deploy Slot" id="132" pos="-1.5 0.100000001 3.25" rot="-8.94069672e-08 0 1.00000072 0 1 0 -1.00000072 0 -8.94069672e-08"/>
+        <Entity template="Deploy Slot" id="138" pos="2.375 0.100000001 3.25000024" rot="0 0 -1.00000036 0 1 0 1.00000036 0 0"/>
+        <Entity template="Ranger Assaulter" id="142" pos="2.375 0 3.25000024" rot="0 0 -1.00000012 0 1 0 1.00000012 0 0">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="camera_view_01" id="53" pos="-3.75 1.76138401 -0.75000006" rot="0.500000238 0 -0.866025627 0 1 0 0.866025627 0 0.500000238">
+            <FOVCamera>
+                <FOV degrees="45" distanceMeters="10" eyeRadiusMeters="0.30000001"/>
+            </FOVCamera>
+        </Entity>
+        <Entity template="rug_mod_rect_large_05" id="172" pos="-2.75000024 0.00999999978 1" rot="1 0 0 0 1 0 0 0 1"/>
+        <Entity template="rug_mod_rect_small_05" id="183" pos="-6.00000095 0.00999999978 0.499999881" rot="0.707107008 0 -0.707106888 0 1 0 0.707106888 0 0.707107008"/>
+        <Entity template="chair_02" id="91" pos="6.26067495 0.650472105 -4.10075283" rot="-0.984808087 0 0.173648238 0 1 0 -0.173648238 0 -0.984808087"/>
+        <Entity template="Executioner" id="47" pos="-5.62500048 0 0.75000006" rot="-0.819153309 0 0.573576987 0 1 0 -0.573576987 0 -0.819153309">
+            <Targets num="1" id0="60"/>
+            <Human needsRescue="false">
+                <Traits chanceToInvestigate="0" executionCooldownMs="15000"/>
+            </Human>
+        </Entity>
+        <Entity template="wall_carpet" id="147" pos="0.5 0.846005738 -5.37500048" rot="9.68575478e-08 0 -1 0 1 0 1 0 9.68575478e-08"/>
+        <Entity template="sneaker_02" id="163" pos="-0.450308889 1.21572317e-08 2.00517988" rot="0.984808266 0 0.173648387 0 1 0 -0.173648387 0 0.984808266"/>
+        <Entity template="sneaker_01" id="180" pos="-0.605541527 0 2.06121707" rot="0.642787695 0 0.766044497 0 1 0 -0.766044497 0 0.642787695"/>
+        <Entity template="plant_pot" id="198" pos="1.62500012 0.661393762 -2" rot="-0.939692914 0 0.342020392 0 1 0 -0.342020392 0 -0.939692914"/>
+        <Entity template="rug_mod_rect_small_05" id="10" pos="6.62500048 0.00999999978 1.375" rot="1.04308128e-07 0 1.0000006 0 1 0 -1.0000006 0 1.04308128e-07"/>
+        <Entity template="rug_mod_rect_medium_05" id="182" pos="0.500000119 0.00999999978 -4.25" rot="1.34110451e-07 0 -1.00000072 0 1 0 1.00000072 0 1.34110451e-07"/>
+        <Entity template="painting_01_02" id="150" pos="-0.87500006 1.39999998 -0.87499994" rot="1 0 0 0 1 0 0 0 1"/>
+        <Entity template="pictures_02_02" id="184" pos="3.50000024 1.39999998 -1.87500012" rot="0 0 -1.00000024 0 1 0 1.00000024 0 0"/>
+        <Entity template="Interact Sit" id="186" pos="-6.00000048 0.0500000007 -4" rot="0.707107186 0 -0.707107782 0 1 0 0.707107782 0 0.707107186"/>
+        <Entity template="Interact Sit" id="187" pos="-3.50000024 0.0500000007 -4.625" rot="-1.00000095 0 -3.20374966e-07 0 1 0 3.20374966e-07 0 -1.00000095"/>
+        <Entity template="Interact Sit" id="192" pos="0.125 0.0500000007 -4.375" rot="1.34110451e-07 0 -1.00000048 0 1 0 1.00000048 0 1.34110451e-07"/>
+        <Entity template="chair_market_02" id="188" pos="3.37500024 0.26442644 1.75000012" rot="1 0 0 0 1 0 0 0 1"/>
+        <Entity template="chair_market_01" id="195" pos="4.38588619 0.26442644 1.5054431" rot="1.93715096e-07 0 -1.00000036 0 1 0 1.00000036 0 1.93715096e-07"/>
+        <Entity template="Alt. Spawn Point" id="60" pos="-5.37500048 0 0.124999791" rot="3.7252903e-08 0 -1.00000131 0 1 0 1.00000131 0 3.7252903e-08"/>
+        <Entity template="Interact Sit" id="137" pos="3.04559875 0.0500000007 -4.15704107" rot="1 0 0 0 1 0 0 0 1"/>
+        <Entity template="Interact Sit" id="194" pos="0.374999911 0.0500000119 -4.375" rot="0.258819222 0 -0.965926111 0 1 0 0.965926111 0 0.258819222"/>
+        <Entity template="door_threshold_flat_01" id="92" pos="0.499960423 0 2.50003958" rot="-1.00000143 0 -2.98023224e-08 0 1 0 2.98023224e-08 0 -1.00000143" group="21"/>
+        <Entity template="door_flat_01" id="190" pos="0.499960423 0 2.50003958" rot="1.00000143 0 -6.70552254e-08 0 1 0 6.70552254e-08 0 1.00000143" group="21"/>
+        <Entity template="door_frame_flat_01" id="196" pos="0.499960423 0 2.50003958" rot="-1.00000143 0 6.70552254e-08 0 1 0 -6.70552254e-08 0 -1.00000143" group="21"/>
+        <Entity template="Grunt Insurgent Weaponless" id="23" pos="0.75000006 0 -3.75000024" rot="-0.0871556625 0 0.996195138 0 1 0 -0.996195138 0 -0.0871556625">
+            <Targets num="1" id0="194"/>
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="Type 56 pickup" id="90" pos="1.59229648 0.256000012 -3.90716863" rot="0.375805944 0.395601153 -0.838015318 0.91726768 -0.0301123708 0.397131354 0.131870985 -0.917928636 -0.374188542"/>
+        <Entity template="Light Directional" id="134" pos="-9.25 2.0999999 -7.12500048" rot="0.26650244 0.704417884 0.657857776 -0.183012903 0.707107067 -0.683013201 -0.946301401 0.0616286956 0.31736356">
+            <Light color="E2C192" colorMultiplier="3.8199999" isIndoorLight="false" startDisabled="false"/>
+        </Entity>
+        <Entity template="Alt. Spawn Point" id="22" pos="5.62500048 0 4.37500048" rot="1.00000107 0 -1.41561031e-07 0 1 0 1.41561031e-07 0 1.00000107"/>
+        <Entity template="Alt. Spawn Point" id="24" pos="-0.337464362 0 -3.80968499" rot="0.819153547 0 0.573577464 0 1 0 -0.573577464 0 0.819153547"/>
+        <Entity template="Wall Unbreakable" id="114" pos="-3.62500024 0 2.50000024" rot="1 0 0 0 1 0 0 0 1">
+            <Wall numTrees="1" numNodes="19">
+                <Branch parent="0" p0="0 0" p1="0 2.87500024" p2="0.5 2.87500024"/>
+                <Branch parent="0" p3="-2.37500024 0" p4="-4.375 -2.00000024" p5="-4.375 -6.00000048" p6="-2.37500048 -7.99999952" p7="2.62500024 -8" p8="5.625 -8" p9="5.625 -7.625"/>
+                <Branch parent="8" p10="11.625 -8" p11="11.625 -4.50000048" p12="11.625 -2.50000024" p13="11.625 2.87500024" p14="9.12500095 2.87500024"/>
+                <Branch parent="12" p15="11.375001 -2.50000024"/>
+                <Branch parent="11" p16="9.75000095 -4.50000048"/>
+                <Branch parent="7" p17="2.62500024 -7.87500095"/>
+                <Branch parent="0" p18="0.124999881 0"/>
+            </Wall>
+        </Entity>
+        <Entity template="Interact Sit" id="159" pos="-2.25 0.0500000007 -3.62500024" rot="-8.74227766e-08 0 -1 0 1 0 1 0 -8.74227766e-08"/>
+        <Entity template="Executioner" id="199" pos="-2.75000024 0 -3.00000024" rot="0.939692676 0 0.342020154 0 1 0 -0.342020154 0 0.939692676">
+            <Targets num="1" id0="159"/>
+            <Human needsRescue="false">
+                <Traits chanceToInvestigate="0" chanceToAmbush="0.74000001"/>
+            </Human>
+        </Entity>
+        <Entity template="mattress_01" id="201" pos="-6.75000048 0.301195323 -3.875" rot="0.707107008 0 0.707106948 0 1 0 -0.707106948 0 0.707107008"/>
+        <Entity template="weapon_crate" id="112" pos="-0.5 0 -0.87500006" rot="-1.00000072 0 -3.94880772e-07 0 1 0 3.94880772e-07 0 -1.00000072"/>
+        <Entity template="bed_04_02" id="61" pos="-2.375 0.544288576 -4.5" rot="-1.00000072 0 -3.20374966e-07 0 1 0 3.20374966e-07 0 -1.00000072"/>
+        <Entity template="RPG 26 pickup" id="110" pos="-0.595047295 0.52873528 -1.24354362" rot="0.99619472 -0.087155737 0 -7.61939667e-09 -8.70901076e-08 1 -0.087155737 -0.99619472 -8.74227766e-08"/>
+        <Entity template="Grunt Insurgent Weaponless" id="87" pos="4 0 -3.75000024" rot="-0.866026402 0 0.500000119 0 1 0 -0.500000119 0 -0.866026402">
+            <Targets num="1" id0="216"/>
+            <Human needsRescue="false">
+                <Traits chanceToInvestigate="0.72000003"/>
+            </Human>
+        </Entity>
+        <Entity template="bed_single_00" id="55" pos="-6.75000048 0.46609062 -3.875" rot="0.707106829 0 0.707106829 -0 1 0 -0.707106829 -0 0.707106829"/>
+        <Entity template="Veteran Insurgent" id="105" pos="-4.625 0 -2.87500024" rot="1 0 0 0 1 0 0 0 1">
+            <Targets num="1" id0="62"/>
+            <Human needsRescue="false">
+                <Traits chanceToInvestigate="0.41999999" chanceToAmbush="0.94"/>
+            </Human>
+        </Entity>
+        <Entity template="commode_01" id="88" pos="1.50000012 0.531444609 -3.00000024" rot="-1.00000072 0 -2.75671482e-07 0 1 0 2.75671482e-07 0 -1.00000072"/>
+        <Entity template="kitchen_mug_01" id="58" pos="7.37500048 0.959617555 1.37500012" rot="0.866025507 0 0.5 0 1 0 -0.5 0 0.866025507"/>
+        <Entity template="kitchen_mug_01" id="101" pos="7.29333353 0.839999974 1.7366668" rot="0.456825525 -0.492403805 0.740843415 -0.38302207 0.642788112 0.663413525 -0.802872717 -0.586823642 0.105040483"/>
+        <Entity template="kitchen_teapot_01" id="153" pos="7.54147243 0.829999983 1.97670984" rot="0.709406316 -0.409575909 -0.57357657 0.49999997 0.866025388 0 0.496731877 -0.286788255 0.819151878"/>
+        <Entity template="sofa_02" id="122" pos="0.5 0.35134995 -4.875" rot="0 0 -1.00000024 0 1 0 1.00000024 0 0"/>
+        <Entity template="rug_large_01_02" id="152" pos="5.12500048 0.0500000007 -3.75000024" rot="-8.74227766e-08 0 1 0 1 0 -1 0 -8.74227766e-08"/>
+        <Entity template="kitchen_stove_02" id="43" pos="7.37500048 0.50999999 2.62500024" rot="-1 8.74227766e-08 0 8.74227766e-08 1 8.74227766e-08 7.64274186e-15 8.74227766e-08 -1"/>
+        <Entity template="magazine_05" id="140" pos="1.50000012 1.06350005 -2.62500024" rot="0.766044617 0 -0.642787635 0 1 0 0.642787635 0 0.766044617"/>
+        <Entity template="news_paper_05" id="157" pos="1.54666674 1.06016934 -3.41333365" rot="0.573576748 0 0.819152296 0 1 0 -0.819152296 0 0.573576748"/>
+        <Entity template="magazine_02" id="185" pos="1.67500019 1.06350005 -2.39499998" rot="0.422618449 0 -0.906307936 0 1 0 0.906307936 0 0.422618449"/>
+        <Entity template="paper_sketch_01" id="200" pos="1.62768805 1.15999997 -2.71144223" scale="0.899999976" rot="1 0 0 -0 1 0 0 -0 1"/>
+        <Entity template="AKS 74U pickup" id="208" pos="-0.303291738 0.510539532 -1.18853581" rot="3.01980663e-14 -1.00000036 1.04308128e-07 2.16066908e-07 2.16066837e-07 1.0000006 -1.00000036 0 2.16066837e-07"/>
+        <Entity template="city_ambience_a" id="209" pos="-9.875 1.60000002 5.12500048" rot="1 0 0 0 1 0 0 0 1">
+            <SoundEmitter minAttenuationDistance="6.3000002" maxAttenuationDistance="6.6999998"/>
+        </Entity>
+        <Entity template="city_ambience_a" id="210" pos="8.25 1.60000002 10.250001" rot="1 0 0 0 1 0 0 0 1">
+            <SoundEmitter minAttenuationDistance="6.5" maxAttenuationDistance="7.8000002"/>
+        </Entity>
+        <Entity template="roomtone_hallway_02" id="212" pos="7.62500048 1.60000002 -4.875" rot="1 0 0 0 1 0 0 0 1">
+            <SoundEmitter minAttenuationDistance="2.0999999" maxAttenuationDistance="9.8999996"/>
+        </Entity>
+        <Entity template="room_tone_household" id="214" pos="-8.5 1.60000002 6.12500048" rot="1 0 0 0 1 0 0 0 1">
+            <SoundEmitter minAttenuationDistance="6.5" maxAttenuationDistance="11.3"/>
+        </Entity>
+        <Entity template="Type 56 Folded pickup expert" id="216" pos="5.50000048 0.99552083 -4.25" rot="0.456895471 -0.883022726 0.107325293 -0.0483516008 0.0958227813 0.99422425 -0.888206363 -0.459445387 0.00108547509"/>
+        <Entity template="debris_paper_03" id="220" pos="-3.00000024 2.05272532 -1.97000003" rot="0.42261833 0 0.906307817 -0 1 0 -0.906307817 -0 0.42261833" group="23"/>
+        <Entity template="debris_paper_02" id="222" pos="-3 2.03970075 -2.125" rot="-0.342020065 0 0.939693093 0 1 0 -0.939693093 0 -0.342020065" group="25"/>
+        <Entity template="decal_scratch_01" id="225" pos="-5.62500048 0.00999999978 -1.125" rot="1 0 0 0 1 0 0 0 1" group="27"/>
+        <Entity template="decal_scratch_01" id="227" pos="-5 0.00999999978 -1.62500012" rot="-0.996195495 0 0.0871562064 0 1 0 -0.0871562064 0 -0.996195495" group="29"/>
+        <Entity template="decal_scratch_01" id="228" pos="1.125 0.00999999978 1.50000012" rot="-0.0871564522 0 -0.996196091 0 1 0 0.996196091 0 -0.0871564522" group="30"/>
+        <Entity template="decal_scratch_02" id="230" pos="0.375 0.00999999978 1.5" rot="1 0 0 0 1 0 0 0 1" group="32"/>
+        <Entity template="decal_scratch_02" id="231" pos="0.375 0.00999999978 1.74999988" rot="0.906307876 0 -0.42261827 0 1 0 0.42261827 0 0.906307876" group="33"/>
+        <Entity template="decal_scratch_02" id="232" pos="-3.50000024 0.00999999978 -3.62500024" rot="0.0871559754 0 -0.996194959 0 1 0 0.996194959 0 0.0871559754" group="34"/>
+        <Entity template="decal_scratch_02" id="233" pos="-3.50000024 0.00999999978 -3.62500024" rot="0.0871559754 0 -0.996194959 0 1 0 0.996194959 0 0.0871559754" group="35"/>
+        <Entity template="decal_scratch_03" id="235" pos="-4.25 0.00999999978 -2.375" rot="1 0 0 0 1 0 0 0 1" group="37"/>
+        <Entity template="decal_scratch_03" id="236" pos="-4.25 0.00999999978 -2.375" rot="1 0 0 0 1 0 0 0 1" group="38"/>
+        <Entity template="decal_scratch_04" id="239" pos="0 0.00999999978 -1.50000024" rot="-0.57357651 0 0.819152594 0 1 0 -0.819152594 0 -0.57357651" group="40"/>
+        <Entity template="decal_scratch_04" id="240" pos="0 0.00999999978 -1.62500024" rot="-0.57357651 0 0.819152594 0 1 0 -0.819152594 0 -0.57357651" group="41"/>
+        <Entity template="decal_scratch_04" id="244" pos="-6.75000191 0.00999999978 -0.374999881" rot="-0.25881952 0 0.965926468 0 1 0 -0.965926468 0 -0.25881952" group="43"/>
+        <Entity template="decal_scratch_04" id="245" pos="-6.75000191 0.00999999978 -0.374999881" rot="-0.25881952 0 0.965926468 0 1 0 -0.965926468 0 -0.25881952" group="44"/>
+        <Entity template="manhole_01_02" id="247" pos="6.50000048 0.00999999978 4.5" scale="0.400000006" rot="1 0 0 -0 1 0 0 -0 1" group="46"/>
+        <Entity template="decal_scratch_01" id="249" pos="-0.750001013 0.00999999978 -2.87500048" rot="-0.0871556997 0 -0.996195197 0 1 0 0.996195197 0 -0.0871556997"/>
+        <Entity template="decal_scratch_01" id="250" pos="-0.75000006 0.00999999978 -2.87500024" rot="-0.0871556997 0 -0.996195197 0 1 0 0.996195197 0 -0.0871556997"/>
+        <Entity template="bath_towel_02" id="252" pos="4.375 0.00999999978 3.375" rot="1 0 0 0 1 0 0 0 1" group="48"/>
+        <Entity template="rolled_carpets" id="254" pos="7 0.0812366456 -1" scale="0.769999981" rot="-8.74227766e-08 0 1 0 1 0 -1 0 -8.74227766e-08" group="50"/>
+        <Entity template="floor_lamp_01" id="256" pos="-1.37499988 0.72168225 2" rot="1 0 0 0 1 0 0 0 1" group="52"/>
+        <Entity template="floor_lamp_01" id="257" pos="-7.62500048 0.72168225 -1.12499988" rot="-0.57357651 0 -0.819152594 0 1 0 0.819152594 0 -0.57357651" group="53"/>
+        <Entity template="fan_02" id="259" pos="7.62500048 0.650624871 -2.5" rot="-0.906308591 0 0.42261827 0 1 0 -0.42261827 0 -0.906308591" group="55"/>
+        <Entity template="door_frame_flat_01" id="260" pos="-2.5 0 5.37500048" rot="-1.00000143 0 6.70552254e-08 0 1 0 -6.70552254e-08 0 -1.00000143" group="56"/>
+        <Entity template="door_threshold_flat_01" id="262" pos="-2.5 0 5.37500048" rot="-1.00000143 0 -2.98023224e-08 0 1 0 2.98023224e-08 0 -1.00000143" group="56"/>
+        <Entity template="Terrain" id="264" pos="-3.75000024 0 5.50000048" rot="1 0 0 0 1 0 0 0 1" group="58">
+            <PolyShape num="13" p0="0 0 0" p1="2.375 0 0" p2="2.375 0 -0.25" p3="6.62500048 0 -0.25" p4="6.62500048 0 0" p5="11.875 0 0" p6="11.875 0 -11.125001" p7="-2.25000024 0 -11.125001" p8="-4.375 0 -9.00000095" p9="-4.375 0 -5.00000048" p10="-2.25000024 0 -2.87500024" p11="0 0 -2.87500024" p12="0 0 0"/>
+        </Entity>
+        <Entity template="Movement Blocker" id="263" pos="-3.87500024 0 5.62500048" rot="1 0 0 0 1 0 0 0 1" group="57">
+            <Wall numTrees="1" numNodes="17">
+                <Branch parent="0" p0="0 0" p1="1 0" p2="1 -0.25" p3="1.75000024 -0.25" p4="1.75000012 0" p5="2.625 0" p6="2.62500024 -0.25" p7="6.87500048 -0.249999046" p8="6.87500048 0" p9="12.125 0" p10="12.125 -11.375001" p11="-2.25000024 -11.375001" p12="-4.375 -9.25000095" p13="-4.375 -5.00000048" p14="-2.25000024 -2.87500024" p15="0 -2.87500024" p16="0 -0.25"/>
+            </Wall>
+        </Entity>
+        <Entity template="Roof" id="265" pos="8.125 2 5.50000048" rot="1 0 0 0 1 0 0 0 1" group="59">
+            <PolyShape num="13" p0="0 0 0" p1="-5.25 0 0" p2="-5.25 0 -0.25" p3="-9.5 0 -0.25" p4="-9.5 0 0" p5="-11.875 0 0" p6="-11.875 0 -2.87500024" p7="-14.125 0 -2.87500024" p8="-16.25 0 -5.00000048" p9="-16.25 0 -9.00000095" p10="-14.125 0 -11.125001" p11="0 0 -11.125001" p12="0 0 0"/>
+        </Entity>
+        <Entity template="PS_LightRay_01" id="267" pos="-6.75000048 0.280000001 -4.375" rot="-0.906307459 -7.9231917e-08 0.422618747 -1.24369265e-07 0.999999881 -7.9231917e-08 -0.422618687 -1.24369279e-07 -0.906307459" group="61">
+            <EnvParticles/>
+        </Entity>
+        <Entity template="Light Point" id="63" pos="5.75000048 2.0999999 4.125" rot="1 0 0 0 1 0 0 0 1">
+            <Light color="CDE5FF" radiusMeters="4" limitType="Box" limitX="2.825" limitXNeg="2.3249996" limitY="1.0459774" limitYNeg="1.3249996" colorMultiplier="2.95" isIndoorLight="false" startDisabled="false"/>
+        </Entity>
+        <Entity template="PS_DustSpecs1" id="275" pos="-6.5 1.5 -4.25" rot="0.422618479 0 0.906308293 0 1 0 -0.906308293 0 0.422618479" group="65">
+            <EnvParticles/>
+        </Entity>
+        <Entity template="Light Point" id="69" pos="-4.12500095 2.0999999 0.374999821" rot="1 0 0 0 1 0 0 0 1">
+            <Light color="FFEFE1" radiusMeters="4" limitType="Box" limitX="3.9499986" limitXNeg="3.2959733" limitY="1.9499998" limitYNeg="2.2000008" colorMultiplier="3.76" isIndoorLight="false" startDisabled="false"/>
+        </Entity>
+        <Entity template="light_radial_warm" id="277" pos="4.875 2 -5.62500048" rot="1 0 0 0 1 0 0 0 1" group="67"/>
+        <Entity template="Ranger Assaulter" id="34" pos="-0.37500003 0 3.37500024" rot="-0.70710665 0 0.707107008 0 1 0 -0.707107008 0 -0.70710665">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+        <Entity template="window_glass" id="280" pos="-7.03067541 0 1.47445571" rot="0.707106829 0 -0.707106829 0 1 0 0.707106829 0 0.707106829" group="69"/>
+        <Entity template="window_frame" id="281" pos="-7.03067541 0 1.47445571" rot="0.707106829 0 -0.707106829 0 1 0 0.707106829 0 0.707106829" group="69"/>
+        <Entity template="curtain_03_01" id="283" pos="-6.94228697 0 1.38606727" rot="-0.707107008 0 0.707107008 0 1 0 -0.707107008 0 -0.707107008" group="71"/>
+        <Entity template="decal_scratch_01" id="226" pos="-5.62500048 0.00999999978 -1.125" rot="1 0 0 0 1 0 0 0 1" group="28"/>
+        <Entity template="Deploy Slot" id="9" pos="-2.5 0.100000001 3.25000024" rot="1.56462193e-07 0 1 0 1 0 -1 0 1.56462193e-07"/>
+        <Entity template="Wall Unbreakable" id="29" pos="-1.87500012 0 5.37500048" rot="1 0 0 0 1 0 0 0 1">
+            <Wall numTrees="1" numNodes="7">
+                <Branch parent="0" p0="0 0" p1="0.374999881 0" p2="0.374999881 -0.25" p3="4.87500048 -0.25" p4="4.875 0" p5="7.125 0"/>
+                <Branch parent="3" p6="4.87500048 -0.625000477"/>
+            </Wall>
+        </Entity>
+        <Entity template="door_flat_imobile" id="64" pos="-2.5 0 5.37500048" rot="1 0 0 0 1 0 0 0 1"/>
+        <Entity template="Deploy Slot" id="133" pos="1.37500012 0.100000001 3.25000024" rot="-0.642787874 0 -0.766044796 0 1 0 0.766044796 0 -0.642787874"/>
+        <Entity template="Ranger Support" id="104" pos="-1.62499988 0 3.25000024" rot="-0.087155588 0 0.99619472 0 1 0 -0.99619472 0 -0.087155588">
+            <Human needsRescue="false">
+                <Traits/>
+            </Human>
+        </Entity>
+    </Entities>
+</Map>
