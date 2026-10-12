@@ -1,0 +1,181 @@
+<Maps>
+	<!-- the order given here will be mirrored in the game, for both packs and maps
+
+	'img' can be either an image or a movie
+	-->
+	<BundleEditor name="@menu_m_yourcreations" img="data/movies/mpack_your_creations.ogv">
+		<!-- content added by game, everything in this folder %LOCALAPPDATA%\KillHouseGames\DoorKickers2\data\maps_wip\ -->
+	</BundleEditor>
+
+	<BundleWorkshop name="@menu_m_workshopmissions" img="data/movies/mpack_sick_maps.ogv">
+		<!-- content added by game, everything in the subfolder maps_ugc, including Workshop mods -->
+	</BundleWorkshop>
+	
+
+	<Bundle name="@single_mispack_1_name" img="data/movies/mpack_fngs_welcome.ogv">
+		<Map source="data/maps/pathtosuckless.xml"/>
+		<Map source="data/maps/wooddoorsareeasy.xml"/>
+		<Map source="data/maps/alltogethernow.xml"/>
+		<Map source="data/maps/whywefight.xml"/>
+		<Map source="data/maps/rescueatdawn.xml"/>
+		<Map source="data/maps/thejihadiliveshow.xml"/>
+		<Map source="data/maps/killingtime.xml"/>
+	</Bundle>
+
+	<Bundle name="@single_mispack_2_name" img="data/movies/mpack_lead_the_way.ogv" unlockedBy="@single_mispack_1_name">
+		<Map source="data/maps/gatecrashers.xml"/>
+		<Map source="data/maps/vbiedsareus.xml"/>
+		<Map source="data/maps/aquaintlittleman.xml"/>
+		<Map source="data/maps/fireandmaneuver.xml"/>
+		<Map source="data/maps/safehousestrike.xml"/>
+		<Map source="data/maps/alhasanhasitall.xml"/>
+		<Map source="data/maps/vipersnest.xml"/>
+		<Map source="data/maps/truebelievers.xml"/>
+		<Map source="data/maps/opbase.xml"/>
+	</Bundle>
+
+	<Bundle name="@single_mispack_5_name" img="data/movies/mpack_tiny_troubles.ogv" unlockedBy="@single_mispack_1_name">
+		<Map source="data/maps/noisyneighborsnuisance.xml"/>
+		<Map source="data/maps/theview.xml"/>
+		<Map source="data/maps/ratwork.xml"/>
+		<Map source="data/maps/uninvitedguests.xml"/>
+		<Map source="data/maps/doortodoor.xml"/>
+		<Map source="data/maps/roomservice.xml"/>
+		<Map source="data/maps/pincerspower.xml"/>
+		<Map source="data/maps/lonelyabode.xml"/>
+		<Map source="data/maps/extra_tiny_trouble.xml"/>
+	</Bundle>
+
+	<Bundle name="@single_mispack_6_name" img="data/movies/mpack_extreme_rescues.ogv" unlockedBy="20 missions">
+		<Map source="data/maps/crisisonroutekilo.xml"/>
+		<Map source="data/maps/againsttheodds.xml"/>
+		<Map source="data/maps/embassysiege.xml"/>
+		<Map source="data/maps/maniacmansion.xml"/>
+		<Map source="data/maps/countrysidejackpot.xml"/>
+		<Map source="data/maps/supermarket.xml"/>
+		<Map source="data/maps/exchange.xml"/>
+		<Map source="data/maps/fancyrestaurant.xml"/>
+		<Map source="data/maps/large_apartment.xml"/>
+	</Bundle>
+
+	<Bundle name="@single_mispack_11_name" img="data/movies/mpack_deck_of_cards.ogv" unlockedBy="20 missions">
+		<Map source="data/maps/living_large.xml"/>
+		<Map source="data/maps/large_penthouse.xml"/>
+		<Map source="data/maps/kingofspades.xml"/>
+		<Map source="data/maps/tenofclubs.xml"/>
+		<Map source="data/maps/twoofspades.xml"/>
+		<Map source="data/maps/kingofhearts.xml"/>
+		<Map source="data/maps/private_museum.xml"/>
+		<Map source="data/maps/coolpalace.xml"/>
+		<Map source="data/maps/magician_hunt.xml"/>
+	</Bundle>
+
+	<Bundle name="@single_mispack_4_name" img="data/movies/mpack_never_see_never_be.ogv" unlockedBy="30 missions">
+		<Map source="data/maps/trainingwheels.xml"/>
+		<Map source="data/maps/breakanddestroy.xml"/>
+		<Map source="data/maps/snatchandgrab.xml"/>
+		<Map source="data/maps/marketday.xml"/>
+		<Map source="data/maps/deathdealers.xml"/>
+		<Map source="data/maps/abandoned.xml"/>
+	</Bundle>
+
+	<Bundle name="@single_mispack_13_name" img="data/movies/mpack_give_no_quarter.ogv" unlockedBy="45 missions">
+		<Map source="data/maps/foreigninfluencers.xml"/>
+		<Map source="data/maps/universityassault.xml"/>
+		<Map source="data/maps/canyon_ambush.xml"/>
+		<Map source="data/maps/levelcrossing.xml"/>	
+		<Map source="data/maps/preciouscargo.xml"/>
+		<Map source="data/maps/surrounded.xml"/>
+		<Map source="data/maps/ghostcity.xml"/>
+		<Map source="data/maps/criticalresponse.xml"/>
+	</Bundle>
+
+	<Bundle name="@single_mispack_7_name" img="data/movies/mpack_indian_country.ogv" unlockedBy="30 missions">
+		<Map source="data/maps/kamilpashamarket.xml"/>
+		<Map source="data/maps/kingoftheslums.xml"/>
+		<Map source="data/maps/bus_depot.xml"/>
+		<Map source="data/maps/blockade.xml"/>
+		<Map source="data/maps/urban_area.xml"/>
+	</Bundle>
+
+<!-- moved to campaigns
+	<Bundle name="@single_mispack_9_name" img="data/movies/mpack_operation_subjugator.ogv">
+		<Map source="data/maps/phaseisurprise.xml"/>
+		<Map source="data/maps/phaseiisafeguard.xml"/>
+		<Map source="data/maps/phaseiiisecure.xml"/>
+		<Map source="data/maps/phaseivsmash.xml"/>
+	</Bundle>
+-->
+
+	<Bundle name="@single_mispack_5x_name" img="data/movies/mpack_tiny_troubles.ogv" img_extra="data/textures/gui/missions/pack_part2.dds" unlockedBy="@single_mispack_5_name">
+		<Map source="data/maps/hotroom.xml"/>
+		<Map source="data/maps/knivesinthedark.xml"/>
+		<Map source="data/maps/techsupport.xml"/>
+		<Map source="data/maps/traphouse.xml"/>
+		<Map source="data/maps/scratched_carpets.xml"/>
+		<Map source="data/maps/flat_mates.xml"/>
+		<Map source="data/maps/islandcafe.xml"/>
+		<Map source="data/maps/fuelstop.xml"/>
+		<Map source="data/maps/theritual.xml"/>
+	</Bundle>
+
+
+	<Bundle name="@single_mispack_6x_name" img="data/movies/mpack_extreme_rescues.ogv" img_extra="data/textures/gui/missions/pack_part2.dds" unlockedBy="@single_mispack_6_name">
+		<Map source="data/maps/car_dealership.xml"/>
+		<Map source="data/maps/mazerunners.xml"/>
+		<Map source="data/maps/speedislife.xml"/>
+		<Map source="data/maps/nightcall.xml"/>
+		<Map source="data/maps/forestspirits.xml"/>
+		<Map source="data/maps/hallwayhell.xml"/>
+		<Map source="data/maps/unawaretarget.xml"/>
+		<Map source="data/maps/interior_courtyard_house.xml"/>
+		<Map source="data/maps/doublerush.xml"/>
+	</Bundle>
+
+
+	<Bundle name="@single_mispack_12_name" img="data/movies/mpack_all_the_way.ogv" unlockedBy="@single_mispack_2_name">
+		<Map source="data/maps/bridget.xml"/>
+		<Map source="data/maps/tolltakers.xml"/>
+		<Map source="data/maps/raptordown.xml"/>
+		<Map source="data/maps/deadlystage.xml"/>
+	</Bundle>
+
+	<Bundle name="@single_mispack_5xx_name" img="data/movies/mpack_tiny_troubles.ogv" img_extra="data/textures/gui/missions/pack_part3.dds" unlockedBy="@single_mispack_5x_name">
+		<Map source="data/maps/covereddebris.xml"/>
+		<Map source="data/maps/nightbird.xml"/>
+		<Map source="data/maps/intervention.xml"/>
+		<Map source="data/maps/adi_factory_test.xml"/>
+		<Map source="data/maps/tiny_trouble_06.xml"/>
+		<Map source="data/maps/tiny_trouble_07.xml"/>		
+		<Map source="data/maps/against.xml"/>
+		<Map source="data/maps/tiny_trouble_10.xml"/>
+		<Map source="data/maps/traitors.xml"/>
+	</Bundle>
+
+	<Bundle name="@single_mispack_5xxx_name" img="data/movies/mpack_tiny_troubles.ogv" img_extra="data/textures/gui/missions/pack_part4_new.dds" unlockedBy="@single_mispack_5x_name">
+		<Map source="data/maps/itreallystinks.xml"/>
+		<Map source="data/maps/gasdepot.xml"/>	
+	</Bundle>
+	
+	<Bundle name="@single_mispack_10_name" img="data/movies/mpack_blast_from_the_past.ogv" img_extra="data/textures/gui/missions/pack_new.dds">
+		<Map source="data/maps/bftp/bftp_beach_house.xml"/>
+		<Map source="data/maps/bftp/bftp_question.xml"/>
+		<Map source="data/maps/bftp/bftp_isolatedcabin.xml"/>
+		
+		<Map source="data/maps/bftp/bftp_rainynightonvenicehill.xml"/>
+		<Map source="data/maps/bftp/bftp_grandavenuebank.xml"/>
+		<Map source="data/maps/bftp/bftp_withyourshield.xml"/>
+		
+		<Map source="data/maps/bftp/bftp_docks.xml"/>
+		<Map source="data/maps/bftp/bftp_skypub.xml"/>
+		<Map source="data/maps/bftp/bftp_firebasenorth.xml"/>
+	</Bundle>	
+
+	<!--
+	<Bundle name="@single_mispack_undisclosed_name" img="data/movies/mpack_still_classified.ogv">
+	</Bundle>
+	-->
+
+	<BundleRMG name="@menu_m_randommap" img="data/movies/mpack_your_creations.ogv">
+	</BundleRMG>
+</Maps>

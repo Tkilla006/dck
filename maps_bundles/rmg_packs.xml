@@ -1,0 +1,33 @@
+<Maps>
+	
+	<BundleRMGSmall name="RMG_Small">
+		<Map source="data/maps_random/random_apts.xml"/>
+		<Map source="data/maps_random/random_apts_small.xml"/>
+
+	</BundleRMGSmall>
+
+	<BundleRMGMedium name="RMG_Med">
+		<Map source="data/maps_random/apartment_floor_1.xml"/>
+		<Map source="data/maps_random/apartment_floor_2.xml"/>
+		<Map source="data/maps_random/checkpoint_rocky.xml"/>
+		<Map source="data/maps_random/apt_complex.xml"/>
+		<Map source="data/maps_random/city_block_new_6troop.xml"/>
+		<Map source="data/maps_random/house_medium1.xml"/>
+		<Map source="data/maps_random/house_small_1.xml"/>
+		<Map source="data/maps_random/house_w_yard_1.xml"/>
+		<Map source="data/maps_random/random_compound2.xml"/>
+		<Map source="data/maps_random/random_corner_medium_1.xml"/>
+		<Map source="data/maps_random/random_court2.xml"/>
+		<Map source="data/maps_random/random_house3.xml"/>
+		<Map source="data/maps_random/random_yard_medium_1.xml"/>
+		<Map source="data/maps_random/randomcheckpointsmall.xml"/>
+		<Map source="data/maps_random/urban street_01.xml"/>
+	</BundleRMGMedium>
+	
+	<BundleRMGLarge name="RMG_Large">
+		<Map source="data/maps_random/city_block_new_8troop.xml"/>
+		<Map source="data/maps_random/double_trouble.xml"/>
+		<Map source="data/maps_random/random_compound3.xml"/>
+		<Map source="data/maps_random/rocky_complex.xml"/>
+	</BundleRMGLarge>
+</Maps>

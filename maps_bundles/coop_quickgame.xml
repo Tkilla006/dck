@@ -1,0 +1,106 @@
+<Maps>
+	<!-- when playing quick-match-coop, the game will randomly choose one of the maps here  -->
+	<BundleCoopQuick name="COOP MAPS">	
+		<Map source="data/maps/alltogethernow.xml"/>
+		<Map source="data/maps/whywefight.xml"/>
+		<Map source="data/maps/rescueatdawn.xml"/>
+		<Map source="data/maps/thejihadiliveshow.xml"/>
+		<Map source="data/maps/killingtime.xml"/>
+
+		<Map source="data/maps/gatecrashers.xml"/>
+		<Map source="data/maps/vbiedsareus.xml"/>
+		<Map source="data/maps/aquaintlittleman.xml"/>		
+		<Map source="data/maps/fireandmaneuver.xml"/>
+		<Map source="data/maps/safehousestrike.xml"/>
+		<Map source="data/maps/alhasanhasitall.xml"/>
+		<Map source="data/maps/vipersnest.xml"/>
+		<Map source="data/maps/truebelievers.xml"/>
+		<Map source="data/maps/opbase.xml"/>							
+
+		<Map source="data/maps/doortodoor_coop.xml"/>
+		<Map source="data/maps/roomservice.xml"/>
+		<Map source="data/maps/uninvitedguests_coop.xml"/>
+		<Map source="data/maps/lonelyabode.xml"/>
+		<Map source="data/maps/extra_tiny_trouble.xml"/>				
+
+		<Map source="data/maps/crisisonroutekilo.xml"/>
+		<Map source="data/maps/againsttheodds.xml"/>
+		<Map source="data/maps/embassysiege.xml"/>
+		<Map source="data/maps/maniacmansion.xml"/>
+		<Map source="data/maps/countrysidejackpot.xml"/>
+		<Map source="data/maps/supermarket.xml"/>		
+		<Map source="data/maps/fancyrestaurant.xml"/>
+		<Map source="data/maps/large_apartment.xml"/>
+		
+		<Map source="data/maps/living_large.xml"/>
+		<Map source="data/maps/kingofspades.xml"/>
+		<Map source="data/maps/twoofspades.xml"/>
+		<Map source="data/maps/large_penthouse.xml"/>
+		<Map source="data/maps/tenofclubs.xml"/>
+		<Map source="data/maps/kingofhearts.xml"/>
+		<Map source="data/maps/private_museum.xml"/>
+		<Map source="data/maps/coolpalace.xml"/>
+		<Map source="data/maps/magician_hunt.xml"/>		
+
+		<Map source="data/maps/trainingwheels.xml"/>		
+		<Map source="data/maps/breakanddestroy.xml"/>
+		<Map source="data/maps/snatchandgrab.xml"/>
+		<Map source="data/maps/marketday.xml"/>
+		<Map source="data/maps/deathdealers.xml"/>
+		<Map source="data/maps/abandoned.xml"/>
+		
+		<Map source="data/maps/foreigninfluencers.xml"/>
+		<Map source="data/maps/universityassault.xml"/>
+		<Map source="data/maps/levelcrossing.xml"/>	
+		<Map source="data/maps/preciouscargo.xml"/>
+		<Map source="data/maps/surrounded.xml"/>
+		<Map source="data/maps/ghostcity.xml"/>				
+		<Map source="data/maps/criticalresponse.xml"/>
+	
+		
+		
+		<Map source="data/maps/kamilpashamarket.xml"/>
+		<Map source="data/maps/kingoftheslums.xml"/>
+		<Map source="data/maps/bus_depot.xml"/>	
+		<Map source="data/maps/blockade.xml"/>
+		<Map source="data/maps/urban_area.xml"/>
+		
+		<!-- Map source="data/campaigns/op_subjugator/phaseisurprise.xml"/ -->
+		<!-- Map source="data/campaigns/op_subjugator/phaseiisafeguard.xml"/ -->
+		<!-- Map source="data/campaigns/op_subjugator/phaseiiisecure.xml"/ -->
+		<!-- Map source="data/campaigns/op_subjugator/phaseivsmash.xml"/ -->
+		
+		<Map source="data/maps/hotroom.xml"/>
+		<Map source="data/maps/knivesinthedark.xml"/>
+		<Map source="data/maps/techsupport.xml"/>
+		<Map source="data/maps/traphouse.xml"/>
+		<Map source="data/maps/scratched_carpets.xml"/>
+		<Map source="data/maps/islandcafe.xml"/>
+		<Map source="data/maps/fuelstop.xml"/>
+		<Map source="data/maps/theritual.xml"/>		
+		
+		<Map source="data/maps/car_dealership.xml"/>
+		<Map source="data/maps/mazerunners.xml"/>
+		<Map source="data/maps/speedislife.xml"/>
+		<Map source="data/maps/nightcall.xml"/>
+		<Map source="data/maps/forestspirits.xml"/>
+		<Map source="data/maps/hallwayhell.xml"/>
+		<Map source="data/maps/unawaretarget.xml"/>
+		<Map source="data/maps/interior_courtyard_house.xml"/>
+		<Map source="data/maps/doublerush.xml"/>		
+				
+		<Map source="data/maps/bridget.xml"/>			
+		<Map source="data/maps/tolltakers.xml"/>	
+		<Map source="data/maps/raptordown.xml"/>	
+		<Map source="data/maps/deadlystage.xml"/>		
+		
+		<Map source="data/maps/covereddebris.xml"/>
+		<Map source="data/maps/intervention.xml"/>
+		<Map source="data/maps/adi_factory_test.xml"/>
+		<Map source="data/maps/tiny_trouble_06.xml"/>
+		<Map source="data/maps/tiny_trouble_07.xml"/>		
+		<Map source="data/maps/against.xml"/>
+		<Map source="data/maps/tiny_trouble_10.xml"/>
+		<Map source="data/maps/traitors.xml"/>
+	</BundleCoopQuick>
+</Maps>

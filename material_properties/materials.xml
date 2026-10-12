@@ -1,0 +1,32 @@
+<!--
+A material type can have any number of the following entries (the game randomly chooses one)
+- FootstepsSFX (when being walked on)
+- DamageSFX (sounds for when bullets hit)
+- DamageFX (visual effects for when bullets hit)
+- DebrisHitSFX (when flying debris hit)
+-->
+
+<MaterialPropertiesTypes>
+	<Type name="flesh">
+		<DamageFX name="EffectEntityName"/>
+		<DamageFX name="EffectEntityName2"/>
+		
+		<HitSFX name="SFX_BLA5"/>
+		<HitSFX name="SFX_BLA5"/>
+	</Type>	
+	
+	<Type name="wood">
+		<FootstepsSFX name="SFX_BLA1"/>
+		<FootstepsSFX name="SFX_BLA2"/>
+		<FootstepsSFX name="SFX_BLA3"/>
+		
+		<DamageSFX name="SFX_BLA4"/>
+		<DamageSFX name="SFX_BLA5"/>
+		
+		<DamageFX name="EffectEntityName"/>
+		<DamageFX name="EffectEntityName2"/>
+		
+		<DebrisHitSFX name="SFX_BLA6"/>
+		<DebrisHitSFX name="SFX_BLA7"/>
+	</Type>	
+</MaterialPropertiesTypes>
